@@ -8,6 +8,12 @@ posts_dir = os.path.join(home, "Code/sites/nesinio-ai/content/blog")
 attachments_dir = os.path.join(home, "Sync/Notes/ai-notes/Resources/assets")
 static_images_dir = os.path.join(home, "Code/sites/nesinio-ai/static/images/")
 
+print("Home directory:", home)
+print("Posts directory:", posts_dir)
+print("Attachments directory:", attachments_dir)
+print("Static images directory:", static_images_dir)
+
+
 # Step 1: Process each markdown file in the posts directory
 for filename in os.listdir(posts_dir):
     if filename.endswith(".md"):
