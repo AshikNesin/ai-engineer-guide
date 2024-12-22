@@ -1,9 +1,9 @@
 ---
 title: Bookmarks
-# menu: "main"
 date: 2024-11-06
 draft: false
-tags: []
+tags: 
+menu: main
 ---
 
 Here are some of the resources related to learning AI that I found interesting ✨
