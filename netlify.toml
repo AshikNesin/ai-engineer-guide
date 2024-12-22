@@ -1,0 +1,7 @@
+[build.environment]
+HUGO_VERSION = "0.140.0"
+TZ = "Asia/Kolkata"
+
+[build]
+publish = "public"
+command = "hugo --gc --minify --config hugo.toml"
