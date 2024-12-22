@@ -27,12 +27,12 @@ url: blog/what-works-in-ai-ux-swyx
 
 ## Slides
 
-![Image Description](/images/Pasted%20image%2020241222204919.png)
-![Image Description](/images/Pasted%20image%2020241222204901.png)
-![Image Description](/images/Pasted%20image%2020241222204940.png)
-![Image Description](/images/Pasted%20image%2020241222204959.png)
-![Image Description](/images/Pasted%20image%2020241222205013.png)
-![Image Description](/images/Pasted%20image%2020241222205025.png)
+![[Pasted image 20241222204919.png]]
+![[Pasted image 20241222204901.png]]
+![[Pasted image 20241222204940.png]]
+![[Pasted image 20241222204959.png]]
+![[Pasted image 20241222205013.png]]
+![[Pasted image 20241222205025.png]]
 
 
 ## References
