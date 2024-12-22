@@ -59,3 +59,7 @@ ignoreErrors = ["error-disable-taxonomy"]
     [markup.goldmark.renderer]
       # Render iframe and other things
       unsafe = true
+[Params.umami]
+  enabled = true
+  websiteId = "d7df92fe-cb08-484d-adda-46e319b1fe3c"
+  jsLocation = "https://hi.nesin.io/script.js"
