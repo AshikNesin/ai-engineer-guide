@@ -1,0 +1,106 @@
+import fs from "fs/promises";
+import path from "path";
+import { fileURLToPath } from "url";
+import { exec } from "child_process";
+import { promisify } from "util";
+import chokidar from "chokidar";
+
+const execAsync = promisify(exec);
+
+// Paths
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const home = process.env.HOME || process.env.USERPROFILE;
+const obsidianContentDir = path.join(
+  home,
+  "Sync/Notes/ai-notes/NesinIO-AI/content/blog"
+);
+const postsDir = path.join(home, "Code/sites/nesinio-ai/content/blog");
+const attachmentsDir = path.join(home, "Sync/Notes/ai-notes/Resources/assets");
+const staticImagesDir = path.join(home, "Code/sites/nesinio-ai/static/images/");
+
+async function runRsync() {
+  const source = path.join(home, "Sync/Notes/ai-notes/NesinIO-AI/content/");
+  const destination = path.join(home, "Code/sites/nesinio-ai/content/");
+  const cmd = `rsync -av --delete '${source}' '${destination}'`;
+  await execAsync(cmd);
+}
+
+async function processFile(sourceFilepath) {
+  console.log(`Processing file: ${sourceFilepath}`);
+
+  // Determine the corresponding path in the posts_dir
+  const relativePath = path.relative(obsidianContentDir, sourceFilepath);
+  const destFilepath = path.join(postsDir, relativePath);
+
+  // Ensure the destination directory exists
+  await fs.mkdir(path.dirname(destFilepath), { recursive: true });
+
+  // Copy the file from source to destination
+  await fs.copyFile(sourceFilepath, destFilepath);
+
+  // Now process the file in the posts_dir
+  let content = await fs.readFile(destFilepath, "utf-8");
+
+  // Find all image links in the format [[image.png]]
+  const images = content.match(/\[\[([^]*\.png)\]\]/g) || [];
+  console.log("Found images:", images);
+
+  // Replace image links and ensure URLs are correctly formatted
+  for (const image of images) {
+    const imageName = image.slice(2, -2); // Remove [[ and ]]
+    const markdownImage = `![Image Description](/images/${encodeURIComponent(
+      imageName
+    )})`;
+    console.log(`Generated image tag: ${markdownImage}`);
+
+    content = content.replace(`![[${imageName}]]`, markdownImage);
+
+    console.log("markdown_image:", markdownImage);
+
+    // Copy the image to the Hugo static/images directory if it exists
+    const imageSource = path.join(attachmentsDir, imageName);
+    if (await fs.stat(imageSource).catch(() => false)) {
+      await fs.copyFile(imageSource, path.join(staticImagesDir, imageName));
+    }
+  }
+
+  // Write the updated content back to the destination markdown file
+  await fs.writeFile(destFilepath, content);
+}
+
+async function main() {
+  console.log("Home directory:", home);
+  console.log("Posts directory:", postsDir);
+  console.log("Attachments directory:", attachmentsDir);
+  console.log("Static images directory:", staticImagesDir);
+  console.log("Obsidian content directory:", obsidianContentDir);
+
+  console.log("Running initial rsync...");
+  await runRsync();
+
+  console.log("Starting file observer...");
+  const watcher = chokidar.watch(obsidianContentDir, {
+    persistent: true,
+    ignoreInitial: true,
+  });
+
+  const lastModified = new Map();
+
+  watcher.on("add", processFile).on("change", (path) => {
+    const currentTime = Date.now();
+    const lastTime = lastModified.get(path) || 0;
+    if (currentTime - lastTime > 1000) {
+      // 1 second cooldown
+      processFile(path);
+      lastModified.set(path, currentTime);
+    }
+  });
+
+  process.on("SIGINT", () => {
+    watcher.close();
+    process.exit(0);
+  });
+}
+
+main().catch(console.error);
