@@ -2,8 +2,7 @@
 title: Bookmarks
 date: 2024-11-06
 draft: false
-tags: 
-menu: main
+tags:
 ---
 
 Here are some of the resources related to learning AI that I found interesting ✨
