@@ -42,26 +42,33 @@ async function processFile(sourceFilepath) {
   // Now process the file in the posts_dir
   let content = await fs.readFile(destFilepath, "utf-8");
 
-  // Find all image links in the format [[image.png]]
-  const images = content.match(/\[\[([^]*\.png)\]\]/g) || [];
-  console.log("Found images:", images);
+  // Find all image links in the format ![[image.png]]
+  const imageRegex = /!\[\[([^\]]+\.(png|jpg|jpeg|gif))\]\]/g;
+  let match;
+  while ((match = imageRegex.exec(content)) !== null) {
+    const fullMatch = match[0];
+    const imageName = match[1];
 
-  // Replace image links and ensure URLs are correctly formatted
-  for (const image of images) {
-    const imageName = image.slice(2, -2); // Remove [[ and ]]
-    const markdownImage = `![Image Description](/images/${encodeURIComponent(
-      imageName
+    // Generate a URL-friendly image name
+    const urlFriendlyName = imageName.replace(/ /g, "-").replace(/@/g, "-at-");
+
+    const markdownImage = `![${imageName}](/images/${encodeURIComponent(
+      urlFriendlyName
     )})`;
     console.log(`Generated image tag: ${markdownImage}`);
 
-    content = content.replace(`![[${imageName}]]`, markdownImage);
+    content = content.replace(fullMatch, markdownImage);
 
     console.log("markdown_image:", markdownImage);
 
     // Copy the image to the Hugo static/images directory if it exists
     const imageSource = path.join(attachmentsDir, imageName);
     if (await fs.stat(imageSource).catch(() => false)) {
-      await fs.copyFile(imageSource, path.join(staticImagesDir, imageName));
+      const destImagePath = path.join(staticImagesDir, urlFriendlyName);
+      await fs.copyFile(imageSource, destImagePath);
+      console.log(`Copied image from ${imageSource} to ${destImagePath}`);
+    } else {
+      console.log(`Image not found: ${imageSource}`);
     }
   }
 
