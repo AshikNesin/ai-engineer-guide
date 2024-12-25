@@ -19,28 +19,34 @@ const postsDir = path.join(home, "Code/sites/nesinio-ai/content/blog");
 const attachmentsDir = path.join(home, "Sync/Notes/ai-notes/Resources/assets");
 const staticImagesDir = path.join(home, "Code/sites/nesinio-ai/static/images/");
 
+async function processAllFiles(directory) {
+  const files = await fs.readdir(directory, { withFileTypes: true });
+  for (const file of files) {
+    const fullPath = path.join(directory, file.name);
+    if (file.isDirectory()) {
+      await processAllFiles(fullPath);
+    } else if (file.isFile() && file.name.endsWith(".md")) {
+      await processFile(fullPath);
+    }
+  }
+}
 async function runRsync() {
   const source = path.join(home, "Sync/Notes/ai-notes/NesinIO-AI/content/");
   const destination = path.join(home, "Code/sites/nesinio-ai/content/");
   const cmd = `rsync -av --delete '${source}' '${destination}'`;
   await execAsync(cmd);
+  console.log("Rsync completed. Processing files...");
+  await processAllFiles(postsDir);
 }
 
 async function processFile(sourceFilepath) {
+  // Determine the corresponding path in the posts_dir
+  // const relativePath = path.relative(obsidianContentDir, sourceFilepath);
+  // const sourceFilepath = path.join(postsDir, relativePath);
   console.log(`Processing file: ${sourceFilepath}`);
 
-  // Determine the corresponding path in the posts_dir
-  const relativePath = path.relative(obsidianContentDir, sourceFilepath);
-  const destFilepath = path.join(postsDir, relativePath);
-
-  // Ensure the destination directory exists
-  await fs.mkdir(path.dirname(destFilepath), { recursive: true });
-
-  // Copy the file from source to destination
-  await fs.copyFile(sourceFilepath, destFilepath);
-
   // Now process the file in the posts_dir
-  let content = await fs.readFile(destFilepath, "utf-8");
+  let content = await fs.readFile(sourceFilepath, "utf-8");
 
   // Find all image links in the format ![[image.png]]
   const imageRegex = /!\[\[([^\]]+\.(png|jpg|jpeg|gif))\]\]/g;
@@ -73,7 +79,7 @@ async function processFile(sourceFilepath) {
   }
 
   // Write the updated content back to the destination markdown file
-  await fs.writeFile(destFilepath, content);
+  await fs.writeFile(sourceFilepath, content);
 }
 
 async function main() {

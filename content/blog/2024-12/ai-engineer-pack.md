@@ -11,5 +11,5 @@ I recently came across [AI Engineer Pack](https://www.aiengineerpack.com/) by El
 
 Note: Some of the deals seems to have cap on them so claim it before it gets maxed out if you found something useful.
 
-![[2024-12-23 at 00.09.14@2x.png]]
-![[Pasted image 20241223000450.png]]
+![2024-12-23 at 00.09.14@2x.png](/images/2024-12-23-at-00.09.14-at-2x.png)
+![Pasted image 20241223000450.png](/images/Pasted-image-20241223000450.png)
