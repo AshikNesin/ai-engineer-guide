@@ -18,7 +18,7 @@ Similar to the platforms, nowadays I'm seeing more and AI based app generator ap
 
 
 
-![Image Description](/images/Pasted%20image%2020241225083933.png)
+![[Pasted image 20241225083933.png]]
 
 > If you're curious about how Bolt works under the hood, checkout it's [codebase](https://github.com/stackblitz/bolt.new) (it's open source 🙌)
 
