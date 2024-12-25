@@ -54,6 +54,11 @@ ignoreErrors = ["error-disable-taxonomy"]
   # This theme will, by default, inject a made-with-line at the bottom of the page.
   # You can turn it off, but we would really appreciate if you don't :-).
   hideMadeWithLine = true
+  [ogImage]
+    cloudinaryAccountId = "ashiknesin2"
+    twitterHandle = "AshikNesin"
+    bgImagePath = "nesin_io/og-image-bg/dark-gradient"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -63,3 +68,8 @@ ignoreErrors = ["error-disable-taxonomy"]
   enabled = true
   websiteId = "d7df92fe-cb08-484d-adda-46e319b1fe3c"
   jsLocation = "https://hi.nesin.io/script.js"
+
+[Params.ogImage]
+cloudinaryAccountId = "ashiknesin"
+twitterHandle = "AshikNesin"
+bgImagePath = "nesin_io/og-image-bg/dark-gradient"

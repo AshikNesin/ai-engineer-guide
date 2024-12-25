@@ -1,0 +1,13 @@
+{{- $title := .Title -}}
+{{- $domain := .Site.BaseURL | replaceRE "^https?://([^/]+).*" "$1" -}}
+{{- $twitterHandle := .Site.Params.ogImage.twitterHandle -}}
+{{- $bgImagePath := .Site.Params.ogImage.bgImagePath -}}
+{{- $cloudinaryAccountId := .Site.Params.ogImage.cloudinaryAccountId -}}
+
+{{- $encodedTitle := urlquery $title | replaceRE "\\+" "%20" -}}
+{{- $encodedDomain := urlquery $domain | replaceRE "\\+" "%20" -}}
+
+{{- $ogImageURL := printf "https://res.cloudinary.com/%s/image/upload/w_1600,h_836,q_auto,f_auto/l_text:Karla_72_bold:%s,co_rgb:ffe4e6,c_fit,w_1400,h_240/fl_layer_apply,g_south_west,x_100,y_180/l_text:Karla_48:%s,co_rgb:ffe4e680,c_fit,w_1400/fl_layer_apply,g_south_west,x_100,y_100/l_twitter_name:%s/c_thumb,g_face,r_max,w_500,h_500,q_100/fl_layer_apply,w_140,g_north_west,x_100,y_100/%s" $cloudinaryAccountId $encodedTitle $encodedDomain $twitterHandle $bgImagePath -}}
+
+<meta property="og:image" content="{{ $ogImageURL }}" />
+<meta name="twitter:image" content="{{ $ogImageURL }}" />
