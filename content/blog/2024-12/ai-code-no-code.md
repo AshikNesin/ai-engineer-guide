@@ -16,7 +16,12 @@ Like I said before, it was good enough but if you've to do custom changes on top
 
 Similar to the platforms, nowadays I'm seeing more and AI based app generator apps like [bolt.new](https://bolt.new) or [v0.dev](https://v0.dev) where you can just mention what you want to build and it builds the app almost instantly. 
 
+
+
 ![Image Description](/images/Pasted%20image%2020241225083933.png)
+
+> If you're curious about how Bolt works under the hood, checkout it's [codebase](https://github.com/stackblitz/bolt.new) (it's open source 🙌)
+
 
 On top of the generated apps, you can suggest some changes by chatting and if everything is good then you can directly deploy it.
 
