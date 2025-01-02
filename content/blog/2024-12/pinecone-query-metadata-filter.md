@@ -50,6 +50,5 @@ try {
 
 The filtering condition is somewhat similar to MongoDB. You can refer to this [doc](https://docs.pinecone.io/guides/data/query-data#additional-filter-examples) regarding available filters
 
-
 ## References
 [Pinecone.io Doc](https://docs.pinecone.io/guides/data/query-data#query-with-metadata-filters)
