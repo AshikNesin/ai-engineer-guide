@@ -7,4 +7,4 @@ url: blog/tool-use-function-calling-llm
 ---
 ## Reference
 - https://docs.anthropic.com/en/docs/build-with-claude/tool-use
-	- https://platform.openai.com/docs/guides/function-calling
+- https://platform.openai.com/docs/guides/function-calling
