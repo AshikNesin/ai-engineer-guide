@@ -6,7 +6,7 @@ baseURL = "https://aiengineerguide.com"
 theme = 'hugo-bearblog'
 
 # Basic metadata configuration for your blog.
-title = "Nesin.io AI"
+title = "AI Engineer Guide"
 author = "Ashik Nesin"
 copyright = "Copyright © 2024, Nesin Technologies LLP."
 languageCode = "en-US"
