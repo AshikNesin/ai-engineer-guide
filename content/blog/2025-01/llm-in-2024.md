@@ -34,3 +34,5 @@ Here are some of the notable progress. It's primarily based on the summary writt
 	- Apps like Bolt.new, Vercel's v0, etc becoming more and more popular
 ## References
 - [Things we learned about LLMs in 2024](https://simonwillison.net/2024/Dec/31/llms-in-2024/)
+- https://huggingface.co/spaces/reach-vb/2024-ai-timeline
+- https://genai2024.replit.app/
