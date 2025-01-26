@@ -5,6 +5,7 @@ description:
 tags:
   - bookmark
 url: blog/visual-ai-timeline-2024
+via_url: https://x.com/reach_vb/status/1874131956432302555
 ---
 I came across the 2024 AI timeline shared by [Vaibhav Srivastav](https://x.com/reach_vb) on Twitter/X
 
