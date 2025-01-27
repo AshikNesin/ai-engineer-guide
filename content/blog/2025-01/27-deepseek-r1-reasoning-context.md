@@ -68,5 +68,8 @@ For the above request, we'll get response like this
 
 ```
 
+You can learn more about Reasoning Model in their  [API Docs](https://api-docs.deepseek.com/guides/reasoning_model)
 ### Credits
 - [Pietro Schirano](https://x.com/skirano/status/1881854481304047656)
+
+Happy extracting context!
