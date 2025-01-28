@@ -1,0 +1,25 @@
+<!-- https://dev.to/secure_daily/add-a-video-to-your-hugo-website-104 -->
+<div class="container">
+  <div id="player-wrapper-{{ .Ordinal }}" class="{{ .Get 1 }}"></div>
+</div>
+
+<script 
+type="text/javascript" 
+src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"
+>
+</script>
+
+<script>
+(function() {
+  var playerElement = document.getElementById("player-wrapper-{{ .Ordinal }}");
+
+  var player = new Clappr.Player({
+    source: {{ .Get 0 }},
+    mute: true,
+    height: 360,
+    width: 640
+  });
+
+  player.attachTo(playerElement);
+})();
+</script>
