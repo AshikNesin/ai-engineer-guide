@@ -13,11 +13,14 @@ const __dirname = path.dirname(__filename);
 const home = process.env.HOME || process.env.USERPROFILE;
 const obsidianContentDir = path.join(
   home,
-  "Sync/Notes/ai-notes/NesinIO-AI/content/blog"
+  "Sync/Notes/ai-notes/AIEngineerGuide/content/blog"
 );
-const postsDir = path.join(home, "Code/sites/nesinio-ai/content/blog");
+const postsDir = path.join(home, "Code/sites/AIEngineerGuide/content/blog");
 const attachmentsDir = path.join(home, "Sync/Notes/ai-notes/Resources/assets");
-const staticImagesDir = path.join(home, "Code/sites/nesinio-ai/static/images/");
+const staticImagesDir = path.join(
+  home,
+  "Code/sites/AIEngineerGuide/static/images/"
+);
 
 async function processAllFiles(directory) {
   const files = await fs.readdir(directory, { withFileTypes: true });
@@ -31,8 +34,11 @@ async function processAllFiles(directory) {
   }
 }
 async function runRsync() {
-  const source = path.join(home, "Sync/Notes/ai-notes/NesinIO-AI/content/");
-  const destination = path.join(home, "Code/sites/nesinio-ai/content/");
+  const source = path.join(
+    home,
+    "Sync/Notes/ai-notes/AIEngineerGuide/content/"
+  );
+  const destination = path.join(home, "Code/sites/AIEngineerGuide/content/");
   const cmd = `rsync -av --delete '${source}' '${destination}'`;
   await execAsync(cmd);
   console.log("Rsync completed. Processing files...");
