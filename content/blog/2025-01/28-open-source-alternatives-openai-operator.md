@@ -57,6 +57,67 @@ Here is a quick demo of it by Addy Osmani
 
 {{< video "https://res.cloudinary.com/ashiknesin/video/upload/AIEngineeringGuide.com/static/web-ui-by-browser-use.mp4"  >}}
 
+## surf.new by Steel.dev
+Similar to Browserbase, [Steel.dev](https://steel.dev) also provides browser as service. 
+And [surf.dev](https://surf.new) is a playground to the capabilities of their platform.
+
+For the query
+> Compare Windsurf and Cursor. Give me the list of features that it provides and also cost and other things in markdown format
+
+```markdown
+Here's the formatted markdown:
+
+### Windsurf vs Cursor Comparison 
+
+#### Windsurf
+- Hobby Plan: Free
+  - Includes:
+    - Pro two-week trial
+    - 2000 completions
+    - 50 slow premium requests
+- Pro Plan: $20/month
+  - Everything in Hobby, plus:
+    - Unlimited completions
+    - 500 fast premium requests/month
+    - Unlimited slow premium requests
+    - 10 on-limit uses per day
+- Business Plan: $40/user/month
+  - Everything in Pro, plus:
+    - Private privacy mode
+    - 600+ video
+    - Centralized team billing
+    - Admin dashboard with usage stats
+    - 30-day SOC2 ISO
+
+#### Cursor
+- Free Plan: $0/month, forever
+  - Cascade credits:
+    - Free one-time trial gift on download
+    - 50 premium model User Prompt and 200 premium Flow Action credits
+    - 5 premium model User Prompt credits
+    - 5 premium model Flow Action credits
+    - Access to Cascade Base model
+- Pro Plan: $15/month
+  - Cascade credits:
+    - 500 premium model User Prompt credits
+    - 1,500 premium model Flow Action credits
+    - Can purchase more premium model credits
+    - Priority unlimited access to Cascade Base Model
+- Pro Ultimate Plan: $60/month
+  - Cascade credits:
+    - Infinite premium model User Prompt credits
+    - 3,000 premium model Flow Action credits
+    - Priority unlimited access to Cascade Base Model
+
+```
+
+![2025-02-07 at 09.31.36@2x.png](/images/2025-02-07-at-09.31.36-at-2x.png)
+
+| **Resource** | **Link**                                                                                                             |
+| ------------ | -------------------------------------------------------------------------------------------------------------------- |
+| App          | [surf.new](https://surf.new)                                                                                         |
+| Source Code  | - [steel-browser](https://github.com/steel-dev/steel-browser)<br>- [surf.new](https://github.com/steel-dev/surf.new) |
+| License      | - steel-browser -  Apache-2.0<br>- surf.new - MIT                                                                    |
 
 ### Credits
 
