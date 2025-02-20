@@ -5,3 +5,9 @@ TZ = "Asia/Kolkata"
 [build]
 publish = "public"
 command = "hugo --gc --minify --config hugo.toml"
+
+[[redirects]]
+  from = "/blog/26-openai-operator-prompt"
+  to = "/blog/openai-operator-prompt"
+  status = 301
+  force = true
