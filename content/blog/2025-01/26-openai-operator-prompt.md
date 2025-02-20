@@ -6,7 +6,9 @@ tags:
   - OpenAI
   - system-prompt
   - OpenAI-Operator
-url: blog/26-openai-operator-prompt
+url: blog/openai-operator-prompt
+aliases:
+  - blog/26-openai-operator-prompt
 ---
 Recently I came across the [tweet](https://x.com/wunderwuzzi23/status/1882700348030324957) in which [Johann Rehberger](https://x.com/wunderwuzzi23) has extracted the system prompt & setting prompt of OpenAI's latest feature [Operator](https://openai.com/index/introducing-operator/)
 
