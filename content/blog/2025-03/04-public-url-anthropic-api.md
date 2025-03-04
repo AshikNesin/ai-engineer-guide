@@ -6,23 +6,30 @@ tags:
 url: blog/public-url-anthropic-api
 via_url: https://x.com/alexalbert__/status/1895504248206709246
 ---
-When we interact with any LLM models like Anthropic Claude or OpenAI GPT, we're expected to pass in all the context that is needed to process the request.
+When we interact with any LLM models like Anthropic Claude or OpenAI models, we're expected to pass in all the context that is needed to process the request.
 
-For example, if you need to use image or pdf then you had to **send the entire file as `base64`** when making the API request.
+And the LLM model, just process that request and it'll respond with the result.
 
-And the LLM model, just process that request and give back the result back to you.
+If we need to use pdf document or an image, then we need to **encode that file as base64** and pass it in the API request.
+
+It does the job well, but not so great in term of developer experience especially if the image/pdf is a public one. 
+
+In that case, you had to download the file, convert it to base64 then pass it to API request.
 
 ```js
 import Anthropic from "@anthropic-ai/sdk";
 
 const anthropic = new Anthropic();
 
-// Using Wikipedia's Mona Lisa image
+// Step 1: Fetch the image data - Using Wikipedia's Mona Lisa image
 const imageUrl =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/687px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg";
 const imageBuffer = await fetch(imageUrl).then((r) => r.arrayBuffer());
+
+// Step 2: Convert to base64 (increases payload size)
 const base64Image = Buffer.from(imageBuffer).toString("base64");
 
+// Step 3: Send the entire encoded image to API
 const response = await anthropic.messages.create({
   model: "claude-3-sonnet-20240229",
   max_tokens: 1024,
@@ -50,19 +57,14 @@ const response = await anthropic.messages.create({
 console.log(response.content[0].text);
 ```
 
-
-Recently, Anthropic API starts public **URL-referenced**  image and pdf as well 🤩
-
-And we don't need to convert it to base64 anymore for public URL.
-
-We can just directly pass the url instead.
+Anthropic API now allows you to **directly reference public URLs** for images and PDFs, making your code cleaner and requests smaller (no more - base64 encoding) 🤩
 
 ```js
 import Anthropic from "@anthropic-ai/sdk";
 
 const anthropic = new Anthropic();
 
-// Using Wikipedia's Mona Lisa image
+// Simply reference the public URL directly
 const imageUrl =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/687px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg";
 
@@ -76,8 +78,8 @@ const response = await anthropic.messages.create({
         {
           type: "image",
           source: {
-            type: "url",
-            url: imageUrl,
+            type: "url", // New URL type!
+            url: imageUrl, // Direct reference
           },
         },
         {
@@ -94,7 +96,9 @@ console.log(response.content[0].text);
 
 ![2025-03-04 at 09.15.34@2x.png](/images/2025-03-04-at-09.15.34-at-2x.png)
 
-And similarly, for pdf as well, we have to pass in the public URL.
+> 💡 **Key Benefit**: This approach eliminates the need to download and encode the image yourself, reducing code complexity and payload size.
+
+The same URL-based approach works great for PDFs too:
 
 ```js
 import Anthropic from "@anthropic-ai/sdk";
@@ -128,7 +132,11 @@ console.log(response.content[0].text);
 ```
 
 ![2025-03-04 at 09.20.09@2x.png](/images/2025-03-04-at-09.20.09-at-2x.png)
-Note: Make sure `ANTHROPIC_API_KEY` set in your environmental variable for auth.
+
+_Note: Make sure `ANTHROPIC_API_KEY` is set in your environmental variables for authentication._
+### Limitations
+- Only works with **publicly accessible URLs** that Anthropic API can access
+- The file must be available at request time (temporary URLs must not expire too quickly)
 
 ### References
 - [Anthropic API Docs: Messages API](https://docs.anthropic.com/en/api/messages-examples)
