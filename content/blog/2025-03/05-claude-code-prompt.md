@@ -1,5 +1,5 @@
 ---
-title: System Prompt & Tool Definitions of Anthropic Claude Code
+title: "Anthropic Claude Code CLI: Prompts & Tool Definitions"
 date: 2025-03-05
 description: 
 tags:
