@@ -131,7 +131,6 @@ const response = await anthropic.messages.create({
 console.log(response.content[0].text);
 ```
 
-![2025-03-04 at 09.20.09@2x.png](/images/2025-03-04-at-09.20.09-at-2x.png)
 
 _Note: Make sure `ANTHROPIC_API_KEY` is set in your environmental variables for authentication._
 ### Limitations
