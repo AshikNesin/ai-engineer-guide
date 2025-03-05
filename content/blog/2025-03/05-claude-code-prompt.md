@@ -45,8 +45,7 @@ And the following key learning:
 	- When creating this file, they'll existing prompts like [Cursor rules](https://docs.cursor.com/context/rules-for-ai) or GitHub Copilot (no Windsurf at the moment)
 - They check for potential malicious intent (like malware creation) and decide whether to process the request or not.
 
-
-https://gist.github.com/transitive-bullshit/487c9cb52c75a9701d312334ed53b20c
+### Code Snippet
 
 <script src="https://gist.github.com/transitive-bullshit/487c9cb52c75a9701d312334ed53b20c.js"></script>
 ### References
