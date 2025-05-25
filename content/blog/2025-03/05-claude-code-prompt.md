@@ -41,7 +41,7 @@ And the following key learning:
 	- [ripgrep](https://github.com/BurntSushi/ripgrep) for file contents
 - They support basic planning via the Architect Agent tool and sub-agent invocations via the Task tool (aka dispatch_agent) -- bare minimum at the moment
 - Their documentation [list of tools ](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview#tools-available-to-claude)matches the implementation.
-- They auto-create a `CLAUDE.md` file to serve as memory for project structure, guidelines, conventions, and common commands.
+- They auto-create a `CLAUDE\.md` file to serve as memory for project structure, guidelines, conventions, and common commands.
 	- When creating this file, they'll existing prompts like [Cursor rules](https://docs.cursor.com/context/rules-for-ai) or GitHub Copilot (no Windsurf at the moment)
 - They check for potential malicious intent (like malware creation) and decide whether to process the request or not.
 
