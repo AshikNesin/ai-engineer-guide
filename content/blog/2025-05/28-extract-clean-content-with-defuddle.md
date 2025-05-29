@@ -99,5 +99,5 @@ console.log('Markdown Content:', result.content);
 **Use case:** Extract content and convert to markdown
 ## Credits
 - Snippets are based on defuddle's [README](https://github.com/kepano/defuddle?tab=readme-ov-file#usage) + ChatGPT
-- 
+
 Happy scraping web-pages!
