@@ -23,9 +23,7 @@ npm install zod
 ```
 
 
-## Usage - Simple Example
-
-Here is a simple example of  AI SDK using OpenAI. If you notice, changing a model is just one line rather than updating lot of code. That's the main advantage that AI SDK brings in.
+Here is a simple example of AI SDK using OpenAI. If you notice, changing a model is just one line rather than updating lot of code. That's the main advantage that AI SDK brings in.
 
 ```js
 import { generateText } from "ai";
@@ -43,6 +41,7 @@ console.log(text);
 
 ![2025-05-29 at 23.49.04@2x.png](/images/2025-05-29-at-23.49.04-at-2x.png)
 ## Usage - StreamObject
+
 
 Sometime you might want to stream a **typed structured object**  when using a language model.
 
@@ -76,7 +75,10 @@ for await (const partialObject of partialObjectStream) {
 }
 
 ```
+
+{{< video "https://res.cloudinary.com/ashiknesin/video/upload/AIEngineeringGuide.com/static/vercel-ai-sdk-stream-object.mp4"  >}}
+
 ## References
-- https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-object#streamobject
+- [AI SDK Docs](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-object#streamobject)
 
 Happy streaming object!
