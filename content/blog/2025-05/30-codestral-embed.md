@@ -60,6 +60,13 @@ curl -X POST "https://api.mistral.ai/v1/embeddings" \
      -o embedding.json
 ```
 
+## Use cases
+
+Codestral Embed is designed to excel in **code retrieval and semantic understanding**. According to their website, some key use cases include:
+- RAG
+- Searching code semantically
+- Detecting duplicates and similarities
+- Analyzing code through semantic clustering
 ## What's the catch?
 >Codestral Embed is available on our API under the name `codestral-embed-2505` at a price of $0.15 per million tokens. It is also available on our [batch API](https://docs.mistral.ai/capabilities/batch/) at a 50% discount.
 
