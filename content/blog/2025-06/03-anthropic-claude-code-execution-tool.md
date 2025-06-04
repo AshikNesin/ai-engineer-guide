@@ -1,5 +1,5 @@
 ---
-title: Anthropic Claude Code Execution Tool API
+title: Anthropic Claude Code Execution Tool via API
 date: 2025-06-03
 description: 
 tags:
@@ -12,13 +12,6 @@ Anthropic has recently added support for [code execution tool](https://docs.anth
 It allows LLM to execute **Python** code in secure, sandboxed environment -- No internet access.
 
 Primarily it'll be helpful for processing complex calculations or doing something deterministically which LLM might be be good enough (yet 😜)
-
-## Supported Models
-There models supports code execution tool:
-- Claude Opus 4 (`claude-opus-4-20250514`)
-- Claude Sonnet 4 (`claude-sonnet-4-20250514`)
-- Claude Sonnet 3.7 (`claude-3-7-sonnet-20250219`)
-- Claude Haiku 3.5 (`claude-3-5-haiku-latest`)
 
 ## Feature Flag
 To use this feature, you need to set [beta header](https://docs.anthropic.com/en/api/beta-headers) 
@@ -159,8 +152,18 @@ Possible errors include:
 2. Claude will determine if code execution is needed.
 3. If so, it'll write the code, run it and then respond back with result (or failure)
 
+## Supported Models
+There models supports code execution tool:
+- Claude Opus 4 (`claude-opus-4-20250514`)
+- Claude Sonnet 4 (`claude-sonnet-4-20250514`)
+- Claude Sonnet 3.7 (`claude-3-7-sonnet-20250219`)
+- Claude Haiku 3.5 (`claude-3-5-haiku-latest`)
+
 ## What's the catch?
 - It does **NOT** have access to internet -- which might be a deal breaker for most of the use cases
+- It's not free. Code execution is tracked separately. 
+	- $0.05 per session-hour with minimum of 5 minutes per session (~$0.00415)
+	- If files are included in the request, then execution time is billed even if the code execution tool does not gets executed (they claim that they upload the file to the container)
 
 You can read more about containers, pre-installed libraries, file handling in their docs
 
@@ -170,4 +173,4 @@ You can read more about containers, pre-installed libraries, file handling in th
 ## References
 - https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/code-execution-tool
 
-Happy running code!
+Happy code execution!
