@@ -9,7 +9,7 @@ via_url:
 ---
 Anthropic has recently added support for [web search tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tooll). This tools gets executed at their server during LLM inference.  
 
-## What does web search does?
+## What does web search tool does?
 As the name suggest, it can search the internet real-time and use the content for generating response. By doing so it overcomes the core limitation of LLMs -- getting up to date information beyond knowledge cutoff date. And it indirectly increases the accuracy rate.
 
 ## Quick Example
@@ -177,14 +177,14 @@ Make sure to set you `ANTHROPIC_API_KEY` in header
 					"cited_text": "As per the announcement made by the Reserve Bank of India (RBI) on 09 April 2025, the current Repo Rate is 6.00%*. ",
 					"url": "https://www.bajajhousingfinance.in/repo-rate",
 					"title": "Repo Rate (2025) - Meaning, Current Rates, Difference and Impact",
-					"encrypted_index": "Eo8BCioIBBgCIiQ1NDE3ZjI5MS02NTdiLTQ5OTctYTBkYS04N2I2M2EzZmE2M2QSDMN/pP0qI1T9CwPl5xoMYZclvuCd7VSbqu47IjAdD+r8fdY3XWiZQU1dpY2bsA+RYQP2S3iOO+aYMQ/sHLIfgNdyN7SUNhnj6n5BxqwqEx3awFlZQZYFfC7ItVxtxPP1SvQYBA=="
+					"encrypted_index": "..."
 				},
 				{
 					"type": "web_search_result_location",
 					"cited_text": "The Reserve Bank of India (RBI) reduced the repo rate by 25 basis points to 6.00% on April 9, 2025.",
 					"url": "https://www.bajajfinserv.in/repo-rate",
 					"title": "Current Repo Rate: RBI Repo Rate Today in India for 2025",
-					"encrypted_index": "Eo8BCioIBBgCIiQ1NDE3ZjI5MS02NTdiLTQ5OTctYTBkYS04N2I2M2EzZmE2M2QSDLUltzFe8W3s0vQdUhoMmn438LEmAsReRgTrIjDjUTuKnEGNl5CDZL5/ZbuHFeI8sNiYVTKwUjXPssEhjzv7OuIyZJg/g0p9SRPi9lcqEzLdYU6MlwGASWTyXffAKyjE2ckYBA=="
+					"encrypted_index": "..."
 				}
 			],
 			"type": "text",
@@ -200,14 +200,14 @@ Make sure to set you `ANTHROPIC_API_KEY` in header
 					"cited_text": "This move marks the second rate cut of the year, with the previous cut occurring in February 2025. ",
 					"url": "https://cleartax.in/s/repo-rate",
 					"title": "Current Repo and Reverse Repo Rate 2025: Meaning, Impact & History",
-					"encrypted_index": "EpABCioIBBgCIiQ1NDE3ZjI5MS02NTdiLTQ5OTctYTBkYS04N2I2M2EzZmE2M2QSDORhO5vBdmhZB4weyxoMB22gauM8YduJUR6MIjANbB71JzDcuXI+4P1JCFmvi75Bd7F7S6eRjVXg4HN+kh8zEK+PJ0LKOwuJ/LdsDvEqFCz9se9+5zaBHmwB3/arD3wOaovyGAQ="
+					"encrypted_index": "..."
 				},
 				{
 					"type": "web_search_result_location",
 					"cited_text": "RBI decided to cut the repo rate by 25 bps to 6% from 6.25% second time in the year 2025. The last time the repo rate was changed from 6.50% to 6.25% ...",
 					"url": "https://www.bajajfinserv.in/repo-rate",
 					"title": "Current Repo Rate: RBI Repo Rate Today in India for 2025",
-					"encrypted_index": "EpEBCioIBBgCIiQ1NDE3ZjI5MS02NTdiLTQ5OTctYTBkYS04N2I2M2EzZmE2M2QSDGV6gcZ6ZxqLismf/xoMKhMEXzZ3wxfDaOxpIjBIUIkHQyWrSNcPfNyAfR0kewNypLNhzqK8uC5cL1eNSzozI5MTl7Gh+ynYLybgXXIqFUiNbZjplPDDe/OaXZrTBRx4BTEC8hgE"
+					"encrypted_index": "..."
 				}
 			],
 			"type": "text",
@@ -223,7 +223,7 @@ Make sure to set you `ANTHROPIC_API_KEY` in header
 				"cited_text": "The Repo Rate or repurchase rate is the interest rate at which the Central Bank of India (RBI) lends funds to commercial banks to meet short-term fund...",
 				"url": "https://www.bajajhousingfinance.in/repo-rate",
 				"title": "Repo Rate (2025) - Meaning, Current Rates, Difference and Impact",
-				"encrypted_index": "Eo8BCioIBBgCIiQ1NDE3ZjI5MS02NTdiLTQ5OTctYTBkYS04N2I2M2EzZmE2M2QSDAVxYQhYJyD+zCqXJRoM/Mw3J13uONbRSGziIjC6zoKC55MEYdKcOKvEXytoPL4GynKtoSFK3qyo0T7COQ2Zpu9lIXOtS6duMDLhw0UqEyAKwh93ZHN4QxSUinW/v1KTK7gYBA=="
+				"encrypted_index": "..."
 			}],
 			"type": "text",
 			"text": "The Repo Rate is the interest rate at which the Central Bank of India lends funds to commercial banks to meet short-term fund requirements and control inflation"
@@ -238,7 +238,7 @@ Make sure to set you `ANTHROPIC_API_KEY` in header
 				"cited_text": "The members of the Monetary Policy Committee (MPC) have collectively decided to bring down the repo rate to 6%, as it is expected to encourage lending...",
 				"url": "https://cleartax.in/s/repo-rate",
 				"title": "Current Repo and Reverse Repo Rate 2025: Meaning, Impact & History",
-				"encrypted_index": "EpABCioIBBgCIiQ1NDE3ZjI5MS02NTdiLTQ5OTctYTBkYS04N2I2M2EzZmE2M2QSDJE6LGrpNIMDl0SZvhoM7S5a3rAVz0BzDONgIjC67tgHt+K9g//LpRpFJips8yzJFl1ggriPs3GMnAd/V2IzuAvLHD2ZrOzn25aoHtEqFHZpWNDrwoFw+BWadBfhk5l/7mmHGAQ="
+				"encrypted_index": "..."
 			}],
 			"type": "text",
 			"text": "The Monetary Policy Committee (MPC) expects this rate cut to encourage lending and investment, stimulate demand, and strengthen overall economic activity"
@@ -253,7 +253,7 @@ Make sure to set you `ANTHROPIC_API_KEY` in header
 				"cited_text": "The Reverse Repo Rate is 3.35%. The Bank Rate and the Marginal Standing Facility (MSF) rate stand at 6.25%. The Standing Deposit Facility Rate is 5.75...",
 				"url": "https://www.bajajhousingfinance.in/repo-rate",
 				"title": "Repo Rate (2025) - Meaning, Current Rates, Difference and Impact",
-				"encrypted_index": "EpEBCioIBBgCIiQ1NDE3ZjI5MS02NTdiLTQ5OTctYTBkYS04N2I2M2EzZmE2M2QSDA25EbDP4REIMKP0ahoMc6rheQoX/mVYabU+IjB8rYPzplO0ZMSmuUBmRSk6otNn/m2Toaque7mFQ6Y5xDGyHmmJzPKI254wXVEnb7IqFV3djxGWiKgTQubPUTlme0ft1P/ayBgE"
+				"encrypted_index": "..."
 			}],
 			"type": "text",
 			"text": "\n- Reverse Repo Rate: 3.35%\n- Bank Rate and Marginal Standing Facility (MSF) rate: 6.25%\n- Standing Deposit Facility Rate: 5.75%\n"
@@ -268,7 +268,7 @@ Make sure to set you `ANTHROPIC_API_KEY` in header
 				"cited_text": "When the RBI lowers the Repo Rate, commercial banks can enjoy lowered borrowing costs, and the benefit will be passed along to customers. Homeowners’ ...",
 				"url": "https://www.bajajhousingfinance.in/repo-rate",
 				"title": "Repo Rate (2025) - Meaning, Current Rates, Difference and Impact",
-				"encrypted_index": "EpMBCioIBBgCIiQ1NDE3ZjI5MS02NTdiLTQ5OTctYTBkYS04N2I2M2EzZmE2M2QSDKqFwTWrCfmGaPaOSxoMazfQpfU9zc30T9IkIjD83lHf2ZLpAixogNDOvawzhTdMhafkJOzJ0cTe6Eu3TnlzF29W7uBubzRbWCrT9H8qFxDVj0nWaEqLQYtor6hiUiE/YRxJcxN8GAQ="
+				"encrypted_index": "..."
 			}],
 			"type": "text",
 			"text": "When the Repo Rate is lowered, commercial banks can enjoy reduced borrowing costs, which can lead to lower interest rates for customers, such as reduced home loan rates. Conversely, when the rate rises, borrowing costs increase, leading to higher interest rates"
@@ -330,6 +330,7 @@ There models supports web search tool:
   }
 }
 ```
+
 ## References
 - https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool
 
