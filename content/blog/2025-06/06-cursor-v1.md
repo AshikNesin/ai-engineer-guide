@@ -39,11 +39,8 @@ Memories are stored per project on an individual level, and can be managed from 
 - UX are improved
 - Support for Mermaid diagrams and Markdown tables 
 
-
-
 ## References
-- https://www.cursor.com/changelog
 - https://www.cursor.com/changelog/1-0
-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ig-cfiqWJCs?si=sD8oNOcBbXtg1HuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- https://youtu.be/Ig-cfiqWJCs
 
 Happy directly installing!
