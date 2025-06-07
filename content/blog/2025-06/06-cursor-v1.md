@@ -41,6 +41,7 @@ Memories are stored per project on an individual level, and can be managed from 
 
 ## References
 - https://www.cursor.com/changelog/1-0
+- [Cursor is finally out of beta? 👀👀](https://www.youtube.com/watch?v=NDYLKkd0_mc) 
 - https://youtu.be/Ig-cfiqWJCs
 
-Happy directly installing!
+Happy updating cursor!
