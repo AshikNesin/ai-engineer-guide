@@ -13,6 +13,8 @@ I came across this top 50 interview questions about LLM curated by [Hao Hoang](h
 
 It looks pretty insightful 👇
 
+![2025-06-08 at 08.48.42@2x.png](/images/2025-06-08-at-08.48.42-at-2x.png)
+
 https://drive.google.com/file/d/1cUxKspEXgQ64s4OFEw0kabf_qNauOPiH/view
 
 Happy learning AI!
