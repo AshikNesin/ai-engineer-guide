@@ -22,6 +22,7 @@ When making the API request, we need to define the following tool in the tools a
 ```json
 { 
 	"type": "web_search_preview",
+	"search_context_size":"medium" // "high" or ""
 	// Optional: Localize search results 
 	"user_location": { 
 		"type": "approximate", 
@@ -33,9 +34,10 @@ When making the API request, we need to define the following tool in the tools a
 }
 ```
 
-| **Feature**      | **Details**                                                                                                                                                                                                                                                                                                    |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Localization** | Use the `user_location` parameter to localize search results. <br><br>**Supported Fields:**<br>• `type`: Must be `approximate`<br>• `city`: City name<br>• `region`: State or region<br>• `country`: Country<br>• `timezone`: [IANA timezone ID](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) |
+| **Feature**         | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Localization**    | Use the `user_location` parameter to localize search results. <br><br>**Supported Fields:**<br>• `type`: Must be `approximate`<br>• `city`: City name<br>• `region`: State or region<br>• `country`: Country<br>• `timezone`: [IANA timezone ID](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)                                                                                                                                                                                                                                                                                                                                                         |
+| Search context size | Use `search_context_size` to control how much web info the tool uses to build a response.<br><br>**Impact on:**  <br>• **Cost:** Higher context size = higher price  <br>• **Quality:** Higher context size = richer, more accurate answers  <br>• **Latency:** Higher context size = slower response<br><br>**Available values:**  <br>• `high`: Most comprehensive, highest cost, slowest response  <br>• `medium` (default): Balanced cost, quality, and speed  <br>• `low`: Least context, lowest cost, fastest, but potentially lower quality<br><br>Note: Tokens used in search don’t count against the main model’s token limit and aren’t saved between turns. |
 > Unlike Anthropic Claude web search tool, it does not have support for domain level filtering
 ### Request
 Here is a simple example:
