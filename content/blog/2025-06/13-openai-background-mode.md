@@ -1,6 +1,6 @@
 ---
 title: Handling Async Inference with OpenAI's API Background mode
-date: 2025-06-12
+date: 2025-06-13
 description: 
 tags:
   - OpenAI
