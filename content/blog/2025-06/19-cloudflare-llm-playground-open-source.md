@@ -1,5 +1,5 @@
 ---
-title: "Cloudflare’s Open‑Source LLM Playground: Remote MCP, OAuth & SSE"
+title: Open Source LLM Playground by Cloudflare
 date: 2025-06-19
 description: 
 tags:
