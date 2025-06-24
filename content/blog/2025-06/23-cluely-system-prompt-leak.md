@@ -21,5 +21,4 @@ I'm not sure if it's 100% correct. I saw this in Twitter and bookmarking here in
 ## Credits
 - https://x.com/jackhcable/status/1936500980297932827
 
-
 Happy learning prompts!
