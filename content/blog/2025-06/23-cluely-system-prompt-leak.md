@@ -1,6 +1,6 @@
 ---
 title: Cluely System Prompt Leak
-date: 2025-06-22
+date: 2025-06-23
 description: 
 tags:
   - bookmark
