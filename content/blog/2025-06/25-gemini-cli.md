@@ -5,7 +5,7 @@ description:
 tags:
   - bookmark
   - gemini-cli
-url: blog/gemini-cli
+url: blog/google-gemini-cli
 ---
 Another day, Another Agent CLI 😜
 
