@@ -48,6 +48,8 @@ On a side note, this release reminds me of recent Tweet from Marc 👇
 ![Pasted image 20250625231812.png](/images/Pasted-image-20250625231812.png)
 
 With it's free usage, Google might potentially try to gain more marketshare.
+
+One thing you should be mindful is that, if you're using free option (login with Google Account), then your data will be used for model training. 
 ## Resources
 - https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/
 - https://github.com/google-gemini/gemini-cli?tab=readme-ov-file
