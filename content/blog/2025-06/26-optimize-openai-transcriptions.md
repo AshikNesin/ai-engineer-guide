@@ -2,7 +2,8 @@
 title: How to Optimize OpenAI transcriptions faster and cheaper
 date: 2025-06-26
 description: 
-tags: 
+tags:
+  - OpenAI
 url: blog/optimize-openai-transcriptions
 via_url: https://x.com/adriaandotcom/status/1938118285045993584
 ---
