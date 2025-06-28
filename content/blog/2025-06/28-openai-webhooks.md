@@ -1,0 +1,63 @@
+---
+title: Using OpenAI Webhooks to Handle Long-Running Tasks Efficiently
+date: 2025-06-28
+description: 
+tags:
+  - OpenAI
+  - TIL
+url: blog/openai-webhooks
+via_url: https://x.com/openaidevs/status/1938286704856863162
+---
+Along with [Deep Research API](https://aiengineerguide.com/blog/openai-deep-research-api/) OpenAI has released support for [webhooks](https://platform.openai.com/docs/guides/webhooks) for their API endpoint.
+
+So for the use case that does not require you wait until the response is completed or the ones that takes so much time to complete like Deep Research API. 
+
+Using Webhooks API makes sense instead of alternatives like polling.
+
+As per their docs, you'll be able to leverage webhooks for events like these:
+- Background response is generated
+- Batch completes
+- Fine-tuning job finishes
+
+And the webhooks follows [standard-webhooks](https://github.com/standard-webhooks/standard-webhooks/blob/main/spec/standard-webhooks.md) specification.
+
+## Configuring Webhook Endpoints
+
+You can configure the webhooks in the [dashboard](https://platform.openai.com/settings/project/webhooks)
+
+Webhooks are configured **per-project**. So you need to select the project then configure the webhook endpoint
+
+
+![2025-06-28 at 23.35.48@2x.png](/images/2025-06-28-at-23.35.48-at-2x.png)
+
+> After creating a new webhook, you'll **receive a signing secret** to use for server-side verification of incoming webhook requests. Save this value for later, since you won't be able to view it again.
+
+**What is signing secret?**
+
+Since it is a webhook, anyone can make call to your endpoint and try to manipulate the data if they know your webhook API endpoint.
+
+Signing secret is a way using which you can validate whether the request came from a legit source (in our case, OpenAI)
+### Supported Events Types
+These are the events types that are available for you to subscribe to
+
+| Category             | Event Type                     |
+|----------------------|--------------------------------|
+| **Batches**          | batch.completed                |
+|                      | batch.failed                   |
+|                      | batch.expired                  |
+|                      | batch.cancelled                |
+| **Background Responses** | response.completed         |
+|                      | response.failed                |
+|                      | response.cancelled             |
+|                      | response.incomplete            |
+| **Fine-Tuning Jobs** | fine_tuning.job.succeeded      |
+|                      | fine_tuning.job.failed         |
+|                      | fine_tuning.job.cancelled      |
+| **Eval Runs**        | eval.run.succeeded             |
+|                      | eval.run.failed                |
+|                      | eval.run.canceled              |
+
+## References
+- https://platform.openai.com/docs/guides/webhooks
+
+Happy building apps!

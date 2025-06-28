@@ -26,6 +26,10 @@ Here are some official docs for you to get started:
 - https://cookbook.openai.com/examples/deep_research_api/introduction_to_deep_research_api
 - https://cookbook.openai.com/examples/deep_research_api/introduction_to_deep_research_api_agents
 
+And here are some are highlights mentioned in the tweet replies/blog post
+- Does NOT support chat completion API. Only supports Responses API
+- Beware of the costs associated when using this API 
+
 ## References
 - https://platform.openai.com/docs/guides/deep-research
 
