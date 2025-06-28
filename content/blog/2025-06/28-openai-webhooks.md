@@ -57,6 +57,62 @@ These are the events types that are available for you to subscribe to
 |                      | eval.run.failed                |
 |                      | eval.run.canceled              |
 
+### Webhook Payload
+Once the webhook is configured, you'll start getting  events like this
+
+```
+POST https://yourserver.com/webhook
+user-agent: OpenAI/1.0 (+https://platform.openai.com/docs/webhooks)
+content-type: application/json
+webhook-id: wh_685342e6c53c8190a1be43f081506c52
+webhook-timestamp: 1750287078
+webhook-signature: v1,K5oZfzN95Z9UVu1EsfQmfVNQhnkZ2pj9o9NDN/H/pI4=
+```
+
+```json
+{
+  "object": "event",
+  "id": "evt_685343a1381c819085d44c354e1b330e",
+  "type": "response.completed",
+  "created_at": 1750287018,
+  "data": { "id": "resp_abc123" }
+}
+```
+
+As soon as you get the webhook request, you need to respond with 2xx status code within few seconds. 
+
+If it didn't receive 2xx request, it'll attempt to retry gain (upto 72 hours with exponential backoff)
+
+3xx requests will not be honored (redirection requests) and it'll assume it's a failure.
+
+In ideal case, OpenAI webhook will not deliver duplicate requests however they'll send `webhook-id` header which can be used as idempotency key to deduplicate.
+
+## Verifying webhook signatures
+
+You can use the OpenAI SDK like this:
+
+```js
+
+const client = new OpenAI();
+const webhook_secret = process.env.OPENAI_WEBHOOK_SECRET;
+
+// will throw if the signature is invalid
+const event = client.webhooks.unwrap(req.body, req.headers, { secret: webhook_secret });
+
+```
+
+```python
+
+client = OpenAI()
+webhook_secret = os.environ["OPENAI_WEBHOOK_SECRET"]
+
+# will raise if the signature is invalid
+event = client.webhooks.unwrap(request.data, request.headers, secret=webhook_secret)
+
+```
+
+Or you can use [standard-webhooks](https://github.com/standard-webhooks/standard-webhooks/tree/main?tab=readme-ov-file#reference-implementations) libraries to do the verification part.
+
 ## References
 - https://platform.openai.com/docs/guides/webhooks
 
