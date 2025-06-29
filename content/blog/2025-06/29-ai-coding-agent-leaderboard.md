@@ -4,6 +4,7 @@ date: 2025-06-29
 description: 
 tags:
   - TIL
+  - leaderboard
 url: blog/ai-coding-agent-leaderboard
 via_url:
 ---
@@ -40,5 +41,8 @@ Here are the queries that I got in their README.
 ## Current Score
 
 ![2025-06-29 at 23.18.51@2x.png](/images/2025-06-29-at-23.18.51-at-2x.png)
+
+## Source
+- https://github.com/aavetis/PRarena
 
 Happy watching stats!
