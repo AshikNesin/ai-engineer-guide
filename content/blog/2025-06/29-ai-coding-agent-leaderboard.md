@@ -23,7 +23,10 @@ Intestinally, it is just a GitHub search queries.
 
 Based on the branch prefix or git author that is specific to an AI Coding agent it gets the metrics and updates in the website regularly.
 
-Here are the queries that I got in their README.
+GitHub query string <> stats mapper
+![2025-07-01 at 09.44.34@2x.png](/images/2025-07-01-at-09.44.34-at-2x.png)
+
+And in case, if you want direct link for that (got this from their README)
 
 | Description        | GitHub Search Link                                                                                     |
 | ------------------ | ------------------------------------------------------------------------------------------------------ |
