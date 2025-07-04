@@ -7,7 +7,7 @@ tags:
   - claude-code
   - bookmark
 url: blog/claude-code-hooks
-via_url:
+via_url: https://x.com/alexalbert__/status/1940480961923473610
 ---
 Claude Code now supports **custom hooks**  🌟
 
