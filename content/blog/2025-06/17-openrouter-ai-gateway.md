@@ -42,7 +42,7 @@ Here are TLDR version of what are all the other things that you get from it as w
 - [Automatic Fallback](https://openrouter.ai/docs/features/provider-routing)
 - OpenAI-Compatible Tooling
 - [Key Provisioning & Rotation](https://openrouter.ai/docs/features/provisioning-api-keys)
-- Bring Your Own Key - BYOK—with a 5% markup charged from your credits.
+- Bring Your Own Key - BYOK—with a [5% markup](https://openrouter.ai/docs/faq#pricing-and-fees) charged from your credits.
 
 ## Integrate with OpenAI-Compatible SDK
 
