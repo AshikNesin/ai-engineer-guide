@@ -89,6 +89,8 @@ async function processFile(sourceFilepath) {
 }
 
 async function main() {
+  const watchMode = process.argv.includes("--watch");
+
   console.log("Home directory:", home);
   console.log("Posts directory:", postsDir);
   console.log("Attachments directory:", attachmentsDir);
@@ -98,28 +100,32 @@ async function main() {
   console.log("Running initial rsync...");
   await runRsync();
 
-  console.log("Starting file observer...");
-  const watcher = chokidar.watch(obsidianContentDir, {
-    persistent: true,
-    ignoreInitial: true,
-  });
+  if (watchMode) {
+    console.log("Starting file observer in watch mode...");
+    const watcher = chokidar.watch(obsidianContentDir, {
+      persistent: true,
+      ignoreInitial: true,
+    });
 
-  const lastModified = new Map();
+    const lastModified = new Map();
 
-  watcher.on("add", processFile).on("change", (path) => {
-    const currentTime = Date.now();
-    const lastTime = lastModified.get(path) || 0;
-    if (currentTime - lastTime > 1000) {
-      // 1 second cooldown
-      processFile(path);
-      lastModified.set(path, currentTime);
-    }
-  });
+    watcher.on("add", processFile).on("change", (path) => {
+      const currentTime = Date.now();
+      const lastTime = lastModified.get(path) || 0;
+      if (currentTime - lastTime > 1000) {
+        // 1 second cooldown
+        processFile(path);
+        lastModified.set(path, currentTime);
+      }
+    });
 
-  process.on("SIGINT", () => {
-    watcher.close();
-    process.exit(0);
-  });
+    process.on("SIGINT", () => {
+      watcher.close();
+      process.exit(0);
+    });
+  } else {
+    console.log("Sync complete. Exiting.");
+  }
 }
 
 main().catch(console.error);

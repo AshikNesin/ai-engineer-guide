@@ -43,6 +43,10 @@ You can install this in VS Code (and also any VS Code forks like Cursor, Windsur
 	- Or bring your own API keys
 - **$20 free credits** to get you started 🤑
 
+When you sign up, you'll get $5 and once you add your payment method you'll get another $15
+![2025-07-06 at 19.49.29.png](/images/2025-07-06-at-19.49.29.png)
+
+
 Note: Since you'll be paying per usage beware of the token usage when you're using it.
 ## Pro Tip
 If you already have GitHub Copilot subscription you can configure and use it Kilo Code instead of providing configuring your LLM provider. 

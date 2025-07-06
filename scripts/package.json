@@ -4,7 +4,9 @@
   "main": "sync-obsidian-notes.js",
   "scripts": {
     "start": "node sync-obsidian-notes.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync:once": "node sync-obsidian-notes.js",
+    "sync:watch": "node sync-obsidian-notes.js --watch"
   },
   "keywords": [],
   "author": "",
