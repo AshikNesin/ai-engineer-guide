@@ -11,3 +11,13 @@ command = "hugo --gc --minify --config hugo.toml"
   to = "/blog/openai-operator-prompt"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/feed"
+  to = "/feed.xml"
+  status = 200
+
+[[redirects]]
+  from = "/rss"
+  to = "/feed.xml"
+  status = 200

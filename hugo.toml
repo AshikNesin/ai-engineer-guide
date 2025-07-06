@@ -73,3 +73,10 @@ ignoreErrors = ["error-disable-taxonomy"]
 cloudinaryAccountId = "ashiknesin"
 twitterHandle = "AshikNesin"
 bgImagePath = "nesin_io/og-image-bg/dark-gradient"
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[outputFormats]
+    [outputFormats.RSS]
+    baseName = "feed"
