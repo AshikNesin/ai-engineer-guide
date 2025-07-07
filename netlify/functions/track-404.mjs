@@ -21,27 +21,27 @@ export default async (req, context) => {
     // Device detection based on user agent
     const detectDevice = (ua) => {
       if (!ua) return "Unknown";
-      
+
       const ua_lower = ua.toLowerCase();
-      
+
       // Mobile devices
       if (/iphone|ipod/.test(ua_lower)) return "iPhone";
       if (/ipad/.test(ua_lower)) return "iPad";
       if (/android.*mobile/.test(ua_lower)) return "Android Phone";
       if (/android/.test(ua_lower)) return "Android Tablet";
       if (/windows phone/.test(ua_lower)) return "Windows Phone";
-      
+
       // Desktop browsers
       if (/macintosh|mac os x/.test(ua_lower)) return "Mac";
       if (/windows nt/.test(ua_lower)) return "Windows";
       if (/linux/.test(ua_lower) && !/android/.test(ua_lower)) return "Linux";
-      
+
       // Bots/crawlers
       if (/bot|crawler|spider|scraper/.test(ua_lower)) return "Bot/Crawler";
-      
+
       return "Unknown";
     };
-    
+
     const deviceType = detectDevice(userAgent);
 
     // Get timestamp
@@ -63,7 +63,7 @@ export default async (req, context) => {
     }
 
     const message = `404 Page Hit
-<b>URL:</b> ${url}
+<b>URL:</b> <a href="${url}">${url}</a>
 <b>IP:</b> ${clientIP}
 <b>Location:</b> ${city}, ${country}
 <b>Device:</b> ${deviceType}
