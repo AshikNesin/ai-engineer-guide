@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Simplified gradient for favicon -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3273dc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4285f4;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Dark mode gradient -->
+    <linearGradient id="accent-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8cc2dd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9ed4e8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Simplified tech pattern for small sizes -->
+  <g id="tech-pattern">
+    <circle cx="16" cy="12" r="2.5" fill="url(#accent)"/>
+    <circle cx="12" cy="18" r="2" fill="url(#accent)"/>
+    <circle cx="20" cy="16" r="2" fill="url(#accent)"/>
+    <line x1="16" y1="12" x2="12" y2="18" stroke="url(#accent)" stroke-width="1.5"/>
+    <line x1="12" y1="18" x2="20" y2="16" stroke="url(#accent)" stroke-width="1.5"/>
+    <line x1="20" y1="16" x2="16" y2="12" stroke="url(#accent)" stroke-width="1.5"/>
+  </g>
+  
+  <!-- AI text - made bolder for small sizes -->
+  <text x="16" y="28" font-family="'Verdana', sans-serif" font-size="8" font-weight="bold" fill="url(#accent)" text-anchor="middle">AI</text>
+  
+  <!-- Dark mode support -->
+  <style>
+    @media (prefers-color-scheme: dark) {
+      #tech-pattern circle,
+      #tech-pattern line {
+        fill: url(#accent-dark);
+        stroke: url(#accent-dark);
+      }
+      
+      text {
+        fill: url(#accent-dark);
+      }
+    }
+  </style>
+</svg> 
