@@ -3,4 +3,24 @@
 {{ define "main" }}
 <h1>404</h1>
 <h2>ʕノ•ᴥ•ʔノ ︵ ┻━┻</h2>
+
+<script>
+(function() {
+  const trackingData = {
+    url: window.location.href,
+    referrer: document.referrer,
+    userAgent: navigator.userAgent
+  };
+  
+  fetch('/.netlify/functions/track-404', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(trackingData)
+  }).catch(err => {
+    console.error('Failed to track 404:', err);
+  });
+})();
+</script>
 {{ end }}
