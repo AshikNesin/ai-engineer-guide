@@ -10,12 +10,12 @@ export default async (req, context) => {
     const body = await req.json();
     const { url, referrer, userAgent } = body;
 
-    // Get client IP from various headers
-    const clientIP =
-      req.headers.get("x-forwarded-for") ||
-      req.headers.get("x-real-ip") ||
-      context.ip ||
-      "unknown";
+    // Get client IP - Netlify provides this directly in context
+    const clientIP = context.ip || "unknown";
+
+    // Get geo information from Netlify context
+    const city = context.geo?.city || "Unknown";
+    const country = context.geo?.country?.code || "Unknown";
 
     // Get timestamp
     const timestamp = new Date().toISOString();
@@ -38,6 +38,7 @@ export default async (req, context) => {
     const message = `404 Page Hit
 URL: ${url}
 IP: ${clientIP}
+Location: ${city}, ${country}
 Referrer: ${referrer || "Direct"}
 User Agent: ${userAgent || "Unknown"}
 Time: ${timestamp}`;
