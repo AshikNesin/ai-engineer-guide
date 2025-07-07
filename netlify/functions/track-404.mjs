@@ -75,7 +75,6 @@ export default async (req, context) => {
           user: pushoverUser,
           message: message,
           title: "404 Error Alert",
-          priority: "0",
           html: "1",
         }),
       },
