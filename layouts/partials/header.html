@@ -1,4 +1,6 @@
-<a href="{{ "" | relURL }}" class="title">
-  <img src="{{ "images/logo.svg" | relURL }}" alt="{{ .Site.Title }}" style="vertical-align: middle;">
-</a>
-<nav>{{- partial "nav.html" . -}}</nav> 
+<div class="header-flex">
+  <a href="{{ "" | relURL }}" class="title">
+    <img src="{{ "images/logo.svg" | relURL }}" alt="{{ .Site.Title }}" style="vertical-align: middle;">
+  </a>
+  <nav>{{- partial "nav.html" . -}}</nav>
+</div> 

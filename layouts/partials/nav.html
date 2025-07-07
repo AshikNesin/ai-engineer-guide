@@ -1,8 +1,7 @@
-<a href="{{ "" | relURL }}">Home</a>
-{{ range .Site.Menus.main }}
-<a href="{{ .URL }}">{{ .Name }}</a>
-{{ end }}
 {{ with .Site.GetPage "/blog" }}
 <a href="{{ "blog" | relURL }}">Blog</a>
+{{ end }}
+{{ range .Site.Menus.main }}
+<a href="{{ .URL }}">{{ .Name }}</a>
 {{ end }}
 <a href="{{ "/feed.xml" | relURL }}">RSS</a>
