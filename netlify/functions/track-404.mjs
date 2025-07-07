@@ -15,7 +15,7 @@ export default async (req, context) => {
 
     // Get geo information from Netlify context
     const city = context.geo?.city || "Unknown";
-    const country = context.geo?.country?.code || "Unknown";
+    const country = context.geo?.country?.name || "Unknown";
 
     // Get timestamp
     const timestamp = new Date().toISOString();
