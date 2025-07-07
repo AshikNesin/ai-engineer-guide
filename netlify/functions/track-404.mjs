@@ -1,4 +1,29 @@
+/**
+ * Netlify Function: 404 Page Tracking
+ * Sends push notifications when users hit 404 pages
+ */
+
+// Detect device type from user agent
+function getDeviceType(userAgent) {
+  if (!userAgent) return "Unknown";
+
+  const ua = userAgent.toLowerCase();
+
+  if (/iphone|ipod/.test(ua)) return "iPhone";
+  if (/ipad/.test(ua)) return "iPad";
+  if (/android.*mobile/.test(ua)) return "Android Phone";
+  if (/android/.test(ua)) return "Android Tablet";
+  if (/windows phone/.test(ua)) return "Windows Phone";
+  if (/macintosh|mac os x/.test(ua)) return "Mac";
+  if (/windows nt/.test(ua)) return "Windows";
+  if (/linux/.test(ua) && !/android/.test(ua)) return "Linux";
+  if (/bot|crawler|spider|scraper/.test(ua)) return "Bot/Crawler";
+
+  return "Unknown";
+}
+
 export default async (req, context) => {
+  // Only accept POST requests
   if (req.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
       status: 405,
@@ -7,47 +32,17 @@ export default async (req, context) => {
   }
 
   try {
-    const body = await req.json();
-    const { url, referrer, userAgent } = body;
+    // Get request data
+    const { url, referrer, userAgent } = await req.json();
 
-    // https://docs.netlify.com/functions/api/
-    // Get client IP - Netlify provides this directly in context
+    // Get client info from Netlify context
     const clientIP = context.ip || "unknown";
-
-    // Get geo information from Netlify context
     const city = context.geo?.city || "Unknown";
     const country = context.geo?.country?.name || "Unknown";
-
-    // Device detection based on user agent
-    const detectDevice = (ua) => {
-      if (!ua) return "Unknown";
-
-      const ua_lower = ua.toLowerCase();
-
-      // Mobile devices
-      if (/iphone|ipod/.test(ua_lower)) return "iPhone";
-      if (/ipad/.test(ua_lower)) return "iPad";
-      if (/android.*mobile/.test(ua_lower)) return "Android Phone";
-      if (/android/.test(ua_lower)) return "Android Tablet";
-      if (/windows phone/.test(ua_lower)) return "Windows Phone";
-
-      // Desktop browsers
-      if (/macintosh|mac os x/.test(ua_lower)) return "Mac";
-      if (/windows nt/.test(ua_lower)) return "Windows";
-      if (/linux/.test(ua_lower) && !/android/.test(ua_lower)) return "Linux";
-
-      // Bots/crawlers
-      if (/bot|crawler|spider|scraper/.test(ua_lower)) return "Bot/Crawler";
-
-      return "Unknown";
-    };
-
-    const deviceType = detectDevice(userAgent);
-
-    // Get timestamp
+    const deviceType = getDeviceType(userAgent);
     const timestamp = new Date().toISOString();
 
-    // Get Pushover credentials from environment
+    // Get Pushover credentials
     const pushoverToken = Netlify.env.get("PUSHOVER_API_TOKEN");
     const pushoverUser = Netlify.env.get("PUSHOVER_USER_KEY");
 
@@ -55,13 +50,11 @@ export default async (req, context) => {
       console.error("Pushover credentials missing");
       return new Response(
         JSON.stringify({ error: "Server configuration error" }),
-        {
-          status: 500,
-          headers: { "Content-Type": "application/json" },
-        },
+        { status: 500, headers: { "Content-Type": "application/json" } },
       );
     }
 
+    // Format notification message
     const message = `404 Page Hit
 <b>URL:</b> <a href="${url}">${url}</a>
 <b>IP:</b> ${clientIP}
@@ -71,14 +64,12 @@ export default async (req, context) => {
 <b>User Agent:</b> ${userAgent || "Unknown"}
 <b>Time:</b> ${timestamp}`;
 
-    // Send to Pushover using modern fetch
+    // Send to Pushover
     const pushoverResponse = await fetch(
       "https://api.pushover.net/1/messages.json",
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
           token: pushoverToken,
           user: pushoverUser,
