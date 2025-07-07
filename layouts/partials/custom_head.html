@@ -18,20 +18,30 @@
     vertical-align: middle;
     max-width: 100%;
     height: auto;
+    /* Default desktop size */
+    width: 280px;
+    height: 60px;
   }
   
-  /* Responsive logo sizing */
+  /* Responsive logo sizing - Much larger sizes */
   @media (max-width: 768px) {
     .title img {
-      width: 200px;
-      height: 43px;
+      width: 240px;
+      height: 51px;
     }
   }
   
   @media (max-width: 480px) {
     .title img {
-      width: 160px;
-      height: 34px;
+      width: 220px;
+      height: 47px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .title img {
+      width: 200px;
+      height: 43px;
     }
   }
   
