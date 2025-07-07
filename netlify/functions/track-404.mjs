@@ -10,6 +10,7 @@ export default async (req, context) => {
     const body = await req.json();
     const { url, referrer, userAgent } = body;
 
+    // https://docs.netlify.com/functions/api/
     // Get client IP - Netlify provides this directly in context
     const clientIP = context.ip || "unknown";
 
