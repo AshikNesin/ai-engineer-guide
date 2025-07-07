@@ -37,12 +37,12 @@ export default async (req, context) => {
     }
 
     const message = `404 Page Hit
-URL: ${url}
-IP: ${clientIP}
-Location: ${city}, ${country}
-Referrer: ${referrer || "Direct"}
-User Agent: ${userAgent || "Unknown"}
-Time: ${timestamp}`;
+<b>URL:</b> ${url}
+<b>IP:</b> ${clientIP}
+<b>Location:</b> ${city}, ${country}
+<b>Referrer:</b> ${referrer || "Direct"}
+<b>User Agent:</b> ${userAgent || "Unknown"}
+<b>Time:</b> ${timestamp}`;
 
     // Send to Pushover using modern fetch
     const pushoverResponse = await fetch(
@@ -58,6 +58,7 @@ Time: ${timestamp}`;
           message: message,
           title: "404 Error Alert",
           priority: "0",
+          html: "1",
         }),
       },
     );
