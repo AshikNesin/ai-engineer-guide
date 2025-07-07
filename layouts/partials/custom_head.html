@@ -6,3 +6,41 @@
     })(window, document, "clarity", "script", "s880bgj9uz");
 </script>
 {{ partial "analytics.html" . }}
+
+<!-- Logo styles -->
+<style>
+  .title {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .title img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive logo sizing */
+  @media (max-width: 768px) {
+    .title img {
+      width: 200px;
+      height: 43px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title img {
+      width: 160px;
+      height: 34px;
+    }
+  }
+  
+  /* Ensure proper spacing with navigation */
+  header {
+    margin-bottom: 20px;
+  }
+  
+  nav {
+    margin-top: 15px;
+  }
+</style>
