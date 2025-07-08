@@ -1,5 +1,5 @@
 ---
-title: Generating AI Commit Message using Gemini CLI
+title: Auto-Generate AI Commit Message using Gemini CLI
 date: 2025-07-09
 description: 
 tags:
