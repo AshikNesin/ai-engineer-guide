@@ -1,15 +1,20 @@
+# Start local development server
 dev:
 	hugo server -t hugo-bearblog
 
+# Clean the public directory
 clean:
 	hugo --cleanDestinationDir
 
+# Synchronize Obsidian notes
 sync:
 	node scripts/sync-obsidian-notes.js
 
+# Watch and synchronize Obsidian notes
 sync-watch:
 	node scripts/sync-obsidian-notes.js --watch
 
+# Automatically commit changes with a generated message
 autocommit:
 	@bash -c '\
 		start_time=$$(date +%s); \
@@ -45,39 +50,47 @@ autocommit:
 		duration=$$((end_time - start_time)); \
 		echo "⏱️ Time taken: $${duration}s"; \
 	'
-build-progress:
-	 @bash -c '\
-	 	site_id=$$(netlify status | grep "Site ID" | awk "{print $$3}"); \
-	 	if [ -z "$$site_id" ]; then \
-	 		echo "❌ Could not find Site ID. Are you logged in with Netlify CLI?"; \
-	 		exit 1; \
-	 	fi; \
-	 	echo "📡 Monitoring latest deploy for site: $$site_id"; \
-	 	deploy_id=$$(netlify api listSiteDeploys --data '{"site_id":"'"$$site_id"'"}' | jq -r ".[0].id"); \
-	 	echo "🆕 Latest Deploy ID: $$deploy_id"; \
-	 	echo "🔍 Polling deploy status..."; \
-	 	while true; do \
-	 		status=$$(netlify api getDeploy --data '{"deploy_id":"'"$$deploy_id"'"}' | jq -r ".state"); \
-	 		echo "🚧 Current status: $$status"; \
-	 		if [ "$$status" = "ready" ]; then \
-	 			echo "✅ Deploy complete!"; \
-	 			break; \
-	 		elif [ "$$status" = "error" ]; then \
-	 			echo "❌ Deploy failed."; \
-	 			break; \
-	 		fi; \
-	 		sleep 5; \
-	 	done \
-	 '
 
+# Monitor Netlify deployment progress
+build-progress:
+	@bash -c '\
+		echo "🔍 Monitoring Netlify deployment progress..."; \
+		site_id=$$(netlify status | grep "Project Id:" | cut -d: -f2 | sed "s/\\x1b\\[[0-9;]*m//g" | xargs); \
+		if [ -z "$$site_id" ]; then \
+			echo "❌ Could not find Site ID. Are you logged in with Netlify CLI?"; \
+			exit 1; \
+		fi; \
+		echo "📡 Monitoring latest deploy for site: $$site_id"; \
+		deploy_id=$$(netlify api listSiteDeploys --data "$$(printf '\''{"site_id":"%s"}'\'' "$$site_id")" | jq -r ".[0].id"); \
+		if [ -z "$$deploy_id" ] || [ "$$deploy_id" = "null" ]; then \
+			echo "❌ Could not retrieve the latest deploy ID."; \
+			exit 1; \
+		fi; \
+		echo "🆕 Latest Deploy ID: $$deploy_id"; \
+		echo "🔍 Polling deploy status..."; \
+		while true; do \
+			status=$$(netlify api getDeploy --data "$$(printf '\''{"deploy_id":"%s"}'\'' "$$deploy_id")" | jq -r ".state"); \
+			echo "🚧 Current status: $$status"; \
+			if [ "$$status" = "ready" ]; then \
+				echo "✅ Deploy complete!"; \
+				break; \
+			elif [ "$$status" = "error" ]; then \
+				echo "❌ Deploy failed."; \
+				exit 1; \
+			fi; \
+			sleep 5; \
+		done \
+	'
+
+# Publish changes: sync, autocommit, push, and monitor deployment
 publish:
 	@echo "🚀 Starting: sync + autocommit + git push"
 	@$(MAKE) sync
 	@echo "✅ Sync completed"
 	@$(MAKE) autocommit
-	@echo "🎉 completed!"
+	@echo "🎉 Autocommit completed!"
 	@echo "🚀 Pushing to remote..."
 	@git push
 	@echo "✅ Push completed!"
-	sleep 5
+	@sleep 5
 	@$(MAKE) build-progress

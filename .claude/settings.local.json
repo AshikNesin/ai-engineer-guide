@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:docs.netlify.com)"
+      "WebFetch(domain:docs.netlify.com)",
+      "Bash(make:*)"
     ],
     "deny": []
   }
