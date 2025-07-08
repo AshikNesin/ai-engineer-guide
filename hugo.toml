@@ -10,6 +10,7 @@ title = "AI Engineer Guide"
 author = "Ashik Nesin"
 copyright = "Copyright © 2024, Nesin Technologies LLP."
 languageCode = "en-US"
+timeZone = "Asia/Kolkata"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true

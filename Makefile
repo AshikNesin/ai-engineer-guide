@@ -1,3 +1,16 @@
+# Publish changes: sync, autocommit, push, and monitor deployment
+publish:
+	@echo "🚀 Starting: sync + autocommit + git push"
+	@$(MAKE) sync
+	@echo "✅ Sync completed"
+	@$(MAKE) autocommit
+	@echo "🎉 Autocommit completed!"
+	@echo "🚀 Pushing to remote..."
+	@git push
+	@echo "✅ Push completed!"
+	@sleep 5
+	@$(MAKE) build-progress
+
 # Start local development server
 dev:
 	hugo server -t hugo-bearblog
@@ -81,16 +94,3 @@ build-progress:
 			sleep 5; \
 		done \
 	'
-
-# Publish changes: sync, autocommit, push, and monitor deployment
-publish:
-	@echo "🚀 Starting: sync + autocommit + git push"
-	@$(MAKE) sync
-	@echo "✅ Sync completed"
-	@$(MAKE) autocommit
-	@echo "🎉 Autocommit completed!"
-	@echo "🚀 Pushing to remote..."
-	@git push
-	@echo "✅ Push completed!"
-	@sleep 5
-	@$(MAKE) build-progress
