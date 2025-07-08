@@ -8,4 +8,7 @@ sync:
 	node scripts/sync-obsidian-notes.js
 
 sync-watch:
-	node scripts/sync-obsidian-notes.js --watch 
+	node scripts/sync-obsidian-notes.js --watch
+
+autocommit:
+	git commit -am "$$(git diff | gemini --prompt 'Generate a concise commit message:')"
