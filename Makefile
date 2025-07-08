@@ -46,29 +46,30 @@ autocommit:
 		echo "⏱️ Time taken: $${duration}s"; \
 	'
 build-progress:
- @bash -c '\
- 	site_id=$$(netlify status | grep "Site ID" | awk "{print $$3}"); \
- 	if [ -z "$$site_id" ]; then \
- 		echo "❌ Could not find Site ID. Are you logged in with Netlify CLI?"; \
- 		exit 1; \
- 	fi; \
- 	echo "📡 Monitoring latest deploy for site: $$site_id"; \
- 	deploy_id=$$(netlify api listSiteDeploys --data '{"site_id":"'"$$site_id"'"}' | jq -r ".[0].id"); \
- 	echo "🆕 Latest Deploy ID: $$deploy_id"; \
- 	echo "🔍 Polling deploy status..."; \
- 	while true; do \
- 		status=$$(netlify api getDeploy --data '{"deploy_id":"'"$$deploy_id"'"}' | jq -r ".state"); \
- 		echo "🚧 Current status: $$status"; \
- 		if [ "$$status" = "ready" ]; then \
- 			echo "✅ Deploy complete!"; \
- 			break; \
- 		elif [ "$$status" = "error" ]; then \
- 			echo "❌ Deploy failed."; \
- 			break; \
- 		fi; \
- 		sleep 5; \
- 	done \
- '
+	 @bash -c '\
+	 	site_id=$$(netlify status | grep "Site ID" | awk "{print $$3}"); \
+	 	if [ -z "$$site_id" ]; then \
+	 		echo "❌ Could not find Site ID. Are you logged in with Netlify CLI?"; \
+	 		exit 1; \
+	 	fi; \
+	 	echo "📡 Monitoring latest deploy for site: $$site_id"; \
+	 	deploy_id=$$(netlify api listSiteDeploys --data '{"site_id":"'"$$site_id"'"}' | jq -r ".[0].id"); \
+	 	echo "🆕 Latest Deploy ID: $$deploy_id"; \
+	 	echo "🔍 Polling deploy status..."; \
+	 	while true; do \
+	 		status=$$(netlify api getDeploy --data '{"deploy_id":"'"$$deploy_id"'"}' | jq -r ".state"); \
+	 		echo "🚧 Current status: $$status"; \
+	 		if [ "$$status" = "ready" ]; then \
+	 			echo "✅ Deploy complete!"; \
+	 			break; \
+	 		elif [ "$$status" = "error" ]; then \
+	 			echo "❌ Deploy failed."; \
+	 			break; \
+	 		fi; \
+	 		sleep 5; \
+	 	done \
+	 '
+
 publish:
 	@echo "🚀 Starting: sync + autocommit + git push"
 	@$(MAKE) sync
