@@ -36,3 +36,12 @@ autocommit:
 		duration=$$((end_time - start_time)); \
 		echo "⏱️ Time taken: $${duration}s"; \
 	'
+publish:
+	@echo "🚀 Starting: sync + autocommit + git push"
+	@$(MAKE) sync
+	@echo "✅ Sync completed"
+	@$(MAKE) autocommit
+	@echo "🎉 completed!"
+	@echo "🚀 Pushing to remote..."
+	@git push
+	@echo "✅ Push completed!"
