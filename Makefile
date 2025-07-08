@@ -17,8 +17,8 @@ autocommit:
 		git add .; \
 		added_files=$$(git diff --cached --name-only); \
 		if [ -z "$$added_files" ]; then \
-			echo "⚠️ No changes to commit. Aborting."; \
-			exit 1; \
+			echo "⚠️ No changes to commit. Skipping autocommit."; \
+			exit 0; \
 		fi; \
 		echo "📄 Files staged for commit:"; \
 		echo "$$added_files"; \
@@ -45,6 +45,7 @@ autocommit:
 		duration=$$((end_time - start_time)); \
 		echo "⏱️ Time taken: $${duration}s"; \
 	'
+
 publish:
 	@echo "🚀 Starting: sync + autocommit + git push"
 	@$(MAKE) sync
