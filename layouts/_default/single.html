@@ -19,6 +19,7 @@
 </p>
 
 {{ if eq .Type "blog" }}
+  {{ partial "comments.html" . }}
   {{ partial "newsletter.html" . }}
 {{ end }}
 
