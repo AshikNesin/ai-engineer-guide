@@ -7,12 +7,6 @@ publish = "public"
 command = "hugo --gc --minify --config hugo.toml"
 
 [[redirects]]
-  from = "/blog/*/"
-  to = "/blog/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/blog/26-openai-operator-prompt"
   to = "/blog/openai-operator-prompt"
   status = 301

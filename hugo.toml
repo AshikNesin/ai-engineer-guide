@@ -19,7 +19,7 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 [permalinks]
-  blog = "/blog/:slug"
+  blog = "/blog/:slug/"
   tags = "/blog/:slug"
 
 [params]
