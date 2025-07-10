@@ -49,11 +49,6 @@ To know about the supported provider checkout [Models.dev](https://models.dev/)
 
 ## How to use? 
 
-Here is a quick walkthrough by AICodeKing YouTube channel
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/P8luPmEa1QI?si=bpCnd9mlT3r1ouHP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
 You can check out source code here 👉 https://github.com/sst/opencode
 
 Happy AI coding!
