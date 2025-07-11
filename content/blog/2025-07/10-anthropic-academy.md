@@ -1,5 +1,5 @@
 ---
-title: "Learn from Anthropic Official: Courses -  MCP, Claude Code & more"
+title: "Learn from Anthropic: Free courses about MCP, Claude Code & more"
 date: 2025-07-10
 description: 
 tags:
@@ -14,8 +14,6 @@ Anthropic has recently official video courses covering various topics like:
 - Model context protocol basics
 - Model context protocol (MCP) - Advanced
 - Claude Code
-
-# 
 
 ![2025-07-10 at 23.29.01@2x.png](/images/2025-07-10-at-23.29.01-at-2x.png)
 Check that out here 👉 [Anthropic Courses](https://anthropic.skilljar.com/)
