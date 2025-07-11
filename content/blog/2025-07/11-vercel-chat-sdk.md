@@ -1,5 +1,5 @@
 ---
-title: Vercel SDK
+title: Chat SDK by Vercel
 date: 2025-07-11
 description: 
 tags:
@@ -18,7 +18,7 @@ Primarily powered by Next.js & [AI SDK](https://v5.ai-sdk.dev/)
 
 ## Features
 
-Here are some of the features built by them
+Here are some of the features that are available in the template.
 
 ![2025-07-11 at 23.56.35@2x.png](/images/2025-07-11-at-23.56.35-at-2x.png)
 
