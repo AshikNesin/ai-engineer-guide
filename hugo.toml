@@ -59,6 +59,10 @@ ignoreErrors = ["error-disable-taxonomy"]
   websiteId = "d7df92fe-cb08-484d-adda-46e319b1fe3c"
   jsLocation = "https://hi.nesin.io/script.js"
 
+[Params.posthog]
+  enabled = true
+  id = "phc_GG9IdGTih1B5PQxOVS4oiwQm01VsN0iKMadZA0ZW6Xr"
+  
 [Params.ogImage]
 cloudinaryAccountId = "ashiknesin"
 twitterHandle = "AshikNesin"

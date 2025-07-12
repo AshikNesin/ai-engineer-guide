@@ -19,6 +19,7 @@
 </p>
 
 {{ if eq .Type "blog" }}
+  {{ partial "content-feedback.html" . }}
   {{ partial "comments.html" . }}
   {{ partial "newsletter.html" . }}
 {{ end }}

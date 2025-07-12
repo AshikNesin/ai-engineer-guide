@@ -1,0 +1,257 @@
+<div class="content-feedback" id="contentFeedback">
+  <div class="feedback-question">
+    <h3>Was this content helpful?</h3>
+    <p>Help us improve by giving us your feedback.</p>
+    <div class="feedback-buttons">
+      <button class="feedback-btn feedback-yes" onclick="submitFeedback(true)">
+        <span class="feedback-icon">👍</span> Yes
+      </button>
+      <button class="feedback-btn feedback-no" onclick="submitFeedback(false)">
+        <span class="feedback-icon">👎</span> No
+      </button>
+    </div>
+  </div>
+  
+  <div class="feedback-thank-you" id="feedbackThankYou" style="display: none;">
+    <h3>Thank you for helping us improve!</h3>
+    <p>Your feedback helps us create better content for developers like you.</p>
+  </div>
+  
+  <div class="feedback-elaborate" id="feedbackElaborate" style="display: none;">
+    <h3>Was this content helpful?</h3>
+    <p>Help us improve by giving us your feedback.</p>
+    <textarea id="feedbackText" placeholder="Please tell us why the content was not useful..." rows="4"></textarea>
+    <div class="feedback-submit-container">
+      <button class="feedback-btn feedback-submit" onclick="submitElaborateFeedback()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.content-feedback {
+  margin: 60px 0 40px 0;
+  padding: 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+}
+
+.content-feedback h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1em;
+  color: #444;
+  font-weight: normal;
+}
+
+.content-feedback p {
+  margin: 0 0 24px 0;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feedback-btn {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 80px;
+}
+
+.feedback-btn:hover {
+  border-color: #3273dc;
+  color: #3273dc;
+  background-color: #f8f9ff;
+}
+
+.feedback-yes:hover {
+  border-color: #28a745;
+  color: #28a745;
+  background-color: #f8fff8;
+}
+
+.feedback-no:hover {
+  border-color: #dc3545;
+  color: #dc3545;
+  background-color: #fff8f8;
+}
+
+.feedback-icon {
+  font-size: 16px;
+}
+
+#feedbackText {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  background-color: #fff;
+}
+
+.feedback-submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.feedback-submit {
+  background-color: #3273dc;
+  color: white;
+  border-color: #3273dc;
+  justify-content: center;
+}
+
+.feedback-submit:hover {
+  background-color: #2366d1;
+  border-color: #2366d1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .content-feedback {
+    border-top-color: #555;
+  }
+  
+  .content-feedback h3 {
+    color: #ddd;
+  }
+  
+  .content-feedback p {
+    color: #aaa;
+  }
+  
+  .feedback-btn {
+    border-color: #555;
+    background-color: #333;
+    color: #aaa;
+  }
+  
+  .feedback-btn:hover {
+    border-color: #8cc2dd;
+    color: #8cc2dd;
+    background-color: #2a2a2a;
+  }
+  
+  .feedback-yes:hover {
+    border-color: #40c057;
+    color: #40c057;
+    background-color: #2a2a2a;
+  }
+  
+  .feedback-no:hover {
+    border-color: #f03e3e;
+    color: #f03e3e;
+    background-color: #2a2a2a;
+  }
+  
+  #feedbackText {
+    background-color: #333;
+    border-color: #555;
+    color: #ddd;
+  }
+  
+  .feedback-submit {
+    background-color: #8cc2dd;
+    border-color: #8cc2dd;
+    color: #333;
+  }
+  
+  .feedback-submit:hover {
+    background-color: #7ab8d3;
+    border-color: #7ab8d3;
+  }
+}
+
+@media (max-width: 600px) {
+  .feedback-buttons {
+    gap: 12px;
+  }
+  
+  .feedback-btn {
+    flex: 1;
+    max-width: 120px;
+  }
+}
+</style>
+
+<script>
+function submitFeedback(isHelpful) {
+  const feedbackData = {
+    helpful: isHelpful,
+    page: window.location.pathname,
+    timestamp: new Date().toISOString()
+  };
+  
+  // Debug logging
+  console.log('Submitting feedback:', feedbackData);
+  console.log('PostHog available:', typeof posthog !== 'undefined');
+  
+  if (typeof posthog !== 'undefined') {
+    try {
+      posthog.capture('content_feedback', feedbackData);
+      console.log('PostHog event sent successfully');
+    } catch (error) {
+      console.error('PostHog error:', error);
+    }
+  } else {
+    console.warn('PostHog is not available');
+  }
+  
+  const feedbackDiv = document.getElementById('contentFeedback');
+  if (isHelpful) {
+    feedbackDiv.querySelector('.feedback-question').style.display = 'none';
+    document.getElementById('feedbackThankYou').style.display = 'block';
+  } else {
+    feedbackDiv.querySelector('.feedback-question').style.display = 'none';
+    document.getElementById('feedbackElaborate').style.display = 'block';
+  }
+}
+
+function submitElaborateFeedback() {
+  const feedbackText = document.getElementById('feedbackText').value;
+  
+  const feedbackData = {
+    helpful: false,
+    page: window.location.pathname,
+    feedback_text: feedbackText,
+    timestamp: new Date().toISOString()
+  };
+  
+  // Debug logging
+  console.log('Submitting detailed feedback:', feedbackData);
+  console.log('PostHog available:', typeof posthog !== 'undefined');
+  
+  if (typeof posthog !== 'undefined') {
+    try {
+      posthog.capture('content_feedback', feedbackData);
+      console.log('PostHog event sent successfully');
+    } catch (error) {
+      console.error('PostHog error:', error);
+    }
+  } else {
+    console.warn('PostHog is not available');
+  }
+  
+  const feedbackDiv = document.getElementById('contentFeedback');
+  feedbackDiv.querySelector('.feedback-elaborate').style.display = 'none';
+  document.getElementById('feedbackThankYou').style.display = 'block';
+}
+</script>
