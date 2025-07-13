@@ -1,75 +1,81 @@
 # AI Engineer Guide
+A clean, fast Hugo‑powered blog that powers [AIEngineerGuide.com](https://aiengineerguide.com)
 
-A Hugo-powered static site blog focused on AI engineering content, tools, and insights. Built with modern web technologies and automated content management.
-
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
-- [Hugo](https://gohugo.io/installation/) (v0.140.0+)
-- [Node.js](https://nodejs.org/) (for content sync automation)
-- [Git](https://git-scm.com/)
+Before you begin, make sure you have these installed:
+- [Hugo](https://gohugo.io/installation/) (v0.140.0 or newer)
+- [Node.js](https://nodejs.org/) (used for syncing content)
 
-### Local Development
+### Run Locally
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd AIEngineerGuide
+# Clone the repo
+git clone https://github.com/AshikNesin/ai-engineer-guide
+cd ai-engineer-guide
 
-# Start the development server
+# Start the dev server
 hugo server -t hugo-bearblog
+
+# Or, using Makefile
+make dev
 
 # Visit http://localhost:1313 in your browser
 ```
 
-## 🏗️ Architecture Overview
-
-- **Framework**: Hugo static site generator
+## 🏗️ Site Overview
+- **Live Site**: [AIEngineerGuide.com](https://aiengineerguide.com)
+- **Framework**: Hugo (static site generator)
 - **Theme**: `hugo-bearblog` 
-- **Hosting**: Netlify with serverless functions
-- **Content Source**: Obsidian vault with automated sync
-- **Analytics**: Umami integration
+- **Hosting**: Netlify + serverless functions
+- **Content Source**: Obsidian vault
+- **Analytics**: Umami integration (self hosted)
 - **Timezone**: Asia/Kolkata
 
 ## 📝 Content Management
 
-### Content Pipeline
-- **Source**: Obsidian vault at `~/Sync/Notes/ai-notes/AIEngineerGuide/content/blog/`
-- **Sync Script**: Automated synchronization via `scripts/sync-obsidian-notes.js`
-- **Destination**: `content/blog/` directory in Hugo format
-- **Images**: Auto-synced from Obsidian attachments to `static/images/`
+### How It Works
 
-### Content Sync Commands
+### Content Pipeline
+- Source notes live in `~/Sync/Notes/ai-notes/AIEngineerGuide/content/blog/`
+- Synced via: `scripts/sync-obsidian-notes.js`
+- Output: `content/blog/` in Hugo format
+- Images: Automatically copied to `static/images/`
+
+Content is maintained in a separate [repo](https://github.com/AshikNesin/ai-notes/tree/main/AIEngineerGuide), synced manually when needed.
+
+### Sync Commands
 
 ```bash
-# One-time sync from Obsidian
-cd scripts && npm run sync:once
-
-# Watch for changes and auto-sync
-cd scripts && npm run sync:watch
-
 # Install sync dependencies
 cd scripts && npm install
+
+# One-time sync
+cd scripts && npm run sync:once
+
+# Watch for changes
+cd scripts && npm run sync:watch
 ```
 
-### Content Organization
-Blog posts are organized by year/month: `content/blog/YYYY-MM/`
+### Structure
+Posts are grouped by year/month: `content/blog/YYYY-MM/`
 
 Each post includes:
 - Hugo front matter (title, date, tags)
-- Markdown content with image references
-- Automatic tag-based categorization
+- Markdown content + image links
+- Tags
 
-## 🛠️ Development Commands
+## 🛠️ Useful Commands
 
 ```bash
 # Start local development server
 hugo server -t hugo-bearblog
 
-# Build for production
+# Production build
 hugo --gc --minify --config hugo.toml
 
-# Clean build artifacts
+# Clean up build files
 hugo --gc
 ```
 
@@ -94,57 +100,73 @@ AIEngineerGuide/
 └── netlify.toml       # Netlify deployment config
 ```
 
-## 🚀 Deployment
+## 🚀 Deploying to Netlify
 
-### Netlify Configuration
-- **Build Command**: `hugo --gc --minify --config hugo.toml`
-- **Publish Directory**: `public/`
-- **Hugo Version**: 0.140.0
+### Settings
+
+* **Build Command**: `hugo --gc --minify --config hugo.toml`
+* **Publish Directory**: `public/`
+* **Hugo Version**: `0.140.0`
 
 ### Environment Variables
-Required for Netlify functions:
-- `PUSHOVER_API_TOKEN` - For 404 tracking notifications
-- `PUSHOVER_USER_KEY` - For push notification delivery
 
-## ✨ Features
+Used for 404 tracking:
 
-- **Automated Content Sync**: Seamless integration with Obsidian
-- **404 Tracking**: Push notifications for broken links via Pushover
-- **RSS Feed**: Custom RSS implementation
-- **Analytics**: Umami integration for visitor tracking
-- **OG Images**: Cloudinary-based social media image generation
-- **Responsive Design**: Mobile-first approach with clean typography
+* `PUSHOVER_API_TOKEN`
+* `PUSHOVER_USER_KEY`
+
+---
+
+## ✨ Key Features
+
+* **Obsidian Sync**: Write in Obsidian, publish with Hugo
+* **404 Notifications**: Real‑time alerts via Pushover
+* **RSS Feed**: Custom RSS generation
+* **Analytics**: Privacy‑first insights with Umami
+* **OG Images**: Social previews via Cloudinary
+* **Responsive Design**: Mobile‑friendly, clean typography
+
+---
 
 ## 🔧 Customization
 
-### Theme Overrides
-Custom layouts in `layouts/` override theme defaults:
-- `layouts/_default/baseof.html` - Base template
-- `layouts/partials/` - Reusable components
-- `layouts/shortcodes/` - Custom shortcodes
+### Layouts
 
-### Netlify Functions
-- **404 Tracker**: `netlify/functions/track-404.mjs`
-  - Sends push notifications when users hit 404 pages
-  - Helps identify broken links and content issues
+Override theme templates via `layouts/`:
 
-## 📊 Analytics & Monitoring
+* `layouts/_default/baseof.html`
+* `layouts/partials/`
+* `layouts/shortcodes/`
 
-- **Umami Analytics**: Privacy-focused visitor tracking
-- **404 Monitoring**: Automated broken link detection
-- **Build Notifications**: Netlify deployment status
+### Serverless Functions
 
-## 🤝 Contributing
+Custom Netlify function for tracking 404s:
 
-1. Fork the repository
-2. Create a feature branch
+* `netlify/functions/track-404.mjs`
+* Sends push alerts for broken links
+
+---
+
+## 📊 Monitoring
+
+* **Umami**: Lightweight, privacy‑friendly analytics
+* **404 Alerts**: Instant detection of broken links
+* **Build Logs**: Netlify deployment feedback
+
+---
+
+## 🤝 Contribute
+
+1. Fork the repo
+2. Create a new branch
 3. Make your changes
-4. Test locally with `hugo server`
+4. Test with `hugo server`
 5. Submit a pull request
 
-## 📄 License
+---
 
-This project is open source. Please check the license file for details.
+## 📄 License
+MIT
 
 ## 🔗 Links
 
