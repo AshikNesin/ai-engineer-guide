@@ -8,7 +8,7 @@ tags:
 url: blog/test-mcp-postman
 via_url:
 ---
-When I'm building MCP servers I usually use official [MCP Inspector](https://github.com/modelcontextprotocol/inspector#mcp-inspector) then I came to know that   [Postman](https://www.postman.com/) supports it out of box.
+When I'm building MCP servers I usually use official [MCP Inspector](https://github.com/modelcontextprotocol/inspector#mcp-inspector) then I came to know that [Postman](https://www.postman.com/) supports it out of box.
 
 So for any quick testing, I started using it.
 
