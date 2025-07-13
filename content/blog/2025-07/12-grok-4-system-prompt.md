@@ -13,7 +13,7 @@ And overall sentiment in Twitter/X seems to be positive as well.
 
 While reading about it, I came across the system prompt for Grok 4. 
 
-```
+```md
 You are Grok 4 built by xAI.
 
 When applicable, you have some additional tools:
