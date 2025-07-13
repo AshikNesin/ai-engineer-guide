@@ -1,6 +1,8 @@
 # AI Engineer Guide
 A clean, fast Hugo‑powered blog that powers [AIEngineerGuide.com](https://aiengineerguide.com)
 
+![](https://aiengineerguide.com/preview.png)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
