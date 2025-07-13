@@ -63,6 +63,10 @@ ignoreErrors = ["error-disable-taxonomy"]
   enabled = true
   id = "phc_GG9IdGTih1B5PQxOVS4oiwQm01VsN0iKMadZA0ZW6Xr"
   
+[Params.clarity]
+  enabled = false
+  id = "s880bgj9uz"
+  
 [Params.ogImage]
 cloudinaryAccountId = "ashiknesin"
 twitterHandle = "AshikNesin"
