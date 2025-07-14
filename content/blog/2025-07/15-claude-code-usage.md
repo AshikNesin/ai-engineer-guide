@@ -1,5 +1,5 @@
 ---
-title: How to get Anthropic Claude Code Usage Report
+title: How to get Anthropic Claude Code Usage Locally
 date: 2025-07-15
 description: 
 tags:
