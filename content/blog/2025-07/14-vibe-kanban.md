@@ -40,7 +40,9 @@ Initially, I tried using Gemini CLI, but the results weren’t good. Then I've s
 
 ![2025-07-14 at 17.23.06@2x.png](/images/2025-07-14-at-17.23.06-at-2x.png)
 ![2025-07-14 at 17.25.35@2x.png](/images/2025-07-14-at-17.25.35-at-2x.png)
-That's pretty much it!
+That's pretty much it! 
+
+Here is the change it has made: [AshikNesin/ai-engineer-guide@386c1cc · GitHub](https://github.com/AshikNesin/ai-engineer-guide/commit/386c1ccb17b6d65b1aabfd7fd3ab19e7ddadbf87)
 
 Happy vibe coding
 
