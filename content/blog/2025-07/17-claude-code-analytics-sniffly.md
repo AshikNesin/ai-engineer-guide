@@ -41,8 +41,13 @@ sniffly init
 Once you run the command, it'll start dev server. From there you should be able to access the dashboard.
 
 Here are some of the screenshots when I ran it locally.
-![2025-07-17 at 23.02.56@2x.png](/images/2025-07-17-at-23.02.56-at-2x.png)
-![2025-07-17 at 23.14.11@2x.png](/images/2025-07-17-at-23.14.11-at-2x.png)
-![2025-07-17 at 23.14.32@2x.png](/images/2025-07-17-at-23.14.32-at-2x.png)
-![2025-07-17 at 23.14.49@2x.png](/images/2025-07-17-at-23.14.49-at-2x.png)
+
+![2025-07-17 at 23.31.19.png](/images/2025-07-17-at-23.31.19.png)
+
+![Pasted image 20250717232954.png](/images/Pasted-image-20250717232954.png)
+
+![Pasted image 20250717233011.png](/images/Pasted-image-20250717233011.png)
+
+![2025-07-17 at 23.30.38.png](/images/2025-07-17-at-23.30.38.png)
+
 Happy Claude Analytics!
