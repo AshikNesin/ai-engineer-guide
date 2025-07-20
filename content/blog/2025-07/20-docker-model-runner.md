@@ -37,6 +37,15 @@ docker model run ai/smollm2:360M-Q4_K_M "Why sky is Blue?"
 ```
 
 
+## How to use it with OpenAI compatible sdk ?
+
+Just set the base url to 
+
+`http://localhost:12434/engines/v1`
+
+And set the model it as whatever model that you're running. In the above case, it'll be `ai/smollm2:360M-Q4_K_M`
+
+
 Here is a good video by Travis Media about it
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KL4WU_04CrA?si=WWeTljoW0apTQuiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
