@@ -1,5 +1,5 @@
 ---
-title: Turn Any LLM Model into a Web Search in OpenRouter
+title: Turn Any LLM into a Web Search Model in OpenRouter
 date: 2025-07-22
 description: 
 tags:
