@@ -8,4 +8,4 @@ I started this blog to document my journey as I try to become proficient in AI a
 
 Thanks for stopping by!
 
-Want to say hi? [Let's talk](mailto:nesin@duck.com)
+Want to say hi? [Let's talk](mailto:aiengineerguide@duck.com)
