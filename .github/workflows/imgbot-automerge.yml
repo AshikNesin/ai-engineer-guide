@@ -1,0 +1,29 @@
+name: Imgbot Auto Merge
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    if: github.actor == 'imgbot[bot]'
+    
+    steps:
+      - name: Check if PR is from imgbot
+        id: check_imgbot
+        run: |
+          if [[ "${{ github.actor }}" == "imgbot[bot]" ]]; then
+            echo "is_imgbot=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_imgbot=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Auto merge imgbot PRs
+        if: steps.check_imgbot.outputs.is_imgbot == 'true'
+        uses: pascalgn/merge-action@v0.15.6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          merge_method: squash
+          merge_commit_title: "Auto-merge imgbot image compression PR"
+          merge_commit_message: "Automatically merged imgbot PR for image compression"
