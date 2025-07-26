@@ -11,6 +11,13 @@ via_url: https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.
 ---
 Anthropic has released a case study on how their team uses Claude Code in their day to do job across different teams (tech, non tech, etc)
 
+For example, this is how the product development team uses claude code
+
+![2025-07-26 at 23.55.27@2x 1.png](/images/2025-07-26-at-23.55.27-at-2x-1.png)
+
+And the benefits that they've got
+![2025-07-26 at 23.58.02@2x.png](/images/2025-07-26-at-23.58.02-at-2x.png)
+
 The case study is pretty big, but you might find something useful 👇
 
 | Case Study | https://www.anthropic.com/news/how-anthropic-teams-use-claude-code         |
