@@ -246,4 +246,8 @@ This actually opens up lot of opportunities for use to build tools on top of Cla
 
 But, beware of the token usage as well 😜
 
+Check out the docs to learn more about it.
+
+[Claude Code SDK - Anthropic](https://docs.anthropic.com/en/docs/claude-code/sdk)
+
 Happy building tools!
