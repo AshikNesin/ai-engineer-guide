@@ -3,8 +3,7 @@ title: How to MCP Servers with MCPJam Inspector
 date: 2025-07-30
 description: 
 tags:
-  - claude-code
-  - kimi-k2
+  - mcp
 url: blog/mcp-server-testing-with-mcpjam
 via_url:
 ---
