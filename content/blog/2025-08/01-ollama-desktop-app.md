@@ -1,0 +1,23 @@
+---
+title: Ollama’s New Desktop App
+date: 2025-08-01
+description: 
+tags:
+  - ollama
+url: blog/ollama-desktop-app
+via_url:
+---
+[Ollama](https://ollama.com) latest version in MacOS and Windows now supports a GUI app.
+
+So you don't have to play around with only CLI or API 😅
+
+The new app has support for **downloading** and chatting with models.
+
+It's UI is pretty simple and clean 👇
+
+![2025-08-01 at 23.49.36.png](/images/2025-08-01-at-23.49.36.png)
+
+## Further Reference
+[Ollama's new app · Ollama Blog](https://ollama.com/blog/new-app)
+
+Happy running local-models!

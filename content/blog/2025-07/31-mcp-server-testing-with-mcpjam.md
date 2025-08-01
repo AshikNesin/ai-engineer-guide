@@ -1,6 +1,6 @@
 ---
 title: How to MCP Servers with MCPJam Inspector
-date: 2025-07-30
+date: 2025-07-31
 description: 
 tags:
   - mcp
