@@ -1,0 +1,31 @@
+{{/* Hugo render hook for customizing link rendering */}}
+{{- $href := .Destination | safeURL -}}
+{{- $text := .Text | safeHTML -}}
+{{- $title := .Title | safeHTML -}}
+{{- $isExternal := false -}}
+
+{{/* Check if link is external */}}
+{{- if or (hasPrefix $href "http://") (hasPrefix $href "https://") (hasPrefix $href "//") -}}
+  {{- $siteURL := urls.Parse site.BaseURL -}}
+  {{- $linkURL := urls.Parse $href -}}
+  {{- if ne $siteURL.Host $linkURL.Host -}}
+    {{- $isExternal = true -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Handle external links */}}
+{{- if $isExternal -}}
+  {{/* Add UTM parameters */}}
+  {{- $separator := "?" -}}
+  {{- if strings.Contains $href "?" -}}
+    {{- $separator = "&" -}}
+  {{- end -}}
+  {{- $utmParams := printf "%sutm_source=%s" $separator (site.BaseURL | urlquery) -}}
+  {{- $href = printf "%s%s" $href $utmParams -}}
+  
+  {{/* Render external link with nofollow and target="_blank" */}}
+  <a href="{{ $href }}" rel="nofollow noopener" target="_blank"{{- with $title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
+{{- else -}}
+  {{/* Render internal link normally */}}
+  <a href="{{ $href }}"{{- with $title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
+{{- end -}}
