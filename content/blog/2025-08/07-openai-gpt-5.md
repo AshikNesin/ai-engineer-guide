@@ -5,7 +5,7 @@ description:
 tags:
   - gpt-5
   - OpenAI
-url: blog/gpt-5
+url: blog/openai-gpt-5
 via_url:
 ---
 OpenAI has released much hyped [gpt-5](https://openai.com/index/introducing-gpt-5-for-developers/)
