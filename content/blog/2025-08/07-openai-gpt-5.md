@@ -12,6 +12,8 @@ OpenAI has released much hyped [gpt-5](https://openai.com/index/introducing-gpt-
 
 From the looks of it, it is going to be a really power model with better pricing.
 
+They claim it is the best model for **agentic tasks** and **coding**
+
 It has 4 variants
 
 | Variant    | Best for                                                                                                   |
