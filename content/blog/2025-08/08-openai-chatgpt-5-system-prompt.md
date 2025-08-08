@@ -1,6 +1,6 @@
 ---
 title: OpenAI ChatGPT 5 system prompt
-date: 2025-08-07
+date: 2025-08-08
 description: 
 tags:
   - OpenAI
