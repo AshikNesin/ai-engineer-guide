@@ -22,7 +22,8 @@ It has 4 variants
 | gpt-5-mini | - Cost-optimized reasoning and chat<br>- Balances speed, cost, and capability                              |
 | gpt-5-nano | - High-throughput tasks especially simple instruction-following or classification                          |
 | gpt-5-chat | - Designed for advanced, natural, multimodal, and context-aware conversations for enterprise applications. |
-## Pricing
+
+**## Pricing
 In term of pricing it is actually better than the previous models and also majority of the competitors
 
 Here is the standard pricing.
