@@ -34,7 +34,8 @@ Like I said before, it does not have many commands at the moment.
 
 With that, you can can choose the model that you want to work with. And ask it to do the job 🤖
 
-## Verdict
+## Verdict 👎
+
 Will I use Cursor Agent CLI instead of Claude Code?
 
 Most probably, No.
