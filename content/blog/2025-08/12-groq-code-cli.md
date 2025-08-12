@@ -24,4 +24,18 @@ Currently, it has support for only bare essentials like this
 
 👉 https://github.com/build-with-groq/groq-code-cli
 
+## How to get started?
+
+```shell
+# Clone their repo
+git clone https://github.com/build-with-groq/groq-code-cli
+npm install
+npm run build
+npm link # link "groq" command to this project
+```
+
+Once you link it, you should be able to run `groq` command now.
+
+And you can login with `/login` command in the CLI.
+
 Happy building CLI-agent!
