@@ -1,0 +1,242 @@
+<style>
+    /* Container for Carbon Ads */
+    #carbon-container {
+        margin: 2rem auto 1.5rem auto;
+        max-width: 720px;
+        padding: 0 20px;
+        position: relative;
+    }
+
+
+    #carbonads {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+        font-size: 0.875rem;
+        border-radius: 0.5rem;
+        background-color: #f9f9f9;
+        color: #737373;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.5;
+        max-width: 100%;
+        margin: 0 auto;
+        border: 1px solid #e5e5e5;
+        transition: all 0.15s ease;
+        min-height: 0;
+    }
+
+    #carbonads:hover {
+        background-color: #f5f5f5;
+        border-color: #d4d4d4;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    /* Carbon ads content wrapper */
+    #carbonads .carbon-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    /* Image styling */
+    #carbonads .carbon-img {
+        flex-shrink: 0;
+        line-height: 0;
+    }
+
+    #carbonads img {
+        border-radius: 0.375rem;
+        width: 130px;
+        height: auto;
+        display: block;
+    }
+
+    /* Text content */
+    #carbonads .carbon-text-wrap {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.375rem;
+    }
+
+    #carbonads .carbon-text {
+        color: #505050;
+        text-decoration: none;
+        display: block;
+        line-height: 1.4;
+        font-size: 0.875rem;
+    }
+
+    #carbonads .carbon-text:hover {
+        color: #3273dc;
+    }
+
+    #carbonads .carbon-poweredby {
+        color: #737373;
+        text-decoration: none;
+        font-size: 0.75rem;
+        opacity: 0.8;
+    }
+
+    #carbonads .carbon-poweredby:hover {
+        color: #525252;
+        opacity: 1;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 640px) {
+        #carbon-container {
+            margin: 1.5rem auto 1rem auto;
+            padding: 0 1rem;
+        }
+
+        #carbonads {
+            padding: 0.875rem;
+            font-size: 0.8125rem;
+        }
+
+        #carbonads .carbon-wrap {
+            flex-direction: column;
+            text-align: center;
+            gap: 0.875rem;
+        }
+
+        #carbonads .carbon-text-wrap {
+            text-align: center;
+            align-items: center;
+        }
+
+        #carbonads img {
+            width: 110px;
+        }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+        #carbon-container::before {
+            background-color: #555;
+        }
+
+        #carbonads {
+            background-color: #2a2a2a;
+            color: #a3a3a3;
+            border-color: #404040;
+        }
+
+        #carbonads:hover {
+            background-color: #2a2a2a;
+            border-color: #525252;
+        }
+
+        #carbonads .carbon-text {
+            color: #d4d4d4;
+        }
+
+        #carbonads .carbon-text:hover {
+            color: #8cc2dd;
+        }
+
+        #carbonads .carbon-poweredby {
+            color: #a3a3a3;
+        }
+
+        #carbonads .carbon-poweredby:hover {
+            color: #d4d4d4;
+        }
+    }
+
+    /* Override any default Carbon styles that add extra spacing */
+    #carbonads * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Specific overrides for responsive format */
+    #carbon-responsive {
+        width: 100% !important;
+    }
+
+    #carbon-responsive .carbon-responsive-wrap {
+        border: none !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+    }
+
+    #carbon-responsive .carbon-img {
+        flex: 0 0 auto !important;
+    }
+
+    #carbon-responsive .carbon-text-container {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.375rem !important;
+        text-align: left !important;
+    }
+
+    @media (max-width: 640px) {
+        #carbon-responsive .carbon-responsive-wrap {
+            flex-direction: column !important;
+            text-align: center !important;
+        }
+
+        #carbon-responsive .carbon-text-container {
+            text-align: center !important;
+        }
+    }
+</style>
+
+<div id="carbon-container"></div>
+
+<script>
+(function() {
+    const SERVE_ID = 'CW7IL5QE';
+    const PLACEMENT = 'aiengineerguidecom';
+    const FORMAT = 'responsive';
+    
+    const carbonAdsUrl = `//cdn.carbonads.com/carbon.js?serve=${SERVE_ID}&placement=${PLACEMENT}&format=${FORMAT}`;
+    
+    function loadCarbonAds() {
+        // Check if carbonads already exists
+        const isCarbonExist = document.querySelector('#carbonads');
+        
+        if (isCarbonExist) {
+            // Refresh existing ad if available
+            if (window._carbonads && typeof window._carbonads.refresh === 'function') {
+                window._carbonads.refresh();
+            }
+            return;
+        }
+        
+        // Check if script already exists
+        const carbonScript = document.querySelector('#_carbonads_js');
+        
+        if (carbonScript === null) {
+            const script = document.createElement('script');
+            script.src = carbonAdsUrl;
+            script.id = '_carbonads_js';
+            script.async = true;
+            
+            const container = document.querySelector('#carbon-container');
+            if (container) {
+                container.appendChild(script);
+            }
+        }
+    }
+    
+    // Load ads when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadCarbonAds);
+    } else {
+                loadCarbonAds();
+    }
+})();
+</script>
