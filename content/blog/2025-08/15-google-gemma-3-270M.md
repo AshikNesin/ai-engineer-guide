@@ -17,6 +17,8 @@ And it is primarily intent for on-device LLM use cases.
 Here is a quick demo of Bedtime story generator  that runs entirely on your browser using  Transformers.js👇
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ds95v-Aiu5E?si=RdFFdtyHaOmM2unO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+[Bedtime Story Generator - a Hugging Face Space by webml-community](https://huggingface.co/spaces/webml-community/bedtime-story-generator)
+
 ## How to use it using Ollama?
 
 Just run 
@@ -24,3 +26,6 @@ Just run
 ```
 ollama run gemma3:270m
 ```
+
+## References
+- [Introducing Gemma 3 270M: The compact model for hyper-efficient AI - Google Developers Blog](https://developers.googleblog.com/en/introducing-gemma-3-270m/)
