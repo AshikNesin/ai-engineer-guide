@@ -35,7 +35,7 @@ If you authenticate with personal Google account then you get the following free
 
 While prompting in claude code, you can mention to use gemini cli. And it will do it under the hood like this
 
-![2025-07-27 at 21.49.43@2x.png](/images/2025-07-27-at-21.49.43-at-2x.png)
+![2025-07-27 at 21.49.43@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-27-at-21.49.43-at-2x.png)
 Similarly you can also mention this in your `CLAUDE.md`  as well.
 
 Note: I got this prompt from Grok. Refine it based on your use case.

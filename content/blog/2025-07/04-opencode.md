@@ -12,7 +12,7 @@ Command lines based agentic code generation apps are the talk of the town. You m
 
 But if you want flexibility of using any model + open source then [OpenCode](https://opencode.ai/) is a good alternative.
 
-![2025-07-04 at 23.39.51@2x.png](/images/2025-07-04-at-23.39.51-at-2x.png)
+![2025-07-04 at 23.39.51@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-04-at-23.39.51-at-2x.png)
 
 ## How to get started?
 
@@ -42,7 +42,7 @@ Once it is installed, you can run the following command to login to your auth pr
 opencode auth login
 ```
 
-![2025-07-05 at 10.21.28@2x.png](/images/2025-07-05-at-10.21.28-at-2x.png)
+![2025-07-05 at 10.21.28@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-05-at-10.21.28-at-2x.png)
 The credentials are configured in `~/.local/share/opencode/auth.json`
 
 To know about the supported provider checkout [Models.dev](https://models.dev/) which they're using under the hood.

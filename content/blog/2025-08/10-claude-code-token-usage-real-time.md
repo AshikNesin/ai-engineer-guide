@@ -11,7 +11,7 @@ Claude Code team has recently shipped [customizable status lines](https://x.com/
 
 We can combine this with [ccusage](/blog/claude-code-usage/) and we have a a beautiful CLI like this 👇
 
-![2025-08-10 at 11.12.05@2x.png](/images/2025-08-10-at-11.12.05-at-2x.png)
+![2025-08-10 at 11.12.05@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-10-at-11.12.05-at-2x.png)
 
 ## Getting Started
 Make sure you're on latest version of claude code. If not update it by running the following command
@@ -32,7 +32,7 @@ Add this in your ` ~/.claude/settings.json` file
 ```
 
 
-![2025-08-10 at 09.22.33@2x.png](/images/2025-08-10-at-09.22.33-at-2x.png)
+![2025-08-10 at 09.22.33@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-10-at-09.22.33-at-2x.png)
 
 That's pretty much it.
 

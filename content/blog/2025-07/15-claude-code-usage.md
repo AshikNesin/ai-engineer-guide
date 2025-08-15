@@ -20,7 +20,7 @@ npx ccusage@latest
 ```
 
 Like this 👇
-![2025-07-14 at 23.19.11@2x.png](/images/2025-07-14-at-23.19.11-at-2x.png)
+![2025-07-14 at 23.19.11@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-14-at-23.19.11-at-2x.png)
 This is especially useful if you do not have access to view those information in Anthropic console.
 
 You can checkout their docs to learn more about the filters supported in ccusage

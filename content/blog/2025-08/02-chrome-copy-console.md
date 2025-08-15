@@ -13,7 +13,7 @@ Apparently, Google Chrome (+ chromium forks) browser has support for **Copy cons
 
 Just right click on the console and copy it.
 
-![2025-08-02 at 23.42.16.png](/images/2025-08-02-at-23.42.16.png)
+![2025-08-02 at 23.42.16.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-02-at-23.42.16.png)
 
 In fact, it might be a good choice than just sharing screenshot in LLM since it good at parsing texts than images.
 

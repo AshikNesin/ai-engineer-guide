@@ -39,7 +39,7 @@ const { text } = await generateText({
 console.log(text);
 ```
 
-![2025-05-29 at 23.49.04@2x.png](/images/2025-05-29-at-23.49.04-at-2x.png)
+![2025-05-29 at 23.49.04@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-05/2025-05-29-at-23.49.04-at-2x.png)
 ## Usage - StreamObject
 
 

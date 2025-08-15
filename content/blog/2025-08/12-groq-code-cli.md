@@ -16,11 +16,11 @@ The approach that they took is they've old built the bare essentials that are ne
 
 Their goal is to help people to build their own custom coding agent that solves their use case.
 
-![2025-08-12 at 22.38.24@2x.png](/images/2025-08-12-at-22.38.24-at-2x.png)
+![2025-08-12 at 22.38.24@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-12-at-22.38.24-at-2x.png)
 
 Currently, it has support for only bare essentials like this
 
-![2025-08-12 at 23.47.05@2x.png](/images/2025-08-12-at-23.47.05-at-2x.png)
+![2025-08-12 at 23.47.05@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-12-at-23.47.05-at-2x.png)
 
 👉 https://github.com/build-with-groq/groq-code-cli
 

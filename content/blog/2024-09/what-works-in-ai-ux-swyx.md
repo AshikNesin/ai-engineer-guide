@@ -27,12 +27,12 @@ url: blog/what-works-in-ai-ux-swyx
 
 ## Slides
 
-![Pasted image 20241222204919.png](/images/Pasted-image-20241222204919.png)
-![Pasted image 20241222204901.png](/images/Pasted-image-20241222204901.png)
-![Pasted image 20241222204940.png](/images/Pasted-image-20241222204940.png)
-![Pasted image 20241222204959.png](/images/Pasted-image-20241222204959.png)
-![Pasted image 20241222205013.png](/images/Pasted-image-20241222205013.png)
-![Pasted image 20241222205025.png](/images/Pasted-image-20241222205025.png)
+![Pasted image 20241222204919.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222204919.png)
+![Pasted image 20241222204901.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222204901.png)
+![Pasted image 20241222204940.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222204940.png)
+![Pasted image 20241222204959.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222204959.png)
+![Pasted image 20241222205013.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222205013.png)
+![Pasted image 20241222205025.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222205025.png)
 
 
 ## References

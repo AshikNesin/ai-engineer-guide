@@ -134,7 +134,7 @@ class AsyncParallelBatchFlow(AsyncFlow,BatchFlow):
 ```
 
 
-![Pasted image 20250718212620.png](/images/Pasted-image-20250718212620.png)
+![Pasted image 20250718212620.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/Pasted-image-20250718212620.png)
 
 They also have blog posts on how to build things using it 👉 https://pocketflow.substack.com/
 

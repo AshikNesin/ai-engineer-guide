@@ -16,15 +16,15 @@ Here is a leaderboard of the top AI Coding Agents based on the info that is avai
 
 You can check it out here: https://prarena.ai
 
-![2025-06-29 at 23.05.39@2x.png](/images/2025-06-29-at-23.05.39-at-2x.png)
-![2025-06-29 at 23.11.21@2x.png](/images/2025-06-29-at-23.11.21-at-2x.png)
+![2025-06-29 at 23.05.39@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-29-at-23.05.39-at-2x.png)
+![2025-06-29 at 23.11.21@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-29-at-23.11.21-at-2x.png)
 ## Data Source
 Intestinally, it is just a GitHub search queries.
 
 Based on the branch prefix or git author that is specific to an AI Coding agent it gets the metrics and updates in the website regularly.
 
 GitHub query string <> stats mapper
-![2025-07-01 at 09.44.34@2x.png](/images/2025-07-01-at-09.44.34-at-2x.png)
+![2025-07-01 at 09.44.34@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-07-01-at-09.44.34-at-2x.png)
 
 And in case, if you want direct link for that (got this from their README)
 
@@ -43,7 +43,7 @@ And in case, if you want direct link for that (got this from their README)
 
 ## Current Score
 
-![2025-06-29 at 23.18.51@2x.png](/images/2025-06-29-at-23.18.51-at-2x.png)
+![2025-06-29 at 23.18.51@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-29-at-23.18.51-at-2x.png)
 
 ## Source
 - https://github.com/aavetis/PRarena

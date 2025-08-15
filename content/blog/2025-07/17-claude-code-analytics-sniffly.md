@@ -42,12 +42,12 @@ Once you run the command, it'll start dev server. From there you should be able 
 
 Here are some of the screenshots when I ran it locally.
 
-![2025-07-17 at 23.31.19.png](/images/2025-07-17-at-23.31.19.png)
+![2025-07-17 at 23.31.19.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-17-at-23.31.19.png)
 
-![Pasted image 20250717232954.png](/images/Pasted-image-20250717232954.png)
+![Pasted image 20250717232954.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/Pasted-image-20250717232954.png)
 
-![Pasted image 20250717233011.png](/images/Pasted-image-20250717233011.png)
+![Pasted image 20250717233011.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/Pasted-image-20250717233011.png)
 
-![2025-07-17 at 23.30.38.png](/images/2025-07-17-at-23.30.38.png)
+![2025-07-17 at 23.30.38.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-17-at-23.30.38.png)
 
 Happy Claude Analytics!

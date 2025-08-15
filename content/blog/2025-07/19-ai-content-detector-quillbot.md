@@ -17,8 +17,8 @@ Basically what it does it uses ML under the hood to figure out the probability o
 
 And like with anything in ML/AI, it is not 100% accurate and should not be used as final source of truth.
 
-![2025-07-19 at 22.55.39@2x.png](/images/2025-07-19-at-22.55.39-at-2x.png)
-![2025-07-19 at 23.07.58@2x.png](/images/2025-07-19-at-23.07.58-at-2x.png)
+![2025-07-19 at 22.55.39@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-19-at-22.55.39-at-2x.png)
+![2025-07-19 at 23.07.58@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-19-at-23.07.58-at-2x.png)
 Note: After couple of times, they'll ask you to login to the tool to use it.
 
 Happy writing content!

@@ -21,7 +21,7 @@ Here are the some of highlights that I found interesting
 - Edit & run code in remote environment. 
 - Privacy mode must be turned off to use background agents 🙈
 
-![Pasted image 20250605230500.png](/images/Pasted-image-20250605230500.png)
+![Pasted image 20250605230500.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250605230500.png)
 
 ## MCP
 - Well, now we can easily [install MCP](/blog/cursor-mcp-deeplink/) with just one click.
