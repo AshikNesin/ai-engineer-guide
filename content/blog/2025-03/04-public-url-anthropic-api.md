@@ -94,7 +94,7 @@ const response = await anthropic.messages.create({
 console.log(response.content[0].text);
 ```
 
-![2025-03-04 at 09.15.34@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-03/2025-03-04-at-09.15.34-at-2x.png)
+![2025-03-04 at 09.15.34@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-03/2025-03-04-at-09.15.34-at-2x.png)
 
 > 💡 **Key Benefit**: This approach eliminates the need to download and encode the image yourself, reducing code complexity and payload size.
 

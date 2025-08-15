@@ -36,7 +36,7 @@ The major difference with Agentic RAG and regular RAG is that, it has access to 
 Here is a good comparison diagram by ByteByteGo 👇
 
 
-![Pasted image 20250630215752.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250630215752.png)
+![Pasted image 20250630215752.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250630215752.png)
 
 ## Reference
 - https://blog.bytebytego.com/p/ep169-rag-vs-agentic-rag

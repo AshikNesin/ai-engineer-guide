@@ -18,7 +18,7 @@ Similar to the platforms, nowadays I'm seeing more and AI based app generator ap
 
 
 
-![Pasted image 20241225083933.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-12/Pasted-image-20241225083933.png)
+![Pasted image 20241225083933.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-12/Pasted-image-20241225083933.png)
 
 > If you're curious about how Bolt works under the hood, checkout it's [codebase](https://github.com/stackblitz/bolt.new) (it's open source 🙌)
 

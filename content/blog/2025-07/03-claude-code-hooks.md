@@ -22,7 +22,7 @@ For example, running automated code formatting whenever a file is changed.
 
 And here are some of the other use cases that are mentioned in their docs
 
-![CleanShot 2025-07-04 at 07.44.43@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/CleanShot-2025-07-04-at-07.44.43-at-2x.png)
+![CleanShot 2025-07-04 at 07.44.43@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/CleanShot-2025-07-04-at-07.44.43-at-2x.png)
 
 ## How to get started?
 Anthropic has a detailed doc about how to configure, test, examples, etc.

@@ -18,7 +18,7 @@ It takes care of lot of things out of box:
 - Bearer token authentication
 
 Just a simple UI that does the job really well 👇
-![2025-06-19 at 23.26.19@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-19-at-23.26.19-at-2x.png)
+![2025-06-19 at 23.26.19@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-19-at-23.26.19-at-2x.png)
 ## Source Code
 - https://github.com/cloudflare/ai/tree/main/playground/ai
 ## References

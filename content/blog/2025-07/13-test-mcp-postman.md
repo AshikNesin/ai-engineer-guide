@@ -18,19 +18,19 @@ You won't be getting latest stuffs that are added to MCP spec but Postman has co
 
 When you click on "New" (Cmd + N), you should be seeing MCP as one of the option. Select it.
 
-![2025-07-13 at 23.06.24@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-13-at-23.06.24-at-2x.png)
+![2025-07-13 at 23.06.24@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-13-at-23.06.24-at-2x.png)
 
 Now choose the transport that you want to test like `stdio` or `HTTP` based
 
-![2025-07-13 at 23.11.55@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-13-at-23.11.55-at-2x.png)
+![2025-07-13 at 23.11.55@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-13-at-23.11.55-at-2x.png)
 
 Then type in the command to connect.
 
 Once you're done you should be seeing the tools that are available for you in that MCP.
 
-![2025-07-13 at 23.13.25@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-13-at-23.13.25-at-2x.png)
+![2025-07-13 at 23.13.25@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-13-at-23.13.25-at-2x.png)
 
 It supports auth as well
-![2025-07-13 at 23.15.17@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-13-at-23.15.17-at-2x.png)
+![2025-07-13 at 23.15.17@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-13-at-23.15.17-at-2x.png)
 
 Happy testing MCP!

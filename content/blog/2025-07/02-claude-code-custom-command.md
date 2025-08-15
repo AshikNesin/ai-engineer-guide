@@ -17,7 +17,7 @@ Here are some of the other interesting things about it:
 - Has support for namespacing through directory structures.
 - Commands are organized by scope (project-specific or personal)
 
-![2025-07-02 at 23.03.17@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-02-at-23.03.17-at-2x.png)
+![2025-07-02 at 23.03.17@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-02-at-23.03.17-at-2x.png)
 
 
 ## Command Types
@@ -60,7 +60,7 @@ Pass dynamic values to commands using the `$ARGUMENTS` placeholder.
 
 Here is an example command 👇
 
-![Pasted image 20250702231028.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/Pasted-image-20250702231028.png)
+![Pasted image 20250702231028.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/Pasted-image-20250702231028.png)
 
 ## References
 - https://docs.anthropic.com/en/docs/claude-code/slash-commands#project-commands

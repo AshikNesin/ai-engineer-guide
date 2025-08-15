@@ -12,7 +12,7 @@ GitHub provides free access to OpenAI and other AI models for you to play around
 
 Although it is heavily [rate limited](https://docs.github.com/en/github-models/use-github-models/prototyping-with-ai-models#rate-limits) it's a good start if you want to play around in LLM models without having to spend some money.
 
-![2025-08-13 at 23.47.21@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-13-at-23.47.21-at-2x.png)
+![2025-08-13 at 23.47.21@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-13-at-23.47.21-at-2x.png)
 
 ## How to get started?
 
@@ -22,7 +22,7 @@ You can use their playground feature to test the models before even we start usi
 
 In order to access the model you need to create a **PAT** token.
 
-![2025-08-13 at 23.29.36@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-13-at-23.29.36-at-2x.png)
+![2025-08-13 at 23.29.36@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-13-at-23.29.36-at-2x.png)
 And then you can make API calls like this. 
 
 ```bash

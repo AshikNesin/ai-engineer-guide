@@ -11,7 +11,7 @@ via_url:
 ---
 I recently came across [app.build](https://www.app.build/) - It's an open-source AI Agent built by [Neon](https://neon.com/).
 
-![CleanShot 2025-06-15 at 22.56.05@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/CleanShot-2025-06-15-at-22.56.05-at-2x.png)
+![CleanShot 2025-06-15 at 22.56.05@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/CleanShot-2025-06-15-at-22.56.05-at-2x.png)
 
 I haven't played around with it yet but it looks like a good reference if you're building AI Agents.
 

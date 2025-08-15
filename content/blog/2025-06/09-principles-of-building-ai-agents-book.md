@@ -13,7 +13,7 @@ via_url: https://x.com/calcsam/status/1929571789493227572
 
 It's a free book which you can get [here](https://mastra.ai/book?ref=aiengineerguide.com)
 
-![Pasted image 20250609215230.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250609215230.png)
+![Pasted image 20250609215230.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250609215230.png)
 
 
 Once you share your email address, you'll receive a link to download the book as a PDF. 
@@ -22,7 +22,7 @@ Here are some heads-ups:
 - The pdf layout is a little hard to read. 
 - The examples are primarily built using Mastra (obviously!), but he has covered concepts that you can apply in any language or framework.
 
-![2025-06-09 at 22.00.29@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-09-at-22.00.29-at-2x.png)
+![2025-06-09 at 22.00.29@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-09-at-22.00.29-at-2x.png)
 
 Overall, it's a short (but insightful) book which you can read quickly! 
 

@@ -38,6 +38,6 @@ curl --location 'https://kilocode.ai/api/openrouter/chat/completions' \
 ## How to get KiloCode API Key?
 You can get the KiloCode API from your [dashboard](https://kilocode.ai/profile).
 
-![2025-07-07 at 23.01.13@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-07-at-23.01.13-at-2x.png)
+![2025-07-07 at 23.01.13@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-07-at-23.01.13-at-2x.png)
 
 Happy AI inference!

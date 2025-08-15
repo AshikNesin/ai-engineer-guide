@@ -23,14 +23,14 @@ It's still in beta and doesn't have much feature that you get in other tools lik
 curl https://cursor.com/install -fsS | bash
 ```
 
-![2025-08-09 at 08.43.15@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-09-at-08.43.15-at-2x.png)
+![2025-08-09 at 08.43.15@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-09-at-08.43.15-at-2x.png)
 
 ## Getting Started
 
 Once the CLI is installed you can start the app by running `cursor-agent` command.
 
 Like I said before, it does not have many commands at the moment.
-![2025-08-09 at 08.45.06@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-09-at-08.45.06-at-2x.png)
+![2025-08-09 at 08.45.06@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-09-at-08.45.06-at-2x.png)
 
 With that, you can can choose the model that you want to work with. And ask it to do the job 🤖
 
@@ -48,7 +48,7 @@ It didn't automatically install the newly added packages.
 
 And the final generated tool didn't work as expected as well 🙈
 
-![2025-08-09 at 23.08.07@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-09-at-23.08.07-at-2x.png)
+![2025-08-09 at 23.08.07@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-09-at-23.08.07-at-2x.png)
 
 ## Reference
 - [Cursor CLI | Cursor - The AI Code Editor](https://cursor.com/cli)

@@ -42,7 +42,7 @@ npm run migrate:images
 1. **Scans** all markdown files in `content/blog/`
 2. **Finds** images referenced as `![alt text](/images/filename.png)`
 3. **Uploads** images to Cloudinary under `AIEngineerGuide/images/YYYY-MM/filename.png`
-4. **Replaces** local links with CDN links: `https://images.nesin.io/qblog/AIEngineerGuide/YYYY-MM/filename.png`
+4. **Replaces** local links with CDN links: `https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/YYYY-MM/filename.png`
 5. **Saves** progress for resumability
 
 ### Features
@@ -95,9 +95,9 @@ These can be safely deleted after successful migration.
 📖 Processing file: ../content/blog/2025-08/13-openai-models-free-github.md
    Found 2 image(s)
    📤 Uploading: 2025-08-13-at-23.47.21-at-2x.png
-   🎉 Success: https://images.nesin.io/qblog/AIEngineerGuide/images/2025/08/2025-08-13-at-23.47.21-at-2x.png
+   🎉 Success: https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025/08/2025-08-13-at-23.47.21-at-2x.png
    📤 Uploading: 2025-08-13-at-23.29.36-at-2x.png
-   🎉 Success: https://images.nesin.io/qblog/AIEngineerGuide/images/2025/08/2025-08-13-at-23.29.36-at-2x.png
+   🎉 Success: https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025/08/2025-08-13-at-23.29.36-at-2x.png
    💾 Updated links in 13-openai-models-free-github.md
    ✅ Completed processing 13-openai-models-free-github.md
 

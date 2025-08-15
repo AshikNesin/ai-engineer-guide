@@ -12,7 +12,7 @@ via_url:
 
 It's the open source non-thinking model that is scoring good in online benchmarks
 
-![2025-07-16 at 14.04.59@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-16-at-14.04.59-at-2x.png)
+![2025-07-16 at 14.04.59@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-16-at-14.04.59-at-2x.png)
 
 You can think of this similar to Anthropic Claude 3.5
 

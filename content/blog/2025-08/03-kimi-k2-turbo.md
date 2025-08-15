@@ -15,9 +15,9 @@ But 4x faster than regular Kimi K2.
 
 And yeah, you pay extra for the speed (currently it is 2x but it'll be increased 4x in September)
 
-![Pasted image 20250803231646.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/Pasted-image-20250803231646.png)
+![Pasted image 20250803231646.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/Pasted-image-20250803231646.png)
 
-![Pasted image 20250803231654.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/Pasted-image-20250803231654.png)
+![Pasted image 20250803231654.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/Pasted-image-20250803231654.png)
 
 It is available in their [Moonshot AI Platform](https://platform.moonshot.ai)
 

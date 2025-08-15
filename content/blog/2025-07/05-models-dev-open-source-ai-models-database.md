@@ -14,7 +14,7 @@ And some of the providers might hide the older model pricing from the pricing pa
 
 Today, I've came across [Models.dev](https://models.dev/)  - an open source database of AI models
 
-![2025-07-05 at 20.47.35@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-05-at-20.47.35-at-2x.png)
+![2025-07-05 at 20.47.35@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-05-at-20.47.35-at-2x.png)
 Here are the things that are there in the dataset
 - Provider
 - Model Name

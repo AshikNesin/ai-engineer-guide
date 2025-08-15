@@ -28,7 +28,7 @@ You can configure the webhooks in the [dashboard](https://platform.openai.com/se
 Webhooks are configured **per-project**. So you need to select the project then configure the webhook endpoint
 
 
-![2025-06-28 at 23.35.48@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-28-at-23.35.48-at-2x.png)
+![2025-06-28 at 23.35.48@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-28-at-23.35.48-at-2x.png)
 
 > After creating a new webhook, you'll **receive a signing secret** to use for server-side verification of incoming webhook requests. Save this value for later, since you won't be able to view it again.
 

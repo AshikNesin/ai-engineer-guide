@@ -86,7 +86,7 @@ function MyAIComponent() {
 ```
 
 Here is an [example](https://inspector.use-mcp.dev/) of showcasing the capabilities of use-mcp 👇
-![2025-06-20 at 21.49.38@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-20-at-21.49.38-at-2x.png)
+![2025-06-20 at 21.49.38@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-20-at-21.49.38-at-2x.png)
 
 ## Source Code
 - https://github.com/modelcontextprotocol/use-mcp (MIT)

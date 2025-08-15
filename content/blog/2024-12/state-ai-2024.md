@@ -7,9 +7,9 @@ url: blog/state-of-ai-2024
 via: https://www.youtube.com/watch?v=HM1d7kMebEI&ab_channel=LatentSpace
 draft: true
 ---
-![2024-12-25 at 12.37.50@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-12/2024-12-25-at-12.37.50-at-2x.png)
+![2024-12-25 at 12.37.50@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-12/2024-12-25-at-12.37.50-at-2x.png)
 
-![2024-12-25 at 12.38.17@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2024-12/2024-12-25-at-12.38.17-at-2x.png)
+![2024-12-25 at 12.38.17@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-12/2024-12-25-at-12.38.17-at-2x.png)
 
 
 ## References

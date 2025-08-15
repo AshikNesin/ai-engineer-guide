@@ -20,7 +20,7 @@ And it is `NOT` useful to get factual information (getting answer for a question
 By default, it may not be enabled so you'll need to enable it feature flag `chrome://flags/#prompt-api-for-gemini-nano`
 
 You may need to restart the browser post updating it.
-![2025-07-08 at 23.17.51@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-08-at-23.17.51-at-2x.png)
+![2025-07-08 at 23.17.51@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-08-at-23.17.51-at-2x.png)
 And once that is enabled you'll to download the model which you can do by running the following in the console.
 
 ```js
@@ -107,7 +107,7 @@ Wrappers like [GitHub - kstonekuan/simple-chromium-ai](https://github.com/kstone
 You can read about creating session, multimodal capabilities, etc in the [The Prompt API  |  AI on Chrome](https://developer.chrome.com/docs/ai/prompt-api) blog post.
 ###  What doesn't work as expected (yet)
 - Required fields are not strictly followed.
-![2025-07-08 at 23.54.58@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-08-at-23.54.58-at-2x.png)
+![2025-07-08 at 23.54.58@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-08-at-23.54.58-at-2x.png)
 - Sessions are stateful by default.
 ## Credits
 [Gemini Nano in Chrome 138: notes for AI Engineers](https://github.com/swyxio/swyxdotio/issues/536)

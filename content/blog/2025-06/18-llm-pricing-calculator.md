@@ -20,7 +20,7 @@ On the right side, you can see a pricing table, and on the left, you can enter t
 No ads. No upselling. No complicated inputs.
 
 Just a simple UI that does the job really well 👇
-![2025-06-18 at 22.45.03@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-18-at-22.45.03-at-2x.png)
+![2025-06-18 at 22.45.03@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-18-at-22.45.03-at-2x.png)
 Fun fact: He has built this using Claude and you can read the transcript [here](https://claude.ai/share/5e0eebde-6204-4496-aa1a-fcc519df44b2)
 ## References
 - https://simonwillison.net/2025/Apr/10/llm-pricing-calculator/

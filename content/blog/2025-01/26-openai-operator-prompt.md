@@ -14,7 +14,7 @@ Recently I came across the [tweet](https://x.com/wunderwuzzi23/status/1882700348
 
 Operator is a agent that has access to remote browser and can perform action for you which uses [Computer-Using Agent](https://openai.com/index/computer-using-agent/) under the hood.
 
-![Pasted image 20250126094719.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-01/Pasted-image-20250126094719.png)
+![Pasted image 20250126094719.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-01/Pasted-image-20250126094719.png)
 Now let's look into the system prompt for the Operator feature. 
 
 ## System Prompt

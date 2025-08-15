@@ -111,7 +111,7 @@ Here's the formatted markdown:
 
 ```
 
-![2025-02-07 at 09.31.36@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-01/2025-02-07-at-09.31.36-at-2x.png)
+![2025-02-07 at 09.31.36@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-01/2025-02-07-at-09.31.36-at-2x.png)
 
 | **Resource** | **Link**                                                                                                             |
 | ------------ | -------------------------------------------------------------------------------------------------------------------- |

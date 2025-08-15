@@ -26,7 +26,7 @@ And the best part is it has a **separate context window**.
 {{< video "https://video.twimg.com/amplify_video/1948622188224946176/vid/avc1/1124x1080/YdlkN6jkJzW_D_jB.mp4"  >}}
 ## What the benefits of using it?
 
-![2025-07-28 at 23.19.57@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-28-at-23.19.57-at-2x.png)
+![2025-07-28 at 23.19.57@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-28-at-23.19.57-at-2x.png)
 
 ## How to get started?
 

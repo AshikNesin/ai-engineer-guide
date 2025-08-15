@@ -27,15 +27,15 @@ It has 4 variants
 In term of pricing it is actually better than the previous models and also majority of the competitors
 
 Here is the standard pricing.
-![2025-08-08 at 00.05.23@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-08-at-00.05.23-at-2x.png)
+![2025-08-08 at 00.05.23@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-08-at-00.05.23-at-2x.png)
 
 If you want faster [processing](https://platform.openai.com/docs/guides/priority-processing) then you can set `service_tier=priority` when making the request.
 
-![2025-08-08 at 00.08.46@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-08-at-00.08.46-at-2x.png)
+![2025-08-08 at 00.08.46@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-08-at-00.08.46-at-2x.png)
 
 Similarly, the pricing for Batch/Flex is follow
 
-![2025-08-08 at 00.09.41@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-08-at-00.09.41-at-2x.png)
+![2025-08-08 at 00.09.41@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-08-at-00.09.41-at-2x.png)
 
 ## Highlights
 - 400k context window

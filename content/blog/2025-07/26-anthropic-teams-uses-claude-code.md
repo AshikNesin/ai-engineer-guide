@@ -13,10 +13,10 @@ Anthropic has released a case study on how their team uses Claude Code in their 
 
 For example, this is how the product development team uses claude code
 
-![2025-07-26 at 23.55.27@2x 1.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-26-at-23.55.27-at-2x-1.png)
+![2025-07-26 at 23.55.27@2x 1.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-26-at-23.55.27-at-2x-1.png)
 
 And the benefits that they've got
-![2025-07-26 at 23.58.02@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-26-at-23.58.02-at-2x.png)
+![2025-07-26 at 23.58.02@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-26-at-23.58.02-at-2x.png)
 
 The case study is pretty big, but you might find something useful 👇
 
