@@ -51,7 +51,7 @@ autocommit:
 		i=0; \
 		spin & \
 		spid=$$!; \
-		commit_msg=$$(git diff --cached | gemini --model gemini-2.5-flash --prompt "Generate a concise commit message:"); \
+		commit_msg=$$(git diff --cached | gemini -p --model gemini-2.5-flash --prompt "Generate a concise commit message:"); \
 		kill $$spid > /dev/null 2>&1; wait $$spid 2>/dev/null; \
 		if [ -z "$$commit_msg" ]; then \
 			echo "❌ Commit message is empty. Aborting."; \

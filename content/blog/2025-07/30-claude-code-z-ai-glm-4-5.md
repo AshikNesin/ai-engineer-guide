@@ -1,10 +1,11 @@
 ---
-title: How to use Claude Code with Kimi K2
+title: How to use Claude Code with z.ai GLM-4.5
 date: 2025-07-30
 description: 
 tags:
   - claude-code
-  - kimi-k2
+  - GLM-4-5
+  - z-ai
 url: blog/claude-code-z-ai-glm-4-5
 via_url:
 ---
