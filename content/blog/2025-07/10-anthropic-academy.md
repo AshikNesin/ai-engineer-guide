@@ -15,12 +15,12 @@ Anthropic has recently official video courses covering various topics like:
 - Model context protocol (MCP) - Advanced
 - Claude Code
 
-![2025-07-10 at 23.29.01@2x.png](/images/2025-07-10-at-23.29.01-at-2x.png)
+![2025-07-10 at 23.29.01@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-10-at-23.29.01-at-2x.png)
 Check that out here 👉 [Anthropic Courses](https://anthropic.skilljar.com/)
 
 I'm really interested about [MCP](https://anthropic.skilljar.com/introduction-to-model-context-protocol) & [Claude code](https://anthropic.skilljar.com/claude-code-in-action) coursed by them 😊
 
-![2025-07-10 at 23.30.41@2x.png](/images/2025-07-10-at-23.30.41-at-2x.png)
+![2025-07-10 at 23.30.41@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-10-at-23.30.41-at-2x.png)
 Btw, you also get **Certificate of completion** when you complete a course. 
 
 Happy learning AI!

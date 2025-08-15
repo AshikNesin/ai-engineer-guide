@@ -35,7 +35,7 @@ You can install this in VS Code (and also any VS Code forks like Cursor, Windsur
 
 ## Features
 
-![2025-07-06 at 18.12.34.png](/images/2025-07-06-at-18.12.34.png)
+![2025-07-06 at 18.12.34.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-06-at-18.12.34.png)
 
 ## Pricing
 - As mentioned before, it is completely open source
@@ -44,7 +44,7 @@ You can install this in VS Code (and also any VS Code forks like Cursor, Windsur
 - **$20 free credits** to get you started 🤑
 
 When you sign up, you'll get $5 and once you add your payment method you'll get another $15
-![2025-07-06 at 19.49.29.png](/images/2025-07-06-at-19.49.29.png)
+![2025-07-06 at 19.49.29.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-06-at-19.49.29.png)
 
 
 Note: Since you'll be paying per usage beware of the token usage when you're using it.
@@ -55,6 +55,6 @@ If you already have GitHub Copilot subscription you can configure and use it Kil
 ## Fun Fact
 Kilo Code is a fork of [Roo Code](https://roocode.com/) which itself is a fork of [Cline](https://cline.bot/)
 
-![kilocode-meme.png](/images/kilocode-meme.png)
+![kilocode-meme.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/kilocode-meme.png)
 
 Happy AI coding!

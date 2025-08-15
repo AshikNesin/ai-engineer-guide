@@ -16,7 +16,7 @@ The new app has support for **downloading** and chatting with models.
 
 It's UI is pretty simple and clean 👇
 
-![2025-08-01 at 23.49.36.png](/images/2025-08-01-at-23.49.36.png)
+![2025-08-01 at 23.49.36.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-01-at-23.49.36.png)
 
 Out of box, you get support for chat with files, multimodal support, etc
 

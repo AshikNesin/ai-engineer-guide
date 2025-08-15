@@ -23,7 +23,7 @@ Here are some of the highlights from the gemini-cli:
 
 And it is licensed under [Apache 2.0](https://github.com/google-gemini/gemini-cli/blob/main/LICENSE)
 
-![Pasted image 20250625233321.png](/images/Pasted-image-20250625233321.png)
+![Pasted image 20250625233321.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250625233321.png)
 
 ## How to get started?
 
@@ -36,7 +36,7 @@ And login with your personal Google account.
 
 Then enter your prompt and let it do it's magic 🪄
 
-![2025-06-25 at 23.42.11@2x.png](/images/2025-06-25-at-23.42.11-at-2x.png)
+![2025-06-25 at 23.42.11@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-25-at-23.42.11-at-2x.png)
 
 Sam Witteveen has a really detailed video about it which you might find useful
 
@@ -45,7 +45,7 @@ Sam Witteveen has a really detailed video about it which you might find useful
 
 On a side note, this release reminds me of recent Tweet from Marc 👇 
 
-![Pasted image 20250625231812.png](/images/Pasted-image-20250625231812.png)
+![Pasted image 20250625231812.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250625231812.png)
 
 With it's free usage, Google might potentially try to gain more marketshare.
 

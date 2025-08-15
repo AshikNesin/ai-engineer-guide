@@ -15,4 +15,4 @@ On the funny note: December 2024 seems like frenzy mode by AI companies.
 
 👉 [2024 AI Timeline](https://huggingface.co/spaces/reach-vb/2024-ai-timeline)
 
-![2025-01-02 at 23.44.57@2x.png](/images/2025-01-02-at-23.44.57-at-2x.png)
+![2025-01-02 at 23.44.57@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-01/2025-01-02-at-23.44.57-at-2x.png)

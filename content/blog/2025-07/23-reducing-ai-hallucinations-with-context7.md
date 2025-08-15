@@ -20,8 +20,8 @@ Basically what they've done is they've indexed lots of documentation and make it
 Basically you can wire this up with your AI IDE like Cursor or anywhere it supports MCP like claude code.
 
 
-![2025-07-23 at 20.58.41@2x.png](/images/2025-07-23-at-20.58.41-at-2x.png)
-![2025-07-23 at 21.13.32@2x.png](/images/2025-07-23-at-21.13.32-at-2x.png)
+![2025-07-23 at 20.58.41@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-23-at-20.58.41-at-2x.png)
+![2025-07-23 at 21.13.32@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-23-at-21.13.32-at-2x.png)
 ## Remote MCP
 
 Their remote MCP is 👉 `https://mcp.context7.com/mcp`

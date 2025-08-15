@@ -18,7 +18,7 @@ One thing to keep in mind though is they to too much time though.
 
 Until recently, the models were only available in ChatGPT but now they're making it available via API as well.
 
-![2025-06-27 at 23.49.10@2x.png](/images/2025-06-27-at-23.49.10-at-2x.png)
+![2025-06-27 at 23.49.10@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-27-at-23.49.10-at-2x.png)
 
 This API might be a good fit for the cases where you want **best** quality output and okay with taking more time.
 

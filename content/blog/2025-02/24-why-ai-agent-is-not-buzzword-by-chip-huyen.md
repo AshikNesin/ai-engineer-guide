@@ -20,7 +20,7 @@ Here are some of the key insights/things that I've learned from the talk 👇
 ## What's an agent?
 Anything that perceives environment and acts on the environment.
 
-![2025-02-24 at 09.05.53@2x.png](/images/2025-02-24-at-09.05.53-at-2x.png)
+![2025-02-24 at 09.05.53@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.05.53-at-2x.png)
 
 ### Access to Tools
 
@@ -33,7 +33,7 @@ Anything that perceives environment and acts on the environment.
 | Language model | Text | Processes text | Interacts with text |
 | Language model (with access to image captioning model) | Text and Images | Processes text and images | Interacts with text and images |
 
-![2025-02-24 at 09.09.55@2x.png](/images/2025-02-24-at-09.09.55-at-2x.png)
+![2025-02-24 at 09.09.55@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.09.55-at-2x.png)
 
 ### Why Use Agents?
 1. **Address Model Limitations**
@@ -57,7 +57,7 @@ Number of steps needed to solve a task.
 - Many agents use multiple steps which in-turn increases the likelihood of failure.
 - Not just for AI even for human tasks
 
-![2025-02-24 at 09.16.50.png](/images/2025-02-24-at-09.16.50.png)
+![2025-02-24 at 09.16.50.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.16.50.png)
 
 - It's kind of chicken-and-egg problem: An agent often need to perform multiple steps to accomplish a task
 	- Simple tasks don't need agents
@@ -75,16 +75,16 @@ Though the question seems simple, under the hood a agent need to perform multipl
 
 **Prediction:** Enabling agents to handle more complexity will unlock many new use uses.
 
-![2025-02-24 at 09.22.59.png](/images/2025-02-24-at-09.22.59.png)
+![2025-02-24 at 09.22.59.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.22.59.png)
 
 In her benchmark, Most models can solve at most 5 steps and after 10 steps most model will fail.
 
 
 And **new models** are getting better 💪
 
-![2025-02-28 at 12.46.39.png](/images/2025-02-28-at-12.46.39.png)
+![2025-02-28 at 12.46.39.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-28-at-12.46.39.png)
 
-![2025-02-24 at 09.26.25@2x.png](/images/2025-02-24-at-09.26.25-at-2x.png)
+![2025-02-24 at 09.26.25@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.26.25-at-2x.png)
 
 
 #### [Tip] How to make Agent handle more complex tasks? 
@@ -98,18 +98,18 @@ And **new models** are getting better 💪
 **What is tool use?**
 In simple terms, It's like a `Natural Language <> API translation` 
 
-![2025-02-24 at 09.30.22@2x.png](/images/2025-02-24-at-09.30.22-at-2x.png)
+![2025-02-24 at 09.30.22@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.30.22-at-2x.png)
  
 Challenges comes from both sides of the translation: 
 1. Natural language is extremely ambiguous
 2. On API side, we might have very bad API or very bad documentations
 
-![2025-02-24 at 09.31.15@2x.png](/images/2025-02-24-at-09.31.15-at-2x.png)
+![2025-02-24 at 09.31.15@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.31.15-at-2x.png)
 
 ### Nuances in seemingly Simple Questions
 Even a simple question "Find best selling products under $10" seems straightforward it has lot of [nuances](https://www.youtube.com/embed/D6v5rlqUIc8?si=XNU4k_mU4kd3AUS2&amp;clip=UgkxailyW_vBYRXdgSGA89TslnxU-6A7rUX8&amp;clipt=EKCpNhjn1Tk) under the hood.
 
-![2025-02-24 at 09.32.20@2x.png](/images/2025-02-24-at-09.32.20-at-2x.png)
+![2025-02-24 at 09.32.20@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.32.20-at-2x.png)
 
 ### Documentation ✍️
 
@@ -144,20 +144,20 @@ Given a task, what the human annotator does might not be optimal for AI
 ## Context Management 📝
 - Agents require a lots of context (**tool documentation, outputs from previous steps, and reasoning**)
 
-![2025-02-24 at 09.44.54@2x.png](/images/2025-02-24-at-09.44.54-at-2x.png)
+![2025-02-24 at 09.44.54@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.44.54-at-2x.png)
 
 - Models good at planning aren't necessarily good with long contexts
 
-![2025-02-24 at 09.52.20.png](/images/2025-02-24-at-09.52.20.png)
+![2025-02-24 at 09.52.20.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.52.20.png)
 
 - Memory management is crucial
 	- Use short-term memory (context) for immediate task-relevant information.
 	- Supplement with long-term memory (external databases or storage) for less immediate information.
 	- Incorporate essential information into the model's internal knowledge through fine-tuning
 
-![2025-02-24 at 09.53.06.png](/images/2025-02-24-at-09.53.06.png)
+![2025-02-24 at 09.53.06.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.53.06.png)
 
-![2025-02-24 at 09.54.09.png](/images/2025-02-24-at-09.54.09.png)
+![2025-02-24 at 09.54.09.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-02/2025-02-24-at-09.54.09.png)
 
 ---
 

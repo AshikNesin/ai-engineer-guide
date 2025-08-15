@@ -23,7 +23,7 @@ Well, it may not be as good as Claude Code but for things that might NOT require
 npx @​qwen-code/qwen-code@latest
 ```
 
-![2025-08-09 at 22.21.27@2x.png](/images/2025-08-09-at-22.21.27-at-2x.png)
+![2025-08-09 at 22.21.27@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-08/2025-08-09-at-22.21.27-at-2x.png)
 
 Now, Login with **Qwen OAuth**
 

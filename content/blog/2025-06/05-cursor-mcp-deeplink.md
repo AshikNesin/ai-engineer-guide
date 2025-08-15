@@ -31,7 +31,7 @@ The link looks like this:
 ## How to generate the deeplink?
 In their [website](https://docs.cursor.com/deeplinks#generate-install-link), you can paste in [your json](https://docs.cursor.com/context/model-context-protocol#manual-configuration) that is needed to setup MCP server in Cursor
 
-![2025-06-05 at 22.44.55@2x.png](/images/2025-06-05-at-22.44.55-at-2x.png)
+![2025-06-05 at 22.44.55@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-06/2025-06-05-at-22.44.55-at-2x.png)
 
 And it'll generate the snippet / link which you can use to directly install your MCP
 ## References

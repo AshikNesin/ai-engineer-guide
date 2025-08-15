@@ -31,15 +31,15 @@ For example, it does not have support for uploading images when sending message 
 > Add RSS icon for the RSS link in the header
 
 Here are the screenshots when I tried to add RSS icon for this blog in navbar.
-![2025-07-14 at 17.10.21@2x.png](/images/2025-07-14-at-17.10.21-at-2x.png)
-![2025-07-14 at 17.11.14@2x.png](/images/2025-07-14-at-17.11.14-at-2x.png)
+![2025-07-14 at 17.10.21@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-14-at-17.10.21-at-2x.png)
+![2025-07-14 at 17.11.14@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-14-at-17.11.14-at-2x.png)
 Initially, I tried using Gemini CLI, but the results weren’t good. Then I've switched to Claude Code and it worked like a magic 🪄
 
-![2025-07-14 at 17.21.52@2x.png](/images/2025-07-14-at-17.21.52-at-2x.png)
-![2025-07-14 at 17.22.13@2x.png](/images/2025-07-14-at-17.22.13-at-2x.png)
+![2025-07-14 at 17.21.52@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-14-at-17.21.52-at-2x.png)
+![2025-07-14 at 17.22.13@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-14-at-17.22.13-at-2x.png)
 
-![2025-07-14 at 17.23.06@2x.png](/images/2025-07-14-at-17.23.06-at-2x.png)
-![2025-07-14 at 17.25.35@2x.png](/images/2025-07-14-at-17.25.35-at-2x.png)
+![2025-07-14 at 17.23.06@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-14-at-17.23.06-at-2x.png)
+![2025-07-14 at 17.25.35@2x.png](https://images.nesin.io/qblog/AIEngineerGuide/images/2025-07/2025-07-14-at-17.25.35-at-2x.png)
 That's pretty much it! 
 
 Here is the change it has made: [AshikNesin/ai-engineer-guide@386c1cc · GitHub](https://github.com/AshikNesin/ai-engineer-guide/commit/386c1ccb17b6d65b1aabfd7fd3ab19e7ddadbf87)
