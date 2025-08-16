@@ -40,7 +40,7 @@ In the `.toml` file you need to have these fields
 3. Shell Commands with !{...}
 
 ## Example
-```toml
+````toml
 # In: ~/.gemini/commands/git/commit.toml
 # Invoked via: /git:commit
 
@@ -54,7 +54,7 @@ Please generate a Conventional Commit message based on the following git diff:
 !{git diff --staged}
 ```
 """
-```
+````
 The example is based on their docs.
 
 ## Reference
