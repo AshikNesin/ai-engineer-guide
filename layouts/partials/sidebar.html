@@ -1,0 +1,356 @@
+{{ if and (.TableOfContents) (eq .Type "blog") }}
+<div class="sidebar-container">
+  <div class="sidebar-author">
+    <img src="https://images.nesin.io/f_auto,q_auto,h_64,w_64,c_fill,g_face/AshikNesin/ashik-nesin" alt="Ashik Nesin" class="author-photo">
+    <div class="author-info">
+      <div class="author-name">Ashik Nesin</div>
+      <div class="author-twitter"><a   href="https://x.com/AshikNesin" target="_blank"> @AshikNesin</a></div>
+    </div>
+  </div>
+  
+  <div class="sidebar-separator"></div>
+  
+  <div class="sidebar-toc">
+    <h4 class="toc-title">Content</h4>
+    {{ .TableOfContents }}
+  </div>
+  
+  <div class="sidebar-separator"></div>
+  
+  <div class="sidebar-ads">
+    {{ partial "carbonads.html" . }}
+  </div>
+</div>
+
+<style>
+.sidebar-container {
+  position: absolute;
+  top: 180px;
+  left: calc(50% + 380px);
+  max-width: 200px;
+  z-index: 10;
+  will-change: position;
+}
+
+.sidebar-container.is-sticky {
+  position: fixed;
+  top: 20px;
+  animation: stickySlide 0.3s ease-out;
+}
+
+@keyframes stickySlide {
+  from {
+    opacity: 0.8;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adjust for larger content area */
+@media (max-width: 1440px) {
+  .sidebar-container {
+    left: calc(50% + 360px);
+  }
+}
+
+/* Adjust for medium screens */
+@media (max-width: 1280px) {
+  .sidebar-container {
+    display: none;
+  }
+}
+
+.sidebar-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.author-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e3e8ee;
+  transition: border-color 0.2s ease;
+}
+
+.author-photo:hover {
+  border-color: #8cc2dd;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.author-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  line-height: 1.2;
+}
+
+.author-twitter {
+  font-size: 0.75rem;
+  color: #8a919e;
+  line-height: 1.2;
+}
+
+.sidebar-separator {
+  height: 1px;
+  background: linear-gradient(90deg, #e3e8ee 0%, transparent 100%);
+  margin: 1.5rem 0;
+}
+
+.sidebar-toc .toc-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.125rem 0 0.125rem 1rem;
+}
+
+.sidebar-toc nav {
+  margin: 0;
+}
+
+.sidebar-toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.sidebar-toc li {
+  margin: 0;
+}
+
+.sidebar-toc a {
+  color: #8a919e;
+  text-decoration: none;
+  display: block;
+  padding: 0.125rem 0 0.125rem 1rem;
+  transition: all 0.15s ease;
+  border-left: 1px solid #e3e8ee;
+  position: relative;
+}
+
+.sidebar-toc a:hover {
+  color: #0a2540;
+  border-left-color: #8cc2dd;
+  background: linear-gradient(90deg, rgba(8, 67, 85, 0.04) 0%, transparent 100%);
+}
+
+.sidebar-toc a:active,
+.sidebar-toc a:focus {
+  color: #8cc2dd;
+  border-left-color: #8cc2dd;
+}
+
+.sidebar-toc li li {
+  margin-left: 1rem;
+}
+
+.sidebar-toc li li a {
+  font-size: 0.75rem;
+  color: #a3acb9;
+}
+
+.sidebar-toc li li li {
+  display: none;
+}
+
+.sidebar-ads {
+  margin-top: 3rem;
+}
+
+/* Carbon ads styling */
+.sidebar-ads #carbon-container {
+  margin: 0;
+  padding: 0;
+  max-width: 200px;
+}
+
+.sidebar-ads #carbonads {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 0.75rem !important;
+  box-shadow: none !important;
+  display: block !important;
+}
+
+.sidebar-ads .carbon-wrap {
+  display: block !important;
+  gap: 0.5rem !important;
+}
+
+.sidebar-ads .carbon-img {
+  margin-bottom: 0.75rem !important;
+}
+
+.sidebar-ads img {
+  width: 100% !important;
+  max-width: 130px !important;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-ads img:hover {
+  opacity: 1;
+}
+
+.sidebar-ads .carbon-text {
+  color: #8a919e !important;
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.375rem !important;
+}
+
+.sidebar-ads .carbon-text:hover {
+  color: #0a2540 !important;
+}
+
+.sidebar-ads .carbon-poweredby {
+  color: #a3acb9 !important;
+  font-size: 0.6875rem !important;
+  opacity: 0.8 !important;
+}
+
+.sidebar-ads .carbon-poweredby:hover {
+  opacity: 1 !important;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .author-photo {
+    border-color: #2a2f3a;
+  }
+  
+  .author-photo:hover {
+    border-color: #8cc2dd;
+  }
+  
+  .author-name {
+    color: #f3f4f6;
+  }
+  
+  .author-twitter {
+    color: #7a8291;
+  }
+  
+  .sidebar-separator {
+    background: linear-gradient(90deg, #2a2f3a 0%, transparent 100%);
+  }
+  
+  .sidebar-toc .toc-title {
+    color: #9ca3af;
+  }
+  
+  .sidebar-toc a {
+    color: #7a8291;
+    border-left-color: #2a2f3a;
+  }
+  
+  .sidebar-toc a:hover {
+    color: #f7fafc;
+    border-left-color: #8cc2dd;
+    background: linear-gradient(90deg, rgba(8, 67, 85, 0.08) 0%, transparent 100%);
+  }
+  
+  .sidebar-toc li li a {
+    color: #525866;
+  }
+  
+  .sidebar-ads .carbon-text {
+    color: #7a8291 !important;
+  }
+  
+  .sidebar-ads .carbon-text:hover {
+    color: #f7fafc !important;
+  }
+  
+  .sidebar-ads .carbon-poweredby {
+    color: #525866 !important;
+  }
+}
+
+/* Hide on smaller screens */
+@media (max-width: 1400px) {
+  .sidebar-container {
+    display: none;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add offset for fixed header */
+h2[id], h3[id], h4[id] {
+  scroll-margin-top: 80px;
+}
+
+
+  </style>
+
+<script>
+
+
+// Handle sticky sidebar behavior
+(function() {
+  function initStickySidebar() {
+    const sidebar = document.querySelector('.sidebar-container');
+    if (!sidebar) return;
+    
+    // Calculate the point where sidebar should become sticky
+    const stickyPoint = 160; // Slightly before the original position
+    
+    function handleScroll() {
+      const scrollY = window.scrollY || window.pageYOffset;
+      
+      if (scrollY > stickyPoint) {
+        sidebar.classList.add('is-sticky');
+      } else {
+        sidebar.classList.remove('is-sticky');
+      }
+    }
+    
+    // Throttle scroll events for better performance
+    let ticking = false;
+    function requestTick() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', requestTick);
+    handleScroll(); // Check initial state
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStickySidebar);
+  } else {
+    initStickySidebar();
+  }
+})();
+</script>
+
+{{ end }} 
