@@ -11,7 +11,7 @@
   <div class="sidebar-separator"></div>
   
   <div class="sidebar-toc">
-    <h4 class="toc-title">Content</h4>
+    <h4 class="toc-title">On this page</h4>
     {{ .TableOfContents }}
   </div>
   
@@ -113,7 +113,6 @@
   font-weight: 600;
   margin: 0 0 1rem 0;
   color: #6b7280;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 0.125rem 0 0.125rem 1rem;
 }
@@ -139,9 +138,9 @@
   color: #8a919e;
   text-decoration: none;
   display: block;
-  padding: 0.125rem 0 0.125rem 1rem;
+  padding: 0.25rem 0.5rem 0.25rem 1rem;
   transition: all 0.15s ease;
-  border-left: 1px solid #e3e8ee;
+  border-left: 2px solid #e3e8ee;
   position: relative;
 }
 
@@ -158,12 +157,13 @@
 }
 
 .sidebar-toc li li {
-  margin-left: 1rem;
+  margin-left: 0.75rem;
 }
 
 .sidebar-toc li li a {
   font-size: 0.75rem;
   color: #a3acb9;
+  padding-left: 1.25rem;
 }
 
 .sidebar-toc li li li {
@@ -171,7 +171,7 @@
 }
 
 .sidebar-ads {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 /* Carbon ads styling */
