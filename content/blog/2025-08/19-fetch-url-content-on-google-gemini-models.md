@@ -1,5 +1,5 @@
 ---
-title: Automatically Fetch URL Content on Google's Gemini Models
+title: Automatically fetch URL content on Google's Gemini Models
 url: blog/fetch-url-content-on-google-gemini-models
 tags:
   - google-gemini
