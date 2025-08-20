@@ -80,6 +80,8 @@ await main();
 ```bash
 node --env-file .env.local ./index.js
 ```
+![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-08/aoyh71jj4vwyhlcmb2j5)
+
 ## Credits
 Based on https://x.com/RhysSullivan/status/1956826761951666387
 
