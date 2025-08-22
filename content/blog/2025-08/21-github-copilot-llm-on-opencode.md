@@ -3,6 +3,7 @@ title: How to use GitHub Copilot LLM on OpenCode
 url: blog/github-copilot-llm-on-opencode
 tags:
   - opencode
+  - github-copilot
 status: published
 date: 2025-08-21T00:00:00.000Z
 qblog_id: f55a9394-8a77-4733-99f4-2e563f0b0453
