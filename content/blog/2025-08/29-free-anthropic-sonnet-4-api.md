@@ -5,6 +5,7 @@ tags:
   - anthropic
   - vercel
   - ai-gateway
+  - sonnet-4
 status: published
 date: 2025-08-29T00:00:00.000Z
 qblog_id: d60af334-783b-48e7-9d43-6851eb4a266c
