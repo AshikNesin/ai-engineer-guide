@@ -56,5 +56,10 @@ It looks like he has 8% of company spend on Claude Code 😅
 Background Agents could be a next way of doing things
 ![2025-09-03-at-23.51.202x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/wqcixe1wbfpz7v8oe0nx)
 
+## What does not work?
+> AI doesn't learn from mistakes. You fix the same misunderstandings repeatedly. Your solution: **better documentation and more explicit instructions.**
+> AI **confidently writes broken code** claiming that it's great. Always verify
+> The context limit problem. Large codebases overwhelm AI context windows. Break problems into smaller chunks and provide focused context.
+
 ## Reference
 - https://www.sanity.io/blog/first-attempt-will-be-95-garbage
