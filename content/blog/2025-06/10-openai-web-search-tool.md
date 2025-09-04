@@ -1,11 +1,13 @@
 ---
 title: OpenAI Web Search Tool via API
-date: 2025-06-10
-description: 
-tags:
-  - OpenAI
 url: blog/openai-web-search-tool
-via_url:
+tags:
+  - openai
+status: published
+date: 2025-06-10T00:00:00.000Z
+description: null
+qblog_id: eea9b3dd-530e-4a4b-9e73-e84ab51a8b66
+via_url: null
 ---
 
 Similar to [Anthropic](https://aiengineerguide.com/blog/anthropic-claude-web-search-tool/), OpenAI also provides [web search tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tooll). This tools gets executed at their server during LLM inference.  
@@ -21,7 +23,7 @@ When making the API request, we need to define the following tool in the tools a
 
 ```json
 { 
-	"type": "web_search_preview",
+	"type": "web_search",
 	"search_context_size":"medium" // "high" or ""
 	// Optional: Localize search results 
 	"user_location": { 
@@ -50,7 +52,7 @@ curl "https://api.openai.com/v1/responses" \
     "model": "gpt-4.1",
     "tools": [
         {
-            "type": "web_search_preview",
+            "type": "web_search",
             "user_location": {
                 "type": "approximate",
                 "country": "IN",
@@ -182,7 +184,6 @@ Make sure to set you `OPENAI_API_KEY` in header
 
 ```
 
-
 > As of June 10, 2025, the Reserve Bank of India (RBI) has reduced the repo rate by 50 basis points to 5.5% ...
 
 We got the correct RBI repo rate in the response
@@ -210,6 +211,8 @@ You will get token usage in API response.
     }
 }
 ```
+
+You can also do [domain level filtering](/blog/domain-filter-openai-web-search-tool/) as well when performing web search.
 
 ## References
 - https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses&lang=curl
