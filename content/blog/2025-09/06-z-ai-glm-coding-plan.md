@@ -40,4 +40,7 @@ It codebase is kind of mess. Vibe coded one. So I'm doing initial refactoring an
 
 ![2025-09-06-at-23.48.352x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/uja46ht1jwe2dh6maxxt)
 
+## Disclaimer
+It is a Chinese model but who doesn't train on your data these days 😅
+
 Happy cost-effective AI!
