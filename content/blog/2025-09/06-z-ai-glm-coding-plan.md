@@ -14,7 +14,7 @@ Recently, we've talked about Z.ai's [GLM-4.5](/blog/claude-code-z-ai-glm-4-5/) w
 
 And you can use it in Claude Code.
 
-It seems they've recently launched a subscription plan using which you can save a lot of cost and the best thing is you can use it in Claude Code.
+It seems they've recently launched a [subscription plan](https://z.ai/subscribe) using which you can save a lot of cost and the best thing is you can use it in Claude Code.
 
 You can get started with their $3/mo plan or you can go with $15/mo plan.
 
