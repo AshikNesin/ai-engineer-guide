@@ -13,7 +13,7 @@ OpenAI's ChatGPT now has full support for MCP servers. You can connect any MCP s
 
 This will be really helpful if you have custom use case for which you don't want to build a separate app and just use ChatGPT itself.
 
-Here is the video by OpenAI Team 👇
+Here is the video by OpenAI Team on how to setup & use it 👇
 
 {{< video "https://video.twimg.com/amplify_video/1965807029920083968/vid/avc1/1920x1080/PFWaQUqk7y6wsHdE.mp4"  >}}
 
