@@ -9,15 +9,19 @@ date: 2025-09-12T00:00:00.000Z
 qblog_id: 5ffc2344-1ad4-43f2-894d-82434bbf9821
 ---
 
-AI Agents have their own context file for example CLAUDE.md by Claude Code, GEMINI.md by Gemini CLI, etc.
+AI Agents generate better output when you have a set of rules that can be used by AI Agents every time you interact with them.
 
-You'll need to add those files in your project to get better output in from AI Agents.
+As of now, there is no official standard way to do it; each of them has their own way of doing things like CLAUDE.md, GEMINI.md, etc.
 
-There is a standard way to do it but [AGENTS.md](https://agents.md/) is supported by most AI Agents 
+But lately, [AGENTS.md](https://agents.md) is getting traction slowly, and the majority of AI Agents support that along with their proprietary file as well.
 
 ![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/q0iz5lqxejsaobc3bott)
 
-And VS Code v1.104+ will have support for that as well.
+Recently, VS Code (v1.104+) started supporting that as well. 
+
+With support for a common file for AI Agents, we can avoid creating multiple files for every single AI Agent.
 
 ## Reference
 https://x.com/code/status/1966145747566375215
+
+Happy guiding agents!
