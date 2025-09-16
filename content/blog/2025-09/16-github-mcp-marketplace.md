@@ -13,9 +13,9 @@ GitHub has recently launched their official marketplace for MCP.
 
 👉 [MCP Registry · GitHub](https://github.com/mcp)
 
-Right now, it only has handful of MCP servers listed there but it is still in early stage.
+Right now, it only has a handful of MCP servers listed there but it is still in the early stage.
 
-VS Code might have first class support for installing MCP powered by this marketplace.
+VS Code might have first-class support for installing MCP powered by this marketplace.
 
 ![2025-09-16-at-23.21.152x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/bdou1ndsbs3ozwglrwzp)
 
