@@ -142,8 +142,6 @@ One interesting thing is that this file can refer other files
 If you have such file make sure to give permission for it
 
 ```json
-To permit reading your user file, grant access in your user settings so that you don't get unwanted confirmations
-
 {
   "permissions": {
     "allow": ["Read((/Users/you/.claude/**))"]
