@@ -1,8 +1,9 @@
 ---
-title: Free Claude Code Essentials Course by John Lindquist
+title: What I Learned from Free Claude Code Essentials Course by John Lindquist
 url: blog/claude-code-essentials-course-by-john-lindquist
 tags:
   - claude-code
+  - courses
 status: published
 date: 2025-09-25T00:00:00.000Z
 qblog_id: eb45a296-34cd-43ac-8124-988f5121a3c6
@@ -111,7 +112,46 @@ If you want to share the settings with everyone then add it in `.claude/settings
 
 Note: Property defined in local level does not override the project level settings. It's more like both the settings will be applied. 
 
+### [8. Customize Global User Settings and the Status Line in Claude Code](https://egghead.io/lessons/customize-global-user-settings-and-the-status-line-in-claude-code~gtxfs)
+Status line in claude code helps you to run any command and display it in the status bar. So you can literally do anything with it like showing the cost of current usage, etc.
+
+For example, you can have something like this in your `~/.claude/settings.json`:
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y @owloops/claude-powerline"
+  }
+}
+```
+
+And it'll show a beautiful status bar like this
+
+![2025-09-25-at-22.36.302x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/rlgesuibljmxf1j3qzmq)
+
+### [9. CLAUDE.md Initialization and Best Practices in Claude Code](https://egghead.io/lessons/claude-md-initialization-and-best-practices-in-claude-code~jae0x)
+`CLAUDE.md` acts as a primary source of truth that Claude Code uses when running a query. You can use it to note down important things related to the project like best practices, rules, etc. 
+
+You can generate a new `CLAUDE.md` file by running `/init`
+
+One interesting thing is that this file can refer other files
+```md
+@~/.claude/common-coding-guide.md
+```
+
+If you have such file make sure to give permission for it
+
+```json
+To permit reading your user file, grant access in your user settings so that you don't get unwanted confirmations
+
+{
+  "permissions": {
+    "allow": ["Read((/Users/you/.claude/**))"]
+  }
+}
+```
+
 ## Credits
 - https://egghead.io/courses/claude-code-essentials~jc0n6 (obviously!)
 
-Happy learning tools!
+Happy learning-about claude!
