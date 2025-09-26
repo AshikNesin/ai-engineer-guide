@@ -111,6 +111,15 @@ curl --location 'https://api.perplexity.ai/search' \
 ```
 </details>
 
+### Basic Usages
+You can pass the following param in the payload to get your desired output.
+| Parameter           | Type         | Description                                                  | Example Value                                                                                                 |
+|---------------------|--------------|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| query               | string/list  | Search query (single string or list for multi-query search)  | `"latest AI developments 2024"`<br>`["artificial intelligence trends 2024", "machine learning breakthroughs recent"]` |
+| max_results         | integer      | Number of search results to return (1–20, default 10)        | `5`                                                                                                            |
+| max_tokens_per_page | integer      | Max content tokens extracted per result (default 1024)       | `1024`, `2048`                                                                                                 |
+| country             | string       | ISO 3166-1 alpha-2 country code to localize results          | `"US"`                                                                                                         |
+
 ## References
 - https://www.perplexity.ai/hub/blog/introducing-the-perplexity-search-api
 - https://x.com/perplexity_ai/status/1971274917401461236
