@@ -16,7 +16,7 @@ If you have Perplexity Pro then you get [$5/mo](/blog/free-llm-credits-for-perpl
 ## How to get started?
 First thing, you need to get a [new API key](https://www.perplexity.ai/account/api/keys) - If you have old API key then it does not work with search API, so make sure to create a new one.
 
-```json
+```shell
 curl --location 'https://api.perplexity.ai/search' \
 --header 'Authorization: Bearer $YOUR_API_KEY' \
 --header 'Content-Type: application/json' \
