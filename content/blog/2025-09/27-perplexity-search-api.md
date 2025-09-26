@@ -26,6 +26,8 @@ curl --location 'https://api.perplexity.ai/search' \
     ]
   }'
   ```
+![2025-09-27-at-00.53.402x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/lmwdh77qhglzody3at21)
+
 <details>
 <summary>Response</summary>
 
