@@ -15,9 +15,26 @@ GitHub Copilot has released their coding agent like Claude Code in public beta.
 
 👉 https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/
 
-Right now, it is pretty basic version though don't expect much from it though and it has the usual stuffs like MCP
+![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/eau8iwrxplngva8n8q69)
+
+Right now, it is pretty **basic version** with access to reading/writing files & bash and it has support for custom MCP - And don't expect much from it. 
+
+![2025-09-27-at-12.05.392x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/lhblmxaryvv0j8wr5nxx)
 
 ![2025-09-26-at-23.49.522x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/ul85kks2upms3gqmm0rq)
+
+One thing that bothers me is that GitHub MCP that comes by default(and currently you can't disable it permanently 🙈) - So it just eats away your available context forcefully.
+
+![2025-09-27-at-11.53.332x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/dhkisy4pdwwbzcgji69y)
+
+This matches with official GitHub MCP 👉 https://github.com/github/github-mcp-server
+
+You can disable it for a session by running the following command though
+
+```
+/mcp disable github-mcp-server 
+```
+And the source code is closed as well.
 
 ## How to get started?
 You can install this from npm
@@ -29,10 +46,5 @@ npm install -g @github/copilot
 Once you've installed it, login with your GitHub account.
 
 And start using it like how you use Claude Code or other agentic CLI.
-
-## Heads up!
-It comes with GitHub MCP by default (and currently you can't disable it 🙈) - So it just eats away your available context forcefully.
-
-![2025-09-27-at-11.53.332x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/ep2zyogjmcud7nxs4sea)
 
 Happy AI-assisted coding!
