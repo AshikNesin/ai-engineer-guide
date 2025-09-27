@@ -32,3 +32,7 @@ And start using it like how you use Claude Code or other agentic CLI.
 
 ## Heads up!
 It comes with GitHub MCP by default (and currently you can't disable it 🙈) - So it just eats away your available context forcefully.
+
+![2025-09-27-at-11.53.332x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/ep2zyogjmcud7nxs4sea)
+
+Happy AI-assisted coding!
