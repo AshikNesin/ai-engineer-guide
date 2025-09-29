@@ -15,7 +15,24 @@ Generally, Sonnet models are really good one (and little cheaper than Opus model
 
 In terms of pricing, it is $3 for input and $15 for output tokens (same as Sonnet 4)
 
-You can use this over api by passing `claude-sonnet-4-5` as model name.
+You can use this over api by passing `claude-sonnet-4-5` as model name like this
+
+```shell
+curl https://api.anthropic.com/v1/messages \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "anthropic-version: 2023-06-01" \
+  -d '{
+    "model": "claude-sonnet-4-5",
+    "max_tokens": 1000,
+    "messages": [
+      {
+        "role": "user", 
+        "content": "Why sky is blue?"
+      }
+    ]
+  }'
+  ```
 
 Here is the comparison. As you can see apart quality output as they've claimed in their release post there is no other major update from Sonnet 4 model.
 
