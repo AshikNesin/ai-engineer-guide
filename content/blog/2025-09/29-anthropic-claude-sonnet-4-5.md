@@ -41,5 +41,11 @@ Here is the comparison. As you can see apart quality output as they've claimed i
 And for those who prefers benchmarks 👇 
 ![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/biouhskau8diod0aiojc)
 
+Here are some interesting tweets I read about Sonnet 4.5
+
+![2025-09-29-at-23.48.292x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/w1ypgqppgclj2gsrbz4z)
+
 ## Reference
 - [Introducing Claude Sonnet 4.5 \ Anthropic](https://www.anthropic.com/news/claude-sonnet-4-5)
+- https://x.com/danshipper/status/1972708347141890258
+-
