@@ -1,5 +1,5 @@
 ---
-title: Z.ai's GLM 4.6
+title: Z.ai's GLM 4.6 - A Open Source Alternative to Sonnet 4
 url: blog/z-ai-glm-4-6
 tags:
   - z-ai
@@ -30,7 +30,7 @@ curl -X POST "https://api.z.ai/api/paas/v4/chat/completions" \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer $Z_AI_API_KEY" \
 -d '{
-  "model": "glm-4.5",
+  "model": "glm-4.6",
   "messages": [
     {
       "role": "user",
