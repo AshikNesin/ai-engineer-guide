@@ -1,5 +1,5 @@
 ---
-title: OpenAI Sora 2 - The Best Video Generation AI Model 🤯
+title: OpenAI Sora 2 - The Best Video Generation AI Model
 url: blog/openai-sora-2
 tags:
   - sora-2
