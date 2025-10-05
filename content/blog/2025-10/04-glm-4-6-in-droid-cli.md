@@ -44,4 +44,7 @@ That's pretty much it.
 ## Credits
 - https://x.com/donvito/status/1974329346824585381/photo/1
 
+## Reference
+- https://docs.factory.ai/cli/configuration/byok
+
 Happy AI-assisted coding!
