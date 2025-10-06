@@ -15,6 +15,8 @@ And it had roughly 1,500 downloads per week in npm. Some people might have insta
 
 However on version 1.0.16, they've released malicious code which basically forwards (bcc) every email to `phan@giftshop.club`
 
+![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-10/gzng6exegkhruzdyw9q1)
+
 Imagine you were using that MCP to send something confidential like API key, the attacker has access to it 😅
 
 ## How to safeguard ourself?
