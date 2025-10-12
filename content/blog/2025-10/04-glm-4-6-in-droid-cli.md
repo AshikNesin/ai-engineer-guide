@@ -10,7 +10,7 @@ date: 2025-10-04T00:00:00.000Z
 qblog_id: 3f0bdc3c-f09f-4fe7-b989-d1d0f1af1f0b
 ---
 
-Droid CLI by [Factory.ai](https://factory.ai/) is an agentic CLI similar to Claude Code but the good thing is that it has support for using custom model (bring your own key).
+[Droid CLI](https://go.nesin.io/droid) by Factory.ai is an agentic CLI similar to Claude Code but the good thing is that it has support for using custom model (bring your own key).
 
 Let's see how to use GLM 4.6 with Droid CLI. GLM 4.6 by [Z.AI](https://z.ai) is an open source coding model that is performing almost as well as Anthropic Sonnet 4.
 
