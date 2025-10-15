@@ -11,6 +11,8 @@ qblog_id: eb8c5ff7-96d0-4ffb-ac7b-bc8010f651f0
 
 Andrej Karpathy has recently released [nanochat](https://github.com/karpathy/nanochat) where he builds a ChatGPT like LLM from scratch purely for the purpose of learning.
 
+![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-10/ihxwe6cqbxaw380hcksb)
+
 This project is roughly 8000 lines of code [hand-written](https://x.com/karpathy/status/1977758204139331904) by him.
 
 And it covers:
