@@ -33,7 +33,7 @@ And if you use the free mode, you'll be seeing an ad now
 ![2025-10-17-at-20.50.252x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-10/iiylch3hxcskagazkgxu)
 
 Here is the official demo video
-{{< video "https://static.ampcode.com/news/amp-free-1.mov"  >}}
+{{< video "https://video.twimg.com/amplify_video/1978516727282728963/vid/avc1/1920x1080/wV8bpy9G9UUn4aT9.mp4"  >}}
 
 ## Reference
 - [Amp Manual](https://ampcode.com/manual#what-is-amp)
