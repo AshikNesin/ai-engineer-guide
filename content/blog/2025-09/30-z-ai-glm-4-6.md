@@ -43,7 +43,7 @@ curl -X POST "https://api.z.ai/api/paas/v4/chat/completions" \
 Replace $Z_AI_API_KEY with [your API key](https://z.ai/manage-apikey/apikey-list).
 
 ## GLM Coding Plan subscribers
-If you already have GLM Coding Plan subscription, then you should be able to use this model as well.
+If you already have [GLM Coding Plan](https://go.nesin.io/glm) subscription, then you should be able to use this model as well.
 
 In case if you face any issue then it might be due to wrong model number. In such cases, you can update the model name to `glm-4.6` and the issue should be sorted out.
 
