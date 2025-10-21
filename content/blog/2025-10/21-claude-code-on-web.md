@@ -17,6 +17,8 @@ You can read about how they handle sandbox in their [engineering post](https://w
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/s-avRazvmLg?si=V24m-k72JlEi7QJd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-It's currently available only on Pro and Max plan users, so I didn't get chance to play around with it. 😅
+It's currently available only on Pro and Max plan users, so I didn't get chance to play around with it but I really like the experience in Google Jules / Cursor.
+
+You just need to select the repo, prompt what needs to be done and let the robot do the work 🤖
 
 Simon has recently [wrote](https://simonwillison.net/2025/Oct/20/claude-code-for-web/) about his experience about using it. You can check that as well.
