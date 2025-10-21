@@ -1,10 +1,10 @@
 ---
-title: How to use OpenAI Codex with Z.ai GLM-4.5 Coding Plan
+title: How to use OpenAI Codex with Z.ai GLM-4.6 Coding Plan
 url: blog/openai-codex-with-z-ai
 tags:
   - codex
   - openai
-  - glm-4-5
+  - glm-4-6
   - z-ai
 status: published
 date: 2025-09-15T00:00:00.000Z
@@ -25,6 +25,8 @@ Or via brew
 brew install codex
 ```
 
+If you don't have subscription for z.ai's [GLM Coding Plan](https://go.nesin.io/glm), I highly recommend it for side projects where you can get good coding model for pretty cheap. But beware of privacy, they might use your content for training (I'm not sure about this part, but just calling that out just to be on the safe side)
+
 ## Configuration
 Codex maintains configurations at `~/.codex/config.toml`
 
@@ -44,11 +46,11 @@ env_key = "Z_AI_API_KEY"
 ```
 Make sure to configure `Z_AI_API_KEY` env variable in your shell.
 
-### Creating GLM 4.5 LLM profile
+### Creating GLM 4.6 LLM profile
 Now in the config file, we need to create a new profile for the LLM that we want to use.
 ```toml
-[profiles.glm_4_5]
-model = "glm-4.5"
+[profiles.glm_4_6]
+model = "glm-4.6"
 model_provider = "z_ai"
 ```
 
@@ -60,10 +62,10 @@ Basically, we're creating a new profile that points to a particular model provid
 Once that is done, you should be able to run codex with a particular profile now.
 
 ```shell
-codex --profile glm_4_5
+codex --profile glm_4_6
 ```
 
-And that will start the codex with the GLM 4.5 model from Z.ai
+And that will start the codex with the GLM 4.6 model from Z.ai
 
 ![2025-09-15-at-23.33.512x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/upujphhjhp7zrb37p0d1)
 
