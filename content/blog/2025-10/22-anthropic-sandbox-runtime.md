@@ -120,6 +120,7 @@ await SandboxManager.reset()
 Aparently, `sandbox-exec` is depricated by Apple back in 2017 itself but tool which has similar use case like codex seems to be using it 😅
 
 ## Reference
+- [Making Claude Code more secure and autonomous with sandboxing \ Anthropic](https://www.anthropic.com/engineering/claude-code-sandboxing)
 - [GitHub - anthropic-experimental/sandbox-runtime](https://github.com/anthropic-experimental/sandbox-runtime)
 - [sandbox-exec: macOS's Little-Known Command-Line Sandboxing Tool | Igor's Techno Club](https://igorstechnoclub.com/sandbox-exec/)
 
