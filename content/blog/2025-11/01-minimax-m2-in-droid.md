@@ -15,13 +15,23 @@ In term of cost, it is Input tokens - $0.30/million and  $1.20/million for outpu
 
 For limited period they're offering their service for free (until Nov 7, 2025)
 
+Let's see how to use it in [Droid CLI](https://go.nesin.io/droid)
+
 ## Getting Started 
 First, you need to get the MiniMax API key which you can get it [platform](https://platform.minimax.io/login)
 
-### Droid CLI
-Add MiniMax as custom model in 
+And make sure that you've Droid CLI installed.
 
-`~/.factory/config.json`
+If not, you can install it by running this command
+
+```shell
+curl -fsSL https://app.factory.ai/cli | sh
+```
+
+### Droid CLI Config
+MiniMax has Anthropic like API endpoint which we can use it when using it with Droid CLI.
+
+In droid cli, you can add a new **custom models** by adding them in `~/.factory/config.json`
 
 ```json
 {
