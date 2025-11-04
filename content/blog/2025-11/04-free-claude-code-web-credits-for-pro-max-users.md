@@ -21,7 +21,7 @@ Based on your plan you get credits.
 
 Note: It is applicable for both new and old users as well.
 
-![2025-11-04-at-22.43.462x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/vatv7zuoo6gktl7fbecp)
+![2025-11-04-at-22.51.162x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/hdidj9kzmzbctsym7smx)
 
 👉 https://claude.ai/code
 
