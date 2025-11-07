@@ -1,5 +1,5 @@
 ---
-title: Two hard truths in 2025 by Cory House
+title: Two hard truths about AI in 2025 by Cory House
 url: blog/two-hard-truths-in-2025-by-cory-house
 tags:
   - bookmark
