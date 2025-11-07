@@ -13,4 +13,4 @@ I came across this tweet by Cory House, kind of thought provoking and factually 
 ![2025-11-07-at-23.04.332x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/tk1brdca0usb3coiss6o)
 
 ## Reference
-- [Tweet](https://x.com/housecor/status/198684583082158
+- [Tweet](https://x.com/housecor/status/198684583082158)
