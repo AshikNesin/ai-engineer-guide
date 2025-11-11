@@ -8,7 +8,7 @@ date: 2025-11-09T00:00:00.000Z
 qblog_id: 08242d1d-c58f-4955-b92a-13a9edb04fac
 ---
 
-I came across this funny but informative website that you can link to if someone uses AI as a citiation (maybe the one without using internet?)
+I came across this funny but informative website that you can link to if someone uses AI as a citiation
 
 ![2025-11-09-at-23.01.252x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/khu5l3oorgvpqlzdhqru)
 
