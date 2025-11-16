@@ -16,11 +16,12 @@ timeZone = "Asia/Kolkata"
 enableRobotsTXT = true
 
 # Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
-disableKinds = ["taxonomy"]
-ignoreErrors = ["error-disable-taxonomy"]
+[taxonomies]
+  tag = "tags"
+
 [permalinks]
   blog = "/blog/:slug/"
-  tags = "/blog/:slug"
+  tags = "/tags/:slug/"
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
