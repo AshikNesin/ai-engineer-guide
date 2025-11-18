@@ -15,7 +15,11 @@ In terms of pricing, it is free right now - public preview
 ![2025-11-18-at-23.02.052x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/na3xq8kfwwmhkw75sfvm)
 
 And currently has these models 👇
-![2025-11-18-at-23.23.172x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/i8ojsgsoqzcraaliippe)
+	- Gemini 3 Pro (High)
+	- Gemini 3 Pro (Low)
+	- Claude Sonnet 4.5
+	- Claude Sonnet 4.5 (Thinking)
+	- GPT-OSS 120B (Medium)
 
 Yes, free Gemini 3.0 Pro and Sonnet. But don't have your hopes high. When I tried it, I was running into rate limiting issue (even for my very first request 😅)
 
