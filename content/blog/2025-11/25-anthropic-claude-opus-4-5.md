@@ -11,7 +11,7 @@ qblog_id: 5eec892f-a869-4fc3-ad98-5f6a0182ca4c
 
 Anthropic has released their latest version of Opus model **Claude Opus 4.5** which now available via API, Claude Code & on AI IDEs like Cursor.
 
-In general Opus models tend to be good model but quite expensive but this time Anthropic has reduced the pricing. Maybe due to competition but it is the most expensive model though😅
+In general Opus models tend to be good model but quite expensive but this time Anthropic has reduced the pricing. Maybe due to competition but it is the most expensive model though 😅
 
 | Model | Input ($/million tokens) | Output ($/million tokens) |
 |-------|--------------------------|---------------------------|
@@ -68,4 +68,6 @@ They've added support for zooming. This helps to build better UI elements.
 Aparently, thinking block was not preserved in context for previous models. Now has support for it.
 
 ## Reference
-https://www.anthropic.com/news/claude-opus-4-5
+- [Introducing Claude Opus 4.5 \ Anthropic](https://www.anthropic.com/news/claude-opus-4-5)
+
+- [What's new in Claude 4.5 - Claude Docs](https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-5#key-improvements-in-opus-4-5-over-opus-4-1)
