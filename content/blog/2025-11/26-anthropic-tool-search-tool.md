@@ -51,3 +51,8 @@ Similarly for MCP also you can define it.
   }
 }
 ```
+
+> The Claude Developer Platform provides regex-based and BM25-based search tools out of the box, but you can also implement custom search tools using embeddings or other strategies.
+
+## Reference
+https://www.anthropic.com/engineering/advanced-tool-use
