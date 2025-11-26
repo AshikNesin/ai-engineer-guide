@@ -42,5 +42,8 @@ Explict caching gives you opportunity to do context editing. And also it make it
 
 > Because the system prompt and the tool selection now have to be mostly static, we feed a dynamic message later to provide information such as the current time. Otherwise, this would trash the cache. We also leverage reinforcement during the loop much more.
 
+## Reinforcement In The Agent Loop
+> Every time the agent runs a tool you have the opportunity to not just return data that the tool produces, but also to feed more information back into the loop. For instance, you can remind the agent about the overall objective and the status of individual tasks.
+
 ## Reference
 👉 https://lucumr.pocoo.org/2025/11/21/agents-are-hard/
