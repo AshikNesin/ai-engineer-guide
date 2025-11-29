@@ -13,6 +13,12 @@ command = "hugo --gc --minify --config hugo.toml"
   force = true
 
 [[redirects]]
+  from = "/blog/:tag"
+  to = "/tags/:tag"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/feed"
   to = "/feed.xml"
   status = 200
