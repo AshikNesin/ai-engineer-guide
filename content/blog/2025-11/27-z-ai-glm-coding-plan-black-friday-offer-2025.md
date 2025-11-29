@@ -78,6 +78,10 @@ My recommended is yes.
 
 Thought it might not be able to work well for complex problems it is really useful for grunt works like writing test cases and other things.
 
+I've been using it for a while and it is pretty useful for doing grunt work without worrying about money. And with the blackfriday offer I got their yearly Max plan 😍
+
+![2025-11-29-at-14.35.512x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/bqyzipyffxkj0z0bidgs)
+
 👉 [GLM Coding Plan](https://go.nesin.io/glm)
 
 Happy AI coding!
