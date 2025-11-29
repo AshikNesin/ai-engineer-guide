@@ -1,5 +1,5 @@
 ---
-title: z.ai GLM Coding Plan Black Friday Offer 2025 (80-90% Off)
+title: z.ai GLM Coding Plan Black Friday Offer 2025
 url: blog/z-ai-glm-coding-plan-black-friday-offer-2025
 tags:
   - z-ai
