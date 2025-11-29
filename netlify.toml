@@ -13,8 +13,800 @@ command = "hugo --gc --minify --config hugo.toml"
   force = true
 
 [[redirects]]
-  from = "/blog/:tag"
-  to = "/tags/:tag"
+  from = "/blog/Andrej-Karpathy"
+  to = "/tags/Andrej-Karpathy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/GLM-4-5"
+  to = "/tags/GLM-4-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/GitHub"
+  to = "/tags/GitHub"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/LLM"
+  to = "/tags/LLM"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/Microsoft"
+  to = "/tags/Microsoft"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/OpenAI"
+  to = "/tags/OpenAI"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/OpenAI-Operator"
+  to = "/tags/OpenAI-Operator"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/TIL"
+  to = "/tags/TIL"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ad-supported"
+  to = "/tags/ad-supported"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/addy-osmani"
+  to = "/tags/addy-osmani"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-agents"
+  to = "/tags/ai-agents"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-content-detector"
+  to = "/tags/ai-content-detector"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-elements"
+  to = "/tags/ai-elements"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-engineer"
+  to = "/tags/ai-engineer"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-gateway"
+  to = "/tags/ai-gateway"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/amp"
+  to = "/tags/amp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/andrej-karpathy"
+  to = "/tags/andrej-karpathy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/anthropic"
+  to = "/tags/anthropic"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/armin-ronacher"
+  to = "/tags/armin-ronacher"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/async-agent"
+  to = "/tags/async-agent"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/aws-bedrock"
+  to = "/tags/aws-bedrock"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/backdoor"
+  to = "/tags/backdoor"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/bookmark"
+  to = "/tags/bookmark"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/books"
+  to = "/tags/books"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/browser"
+  to = "/tags/browser"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/browser-base"
+  to = "/tags/browser-base"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/browser-use"
+  to = "/tags/browser-use"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/build-llm"
+  to = "/tags/build-llm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/case-study"
+  to = "/tags/case-study"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/chatgpt"
+  to = "/tags/chatgpt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/cheatsheet"
+  to = "/tags/cheatsheet"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/chip-huyen"
+  to = "/tags/chip-huyen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/chrome"
+  to = "/tags/chrome"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/chromium"
+  to = "/tags/chromium"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/claude-code"
+  to = "/tags/claude-code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/claude-haiku-4-5"
+  to = "/tags/claude-haiku-4-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/claude-opus-4-5"
+  to = "/tags/claude-opus-4-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/cli-agent"
+  to = "/tags/cli-agent"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/cloudflare"
+  to = "/tags/cloudflare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/code-wiki"
+  to = "/tags/code-wiki"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/coderabbit"
+  to = "/tags/coderabbit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/codestral-embed"
+  to = "/tags/codestral-embed"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/codex"
+  to = "/tags/codex"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/coding"
+  to = "/tags/coding"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/context-engineering"
+  to = "/tags/context-engineering"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/context7"
+  to = "/tags/context7"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/courses"
+  to = "/tags/courses"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/cursor"
+  to = "/tags/cursor"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/cursor-cli-agent"
+  to = "/tags/cursor-cli-agent"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/deals"
+  to = "/tags/deals"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/deepseek"
+  to = "/tags/deepseek"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/define"
+  to = "/tags/define"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/docker"
+  to = "/tags/docker"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/droid-cli"
+  to = "/tags/droid-cli"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/embedding"
+  to = "/tags/embedding"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/gemini-cli"
+  to = "/tags/gemini-cli"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/gemini-nano"
+  to = "/tags/gemini-nano"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/github"
+  to = "/tags/github"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/github-copilot"
+  to = "/tags/github-copilot"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/github-models"
+  to = "/tags/github-models"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/glm-4-5"
+  to = "/tags/glm-4-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/glm-4-6"
+  to = "/tags/glm-4-6"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/google"
+  to = "/tags/google"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/google-antigravity"
+  to = "/tags/google-antigravity"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/google-gemini"
+  to = "/tags/google-gemini"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/google-jules"
+  to = "/tags/google-jules"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/gpt-5"
+  to = "/tags/gpt-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/gpt-oss"
+  to = "/tags/gpt-oss"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/gpu"
+  to = "/tags/gpu"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/grep-app"
+  to = "/tags/grep-app"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/grok"
+  to = "/tags/grok"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/groq"
+  to = "/tags/groq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/groq-code"
+  to = "/tags/groq-code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/hackathon"
+  to = "/tags/hackathon"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/hallucination"
+  to = "/tags/hallucination"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/huggingface"
+  to = "/tags/huggingface"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/interview"
+  to = "/tags/interview"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/kilocode"
+  to = "/tags/kilocode"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/kimi-k2"
+  to = "/tags/kimi-k2"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/kimi-k2-thinking"
+  to = "/tags/kimi-k2-thinking"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/langchain"
+  to = "/tags/langchain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/leaderboard"
+  to = "/tags/leaderboard"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/learn"
+  to = "/tags/learn"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/lee-robinson"
+  to = "/tags/lee-robinson"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/library"
+  to = "/tags/library"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/lmarena"
+  to = "/tags/lmarena"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/malware"
+  to = "/tags/malware"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mastra-ai"
+  to = "/tags/mastra-ai"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mcp"
+  to = "/tags/mcp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/minimax-m2"
+  to = "/tags/minimax-m2"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mistral"
+  to = "/tags/mistral"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/moonshot"
+  to = "/tags/moonshot"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/neural-network"
+  to = "/tags/neural-network"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ollama"
+  to = "/tags/ollama"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/open-source"
+  to = "/tags/open-source"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/openai"
+  to = "/tags/openai"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/opencode"
+  to = "/tags/opencode"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/openrouter"
+  to = "/tags/openrouter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/opus-4-1"
+  to = "/tags/opus-4-1"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/patrick-debois"
+  to = "/tags/patrick-debois"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/perplexity-ai"
+  to = "/tags/perplexity-ai"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/pinecone"
+  to = "/tags/pinecone"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/pocket-flow"
+  to = "/tags/pocket-flow"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/postman"
+  to = "/tags/postman"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/prompt-leak"
+  to = "/tags/prompt-leak"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/qwen-code"
+  to = "/tags/qwen-code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/qwen3-coder"
+  to = "/tags/qwen3-coder"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/react"
+  to = "/tags/react"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/report"
+  to = "/tags/report"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/sandbox"
+  to = "/tags/sandbox"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/search-api"
+  to = "/tags/search-api"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/shell"
+  to = "/tags/shell"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/simon-willison"
+  to = "/tags/simon-willison"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/sindre-sorhus"
+  to = "/tags/sindre-sorhus"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/snippets"
+  to = "/tags/snippets"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/sonnet-4"
+  to = "/tags/sonnet-4"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/sonnet-4-5"
+  to = "/tags/sonnet-4-5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/sora-2"
+  to = "/tags/sora-2"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/sse"
+  to = "/tags/sse"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/system-prompt"
+  to = "/tags/system-prompt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/talk"
+  to = "/tags/talk"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/thoughts"
+  to = "/tags/thoughts"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/tldr"
+  to = "/tags/tldr"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/tools"
+  to = "/tags/tools"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/travis-fischer"
+  to = "/tags/travis-fischer"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/v0"
+  to = "/tags/v0"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/vercel"
+  to = "/tags/vercel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/vs-code"
+  to = "/tags/vs-code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/web-scraping"
+  to = "/tags/web-scraping"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/xai"
+  to = "/tags/xai"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/xcode"
+  to = "/tags/xcode"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/z-ai"
+  to = "/tags/z-ai"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/zed"
+  to = "/tags/zed"
   status = 301
   force = true
 
