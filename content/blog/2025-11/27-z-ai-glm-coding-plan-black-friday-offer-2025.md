@@ -1,5 +1,5 @@
 ---
-title: z.ai GLM Coding Plan Black Friday Offer 2025
+title: z.ai GLM Coding Plan Black Friday Offer 2025 - 80-90% Discount
 url: blog/z-ai-glm-coding-plan-black-friday-offer-2025
 tags:
   - z-ai
@@ -8,7 +8,7 @@ date: 2025-11-27T00:00:00.000Z
 qblog_id: ad613bb2-954a-4871-9269-556ccf997e73
 ---
 
-z.ai is currently offering black friday offer for their [GLM Coding Plan](https://go.nesin.io/glm). With it you can use latest GLM models like GLM 4.5 which performs as good as Sonnet 4 model. The best part is that you can use it with Claude Code and other various AI coding agents.
+z.ai is currently offering black friday offer for their [GLM Coding Plan](https://go.nesin.io/glm). With it you can use latest GLM models like GLM 4.6 which performs as good as Sonnet 4 model. The best part is that you can use it with Claude Code and other various AI coding agents.
 
 ## What's the deal?
 They usually run **50% off** for the first term (monthly, quarterly, or yearly)
@@ -26,6 +26,8 @@ So it's the best time to get the subscription if you plan on getting it.
 I highly recommended you to get monthly or yearly plan since the 50% base offer is one time thing. 
 
 ![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/j9vs3op8nu8mpvtkplyq)
+
+Black friday offer will be valid until Dec 5, 2025
 
 ## Is GLM-4.6 is worth your time?
 GLM-4.6 is z.ai's latest coding model which is **355B Mixture-of-Experts model (32B active)** with **200K context window**. The best part is it is open source
