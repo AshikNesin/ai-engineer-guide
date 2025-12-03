@@ -78,5 +78,14 @@ Then in `CLAUDE.md` file, you can include a those list with a brief description 
 ### Claude is (not) an expensive linter
 > Never send an LLM to do a linter's job. You should always use deterministic tools whenever you can.
 
+Mostly the LLM will follow the codebase standards without you telling about it. 
+
+We can also leverage [Stop hook in Claude](https://code.claude.com/docs/en/hooks#stop) to trigger formatter & linter.
+
+### Don't Auto Generate your CLAUDE.md
+> It affects every single phase of your workflow and every single artifact produced by it.
+
+`CLAUDE.md` is the **highest leverage** that we've to control how the agent. So it is good to spend time and write that ourself.
+
 ## Reference
 [Writing a good CLAUDE.md | HumanLayer Blog](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
