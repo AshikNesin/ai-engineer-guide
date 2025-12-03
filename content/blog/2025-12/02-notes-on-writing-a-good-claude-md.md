@@ -36,7 +36,18 @@ It is interesting to see that CLAUDE.md might get ignored because of the system 
 ```
 
 ## Creating a good CLAUDE.md file
-- Less instuctions are better
+
+### Less instructions that we give to LLM are better.
+- There is some [research](https://arxiv.org/pdf/2507.11538) done about how much instructions a LLM can follow (this include instructions that we send via **system instruction + CLAUDE.md  + user messages + others**)
+
+ 1. Frontier thinking LLMs can follow **~ 150-200 instructions** with reasonable consistency.
+ 2. Smaller models get **MUCH worse, MUCH more quickly**.
+ 3. LLMs bias towards instructions that are on the peripheries of the prompt
+ 4. **As instruction count increases, instruction-following quality decreases uniformly**
+
+> Our analysis of the Claude Code harness indicates that Claude Code's system prompt contains ~50 individual instructions.
+
+> This implies that your CLAUDE.md file should contain as few instructions as possible
 
 ## Reference
 [Writing a good CLAUDE.md | HumanLayer Blog](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
