@@ -49,5 +49,34 @@ It is interesting to see that CLAUDE.md might get ignored because of the system 
 
 > This implies that your CLAUDE.md file should contain as few instructions as possible
 
+### CLAUDE.md file length & applicability
+> All else being equal, an LLM will perform better on a task when its' context window is full of focused, relevant context including examples, related files, tool calls, and tool results compared to when its context window has a lot of irrelevant context.
+
+Since CLAUDE.md added into context for every single session, we need to keep it crisp and make sure it is **universally applicable** for the project.
+
+Eg: Avoid db schema - this will distrct the model when working on something else
+
+In terms of lenght, **less is more** priciple. 
+
+There is no official recommendation. But **< 300 lines** performs best.
+
+### Progressive Disclosure
+Instead of having everything in a single `CLAUDE.md` doc, what we can do is have it under different markdown files with **self-descriptive names** in your project.
+
+Eg:
+```
+docs/
+  |- building_the_project.md
+  |- running_tests.md 
+  |- database_schema.md
+  |- code_conventions.md
+```
+Then in `CLAUDE.md` file, you can include a those list with a brief description for each and instruct Claude to use it if needed.
+
+> Prefer pointers to copies. Don't include code snippets in these files if possible - they will become out-of-date quickly. Instead, include file:line references to point Claude to the authoritative context.
+
+### Claude is (not) an expensive linter
+> Never send an LLM to do a linter's job. You should always use deterministic tools whenever you can.
+
 ## Reference
 [Writing a good CLAUDE.md | HumanLayer Blog](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
