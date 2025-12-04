@@ -16,3 +16,6 @@ Currently, Google's Antigravity is in public preview and it is free to use right
 ![2025-12-04-at-23.54.162x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/abxfxo7hcyg9zgzabczy)
 
 👉 [Google Antigravity](https://antigravity.google/)
+
+## Credits
+- https://x.com/marmaduke091/status/1996469717259731018
