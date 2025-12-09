@@ -20,6 +20,8 @@ Right now it has tool like searching (grep), file manipulation like patch,  bash
 
 And it has support for Agent Context Protocol as well, so it should work well with editors like Zed.
 
+{{< video "https://video.twimg.com/amplify_video/1998406686290157568/vid/avc1/1920x1080/rBfVm762hLbJSAAj.mp4"  >}}
+
 ## How to get started?
 ```shell
 curl -LsSf https://mistral.ai/vibe/install.sh | bash
