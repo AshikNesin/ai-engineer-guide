@@ -33,5 +33,12 @@ And it is powered by Devstral model (they've recently released Devstral 2 🚀)
 Unlike majority of the CLI agent, it is build using Python not Node.js like Claude, Gemini CLI, etc.
 
 👉 [GitHub - mistralai/mistral-vibe: Minimal CLI coding agent by Mistral](https://github.com/mistralai/mistral-vibe)
+
+And you can checkout the [CodeWiki for it](https://deepwiki.com/mistralai/mistral-vibe/1-overview) to understand the overall codebase structure.
+![2025-12-10-at-00.19.082x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/fxtz4zgusvwp9wmtm7wz)
+
+![2025-12-10-at-00.19.352x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/tsgx8t96eadc2iakcwm9)
+
 ## Reference
+
 - [Introducing: Devstral 2 and Mistral Vibe CLI. | Mistral AI](https://mistral.ai/news/devstral-2-vibe-cli)
