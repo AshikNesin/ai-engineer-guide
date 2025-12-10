@@ -19,4 +19,4 @@ Anthropic claim that it'll be same.
 
 ## Reference
 
-- [Donating the Model Context Protocol and establishing the Agentic AI Foundation \ Anthropic(https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation)
+- [Donating the Model Context Protocol and establishing the Agentic AI Foundation \ Anthropic](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation)
