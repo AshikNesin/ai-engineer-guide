@@ -38,5 +38,16 @@ If you want to set up project level then you can set it in `.claude/settings.loc
 
 Note: `ANTHROPIC_API_KEY` needs to be set as empty string. If not the Claude Code will fallback to login flow.
 
+## Using custom models
+By default, OpenRouter automatically maps to Anthropic models.
+
+But if you want to use custom model then you can configure it.
+
+```shell
+export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.2-codex-max"
+export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
+export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+```
+
 ## Reference
 - [OpenRouter Doc](https://openrouter.ai/docs/guides/guides/claude-code-integration)
