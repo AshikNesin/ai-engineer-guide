@@ -16,7 +16,7 @@ Yeah! even the free ones (39+)
 ## How to get started?
 Just set these env variables before starting the Claude Code.
 
-```sh
+```shell
 export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
 export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
 export ANTHROPIC_API_KEY="" # Important: Must be explicitly empty
@@ -28,11 +28,11 @@ If you want to set up project level then you can set it in `.claude/settings.loc
 
 ```json
 {
-"env": {
-"ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
-"ANTHROPIC_AUTH_TOKEN": "<your-openrouter-api-key>",
-"ANTHROPIC_API_KEY": ""
-}
+	"env": {
+		"ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
+		"ANTHROPIC_AUTH_TOKEN": "$YOUR_OPENROUTER_API_KEY",
+		"ANTHROPIC_API_KEY": ""
+	}
 }
 ```
 
