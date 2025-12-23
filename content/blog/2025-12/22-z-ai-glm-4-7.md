@@ -1,5 +1,5 @@
 ---
-title: z.ai GLM 4.7
+title: z.ai GLM 4.7 - Available in GLM Coding Plan
 url: blog/z-ai-glm-4-7
 tags:
   - z-ai
