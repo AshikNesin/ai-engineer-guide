@@ -28,6 +28,10 @@ pnpm install -g opencode-ai
 
 And configure your AI provider. In my case, I was using my [GLM Coding Plan](https://go.nesin.io/glm)
 
+![2025-12-25-at-12.39.04.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/vjog50btw5xta0g7ckja)
+
+![2025-12-25-at-12.38.49.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/uloq8p9nxxdkiqcfv61o)
+
 ## Run OpenCode Web
 
 Just run 
@@ -35,4 +39,17 @@ Just run
 opencode web
 ```
 
+You can also configure it to run on custom port or allow hostname binding like this
+
+```shell
+opencode web --hostname 0.0.0.0 --port 8888
+
+```
+
 It'll start the OpenCode in background and you can access it at http://127.0.0.1:4096
+
+It is full blown, you even have access to Terminal, change diff, sharing, etc.
+
+![2025-12-25-at-13.43.53.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/lu6znbfnurqlrdifip8d)
+
+Happy coding-on web!
