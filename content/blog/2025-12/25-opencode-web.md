@@ -1,5 +1,5 @@
 ---
-title: OpenCode Web - An Open-Source Alternative to Claude Code on Web
+title: OpenCode Web - An Open Source Alternative to Claude Code on Web
 url: blog/opencode-web
 tags:
   - opencode
