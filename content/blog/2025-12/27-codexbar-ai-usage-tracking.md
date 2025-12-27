@@ -24,4 +24,12 @@ Currently, it supports multiple providers like:
 
 It's an [open source](https://github.com/steipete/CodexBar) - MIT licensed app 🌟
 
+## How to get started?
+
+You can install it using brew or [directly](https://github.com/steipete/CodexBar/releases/latest)
+
+```bash
+brew install --cask steipete/tap/codexbar
+```
+
 Happy tracking usage!
