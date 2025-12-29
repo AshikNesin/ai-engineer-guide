@@ -29,10 +29,13 @@ Then you just need to set these things in the claude settings which is located a
 You can also set these things so that the model names are configured properly as well.
 
 ```json
+{
+    "env": {
 "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.5-air",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-4.7"
-
+}
+  }
 ```
 ## Reference
 https://docs.z.ai/devpack/tool/claude
