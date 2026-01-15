@@ -25,5 +25,9 @@ opencode auth login
 
 ![2026-01-15-at-21.50.332x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-01/caxznoykuw4yifdsyjxc)
 
+Then authenticate it.
+
+Once you're done, you'll be able to choose the model using the `/model` command
+
 ## Reference
 https://x.com/jaredpalmer/status/2011803160122097826
