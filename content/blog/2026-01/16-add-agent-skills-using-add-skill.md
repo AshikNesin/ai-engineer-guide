@@ -6,11 +6,22 @@ date: 2026-01-16T00:00:00.000Z
 qblog_id: c4e81eae-b012-4196-a513-a46be6e9474a
 ---
 
-Vercel team has released [add-skill](https://github.com/vercel-labs/add-skill) npm package using it you can easily install Agent Skills using git repo.
+Agent Skills are reusable capabilities that AI agents can apply **automatically** when a request matches the skill's description.
 
-Currently it supports OpenCode, Claude Code, Codex, Antigraviry and Cursor.
+It was first introduced by [Anthropic](https://code.claude.com/docs/en/skills) and lot of other IDEs/AI agents has started adopting it.
 
-And there are open PRs to support other AI agents as well.
+One problem with adoption is that every tool expects it to be on a different directory and things which makes it hard to share it.
+
+| App      | Path Format                     |
+|---------------|----------------------------------|
+| OpenCode      | `.opencode/skill/<name>/`        |
+| Claude Code   | `.claude/skills/<name>/`         |
+| Codex         | `.codex/skills/<name>/`          |
+| Cursor        | `.cursor/skills/<name>/`         |
+| Amp           | `.agents/skills/<name>/`         |
+| Antigravity   | `.agent/skills/<name>/`          |
+
+But thanks to Vercel team's new tool [add-skill](https://github.com/vercel-labs/add-skill), we can easily add Agent Skills across multiple apps using just git repo.
 
 ## How to use it?
 
