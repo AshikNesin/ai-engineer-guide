@@ -12,7 +12,7 @@ Cursor (latest version) has a hooks feature similar to Claude Code using it you 
 
 For example, you can run a script that validates if a shell command is safe to run, flag any potential security issue, run formatter after edits, etc
 
-{{< video "https://cursor.com/docs-static/images/agent/hooks.mp4" }}
+{{< video "https://cursor.com/docs-static/images/agent/hooks.mp4" >}}
 
 ## How does it work?
 It runs the script in a new process and communicate over stdio using JSON
