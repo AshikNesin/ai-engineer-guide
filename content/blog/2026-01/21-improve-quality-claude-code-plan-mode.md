@@ -8,7 +8,7 @@ date: 2026-01-21T00:00:00.000Z
 qblog_id: e9978f2f-f683-4139-aa7b-3bf2197c76e6
 ---
 
-Just append this in your ~/.claude/Claude.md
+Just append this in your `~/.claude/CLAUDE.md`
 
 ```
 ## Plan Mode
