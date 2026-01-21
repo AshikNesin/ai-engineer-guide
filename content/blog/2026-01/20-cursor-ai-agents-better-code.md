@@ -1,5 +1,5 @@
 ---
-title: Using Cursor’s AI Coding Agents for Better Code
+title: How to Make Cursor AI Agent to Write Better Code
 url: blog/cursor-ai-agents-better-code
 tags:
   - cursor
