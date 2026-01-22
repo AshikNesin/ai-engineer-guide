@@ -3,6 +3,7 @@ title: Marketing Skills for Claude Code
 url: blog/marketing-skills-for-claude-code
 tags:
   - claude-code
+  - skills
 status: published
 date: 2026-01-22T00:00:00.000Z
 qblog_id: 5c4cef42-3926-4651-b3a9-8533183c7cb3
