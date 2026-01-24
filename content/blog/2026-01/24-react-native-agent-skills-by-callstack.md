@@ -13,3 +13,10 @@ qblog_id: 1f69d3c3-fddc-4d99-a543-c14f3f263c1f
 If you're someone who builds apps in react native it's good idea to use them.
 
 https://github.com/callstackincubator/agent-skills
+
+## How to get started?
+You can install the skills using add-skill cli packages
+
+npx add-skill callstackincubator/agent-skills
+
+![2026-01-25-at-00.11.41.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-01/avadmnapaitu9dxpyahe)
