@@ -20,6 +20,14 @@ clawdbot plugins enable google-antigravity-auth
 
 ![2026-01-27-at-23.42.062x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-01/mlfecuyybza0bwylidsx)
 
+Then connect with your Antigravity Account 
+
+```sh
+clawdbot models auth login --provider google-antigravity --set-default
+```
+
+![2026-01-28-at-00.00.242x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-01/xbaeyfwqey8lxji6jxga)
+
 ```
 clawdbot gateway restart
 ```
