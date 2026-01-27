@@ -19,5 +19,11 @@ clawdbot plugins enable google-antigravity-auth
 
 ![2026-01-27-at-23.42.062x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-01/mlfecuyybza0bwylidsx)
 
+```
+clawdbot gateway restart
+```
+
+>Note: Depending on your alias, replace clawdbot with moltbot
+
 ## Reference
 https://docs.molt.bot/concepts/model-providers#google-vertex-/-antigravity-/-gemini-cli
