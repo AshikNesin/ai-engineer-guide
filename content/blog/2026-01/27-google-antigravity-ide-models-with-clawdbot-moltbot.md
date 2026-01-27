@@ -4,6 +4,7 @@ url: blog/google-antigravity-ide-models-with-clawdbot-moltbot
 tags:
   - moltbot
   - clawdbot
+  - google-antigravity
 status: published
 date: 2026-01-27T00:00:00.000Z
 qblog_id: 88e911e9-dcb1-4119-ac0e-5f6246ec4852
