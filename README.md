@@ -81,6 +81,7 @@ hugo --gc --minify --config hugo.toml
 hugo --gc
 ```
 
+
 ## 📁 Project Structure
 
 ```
