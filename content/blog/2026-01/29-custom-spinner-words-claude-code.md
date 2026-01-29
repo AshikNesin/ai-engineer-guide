@@ -27,3 +27,6 @@ You can just add this in your claude settigs (`settings.json`
   }
 }
 ```
+
+## Reference
+- https://xcancel.com/dani_avila7/status/2016700695357923717
