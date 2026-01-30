@@ -13,7 +13,7 @@ Lee Robinson has built a image compression app in Rust with zero depedency compl
 
 It runs on web (client side app) that runs entirely in the browser using WebAssembly.
 
-👉 https://leerob.com/pixo
+👉 [https://leerob.com/pixo](https://leerob.com/pixo)
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I built a Rust-based image compressor, WASM binary, and SvelteKit app!<br><br>I wanted to see how far I could go using only coding agents.<br><br>I did not write any code by hand.<br><br>After 520 agents, 350M tokens, and $287 I can now say… extremely far.<a href="https://t.co/yxFL20j0PF">https://t.co/yxFL20j0PF</a> <a href="https://t.co/ftCzxvbXNE">pic.twitter.com/ftCzxvbXNE</a></p>&mdash; Lee Robinson (@leerob) <a href="https://twitter.com/leerob/status/2005700621463330888?ref_src=twsrc%5Etfw">December 29, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -25,7 +25,7 @@ So the goal for him is to see if AI can be used for low level apps like this whi
 
 You can play around with the app here:
 
-https://pixo.leerob.com
+[https://pixo.leerob.com](https://pixo.leerob.com)
 
 ## Reference
-https://leerob.com/pixo
+[https://leerob.com/pixo](https://leerob.com/pixo)

@@ -91,6 +91,6 @@ Include specific examples of how to fix issues.
 
 ## References
 - [Sub agents - Anthropic](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
-- https://x.com/claude_code/status/1948622899604050063
+- [https://x.com/claude_code/status/1948622899604050063](https://x.com/claude_code/status/1948622899604050063)
 
 Happy creating agents!

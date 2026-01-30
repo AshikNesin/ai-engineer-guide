@@ -277,6 +277,6 @@ This feature is really helpful for those who are building some sort of Q&A bot b
 But beware of the cost if you need this feature at scale.
 
 ## Reference
-- https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses&lang=curl#domain-filtering
+- [https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses&lang=curl#domain-filtering](https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses&lang=curl#domain-filtering)
 
 Happy building with-AI!

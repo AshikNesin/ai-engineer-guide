@@ -15,7 +15,7 @@ As promised earlier they've now open sourced **inline suggestions**
 
 ![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/j3tgt0jrnmxrntankhao)
 
-👉 https://github.com/microsoft/vscode-copilot-chat/pull/1493
+👉 [https://github.com/microsoft/vscode-copilot-chat/pull/1493](https://github.com/microsoft/vscode-copilot-chat/pull/1493)
 
 ## What is inline suggestion?
 Basically, it's when you type something it'll suggest a contextually relavent suggestion in-line. That is the best use case for using AI in coding.

@@ -109,4 +109,4 @@ That's pretty much it, now you should be able to use those models in OpenCode.
 Just make sure you're on latest version of OpenCode if you face any issue.
 
 ## Reference
-https://github.com/NoeFabris/opencode-antigravity-auth
+[https://github.com/NoeFabris/opencode-antigravity-auth](https://github.com/NoeFabris/opencode-antigravity-auth)

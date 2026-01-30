@@ -25,4 +25,4 @@ Here is a weather app that I've built using it.
 As you can [see](https://ashiknesin-weathervista-dashboard.static.hf.space/index.html) it has the AI vibe but it's a good start.
 
 ## Reference
-- https://x.com/victormustar/status/1994094025977016813
+- [https://x.com/victormustar/status/1994094025977016813](https://x.com/victormustar/status/1994094025977016813)

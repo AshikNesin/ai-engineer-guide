@@ -15,6 +15,6 @@ It looks pretty insightful 👇
 
 ![2025-06-08 at 08.48.42@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-08-at-08.48.42-at-2x.png)
 
-https://drive.google.com/file/d/1cUxKspEXgQ64s4OFEw0kabf_qNauOPiH/view
+[https://drive.google.com/file/d/1cUxKspEXgQ64s4OFEw0kabf_qNauOPiH/view](https://drive.google.com/file/d/1cUxKspEXgQ64s4OFEw0kabf_qNauOPiH/view)
 
 Happy learning AI!

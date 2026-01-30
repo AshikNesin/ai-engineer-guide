@@ -8,7 +8,7 @@ via_url:
 ---
 [Firecrawl](https://www.firecrawl.dev/) team has released **minimal open source** version of  [Lovable.dev](https://lovable.dev/)  using which you can use to build React App.
 
-👉 https://github.com/mendableai/open-lovable
+👉 [https://github.com/mendableai/open-lovable](https://github.com/mendableai/open-lovable)
 
 Under the hood it uses firecrawl for web scraping (obviously!) and [E2B](https://e2b.dev) for running custom code code in a safe, sandbox environment.
 

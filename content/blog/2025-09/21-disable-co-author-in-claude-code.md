@@ -22,6 +22,6 @@ That's pretty much it.
 
 ## Reference
 - [Claude Code settings - Claude Docs](https://docs.claude.com/en/docs/claude-code/settings#available-settings)
-- https://x.com/screenfluent/status/1969649160237252819
+- [https://x.com/screenfluent/status/1969649160237252819](https://x.com/screenfluent/status/1969649160237252819)
 
 Happy clean commits!

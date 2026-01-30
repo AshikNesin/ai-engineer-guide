@@ -81,4 +81,4 @@ Something like this:
 ```
 
 ## Reference
-- https://cursor.com/docs/agent/hooks
+- [https://cursor.com/docs/agent/hooks](https://cursor.com/docs/agent/hooks)

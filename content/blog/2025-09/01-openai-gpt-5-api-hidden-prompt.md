@@ -42,4 +42,4 @@ And this hidden prompt might lead to unexpected behavior.
 ![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-08/sy9mhrhltzr6vsce4pu4)
 
 ## Reference
-- https://simonwillison.net/2025/Aug/15/gpt-5-has-a-hidden-system-prompt/
+- [https://simonwillison.net/2025/Aug/15/gpt-5-has-a-hidden-system-prompt/](https://simonwillison.net/2025/Aug/15/gpt-5-has-a-hidden-system-prompt/)

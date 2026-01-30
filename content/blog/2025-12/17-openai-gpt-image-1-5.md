@@ -41,4 +41,4 @@ I tried it their default template and it did pretty good zero shot.
 ![2025-12-17-at-22.51.592x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/lnuiw52mozuqaj4tbsag)
 
 ## Reference
-- https://platform.openai.com/docs/models/gpt-image-1.5
+- [https://platform.openai.com/docs/models/gpt-image-1.5](https://platform.openai.com/docs/models/gpt-image-1.5)

@@ -15,4 +15,4 @@ Pretty useful stuffs. In fact, I've covered some of the claude code tips based o
 👉 [Advent of Claude: 31 Days of Claude Code — adocomplete](https://adocomplete.com/advent-of-claude-2025/)
 
 ## Reference
-https://x.com/adocomplete/status/2007518563356291573
+[https://x.com/adocomplete/status/2007518563356291573](https://x.com/adocomplete/status/2007518563356291573)

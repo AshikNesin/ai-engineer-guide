@@ -30,6 +30,6 @@ Sam Witteveen has a high level walk through of this model in his recent video ðŸ
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lrf8eE-ADiw?si=Mehr2Hjl1KgJSyxj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Reference
-- https://www.anthropic.com/news/claude-haiku-4-5
-- https://x.com/alexalbert__/status/1978506520355864813
-- https://docs.claude.com/en/docs/about-claude/models/overview#model-comparison-table
+- [https://www.anthropic.com/news/claude-haiku-4-5](https://www.anthropic.com/news/claude-haiku-4-5)
+- [https://x.com/alexalbert__/status/1978506520355864813](https://x.com/alexalbert__/status/1978506520355864813)
+- [https://docs.claude.com/en/docs/about-claude/models/overview#model-comparison-table](https://docs.claude.com/en/docs/about-claude/models/overview#model-comparison-table)

@@ -107,6 +107,6 @@ curl https://api.openai.com/v1/responses/resp_YOUR_ID_HERE \
 ```
 
 ## References
-- https://platform.openai.com/docs/guides/background
+- [https://platform.openai.com/docs/guides/background](https://platform.openai.com/docs/guides/background)
 
 Happy background mode!

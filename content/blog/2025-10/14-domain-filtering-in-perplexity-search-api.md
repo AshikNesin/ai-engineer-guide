@@ -55,7 +55,7 @@ Make sure to that you create a new API key else you'll be facing the following e
 ```
 
 ## Reference
-- https://x.com/PPLXDevs/status/1977778640566808620
-- https://docs.perplexity.ai/guides/search-quickstart#domain-filtering
+- [https://x.com/PPLXDevs/status/1977778640566808620](https://x.com/PPLXDevs/status/1977778640566808620)
+- [https://docs.perplexity.ai/guides/search-quickstart#domain-filtering](https://docs.perplexity.ai/guides/search-quickstart#domain-filtering)
 
 Happy instant searching!

@@ -65,6 +65,6 @@ You can refer this gist by Andrew Altimi
 
 If you're using free gemini cli, then your data might be used for training. As they say it, if you're not paying then you're the produce 😜
 ## Similar Approaches 
-- https://x.com/iannuttall/status/1938695506013601802
+- [https://x.com/iannuttall/status/1938695506013601802](https://x.com/iannuttall/status/1938695506013601802)
 
 Happy vibe coding!

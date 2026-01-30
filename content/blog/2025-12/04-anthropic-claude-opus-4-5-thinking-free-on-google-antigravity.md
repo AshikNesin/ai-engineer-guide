@@ -18,4 +18,4 @@ Currently, Google's Antigravity is in public preview and it is free to use right
 👉 [Google Antigravity](https://antigravity.google/)
 
 ## Credits
-- https://x.com/marmaduke091/status/1996469717259731018
+- [https://x.com/marmaduke091/status/1996469717259731018](https://x.com/marmaduke091/status/1996469717259731018)

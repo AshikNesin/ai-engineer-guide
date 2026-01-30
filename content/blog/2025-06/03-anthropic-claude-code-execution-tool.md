@@ -171,6 +171,6 @@ You can read more about containers, pre-installed libraries, file handling in th
 - With features like these AI companies are slowly becoming platform. And inevitability vendor lock-in comes into the picture. 
 - And yeah, for production application it would be better to build this feature on top of providers like https://modal.com that will give us more control like having access to internet, installing custom package, etc.
 ## References
-- https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/code-execution-tool
+- [https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/code-execution-tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/code-execution-tool)
 
 Happy code execution!

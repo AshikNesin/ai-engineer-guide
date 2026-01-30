@@ -114,6 +114,6 @@ event = client.webhooks.unwrap(request.data, request.headers, secret=webhook_sec
 Or you can use [standard-webhooks](https://github.com/standard-webhooks/standard-webhooks/tree/main?tab=readme-ov-file#reference-implementations) libraries to do the verification part.
 
 ## References
-- https://platform.openai.com/docs/guides/webhooks
+- [https://platform.openai.com/docs/guides/webhooks](https://platform.openai.com/docs/guides/webhooks)
 
 Happy building apps!

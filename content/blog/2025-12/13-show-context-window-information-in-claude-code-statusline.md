@@ -19,4 +19,4 @@ Add a progress bar showing the percentage of context currently used
 ![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/vitoz3ha8oojo0c09ise)
 
 ## Reference
-https://x.com/claudeai/status/1999209597035331739
+[https://x.com/claudeai/status/1999209597035331739](https://x.com/claudeai/status/1999209597035331739)

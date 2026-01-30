@@ -13,4 +13,4 @@ draft: true
 
 
 ## References
-- https://x.com/saranormous/status/1866933642401886707
+- [https://x.com/saranormous/status/1866933642401886707](https://x.com/saranormous/status/1866933642401886707)

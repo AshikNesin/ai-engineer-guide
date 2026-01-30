@@ -31,6 +31,6 @@ And also add the `DOPPLER_TOKEN` env in the settings as well.
 That's pretty much it. `doppler` cli will works as expected.
 
 ## Reference
-https://docs.doppler.com/docs/install-cli
+[https://docs.doppler.com/docs/install-cli](https://docs.doppler.com/docs/install-cli)
 
 Happy background coding!

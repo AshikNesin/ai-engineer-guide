@@ -14,4 +14,4 @@ Swyx has curated the reading list (paper) if you're interested in AI Engineering
 
 ![2025-12-21-at-22.51.552x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/fzphdsvtcvizejabedmy)
 
-👉 https://www.latent.space/p/2025-papers
+👉 [https://www.latent.space/p/2025-papers](https://www.latent.space/p/2025-papers)

@@ -15,4 +15,4 @@ This will give us option either to copy to `clipboard` or write it as a `markdow
 ![2025-12-26-at-20.05.27.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/vdz1ti8xe5txxhl7lyuv)
 
 ## Reference
-https://x.com/adocomplete/status/2003870672418988170
+[https://x.com/adocomplete/status/2003870672418988170](https://x.com/adocomplete/status/2003870672418988170)

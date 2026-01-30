@@ -15,5 +15,5 @@ You can configure it using the command `/keybindings`
 {{< video "https://video.twimg.com/amplify_video/2016221962582867968/vid/avc1/3840x1892/4UtrVTAJNclGTxP3.mp4" >}}
 
 ## Reference
-- https://x.com/bcherny/status/2016222113523483050
-- https://code.claude.com/docs/en/keybindings
+- [https://x.com/bcherny/status/2016222113523483050](https://x.com/bcherny/status/2016222113523483050)
+- [https://code.claude.com/docs/en/keybindings](https://code.claude.com/docs/en/keybindings)

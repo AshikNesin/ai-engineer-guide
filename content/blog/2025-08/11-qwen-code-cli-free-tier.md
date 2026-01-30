@@ -33,6 +33,6 @@ As with anything, since we're getting this service for free. They might be train
 And also, their model may fallback to maintain service quality.
 
 ## Reference
-https://x.com/Alibaba_Qwen/status/1953835877555151134
+[https://x.com/Alibaba_Qwen/status/1953835877555151134](https://x.com/Alibaba_Qwen/status/1953835877555151134)
 
 Happy CLI coding!

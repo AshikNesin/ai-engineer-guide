@@ -19,4 +19,4 @@ It's not just open source for the sake of open source like how it is released by
 You can learn it here: https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf
 
 ## Reference
-- https://xcancel.com/deepseek_ai/status/1995452646459858977#m
+- [https://xcancel.com/deepseek_ai/status/1995452646459858977#m](https://xcancel.com/deepseek_ai/status/1995452646459858977#m)

@@ -193,6 +193,6 @@ Make sure to set you `ANTHROPIC_API_KEY` in header
 We got the correct response -- it invoked the mcp tools got some responses from Zerodha MCP server. Their MCP server requires users to manually open the link and verify but as a client it worked as expected.
 
 ## References
-- https://docs.anthropic.com/en/docs/agents-and-tools/mcp-connector
+- [https://docs.anthropic.com/en/docs/agents-and-tools/mcp-connector](https://docs.anthropic.com/en/docs/agents-and-tools/mcp-connector)
 
 Happy executing tools!

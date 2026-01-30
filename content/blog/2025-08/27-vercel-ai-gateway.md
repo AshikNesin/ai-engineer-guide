@@ -21,7 +21,7 @@ They support wide range of models including latest Anthropic and OpenAI models l
 And there is no specific rate limiting for those models as well.
 ![2025-08-27-at-00.08.172x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-08/okak7nq3h3o9rcnnlpy6)
 
-https://vercel.com/ai-gateway/models
+[https://vercel.com/ai-gateway/models](https://vercel.com/ai-gateway/models)
 
 As you might have noticed, you just need to change **model** to something like `xai/grok-4` or `anthropic/claude-sonnet-4` to use different models.
 ![2025-08-27-at-23.40.102x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-08/tjmybgi0gypkx1pvfecn)
@@ -97,7 +97,7 @@ curl -X POST "https://ai-gateway.vercel.sh/v1/chat/completions" \
 ### Your favorite tool/Library
 As long as your app/tool/library supports OpenAI like API, you can use this AI gateway in it.
 
-Just set baseURL as `https://ai-gateway.vercel.sh/v1`
+Just set baseURL as [https://ai-gateway.vercel.sh/v1](https://ai-gateway.vercel.sh/v1)
 
 And `apiKey` as `$AI_GATEWAY_API_KEY`
 
@@ -109,6 +109,6 @@ Currently, Vercel provides $5 free credits per month (as long as you don't add a
 And you can use that credit for virtually anything
 
 ## Reference
-- https://vercel.com/docs/ai-gateway/getting-started
+- [https://vercel.com/docs/ai-gateway/getting-started](https://vercel.com/docs/ai-gateway/getting-started)
 
 Happy building AI!

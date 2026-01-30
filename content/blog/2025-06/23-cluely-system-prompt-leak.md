@@ -19,6 +19,6 @@ Fun fact: The founders initially have built [tool](https://www.interviewcoder.co
 ## Disclaimer
 I'm not sure if it's 100% correct. I saw this in Twitter and bookmarking here in the blog for future reference. 
 ## Credits
-- https://x.com/jackhcable/status/1936500980297932827
+- [https://x.com/jackhcable/status/1936500980297932827](https://x.com/jackhcable/status/1936500980297932827)
 
 Happy learning prompts!

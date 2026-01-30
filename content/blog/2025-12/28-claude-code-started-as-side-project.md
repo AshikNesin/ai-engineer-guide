@@ -18,4 +18,4 @@ It is interesting to know that Claude Code started as a **side project** by Bori
 ![2025-12-28-at-22.39.122x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/zsqbvspa8n7y6kl9jzlv)
 
 ## Reference
-https://x.com/bcherny/status/2004887829252317325
+[https://x.com/bcherny/status/2004887829252317325](https://x.com/bcherny/status/2004887829252317325)

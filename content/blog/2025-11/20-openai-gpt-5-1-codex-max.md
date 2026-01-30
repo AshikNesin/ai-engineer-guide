@@ -19,4 +19,4 @@ From the benchmark that they've shared and whatever tweet that I've seen on Twit
 
 Right now it is available in Codex and it should be available in API soon.
 
-👉 https://openai.com/index/gpt-5-1-codex-max/
+👉 [https://openai.com/index/gpt-5-1-codex-max/](https://openai.com/index/gpt-5-1-codex-max/)

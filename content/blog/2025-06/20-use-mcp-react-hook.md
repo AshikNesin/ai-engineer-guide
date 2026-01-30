@@ -89,8 +89,8 @@ Here is an [example](https://inspector.use-mcp.dev/) of showcasing the capabilit
 ![2025-06-20 at 21.49.38@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-20-at-21.49.38-at-2x.png)
 
 ## Source Code
-- https://github.com/modelcontextprotocol/use-mcp (MIT)
+- [https://github.com/modelcontextprotocol/use-mcp](https://github.com/modelcontextprotocol/use-mcp) (MIT)
 ## References
-- https://blog.cloudflare.com/connect-any-react-application-to-an-mcp-server-in-three-lines-of-code/
+- [https://blog.cloudflare.com/connect-any-react-application-to-an-mcp-server-in-three-lines-of-code/](https://blog.cloudflare.com/connect-any-react-application-to-an-mcp-server-in-three-lines-of-code/)
 
 Happy building apps!

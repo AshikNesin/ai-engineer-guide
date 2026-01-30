@@ -18,6 +18,6 @@ Here is an intro video by them 👇
 
 Overall, it looks good enough and you might find something interesting.
 
-👉 https://adventofagents.com
+👉 [https://adventofagents.com](https://adventofagents.com)
 
 Happy building agents!

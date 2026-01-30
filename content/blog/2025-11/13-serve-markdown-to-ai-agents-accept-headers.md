@@ -40,7 +40,7 @@ And by sending `Accept: application/json, text/plain, */*` header, we're getting
 And Claude Code team claims that they'll start sending `Accept: “text/markdown"` then making a request in the upcoming versions.
 
 ## Reference
-- https://x.com/bcherny/status/1988860326306087102
-- https://x.com/bunjavascript/status/1971934734940098971
+- [https://x.com/bcherny/status/1988860326306087102](https://x.com/bcherny/status/1988860326306087102)
+- [https://x.com/bunjavascript/status/1971934734940098971](https://x.com/bunjavascript/status/1971934734940098971)
 
 Happy optimizing docs!

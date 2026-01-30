@@ -123,7 +123,7 @@ Here's the formatted markdown:
 
 The video demo in the blog post is from these Tweets
 
-- https://x.com/pk_iv/status/1882837641521221858
-- https://x.com/addyosmani/status/1878245455223767314
+- [https://x.com/pk_iv/status/1882837641521221858](https://x.com/pk_iv/status/1882837641521221858)
+- [https://x.com/addyosmani/status/1878245455223767314](https://x.com/addyosmani/status/1878245455223767314)
 
 Happy automating browser!

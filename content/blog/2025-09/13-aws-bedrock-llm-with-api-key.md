@@ -15,7 +15,7 @@ Before, you needed to configure IAM credentials and other things, which was kind
 ## How to get started?
 In your AWS Bedrock dashboard, you can find a new option to generate the key.
 
-https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/api-keys
+[https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/api-keys](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/api-keys)
 
 ![2025-09-13-at-23.41.292x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/xq0rahfkitgynwf7ig54)
 

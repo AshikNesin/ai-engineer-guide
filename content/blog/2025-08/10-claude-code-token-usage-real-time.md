@@ -39,6 +39,6 @@ That's pretty much it.
 Honestly, Anthropic should have provided this as a first class feature. Maybe they're not doing so for business reasons 🤑
 
 ## Credits
-https://x.com/iannuttall/status/1954272037976842547
+[https://x.com/iannuttall/status/1954272037976842547](https://x.com/iannuttall/status/1954272037976842547)
 
 Happy tracking usage!

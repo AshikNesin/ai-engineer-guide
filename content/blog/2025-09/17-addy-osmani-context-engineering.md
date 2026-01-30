@@ -17,4 +17,4 @@ It's pretty good. And it's a good intro to understand what context engineering i
 {{< video "https://video.twimg.com/amplify_video/1966750993917603840/vid/avc1/1920x1080/UQ67XtGeB21QhG4y.mp4"  >}}
 
 ## Credits
-https://x.com/addyosmani/status/1966752236249202743
+[https://x.com/addyosmani/status/1966752236249202743](https://x.com/addyosmani/status/1966752236249202743)

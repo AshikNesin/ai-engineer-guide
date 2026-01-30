@@ -15,4 +15,4 @@ However, if you set `export IS_DEMO=1` in the variable and then start then it'll
 ![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-01/awqmaackzr9d6j2vn568)
 
 ## Reference
-https://x.com/shadcn/status/2012452027511513443
+[https://x.com/shadcn/status/2012452027511513443](https://x.com/shadcn/status/2012452027511513443)

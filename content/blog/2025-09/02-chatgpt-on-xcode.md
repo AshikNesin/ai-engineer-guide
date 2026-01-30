@@ -30,7 +30,7 @@ Once you're done you should be able to use it in Xcode editor
 ![2025-09-02-at-23.43.132x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/msksafvydw5rayp09pte)
 
 ## Reference
-- https://x.com/OpenAIDevs/status/1961557515331862853
-- https://developer.apple.com/documentation/Xcode/writing-code-with-intelligence-in-xcode
+- [https://x.com/OpenAIDevs/status/1961557515331862853](https://x.com/OpenAIDevs/status/1961557515331862853)
+- [https://developer.apple.com/documentation/Xcode/writing-code-with-intelligence-in-xcode](https://developer.apple.com/documentation/Xcode/writing-code-with-intelligence-in-xcode)
 
 Happy AI-assisted coding

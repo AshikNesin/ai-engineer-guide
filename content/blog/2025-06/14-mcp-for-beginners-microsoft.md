@@ -17,6 +17,6 @@ And the best part is, unlike other tutorials there is a hands-on examples across
 
 Here you go 👇
 
-https://github.com/microsoft/mcp-for-beginners
+[https://github.com/microsoft/mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners)
 
 Happy building MCP-servers!

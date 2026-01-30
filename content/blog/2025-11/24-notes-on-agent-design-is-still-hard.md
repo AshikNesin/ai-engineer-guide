@@ -46,4 +46,4 @@ Explict caching gives you opportunity to do context editing. And also it make it
 > Every time the agent runs a tool you have the opportunity to not just return data that the tool produces, but also to feed more information back into the loop. For instance, you can remind the agent about the overall objective and the status of individual tasks.
 
 ## Reference
-👉 https://lucumr.pocoo.org/2025/11/21/agents-are-hard/
+👉 [https://lucumr.pocoo.org/2025/11/21/agents-are-hard/](https://lucumr.pocoo.org/2025/11/21/agents-are-hard/)

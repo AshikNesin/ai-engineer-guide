@@ -46,6 +46,6 @@ And in case, if you want direct link for that (got this from their README)
 ![2025-06-29 at 23.18.51@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-29-at-23.18.51-at-2x.png)
 
 ## Source
-- https://github.com/aavetis/PRarena
+- [https://github.com/aavetis/PRarena](https://github.com/aavetis/PRarena)
 
 Happy watching stats!

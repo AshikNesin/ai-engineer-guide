@@ -121,6 +121,6 @@ You can pass the following param in the payload to get your desired output.
 | country             | string       | ISO 3166-1 alpha-2 country code to localize results          | `"US"`                                                                                                         |
 
 ## References
-- https://www.perplexity.ai/hub/blog/introducing-the-perplexity-search-api
-- https://x.com/perplexity_ai/status/1971274917401461236
+- [https://www.perplexity.ai/hub/blog/introducing-the-perplexity-search-api](https://www.perplexity.ai/hub/blog/introducing-the-perplexity-search-api)
+- [https://x.com/perplexity_ai/status/1971274917401461236](https://x.com/perplexity_ai/status/1971274917401461236)
 - [Search API Quick Start - Perplexity](https://docs.perplexity.ai/guides/search-quickstart)

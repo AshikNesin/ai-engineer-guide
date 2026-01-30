@@ -26,6 +26,6 @@ One thing to note is its [restrictive license](https://huggingface.co/xai-org/gr
 > You may not use the Materials, derivatives, or outputs (including generated data) to train, create, or improve any foundational, large language, or general-purpose AI models, except for modifications or fine-tuning of Grok 2 permitted under and in accordance with the terms of this Agreement."
 
 ## Credits
-- https://x.com/rasbt/status/1959643038268920231/photo/1
+- [https://x.com/rasbt/status/1959643038268920231/photo/1](https://x.com/rasbt/status/1959643038268920231/photo/1)
 
 Happy learning AI!

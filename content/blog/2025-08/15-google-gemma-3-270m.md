@@ -38,7 +38,7 @@ You can use [Transformer.js](https://huggingface.co/docs/transformers.js) to run
 
 And you can refer to the bed time story demo on how they've implemented it.
 
-https://huggingface.co/spaces/webml-community/bedtime-story-generator/blob/main/src/hooks/useLLM.ts
+[https://huggingface.co/spaces/webml-community/bedtime-story-generator/blob/main/src/hooks/useLLM.ts](https://huggingface.co/spaces/webml-community/bedtime-story-generator/blob/main/src/hooks/useLLM.ts)
 
 ## References
 - [Introducing Gemma 3 270M: The compact model for hyper-efficient AI - Google Developers Blog](https://developers.googleblog.com/en/introducing-gemma-3-270m/)

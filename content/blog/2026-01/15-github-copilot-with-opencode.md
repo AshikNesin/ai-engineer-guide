@@ -30,4 +30,4 @@ Then authenticate it.
 Once you're done, you'll be able to choose the model using the `/model` command
 
 ## Reference
-https://x.com/jaredpalmer/status/2011803160122097826
+[https://x.com/jaredpalmer/status/2011803160122097826](https://x.com/jaredpalmer/status/2011803160122097826)

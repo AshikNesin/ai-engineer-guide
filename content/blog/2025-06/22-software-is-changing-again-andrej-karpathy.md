@@ -121,8 +121,8 @@ Code is actually easy part!
 
 ![2025-06-22 at 20.17.25@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-22-at-20.17.25-at-2x.png)
 ## Resources
-- https://drive.google.com/file/d/1a0h1mkwfmV2PlekxDN8isMrDA5evc4wW/view
-- https://x.com/gregisenberg/status/1935776270329298965/photo/2
+- [https://drive.google.com/file/d/1a0h1mkwfmV2PlekxDN8isMrDA5evc4wW/view](https://drive.google.com/file/d/1a0h1mkwfmV2PlekxDN8isMrDA5evc4wW/view)
+- [https://x.com/gregisenberg/status/1935776270329298965/photo/2](https://x.com/gregisenberg/status/1935776270329298965/photo/2)
 
 
 

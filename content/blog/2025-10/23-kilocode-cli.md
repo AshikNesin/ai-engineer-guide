@@ -30,4 +30,4 @@ Anyway, here is the official video by them.
 You can find the source code of this CLI 👉 https://github.com/Kilo-Org/kilocode/tree/main/cli which is a good learning material on how a agentic CLI is being built.
 
 ## Reference
-https://kilocode.ai/docs/cli
+[https://kilocode.ai/docs/cli](https://kilocode.ai/docs/cli)

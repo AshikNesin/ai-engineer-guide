@@ -87,5 +87,5 @@ for block in message.content:
 ```
 
 ## Reference
-https://ollama.com/blog/claude
-https://x.com/ollama/status/2012434308091224534
+[https://ollama.com/blog/claude](https://ollama.com/blog/claude)
+[https://x.com/ollama/status/2012434308091224534](https://x.com/ollama/status/2012434308091224534)

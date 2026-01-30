@@ -30,5 +30,5 @@ If you're on [GLM coding plan](https://go.nesin.io/glm), then you can access thi
 The model id is `glm-4.7`. Make sure to use that instead of old models.
 
 ## Reference
-https://z.ai/blog/glm-4.7
-https://docs.z.ai/guides/llm/glm-4.7
+[https://z.ai/blog/glm-4.7](https://z.ai/blog/glm-4.7)
+[https://docs.z.ai/guides/llm/glm-4.7](https://docs.z.ai/guides/llm/glm-4.7)

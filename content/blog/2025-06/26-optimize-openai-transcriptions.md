@@ -57,4 +57,4 @@ curl --request POST \
 ```
 
 ## References
-- https://george.mand.is/2025/06/openai-charges-by-the-minute-so-make-the-minutes-shorter/ 🌟
+- [https://george.mand.is/2025/06/openai-charges-by-the-minute-so-make-the-minutes-shorter/](https://george.mand.is/2025/06/openai-charges-by-the-minute-so-make-the-minutes-shorter/) 🌟

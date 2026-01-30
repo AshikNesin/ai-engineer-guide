@@ -23,4 +23,4 @@ They've 3 types of web crawlers/bot and each one performs specific tasks.
 You can use those IP address to validate those bots (and perform some action like allowing/dening)
 
 ## Reference
-https://platform.openai.com/docs/bots
+[https://platform.openai.com/docs/bots](https://platform.openai.com/docs/bots)

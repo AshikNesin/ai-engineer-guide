@@ -51,6 +51,6 @@ Note: The `apply_patch` tool is only available through OpenAI's Responses API no
 You can refer the [guides](https://platform.openai.com/docs/guides/tools-apply-patch) on how to get use it in your codebase.
 
 ## Reference
-- https://openai.com/index/gpt-5-1-for-developers/
-- https://platform.openai.com/docs/guides/tools-apply-patch
-- https://github.com/cline/cline/blob/b002cdacdbd5d9f76928c37f65f83b4894f5b2a8/src/core/prompts/system-prompt/tools/replace_in_file.ts
+- [https://openai.com/index/gpt-5-1-for-developers/](https://openai.com/index/gpt-5-1-for-developers/)
+- [https://platform.openai.com/docs/guides/tools-apply-patch](https://platform.openai.com/docs/guides/tools-apply-patch)
+- [https://github.com/cline/cline/blob/b002cdacdbd5d9f76928c37f65f83b4894f5b2a8/src/core/prompts/system-prompt/tools/replace_in_file.ts](https://github.com/cline/cline/blob/b002cdacdbd5d9f76928c37f65f83b4894f5b2a8/src/core/prompts/system-prompt/tools/replace_in_file.ts)

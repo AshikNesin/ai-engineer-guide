@@ -25,4 +25,4 @@ This tiny feature is a good user experience and it'll be helpful for us!
 Happy stashing prompts!
 
 ## Reference
-https://x.com/adocomplete/status/1999911937128509637
+[https://x.com/adocomplete/status/1999911937128509637](https://x.com/adocomplete/status/1999911937128509637)

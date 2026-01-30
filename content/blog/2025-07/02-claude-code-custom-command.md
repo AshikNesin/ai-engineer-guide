@@ -63,6 +63,6 @@ Here is an example command 👇
 ![Pasted image 20250702231028.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/Pasted-image-20250702231028.png)
 
 ## References
-- https://docs.anthropic.com/en/docs/claude-code/slash-commands#project-commands
+- [https://docs.anthropic.com/en/docs/claude-code/slash-commands#project-commands](https://docs.anthropic.com/en/docs/claude-code/slash-commands#project-commands)
 
 Happy open sourcing!

@@ -27,6 +27,6 @@ To be honest, this feels like the what OpenAI GPT-4 did for the coding use case 
 
 ## Reference
 - [Sora 2 - Sam Altman](https://blog.samaltman.com/sora-2)
-- https://x.com/OpenAI/status/1973071069016641829
+- [https://x.com/OpenAI/status/1973071069016641829](https://x.com/OpenAI/status/1973071069016641829)
 
 Happy creating AI-videos!

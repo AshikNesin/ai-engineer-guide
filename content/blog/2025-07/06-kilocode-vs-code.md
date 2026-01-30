@@ -31,7 +31,7 @@ Here is a quick demo by the team
 ## Installation
 You can install this in VS Code (and also any VS Code forks like Cursor, Windsurf, etc)
 
-👉 https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code
+👉 [https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code](https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code)
 
 ## Features
 
@@ -51,7 +51,7 @@ Note: Since you'll be paying per usage beware of the token usage when you're usi
 ## Pro Tip
 If you already have GitHub Copilot subscription you can configure and use it Kilo Code instead of providing configuring your LLM provider. 
 
-👉 https://kilocode.ai/docs/providers/vscode-lm
+👉 [https://kilocode.ai/docs/providers/vscode-lm](https://kilocode.ai/docs/providers/vscode-lm)
 ## Fun Fact
 Kilo Code is a fork of [Roo Code](https://roocode.com/) which itself is a fork of [Cline](https://cline.bot/)
 

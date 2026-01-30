@@ -14,7 +14,7 @@ Anthropic & Gradio team is hosting a virtual hackathon on MCP theme from Nov 14-
 
 ![CleanShot-2025-11-12-at-23.14.40.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/t5dd32tlbugdwpjjl5wp)
 
-👉 https://huggingface.co/MCP-1st-Birthday
+👉 [https://huggingface.co/MCP-1st-Birthday](https://huggingface.co/MCP-1st-Birthday)
 
 Apart from working an a cool project with team (or solo :P), you get free credits by different companies like OpenAI, ElevenLabs, etc
 

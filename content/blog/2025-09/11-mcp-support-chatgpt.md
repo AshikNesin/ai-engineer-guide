@@ -20,7 +20,7 @@ Here is the video by OpenAI Team on how to setup & use it 👇
 KCD also has a really good [video](https://www.youtube.com/watch?v=_r8XW8Sz_gY) about it where he is using his blog's MCP to perform certain actions.
 
 ## Reference
-- https://x.com/OpenAIDevs/status/1965807401745207708
-- https://platform.openai.com/docs/guides/developer-mode
+- [https://x.com/OpenAIDevs/status/1965807401745207708](https://x.com/OpenAIDevs/status/1965807401745207708)
+- [https://platform.openai.com/docs/guides/developer-mode](https://platform.openai.com/docs/guides/developer-mode)
 
 Happy chatting-with MCP!

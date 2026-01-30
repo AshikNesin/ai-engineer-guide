@@ -70,6 +70,6 @@ Response format: Valid JSON matching your schema in response.content[0].text
 ```
 
 ## Reference
-- https://docs.claude.com/en/docs/build-with-claude/structured-outputs
+- [https://docs.claude.com/en/docs/build-with-claude/structured-outputs](https://docs.claude.com/en/docs/build-with-claude/structured-outputs)
 
 Happy parsing content!

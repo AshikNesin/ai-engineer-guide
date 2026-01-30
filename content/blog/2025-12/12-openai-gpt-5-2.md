@@ -18,4 +18,4 @@ web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></if
 Overall, this model seems to be powerful than the old model 5.1 and it is little pricier than 5.1 as well.
 
 ## Referenc
-https://openai.com/index/introducing-gpt-5-2/
+[https://openai.com/index/introducing-gpt-5-2/](https://openai.com/index/introducing-gpt-5-2/)

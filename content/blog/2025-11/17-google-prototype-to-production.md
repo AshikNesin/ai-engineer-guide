@@ -16,4 +16,4 @@ Google has published guide on how they take their AI apps from prototype to prod
 
 This guide looks pretty insightful. I'm yet to complete it, will read my notes in this blog post soon.
 
-👉 https://drive.google.com/file/d/1s00Cr_C8LXtrsGrlRG4WUJx4GmAtdzrQ/view
+👉 [https://drive.google.com/file/d/1s00Cr_C8LXtrsGrlRG4WUJx4GmAtdzrQ/view](https://drive.google.com/file/d/1s00Cr_C8LXtrsGrlRG4WUJx4GmAtdzrQ/view)

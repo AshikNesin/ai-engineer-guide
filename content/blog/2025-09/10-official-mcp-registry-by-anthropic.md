@@ -86,7 +86,7 @@ You can learn more about authentication, publishing the package, security, etc [
 
 You can access the MCP server-related things in the following endpoints.
 
-**Base URL**: `https://registry.modelcontextprotocol.io/v0/servers`
+**Base URL**: [https://registry.modelcontextprotocol.io/v0/servers](https://registry.modelcontextprotocol.io/v0/servers)
 
 ### Server Endpoints
 

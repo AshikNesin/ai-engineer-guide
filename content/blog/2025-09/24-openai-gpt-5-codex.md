@@ -38,5 +38,5 @@ curl https://api.openai.com/v1/responses \
 ```
 
 ## References
-- https://openai.com/index/introducing-upgrades-to-codex/
-- https://platform.openai.com/docs/models/gpt-5-codex
+- [https://openai.com/index/introducing-upgrades-to-codex/](https://openai.com/index/introducing-upgrades-to-codex/)
+- [https://platform.openai.com/docs/models/gpt-5-codex](https://platform.openai.com/docs/models/gpt-5-codex)

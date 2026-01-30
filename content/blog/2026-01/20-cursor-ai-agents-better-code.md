@@ -72,4 +72,4 @@ Here are some of the other tips by Cursor founder - Michael Truell which he has 
 - Run multiple agents/models in parallel via worktrees
 
 ## Reference
-- https://cursor.com/blog/agent-best-practices
+- [https://cursor.com/blog/agent-best-practices](https://cursor.com/blog/agent-best-practices)

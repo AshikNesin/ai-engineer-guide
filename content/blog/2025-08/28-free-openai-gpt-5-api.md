@@ -25,7 +25,7 @@ Once you have the key, you can set the base URL and API key in an SDK that suppo
 
 | Setting   | Value                               | Notes                                               |
 |-----------|-------------------------------------|-----------------------------------------------------|
-| baseURL   | `https://ai-gateway.vercel.sh/v1`   | Use this as the API base URL                        |
+| baseURL   | [https://ai-gateway.vercel.sh/v1](https://ai-gateway.vercel.sh/v1)   | Use this as the API base URL                        |
 | apiKey    | `$AI_GATEWAY_API_KEY`               | Replace `AI_GATEWAY_API_KEY` with API Key  |
 
 ## Supported GPT 5 Models

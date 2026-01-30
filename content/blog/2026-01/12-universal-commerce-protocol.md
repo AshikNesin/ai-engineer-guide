@@ -21,4 +21,4 @@ Sam has a quick walkthrough about it which you might find useful to understand w
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yDKpF6CjBUo?si=ulNGsSTjjTZ0fWnW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Reference
-https://x.com/sundarpichai/status/2010382050570932299
+[https://x.com/sundarpichai/status/2010382050570932299](https://x.com/sundarpichai/status/2010382050570932299)

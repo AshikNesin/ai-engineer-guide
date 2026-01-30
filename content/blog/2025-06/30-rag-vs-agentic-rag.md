@@ -39,6 +39,6 @@ Here is a good comparison diagram by ByteByteGo 👇
 ![Pasted image 20250630215752.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250630215752.png)
 
 ## Reference
-- https://blog.bytebytego.com/p/ep169-rag-vs-agentic-rag
+- [https://blog.bytebytego.com/p/ep169-rag-vs-agentic-rag](https://blog.bytebytego.com/p/ep169-rag-vs-agentic-rag)
 
 Happy Agentic RAG

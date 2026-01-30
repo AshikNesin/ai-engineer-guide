@@ -28,6 +28,6 @@ claude
 Make sure to configure your DeepSeek API key that you get from their [platform](https://platform.deepseek.com).
 
 ## Reference
-- https://api-docs.deepseek.com/guides/anthropic_api
+- [https://api-docs.deepseek.com/guides/anthropic_api](https://api-docs.deepseek.com/guides/anthropic_api)
 
 Happy AI coding!

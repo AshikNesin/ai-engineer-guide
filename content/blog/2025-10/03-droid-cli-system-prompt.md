@@ -16,6 +16,6 @@ Not sure about how accurate that is but the prompt looks pretty insightful
 <script src="https://gist.github.com/AshikNesin/8c5b16f4f50734d1413bce4002223e22.js"></script>
 
 ## Credits
-- https://x.com/elder_plinius/status/1972429577608986908
+- [https://x.com/elder_plinius/status/1972429577608986908](https://x.com/elder_plinius/status/1972429577608986908)
 
 Happy learning prompts!

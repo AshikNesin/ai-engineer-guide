@@ -17,6 +17,6 @@ And they cover basic concepts like how LLM works, tokenization, etc as well whic
 
 ![2025-12-05-at-21.20.092x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/po8x1p01nwqxncvna07a)
 
-👉 https://openevals-evaluation-guidebook.hf.space/the-llm-evaluation-guidebook.pdf
+👉 [https://openevals-evaluation-guidebook.hf.space/the-llm-evaluation-guidebook.pdf](https://openevals-evaluation-guidebook.hf.space/the-llm-evaluation-guidebook.pdf)
 
 Happy benchmarking LLM!

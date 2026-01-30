@@ -70,6 +70,6 @@ And that will start the codex with the GLM 4.6 model from Z.ai
 ![2025-09-15-at-23.33.512x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/upujphhjhp7zrb37p0d1)
 
 ## Reference
-https://github.com/openai/codex/blob/main/docs/config.md
+[https://github.com/openai/codex/blob/main/docs/config.md](https://github.com/openai/codex/blob/main/docs/config.md)
 
 Happy AI-assisted coding!

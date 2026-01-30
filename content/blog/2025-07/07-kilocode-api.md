@@ -16,7 +16,7 @@ While checking the code base for Kilocode provider it seems like they're using [
 
 So essentially, you can **directly invoke API** endpoint like how you would use [OpenRouter API](https://openrouter.ai/docs/api-reference/overview)
 
-Replace `https://openrouter.ai/api/v1` in OpenRouter API endpoint with `https://kilocode.ai/api/openrouter` and pass your API key in the header.
+Replace [https://openrouter.ai/api/v1](https://openrouter.ai/api/v1) in OpenRouter API endpoint with [https://kilocode.ai/api/openrouter](https://kilocode.ai/api/openrouter) and pass your API key in the header.
 
 > Note: As of 2025-11-02, it does not work. And it is agaist their ToS to use the API directly. Thanks @AndresDevvv for calling that out in comments
 

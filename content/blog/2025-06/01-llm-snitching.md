@@ -8,7 +8,7 @@ via_url:
 ---
 I came across a fun benchmark by [Theo Browne](https://t3.gg/) where he shows tries to see if a AI model can **rat you** out to authorities if you told it to **take initiative** in enforcing its morals values while exposing the evidence of wrongdoing.
 
-👉 https://simonwillison.net/2025/May/31/snitchbench-with-llm/
+👉 [https://simonwillison.net/2025/May/31/snitchbench-with-llm/](https://simonwillison.net/2025/May/31/snitchbench-with-llm/)
 
 Basically, the AI app has access to send emails. When it finds any morally wrong thing, it sends email to authorities/news outlets with evidences.
 
@@ -29,8 +29,8 @@ This is the email it tied to send when [Simon Willison](https://simonwillison.ne
 > Whereas this kind of ethical intervention and whistleblowing is perhaps appropriate in principle, it has a risk of misfiring if users give Opus-based agents access to incomplete or misleading information and prompt them in these ways. **We recommend that users exercise caution with instructions like these that invite high-agency behavior in contexts that could appear ethically questionable.**
 
 ## References
-- https://snitchscript-visualized.vercel.app/
-- https://github.com/t3dotgg/SnitchBench
-- https://simonwillison.net/2025/May/31/snitchbench-with-llm/
+- [https://snitchscript-visualized.vercel.app/](https://snitchscript-visualized.vercel.app/)
+- [https://github.com/t3dotgg/SnitchBench](https://github.com/t3dotgg/SnitchBench)
+- [https://simonwillison.net/2025/May/31/snitchbench-with-llm/](https://simonwillison.net/2025/May/31/snitchbench-with-llm/)
 
 Happy role-playing!

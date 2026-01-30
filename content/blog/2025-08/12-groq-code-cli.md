@@ -22,7 +22,7 @@ Currently, it has support for only bare essentials like this
 
 ![2025-08-12 at 23.47.05@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-12-at-23.47.05-at-2x.png)
 
-👉 https://github.com/build-with-groq/groq-code-cli
+👉 [https://github.com/build-with-groq/groq-code-cli](https://github.com/build-with-groq/groq-code-cli)
 
 ## How to get started?
 

@@ -24,7 +24,7 @@ Basically you can wire this up with your AI IDE like Cursor or anywhere it suppo
 ![2025-07-23 at 21.13.32@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/2025-07-23-at-21.13.32-at-2x.png)
 ## Remote MCP
 
-Their remote MCP is 👉 `https://mcp.context7.com/mcp`
+Their remote MCP is 👉 [https://mcp.context7.com/mcp](https://mcp.context7.com/mcp)
 
 You can refer to their docs on how to set it up for your tool. And yeah, the entire thing is open source - MIT  license.
 

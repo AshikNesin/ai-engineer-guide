@@ -23,6 +23,6 @@ And this will be really useful reference if you plan on building an LLM from scr
 | Download PDF      | [PDF Download](https://huggingfacetb-smol-training-playbook.hf.space/the-smol-training-playbook-the-secrets-to-building-world-class-llms.pdf) |
 
 ## Reference
-- https://www.reddit.com/r/LocalLLaMA/comments/1ok3xie/200_pages_of_hugging_face_secrets_on_how_to_train/
+- [https://www.reddit.com/r/LocalLLaMA/comments/1ok3xie/200_pages_of_hugging_face_secrets_on_how_to_train/](https://www.reddit.com/r/LocalLLaMA/comments/1ok3xie/200_pages_of_hugging_face_secrets_on_how_to_train/)
 
 Happy learning about-LLM!

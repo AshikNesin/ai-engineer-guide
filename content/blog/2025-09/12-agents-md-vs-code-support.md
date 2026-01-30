@@ -22,6 +22,6 @@ Recently, VS Code (v1.104+) started supporting that as well.
 With support for a common file for AI Agents, we can avoid creating multiple files for every single AI Agent.
 
 ## Reference
-https://x.com/code/status/1966145747566375215
+[https://x.com/code/status/1966145747566375215](https://x.com/code/status/1966145747566375215)
 
 Happy guiding agents!

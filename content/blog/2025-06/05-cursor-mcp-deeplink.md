@@ -35,6 +35,6 @@ In their [website](https://docs.cursor.com/deeplinks#generate-install-link), you
 
 And it'll generate the snippet / link which you can use to directly install your MCP
 ## References
-- https://docs.cursor.com/context/model-context-protocol
+- [https://docs.cursor.com/context/model-context-protocol](https://docs.cursor.com/context/model-context-protocol)
 
 Happy directly installing!

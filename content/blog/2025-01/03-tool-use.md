@@ -8,7 +8,7 @@ draft: true
 ---
 
 ## Reference
-- https://docs.anthropic.com/en/docs/build-with-claude/tool-use
-- https://platform.openai.com/docs/guides/function-calling
-- https://www.promptingguide.ai/applications/function_calling
-- https://docs.mistral.ai/capabilities/function_calling/
+- [https://docs.anthropic.com/en/docs/build-with-claude/tool-use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
+- [https://platform.openai.com/docs/guides/function-calling](https://platform.openai.com/docs/guides/function-calling)
+- [https://www.promptingguide.ai/applications/function_calling](https://www.promptingguide.ai/applications/function_calling)
+- [https://docs.mistral.ai/capabilities/function_calling/](https://docs.mistral.ai/capabilities/function_calling/)

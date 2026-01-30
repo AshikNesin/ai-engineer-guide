@@ -215,6 +215,6 @@ You will get token usage in API response.
 You can also do [domain level filtering](/blog/domain-filter-openai-web-search-tool/) as well when performing web search.
 
 ## References
-- https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses&lang=curl
+- [https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses&lang=curl](https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses&lang=curl)
 
 Happy searching internet!

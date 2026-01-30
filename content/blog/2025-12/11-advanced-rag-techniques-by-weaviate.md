@@ -20,4 +20,4 @@ At a high level, they've covered:
 - Retrival
 - Post retrival like re-ranking and others
 
-👉 https://weaviate.io/ebooks/advanced-rag-techniques
+👉 [https://weaviate.io/ebooks/advanced-rag-techniques](https://weaviate.io/ebooks/advanced-rag-techniques)

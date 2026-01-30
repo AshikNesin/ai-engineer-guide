@@ -23,4 +23,4 @@ With that context, it answers our questions.
 ![2026-01-08-at-23.02.472x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-01/oes4l8qloh3scwqklbtp)
 
 ## Reference
-https://x.com/aidenybai/status/2008222085240549530
+[https://x.com/aidenybai/status/2008222085240549530](https://x.com/aidenybai/status/2008222085240549530)

@@ -41,7 +41,7 @@ docker model run ai/smollm2:360M-Q4_K_M "Why sky is Blue?"
 
 Just set the base url to 
 
-`http://localhost:12434/engines/v1`
+[http://localhost:12434/engines/v1](http://localhost:12434/engines/v1)
 
 And set the model it as whatever model that you're running. In the above case, it'll be `ai/smollm2:360M-Q4_K_M`
 

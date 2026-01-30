@@ -25,4 +25,4 @@ Once it is successfully authenticated, you'll be able to use those models (`/mod
 ![2026-01-11-at-23.09.522x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-01/bnlutqeb9yiodspgaiis)
 
 ## Reference
-https://x.com/thdxr/status/2009803906461905202
+[https://x.com/thdxr/status/2009803906461905202](https://x.com/thdxr/status/2009803906461905202)

@@ -12,7 +12,7 @@ Using the latest model GLM 4.7 from z.ai is straightforward
 
 Just get the API key from the dashboard
 
-https://z.ai/manage-apikey/apikey-list
+[https://z.ai/manage-apikey/apikey-list](https://z.ai/manage-apikey/apikey-list)
 
 Then you just need to set these things in the claude settings which is located at `~/.claude/settings.json`
 
@@ -38,4 +38,4 @@ You can also set these things so that the model names are configured properly as
   }
 ```
 ## Reference
-https://docs.z.ai/devpack/tool/claude
+[https://docs.z.ai/devpack/tool/claude](https://docs.z.ai/devpack/tool/claude)

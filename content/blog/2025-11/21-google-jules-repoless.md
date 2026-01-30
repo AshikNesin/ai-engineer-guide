@@ -16,6 +16,6 @@ Instead you can drag and drop your files/context and start building it.
 
 {{< video "https://video.twimg.com/amplify_video/1991571337173696512/vid/avc1/1280x720/UN87IACf5rBD3C1a.mp4" >}}
 
-https://x.com/julesagent/status/1991571865446543627
+[https://x.com/julesagent/status/1991571865446543627](https://x.com/julesagent/status/1991571865446543627)
 
 Happy building apps!

@@ -19,4 +19,4 @@ Just append this in your `~/.claude/CLAUDE.md`
 ```
 
 ## Reference
-https://www.aihero.dev/my-agents-md-file-for-building-plans-you-actually-read
+[https://www.aihero.dev/my-agents-md-file-for-building-plans-you-actually-read](https://www.aihero.dev/my-agents-md-file-for-building-plans-you-actually-read)

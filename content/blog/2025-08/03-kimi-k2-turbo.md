@@ -22,6 +22,6 @@ And yeah, you pay extra for the speed (currently it is 2x but it'll be increased
 It is available in their [Moonshot AI Platform](https://platform.moonshot.ai)
 
 ## Credits
-https://x.com/kimi_moonshot/status/1951168907131355598
+[https://x.com/kimi_moonshot/status/1951168907131355598](https://x.com/kimi_moonshot/status/1951168907131355598)
 
 Happy faster inference!

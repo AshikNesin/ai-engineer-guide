@@ -19,7 +19,7 @@ Just imagine — you say a query like _"Fix bug-x"_, and it fetches the bug deta
 
 How cool is that? 🤯
 
-👉 https://x.com/AnthropicAI/status/1935367951542280239
+👉 [https://x.com/AnthropicAI/status/1935367951542280239](https://x.com/AnthropicAI/status/1935367951542280239)
 
 {{< video "https://res.cloudinary.com/ashiknesin/video/upload/AIEngineeringGuide.com/static/claude-code-remote-mcp.mp4"  >}}
 

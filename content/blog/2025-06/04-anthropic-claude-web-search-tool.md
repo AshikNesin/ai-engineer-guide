@@ -332,6 +332,6 @@ There models supports web search tool:
 ```
 
 ## References
-- https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool
+- [https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool)
 
 Happy searching internet!

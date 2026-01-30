@@ -84,5 +84,5 @@ Overall, I feel the way that Copilot SDK feels over-engineeried like having to r
 
 ## Reference
 
-- https://github.com/github/copilot-sdk/blob/main/docs/getting-started.md 
-- https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/
+- [https://github.com/github/copilot-sdk/blob/main/docs/getting-started.md](https://github.com/github/copilot-sdk/blob/main/docs/getting-started.md)
+- [https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/](https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/)

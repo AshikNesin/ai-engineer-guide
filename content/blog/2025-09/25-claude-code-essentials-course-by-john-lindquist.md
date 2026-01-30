@@ -150,6 +150,6 @@ If you have such file make sure to give permission for it
 ```
 
 ## Credits
-- https://egghead.io/courses/claude-code-essentials~jc0n6 (obviously!)
+- [https://egghead.io/courses/claude-code-essentials~jc0n6](https://egghead.io/courses/claude-code-essentials~jc0n6) (obviously!)
 
 Happy learning-about claude!

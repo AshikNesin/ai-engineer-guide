@@ -13,6 +13,6 @@ Open Router team has relased a detailed state of AI report based on the data tha
 
 ![CleanShot-2025-12-07-at-23.32.212x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-12/einojdperysjkoigmlfz)
 
-👉 https://openrouter.ai/state-of-ai
+👉 [https://openrouter.ai/state-of-ai](https://openrouter.ai/state-of-ai)
 
 If you prefer pdf, https://openrouter.ai/assets/State-of-AI.pdf

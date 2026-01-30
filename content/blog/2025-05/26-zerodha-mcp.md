@@ -19,7 +19,7 @@ Here is a quick demo by them
 https://mcp.kite.trade/sse
 ```
 ### References
-- https://zerodha.com/z-connect/featured/connect-your-zerodha-account-to-ai-assistants-with-kite-mcp
-- https://www.youtube.com/watch?v=dA6IgCdg6tE
+- [https://zerodha.com/z-connect/featured/connect-your-zerodha-account-to-ai-assistants-with-kite-mcp](https://zerodha.com/z-connect/featured/connect-your-zerodha-account-to-ai-assistants-with-kite-mcp)
+- [https://www.youtube.com/watch?v=dA6IgCdg6tE](https://www.youtube.com/watch?v=dA6IgCdg6tE)
 
 Happy building apps!

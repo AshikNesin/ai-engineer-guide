@@ -25,4 +25,4 @@ This is a good lesson that you should not be using a random MCP.
 And even for the official ones, it is recommended to use explicit versioning for anything that is mission critical.
 
 ## Reference
-- https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft
+- [https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft](https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft)

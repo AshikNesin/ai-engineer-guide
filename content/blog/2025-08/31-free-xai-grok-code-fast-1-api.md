@@ -25,7 +25,7 @@ Once you have the key, you can set the base URL and API key in an SDK that suppo
 
 | Setting   | Value                               | Notes                                               |
 |-----------|-------------------------------------|-----------------------------------------------------|
-| baseURL   | `https://ai-gateway.vercel.sh/v1`   | Use this as the API base URL                        |
+| baseURL   | [https://ai-gateway.vercel.sh/v1](https://ai-gateway.vercel.sh/v1)   | Use this as the API base URL                        |
 | apiKey    | `$AI_GATEWAY_API_KEY`               | Replace `AI_GATEWAY_API_KEY` with your actual key   |
 
 ## Example
@@ -69,6 +69,6 @@ response = client.chat.completions.create(
 ```
 
 ## Reference
-https://docs.x.ai/docs/models/grok-code-fast-1
+[https://docs.x.ai/docs/models/grok-code-fast-1](https://docs.x.ai/docs/models/grok-code-fast-1)
 
 Happy building-with AI!

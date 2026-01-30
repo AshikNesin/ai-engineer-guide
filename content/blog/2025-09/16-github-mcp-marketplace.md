@@ -22,6 +22,6 @@ VS Code might have first-class support for installing MCP powered by this market
 ![2025-09-16-at-23.31.012x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/aw4ny1gkbtygyhw4d5sb)
 
 ## Reference
-https://x.com/kentcdodds/status/1968000512294531292
+[https://x.com/kentcdodds/status/1968000512294531292](https://x.com/kentcdodds/status/1968000512294531292)
 
 Happy using MCPs!

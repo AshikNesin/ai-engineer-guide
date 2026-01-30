@@ -15,4 +15,4 @@ Merriam-Webster has chosed [**Slop**](https://www.merriam-webster.com/dictionary
 It's something that was created for the purpose of engagement without human effort (or very less effort). 
 
 ## Reference
-https://www.merriam-webster.com/wordplay/word-of-the-year
+[https://www.merriam-webster.com/wordplay/word-of-the-year](https://www.merriam-webster.com/wordplay/word-of-the-year)

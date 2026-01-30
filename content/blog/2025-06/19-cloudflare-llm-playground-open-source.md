@@ -20,8 +20,8 @@ It takes care of lot of things out of box:
 Just a simple UI that does the job really well 👇
 ![2025-06-19 at 23.26.19@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/2025-06-19-at-23.26.19-at-2x.png)
 ## Source Code
-- https://github.com/cloudflare/ai/tree/main/playground/ai
+- [https://github.com/cloudflare/ai/tree/main/playground/ai](https://github.com/cloudflare/ai/tree/main/playground/ai)
 ## References
-- https://blog.cloudflare.com/connect-any-react-application-to-an-mcp-server-in-three-lines-of-code/
+- [https://blog.cloudflare.com/connect-any-react-application-to-an-mcp-server-in-three-lines-of-code/](https://blog.cloudflare.com/connect-any-react-application-to-an-mcp-server-in-three-lines-of-code/)
 
 Happy building apps!

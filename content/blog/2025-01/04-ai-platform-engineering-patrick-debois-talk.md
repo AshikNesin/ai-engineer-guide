@@ -9,5 +9,5 @@ url: blog/ai-platform-engineering-patrick-debois-talk
 via_url: https://www.youtube.com/watch?v=5qNXdLbEdew&ab_channel=AIEngineer
 draft: true
 ---
-https://www.youtube.com/watch?v=sPXwz4DWu0o&ab_channel=PatrickDebois
+[https://www.youtube.com/watch?v=sPXwz4DWu0o&ab_channel=PatrickDebois](https://www.youtube.com/watch?v=sPXwz4DWu0o&ab_channel=PatrickDebois)
 

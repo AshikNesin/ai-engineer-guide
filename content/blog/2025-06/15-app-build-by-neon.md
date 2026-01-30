@@ -17,7 +17,7 @@ I haven't played around with it yet but it looks like a good reference if you're
 
 And their blog post covers high level design as well 👇
 
-https://www.app.build/blog/app-build-open-source-ai-agent
+[https://www.app.build/blog/app-build-open-source-ai-agent](https://www.app.build/blog/app-build-open-source-ai-agent)
 
 ## Will I use this?
 I see this as a push from them with the goal of making people other Neon products like database. There is nothing wrong in it. 

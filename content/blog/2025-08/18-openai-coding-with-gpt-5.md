@@ -85,4 +85,4 @@ example:
  ```
 
 ## Reference
-- https://cdn.openai.com/API/docs/gpt-5-for-coding-cheatsheet.pdf
+- [https://cdn.openai.com/API/docs/gpt-5-for-coding-cheatsheet.pdf](https://cdn.openai.com/API/docs/gpt-5-for-coding-cheatsheet.pdf)

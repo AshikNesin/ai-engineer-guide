@@ -32,4 +32,4 @@ curl https://api.anthropic.com/v1/messages \
 Unlike OpenAI, Anthropic messages API does not have support for "system" role in input messages. We need to send them seperately under "system"
 
 ## Reference
-https://platform.claude.com/docs/en/api/messages/create
+[https://platform.claude.com/docs/en/api/messages/create](https://platform.claude.com/docs/en/api/messages/create)

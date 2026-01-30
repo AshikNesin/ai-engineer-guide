@@ -13,7 +13,7 @@ Another day, another agentic cli 😅
 
 GitHub Copilot has released their coding agent like Claude Code in public beta.
 
-👉 https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/
+👉 [https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/](https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/)
 
 ![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-09/eau8iwrxplngva8n8q69)
 

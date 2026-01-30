@@ -59,7 +59,7 @@ export ANTHROPIC_MODEL='us.anthropic.claude-opus-4-20250514-v1:0'
 export ANTHROPIC_SMALL_FAST_MODEL='us.anthropic.claude-3-5-haiku-20241022-v1:0'
 ```
 ## References
-- https://docs.anthropic.com/en/docs/claude-code/amazon-bedrock
-- https://community.aws/content/2tXkZKrZzlrlu0KfH8gST5Dkppq/claude-code-on-amazon-bedrock-quick-setup-guide
+- [https://docs.anthropic.com/en/docs/claude-code/amazon-bedrock](https://docs.anthropic.com/en/docs/claude-code/amazon-bedrock)
+- [https://community.aws/content/2tXkZKrZzlrlu0KfH8gST5Dkppq/claude-code-on-amazon-bedrock-quick-setup-guide](https://community.aws/content/2tXkZKrZzlrlu0KfH8gST5Dkppq/claude-code-on-amazon-bedrock-quick-setup-guide)
 
 Happy writing codes!

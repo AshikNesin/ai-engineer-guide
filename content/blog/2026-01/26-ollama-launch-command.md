@@ -40,4 +40,4 @@ ollama launch opencode --config
 ```
 
 ## Reference
-https://ollama.com/blog/launch
+[https://ollama.com/blog/launch](https://ollama.com/blog/launch)

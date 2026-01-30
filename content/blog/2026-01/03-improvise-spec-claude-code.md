@@ -27,4 +27,4 @@ Here's a video by Prompt Engineering where uses this feature to build a text to 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WHsRYkwR_YY?si=6uWFgHSECvcoCCxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Reference
-https://x.com/trq212/status/2005315275026260309
+[https://x.com/trq212/status/2005315275026260309](https://x.com/trq212/status/2005315275026260309)

@@ -15,7 +15,7 @@ It covers wide range of topics like these 👇
 
 ![2025-10-11-at-23.54.172x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-10/mgaebr7ojjfb6lkwnocx)
 
-👉 https://docs.google.com/document/u/0/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/mobilebasic?pli=1#ftnt_ref1
+👉 [https://docs.google.com/document/u/0/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/mobilebasic?pli=1#ftnt_ref1](https://docs.google.com/document/u/0/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/mobilebasic?pli=1#ftnt_ref1)
 
 I'm yet to read it. Once done, I'll update my feedback here in this post.
 

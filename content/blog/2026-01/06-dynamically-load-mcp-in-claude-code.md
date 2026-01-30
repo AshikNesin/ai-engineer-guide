@@ -24,6 +24,6 @@ And just use `claude` command.
 You can also check the token usage using `/context` command to see the token usage before and after as well.
 
 ## Reference
-https://github.com/anthropics/claude-code/issues/12836
+[https://github.com/anthropics/claude-code/issues/12836](https://github.com/anthropics/claude-code/issues/12836)
 
-https://x.com/sdrzn/status/2005660540576928074
+[https://x.com/sdrzn/status/2005660540576928074](https://x.com/sdrzn/status/2005660540576928074)

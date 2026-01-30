@@ -17,7 +17,7 @@ Written in Python and MIT licensed
 Here is a quick peak of what you can learn from it 👇
 ![CleanShot-2025-11-11-at-23.36.482x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2025-11/a5yipfifz9pmuyj0rfwo)
 
-👉 https://github.com/MiniMax-AI/Mini-Agent
+👉 [https://github.com/MiniMax-AI/Mini-Agent](https://github.com/MiniMax-AI/Mini-Agent)
 
 AICodeKing has a really good video about it which you might find interesting
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FJrq3cvh6tU?si=MJ_5HCHREKDQmMoB&amp;start=391" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

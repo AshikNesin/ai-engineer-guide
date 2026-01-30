@@ -20,6 +20,6 @@ At the moment, it has support for the following:
 
 To be honest, these features are pretty simple one and I believe it is more of like baseline rather than a solid state.
 
-👉 https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code
+👉 [https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)
 
 Happy building apps!

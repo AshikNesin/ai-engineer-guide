@@ -19,4 +19,4 @@ It scores pretty good in benchmarks as well.
 It is available in [Gemini API](https://ai.google.dev/gemini-api/docs/models#gemini-3-flash) (Google AI Studio), Vertex AI, etc
 
 ## Reference
-https://blog.google/products/gemini/gemini-3-flash/
+[https://blog.google/products/gemini/gemini-3-flash/](https://blog.google/products/gemini/gemini-3-flash/)

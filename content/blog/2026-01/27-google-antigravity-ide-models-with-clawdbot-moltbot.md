@@ -35,4 +35,4 @@ clawdbot gateway restart
 >Note: Depending on your alias, replace clawdbot with moltbot
 
 ## Reference
-https://docs.molt.bot/concepts/model-providers#google-vertex-/-antigravity-/-gemini-cli
+[https://docs.molt.bot/concepts/model-providers#google-vertex-/-antigravity-/-gemini-cli](https://docs.molt.bot/concepts/model-providers#google-vertex-/-antigravity-/-gemini-cli)

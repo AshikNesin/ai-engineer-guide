@@ -28,9 +28,9 @@ And much more.
 
 And the best part is, for **~$100** in cost (~4 hours on an 8XH100 node) you should be able to replicate it 🤯
 
-👉 https://github.com/karpathy/nanochat/discussions/1
+👉 [https://github.com/karpathy/nanochat/discussions/1](https://github.com/karpathy/nanochat/discussions/1)
 
 ## Reference
-https://x.com/karpathy/status/1977755427569111362
+[https://x.com/karpathy/status/1977755427569111362](https://x.com/karpathy/status/1977755427569111362)
 
 Happy building LLM!
