@@ -16,11 +16,7 @@ Even in GitHub it takes more time than that.
 
 I usually use this tool to have a look at how others are using particular feature/method from library. 
 
-Now they support Remote MCP which can be accessed here
-
-```
-https://mcp.grep.app
-```
+Now they support Remote MCP which can be accessed [here](https://mcp.grep.app)
 
 ## How to setup?
 
