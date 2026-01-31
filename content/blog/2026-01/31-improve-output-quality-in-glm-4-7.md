@@ -14,7 +14,7 @@ In terms of cost as well, it is pretty cost effective especially with their [GLM
 
 Here are some tips on how to get most out of the model shared by Cerebras team
 
-{{< video "https://video.twimg.com/amplify_video/2017309057263312896/vid/avc1/3840x2160/rhbT4n1Fi2tPBCK6.mp4" >}}
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">GLM 4.7 is one of the strongest open-source coding models available—but most developers aren&#39;t prompting it correctly.<br><br>We put together 10 rules to help you get the most out of it:<br><br>- Front-load instructions (it has a strong recency bias)<br>- Use firm language: &quot;must&quot; and… <a href="https://t.co/YFwjkumWVi">pic.twitter.com/YFwjkumWVi</a></p>&mdash; Cerebras (@cerebras) <a href="https://twitter.com/cerebras/status/2017319319697580414?ref_src=twsrc%5Etfw">January 30, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Reference
 - https://x.com/cerebras/status/2017319319697580414
