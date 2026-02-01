@@ -819,3 +819,9 @@ command = "hugo --gc --minify --config hugo.toml"
   from = "/rss"
   to = "/feed.xml"
   status = 200
+
+[[redirects]]
+  from = "/blog/anthropic-claude-opus-4.5-opencode-antigravity"
+  to = "/blog/anthropic-claude-opus-4-5-opencode-antigravity"
+  status = 301
+  force = true
