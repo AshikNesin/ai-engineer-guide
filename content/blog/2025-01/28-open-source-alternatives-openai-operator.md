@@ -29,8 +29,8 @@ You can learn about how they're prompting and interacting with stagehand+Browser
 
 | **Resource** | **Link** |
 | --- | --- |
-| App | [https://operator.browserbase.com/](https://operator.browserbase.com/) |
-| Source Code | [https://github.com/browserbase/open-operator](https://github.com/browserbase/open-operator) |
+| App | [Open Operator](https://operator.browserbase.com/) |
+| Source Code | [browserbase/open-operator](https://github.com/browserbase/open-operator) |
 | License | stagehand - MIT, OpenOperator - MIT |
 Here is a quick demo of the app by [Paul Klein IV](https://x.com/pk_iv) (co-founder of Browserbase)
 
