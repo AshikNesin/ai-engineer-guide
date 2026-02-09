@@ -15,7 +15,7 @@ If you want to try out [OpenClaw](https://openclaw.ai/) without having to worry 
 Just clone the repo
 
 ```shell
-git clone https://docs.openclaw.ai/install/docker
+git clone https://github.com/openclaw/openclaw
 ```
 
 In the root of it, you can see [./docker-setup.sh](https://github.com/openclaw/openclaw/blob/main/docker-setup.sh) file. Just run that file.
