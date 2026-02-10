@@ -1,14 +1,17 @@
 ---
 title: How to Estimate LLM Costs Instantly with llm-pricing.com
-date: 2025-06-18
-description: 
+url: blog/llm-pricing-calculator
 tags:
   - bookmark
   - tools
   - simon-willison
-url: blog/llm-pricing-calculator
+status: published
+date: 2025-06-18T00:00:00.000Z
+description: null
+qblog_id: 3fb9c379-99ff-43bd-b6a8-7abaf69dd450
 via_url: https://simonwillison.net/2025/Apr/10/llm-pricing-calculator/
 ---
+
 There are so many LLM pricing calculators out there.
 
 However, most are designed to upsell their products or require too much configuration to get pricing for your usage.
