@@ -1,13 +1,16 @@
 ---
 title: How to use OpenAI Models for Free with GitHub Models
-date: 2025-08-13
-description: 
+url: blog/openai-models-free-github
 tags:
   - github-models
-  - OpenAI
-url: blog/openai-models-free-github
-via_url:
+  - openai
+status: published
+date: 2025-08-13T00:00:00.000Z
+description: null
+qblog_id: f12f1610-e596-422c-b9d2-72428a67cbf4
+via_url: null
 ---
+
 GitHub provides free access to OpenAI and other AI models for you to play around with them.
 
 Although it is heavily [rate limited](https://docs.github.com/en/github-models/use-github-models/prototyping-with-ai-models#rate-limits) it's a good start if you want to play around in LLM models without having to spend some money.
