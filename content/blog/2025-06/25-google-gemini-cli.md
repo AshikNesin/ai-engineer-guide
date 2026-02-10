@@ -1,12 +1,15 @@
 ---
 title: Gemini CLI - Open Source AI Agent from Google
-date: 2025-06-25
-description: 
+url: blog/google-gemini-cli
 tags:
   - bookmark
   - gemini-cli
-url: blog/google-gemini-cli
+status: published
+date: 2025-06-25T00:00:00.000Z
+description: null
+qblog_id: bf477bc4-a887-4070-9980-d9112bbe8975
 ---
+
 Another day, Another Agent CLI 😜
 
 This time it is from Google and it is completely open source similar to [OpenAI Codex](https://github.com/openai/codex)
