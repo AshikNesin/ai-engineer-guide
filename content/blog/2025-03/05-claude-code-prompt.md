@@ -1,15 +1,18 @@
 ---
 title: "Anthropic Claude Code CLI: Prompts & Tool Definitions"
-date: 2025-03-05
-description: 
+url: blog/claude-code-prompt
 tags:
   - system-prompt
   - claude-code
   - anthropic
   - travis-fischer
-url: blog/claude-code-prompt
+status: published
+date: 2025-03-05T00:00:00.000Z
+description: null
+qblog_id: e0877e80-f404-4900-9956-736d93fada27
 via_url: https://x.com/transitive_bs/status/1894533303644164521
 ---
+
 Anthropic has recently released [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) - an agentic coding tool (interactive CLI)
 
 You can play around it by installing it in your machine
