@@ -1,10 +1,12 @@
 ---
 title: How to Extract Only Reasoning Context in DeepSeek-R1
-date: 2025-01-27
-description: 
-tags: 
 url: blog/deepseek-r1-reasoning-context
+status: published
+date: 2025-01-27T00:00:00.000Z
+description: null
+qblog_id: 40180006-a637-4995-90ab-5663912ad5eb
 ---
+
 Deepseek R1 is the talk of the town lately. It's pretty much on par with OpenAI's o1 model. 
 
 These models are called reasoning model. It does CoT (Chain of Thoughts) under the hood.
