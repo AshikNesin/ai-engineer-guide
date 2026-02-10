@@ -1,12 +1,15 @@
 ---
 title: One-Click MCP Install with Cursor Deeplinks
-date: 2025-06-05
-description: 
+url: blog/cursor-mcp-deeplink
 tags:
   - mcp
   - cursor
-url: blog/cursor-mcp-deeplink
+status: published
+date: 2025-06-05T00:00:00.000Z
+description: null
+qblog_id: 6ff833a6-ded5-4b64-a159-8fd354cd1b97
 ---
+
 [Cursor](https://cursor.com) now has support for MCP installation Deeplink. 
 
 **What are deeplink?**
