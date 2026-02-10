@@ -1,12 +1,15 @@
 ---
 title: How to use Remote MCP with Claude Code
-date: 2025-06-21
-description: 
+url: blog/claude-code-remote-mcp
 tags:
   - bookmark
   - claude-code
-url: blog/claude-code-remote-mcp
+status: published
+date: 2025-06-21T00:00:00.000Z
+description: null
+qblog_id: 341a4c26-1770-4eab-9617-04e5f0941389
 ---
+
 By now, almost everyone who is using AI for code generation should be aware of [**Claude Code** ](https://www.anthropic.com/claude-code)— an awesome CLI-based agentic code generation tool.
 
 I’ve tried it a couple of times recently and I’m really impressed with the results 🙌
