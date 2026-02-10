@@ -1,13 +1,16 @@
 ---
 title: Cluely System Prompt Leak
-date: 2025-06-23
-description: 
+url: blog/cluely-system-prompt-leak
 tags:
   - bookmark
   - prompt-leak
   - system-prompt
-url: blog/cluely-system-prompt-leak
+status: published
+date: 2025-06-23T00:00:00.000Z
+description: null
+qblog_id: 77b0c34b-6430-4d9a-a6a0-7d5af8b3e0b3
 ---
+
 I came across this prompt leak of [Cluely](https://cluely.com/) by Jack Cable (apparently it is exposed in their desktop source code)
 
 Here is the system prompt for both default and also enterprise versions
