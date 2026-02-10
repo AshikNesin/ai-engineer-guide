@@ -1,11 +1,13 @@
 ---
 title: How to build app like Loveable
-date: 2025-08-14
-description: 
-tags: 
 url: blog/open-lovable
-via_url:
+status: published
+date: 2025-08-14T00:00:00.000Z
+description: null
+qblog_id: d62b7a18-b0c5-4af4-93a6-6074118fa20d
+via_url: null
 ---
+
 [Firecrawl](https://www.firecrawl.dev/) team has released **minimal open source** version of  [Lovable.dev](https://lovable.dev/)  using which you can use to build React App.
 
 👉 https://github.com/mendableai/open-lovable
