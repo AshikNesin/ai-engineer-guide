@@ -1,13 +1,16 @@
 ---
 title: How to Search GitHub Public Repo with Grep MCP
-date: 2025-07-25
-description: 
-tags:
-  - TIL
-  - grep-app
 url: blog/grep-app-mcp
+tags:
+  - til
+  - grep-app
+status: published
+date: 2025-07-25T00:00:00.000Z
+description: null
+qblog_id: 445c0fb6-ef9c-4a5f-85c0-4764fdb21817
 via_url: https://vercel.com/blog/grep-a-million-github-repositories-via-mcp
 ---
+
 [Grep](https://grep.app/) allows you to search **code** across a million GitHub public repo. 
 
 And the search is really fast. You get the result within a second.
