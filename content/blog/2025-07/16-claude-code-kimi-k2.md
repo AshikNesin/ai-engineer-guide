@@ -1,13 +1,16 @@
 ---
 title: How to use Claude Code with Kimi K2
-date: 2025-07-16
-description: 
+url: blog/claude-code-kimi-k2
 tags:
   - claude-code
   - kimi-k2
-url: blog/claude-code-kimi-k2
-via_url:
+status: published
+date: 2025-07-16T00:00:00.000Z
+description: null
+qblog_id: bd89c181-5434-45df-b0f8-9a510097ec1e
+via_url: null
 ---
+
 [Kimi K2](https://moonshotai.github.io/Kimi-K2/) model which was released recently by Moon shot AI recently had Deepseak moment.
 
 It's the open source non-thinking model that is scoring good in online benchmarks
