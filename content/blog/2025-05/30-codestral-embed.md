@@ -1,15 +1,18 @@
 ---
 title: Code Embeddings with Codestral Embed by Mistral
-date: 2025-05-30
-description: 
+url: blog/codestral-embed
 tags:
   - bookmark
   - mistral
   - codestral-embed
   - embedding
-url: blog/codestral-embed
-via_url:
+status: published
+date: 2025-05-30T00:00:00.000Z
+description: null
+qblog_id: 7a9758c6-7b18-4630-8fb4-552ed59c6d31
+via_url: null
 ---
+
 Mistral has recently launched [Codestral Embed](https://mistral.ai/news/codestral-embed) which they've trained specifically for code.
 
 They claim 👇
