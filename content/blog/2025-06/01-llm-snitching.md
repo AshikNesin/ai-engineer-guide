@@ -1,11 +1,13 @@
 ---
 title: LLM can snitch you - if you tell it to do so
-date: 2025-06-01
-description: 
-tags: 
 url: blog/llm-snitching
-via_url:
+status: published
+date: 2025-06-01T00:00:00.000Z
+description: null
+qblog_id: 8c7c6feb-128e-4b7b-b472-9c3b64c69070
+via_url: null
 ---
+
 I came across a fun benchmark by [Theo Browne](https://t3.gg/) where he shows tries to see if a AI model can **rat you** out to authorities if you told it to **take initiative** in enforcing its morals values while exposing the evidence of wrongdoing.
 
 👉 https://simonwillison.net/2025/May/31/snitchbench-with-llm/
