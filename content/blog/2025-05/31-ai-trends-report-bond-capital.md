@@ -1,13 +1,16 @@
 ---
 title: AI Trends report by BOND Capital
-date: 2025-05-31
-description: 
+url: blog/ai-trends-report-bond-capital
 tags:
   - bookmark
   - report
-url: blog/ai-trends-report-bond-capital
-via_url:
+status: published
+date: 2025-05-31T00:00:00.000Z
+description: null
+qblog_id: eccb1a1d-992f-4d29-a19b-65e1033d6cc5
+via_url: null
 ---
+
 I came across AI Trends report (state of AI) by by BOND Capital. 340 slides  🤯 
 
 👉 https://www.bondcap.com/reports/tai
