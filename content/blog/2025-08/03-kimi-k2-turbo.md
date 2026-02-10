@@ -1,12 +1,15 @@
 ---
 title: Moonshot AI's kimi-k2-turbo
-date: 2025-08-03
-description: 
+url: blog/kimi-k2-turbo
 tags:
   - kimi-k2
-url: blog/kimi-k2-turbo
+status: published
+date: 2025-08-03T00:00:00.000Z
+description: null
+qblog_id: b2defa91-f746-46b1-9735-73b6e5e24149
 via_url: https://x.com/kimi_moonshot/status/1951168907131355598
 ---
+
 Moonshot AI has announced faster inference for Kimi K2 model in their platform.
 
 You get the same model. Same context. 
