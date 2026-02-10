@@ -1,14 +1,17 @@
 ---
 title: How to use Claude Code with Qwen3 Coder
-date: 2025-07-24
-description: 
+url: blog/claude-code-qwen3-coder
 tags:
-  - TIL
+  - til
   - claude-code
   - qwen3-coder
-url: blog/claude-code-qwen3-coder
-via_url:
+status: published
+date: 2025-07-24T00:00:00.000Z
+description: null
+qblog_id: ab0b854a-5ed5-4315-ad1f-8915d679aed1
+via_url: null
 ---
+
 Alibaba team has recently released [Qwen3-Coder](https://qwenlm.github.io/blog/qwen3-coder/) which claims to do better in coding. Based on the benchmark it is in the range of Claude 4 in term of accuracy.
 
 Let's see how to use this model with Claude Code.
