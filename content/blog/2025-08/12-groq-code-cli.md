@@ -1,13 +1,16 @@
 ---
 title: Groq Code CLI - Boilerplate for building CLI Coding Agent
-date: 2025-08-12
-description: 
+url: blog/groq-code-cli
 tags:
   - groq-code
   - cli-agent
-url: blog/groq-code-cli
-via_url:
+status: published
+date: 2025-08-12T00:00:00.000Z
+description: null
+qblog_id: 5add9ff0-cbed-4aa3-a1f4-28496d71eed2
+via_url: null
 ---
+
 CLI Agents are the talk of the town. Everyone is building and releasing one 😅
 
 Recently, Groq has released their own CLI coding agent.
