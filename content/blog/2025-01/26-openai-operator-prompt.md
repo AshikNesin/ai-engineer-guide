@@ -1,15 +1,18 @@
 ---
 title: OpenAI Operator System Prompt
-date: 2025-01-26
-description: 
-tags:
-  - OpenAI
-  - system-prompt
-  - OpenAI-Operator
 url: blog/openai-operator-prompt
+tags:
+  - openai
+  - system-prompt
+  - openai-operator
+status: published
+date: 2025-01-26T00:00:00.000Z
+description: null
+qblog_id: bf5d360e-8000-49e5-a865-8c5bc8f8df14
 aliases:
   - blog/26-openai-operator-prompt
 ---
+
 Recently I came across the [tweet](https://x.com/wunderwuzzi23/status/1882700348030324957) in which [Johann Rehberger](https://x.com/wunderwuzzi23) has extracted the system prompt & setting prompt of OpenAI's latest feature [Operator](https://openai.com/index/introducing-operator/)
 
 Operator is a agent that has access to remote browser and can perform action for you which uses [Computer-Using Agent](https://openai.com/index/computer-using-agent/) under the hood.
