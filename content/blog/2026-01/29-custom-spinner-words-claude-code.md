@@ -5,6 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-01-29T00:00:00.000Z
+qblog_id: 07567795-1309-444d-8283-100d943d811a
 ---
 
 When the AI inference is happening. Claude code usually shows some sort of random words verbs.
