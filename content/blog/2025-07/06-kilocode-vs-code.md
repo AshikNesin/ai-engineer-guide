@@ -1,13 +1,16 @@
 ---
 title: Kilocode - Open Source Alternatives to Cursor & Windsurf
-date: 2025-07-06
-description: 
+url: blog/kilocode-vs-code
 tags:
   - tools
   - kilocode
-url: blog/kilocode-vs-code
-via_url:
+status: published
+date: 2025-07-06T00:00:00.000Z
+description: null
+qblog_id: 33e29571-a9db-4fbd-91b2-1295aed83498
+via_url: null
 ---
+
 AI models are really good at coding and it is one of the most adopted use case in recent years.
 
 It started with simple auto completion but now it is full blown agentic app where you just need to say "what needs to be done" and it does the majority of the work.
