@@ -4,7 +4,8 @@ url: blog/show-context-window-information-in-claude-code-statusline
 tags:
   - claude-code
 status: published
-date: 2025-12-13
+date: 2025-12-13T00:00:00.000Z
+qblog_id: 79d7984f-f767-452c-88e3-9b2a41951b46
 ---
 
 Claude code now officially supports showing context window information like percentage of usage in status line.
