@@ -1,13 +1,16 @@
 ---
 title: Using OpenAI Webhooks to Handle Long-Running Tasks Efficiently
-date: 2025-06-28
-description: 
-tags:
-  - OpenAI
-  - TIL
 url: blog/openai-webhooks
+tags:
+  - openai
+  - til
+status: published
+date: 2025-06-28T00:00:00.000Z
+description: null
+qblog_id: c7bfc5b9-3703-4b62-9c1b-27070590c4bf
 via_url: https://x.com/openaidevs/status/1938286704856863162
 ---
+
 Along with [Deep Research API](https://aiengineerguide.com/blog/openai-deep-research-api/) OpenAI has released support for [webhooks](https://platform.openai.com/docs/guides/webhooks) for their API endpoint.
 
 So for the use case that does not require you wait until the response is completed or the ones that takes so much time to complete like Deep Research API. 
