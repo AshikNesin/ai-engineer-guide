@@ -1,13 +1,16 @@
 ---
 title: Qwen Code CLI - Free Tier
-date: 2025-08-11
-description: 
+url: blog/qwen-code-cli-free-tier
 tags:
   - qwen-code
   - cli-agent
-url: blog/qwen-code-cli-free-tier
-via_url:
+status: published
+date: 2025-08-11T00:00:00.000Z
+description: null
+qblog_id: 808975c0-5620-4df1-8e69-24a1c33380d5
+via_url: null
 ---
+
 [Qwen Code](https://github.com/QwenLM/qwen-code) is a agentic/coding CLI. It is a fork on Gemini CLI with[ Qwen Coder LLM](https://github.com/QwenLM/Qwen3-Coder) model.
 
 Currently they provide generous free tier if you login with Qwen OAuth (qwen.ai account) 👇
