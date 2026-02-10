@@ -1,11 +1,13 @@
 ---
-title: "How to handle model fallback in Mastra.ai"
+title: How to handle model fallback in Mastra.ai
 url: blog/model-fallback-in-mastra-ai
+tags:
+  - mastra-ai
 status: published
-date: 2025-10-02
-tags: 
-- mastra-ai
+date: 2025-10-02T00:00:00.000Z
+qblog_id: 30f1b2e9-f658-4d05-8b80-3d38335a7a9b
 ---
+
 [Mastra.ai](https://mastra.ai) is a TypeScript based agent framework which has lot of features that you need to build an AI app with with out making you learn so many framework specific thing like in case of Langchain.
 
 Recently, they've released model fallback feature which is really useful for production scale application.
