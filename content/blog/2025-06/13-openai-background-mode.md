@@ -1,12 +1,15 @@
 ---
 title: Handling Async Inference with OpenAI's API Background mode
-date: 2025-06-13
-description: 
-tags:
-  - OpenAI
 url: blog/openai-background-mode
-via_url:
+tags:
+  - openai
+status: published
+date: 2025-06-13T00:00:00.000Z
+description: null
+qblog_id: a5470836-f099-41cb-8ea1-7875406056f5
+via_url: null
 ---
+
 Ever hit an API timeout while waiting for your AI model to finish? 🤔
 
 Well, most of us would when we've to perform complex task like code generation (or when API Agents) and you don't have control over infra to change your settings.
