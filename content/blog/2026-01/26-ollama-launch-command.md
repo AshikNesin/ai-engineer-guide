@@ -1,12 +1,14 @@
 ---
-title: "Use Ollama in Claude Code with One Simple Command"
+title: Use Ollama in Claude Code with One Simple Command
 url: blog/ollama-launch-command
+tags:
+  - ollama
+  - claude-code
 status: published
-date: 2026-01-26
-tags: 
-- ollama
-- claude-code
+date: 2026-01-26T00:00:00.000Z
+qblog_id: a9db610b-da87-4661-800f-40e23b8df3f9
 ---
+
 Ollama now has support for `launch` command using which you can use your local/cloud Ollama models with your AI agents like Claude Code, Codex, OpenCode, etc.
 
 ## How to get started?
