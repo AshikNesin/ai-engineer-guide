@@ -1,13 +1,16 @@
 ---
 title: How to use OpenAI’s gpt-oss models in Groq
-date: 2025-08-06
-description: 
+url: blog/groq-openai-gpt-oss
 tags:
   - gpt-oss
   - groq
-url: blog/groq-openai-gpt-oss
-via_url:
+status: published
+date: 2025-08-06T00:00:00.000Z
+description: null
+qblog_id: 4bf0e42e-bec9-4cbf-b028-909870d7497b
+via_url: null
 ---
+
 OpenAI's open model LLM [gpt-oss](https://openai.com/index/introducing-gpt-oss/) are available in [Groq](https://groq.com/)
 
 Both the 20b and 120b parameters are supported as well.
