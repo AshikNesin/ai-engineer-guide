@@ -1,13 +1,16 @@
 ---
 title: Notes on OpenAI GPT 5
-date: 2025-08-07
-description: 
+url: blog/openai-gpt-5
 tags:
   - gpt-5
-  - OpenAI
-url: blog/openai-gpt-5
-via_url:
+  - openai
+status: published
+date: 2025-08-07T00:00:00.000Z
+description: null
+qblog_id: 5aa659bc-ab84-4b1a-bf0e-cbf8a686af84
+via_url: null
 ---
+
 OpenAI has released much hyped [gpt-5](https://openai.com/index/introducing-gpt-5-for-developers/)
 
 From the looks of it, it is going to be a really power model with better pricing.
