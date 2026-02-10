@@ -1,13 +1,15 @@
 ---
 title: Cursor Agent CLI
-date: 2025-08-09
-description: 
+url: blog/cursor-agent-cli
 tags:
   - cursor
   - cli-agent
   - cursor-cli-agent
-url: blog/cursor-agent-cli
-via_url:
+status: published
+date: 2025-08-09T00:00:00.000Z
+description: null
+qblog_id: 1a62abdc-74c7-480d-afba-add5ae6d95f8
+via_url: null
 ---
 
 With the love that that Claude Code is getting among developers, everyone in the AI space wants to get capitalize on the current interest.
