@@ -1,14 +1,17 @@
 ---
 title: Reducing AI Hallucinations with Context7
-date: 2025-07-23
-description: 
+url: blog/reducing-ai-hallucinations-with-context7
 tags:
-  - TIL
+  - til
   - context7
   - hallucination
-url: blog/reducing-ai-hallucinations-with-context7
-via_url:
+status: published
+date: 2025-07-23T00:00:00.000Z
+description: null
+qblog_id: 20939bb1-cef0-49c7-903a-42b4da5ab657
+via_url: null
 ---
+
 LLM have cut off date which means it might not have up to date information about recent things like documentation which leads to hallucinations (AI generating something on it's own).
 
 Once of the way to reduce the hallucination, is to pass the information to LLM when generating something.
