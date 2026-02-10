@@ -1,12 +1,15 @@
 ---
 title: Extract Clean Content from Web Pages Using Defuddle
-date: 2025-05-28
-description: 
+url: blog/extract-clean-content-with-defuddle
 tags:
   - tools
-url: blog/extract-clean-content-with-defuddle
+status: published
+date: 2025-05-28T00:00:00.000Z
+description: null
+qblog_id: 9e994238-4b01-468b-8730-443be9a46aa5
 via_url: https://github.com/kepano/defuddle?tab=readme-ov-file
 ---
+
 When building a RAG application or adding real time context to LLM we might need to extract main content from the web page.
 
 However, web pages usually content lots of noises like header, side bar, footer, etc
