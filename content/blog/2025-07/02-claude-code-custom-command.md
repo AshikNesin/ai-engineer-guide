@@ -1,13 +1,16 @@
 ---
 title: How to Add Custom Slash Commands in Claude Code
-date: 2025-07-02
-description: 
-tags:
-  - TIL
-  - claude-code
 url: blog/claude-code-custom-command
+tags:
+  - til
+  - claude-code
+status: published
+date: 2025-07-02T00:00:00.000Z
+description: null
+qblog_id: bb5fc496-6ce4-4046-b66b-4508de4d524a
 via_url: https://x.com/alexalbert__/status/1940082948445020508
 ---
+
 Claude Code now supports **custom slash commands** 🌟
 
 Basically, you can think of custom slash commands as a common prompts that you use with Claude Code regularly.
