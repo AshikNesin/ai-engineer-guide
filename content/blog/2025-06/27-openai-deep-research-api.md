@@ -1,13 +1,16 @@
 ---
 title: OpenAI Deep Research API
-date: 2025-06-27
-description: 
-tags:
-  - OpenAI
-  - TIL
 url: blog/openai-deep-research-api
+tags:
+  - openai
+  - til
+status: published
+date: 2025-06-27T00:00:00.000Z
+description: null
+qblog_id: a1f810af-5c27-4115-8e68-13427bf02f2d
 via_url: https://x.com/openaidevs/status/1938286704856863162
 ---
+
 OpenAI has recently released [deep research](https://platform.openai.com/docs/guides/deep-research) models as API.
 
 Generally, deep research are most advanced models that is designed to solve more complex problem. It has access to the internet, synthesize the data across websites, you can even bring in your own logic by using MCP servers, run code (using Code Interpreter), etc.
