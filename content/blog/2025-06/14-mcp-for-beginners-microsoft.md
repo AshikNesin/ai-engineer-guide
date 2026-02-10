@@ -1,14 +1,17 @@
 ---
 title: MCP for Beginners tutorials by Microsoft
-date: 2025-06-14
-description: 
+url: blog/mcp-for-beginners-microsoft
 tags:
   - mcp
-  - Microsoft
+  - microsoft
   - bookmark
-url: blog/mcp-for-beginners-microsoft
-via_url:
+status: published
+date: 2025-06-14T00:00:00.000Z
+description: null
+qblog_id: d401aabc-1d39-4350-b408-88fd0e9923cc
+via_url: null
 ---
+
 I came across this really good tutorial by Microsoft about building MCP Servers.
 
 It covers from basics to advanced stuffs like OAuth, Streaming, Security, etc.
