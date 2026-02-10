@@ -1,14 +1,17 @@
 ---
 title: How to use Gemini CLI within Claude Code
-date: 2025-07-27
-description: 
+url: blog/gemini-cli-within-claude-code
 tags:
-  - TIL
+  - til
   - claude-code
   - gemini-cli
-url: blog/gemini-cli-within-claude-code
-via_url:
+status: published
+date: 2025-07-27T00:00:00.000Z
+description: null
+qblog_id: 538e3a97-ec6a-4630-bf1b-4c1ace3fbd4e
+via_url: null
 ---
+
 Gemini CLI is currently free and it has large context window (1 million token context window) but it is not as good as claude code.
 
 But sometime for simple things it does the job really well as long as you prompt it well.
