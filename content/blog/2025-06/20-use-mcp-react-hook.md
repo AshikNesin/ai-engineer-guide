@@ -1,13 +1,16 @@
 ---
 title: use-mcp - A Lightweight React Hook for Integrating with MCP Servers
-date: 2025-06-20
-description: 
+url: blog/use-mcp-react-hook
 tags:
   - bookmark
   - react
-url: blog/use-mcp-react-hook
+status: published
+date: 2025-06-20T00:00:00.000Z
+description: null
+qblog_id: 3e0a1d20-03fa-4823-9d3c-7ae033ce3b2e
 via_url: https://blog.cloudflare.com/connect-any-react-application-to-an-mcp-server-in-three-lines-of-code/
 ---
+
 Along with [LLM Playground](https://playground.ai.cloudflare.com/), Cloudflare has open sourced [use-mcp](https://github.com/modelcontextprotocol/use-mcp) - a lightweight React hook for connecting with remote MCP servers.
 
 This will be useful if you're building a playground for remote MCP servers.
