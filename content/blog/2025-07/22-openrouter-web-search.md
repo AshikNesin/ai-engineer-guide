@@ -1,13 +1,16 @@
 ---
 title: Turn Any LLM into a Web Search Model in OpenRouter
-date: 2025-07-22
-description: 
+url: blog/openrouter-web-search
 tags:
   - openrouter
-  - TIL
-url: blog/openrouter-web-search
-via_url:
+  - til
+status: published
+date: 2025-07-22T00:00:00.000Z
+description: null
+qblog_id: d8eaf27b-a00c-48b5-a61a-18599aa21f97
+via_url: null
 ---
+
 LLM models out of box does not have support for real time data. 
 
 However top AI providers like OpenAI and Anthropic started providing [web search as a tool](/blog/openai-web-search-tool/) using which you can get real time data.
