@@ -1,14 +1,17 @@
 ---
 title: RAG vs Agentic RAG Explained Visually (with Diagram)
-date: 2025-06-30
-description: 
+url: blog/rag-vs-agentic-rag
 tags:
-  - TIL
+  - til
   - bookmark
   - define
-url: blog/rag-vs-agentic-rag
+status: published
+date: 2025-06-30T00:00:00.000Z
+description: null
+qblog_id: e628b04f-882b-488a-b581-54b5474c0a05
 via_url: https://blog.bytebytego.com/p/ep169-rag-vs-agentic-rag
 ---
+
 Back in the days (early 2024-ish 😜), context window of LLM models were very limited like 4k, 8k, etc
 
 In order to do something meaningful, we'll have to give proper context while keeping context window limit in the mind.
