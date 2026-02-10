@@ -1,13 +1,16 @@
 ---
 title: How to use OpenAI’s gpt-oss models in Ollama
-date: 2025-08-05
-description: 
+url: blog/ollama-openai-gpt-oss
 tags:
   - ollama
   - gpt-oss
-url: blog/ollama-openai-gpt-oss
-via_url:
+status: published
+date: 2025-08-05T00:00:00.000Z
+description: null
+qblog_id: b7d557a3-ba58-4e1f-8672-f484184b8649
+via_url: null
 ---
+
 OpenAI has recently released open-weight models under Apache 2.0 license. 
 
 It has better support for **agentic tasks** and **reasoning**.
