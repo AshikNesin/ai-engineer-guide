@@ -1,13 +1,16 @@
 ---
 title: PR Arena - AI Coding Agent Leaderboard
-date: 2025-06-29
-description: 
-tags:
-  - TIL
-  - leaderboard
 url: blog/ai-coding-agent-leaderboard
-via_url:
+tags:
+  - til
+  - leaderboard
+status: published
+date: 2025-06-29T00:00:00.000Z
+description: null
+qblog_id: 59544179-1b22-4e23-bcaf-344f6d110700
+via_url: null
 ---
+
 There are lots of coding agents out there at the moment. 
 
 You just assign a task to it. It'll plan, research, build, test, etc as if a software engineer was doing it (at least for easy to medium level complexity)
