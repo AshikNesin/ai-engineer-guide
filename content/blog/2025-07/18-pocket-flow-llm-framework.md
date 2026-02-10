@@ -1,12 +1,15 @@
 ---
 title: Pocket Flow - 100-line LLM Framework with Zero dependencies
-date: 2025-07-18
-description: 
+url: blog/pocket-flow-llm-framework
 tags:
   - pocket-flow
-url: blog/pocket-flow-llm-framework
-via_url:
+status: published
+date: 2025-07-18T00:00:00.000Z
+description: null
+qblog_id: aa77ffaf-f127-4b40-b17b-1eacf654ef48
+via_url: null
 ---
+
 Like most of us, I started interacting with AI back apps using frameworks like Langchain which had  a very **deep** learning curve.
 
 Back then, it AI models were not powerful or intelligent like what we've today. Even simple task like extracting JSON from a text needed lot of prompt engineering magic 🪄
