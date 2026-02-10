@@ -1,12 +1,15 @@
 ---
 title: How to Optimize OpenAI transcriptions faster and cheaper
-date: 2025-06-26
-description: 
-tags:
-  - OpenAI
 url: blog/optimize-openai-transcriptions
+tags:
+  - openai
+status: published
+date: 2025-06-26T00:00:00.000Z
+description: null
+qblog_id: 97bd6765-89bf-45b9-a6f8-218c274adcd2
 via_url: https://x.com/adriaandotcom/status/1938118285045993584
 ---
+
 I came across this wonderful tip by [George Mandis](https://george.mand.is) where he has covered step by step process on how to do it
 
 ## How does it works?
