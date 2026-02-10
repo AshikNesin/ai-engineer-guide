@@ -1,13 +1,16 @@
 ---
 title: Ollama’s New Desktop App
-date: 2025-08-01
-description: 
+url: blog/ollama-desktop-app
 tags:
   - ollama
   - tools
-url: blog/ollama-desktop-app
-via_url:
+status: published
+date: 2025-08-01T00:00:00.000Z
+description: null
+qblog_id: 4d653c5a-f2ee-44ec-a043-704a7fdb4151
+via_url: null
 ---
+
 [Ollama](https://ollama.com) latest version in MacOS and Windows now supports a GUI app.
 
 So you don't have to play around with only CLI or API 😅
