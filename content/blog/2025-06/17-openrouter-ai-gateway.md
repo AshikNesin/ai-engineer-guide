@@ -1,10 +1,12 @@
 ---
 title: One API, Multiple LLMs with OpenRouter.ai
-date: 2025-06-17
-description: 
-tags: 
 url: blog/openrouter-ai-gateway
+status: published
+date: 2025-06-17T00:00:00.000Z
+description: null
+qblog_id: d2ac54e8-5616-496a-b702-b07c8d1d072c
 ---
+
 LLMs such as Claude 4, GPT-4o, and Llama come from various providers, each having their own billing systems (typically credit-based), separate API keys, and individual setups.
 
 While sticking with one provider like OpenAI or Anthropic might seem easier, it limits your flexibility, like performing A/B tests across different AI models. 
