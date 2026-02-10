@@ -1,13 +1,16 @@
 ---
 title: Using Remote MCP with the Anthropic Messages API
-date: 2025-06-11
-description: 
+url: blog/anthropic-remote-mcp
 tags:
   - anthropic
   - mcp
-url: blog/anthropic-remote-mcp
-via_url:
+status: published
+date: 2025-06-11T00:00:00.000Z
+description: null
+qblog_id: 2dbafb09-4ab5-4da6-bb13-77ae45587d0c
+via_url: null
 ---
+
 I recently played around with remote MCP ([MCP connector](https://docs.anthropic.com/en/docs/agents-and-tools/mcp-connector)) in Anthropic. It allows us to use remote MCP tools at their server during LLM inference. 
 
 Essentially, you can just use their **Messages API** as MCP client 🤯
