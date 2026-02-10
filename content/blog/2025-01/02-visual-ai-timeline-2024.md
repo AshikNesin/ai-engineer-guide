@@ -1,12 +1,15 @@
 ---
 title: Visual AI Timeline 2024
-date: 2025-01-02
-description: 
+url: blog/visual-ai-timeline-2024
 tags:
   - bookmark
-url: blog/visual-ai-timeline-2024
+status: published
+date: 2025-01-02T00:00:00.000Z
+description: null
+qblog_id: 99141a88-0e87-4866-8839-38c44f6c3568
 via_url: https://x.com/reach_vb/status/1874131956432302555
 ---
+
 I came across the 2024 AI timeline shared by [Vaibhav Srivastav](https://x.com/reach_vb) on Twitter/X
 
 It's pretty slick list! You can filter it by Open Weights model and API only model as well. 
