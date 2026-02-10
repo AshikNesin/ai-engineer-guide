@@ -1,13 +1,16 @@
 ---
 title: OpenCode - Open Source Alternatives to Claude Code
-date: 2025-07-04
-description: 
-tags:
-  - TIL
-  - bookmark
 url: blog/opencode
-via_url:
+tags:
+  - til
+  - bookmark
+status: published
+date: 2025-07-04T00:00:00.000Z
+description: null
+qblog_id: 5926d15f-891f-4254-87ae-c0781e085793
+via_url: null
 ---
+
 Command lines based agentic code generation apps are the talk of the town. You might have already used Claude Code/OpenAI Code/Google Gemini, etc.
 
 But if you want flexibility of using any model + open source then [OpenCode](https://opencode.ai/) is a good alternative.
