@@ -1,11 +1,13 @@
 ---
 title: OpenAI Deep Researcher System Prompt
-date: 2025-02-07
-description: 
-tags:
-  - OpenAI
-  - system-prompt
 url: blog/openai-deep-researcher-system-prompt
+tags:
+  - openai
+  - system-prompt
+status: published
+date: 2025-02-07T00:00:00.000Z
+description: null
+qblog_id: 8bcb9567-cf60-434b-9e56-fd22edd87e5e
 ---
 
 OpenAI has recently released [deep research](https://openai.com/index/introducing-deep-research/) features for ChatGPT pro users. Similar to a human researcher, this feature will do extensive research, gather all the information along with citations and return result for you. It has real time internet access as well. And it is powered by latest o3 model.
