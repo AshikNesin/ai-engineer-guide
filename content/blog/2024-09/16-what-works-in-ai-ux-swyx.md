@@ -1,0 +1,41 @@
+---
+title: Notes on What Works in AI UX by swyx
+url: blog/what-works-in-ai-ux-swyx
+tags:
+  - talk
+status: published
+date: 2024-09-16T00:00:00.000Z
+qblog_id: c86244de-4feb-4e3b-8d92-004d13a6cae6
+---
+
+## Summary
+[swyx](https://www.swyx.io/) talked about the evolving role of AI engineers, key UX principles in AI, and what works and doesn’t (yet) in AI applications.
+
+<!--more-->
+
+## Talk
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PkHjoihjo6U?si=UxinJ_Jyehs0JgbK&amp;start=33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Highlights
+* 🚀 AI engineers are emerging as a distinct, valuable role in tech.
+* 📈 Interest in AI UX is growing, especially among frontend developers.
+* 🔍 Effective UX must be intuitive, helping users without revealing AI complexities.
+* 💡 Generative AI can create opportunities but must be constrained for usability.
+* ⚠️ Many popular AI concepts, like high bandwidth voice, still need refinement.
+* 🎨 Treating AI hallucination as a feature can lead to innovative applications.
+* 📊 The landscape of AI jobs will evolve, with engineers likely outlasting researchers.
+
+---
+
+## Slides
+
+![Pasted image 20241222204919.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222204919.png)
+![Pasted image 20241222204901.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222204901.png)
+![Pasted image 20241222204940.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222204940.png)
+![Pasted image 20241222204959.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222204959.png)
+![Pasted image 20241222205013.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222205013.png)
+![Pasted image 20241222205025.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2024-09/Pasted-image-20241222205025.png)
+
+
+## References
+- [Slides](https://docs.google.com/presentation/d/1RgJ6rtiG9Ts726kkXfji2Tc0q5P1eVx297IzYdWHQPQ/edit#slide=id.p)
