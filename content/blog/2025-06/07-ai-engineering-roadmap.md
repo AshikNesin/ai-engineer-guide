@@ -1,12 +1,15 @@
 ---
 title: How to Get Started in AI Engineering (Without the Hype)
-date: 2025-06-07
-description: 
+url: blog/ai-engineering-roadmap
 tags:
   - ai-engineer
   - learn
-url: blog/ai-engineering-roadmap
+status: published
+date: 2025-06-07T00:00:00.000Z
+description: null
+qblog_id: 9c4afb3c-555c-4dc2-b6ba-48db3ed2f4ff
 ---
+
 With all the buzz around AI. Getting started with AI Engineering feels overwhelming 🤯
 
 Even if you try to look into YouTube or some random blogs, there are lots of hype-driven recommendations which might not be ideal if you're planning to get better by understanding the fundamentals, what it is good at and what it is not good (yet), etc.
