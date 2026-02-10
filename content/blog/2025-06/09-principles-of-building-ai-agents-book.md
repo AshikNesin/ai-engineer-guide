@@ -1,14 +1,17 @@
 ---
 title: Principles of Building AI Agents by Sam Bhagwat
-date: 2025-06-09
-description: 
+url: blog/principles-of-building-ai-agents-book
 tags:
   - bookmark
   - learn
   - ai-agents
-url: blog/principles-of-building-ai-agents-book
+status: published
+date: 2025-06-09T00:00:00.000Z
+description: null
+qblog_id: 4cab7d97-af9f-4937-b892-8a6229d73452
 via_url: https://x.com/calcsam/status/1929571789493227572
 ---
+
 [Sam Bhagwat](https://x.com/calcsam) (from [Mastra.ai](https://mastra.ai/?ref=aiengineerguide.com)) has recently released 2nd edition of **Principles of Building AI Agents** 
 
 It's a free book which you can get [here](https://mastra.ai/book?ref=aiengineerguide.com)
