@@ -1,12 +1,15 @@
 ---
 title: How to use OpenRouter's PDF Input
-date: 2025-08-04
-description: 
+url: blog/openrouter-pdf
 tags:
   - openrouter
-url: blog/openrouter-pdf
-via_url:
+status: published
+date: 2025-08-04T00:00:00.000Z
+description: null
+qblog_id: 7b85650f-54a6-40ae-983f-4bbe191e460b
+via_url: null
 ---
+
 When working with LLM you might want to use the PDF file like bank statements, contracts, etc and perform some action on top of it.
 
 Nowadays majority of the models supports it but it'll ask you to upload the file in base64.
