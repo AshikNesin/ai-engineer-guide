@@ -1,14 +1,17 @@
 ---
 title: How to Add Custom Hooks in Claude Code
-date: 2025-07-03
-description: 
+url: blog/claude-code-hooks
 tags:
-  - TIL
+  - til
   - claude-code
   - bookmark
-url: blog/claude-code-hooks
+status: published
+date: 2025-07-03T00:00:00.000Z
+description: null
+qblog_id: 5004f03c-0ac1-40a6-82d8-bbd9309afacb
 via_url: https://x.com/alexalbert__/status/1940480961923473610
 ---
+
 Claude Code now supports **custom hooks**  🌟
 
 ## What are hooks?
