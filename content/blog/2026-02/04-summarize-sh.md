@@ -1,11 +1,13 @@
 ---
-title: "Summarize.sh - LLM powered quick summaries"
+title: Summarize.sh - LLM powered quick summaries
 url: blog/summarize-sh
+tags:
+  - summarize-sh
 status: published
-date: 2026-02-04
-tags: 
-- summarize-sh
+date: 2026-02-04T00:00:00.000Z
+qblog_id: 1221e106-b0e2-4289-a08d-0fcb44be0f5e
 ---
+
 I came across [summarize.sh](https://summarize.sh) which lets you quickly summarize a link/youtube video, etc. It is built by Peter Steinberger (the one behind OpenClaw)
 
 With the help of it, you can easily summarize something. It also has support for Chrome extension as well.
