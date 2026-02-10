@@ -1,12 +1,15 @@
 ---
 title: How to get detailed Claude Code Analytics using Sniffly
-date: 2025-07-17
-description: 
+url: blog/claude-code-analytics-sniffly
 tags:
   - claude-code
-url: blog/claude-code-analytics-sniffly
-via_url:
+status: published
+date: 2025-07-17T00:00:00.000Z
+description: null
+qblog_id: f6239691-f57e-46e9-9ae6-3364e8480da6
+via_url: null
 ---
+
 I got to know about [Sniffly](https://github.com/chiphuyen/sniffly?tab=readme-ov-file#with-uv-recommended) today.
 
 It's **Claude Code Analytics** dashboard that you can run in your system which will give use the logs that were available in your local machine (`~/.claude`) to generate a detailed analytics of your usage.
