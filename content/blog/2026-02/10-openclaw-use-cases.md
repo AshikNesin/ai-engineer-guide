@@ -1,5 +1,5 @@
 ---
-title: OpenClaw Use Cases
+title: Beyond the Hype - How People Are Using OpenClaw
 url: blog/openclaw-use-cases
 tags:
   - openclaw
