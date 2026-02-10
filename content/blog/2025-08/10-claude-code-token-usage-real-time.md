@@ -1,12 +1,15 @@
 ---
 title: How to Track Claude Code Usage in Real Time
-date: 2025-08-10
-description: 
+url: blog/claude-code-token-usage-real-time
 tags:
   - claude-code
-url: blog/claude-code-token-usage-real-time
-via_url:
+status: published
+date: 2025-08-10T00:00:00.000Z
+description: null
+qblog_id: 46d6f918-30a8-40ba-844d-d53d69491bb7
+via_url: null
 ---
+
 Claude Code team has recently shipped [customizable status lines](https://x.com/_catwu/status/1953927012592366062) feature.
 
 We can combine this with [ccusage](/blog/claude-code-usage/) and we have a a beautiful CLI like this 👇
