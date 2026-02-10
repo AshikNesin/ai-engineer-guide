@@ -1,13 +1,16 @@
 ---
 title: Anthropic Claude 4 System Card
-date: 2025-06-02
-description: 
+url: blog/anthropic-claude-4-system-card
 tags:
   - bookmark
   - simon-willison
-url: blog/anthropic-claude-4-system-card
+status: published
+date: 2025-06-02T00:00:00.000Z
+description: null
+qblog_id: deeecd4a-d7ca-4563-a9f4-ccef8ad04721
 via_url: https://simonwillison.net/2025/May/25/claude-4-system-card/
 ---
+
 I came across highlights of **System Card** for Anthropic Claude 4 models by [Simon Willison](https://simonwillison.net) 
 
 👉 https://simonwillison.net/2025/May/25/claude-4-system-card/
