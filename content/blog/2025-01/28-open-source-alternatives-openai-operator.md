@@ -1,16 +1,19 @@
 ---
 title: Open Source Alternatives to OpenAI Operator
-date: 2025-01-28
-description: 
+url: blog/open-source-alternatives-openai-operator
 tags:
   - bookmark
-  - OpenAI
-  - OpenAI-Operator
+  - openai
+  - openai-operator
   - browser-base
   - browser-use
   - chromium
-url: blog/open-source-alternatives-openai-operator
+status: published
+date: 2025-01-28T00:00:00.000Z
+description: null
+qblog_id: d7a4f653-6c98-421b-a1bc-2687e8eeddc1
 ---
+
 [Operator](https://openai.com/index/introducing-operator/) is one of the **interesting** feature that is released by OpenAI recently. It has the capabilities to access to remote browser (with internet) and can perform task for you. Under the hood it uses  [Computer-Using Agent](https://openai.com/index/computer-using-agent/) 
 
 Though I didn't get access to try it myself, the demo that is presented by the OpenAI team looks promising.
