@@ -1,11 +1,14 @@
 ---
 title: Cursor v1 Highlights
-date: 2025-06-06
-description: 
+url: blog/cursor-v1
 tags:
   - cursor
-url: blog/cursor-v1
+status: published
+date: 2025-06-06T00:00:00.000Z
+description: null
+qblog_id: c85eb500-a40d-481c-9154-7fe83f88e4a9
 ---
+
 [Cursor](https://cursor.com) has released v1 🥳
 
 Here are the some of highlights that I found interesting
