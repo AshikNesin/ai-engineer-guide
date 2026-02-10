@@ -1,13 +1,16 @@
 ---
 title: OpenAI ChatGPT 5 system prompt
-date: 2025-08-08
-description: 
-tags:
-  - OpenAI
-  - system-prompt
 url: blog/openai-chatgpt-5-system-prompt
-via_url:
+tags:
+  - openai
+  - system-prompt
+status: published
+date: 2025-08-08T00:00:00.000Z
+description: null
+qblog_id: 1501035a-21be-414b-9c42-cfd55349a93a
+via_url: null
 ---
+
 I've recently came across ChatGPT 5 system prompt in X by [Pliny the Liberator ](https://x.com/elder_plinius)
 
 Like always this could be a potential hallucination but there is a high chance this could be real since elder-plinius has released lot of [prompt leaks](https://github.com/elder-plinius/CL4R1T4S) in the past that are real. And it is a good learning for us to see how the AI company is prompting for their products
