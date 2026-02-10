@@ -1,13 +1,16 @@
 ---
 title: GitHub Copilot Chat for VS Code Goes Open Source
-date: 2025-07-01
-description: 
-tags:
-  - TIL
-  - bookmark
 url: blog/vs-code-copilot-chat-extension
+tags:
+  - til
+  - bookmark
+status: published
+date: 2025-07-01T00:00:00.000Z
+description: null
+qblog_id: abb23b70-7ef3-477f-b668-8e1d3cb351ac
 via_url: https://x.com/ashtom/status/1939724483448717369
 ---
+
 As promised at [Microsoft Build 2025](https://github.com/newsroom/press-releases/coding-agent-for-github-copilot) GitHub Copilot Chat Extension is released under MIT license 😍
 
 As of now, they've open sourced their Chat feature (client) that you see in the VS Code but haven't released auto completion and other things.
