@@ -1,12 +1,15 @@
 ---
 title: How to run LLMs locally with Docker
-date: 2025-07-20
-description: 
+url: blog/docker-model-runner
 tags:
   - docker
-url: blog/docker-model-runner
-via_url:
+status: published
+date: 2025-07-20T00:00:00.000Z
+description: null
+qblog_id: 7f529e2d-6a73-47ef-8a2e-033d147ded99
+via_url: null
 ---
+
 In order to run AI models locally, I generally use [Ollama](https://ollama.com/) 
 
 But TIL, you can actually run it via docker itself.
