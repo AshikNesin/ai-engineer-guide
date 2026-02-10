@@ -1,12 +1,15 @@
 ---
 title: Auto-Generate AI Commit Message using Gemini CLI
-date: 2025-07-09
-description: 
+url: blog/ai-commit-message-gemini-cli
 tags:
   - gemini-cli
-url: blog/ai-commit-message-gemini-cli
-via_url:
+status: published
+date: 2025-07-09T00:00:00.000Z
+description: null
+qblog_id: 4bddafcf-8f0a-446c-b653-ffa883ca0598
+via_url: null
 ---
+
 When working on side projects or writing a blog post, I don't want to go to IDE and then use AI generated commit message feature. Instead I prefer doing it via CLI itself by running a single command.
 
 Let's see how I do it using [gemini-cli](https://aiengineerguide.com/blog/google-gemini-cli/) in the background.
