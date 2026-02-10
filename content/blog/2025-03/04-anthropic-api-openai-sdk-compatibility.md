@@ -1,9 +1,10 @@
 ---
 title: OpenAI SDK support for Anthropic API
-date: 2025-03-04
-description: 
-tags: 
 url: blog/anthropic-api-openai-sdk-compatibility
+status: published
+date: 2025-03-04T00:00:00.000Z
+description: null
+qblog_id: d437ea98-8c80-4f6e-b590-8a0a218ebf9e
 ---
 
 Migrating from one AI model-as-service provider to another is such a pain. They might have their own way of doing things which might not be supported by another provider.
