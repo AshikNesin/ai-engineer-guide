@@ -1,12 +1,15 @@
 ---
 title: Grok 4 System Prompt Leak
-date: 2025-07-12
-description: 
+url: blog/grok-4-system-prompt
 tags:
   - grok
-url: blog/grok-4-system-prompt
-via_url:
+status: published
+date: 2025-07-12T00:00:00.000Z
+description: null
+qblog_id: e3dc81f2-be8b-4d1b-81ca-dbce165dd97e
+via_url: null
 ---
+
 With the recent release of Grok 4 by xAI team. It is the talk of the town. It was scoring pretty well in LLM benchmarks.
 
 And overall sentiment in Twitter/X seems to be positive as well.
