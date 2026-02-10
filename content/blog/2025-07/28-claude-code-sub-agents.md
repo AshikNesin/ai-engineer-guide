@@ -1,13 +1,16 @@
 ---
 title: How to use Claude Code Sub Agents
-date: 2025-07-28
-description: 
-tags:
-  - TIL
-  - claude-code
 url: blog/claude-code-sub-agents
-via_url:
+tags:
+  - til
+  - claude-code
+status: published
+date: 2025-07-28T00:00:00.000Z
+description: null
+qblog_id: 7242a80e-6799-4314-8ec6-abe3280677b9
+via_url: null
 ---
+
 Like the unix principle - Do one thing, do it well.
 
 If an AI agent has to do only one task, it does the work really well.
