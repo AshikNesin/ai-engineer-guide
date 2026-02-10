@@ -1,12 +1,15 @@
 ---
 title: Chat SDK by Vercel
-date: 2025-07-11
-description: 
+url: blog/vercel-chat-sdk
 tags:
   - vercel
-url: blog/vercel-chat-sdk
-via_url:
+status: published
+date: 2025-07-11T00:00:00.000Z
+description: null
+qblog_id: 9229a2b3-b942-4836-ad4a-37024c4f3a71
+via_url: null
 ---
+
 Building chat application from scratch is such a pain. To simplify it, Vercel team has released [Chat SDK](https://chat-sdk.dev/)
 
 ## What is Chat SDK?
