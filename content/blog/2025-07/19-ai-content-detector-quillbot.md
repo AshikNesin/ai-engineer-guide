@@ -1,12 +1,15 @@
 ---
 title: Checking AI Generated Content with QuillBot AI Detector
-date: 2025-07-19
-description: 
+url: blog/ai-content-detector-quillbot
 tags:
   - ai-content-detector
-url: blog/ai-content-detector-quillbot
-via_url:
+status: published
+date: 2025-07-19T00:00:00.000Z
+description: null
+qblog_id: 637d3d9f-a2e9-4ab5-ba91-ecdf0647792f
+via_url: null
 ---
+
 With AI tools like ChatGPT becoming common things, we're seeing lot of AI generated content (and yeah, AI slops as well).
 
 And it is hard to know whether something is written by a human or an AI.
