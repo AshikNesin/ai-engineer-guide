@@ -1,13 +1,16 @@
 ---
 title: How to test MCP using Postmap
-date: 2025-07-13
-description: 
+url: blog/test-mcp-postman
 tags:
   - mcp
   - postman
-url: blog/test-mcp-postman
-via_url:
+status: published
+date: 2025-07-13T00:00:00.000Z
+description: null
+qblog_id: 4159b863-bf6c-4803-9693-19ad73c9001f
+via_url: null
 ---
+
 When I'm building MCP servers I usually use official [MCP Inspector](https://github.com/modelcontextprotocol/inspector#mcp-inspector) then I came to know that [Postman](https://www.postman.com/) supports it out of box.
 
 So for any quick testing, I started using it.
