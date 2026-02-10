@@ -1,14 +1,17 @@
 ---
 title: How to use Claude Code with z.ai GLM-4.5
-date: 2025-07-30
-description: 
+url: blog/claude-code-z-ai-glm-4-5
 tags:
   - claude-code
-  - GLM-4-5
+  - glm-4-5
   - z-ai
-url: blog/claude-code-z-ai-glm-4-5
-via_url:
+status: published
+date: 2025-07-30T00:00:00.000Z
+description: null
+qblog_id: bf60639d-bbb3-4ba7-8c59-12acc0381533
+via_url: null
 ---
+
 Z.AI has released [GLM-4.5](https://z.ai/blog/glm-4.5) which is an open source (open model) primarily built for  agent-oriented apps.
 
 It is as good as commercial models.
