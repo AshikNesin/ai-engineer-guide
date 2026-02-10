@@ -5,6 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-02-05T00:00:00.000Z
+qblog_id: 0e62f4c6-dde0-4e41-b477-7255be6642e9
 ---
 
 Claude Code now has support for `/insights` commands.
