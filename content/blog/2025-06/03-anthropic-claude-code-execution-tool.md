@@ -1,12 +1,15 @@
 ---
 title: Anthropic Claude Code Execution Tool via API
-date: 2025-06-03
-description: 
+url: blog/anthropic-claude-code-execution-tool
 tags:
   - anthropic
-url: blog/anthropic-claude-code-execution-tool
-via_url:
+status: published
+date: 2025-06-03T00:00:00.000Z
+description: null
+qblog_id: d6c0a579-16dc-436a-85db-b5ea0dcd4de9
+via_url: null
 ---
+
 Anthropic has recently added support for [code execution tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/code-execution-tool) (at their server) when making LLM calls. 
 
 It allows LLM to execute **Python** code in secure, sandboxed environment -- No internet access.
