@@ -1,14 +1,17 @@
 ---
 title: How to Use Anthropic Claude Code with AWS Bedrock
-date: 2025-06-16
-description: 
+url: blog/anthropic-claude-code-aws-bedrock
 tags:
   - bookmark
   - anthropic
   - claude-code
-url: blog/anthropic-claude-code-aws-bedrock
-via_url:
+status: published
+date: 2025-06-16T00:00:00.000Z
+description: null
+qblog_id: ef1f4882-1e09-4965-b451-b7c1c5ecf223
+via_url: null
 ---
+
 [Claude Code](https://www.anthropic.com/claude-code) is a CLI based tool that brings in AI coding capabilities directly into your terminal.
 
 Apart from directly using your Anthropic API key, you can also easily use your Amazon Bedrock as well.
