@@ -1,13 +1,16 @@
 ---
 title: Zerodha MCP
-date: 2025-05-26
-description: 
+url: blog/zerodha-mcp
 tags:
   - bookmark
   - mcp
-url: blog/zerodha-mcp
-via_url:
+status: published
+date: 2025-05-26T00:00:00.000Z
+description: null
+qblog_id: 532adb6d-ffdb-499c-ba0d-9fd0e1384828
+via_url: null
 ---
+
 I recently came across MCP by Zerodha which is solving a really useful use case. 
 
 Here is a quick demo by them
