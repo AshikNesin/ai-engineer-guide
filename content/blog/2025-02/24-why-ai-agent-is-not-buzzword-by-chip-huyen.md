@@ -1,14 +1,17 @@
 ---
 title: "TLDR: Why AI Agent is Not Just Another Buzzword by Chip Huyen"
-date: 2025-02-24
-description: 
+url: blog/why-ai-agent-is-not-buzzword-by-chip-huyen
 tags:
   - tldr
   - talk
   - chip-huyen
-url: blog/why-ai-agent-is-not-buzzword-by-chip-huyen
+status: published
+date: 2025-02-24T00:00:00.000Z
+description: null
+qblog_id: bfb6f030-f07b-4d77-8365-b1ab9d042d25
 via_url: https://www.youtube.com/watch?v=D6v5rlqUIc8&ab_channel=AIEngineer
 ---
+
 I recently watched  Chip Huyen's [talk](https://www.youtube.com/watch?v=D6v5rlqUIc8&ab_channel=AIEngineer) on challenges of building AI Agents and how to overcome them.
 
 It's a good one, I would recommend anyone  to check that out if they've done before.
