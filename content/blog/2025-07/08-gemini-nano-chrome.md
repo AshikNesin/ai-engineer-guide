@@ -1,12 +1,15 @@
 ---
 title: Gemini Nano in Chrome 138+
-date: 2025-07-08
-description: 
+url: blog/gemini-nano-chrome
 tags:
   - gemini-nano
-url: blog/gemini-nano-chrome
+status: published
+date: 2025-07-08T00:00:00.000Z
+description: null
+qblog_id: 1a90e3e4-1563-449b-8c37-44d67a113587
 via_url: https://github.com/swyxio/swyxdotio/issues/536
 ---
+
 Gemini Nano will be getting shipped with Google Chrome starting from version 138.
 
 This in browser LLM is good for the use cases in which you don't powerful intelligence like:
