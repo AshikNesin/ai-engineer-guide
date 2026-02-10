@@ -1,14 +1,17 @@
 ---
 title: An open-source AI agent by Neon
-date: 2025-06-15
-description: 
+url: blog/app-build-by-neon
 tags:
   - bookmark
   - ai-agents
   - open-source
-url: blog/app-build-by-neon
-via_url:
+status: published
+date: 2025-06-15T00:00:00.000Z
+description: null
+qblog_id: 99277242-f4c5-4865-a234-89f647589de8
+via_url: null
 ---
+
 I recently came across [app.build](https://www.app.build/) - It's an open-source AI Agent built by [Neon](https://neon.com/).
 
 ![CleanShot 2025-06-15 at 22.56.05@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/CleanShot-2025-06-15-at-22.56.05-at-2x.png)
