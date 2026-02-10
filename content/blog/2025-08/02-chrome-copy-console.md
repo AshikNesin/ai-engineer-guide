@@ -1,12 +1,15 @@
 ---
 title: How to Copy Chrome Console Logs for LLM
-date: 2025-08-02
-description: 
+url: blog/chrome-copy-console
 tags:
   - chrome
-url: blog/chrome-copy-console
+status: published
+date: 2025-08-02T00:00:00.000Z
+description: null
+qblog_id: 8851f7fa-cb16-448f-8ada-102efa0a95a5
 via_url: https://x.com/addyosmani/status/1882095887293259848
 ---
+
 When I encounter an issue while building web app, I usually take screenshot of it and share it with LLM.
 
 Apparently, Google Chrome (+ chromium forks) browser has support for **Copy console** which you can use it.
