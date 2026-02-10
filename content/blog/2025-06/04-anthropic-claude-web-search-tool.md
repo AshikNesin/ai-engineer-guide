@@ -1,12 +1,15 @@
 ---
 title: Anthropic Claude Web Search Tool via API
-date: 2025-06-04
-description: 
+url: blog/anthropic-claude-web-search-tool
 tags:
   - anthropic
-url: blog/anthropic-claude-web-search-tool
-via_url:
+status: published
+date: 2025-06-04T00:00:00.000Z
+description: null
+qblog_id: 981693ab-a2ef-45b3-806b-a91561ed219f
+via_url: null
 ---
+
 Anthropic has recently added support for [web search tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tooll). This tools gets executed at their server during LLM inference.  
 
 ## What does web search tool does?
