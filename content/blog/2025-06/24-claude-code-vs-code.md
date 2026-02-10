@@ -1,12 +1,15 @@
 ---
 title: VS Code Extention for Claude Code
-date: 2025-06-24
-description: 
+url: blog/claude-code-vs-code
 tags:
   - bookmark
   - claude-code
-url: blog/claude-code-vs-code
+status: published
+date: 2025-06-24T00:00:00.000Z
+description: null
+qblog_id: 84931f18-ba01-44cc-8180-d5c27d92382c
 ---
+
 Anthropic has recently launched VS Code extention for Claude Code
 
 While interacting with Claude Code in terminal, this extension acts as a compliment to Claude Code CLI.
