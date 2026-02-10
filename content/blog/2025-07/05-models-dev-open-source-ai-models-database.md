@@ -1,13 +1,16 @@
 ---
 title: Models.dev - Open Source AI Models Pricing Database
-date: 2025-07-05
-description: 
-tags:
-  - TIL
-  - bookmark
 url: blog/models-dev-open-source-ai-models-database
-via_url:
+tags:
+  - til
+  - bookmark
+status: published
+date: 2025-07-05T00:00:00.000Z
+description: null
+qblog_id: 432fffcd-6a59-467f-a6ed-196d36b2e715
+via_url: null
 ---
+
 We've so many AI models these days and **keep track of pricing and the capabilities** is not a easy task anymore.
 
 And some of the providers might hide the older model pricing from the pricing page as well.
