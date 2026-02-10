@@ -1,13 +1,16 @@
 ---
 title: Using Claude Code SDK to Build Custom Apps
-date: 2025-07-29
-description: 
-tags:
-  - TIL
-  - claude-code
 url: blog/claude-code-sdk
-via_url:
+tags:
+  - til
+  - claude-code
+status: published
+date: 2025-07-29T00:00:00.000Z
+description: null
+qblog_id: d10e06ab-535d-4694-9235-3f4a11eaeb1f
+via_url: null
 ---
+
 Claude Code is the agentic coding tool that is really good in writing code.
 
 I've been using it actively for last couple of weeks. And I prefer it over other IDEs like Cursor.
