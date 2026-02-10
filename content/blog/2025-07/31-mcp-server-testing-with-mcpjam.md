@@ -1,12 +1,15 @@
 ---
 title: How to MCP Servers with MCPJam Inspector
-date: 2025-07-31
-description: 
+url: blog/mcp-server-testing-with-mcpjam
 tags:
   - mcp
-url: blog/mcp-server-testing-with-mcpjam
-via_url:
+status: published
+date: 2025-07-31T00:00:00.000Z
+description: null
+qblog_id: 7f48be78-d142-4f9c-adc1-7f3d26c8e587
+via_url: null
 ---
+
 I recently came across [MCPJam](https://www.mcpjam.com/)
 
 **What does MCP Jam does?**
