@@ -1,14 +1,17 @@
 ---
 title: "Learn from Anthropic: Free courses about MCP, Claude Code & more"
-date: 2025-07-10
-description: 
+url: blog/anthropic-academy
 tags:
   - mcp
   - claude-code
   - anthropic
-url: blog/anthropic-academy
-via_url:
+status: published
+date: 2025-07-10T00:00:00.000Z
+description: null
+qblog_id: 3621a485-2866-4d2e-bf4b-a4f4c7aec03e
+via_url: null
 ---
+
 Anthropic has recently official video courses covering various topics like:
 - How to use Claude with Anthropic API / AWS Bedrock / Google Cloud's Vertex AI
 - Model context protocol basics
