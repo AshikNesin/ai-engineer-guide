@@ -1,11 +1,13 @@
 ---
 title: Directly Using Public URLs for Images and PDFs in Anthropic API
-date: 2025-03-04
-description: 
-tags: 
 url: blog/public-url-anthropic-api
+status: published
+date: 2025-03-04T00:00:00.000Z
+description: null
+qblog_id: 9f02b040-6ae6-4dec-ad62-3d6444593014
 via_url: https://x.com/alexalbert__/status/1895504248206709246
 ---
+
 When we interact with any LLM models like Anthropic Claude or OpenAI models, we're expected to pass in all the context that is needed to process the request.
 
 And the LLM model, just process that request and it'll respond with the result.
