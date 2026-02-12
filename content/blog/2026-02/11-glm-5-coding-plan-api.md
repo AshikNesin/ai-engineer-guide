@@ -32,3 +32,7 @@ curl --location 'https://api.z.ai/api/coding/paas/v4/chat/completions' \
 ```
 
 ![2026-02-11-at-21.33.552x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-02/lftkcw010ddqhuh4q5ai)
+
+Note: [GLM Coding Plan](https://go.nesin.io/glm) pricing page mentions that `glm-5` is available only on Max plan (at least for now).  
+
+![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-02/yqdljwlnxo1i9jd2jtma)
