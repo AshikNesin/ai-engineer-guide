@@ -31,5 +31,10 @@ Once you've installed Claude Code. You need to modify the `~/.claude/settings.js
 	}
 }
 ```
+
+Note: [GLM Coding Plan](https://go.nesin.io/glm) pricing page mentions that `glm-5` is available only on Max plan (at least for now).  
+
+![image.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-02/yqdljwlnxo1i9jd2jtma)
+
 ## Reference
 - https://docs.z.ai/devpack/tool/claude#manual-configuration
