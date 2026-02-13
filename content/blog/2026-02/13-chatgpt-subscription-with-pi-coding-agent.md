@@ -1,5 +1,5 @@
 ---
-title: How to use ChatGPT Plus/Pro Subscription with the Pi Coding Agent
+title: How to use ChatGPT Subscription with Pi Coding Agent
 url: blog/chatgpt-subscription-with-pi-coding-agent
 tags:
   - pi
