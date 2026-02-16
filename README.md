@@ -156,15 +156,6 @@ Custom Netlify function for tracking 404s:
 * **404 Alerts**: Instant detection of broken links
 * **Build Logs**: Netlify deployment feedback
 
----
-
-## 🤝 Contribute
-
-1. Fork the repo
-2. Create a new branch
-3. Make your changes
-4. Test with `hugo server`
-5. Submit a pull request
 
 ---
 
