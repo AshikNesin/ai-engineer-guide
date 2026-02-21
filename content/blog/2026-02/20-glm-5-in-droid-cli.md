@@ -5,7 +5,7 @@ tags:
   - droid-cli
   - glm-5
   - glm-coding-plan
-status: draft
+status: published
 date: 2026-02-20T00:00:00.000Z
 ---
 
