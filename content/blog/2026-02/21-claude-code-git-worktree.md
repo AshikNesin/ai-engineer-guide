@@ -1,5 +1,5 @@
 ---
-title: Claude Code has now Built-in Git worktree support
+title: Claude Code Now Supports Git Worktrees (Built-In)
 url: blog/claude-code-git-worktree
 tags:
   - claude-code
@@ -14,5 +14,14 @@ You can use this feature by passing `--worktree` arg when starting claude code
 claude --worktree
 ```
 
+By leveraging this feature, we can build multiple things in the same repo in parallel without interfering with one other (codebase)
+
+Matt has a really quick walkthrough video about it which you might find useful
+
+{{< video "https://video.twimg.com/amplify_video/2025240042772279297/vid/avc1/1920x1080/rEvf5NP6XkJj6Qv8.mp4" >}}
+
+
+
 ## Reference
 - https://x.com/bcherny/status/2025007393290272904
+- https://x.com/mattpocockuk/status/2025242370816487487
