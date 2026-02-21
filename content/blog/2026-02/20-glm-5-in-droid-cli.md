@@ -21,10 +21,8 @@ If not done already, you install it like this:
 ## Configure GLM models
 Our configs will be at `~/.factory/settings.json`
 
-```
-```
+### Anthropic Model 
 
-### Antr
 ```json
 {
   "customModels": [
