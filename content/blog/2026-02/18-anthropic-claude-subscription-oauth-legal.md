@@ -2,7 +2,7 @@
 title: "Anthropic Restricts Claude Subscription in other Apps"
 url: blog/anthropic-claude-subscription-oauth-legal
 status: published
-date: 2026-02-16
+date: 2026-02-18
 tags: 
 - anthropic
 ---
