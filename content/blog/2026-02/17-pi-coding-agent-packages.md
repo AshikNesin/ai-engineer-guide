@@ -2,7 +2,7 @@
 title: "How to extend Pi Coding Agent behaviour with Extensions"
 url: blog/pi-coding-agent-packages
 status: published
-date: 2026-02-16
+date: 2026-02-17
 tags: 
 - tools
 - pi
