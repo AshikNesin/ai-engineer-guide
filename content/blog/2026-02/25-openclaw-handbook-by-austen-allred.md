@@ -1,6 +1,6 @@
 ---
 title: The OpenClaw Handbook by Austen Allred
-url: blog/blog-openclaw-handbook-by-austen-allred
+url: blog/openclaw-handbook-by-austen-allred
 tags:
   - openclaw
 status: published
