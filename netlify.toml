@@ -825,3 +825,9 @@ command = "hugo --gc --minify --config hugo.toml"
   to = "/blog/anthropic-claude-opus-4-5-opencode-antigravity"
   status = 301
   force = true
+  
+[[redirects]]
+  from = "/blog/blog-openclaw-handbook-by-austen-allred"
+  to = "/blog/openclaw-handbook-by-austen-allred"
+  status = 301
+  force = true
