@@ -1,4 +1,4 @@
-{{ if and (.TableOfContents) (eq .Type "blog") }}
+{{ if and (.TableOfContents) (or (eq .Type "blog") (eq .Type "til")) }}
 <div class="sidebar-container">
   <div class="sidebar-author">
     <img src="https://images.nesin.io/f_auto,q_auto,h_64,w_64,c_fill,g_face/AshikNesin/ashik-nesin" alt="Ashik Nesin" class="author-photo">
