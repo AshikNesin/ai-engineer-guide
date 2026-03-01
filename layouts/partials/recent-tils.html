@@ -1,0 +1,13 @@
+<h2>Recent TILs</h2>
+<p>Raw notes, TILs, bookmarks, and learnings. Subscribe via RSS:</p>
+<p><code>https://aiengineerguide.com/feed/til.xml</code></p>
+<p>Total Notes: {{ len (where .Site.RegularPages "Type" "til") }}</p>
+<ul>
+  {{ range first 5 (where .Site.RegularPages "Type" "til") }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+    </li>
+  {{ end }}
+</ul>
+<p><a href="/til/">Read More →</a></p>
