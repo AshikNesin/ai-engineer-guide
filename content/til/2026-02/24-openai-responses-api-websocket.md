@@ -2,11 +2,13 @@
 title: How to use OpenAI Responses API with WebSocket
 url: til/openai-responses-api-websocket
 tags:
-  - OpenAI
+  - openai
   - websocket
 status: published
 date: 2026-02-24T00:00:00.000Z
+qblog_id: def6a385-c199-42c1-a5ca-c69eeb355866
 ---
+
 OpenAI has support for web sockets for their Responses API.
 
 This helps to improve the latency by avoiding unwanted handshakes that is involved in HTTP requests.
