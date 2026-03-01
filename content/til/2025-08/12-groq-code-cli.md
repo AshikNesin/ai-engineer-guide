@@ -1,0 +1,44 @@
+---
+title: Groq Code CLI - Boilerplate for building CLI Coding Agent
+url: til/groq-code-cli
+tags:
+  - groq-code
+  - cli-agent
+status: published
+date: 2025-08-12T00:00:00.000Z
+description: null
+qblog_id: 5add9ff0-cbed-4aa3-a1f4-28496d71eed2
+via_url: null
+---
+
+CLI Agents are the talk of the town. Everyone is building and releasing one 😅
+
+Recently, Groq has released their own CLI coding agent.
+
+The approach that they took is they've old built the bare essentials that are needed for CLI coding agents **intentionally**
+
+Their goal is to help people to build their own custom coding agent that solves their use case.
+
+![2025-08-12 at 22.38.24@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-12-at-22.38.24-at-2x.png)
+
+Currently, it has support for only bare essentials like this
+
+![2025-08-12 at 23.47.05@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-12-at-23.47.05-at-2x.png)
+
+👉 https://github.com/build-with-groq/groq-code-cli
+
+## How to get started?
+
+```shell
+# Clone their repo
+git clone https://github.com/build-with-groq/groq-code-cli
+npm install
+npm run build
+npm link # link "groq" command to this project
+```
+
+Once you link it, you should be able to run `groq` command now.
+
+And you can login with `/login` command in the CLI.
+
+Happy building CLI-agent!
