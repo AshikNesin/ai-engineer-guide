@@ -82,6 +82,7 @@ bgImagePath = "nesin_io/og-image-bg/dark-gradient"
 
 [outputs]
 home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
 
 [outputFormats]
     [outputFormats.RSS]

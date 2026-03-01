@@ -1,0 +1,24 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }} - TIL</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <description>Today I Learned - {{ .Site.Title }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>{{ .Site.LanguageCode }}</language>
+    {{ with .Site.Params.authorEmail }}<managingEditor>{{.}}{{ with $.Site.Params.authorName }} ({{.}}){{ end }}</managingEditor>{{ end }}
+    {{ with .Site.Params.authorEmail }}<webMaster>{{.}}{{ with $.Site.Params.authorName }} ({{.}}){{ end }}</webMaster>{{ end }}
+    {{ with .Site.Copyright }}<copyright>{{ . }}</copyright>{{ end }}
+    {{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    <atom:link href="{{ .Permalink }}feed.xml" rel="self" type="application/rss+xml" />
+    {{ range .Pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{ with .Site.Params.authorEmail }}<author>{{.}}{{ with $.Site.Params.authorName }} ({{.}}){{ end }}</author>{{ end }}
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ .Content | html }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
