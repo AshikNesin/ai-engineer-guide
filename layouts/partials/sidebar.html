@@ -1,4 +1,6 @@
-{{ if and (.TableOfContents) (or (eq .Type "blog") (eq .Type "til")) }}
+{{ $toc := .TableOfContents }}
+{{ $hasTOC := and $toc (findRE "<li>" $toc) }}
+{{ if and $hasTOC (or (eq .Type "blog") (eq .Type "til")) }}
 <div class="sidebar-container">
   <div class="sidebar-toc">
     <h4 class="toc-title">On this page</h4>
