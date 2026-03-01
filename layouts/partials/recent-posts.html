@@ -1,0 +1,10 @@
+<h2>Recent Posts</h2>
+<ul>
+  {{ range first 5 (where .Site.RegularPages "Type" "til") }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+    </li>
+  {{ end }}
+</ul>
+<p><a href="/til/">Read More →</a></p>
