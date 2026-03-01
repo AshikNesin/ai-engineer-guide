@@ -1,15 +1,5 @@
 {{ if and (.TableOfContents) (or (eq .Type "blog") (eq .Type "til")) }}
 <div class="sidebar-container">
-  <div class="sidebar-author">
-    <img src="https://images.nesin.io/f_auto,q_auto,h_64,w_64,c_fill,g_face/AshikNesin/ashik-nesin" alt="Ashik Nesin" class="author-photo">
-    <div class="author-info">
-      <div class="author-name">Ashik Nesin</div>
-      <div class="author-twitter"><a   href="https://x.com/AshikNesin" target="_blank"> @AshikNesin</a></div>
-    </div>
-  </div>
-  
-  <div class="sidebar-separator"></div>
-  
   <div class="sidebar-toc">
     <h4 class="toc-title">On this page</h4>
     {{ .TableOfContents }}
@@ -61,45 +51,6 @@
   .sidebar-container {
     display: none;
   }
-}
-
-.sidebar-author {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.author-photo {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #e3e8ee;
-  transition: border-color 0.2s ease;
-}
-
-.author-photo:hover {
-  border-color: #8cc2dd;
-}
-
-.author-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.author-name {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #374151;
-  line-height: 1.2;
-}
-
-.author-twitter {
-  font-size: 0.75rem;
-  color: #8a919e;
-  line-height: 1.2;
 }
 
 .sidebar-separator {
@@ -236,22 +187,6 @@
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .author-photo {
-    border-color: #2a2f3a;
-  }
-  
-  .author-photo:hover {
-    border-color: #8cc2dd;
-  }
-  
-  .author-name {
-    color: #f3f4f6;
-  }
-  
-  .author-twitter {
-    color: #7a8291;
-  }
-  
   .sidebar-separator {
     background: linear-gradient(90deg, #2a2f3a 0%, transparent 100%);
   }
