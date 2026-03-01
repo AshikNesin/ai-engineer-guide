@@ -1,6 +1,6 @@
 ---
 title: Notes on The State of AI Startups in 2024
-url: til/state-of-ai-2024
+url: state-of-ai-2024
 status: published
 date: 2024-12-24T18:30:00.000Z
 description: null
