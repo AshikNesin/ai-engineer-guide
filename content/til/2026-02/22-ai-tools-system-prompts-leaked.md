@@ -6,7 +6,9 @@ tags:
   - prompt-leak
 status: published
 date: 2026-02-22T00:00:00.000Z
+qblog_id: c93ae8b6-fab4-45d0-b050-08388b9b9838
 ---
+
 I came across the system prompts of major AI tools like Claude Code, Devin, Perplexity, etc
 
 I'm not sure if this is legit or hallucination though 🤔
