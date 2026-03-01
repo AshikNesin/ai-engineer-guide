@@ -5,7 +5,7 @@ tags:
   - openclaw
 status: published
 date: 2026-02-25T00:00:00.000Z
-qblog_id: b167f517-4788-466c-abd5-d62aeee2eb30
+qblog_id: 38b38c55-e4fa-477b-b0e7-c438f73114e0
 ---
 
 I came across this really good handbook on how to use OpenClaw by Austen Allred where he has covered almost everything that you would need to setup your OpenClaw bot. 
