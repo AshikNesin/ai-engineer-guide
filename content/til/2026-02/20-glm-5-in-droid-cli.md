@@ -7,6 +7,7 @@ tags:
   - glm-coding-plan
 status: published
 date: 2026-02-20T00:00:00.000Z
+qblog_id: 9beff7e3-b590-4820-b9f3-34afe585272f
 ---
 
 Factory Droid supports custom models via Bring Your Own Key, we easily configure it to use GLM-5 as well.
