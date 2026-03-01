@@ -1,6 +1,6 @@
 ---
 title: Understanding Function/Tool Calling in LLM
-url: til/function-tool-calling-llm
+url: function-tool-calling-llm
 status: published
 date: 2025-01-02T18:30:00.000Z
 description: null
