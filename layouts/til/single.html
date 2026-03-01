@@ -4,7 +4,7 @@
   <a href="{{ "til" | relURL }}">← Back to all TILs</a>
 </div>
 
-<h1>{{ .Title }}</h1>
+<h1 class="til-title">{{ .Title }}</h1>
 
 <div class="til-meta">
   <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
@@ -34,7 +34,11 @@
 
 <style>
 .til-back-link {
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.til-title {
+  margin-top: 0.5rem;
 }
 
 .til-back-link a {
