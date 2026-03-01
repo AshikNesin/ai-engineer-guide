@@ -4,12 +4,6 @@
   <a href="{{ "til" | relURL }}">← Back to all TILs</a>
 </div>
 
-<div class="til-tags-top">
-  {{ range (.GetTerms "tags") }}
-  <a href="{{ .Permalink }}" class="til-tag-pill">{{ .LinkTitle }}</a>
-  {{ end }}
-</div>
-
 <h1>{{ .Title }}</h1>
 
 <div class="til-meta">
@@ -28,52 +22,36 @@
   {{ .Content }}
 </content>
 
+<p class="til-tags">
+  {{ range (.GetTerms "tags") }}
+  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  {{ end }}
+</p>
+
 {{ partial "sidebar.html" . }}
 {{ partial "comments.html" . }}
 {{ partial "newsletter.html" . }}
 
 <style>
 .til-back-link {
-  margin-bottom: 1.5rem;
-}
-
-.til-back-link a {
-  color: #6b7280;
-  text-decoration: none;
-  font-size: 0.875rem;
-  transition: color 0.15s ease;
-}
-
-.til-back-link a:hover {
-  color: #374151;
-}
-
-.til-tags-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.til-tag-pill {
-  background: #1f2937;
-  color: #e5e7eb;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
+.til-back-link a {
+  color: #777;
   text-decoration: none;
-  transition: background 0.15s ease;
+  font-size: 0.875rem;
 }
 
-.til-tag-pill:hover {
-  background: #374151;
+.til-back-link a:hover {
+  color: #3273dc;
 }
 
 .til-meta {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #6b7280;
+  color: #777;
   font-size: 0.875rem;
   margin-bottom: 2rem;
 }
@@ -83,7 +61,7 @@
 }
 
 .til-meta-separator {
-  color: #9ca3af;
+  color: #777;
 }
 
 .til-author {
@@ -100,44 +78,38 @@
 }
 
 .til-author-name {
-  color: #374151;
+  color: #3273dc;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .til-author-name:hover {
   text-decoration: underline;
 }
 
+.til-tags a {
+  margin-right: 0.5rem;
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   .til-back-link a {
-    color: #9ca3af;
+    color: #aaa;
   }
   
   .til-back-link a:hover {
-    color: #e5e7eb;
-  }
-  
-  .til-tag-pill {
-    background: #374151;
-    color: #e5e7eb;
-  }
-  
-  .til-tag-pill:hover {
-    background: #4b5563;
+    color: #8cc2dd;
   }
   
   .til-meta {
-    color: #9ca3af;
+    color: #aaa;
   }
   
   .til-meta-separator {
-    color: #6b7280;
+    color: #aaa;
   }
   
   .til-author-name {
-    color: #e5e7eb;
+    color: #8cc2dd;
   }
 }
 </style>
