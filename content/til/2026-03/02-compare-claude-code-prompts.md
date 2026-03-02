@@ -1,6 +1,6 @@
 ---
 title: How to Compare Claude Code Prompts Between Versions
-url: compare-claude-code-prompts
+url: til/compare-claude-code-prompts
 tags:
   - claude-code
   - mario-zechner
