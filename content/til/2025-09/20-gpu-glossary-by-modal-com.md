@@ -5,7 +5,7 @@ tags:
   - gpu
 status: published
 date: 2025-09-20T00:00:00.000Z
-qblog_id: 35ff7bfb-ecc7-44f8-bb9f-d353d103dbfa
+qblog_id: 5a903c1f-14fe-4965-88d2-8d9cef627bae
 ---
 
 If you're someone who is trying to understand the basics of GPU then Modal.com's GPU Glossary seems to be really good one.

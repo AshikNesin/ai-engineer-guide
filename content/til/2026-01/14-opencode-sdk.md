@@ -5,7 +5,7 @@ tags:
   - opencode
 status: published
 date: 2026-01-14T00:00:00.000Z
-qblog_id: aeb30128-dd19-4b29-9012-9c3d19ef22cb
+qblog_id: 2f0b1aaf-0be5-4795-a760-1f2482876662
 ---
 
 OpenCode AI agents official node SDK which you can use build custom workflows which leverages the OpenCode under the hood.

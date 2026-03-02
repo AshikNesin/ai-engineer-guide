@@ -6,7 +6,7 @@ tags:
   - ai-agents
 status: published
 date: 2025-09-12T00:00:00.000Z
-qblog_id: 5ffc2344-1ad4-43f2-894d-82434bbf9821
+qblog_id: 579a43b9-c2ac-4556-964a-a7a24579544b
 ---
 
 AI Agents generate better output when you have a set of rules that can be used by AI Agents every time you interact with them.

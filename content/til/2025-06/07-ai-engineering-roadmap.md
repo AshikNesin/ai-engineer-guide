@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-06-07T00:00:00.000Z
 description: null
-qblog_id: 9c4afb3c-555c-4dc2-b6ba-48db3ed2f4ff
+qblog_id: ce899e97-d60d-4cec-87bd-854f0770693d
 ---
 
 With all the buzz around AI. Getting started with AI Engineering feels overwhelming 🤯

@@ -7,7 +7,7 @@ tags:
   - ai-gateway
 status: published
 date: 2025-08-30T00:00:00.000Z
-qblog_id: e32d3bbb-0822-445f-8c51-939aca967a9f
+qblog_id: d860180f-d46f-4a6e-8c30-e1907c3a396b
 ---
 
 Vercel's [AI Gateway](https://aiengineerguide.com/blog/vercel-ai-gateway/) lets you use multiple LLMs across different AI providers just by changing a single line.

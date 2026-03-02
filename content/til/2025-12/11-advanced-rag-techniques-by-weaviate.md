@@ -6,7 +6,7 @@ tags:
   - books
 status: published
 date: 2025-12-11T00:00:00.000Z
-qblog_id: 13095ab9-2ee1-45ba-8b9c-6f506ecaa6a2
+qblog_id: 7696453f-b6fe-45ae-8b53-f3eaba150131
 ---
 
 Weaviate team has written a free ebook that covers some of the advanced RAG techniques

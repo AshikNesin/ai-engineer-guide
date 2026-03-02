@@ -6,7 +6,7 @@ tags:
   - claude-code
 status: published
 date: 2025-12-28T00:00:00.000Z
-qblog_id: 04481682-6454-44ca-bcdf-f5c884217c24
+qblog_id: 1c87cb9e-9796-4f6e-a0c8-95c393c2e52c
 ---
 
 It is interesting to know that Claude Code started as a **side project** by Boris Cherny (from Anthropic) which accounts for $1B in [annualized run-rate](https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone) now.

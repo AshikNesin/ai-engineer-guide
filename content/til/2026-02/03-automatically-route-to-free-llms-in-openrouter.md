@@ -6,7 +6,7 @@ tags:
   - free-llm
 status: published
 date: 2026-02-03T00:00:00.000Z
-qblog_id: 1042f043-f630-4e3c-8ea4-6a31cc0490e5
+qblog_id: 6c44fd47-a714-44a4-a493-773afd2e83af
 ---
 
 Instead of us manually setting free models, we can just use `openrouter:free` as model name, under the hood it will route to the different models that are free.

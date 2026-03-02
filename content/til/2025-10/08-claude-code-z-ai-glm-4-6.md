@@ -6,7 +6,7 @@ tags:
   - claude-code
 status: published
 date: 2025-10-08T00:00:00.000Z
-qblog_id: 29bcf11e-a36b-46ed-911e-b8bce6600770
+qblog_id: 069eaf06-dfd7-4380-8baf-70880551d19b
 ---
 
 Z.AI has recently released [GLM-4.6](https://docs.z.ai/guides/llm/glm-4.6) - a open source model that performs as good as Anthropic Sonnet 4 based on the benchmark.

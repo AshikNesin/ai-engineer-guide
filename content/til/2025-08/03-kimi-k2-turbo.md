@@ -6,7 +6,7 @@ tags:
 status: published
 date: 2025-08-03T00:00:00.000Z
 description: null
-qblog_id: b2defa91-f746-46b1-9735-73b6e5e24149
+qblog_id: 639d3f1e-171f-43bd-9901-2f73c2f52a7c
 via_url: https://x.com/kimi_moonshot/status/1951168907131355598
 ---
 

@@ -7,7 +7,7 @@ tags:
   - opus-4-1
 status: published
 date: 2025-11-15T00:00:00.000Z
-qblog_id: 0c8bb824-3c04-4b7f-abdf-1c0087ead1c3
+qblog_id: 0f968364-774f-475c-b69d-a7cc14747082
 ---
 
 Anthropic's latest AI models - Sonnet 4.5 & Opus 4.1 now supports **guaranteed structured outputs**

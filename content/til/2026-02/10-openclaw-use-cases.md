@@ -5,7 +5,7 @@ tags:
   - openclaw
 status: published
 date: 2026-02-10T00:00:00.000Z
-qblog_id: e56cd6cb-6ac4-467b-b20c-a121315406d6
+qblog_id: 69b04eca-3011-46e0-ab99-a75a1f3bc73e
 ---
 
 I've been playing around (like everyone else) with OpenClaw for couple of days now. Even though under the hood it leverages the same features that is supported in most modern LLM like tools support. It feels magical to see everything packed so well.

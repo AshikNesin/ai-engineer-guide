@@ -6,7 +6,7 @@ tags:
   - github-copilot
 status: published
 date: 2025-09-26T00:00:00.000Z
-qblog_id: c93adfea-6acc-40f6-801e-9c5b7a94d0bb
+qblog_id: d32117ba-f7de-4b39-acb2-16de43d34e88
 ---
 
 Another day, another agentic cli 😅

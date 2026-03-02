@@ -6,7 +6,7 @@ tags:
   - openrouter
 status: published
 date: 2025-12-07T00:00:00.000Z
-qblog_id: c071b3d6-4988-42cb-9194-e78b05bf7209
+qblog_id: 911b807f-edaa-4d46-a81a-f87ce046215f
 ---
 
 Open Router team has relased a detailed state of AI report based on the data that they've. It's pretty detailed. You might want to skim over it.

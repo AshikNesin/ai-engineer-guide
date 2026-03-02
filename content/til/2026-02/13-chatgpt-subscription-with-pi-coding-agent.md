@@ -6,7 +6,7 @@ tags:
   - chatgpt
 status: published
 date: 2026-02-13T00:00:00.000Z
-qblog_id: 3ae1cfe9-7dff-482b-83cb-0020b2f6d00d
+qblog_id: a0cb25aa-e16c-426c-ab7d-5470fc7e007d
 ---
 
 [pi.dev](https://pi.dev) is the minimal coding agent that powers the OpenClaw and I've been hearing many good things about it. 

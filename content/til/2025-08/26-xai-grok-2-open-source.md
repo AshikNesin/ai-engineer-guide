@@ -7,7 +7,7 @@ tags:
   - open-source
 status: published
 date: 2025-08-26T00:00:00.000Z
-qblog_id: a555b6ff-ac84-4afc-b554-50ed1ad17c6a
+qblog_id: 8af136fc-c869-455a-8a86-b0b3c42a9dc3
 ---
 
 xAI's Grok 2 is now [open source](https://huggingface.co/xai-org/grok-2). 

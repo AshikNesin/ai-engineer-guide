@@ -4,7 +4,7 @@ url: til/google-gemma-3-270m
 status: published
 date: 2025-08-15T00:00:00.000Z
 description: null
-qblog_id: f8f632c7-12e9-4dc5-a3ca-e4139c7b166d
+qblog_id: cf79db57-2ceb-4034-91e1-8e2bb403d5c3
 via_url: null
 ---
 

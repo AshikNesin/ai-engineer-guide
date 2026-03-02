@@ -6,7 +6,7 @@ tags:
   - glm-5
 status: published
 date: 2026-02-27T00:00:00.000Z
-qblog_id: 06423726-0d7b-4994-8454-b601af405523
+qblog_id: ed9fca87-33de-48f4-b4b6-c45782f3d7e5
 ---
 
 To use GLM-5 with [conductor](https://conductor.build/), you'll need to configure the respective env variable to override it.

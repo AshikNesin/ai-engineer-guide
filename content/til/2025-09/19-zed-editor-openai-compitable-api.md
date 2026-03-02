@@ -5,7 +5,7 @@ tags:
   - zed
 status: published
 date: 2025-09-19T00:00:00.000Z
-qblog_id: fff7e435-5aa9-441e-93e8-a1f509d49e4c
+qblog_id: a0312fd5-f6ba-4bc6-a7ea-85b690a31868
 ---
 
 Lately, I've started using Zed for any quick edits, it has a fast vibe as Sublime Text and it consumes very less memory when compared with VS Code forks like Cursor.

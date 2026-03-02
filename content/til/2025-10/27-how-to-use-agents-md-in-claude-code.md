@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-10-27T00:00:00.000Z
-qblog_id: ae1b33d9-7f1f-442d-b3a6-917e24fcfdff
+qblog_id: 87b7ffdb-8f08-4289-b564-31cefb9f4aae
 ---
 
 [AGENTS.md](https://agents.md/) is a open started for setting context for AI agents (think of README for the AI agents)

@@ -6,7 +6,7 @@ tags:
   - claude-opus-4-5
 status: published
 date: 2025-12-04T00:00:00.000Z
-qblog_id: e34acd11-7800-4804-a027-72d059516d72
+qblog_id: 4059e42c-6dc5-4173-903f-a6a541930660
 ---
 
 Currently, Google's Antigravity is in public preview and it is free to use right now (with agressive [rate limiting](https://antigravity.google/docs/plans) though irrespective of whether you have AI plan with them or not)

@@ -6,7 +6,7 @@ tags:
   - minimax-m2
 status: published
 date: 2025-11-01T00:00:00.000Z
-qblog_id: bafa0d78-7eed-4996-bc0c-23894562da92
+qblog_id: 55f31928-f86e-46f1-a2e7-40153a5d833a
 ---
 
 MiniMax M2 a new open source model (open weight) that is specifically built for coding & agentic workflows.

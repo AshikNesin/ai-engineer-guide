@@ -5,7 +5,7 @@ tags:
   - bookmark
 status: published
 date: 2025-11-09T00:00:00.000Z
-qblog_id: 08242d1d-c58f-4955-b92a-13a9edb04fac
+qblog_id: 8df47771-8972-401b-a345-bbcc21233b95
 ---
 
 I came across this funny but informative website that you can link to if someone uses AI as a citiation

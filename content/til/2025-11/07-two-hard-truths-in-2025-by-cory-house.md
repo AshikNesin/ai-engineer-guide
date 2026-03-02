@@ -5,7 +5,7 @@ tags:
   - bookmark
 status: published
 date: 2025-11-07T00:00:00.000Z
-qblog_id: aa0e5c80-b00c-462f-a860-d744031ebee2
+qblog_id: 56eb6032-59b1-48a5-804f-b590ba8a17a5
 ---
 
 I came across this tweet by Cory House, kind of thought provoking and factually correct 👇

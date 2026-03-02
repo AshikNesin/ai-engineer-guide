@@ -6,7 +6,7 @@ tags:
   - search-api
 status: published
 date: 2025-09-27T00:00:00.000Z
-qblog_id: c06e82af-2251-4327-b235-70eaf027978f
+qblog_id: c6c70f42-0178-48d0-8f5d-af16a1e81bd4
 ---
 
 We can now perform real-time search using Perplexity Search API similar to how [Exa.ai](https://exa.ai) or [Brave search](https://brave.com/search/api/) works.

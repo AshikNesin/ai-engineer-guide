@@ -7,7 +7,7 @@ tags:
   - glm-4-5
 status: published
 date: 2025-09-06T00:00:00.000Z
-qblog_id: f658b917-97c6-4217-a89a-219d04085e27
+qblog_id: 1b3815b0-436b-4d47-a4f1-0711f07c20f7
 ---
 
 Recently, we've talked about Z.ai's [GLM-4.5](/blog/claude-code-z-ai-glm-4-5/) which was performing as well as Anthropic's Sonnet 4 for coding.

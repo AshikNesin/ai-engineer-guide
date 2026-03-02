@@ -4,7 +4,7 @@ url: til/open-lovable
 status: published
 date: 2025-08-14T00:00:00.000Z
 description: null
-qblog_id: d62b7a18-b0c5-4af4-93a6-6074118fa20d
+qblog_id: c4b05a2d-444c-4c14-a25d-dfc2cab41e4b
 via_url: null
 ---
 

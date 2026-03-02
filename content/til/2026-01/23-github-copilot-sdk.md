@@ -5,7 +5,7 @@ tags:
   - github-copilot
 status: published
 date: 2026-01-23T00:00:00.000Z
-qblog_id: 84de3348-cf83-4a2a-9f3c-772417df599b
+qblog_id: 823133a9-093a-4eda-bc63-bdd3d17087f9
 ---
 
 GitHub Copilot team has released SDK for interacting using which we can interact with their CLI.

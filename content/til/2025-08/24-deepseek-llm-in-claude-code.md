@@ -6,7 +6,7 @@ tags:
   - claude-code
 status: published
 date: 2025-08-24T00:00:00.000Z
-qblog_id: 073b4bc7-da7f-477b-9306-6a9ec51821de
+qblog_id: ed0175f8-a8a8-4234-aebb-b34c6df9f131
 ---
 
 DeepSeek, via their platform, now has support for an Anthropic-like [API format](https://api-docs.deepseek.com/guides/anthropic_api) which means you can now use it with your Claude Code 🔥

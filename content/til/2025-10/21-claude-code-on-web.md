@@ -6,7 +6,7 @@ tags:
   - async-agent
 status: published
 date: 2025-10-21T00:00:00.000Z
-qblog_id: b31363d2-7f6b-4bd3-9c44-20e08415b7e5
+qblog_id: 14adb8e7-a618-43ed-a7fd-121499390768
 ---
 
 Anthropic has launched [Claude Code on Web](https://www.anthropic.com/news/claude-code-on-the-web) a async agent like [Google Jules](https://jules.google/) or [Cursor background agent](https://cursor.com/docs/background-agent)

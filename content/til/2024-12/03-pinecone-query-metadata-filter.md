@@ -6,7 +6,7 @@ tags:
   - snippets
 status: published
 date: 2024-12-03T00:00:00.000Z
-qblog_id: d6c1b6c8-9153-4725-bd26-3a62c7eec751
+qblog_id: 7b18b9e3-d93c-4703-9a8b-9b38772dcfad
 ---
 
 Sometime you might want to query records in [Pinecone](https://www.pinecone.io/) based on metadata.

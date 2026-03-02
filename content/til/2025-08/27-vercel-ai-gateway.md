@@ -7,7 +7,7 @@ tags:
   - ai-gateway
 status: published
 date: 2025-08-27T00:00:00.000Z
-qblog_id: 07041ca9-f614-4326-8ef3-8a20ee5220be
+qblog_id: a073ff87-5606-48c7-883d-dd5c1690952e
 ---
 
 Vercel has recently launched their AI Gateway using which you can interact with multiple LLM (more than 100+) with just a single line of code change.

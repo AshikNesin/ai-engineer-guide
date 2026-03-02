@@ -6,7 +6,7 @@ tags:
   - openrouter
 status: published
 date: 2025-12-20T00:00:00.000Z
-qblog_id: 83d7aae6-8cde-4f91-8fd5-7c794b6ea1ca
+qblog_id: 4ed2960a-92f4-4759-a21b-3a8fa96a32dc
 ---
 
 OpenRouter now supports Anthropic API shapes which means now we can use any models (320+) that is available in OpenRouter with Claude Code.

@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-01-28T00:00:00.000Z
-qblog_id: 27569d6c-dfe4-425b-b613-2819b9519dfc
+qblog_id: 77d7451c-dc97-4237-864b-23cddaed6a18
 ---
 
 Claude Code now lets you to set custom keybindings.

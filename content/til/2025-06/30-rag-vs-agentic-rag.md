@@ -8,7 +8,7 @@ tags:
 status: published
 date: 2025-06-30T00:00:00.000Z
 description: null
-qblog_id: e628b04f-882b-488a-b581-54b5474c0a05
+qblog_id: 7d7e8a0c-f192-47a9-a9a5-146406dffa6c
 via_url: https://blog.bytebytego.com/p/ep169-rag-vs-agentic-rag
 ---
 

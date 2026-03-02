@@ -8,7 +8,7 @@ tags:
 status: published
 date: 2025-01-26T00:00:00.000Z
 description: null
-qblog_id: bf5d360e-8000-49e5-a865-8c5bc8f8df14
+qblog_id: 0d64f3b4-ecfe-40d6-b4a0-397d3bfb02e7
 aliases:
   - blog/26-openai-operator-prompt
 ---

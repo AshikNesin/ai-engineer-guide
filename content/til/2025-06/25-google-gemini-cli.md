@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-06-25T00:00:00.000Z
 description: null
-qblog_id: bf477bc4-a887-4070-9980-d9112bbe8975
+qblog_id: be446d35-0129-4443-bd06-161518de600c
 ---
 
 Another day, Another Agent CLI 😜

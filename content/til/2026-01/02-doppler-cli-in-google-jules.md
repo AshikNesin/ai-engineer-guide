@@ -5,7 +5,7 @@ tags:
   - google-jules
 status: published
 date: 2026-01-02T00:00:00.000Z
-qblog_id: c6802e0f-f3c6-4267-b888-c3c1f9341670
+qblog_id: a8d21dce-cd30-4e13-8178-330857ae8d0b
 ---
 
 [Google Jules](https://jules.google.com/) is a cloud based coding agent where you can just select your repo, assign some task and it'll do the job in the cloud.

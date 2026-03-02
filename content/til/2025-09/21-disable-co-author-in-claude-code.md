@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-09-21T00:00:00.000Z
-qblog_id: dcf99b9a-a820-4a03-ab8f-d25a7b8201a0
+qblog_id: 6a2b327c-c2bc-4725-bc72-d1daabef56a7
 ---
 
 By default, if you commit code using Claude Code, then it adds **co-authored-by Claude** in those commits.

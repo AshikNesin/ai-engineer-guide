@@ -8,7 +8,7 @@ tags:
   - cheatsheet
 status: published
 date: 2025-08-18T00:00:00.000Z
-qblog_id: 1576208c-e635-4807-91b7-bbfc358d69f9
+qblog_id: f7abf79b-cb3e-47a9-bf80-30530132e976
 ---
 
 I came across OpenAI's recommendations on using GPT-5 for coding.

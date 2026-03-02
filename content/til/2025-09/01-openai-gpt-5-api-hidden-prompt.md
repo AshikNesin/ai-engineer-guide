@@ -6,7 +6,7 @@ tags:
   - gpt-5
 status: published
 date: 2025-09-01T00:00:00.000Z
-qblog_id: aee8196d-0eb4-40dd-813a-831fa658b008
+qblog_id: e1e6faa0-5b23-4dfe-95cb-b800db82267e
 ---
 
 Apparently OpenAI's GPT-5 **injects** a hidden system prompt on their end even if you use the API.

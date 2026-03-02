@@ -7,7 +7,7 @@ tags:
   - glm-coding-plan
 status: published
 date: 2026-02-15T00:00:00.000Z
-qblog_id: 11528d1f-8ceb-444f-9b3b-4dc0ac93152b
+qblog_id: e7e92afa-bdd5-4108-98b7-43f1c45a7630
 ---
 
 [pi.dev](https://pi.dev) is the minimal but heavily extensible coding agent that OpenClaw. I really like it's simplicity.

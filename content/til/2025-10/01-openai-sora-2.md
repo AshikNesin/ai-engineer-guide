@@ -6,7 +6,7 @@ tags:
   - openai
 status: published
 date: 2025-10-01T00:00:00.000Z
-qblog_id: d36a613b-bde3-4a06-ad95-b1798227c59e
+qblog_id: eb17ac8d-d619-40d0-9e10-d24650deb437
 ---
 
 OpenAI has recently released Sora 2.

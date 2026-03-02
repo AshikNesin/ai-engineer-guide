@@ -5,7 +5,7 @@ tags:
   - openai
 status: published
 date: 2025-10-09T00:00:00.000Z
-qblog_id: 32aec54a-bf84-42db-9d5e-5d800ae74dcd
+qblog_id: 37ec8550-c597-496c-83a3-9be3954e689b
 ---
 
 Matt Pocock has really good video about why OpenAI's AgentKit is workflow builder not a AI Agent

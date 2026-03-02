@@ -6,7 +6,7 @@ tags:
   - mcp
 status: published
 date: 2025-09-11T00:00:00.000Z
-qblog_id: 2754a370-32f9-4e28-bbcb-a1f9f531c032
+qblog_id: 13f40877-7fb8-41aa-b73d-f7a02b7ede98
 ---
 
 OpenAI's ChatGPT now has full support for MCP servers. You can connect any MCP server and use it as a tool in ChatGPT conversations.

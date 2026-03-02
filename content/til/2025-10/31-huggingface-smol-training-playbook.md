@@ -6,7 +6,7 @@ tags:
   - bookmark
 status: published
 date: 2025-10-31T00:00:00.000Z
-qblog_id: a8c42e54-c8a8-4725-b83c-e38786378172
+qblog_id: 52670a86-c6a5-4173-893e-cfe394cad332
 ---
 
 HuggingFace pre-training team has released a book on full pipeline of building a LLM like for example pre-training, post-training, infra, etc.

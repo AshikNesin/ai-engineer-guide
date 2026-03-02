@@ -4,7 +4,7 @@ url: til/state-of-ai-2024
 status: published
 date: 2024-12-25T00:00:00.000Z
 description: null
-qblog_id: d8608bf5-b243-4f19-bb16-819cb77128b9
+qblog_id: 2813eac8-bd8f-4a55-a094-fd834ee741cc
 via: https://www.youtube.com/watch?v=HM1d7kMebEI&ab_channel=LatentSpace
 draft: true
 ---

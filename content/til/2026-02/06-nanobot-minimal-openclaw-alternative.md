@@ -6,7 +6,7 @@ tags:
   - openclaw
 status: published
 date: 2026-02-06T00:00:00.000Z
-qblog_id: be45a777-1ab9-447a-808f-73917ade8f6a
+qblog_id: da034ff9-fba0-4cf3-a54e-f8984b3f7497
 ---
 
 If you want to understand how AI agents like [OpenClaw](https://openclaw.ai) under the hood, probably their codebase might feel too overwhelming with so many modules and things.

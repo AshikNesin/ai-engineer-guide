@@ -5,7 +5,7 @@ tags:
   - openai
 status: published
 date: 2025-09-05T00:00:00.000Z
-qblog_id: 158a367e-8a19-4d0e-ac9a-3768058b66cb
+qblog_id: 01ffe86d-e624-40da-867c-32383351e914
 ---
 
 > “OpenAI is scanning users’ ChatGPT conversations and reporting content to the police.”

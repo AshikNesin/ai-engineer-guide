@@ -3,7 +3,7 @@ title: Perplexity Pro Users Get $5 Free LLM API Credits Every Month
 url: til/free-llm-credits-for-perplexity-pro
 status: published
 date: 2025-08-17T00:00:00.000Z
-qblog_id: b9c2dda2-93f9-47ca-b037-58904c972ebc
+qblog_id: d5722b7a-002a-4ef5-9069-77e65ed4ba31
 ---
 
 Recently I came to know that you get $5 credit every month for Perplexity AI models if you're on Perplexity Pro plan.

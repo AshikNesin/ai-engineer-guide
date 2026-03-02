@@ -6,7 +6,7 @@ tags:
   - bookmark
 status: published
 date: 2025-12-08T00:00:00.000Z
-qblog_id: 2576d15b-b7e4-4748-9283-08a6fec5a075
+qblog_id: b6edaedc-969b-4ae8-ae0f-f8551d93f8a6
 ---
 
 Google Cloud team is doing [Advent of Agents](https://adventofagents.com/) similar to Advent of Code where they focus on a topic related to building an agent (on Google Cloud) for a day.

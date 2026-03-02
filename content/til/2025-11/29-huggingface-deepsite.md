@@ -5,7 +5,7 @@ tags:
   - huggingface
 status: published
 date: 2025-11-29T00:00:00.000Z
-qblog_id: 7b7d38e9-1af7-414a-9fe1-8861b30095cb
+qblog_id: 081bb9cb-d2ed-4567-a13e-abc8e2d4df1f
 ---
 
 Apparently HuggingFace has a AI powered website builder like bolt.new or Vercel's v0.

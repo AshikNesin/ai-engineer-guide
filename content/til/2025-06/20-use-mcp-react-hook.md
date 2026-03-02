@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-06-20T00:00:00.000Z
 description: null
-qblog_id: 3e0a1d20-03fa-4823-9d3c-7ae033ce3b2e
+qblog_id: 7de700ee-cf20-43ac-bfb8-8bbdc83a41fd
 via_url: https://blog.cloudflare.com/connect-any-react-application-to-an-mcp-server-in-three-lines-of-code/
 ---
 

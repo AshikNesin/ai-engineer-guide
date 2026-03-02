@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-11-03T00:00:00.000Z
-qblog_id: 92be154f-ff24-4ee6-b086-e00921d27bb0
+qblog_id: 9c88ff08-2108-4a12-9fa6-7740cbee9fc2
 ---
 
 There might cases in which you might not be able to set a static `ANTHROPIC_API_KEY` key and use Claude Code.

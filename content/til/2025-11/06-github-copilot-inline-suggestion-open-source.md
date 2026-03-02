@@ -6,7 +6,7 @@ tags:
   - open-source
 status: published
 date: 2025-11-06T00:00:00.000Z
-qblog_id: fe3f7aa9-4bcc-4dfe-afaf-333912f60d02
+qblog_id: 13a33c76-fcda-4424-bfa9-05f58c11e159
 ---
 
 Earlier Microsoft has open sourced **GitHub Copilot Chat** [extension](https://code.visualstudio.com/blogs/2025/06/30/openSourceAIEditorFirstMilestone).

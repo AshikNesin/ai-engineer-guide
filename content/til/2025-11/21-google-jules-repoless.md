@@ -5,7 +5,7 @@ tags:
   - google-jules
 status: published
 date: 2025-11-21T00:00:00.000Z
-qblog_id: de013cad-134f-41d4-ba85-bfb35779852b
+qblog_id: a1ffa792-da11-4a40-950c-e08c0c26bd13
 ---
 
 [Google Jules](https://jules.google.com/) has launched a new feature which will be useful for doing quick prototypes.

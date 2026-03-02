@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-06-21T00:00:00.000Z
 description: null
-qblog_id: 341a4c26-1770-4eab-9617-04e5f0941389
+qblog_id: 41083c1a-dced-46e9-9dcf-aa38db58c7d1
 ---
 
 By now, almost everyone who is using AI for code generation should be aware of [**Claude Code** ](https://www.anthropic.com/claude-code)— an awesome CLI-based agentic code generation tool.

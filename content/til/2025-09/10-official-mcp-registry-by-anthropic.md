@@ -6,7 +6,7 @@ tags:
   - anthropic
 status: published
 date: 2025-09-10T00:00:00.000Z
-qblog_id: a36b2ab4-5d01-4a60-ae14-bf2cb87b1f56
+qblog_id: 7e26d1d9-bd79-46bf-8bb5-dba0623922c9
 ---
 
 Anthropic has now officially launched MCP Registry.

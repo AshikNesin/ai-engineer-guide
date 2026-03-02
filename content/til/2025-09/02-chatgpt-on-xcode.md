@@ -7,7 +7,7 @@ tags:
   - xcode
 status: published
 date: 2025-09-02T00:00:00.000Z
-qblog_id: 2ebc7a09-ab0c-4a30-9fb3-8de4e3ee5d10
+qblog_id: c8c525a7-8910-4440-b80c-09e11d5b6633
 ---
 
 Latest versions of Xcode (like 26+) have a new [intelligence](https://developer.apple.com/documentation/Xcode/writing-code-with-intelligence-in-xcode) feature which lets you code much more efficiently on Xcode. 

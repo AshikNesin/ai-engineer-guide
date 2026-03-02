@@ -6,7 +6,7 @@ tags:
   - moonshot
 status: published
 date: 2025-11-08T00:00:00.000Z
-qblog_id: 0a941c1c-0fc7-4769-80b7-bcf66b9412b0
+qblog_id: a9e3f6c0-8401-4a94-a183-1a14f9df52b8
 ---
 
 Chinese AI company Moonshot has released their latest open source AI model **Kimi K2 Thinking** which comes with 1 trillion parameters. MoE, 32B active.

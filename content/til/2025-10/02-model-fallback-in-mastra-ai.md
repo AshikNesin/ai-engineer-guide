@@ -5,7 +5,7 @@ tags:
   - mastra-ai
 status: published
 date: 2025-10-02T00:00:00.000Z
-qblog_id: 30f1b2e9-f658-4d05-8b80-3d38335a7a9b
+qblog_id: 32ce9a9d-052d-4f98-a52c-ce19e3f65188
 ---
 
 [Mastra.ai](https://mastra.ai) is a TypeScript based agent framework which has lot of features that you need to build an AI app with with out making you learn so many framework specific thing like in case of Langchain.

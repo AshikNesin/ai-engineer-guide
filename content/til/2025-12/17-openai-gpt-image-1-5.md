@@ -6,7 +6,7 @@ tags:
   - gpt-image-1-5
 status: published
 date: 2025-12-17T00:00:00.000Z
-qblog_id: fe413aeb-7371-49bf-b129-913955bdba76
+qblog_id: bc2bb2ba-7750-411b-bcb8-a4c50ace9474
 ---
 
 OpenAI has released image generation model which is good as Google's Nano Banana.

@@ -6,7 +6,7 @@ tags:
   - bookmark
 status: published
 date: 2025-09-22T00:00:00.000Z
-qblog_id: e884db33-97d8-4e4d-b28c-11012acac864
+qblog_id: e53aba2d-fc89-44a1-bed4-fd3f5b32ae88
 ---
 
 I came across the [Tweet](https://x.com/svpino/status/1970098258296156454) by Santiago and can't agree more 💯

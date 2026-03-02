@@ -5,7 +5,7 @@ tags:
   - lmarena
 status: published
 date: 2025-10-12T00:00:00.000Z
-qblog_id: 255e614a-4f71-4325-863d-59bfa4a489a5
+qblog_id: 56e2cc3d-375f-4141-858a-439111594483
 ---
 
 As they say, "Use the right tool for the right job". A general purpose LLM like GPT-5 or Sonnet 4.5 might not be good if you want LLM with search capabilities.

@@ -5,7 +5,7 @@ tags:
   - bookmark
 status: published
 date: 2025-12-15T00:00:00.000Z
-qblog_id: 57ffdc31-0acb-45f0-a508-e6af207de29d
+qblog_id: 10a583fa-5500-40e1-b9a0-ba16dc608d3c
 ---
 
 Merriam-Webster has chosed [**Slop**](https://www.merriam-webster.com/dictionary/slop) as the word of the year

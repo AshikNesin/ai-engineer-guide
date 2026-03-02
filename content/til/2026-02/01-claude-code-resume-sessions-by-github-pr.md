@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-02-01T00:00:00.000Z
-qblog_id: e84bd281-155b-4636-af0b-f49b69ef1d68
+qblog_id: b4d6fa73-ed81-4546-ad92-2f35057eb4cd
 ---
 
 Claude Code now supports resuming sessions that are linked to a GitHub pull request with their new flag `--from-pr`

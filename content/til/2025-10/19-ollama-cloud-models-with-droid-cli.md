@@ -6,7 +6,7 @@ tags:
   - droid-cli
 status: published
 date: 2025-10-19T00:00:00.000Z
-qblog_id: 0fe33037-720c-42dd-a722-d57a9e922e20
+qblog_id: 745e5bbd-56f6-4747-b58f-5d718cb062f0
 ---
 
 Ollama [Cloud](https://ollama.com/cloud) lets you LLM model via API. You can think of it something like a basic AI gateway.

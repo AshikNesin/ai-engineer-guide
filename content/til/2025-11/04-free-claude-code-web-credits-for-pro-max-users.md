@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-11-04T00:00:00.000Z
-qblog_id: edc4f95c-7abb-44be-a979-62bdd2535972
+qblog_id: 9a873c3a-c33e-4f27-bb28-02b44f028583
 ---
 
 Anthropic Team is giving away free credits for Claude Code for web if you're paid user.

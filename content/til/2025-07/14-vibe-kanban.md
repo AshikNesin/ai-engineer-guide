@@ -6,7 +6,7 @@ tags:
 status: published
 date: 2025-07-14T00:00:00.000Z
 description: null
-qblog_id: 660d94ef-56b8-46e2-8a3a-e3a870e6e47a
+qblog_id: 2afae2b7-4d7a-440f-a166-ea6eb92adb00
 via_url: https://news.ycombinator.com/item?id=44533004
 ---
 

@@ -4,7 +4,7 @@ url: til/anthropic-api-openai-sdk-compatibility
 status: published
 date: 2025-03-04T00:00:00.000Z
 description: null
-qblog_id: d437ea98-8c80-4f6e-b590-8a0a218ebf9e
+qblog_id: f84de5ea-3a54-40d2-a8e9-ce3968aff319
 ---
 
 Migrating from one AI model-as-service provider to another is such a pain. They might have their own way of doing things which might not be supported by another provider.

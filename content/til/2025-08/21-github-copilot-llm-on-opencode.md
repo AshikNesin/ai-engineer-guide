@@ -6,7 +6,7 @@ tags:
   - github-copilot
 status: published
 date: 2025-08-21T00:00:00.000Z
-qblog_id: f55a9394-8a77-4733-99f4-2e563f0b0453
+qblog_id: 32039df8-795d-48c2-b981-18ed8eb24e32
 ---
 
 Today I learned that you can use **GitHub Copilot** models on [OpenCode](https://aiengineerguide.com/blog/opencode/)

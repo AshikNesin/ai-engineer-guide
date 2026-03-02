@@ -7,7 +7,7 @@ tags:
   - talk
 status: published
 date: 2025-09-03T00:00:00.000Z
-qblog_id: 6b583a03-aae3-456f-88bb-6b263b987df1
+qblog_id: ac33c17a-7c96-4a95-8bf1-ec758adb3c93
 ---
 
 I recently came across the [talk](https://www.sanity.io/blog/first-attempt-will-be-95-garbage) by Vincent Quigley regarding how he uses Claude Code.

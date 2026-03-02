@@ -5,7 +5,7 @@ tags:
   - cursor
 status: published
 date: 2026-01-20T00:00:00.000Z
-qblog_id: 7375a6d5-9466-4d2e-938b-2fe59df391c9
+qblog_id: 75410f59-3901-4f0c-b838-c9d04411eb6d
 ---
 
 Almost a year ago, AI models was struglging to do basic tool calling now it can build an entire app from scratch with just a single prompt.

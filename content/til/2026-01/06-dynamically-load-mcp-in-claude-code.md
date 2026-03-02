@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-01-06T00:00:00.000Z
-qblog_id: 038023cd-501e-4b36-852b-3ed379a4da37
+qblog_id: 401e963c-139c-4e8e-8129-52a0413cbf66
 ---
 
 In general, using MCP consumes lot of context window because all the tool metadata gets to sent to an LLM during every interaction.

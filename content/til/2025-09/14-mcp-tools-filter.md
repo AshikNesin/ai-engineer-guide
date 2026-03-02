@@ -5,7 +5,7 @@ tags:
   - mcp
 status: published
 date: 2025-09-14T00:00:00.000Z
-qblog_id: be73a03b-e769-4498-af5d-d17d80ace81d
+qblog_id: 9e5413bf-9960-4bfd-b1fb-42c8ac0a86fa
 ---
 
 Ever wondered why your context gets filled so soon in your AI IDE or AI Agents? 

@@ -6,7 +6,7 @@ tags:
   - bookmark
 status: published
 date: 2025-11-20T00:00:00.000Z
-qblog_id: 81eeb6b4-8bbf-4882-a5ed-2cdf7388ad33
+qblog_id: 42bb865d-fc9e-4e21-8076-b4a17a1e0691
 ---
 
 OpenAI has released their latest model `GPT‑5.1-Codex-Max` which is focused on agentic coding.

@@ -3,7 +3,7 @@ title: How to set Multiple System Prompts with Anthropic's Claude API
 url: til/multiple-system-prompts-with-anthropic-api
 status: published
 date: 2026-01-09T00:00:00.000Z
-qblog_id: b4107a9e-4aee-4272-b924-4895ed520536
+qblog_id: c29da84a-508e-49cf-9ea9-1e92aa18118d
 ---
 
 Sometime you might want to send multiple system prompts when making API request to Anthropic LLM like Sonnet 4.5 or Opus 4.5.

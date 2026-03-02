@@ -8,7 +8,7 @@ tags:
   - z-ai
 status: published
 date: 2025-09-15T00:00:00.000Z
-qblog_id: 639b65d7-13bd-4795-9b03-b2f2af7896c6
+qblog_id: a0e0d7ad-0099-471c-92a4-d36de1ffe83a
 ---
 
 [Codex CLI](https://github.com/openai/codex) is a coding agent similar to Claude Code from OpenAI.

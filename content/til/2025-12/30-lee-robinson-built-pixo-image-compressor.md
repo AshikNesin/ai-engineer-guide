@@ -6,7 +6,7 @@ tags:
   - lee-robinson
 status: published
 date: 2025-12-30T00:00:00.000Z
-qblog_id: c1c861a1-a01c-462f-96a4-1b95122e7261
+qblog_id: ec208568-625c-4f67-a577-bdd3410c39ef
 ---
 
 Lee Robinson has built a image compression app in Rust with zero depedency completely from scratch with AI agents.

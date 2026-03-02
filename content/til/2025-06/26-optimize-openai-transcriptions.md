@@ -6,7 +6,7 @@ tags:
 status: published
 date: 2025-06-26T00:00:00.000Z
 description: null
-qblog_id: 97bd6765-89bf-45b9-a6f8-218c274adcd2
+qblog_id: cc4c11d2-fda0-4733-87d4-7f0741a50200
 via_url: https://x.com/adriaandotcom/status/1938118285045993584
 ---
 

@@ -6,7 +6,7 @@ tags:
   - glm-5
 status: published
 date: 2026-02-14T00:00:00.000Z
-qblog_id: 4356c7ff-2fdb-42a6-b930-346d09066ae2
+qblog_id: 2179b7f7-31a4-445b-b1e2-5eab4e418eb8
 ---
 
 You can use `GLM-5` model for free with [Modal.com](https://modal.com) until **April 30th, 2026**

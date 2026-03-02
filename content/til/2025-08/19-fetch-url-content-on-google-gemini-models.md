@@ -5,7 +5,7 @@ tags:
   - google-gemini
 status: published
 date: 2025-08-19T00:00:00.000Z
-qblog_id: c5dac5f5-0c94-40ba-b670-086babc4b285
+qblog_id: d36f7888-9615-4610-a9f3-74e298f1de79
 ---
 
 Google's Gemini LLM can now have support for automatically fetching contents from URL using their `URL context tool`

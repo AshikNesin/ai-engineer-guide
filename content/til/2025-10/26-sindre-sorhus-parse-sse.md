@@ -6,7 +6,7 @@ tags:
   - sse
 status: published
 date: 2025-10-26T00:00:00.000Z
-qblog_id: 479bb378-d4bb-43b0-8f8f-72405c64b027
+qblog_id: cbde0990-dde9-4a1e-93dd-6a68fade29ec
 ---
 
 When working with Server-Sent Events (SSE) response format in API, you have to handle lot of things especially if you're using native Fetch API.

@@ -5,7 +5,7 @@ tags:
   - z-ai
 status: published
 date: 2025-11-27T00:00:00.000Z
-qblog_id: ad613bb2-954a-4871-9269-556ccf997e73
+qblog_id: cc74ee89-e5e9-4c0e-8b8b-e35cee11d7c6
 ---
 
 z.ai is currently offering black friday offer for their [GLM Coding Plan](https://go.nesin.io/glm). With it you can use latest GLM models like GLM 4.6 which performs as good as Sonnet 4 model. The best part is that you can use it with Claude Code and other various AI coding agents.

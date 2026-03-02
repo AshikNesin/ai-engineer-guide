@@ -8,7 +8,7 @@ tags:
 status: published
 date: 2025-06-23T00:00:00.000Z
 description: null
-qblog_id: 77b0c34b-6430-4d9a-a6a0-7d5af8b3e0b3
+qblog_id: 4a21cb1d-b2bd-4969-9e7a-b969e68b0375
 ---
 
 I came across this prompt leak of [Cluely](https://cluely.com/) by Jack Cable (apparently it is exposed in their desktop source code)

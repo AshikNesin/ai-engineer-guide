@@ -5,7 +5,7 @@ tags:
   - anthropic
 status: published
 date: 2025-10-18T00:00:00.000Z
-qblog_id: c531eb79-b532-451d-a56e-55d7070ff5e7
+qblog_id: 3d995e29-2943-486c-901e-dd96539bea52
 ---
 
 Anthropic has released [Claude Skills](https://www.anthropic.com/news/skills) a new way to guide AI agents to do a certain tasks. It looks similar to AGENTS.md.

@@ -6,7 +6,7 @@ tags:
 status: published
 date: 2025-07-08T00:00:00.000Z
 description: null
-qblog_id: 1a90e3e4-1563-449b-8c37-44d67a113587
+qblog_id: 42fd38db-27f8-43cc-838a-c89d34697a4b
 via_url: https://github.com/swyxio/swyxdotio/issues/536
 ---
 

@@ -5,7 +5,7 @@ tags:
   - openai
 status: published
 date: 2025-11-14T00:00:00.000Z
-qblog_id: f1f8657a-131e-4ab5-8b14-1ae854bdbae0
+qblog_id: 9b891f73-2dda-40ef-8ec7-a8ad58c6d0d7
 ---
 
 When we use AI to edit our code, let's say one-line bug fix or trying to rename a function. 

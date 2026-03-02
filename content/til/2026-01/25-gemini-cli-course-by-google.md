@@ -6,7 +6,7 @@ tags:
   - gemini-cli
 status: published
 date: 2026-01-25T00:00:00.000Z
-qblog_id: f84b6978-e529-4e94-a365-9c6d4351cb0e
+qblog_id: b534de53-9b48-4527-ae40-9c6b3601679e
 ---
 
 Google Team has released a short course of Gemini CLI on [DeepLearning.AI](https://www.deeplearning.ai/short-courses/gemini-cli-code-and-create-with-an-open-source-agent/)

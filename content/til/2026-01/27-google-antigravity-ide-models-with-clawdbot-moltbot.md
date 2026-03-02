@@ -7,7 +7,7 @@ tags:
   - google-antigravity
 status: published
 date: 2026-01-27T00:00:00.000Z
-qblog_id: 88e911e9-dcb1-4119-ac0e-5f6246ec4852
+qblog_id: 4e4a3ca1-3b83-4bce-84bb-68a8b75bd28a
 ---
 
 You can actually use Google Antigravity IDE models with [Moltbot](https://www.molt.bot/)

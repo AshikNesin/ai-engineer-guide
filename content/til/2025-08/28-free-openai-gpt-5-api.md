@@ -7,7 +7,7 @@ tags:
   - ai-gateway
 status: published
 date: 2025-08-28T00:00:00.000Z
-qblog_id: fbfe0889-d298-475a-a95f-d35a537d4b28
+qblog_id: 15545534-af43-4c41-8b9f-ed153f010b5a
 ---
 
 Vercel's [AI Gateway](https://aiengineerguide.com/blog/vercel-ai-gateway/) is a unified interface for interacting with multiple LLMs across different providers. 

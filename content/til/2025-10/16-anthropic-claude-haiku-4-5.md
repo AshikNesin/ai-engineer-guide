@@ -6,7 +6,7 @@ tags:
   - claude-haiku-4-5
 status: published
 date: 2025-10-16T00:00:00.000Z
-qblog_id: 6575c2fe-09a0-4f29-becd-69e619d888fe
+qblog_id: 8899f970-1856-48f7-81ba-02f4d9176695
 ---
 
 Anthropic has released Claude Haiku 4.5 (`claude-haiku-4-5-20251001`) their latest **small model** which is good for **low-latency tasks** where you need speed/cost more than being accurate.

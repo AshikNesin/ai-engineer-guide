@@ -5,7 +5,7 @@ tags:
   - tools
 status: published
 date: 2026-01-08T00:00:00.000Z
-qblog_id: 969ceeae-afe4-4e7e-a337-8c9b6818d7d5
+qblog_id: d231b4d8-de21-4f47-82a9-f26563a62a16
 ---
 
 Aiden Bai has recently released [repogrep](https://app.ami.dev/repogrep) using which you can quickly search anything in a public repo. 

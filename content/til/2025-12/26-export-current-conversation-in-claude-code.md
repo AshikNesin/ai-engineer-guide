@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-12-26T00:00:00.000Z
-qblog_id: 070d52d2-0090-442d-9f6f-c93d574f29df
+qblog_id: 4889315e-a367-4b79-83b4-3bb37d0f884b
 ---
 
 In Claude Code, we can easily export the conversation by typing `/export`

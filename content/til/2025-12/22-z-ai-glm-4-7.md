@@ -7,7 +7,7 @@ tags:
   - glm-coding-plan
 status: published
 date: 2025-12-22T00:00:00.000Z
-qblog_id: d6323749-6630-475d-9510-4c8c058d095d
+qblog_id: ae7fdd9b-1768-4db6-b484-b3a8bd3c10b3
 ---
 
 z.ai team has released their latest LLM GLM-4.7 - primirily it has the following improvements:

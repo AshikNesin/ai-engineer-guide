@@ -5,7 +5,7 @@ tags:
   - anthropic
 status: published
 date: 2025-12-03T00:00:00.000Z
-qblog_id: c7dc20a5-178a-424a-ac1a-d167318dca2b
+qblog_id: 48b3d0db-4933-40a5-952d-c99a110cfbd6
 ---
 
 In an interesting turn on event, Anthropic has bought [Bun](https://bun.com) - JavaScript runtime that comes with batteries included like bundler, package manager, etc. 

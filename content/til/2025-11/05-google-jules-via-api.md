@@ -6,7 +6,7 @@ tags:
   - async-agent
 status: published
 date: 2025-11-05T00:00:00.000Z
-qblog_id: d55b831d-8b59-4fa1-95bc-8034553eedc8
+qblog_id: 97ffd79e-67f1-44c8-8657-57738f428305
 ---
 
 [Google Jules](https://jules.google/) now support triggering the triggering the background/cloud agent via API. 

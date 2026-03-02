@@ -6,7 +6,7 @@ tags:
   - learn
 status: published
 date: 2025-12-05T00:00:00.000Z
-qblog_id: 5311412e-c376-4e8f-b5e9-f9345e2e3096
+qblog_id: ac6f87c2-c1c1-4d4b-a0d7-122fdc2194d0
 ---
 
 HuggingFace team has released LLM Evaluation Guidebook v2. In it they've talked about how to do **LLM evaluation** with really good diagrams and easy to read content.

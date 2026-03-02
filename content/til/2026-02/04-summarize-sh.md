@@ -5,7 +5,7 @@ tags:
   - summarize-sh
 status: published
 date: 2026-02-04T00:00:00.000Z
-qblog_id: 1221e106-b0e2-4289-a08d-0fcb44be0f5e
+qblog_id: 8d9d149c-ce6a-4fb5-a5d2-85b9c31bf877
 ---
 
 I came across [summarize.sh](https://summarize.sh) which lets you quickly summarize a link/youtube video, etc. It is built by Peter Steinberger (the one behind OpenClaw)
