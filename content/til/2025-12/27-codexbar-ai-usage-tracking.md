@@ -7,7 +7,7 @@ tags:
   - claude-code
 status: published
 date: 2025-12-27T00:00:00.000Z
-qblog_id: 1b0b148a-11b6-4fe5-b9ae-742334310d59
+qblog_id: 97fcc9fe-7cf4-4192-bfa1-bcf102a343db
 ---
 
 [CodexBar](https://codexbar.app/) allows you to keep track of your AI usage so that you do not get rate limited when you needed the most.

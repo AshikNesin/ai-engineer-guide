@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-01-21T00:00:00.000Z
-qblog_id: e9978f2f-f683-4139-aa7b-3bf2197c76e6
+qblog_id: c0ce57f0-ba49-42fb-a2ac-3d5aed564969
 ---
 
 Just append this in your `~/.claude/CLAUDE.md`

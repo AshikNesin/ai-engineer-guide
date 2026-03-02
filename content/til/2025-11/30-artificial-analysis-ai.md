@@ -6,7 +6,7 @@ tags:
   - benchmark
 status: published
 date: 2025-11-30T00:00:00.000Z
-qblog_id: e10e721f-f482-4a68-ab3d-84700baea814
+qblog_id: 3c0950ca-cd3f-4ad4-8143-2875878258cc
 ---
 
 When picking a model for a particular use case we need to have some kind of data points like what's the speed, cost, accuracy & how it does better than X model and things like that.

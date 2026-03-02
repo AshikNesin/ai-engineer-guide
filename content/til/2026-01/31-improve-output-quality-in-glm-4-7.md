@@ -5,7 +5,7 @@ tags:
   - glm-4-7
 status: published
 date: 2026-01-31T00:00:00.000Z
-qblog_id: 22c43ae5-1efe-4cb4-8a37-d4558aa76110
+qblog_id: 8cf1f784-4b65-4c64-9cfc-8c99ae7aad63
 ---
 
 GLM 4.7 is one of the best open-weight AI model available today which is almost as good as propertoery models from Anthropic / OpenAI / Google.

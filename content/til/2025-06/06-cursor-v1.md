@@ -6,7 +6,7 @@ tags:
 status: published
 date: 2025-06-06T00:00:00.000Z
 description: null
-qblog_id: c85eb500-a40d-481c-9154-7fe83f88e4a9
+qblog_id: cc9f18f6-9f14-4344-8329-1a428d21643e
 ---
 
 [Cursor](https://cursor.com) has released v1 🥳

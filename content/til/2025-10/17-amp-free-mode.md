@@ -6,7 +6,7 @@ tags:
   - ad-supported
 status: published
 date: 2025-10-17T00:00:00.000Z
-qblog_id: a978c30f-c2dc-4d0f-92aa-5faf193e6e4f
+qblog_id: db2a38d5-b87d-489b-9b98-91c234e6b1eb
 ---
 
 [Amp](https://ampcode.com/) by Sourcegraph is coding agent that is similar to Claude Code.

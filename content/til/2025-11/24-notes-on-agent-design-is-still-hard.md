@@ -6,7 +6,7 @@ tags:
   - armin-ronacher
 status: published
 date: 2025-11-24T00:00:00.000Z
-qblog_id: 53d732e8-7db3-4f73-aaf9-3d587bc54ce1
+qblog_id: 13d28569-4abd-48cd-b1af-ee9bdaa383b3
 ---
 
 Armin has written an interesting blog post about why building agents are still hard.

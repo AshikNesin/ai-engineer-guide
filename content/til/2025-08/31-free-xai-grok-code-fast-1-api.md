@@ -7,7 +7,7 @@ tags:
   - ai-gateway
 status: published
 date: 2025-08-31T00:00:00.000Z
-qblog_id: e718aaf1-ee6d-4cdf-b822-974fd7999f71
+qblog_id: 0b4b278d-6369-4721-b42a-2d1f4dfb7efc
 ---
 
 xAI's Grok Code Fast (which was called Sonic in stealth mode) is model that is specifically built for **autonomous  development (coding)** 

@@ -5,7 +5,7 @@ tags:
   - glm-5
 status: published
 date: 2026-02-11T00:00:00.000Z
-qblog_id: 797feb3c-94a5-463b-a3f7-adac72ff6113
+qblog_id: e8bf2e38-0712-450e-8852-c08b64e285fb
 ---
 
 GLM-5 is getting launched now. Even though there is no offical annoncement about API support. If we just set the model id as `glm-5` it does respond to it.

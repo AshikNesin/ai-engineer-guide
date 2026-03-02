@@ -6,7 +6,7 @@ tags:
   - google-antigravity
 status: published
 date: 2026-01-10T00:00:00.000Z
-qblog_id: b093d5cc-8cb0-4ae5-87b5-6e3a8f7eb00e
+qblog_id: 243fbe0d-e5fb-4960-b33e-e239a3c153c2
 ---
 
 [OpenCode](https://opencode.ai) is an open source alternative to Claude Code which everyone seem to like recently it has tons of features like web support, using other AI APIs (bring your own keys), etc

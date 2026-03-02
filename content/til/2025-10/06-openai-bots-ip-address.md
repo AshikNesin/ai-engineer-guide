@@ -5,7 +5,7 @@ tags:
   - openai
 status: published
 date: 2025-10-06T00:00:00.000Z
-qblog_id: 80200355-b8e2-4456-89bf-f83968cb78f9
+qblog_id: 8f0be697-1020-4691-8458-fd6892d1b2e9
 ---
 
 OpenAI has web crawlers that is used to interact with the online content like website/blog, etc to get more context. They can be either user request (for enable when we use web search feature in ChatGPT, it fetchs the real time context from the internet)

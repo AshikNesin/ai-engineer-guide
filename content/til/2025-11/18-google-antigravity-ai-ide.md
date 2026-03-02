@@ -6,7 +6,7 @@ tags:
   - google-antigravity
 status: published
 date: 2025-11-18T00:00:00.000Z
-qblog_id: a84d6d91-4fec-40ea-af45-d04684349c4d
+qblog_id: cc5d2b1f-8539-4561-8b78-f91ff3b454b7
 ---
 
 Google has launched AI Editor similar to Cursor (yes, it is also a fork of VS Code) - [Antigravity](https://antigravity.google/)

@@ -6,7 +6,7 @@ tags:
   - opencode
 status: published
 date: 2026-01-15T00:00:00.000Z
-qblog_id: 909746c8-bdbd-48bb-88ed-565fba93f73a
+qblog_id: 68ee2df1-6c20-4855-a923-fdc4adcfdcb6
 ---
 
 OpenCode now has first class support for GitHub Copilot which means you all the models that you get with the Copilot subscription with it 😎

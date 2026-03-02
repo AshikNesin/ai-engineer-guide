@@ -8,7 +8,7 @@ tags:
   - sonnet-4
 status: published
 date: 2025-08-29T00:00:00.000Z
-qblog_id: d60af334-783b-48e7-9d43-6851eb4a266c
+qblog_id: f2b85461-cd56-4521-a573-7ab64db882e4
 ---
 
 Vercel's [AI Gateway](https://aiengineerguide.com/blog/vercel-ai-gateway/) lets you use multiple LLMs across different AI providers just by changing a single line.

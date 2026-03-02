@@ -5,7 +5,7 @@ tags:
   - minimax-m2
 status: published
 date: 2025-11-11T00:00:00.000Z
-qblog_id: 1e191977-6d7b-4064-88bf-36df31573686
+qblog_id: 2b45f3be-7483-4657-8b71-e1db93c5b4a7
 ---
 
 If you ever wondered how Claude Code works under the hood then [MiniAgent](https://github.com/MiniMax-AI/Mini-Agent) by MiniMax team is a really good place to start.

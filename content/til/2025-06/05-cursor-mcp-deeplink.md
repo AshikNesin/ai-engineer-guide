@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-06-05T00:00:00.000Z
 description: null
-qblog_id: 6ff833a6-ded5-4b64-a159-8fd354cd1b97
+qblog_id: 8382536d-70ac-4b30-8a36-11f5a7ba363b
 ---
 
 [Cursor](https://cursor.com) now has support for MCP installation Deeplink. 

@@ -8,7 +8,7 @@ tags:
 status: published
 date: 2025-02-24T00:00:00.000Z
 description: null
-qblog_id: bfb6f030-f07b-4d77-8365-b1ab9d042d25
+qblog_id: 923cd23a-2ab1-4151-8f50-34ef9e90caab
 via_url: https://www.youtube.com/watch?v=D6v5rlqUIc8&ab_channel=AIEngineer
 ---
 

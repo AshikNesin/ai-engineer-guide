@@ -4,7 +4,7 @@ url: til/deepseek-r1-reasoning-context
 status: published
 date: 2025-01-27T00:00:00.000Z
 description: null
-qblog_id: 40180006-a637-4995-90ab-5663912ad5eb
+qblog_id: 89c2ac28-399f-44e5-890f-72d3fb46406a
 ---
 
 Deepseek R1 is the talk of the town lately. It's pretty much on par with OpenAI's o1 model. 

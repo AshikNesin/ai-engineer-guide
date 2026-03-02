@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-03-01T00:00:00.000Z
-qblog_id: 3316897f-a149-405c-8299-f2b054377400
+qblog_id: 67de341c-c607-4608-8bfb-bdfd48a129ae
 ---
 
 If you ever wondered to use Claude Code as your 24x7 on-call engineer who can alert you as if something needs you further attention.

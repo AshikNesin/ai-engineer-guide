@@ -6,7 +6,7 @@ tags:
   - build-llm
 status: published
 date: 2025-10-15T00:00:00.000Z
-qblog_id: eb8c5ff7-96d0-4ffb-ac7b-bc8010f651f0
+qblog_id: 030602c6-d9f6-4fc6-b5d2-7e57f3139f71
 ---
 
 Andrej Karpathy has recently released [nanochat](https://github.com/karpathy/nanochat) where he builds a ChatGPT like LLM from scratch purely for the purpose of learning.

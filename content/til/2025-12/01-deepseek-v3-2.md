@@ -5,7 +5,7 @@ tags:
   - deepseek
 status: published
 date: 2025-12-01T00:00:00.000Z
-qblog_id: 7e98187e-ef94-4071-9c7d-e45b716365e1
+qblog_id: 70d1839f-db5c-4f12-bf7f-4bf347ab4f6e
 ---
 
 DeepSeek has launched two models that rivals the current closed source SOTA models like OpenAI GPT 5 High, Gemini 3.0 Pro, etc

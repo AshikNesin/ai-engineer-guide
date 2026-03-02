@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-07-25T00:00:00.000Z
 description: null
-qblog_id: 445c0fb6-ef9c-4a5f-85c0-4764fdb21817
+qblog_id: 5f0e4380-6889-4172-8e0c-332e223da7e1
 via_url: https://vercel.com/blog/grep-a-million-github-repositories-via-mcp
 ---
 

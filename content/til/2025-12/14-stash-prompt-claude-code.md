@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-12-14T00:00:00.000Z
-qblog_id: 345e3e07-827e-4e09-a24e-2fe29a43acb4
+qblog_id: a0871a07-4082-4746-9d95-9874908804ff
 ---
 
 When we have a very long prompt written in Claude code and suddenly need to run something else in it. 

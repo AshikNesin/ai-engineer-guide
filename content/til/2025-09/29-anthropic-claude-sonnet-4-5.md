@@ -6,7 +6,7 @@ tags:
   - anthropic
 status: published
 date: 2025-09-29T00:00:00.000Z
-qblog_id: cf3d6f0c-a450-4cbe-82ce-8a4a87ec53ab
+qblog_id: 6a8e3972-83dc-4838-b5f3-6a2d52989515
 ---
 
 Anthropic has recently Claude Sonnet 4.5 which is a successor to Sonnet 4.

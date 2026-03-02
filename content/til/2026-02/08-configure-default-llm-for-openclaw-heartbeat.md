@@ -5,7 +5,7 @@ tags:
   - openclaw
 status: published
 date: 2026-02-08T00:00:00.000Z
-qblog_id: e48e2813-1d0b-4be0-af81-b592ff21dae7
+qblog_id: 5aea49f8-51f4-4d25-9d42-cd33b3168425
 ---
 
 By using faster + cheaper model for OpenClaw heartbeat, we can save the performance and also LLM cost. 

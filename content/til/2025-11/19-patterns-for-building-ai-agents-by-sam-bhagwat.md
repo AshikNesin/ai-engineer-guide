@@ -6,7 +6,7 @@ tags:
   - bookmark
 status: published
 date: 2025-11-19T00:00:00.000Z
-qblog_id: 4646a87a-0832-4132-811e-07c85ddc658c
+qblog_id: 771d4b58-8614-4b69-9854-5640f0dfc6a9
 ---
 
 Mastra team has relased their 2nd editon of **Patterns for Building AI Agents**

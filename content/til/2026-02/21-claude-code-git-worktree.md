@@ -5,7 +5,9 @@ tags:
   - claude-code
 status: published
 date: 2026-02-21T00:00:00.000Z
+qblog_id: ad91c13d-1a4b-49b8-bc43-ebf13974c67e
 ---
+
 Claude Code now has built-in support for [git worktree](https://git-scm.com/docs/git-worktree).
 
 You can use this feature by passing `--worktree` arg when starting claude code

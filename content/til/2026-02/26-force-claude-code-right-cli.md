@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-02-26T00:00:00.000Z
-qblog_id: 374f9ace-bed4-49f1-b0af-7fe45f7a7c77
+qblog_id: b3bc8047-0f48-4cc0-91f9-c714b2998221
 ---
 
 Instead of having all the instructions on your CLAUDE.md, what you can do is leverage their [hooks](https://code.claude.com/docs/en/hooks) functionality

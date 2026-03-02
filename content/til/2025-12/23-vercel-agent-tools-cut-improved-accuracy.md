@@ -7,7 +7,7 @@ tags:
   - case-study
 status: published
 date: 2025-12-23T00:00:00.000Z
-qblog_id: ba09586d-e51f-4712-af1c-7b5e46999fc2
+qblog_id: 5986c076-8965-48f1-ab8a-b2b028f13b0e
 ---
 
 Vercel's engineering team has built their own internal text-to-SQL agent (d0) with many custom tools, prompt engineering, context management and all the magic that we need to build an AI app.

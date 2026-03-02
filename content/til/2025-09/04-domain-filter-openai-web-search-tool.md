@@ -6,7 +6,7 @@ tags:
   - web-scraping
 status: published
 date: 2025-09-04T00:00:00.000Z
-qblog_id: dca70f66-3fbc-48e0-8ce4-be882ea745dc
+qblog_id: 2977b0e7-94cd-4475-a645-891e2cb2cfa0
 ---
 
 OpenAI finally has support for domain-level filtering in their [web search tool](/blog/openai-web-search-tool/)

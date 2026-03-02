@@ -6,7 +6,7 @@ tags:
   - browser
 status: published
 date: 2025-09-07T00:00:00.000Z
-qblog_id: f40c682d-54bf-4b98-a820-414b245f947f
+qblog_id: 4a6ca7f4-e826-4d0f-b2f5-dcf2b8a49ece
 ---
 
 I've recently switched to [Zen Browser](https://zen-browser.app/mods/) for daily use. It is built on top of Firefox.

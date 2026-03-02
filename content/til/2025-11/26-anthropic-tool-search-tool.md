@@ -6,7 +6,7 @@ tags:
   - tools
 status: published
 date: 2025-11-26T00:00:00.000Z
-qblog_id: 4a3c2e0f-b08e-4b9a-b068-1d72cbe73897
+qblog_id: eb10f985-b0cb-4213-bfdb-d217adc9544c
 ---
 
 One of the problem with MCP is that it pollutes the context window with so many token that might be irrelevant to the task that youre doing 

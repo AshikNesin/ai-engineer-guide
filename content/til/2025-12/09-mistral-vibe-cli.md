@@ -7,7 +7,7 @@ tags:
   - cli-agent
 status: published
 date: 2025-12-09T00:00:00.000Z
-qblog_id: cb3fe3dc-4555-41d5-a47f-65031ad7d980
+qblog_id: d86bb653-4641-45cd-9151-37ae10d63e6b
 ---
 
 Mistral team has released their agentic coding CLI like Claude Code, Codex, OpenCode, etc

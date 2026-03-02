@@ -3,7 +3,7 @@ title: How to Install Agent Skills Easily Using add-skill package
 url: til/add-agent-skills-using-add-skill
 status: published
 date: 2026-01-16T00:00:00.000Z
-qblog_id: c4e81eae-b012-4196-a513-a46be6e9474a
+qblog_id: 959ce007-ca7b-49b5-b216-3c107bd018fa
 ---
 
 Agent Skills are reusable capabilities that AI agents can apply **automatically** when a request matches the skill's description.

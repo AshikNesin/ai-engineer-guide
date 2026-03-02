@@ -6,7 +6,7 @@ tags:
   - ai-adk
 status: published
 date: 2025-12-24T00:00:00.000Z
-qblog_id: ee1055b3-7d62-4c3c-a37e-ea953ce3e044
+qblog_id: 0221d520-c6f0-444a-9b5a-583fdaef9553
 ---
 
 Vercel has released [AI SDK 6](https://vercel.com/blog/ai-sdk-6)

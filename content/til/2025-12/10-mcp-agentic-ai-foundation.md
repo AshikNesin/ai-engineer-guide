@@ -5,7 +5,7 @@ tags:
   - mcp
 status: published
 date: 2025-12-10T00:00:00.000Z
-qblog_id: 466a8a6b-9919-42c5-ad50-d30c115e1130
+qblog_id: c72a4ed6-ed5b-4639-96f7-b760d6fb95c6
 ---
 
 [Modal Context Protocol](https://modelcontextprotocol.io) is now part of [Agentic AI Foundation](https://aaif.io/) which is under **Linux Foundation**

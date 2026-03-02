@@ -6,7 +6,7 @@ tags:
   - specification
 status: published
 date: 2026-01-30T00:00:00.000Z
-qblog_id: 8cc14223-d694-4a3c-9887-486c9ce49318
+qblog_id: 2f90207c-19ac-4155-871d-5674a5a431e8
 ---
 
 Cursor team has published `RFC` for Agent Trace an open specification.

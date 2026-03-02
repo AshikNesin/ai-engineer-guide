@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-07-01T00:00:00.000Z
 description: null
-qblog_id: abb23b70-7ef3-477f-b668-8e1d3cb351ac
+qblog_id: 5107d6c2-9cc9-4ac0-9882-10c39ee355cf
 via_url: https://x.com/ashtom/status/1939724483448717369
 ---
 

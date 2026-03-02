@@ -5,7 +5,7 @@ tags:
   - neural-network
 status: published
 date: 2025-11-28T00:00:00.000Z
-qblog_id: e2eef013-42b1-4a13-87da-3c5841af3858
+qblog_id: 4b68c1bf-4ac9-4405-964f-dc764abcc074
 ---
 
 If you ever wondered what neural networks are and prefer to learn about it visually then you might find this interesting

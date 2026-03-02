@@ -5,7 +5,7 @@ tags:
   - mcp
 status: published
 date: 2025-09-23T00:00:00.000Z
-qblog_id: 2580cc61-9441-4dbd-a7a1-9ccfb7c71956
+qblog_id: 0f894924-d944-4506-8e41-5286209b2f05
 ---
 
 Google has recently released their [Chrome DevTools MCP](https://developer.chrome.com/blog/chrome-devtools-mcp?hl=en) with it you can use your Chrome DevTools as MCP.

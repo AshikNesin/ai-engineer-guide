@@ -6,7 +6,7 @@ tags:
   - droid-cli
 status: published
 date: 2025-10-03T00:00:00.000Z
-qblog_id: d822d3f1-8cd3-4298-a3b5-d157982f5bc7
+qblog_id: 3ea08edd-158a-426f-b755-d5b8f5ce49fd
 ---
 
 I came across [Factory.ai](https://factory.ai/) Droid's system prompt shared by Pliny the Liberator 🐉󠅫󠄼󠄿󠅆󠄵󠄐󠅀󠄼󠄹󠄾󠅉󠅭

@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-01-17T00:00:00.000Z
-qblog_id: 2878d21e-2ba9-48df-a0a9-8015371c9eb8
+qblog_id: 19db4eed-365d-4367-9383-5084cff89e6e
 ---
 
 When doing a screenshot/screen recording of Claude Code. It might expose your email id & org name when you start it potentially exposing confidential information which you need to post process it. 

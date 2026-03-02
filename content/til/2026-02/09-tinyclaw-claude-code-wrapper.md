@@ -6,7 +6,7 @@ tags:
   - claude-code
 status: published
 date: 2026-02-09T00:00:00.000Z
-qblog_id: 0b3f5541-9b00-45c8-bfc6-6e8e6cd1ffc5
+qblog_id: 940b6d67-4509-473f-be17-45db114d40a8
 ---
 
 TinyClaw is a lightweight wrapper for Claude Code which you can access via WhatsApp (as of now)

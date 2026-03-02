@@ -5,7 +5,7 @@ tags:
   - agent-skills
 status: published
 date: 2026-01-24T00:00:00.000Z
-qblog_id: 1f69d3c3-fddc-4d99-a543-c14f3f263c1f
+qblog_id: dfaceb95-89ed-4b51-8b42-ec8b92120e15
 ---
 
 [Callstack](https://www.callstack.com/) team has released agent skills for React Native.

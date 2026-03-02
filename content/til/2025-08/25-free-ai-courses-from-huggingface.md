@@ -7,7 +7,7 @@ tags:
   - courses
 status: published
 date: 2025-08-25T00:00:00.000Z
-qblog_id: a9dc1089-fc24-4eca-8bbb-07aff70d45df
+qblog_id: 2db3da29-468c-4fcb-adbd-7b2f6baf6590
 ---
 
 Hugging Face offers various courses on AI and related topics for free with certifications.

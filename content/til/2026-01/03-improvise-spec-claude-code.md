@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-01-03T00:00:00.000Z
-qblog_id: 1919e76d-6514-421c-924b-c8a9cd8aba37
+qblog_id: 31c0905d-c920-42b2-acbd-7b3af3eff00c
 ---
 
 Claude Code's `AskUserQuestionTool` tool can help us to improve prompt/spec so that we can build a feature completely.

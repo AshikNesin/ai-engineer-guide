@@ -6,7 +6,7 @@ tags:
   - claude-opus-4-5
 status: published
 date: 2025-11-25T00:00:00.000Z
-qblog_id: 5eec892f-a869-4fc3-ad98-5f6a0182ca4c
+qblog_id: 05877512-1530-4413-a238-73f44251d9a9
 ---
 
 Anthropic has released their latest version of Opus model **Claude Opus 4.5** which now available via API, Claude Code & on AI IDEs like Cursor.

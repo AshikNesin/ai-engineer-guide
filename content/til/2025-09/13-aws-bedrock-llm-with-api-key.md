@@ -5,7 +5,7 @@ tags:
   - aws-bedrock
 status: published
 date: 2025-09-13T00:00:00.000Z
-qblog_id: 85f63b37-7f51-4a90-baa8-52eeff94baa9
+qblog_id: 1b33d2bc-6908-415d-aa18-8c8e3e1242b3
 ---
 
 Recently, AWS Bedrock (which is a marketplace for LLM inference) has started supporting API key-based authentication.

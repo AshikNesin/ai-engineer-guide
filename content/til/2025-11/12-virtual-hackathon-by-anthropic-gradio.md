@@ -5,7 +5,7 @@ tags:
   - hackathon
 status: published
 date: 2025-11-12T00:00:00.000Z
-qblog_id: 5a051af0-6c6c-451a-87b9-e2c5d27c3e66
+qblog_id: 0f0a092c-678e-4b84-98dc-c6cf17487309
 ---
 
 Anthropic & Gradio team is hosting a virtual hackathon on MCP theme from Nov 14-30, 2025. 

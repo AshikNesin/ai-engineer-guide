@@ -7,7 +7,7 @@ tags:
   - open-responses
 status: published
 date: 2026-01-18T00:00:00.000Z
-qblog_id: 076378bf-82a0-4a97-9a85-2a76d5f5ace3
+qblog_id: f4573f00-ddbe-41ca-ad88-46c27fd2af9d
 ---
 
 Ollama now has [Anthropic like API compatibility](https://docs.ollama.com/api/anthropic-compatibility) which means you can use any models (open source models) that is available in Ollama (both local & cloud) with Claude Code

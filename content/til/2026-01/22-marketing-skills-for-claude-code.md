@@ -6,7 +6,7 @@ tags:
   - skills
 status: published
 date: 2026-01-22T00:00:00.000Z
-qblog_id: 5c4cef42-3926-4651-b3a9-8533183c7cb3
+qblog_id: 8cc8980e-856d-4531-8a9c-394d52be0a4e
 ---
 
 Corey Haines has shared [Claude Skills for Marketing](https://github.com/coreyhaines31/marketingskills?tab=readme-ov-file)

@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-06-24T00:00:00.000Z
 description: null
-qblog_id: 84931f18-ba01-44cc-8180-d5c27d92382c
+qblog_id: 80e1830a-2ffd-4c31-a52b-be2ba4b5c28f
 ---
 
 Anthropic has recently launched VS Code extention for Claude Code

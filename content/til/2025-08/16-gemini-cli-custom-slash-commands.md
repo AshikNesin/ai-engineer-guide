@@ -6,7 +6,7 @@ tags:
   - cli-agent
 status: published
 date: 2025-08-16T00:00:00.000Z
-qblog_id: 6685e848-523a-434b-9692-188385357799
+qblog_id: e6e50ebc-03a2-468a-b42c-8664f3397e5a
 ---
 
 Similar to that of Claude Code. Gemini CLI also supports custom slash command where you can **add your own custom prompts** to do some repetitive tasks.

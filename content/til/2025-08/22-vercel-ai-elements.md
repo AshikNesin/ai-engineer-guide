@@ -7,7 +7,7 @@ tags:
   - ai-elements
 status: published
 date: 2025-08-22T00:00:00.000Z
-qblog_id: 14b29dcb-268b-4973-b715-79e59c3194e0
+qblog_id: 2f67450e-0670-4871-9430-14200b24ac22
 ---
 
 Vercel has released **React UI Components** that is focused on building AI app - [AI Elements](https://ai-sdk.dev/elements/overview)

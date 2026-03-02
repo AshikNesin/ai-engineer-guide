@@ -6,7 +6,7 @@ tags:
   - agents-md
 status: published
 date: 2025-12-31T00:00:00.000Z
-qblog_id: d23d80d3-760d-4813-a729-266aa5a6f5f8
+qblog_id: 785a281f-c112-469e-8ef5-bf03e2606d0e
 ---
 
 [Antigravity](https://antigravity.google/) IDE automatically loads `~/.gemini/GEMINI.md` and uses it for all the conversation however it does not load `CLAUDE.md` or `AGENTS.md` out of box.

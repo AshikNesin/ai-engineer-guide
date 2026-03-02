@@ -6,7 +6,7 @@ tags:
   - search-api
 status: published
 date: 2025-09-28T00:00:00.000Z
-qblog_id: ea08012a-dec8-4a6e-932f-aa41973171c5
+qblog_id: 8ddc7bd3-8f20-4797-a568-fdbf66b7c96b
 ---
 
 Ollama Cloud has now web search API which we can use to perform real time search. This is similar what Perplexity Search, Brave search, Exa.ai provides.

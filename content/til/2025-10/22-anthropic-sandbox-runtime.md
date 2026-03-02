@@ -7,7 +7,7 @@ tags:
   - library
 status: published
 date: 2025-10-22T00:00:00.000Z
-qblog_id: 79c12115-4eb9-4d49-9880-87f87c067a62
+qblog_id: d044a8c2-ef16-4306-8f57-117659b4267c
 ---
 
 Anthropic has released a lightweight [sandbox runtime](https://github.com/anthropic-experimental/sandbox-runtime?tab=readme-ov-file) using which we can **enforce filesystem and network restrictions** without requiring complicated container.

@@ -8,7 +8,7 @@ status: published
 date: 2024-01-03T00:00:00.000Z
 description: Sample article showcasing basic Markdown syntax and formatting for
   HTML elements.
-qblog_id: 5bb1f578-c350-443b-be1c-0988ca847f2e
+qblog_id: 387996d2-8800-4d2d-9c0b-4c7f3cc979f8
 ---
 
 LangChain usually represents messages as it's own [message types](https://python.langchain.com/v0.1/docs/modules/model_io/chat/message_types/) like `HumanMessage`, `AIMessage`, `SystemMessage`, etc

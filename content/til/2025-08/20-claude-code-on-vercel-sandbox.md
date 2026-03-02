@@ -6,7 +6,7 @@ tags:
   - sandbox
 status: published
 date: 2025-08-20T00:00:00.000Z
-qblog_id: b7e55f0d-916d-450a-b793-e87b83c56fc1
+qblog_id: 612c49d2-36fe-41ea-8cc4-3da194f05d7f
 ---
 
 Vercel has recently launched [sandbox](https://vercel.com/docs/vercel-sandbox) feature where we can **safely run untrusted or user/AI-generated code** our app with **complete isolation**

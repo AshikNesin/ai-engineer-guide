@@ -6,7 +6,7 @@ tags:
   - ai-agents
 status: published
 date: 2025-11-13T00:00:00.000Z
-qblog_id: de6fddf7-baff-4dd4-9b9d-8752c5fc69e0
+qblog_id: 3af2d676-6305-41bc-895a-45604c74167b
 ---
 
 [Bun.sh](https://bun.sh) team follows a really interesting technique to make their docs LLM friendly.

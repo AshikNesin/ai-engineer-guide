@@ -6,7 +6,7 @@ tags:
 status: published
 date: 2024-12-25T00:00:00.000Z
 description: null
-qblog_id: 1ef05ec5-5851-43b4-8518-051138eab5ba
+qblog_id: 752b710d-64d3-43a8-8884-b8fd5ffa4c7d
 ---
 
 Like how AI is the talk of the town, couple of years ago it was **No Code**. 

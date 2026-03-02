@@ -5,7 +5,7 @@ tags:
   - openai
 status: published
 date: 2025-10-07T00:00:00.000Z
-qblog_id: 6ee6619c-b4a4-4dc5-8ef2-a73c3b2faf1a
+qblog_id: d8b298b5-d67a-48c6-bf51-46941427ee08
 ---
 
 Sam Witteveen has covered the things that got released in recent OpenAI DevDay 2025. It's a short video do check that out 👇

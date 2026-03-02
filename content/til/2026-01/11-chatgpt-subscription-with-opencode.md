@@ -6,7 +6,7 @@ tags:
   - openai
 status: published
 date: 2026-01-11T00:00:00.000Z
-qblog_id: 9b6affe4-9edc-436a-89e5-13021beac79f
+qblog_id: 526672cc-0db6-4660-8799-18b4f697f432
 ---
 
 OpenCode now has first class support for connecting your ChatGPT subscription so use OpenAI models like GPT-5.2 Codex, GPT-5.2, etc without having to pay seperately for usage.

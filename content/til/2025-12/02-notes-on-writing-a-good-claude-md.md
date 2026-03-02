@@ -7,7 +7,7 @@ tags:
   - bookmark
 status: published
 date: 2025-12-02T00:00:00.000Z
-qblog_id: dcd4fe06-07ac-4788-a4f6-05efb6a6836e
+qblog_id: b94d10fe-3c62-4e8a-91d9-6a736175e6af
 ---
 
 I came across this really interesting post by Kyle on how to write CLAUDE.md (or AGENTS.md, etc)

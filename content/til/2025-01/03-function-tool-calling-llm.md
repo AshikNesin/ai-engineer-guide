@@ -4,7 +4,7 @@ url: til/function-tool-calling-llm
 status: published
 date: 2025-01-03T00:00:00.000Z
 description: null
-qblog_id: afb447b0-3739-4091-95a9-283115c49c90
+qblog_id: 5b604215-d99a-4d50-aa7e-ad0dd1dd1474
 draft: true
 ---
 

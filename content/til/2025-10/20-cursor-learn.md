@@ -6,7 +6,7 @@ tags:
   - courses
 status: published
 date: 2025-10-20T00:00:00.000Z
-qblog_id: 32ccd271-eba3-4d1d-ad20-7b326477af0e
+qblog_id: 61d8df02-1215-4658-adde-6982dd4a1822
 ---
 
 Cursor has a free AI foundation course on how to use AI tools to build apps and it is taught by [Lee Robison](https://leerob.com/). 

@@ -5,7 +5,7 @@ tags:
   - cursor
 status: published
 date: 2025-10-25T00:00:00.000Z
-qblog_id: 07a3ca89-3cef-41d0-9a5c-de4c0251336f
+qblog_id: 8ff467a2-fdae-4769-9779-2ba7af112db7
 ---
 
 Cursor's background AI agents are something that runs on the Cursor's infrastructure and does the coding for you. It is similar to [Google Jules](https://jules.google/).

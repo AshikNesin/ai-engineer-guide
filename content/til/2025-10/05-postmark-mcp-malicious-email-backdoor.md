@@ -6,7 +6,7 @@ tags:
   - backdoor
 status: published
 date: 2025-10-05T00:00:00.000Z
-qblog_id: 3c4943e1-4c8b-4a02-9357-d336154c854c
+qblog_id: 8f4293f8-d36e-432f-8a86-c9d9d8baac45
 ---
 
 Apparently, someone has cloned official [postmark-mcp](https://github.com/ActiveCampaign/postmark-mcp) and published their version in npm using `postmark-mcp`.

@@ -6,7 +6,9 @@ tags:
   - opensrc
 status: published
 date: 2026-02-23T00:00:00.000Z
+qblog_id: 85a76f6c-f2ad-41b4-854f-b5dcbaf3bee2
 ---
+
 Vercel has recently released [opensrc](https://github.com/vercel-labs/opensrc) package using which AI agents can get context regarding a particular npm package.
 
 The way it works is basically, it'll clone the package in the `./opensrc/` repo and add the needed prompt like this:

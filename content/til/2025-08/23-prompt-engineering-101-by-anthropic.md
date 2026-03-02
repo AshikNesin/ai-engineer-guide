@@ -3,7 +3,7 @@ title: Prompt Engineering 101 by Anthropic
 url: til/prompt-engineering-101-by-anthropic
 status: published
 date: 2025-08-23T00:00:00.000Z
-qblog_id: 6f0c9ffa-08d9-4269-a19a-5783a1e9eb14
+qblog_id: cb261ab5-52ae-4e25-ba72-38d854bc7bf4
 ---
 
 I came across the prompt engineering tips by the Anthropic team 👇

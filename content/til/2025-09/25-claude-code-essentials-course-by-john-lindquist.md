@@ -6,7 +6,7 @@ tags:
   - courses
 status: published
 date: 2025-09-25T00:00:00.000Z
-qblog_id: eb45a296-34cd-43ac-8124-988f5121a3c6
+qblog_id: f510ee16-bb5a-4403-b3eb-df02688ab277
 ---
 
 I recently came across a free Claude Code course by John Lindquist from [Egghead.io](https://egghead.io/)

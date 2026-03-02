@@ -5,7 +5,7 @@ tags:
   - talk
 status: published
 date: 2025-11-23T00:00:00.000Z
-qblog_id: 239ad1c7-4f3e-4be5-be61-d5535722ad90
+qblog_id: 22e3c101-edab-4171-b63a-3c78db3d4755
 ---
 
 AI Engineer 2025 conference happened recently and we can watch the code track on YouTube.

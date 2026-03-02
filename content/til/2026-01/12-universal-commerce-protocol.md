@@ -7,7 +7,7 @@ tags:
   - open-standard
 status: published
 date: 2026-01-12T00:00:00.000Z
-qblog_id: 53224b47-70f7-4c1d-a96c-18d3268c5782
+qblog_id: 3c1db332-fb29-458e-b709-0d5033e90a84
 ---
 
 Google has released [Universal Commerce Protocol](https://ucp.dev/) - an open source standard designed to help AI agents with Commerce 😅

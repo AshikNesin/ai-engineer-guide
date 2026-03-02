@@ -7,7 +7,7 @@ tags:
   - glm-coding-plan
 status: published
 date: 2026-02-12T00:00:00.000Z
-qblog_id: 0dd3df7d-5ab3-4713-8dc9-d266e74d9394
+qblog_id: 13330184-cccd-4676-90e8-8b63651e5e7c
 ---
 
 The latest model from z.ai - GLM-5 just got release. As per the benchmark it is as good as Anthropic Opus 4.5.

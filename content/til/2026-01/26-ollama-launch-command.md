@@ -6,7 +6,7 @@ tags:
   - claude-code
 status: published
 date: 2026-01-26T00:00:00.000Z
-qblog_id: a9db610b-da87-4661-800f-40e23b8df3f9
+qblog_id: a6f3624e-1698-4c8c-98a7-4204f45827a0
 ---
 
 Ollama now has support for `launch` command using which you can use your local/cloud Ollama models with your AI agents like Claude Code, Codex, OpenCode, etc.

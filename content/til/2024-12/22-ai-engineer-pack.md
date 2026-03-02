@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2024-12-22T00:00:00.000Z
 description: null
-qblog_id: 17a7a865-1bd5-4586-bea2-28475e7297a9
+qblog_id: 281e1f11-2255-41c1-8b71-89e2614844a0
 ---
 
 I recently came across [AI Engineer Pack](https://www.aiengineerpack.com/) by ElevenLabs and it has lot of deals that you might find interesting.

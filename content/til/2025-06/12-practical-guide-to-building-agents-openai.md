@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-06-12T00:00:00.000Z
 description: null
-qblog_id: 85298044-ec3f-4a71-b9db-3fdd9a122628
+qblog_id: 49480735-5f99-4485-91cb-e50603684d5f
 via_url: https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf
 ---
 

@@ -6,7 +6,7 @@ tags:
   - code-wiki
 status: published
 date: 2025-11-16T00:00:00.000Z
-qblog_id: d99bd9c7-b354-4119-879c-cfe968399526
+qblog_id: ee447398-9b2e-456b-8d73-6fab9521bbfc
 ---
 
 Google has launched their own version of [DeepWiki](https://deepwiki.org/) which indexes the entire repo. This is really useful when you try to learn something new let's say a new framework.

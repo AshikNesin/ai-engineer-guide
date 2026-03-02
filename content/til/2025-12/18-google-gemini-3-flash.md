@@ -6,7 +6,7 @@ tags:
   - gemini-3-flash
 status: published
 date: 2025-12-18T00:00:00.000Z
-qblog_id: 9dc8b168-4f30-498e-be74-7a4848fafb52
+qblog_id: d13c239a-d683-45ec-bfca-072bcefaf086
 ---
 
 Google has released their latest fast model - Gemini 3 Flash which can be a good daily driver for general tasks without having to worry about the cost.

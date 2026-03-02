@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-10-28T00:00:00.000Z
-qblog_id: b0a846d9-c2d2-4b55-b832-00a2686d5ec9
+qblog_id: 16133d0e-aa81-4438-8851-d577eaf67b2a
 ---
 
 It is interesting to see how Claude Code refers to it's own internal docs in when you ask a question related to Claude Code.

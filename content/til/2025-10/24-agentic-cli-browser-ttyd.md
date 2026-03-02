@@ -6,7 +6,7 @@ tags:
   - claude-code
 status: published
 date: 2025-10-24T00:00:00.000Z
-qblog_id: e534858c-45d7-4ef1-9109-08168db8e425
+qblog_id: cbeec772-eaa6-42cc-a04e-b41dcdac2bd8
 ---
 
 Today I learned about [ttyd](https://tsl0922.github.io/ttyd/) which lets you use your browser to interact with the CLI

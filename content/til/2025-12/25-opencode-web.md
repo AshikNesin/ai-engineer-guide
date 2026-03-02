@@ -5,7 +5,7 @@ tags:
   - opencode
 status: published
 date: 2025-12-25T00:00:00.000Z
-qblog_id: 7ffc7c92-6938-4eb4-8c76-4cb93d5ced4f
+qblog_id: db831407-d1f0-4d77-996e-c9e46c199f5f
 ---
 
 [OpenCode](https://opencode.ai/) is a AI coding agent like Claude Code. But unlike Claude Code it is [open source](https://github.com/sst/opencode) MIT

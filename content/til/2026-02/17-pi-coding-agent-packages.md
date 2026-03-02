@@ -1,12 +1,14 @@
 ---
-title: "How to extend Pi Coding Agent behaviour with Extensions"
+title: How to extend Pi Coding Agent behaviour with Extensions
 url: til/pi-coding-agent-packages
+tags:
+  - tools
+  - pi
 status: published
-date: 2026-02-17
-tags: 
-- tools
-- pi
+date: 2026-02-17T00:00:00.000Z
+qblog_id: 3e6371e1-4937-42e4-a363-db64b0eda779
 ---
+
 [pi](https://pi.dev) is a minimal coding agent that is heavily customizable based on your workflow.
 
 Currently there are 200+ packages on npm which use that you find it useful.

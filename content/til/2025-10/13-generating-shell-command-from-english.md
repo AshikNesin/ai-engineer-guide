@@ -7,7 +7,7 @@ tags:
   - groq
 status: published
 date: 2025-10-13T00:00:00.000Z
-qblog_id: b86b5315-468b-4776-a301-1f790ed24b8e
+qblog_id: 0d40c5bf-48fc-40bd-9d38-0425b211d9a0
 ---
 
 LLM are really good at generating shell commands. We can leverage it to quickly convert our intent to shell command.

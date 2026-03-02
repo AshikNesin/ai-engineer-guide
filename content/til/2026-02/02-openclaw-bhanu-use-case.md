@@ -5,7 +5,7 @@ tags:
   - openclaw
 status: published
 date: 2026-02-02T00:00:00.000Z
-qblog_id: c246b216-5c8a-44e4-adbe-9e946b97faae
+qblog_id: 081c969e-0fb4-49a8-8d8d-a00a0a51f677
 ---
 
 Bhanu from SiteGPT.ai has written a detailed article on X on how he uses OpenClaw for his business.

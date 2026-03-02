@@ -5,7 +5,7 @@ tags:
   - how-to-use-llm
 status: published
 date: 2026-01-05T00:00:00.000Z
-qblog_id: aeb2c63f-0d5f-41ec-9162-0d0cd0c46c5c
+qblog_id: c622dcbc-c6ff-49eb-bea6-5725ec295d23
 ---
 
 Travis (from Travis Media) has recently posted a video on how he uses LLM to generate high quality code than getting some slop.

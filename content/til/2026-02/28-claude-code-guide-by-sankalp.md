@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-02-28T00:00:00.000Z
-qblog_id: a562d939-f5d1-42a8-a9f2-6352e91c0d94
+qblog_id: cf3fa678-7d06-409d-b86f-bab2885bf936
 ---
 
 Sankalp has written a really detailed Claude Code guide based on how he uses it.

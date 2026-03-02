@@ -6,7 +6,7 @@ tags:
   - browser
 status: published
 date: 2025-09-09T00:00:00.000Z
-qblog_id: d67a23bc-e1d0-4289-ba40-9103726d5889
+qblog_id: 2c5c8313-4bd0-49cf-9f82-7e544fbb5800
 ---
 
 If you prefer not to see Google's Search AI, you can just turn it off by passing `udm=14`param in the URL.

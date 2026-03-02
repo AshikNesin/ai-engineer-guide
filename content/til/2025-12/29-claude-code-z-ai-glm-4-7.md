@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-12-29T00:00:00.000Z
-qblog_id: 533e1924-f9fa-4264-8f59-64b1ddb17658
+qblog_id: accc38f9-e838-4942-a8e8-abdc8856d96b
 ---
 
 Using the latest model GLM 4.7 from z.ai is straightforward

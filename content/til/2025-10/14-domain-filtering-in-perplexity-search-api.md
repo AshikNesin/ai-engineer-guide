@@ -6,7 +6,7 @@ tags:
   - search-api
 status: published
 date: 2025-10-14T00:00:00.000Z
-qblog_id: 108cbdcb-00bd-4c13-8039-bc79bbb75bf0
+qblog_id: fac1a3a7-6e9a-41b0-8d30-2cde8734ffce
 ---
 
 Perplexity Search API now has support for domain filtering using which we can get content only from a **specific domain**.

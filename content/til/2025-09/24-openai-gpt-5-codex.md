@@ -5,7 +5,7 @@ tags:
   - openai
 status: published
 date: 2025-09-24T00:00:00.000Z
-qblog_id: 7e088213-281a-4583-95c2-0acadb133fa9
+qblog_id: 149e93a5-c7c0-47dc-9614-6751be34c328
 ---
 
 GPT‑5-Codex is a version of GPT‑5 LLM that is built specifically for **agentic and interactive coding tasks**

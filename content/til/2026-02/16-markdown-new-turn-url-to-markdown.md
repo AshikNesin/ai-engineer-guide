@@ -1,11 +1,13 @@
 ---
-title: "Markdown.new - Turn Any URL to Clean Markdown"
+title: Markdown.new - Turn Any URL to Clean Markdown
 url: til/markdown-new-turn-url-to-markdown
+tags:
+  - tools
 status: published
-date: 2026-02-16
-tags: 
-- tools
+date: 2026-02-16T00:00:00.000Z
+qblog_id: 87c6246c-c12e-486c-861a-cfc3be88e1c7
 ---
+
 With [markdown.new](https://markdown.new), we can easily turn any URL into markdown content.
 
 Under the hood, it is powered by Cloudflare workers.

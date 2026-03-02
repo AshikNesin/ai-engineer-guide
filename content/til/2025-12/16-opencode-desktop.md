@@ -5,7 +5,7 @@ tags:
   - opencode
 status: published
 date: 2025-12-16T00:00:00.000Z
-qblog_id: ea0206b9-cda2-4b37-bad7-8ed829dabc6a
+qblog_id: 6f3b0b72-a734-45db-b49d-8610148d1c48
 ---
 
 [OpenCode](https://opencode.ai/download) now has a desktop app that you can to build using AI agents.

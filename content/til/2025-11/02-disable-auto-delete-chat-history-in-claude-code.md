@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2025-11-02T00:00:00.000Z
-qblog_id: ee649466-92c0-4b0c-bda0-14fce60eb61d
+qblog_id: 49924572-ab52-4f6a-805b-0d386858ea67
 ---
 
 Apparently, Claude Code **auto deletes** chat history/session after 30 days by default.

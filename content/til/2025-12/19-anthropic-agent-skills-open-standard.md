@@ -6,7 +6,7 @@ tags:
   - agent-skills
 status: published
 date: 2025-12-19T00:00:00.000Z
-qblog_id: 29c91585-e84c-4de4-848e-96fefe58de6e
+qblog_id: 38d13567-4ecf-4f40-a812-f9b4a4ef37b9
 ---
 
 Similar to MCP, Anthropic has made Agent Skills as [open standard](https://agentskills.io).

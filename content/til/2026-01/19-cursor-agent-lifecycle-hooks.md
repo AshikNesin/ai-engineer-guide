@@ -5,7 +5,7 @@ tags:
   - cursor
 status: published
 date: 2026-01-19T00:00:00.000Z
-qblog_id: aac2d493-b085-4a75-a0a3-8726de067bf8
+qblog_id: 2bc04c8f-7b0c-4843-b59b-9e09f7c794e8
 ---
 
 Cursor (latest version) has a hooks feature similar to Claude Code using it you can run your custom script before/after AI Agent execution lifecycle.

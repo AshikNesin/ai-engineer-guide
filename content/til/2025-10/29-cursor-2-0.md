@@ -5,7 +5,7 @@ tags:
   - cursor
 status: published
 date: 2025-10-29T00:00:00.000Z
-qblog_id: e015da6b-acb0-4a72-8995-12cd251f3610
+qblog_id: a87d5a8e-56e0-4297-8a39-cf7761ce37ce
 ---
 
 Cursor has released v2.0 today with pretty interesting features.

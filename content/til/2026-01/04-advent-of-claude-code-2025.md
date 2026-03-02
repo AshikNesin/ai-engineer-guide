@@ -5,7 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-01-04T00:00:00.000Z
-qblog_id: 3731aac1-b1e9-487b-8ffc-f4aeda674de1
+qblog_id: ff992730-eec9-420a-b841-4fe036bf5161
 ---
 
 Ado from Anthropic team has curated all the shared Advent of Claude Code that he has shared over a month in X posts.

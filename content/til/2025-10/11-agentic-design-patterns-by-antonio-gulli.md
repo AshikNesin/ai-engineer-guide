@@ -6,7 +6,7 @@ tags:
   - bookmark
 status: published
 date: 2025-10-11T00:00:00.000Z
-qblog_id: e13740c8-a1fc-46ce-ab2e-90626e4847e9
+qblog_id: 3d212db6-b766-4a7e-a262-5a5eeecf4268
 ---
 
 I came across this really good free book about **Agentic Design Patterns** by Antonio Gulli.

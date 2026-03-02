@@ -6,7 +6,7 @@ tags:
   - glm-4-6
 status: published
 date: 2025-09-30T00:00:00.000Z
-qblog_id: 801e1e1f-4998-49da-9bdb-836f6bb6c6de
+qblog_id: 8257f154-9836-4355-b171-b3538b38b0a9
 ---
 
 Another day, another LLM 😅

@@ -5,7 +5,7 @@ tags:
   - kilocode
 status: published
 date: 2025-10-23T00:00:00.000Z
-qblog_id: dfc4ab27-d23c-403c-a7cc-380b5a9a0ca8
+qblog_id: 74ee2013-9ace-4979-a577-b984d25713ff
 ---
 
 Kilocode team has recently released agentic [CLI](https://kilocode.ai/docs/cli), it is more of like Claude Code which you can use in the terminal to do some task.

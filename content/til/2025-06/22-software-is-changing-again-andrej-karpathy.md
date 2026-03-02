@@ -7,7 +7,7 @@ tags:
 status: published
 date: 2025-06-22T00:00:00.000Z
 description: null
-qblog_id: 31951ddf-bb33-4a0f-a9c5-702dbfa577dc
+qblog_id: 111c17e6-dbe8-47e4-8795-b5aa32f5d171
 ---
 
 I recently came across **Software Is Changing (Again)** talk by [Andrej Karpathy](https://karpathy.ai/) 👇

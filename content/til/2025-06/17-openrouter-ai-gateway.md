@@ -4,7 +4,7 @@ url: til/openrouter-ai-gateway
 status: published
 date: 2025-06-17T00:00:00.000Z
 description: null
-qblog_id: d2ac54e8-5616-496a-b702-b07c8d1d072c
+qblog_id: 5cd6967c-3b19-4ab0-a8ec-c6cca25a19be
 ---
 
 LLMs such as Claude 4, GPT-4o, and Llama come from various providers, each having their own billing systems (typically credit-based), separate API keys, and individual setups.

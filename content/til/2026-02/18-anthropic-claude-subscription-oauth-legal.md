@@ -1,11 +1,13 @@
 ---
-title: "Anthropic Restricts Claude Subscription in other Apps"
+title: Anthropic Restricts Claude Subscription in other Apps
 url: til/anthropic-claude-subscription-oauth-legal
+tags:
+  - anthropic
 status: published
-date: 2026-02-18
-tags: 
-- anthropic
+date: 2026-02-18T00:00:00.000Z
+qblog_id: 5797f918-5057-448e-b740-2356220a535e
 ---
+
 Many apps like OpenClaw, OpenCode, etc had a feature using which you can use the existing subscription from Anthropic and not needing pay per usage.
 
 It was kind of gray area until now. But they've recently updated the legal docs saying that using Claude subscription for other than Claude Code is not allowed anymore (officially)

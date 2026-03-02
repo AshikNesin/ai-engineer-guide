@@ -6,7 +6,7 @@ tags:
   - z-ai
 status: published
 date: 2025-09-08T00:00:00.000Z
-qblog_id: 822e76c2-5cfc-4a5a-9a8c-d09d53f94d9c
+qblog_id: 62707235-bb2b-43e8-a16a-ea246bfebc9c
 ---
 
 Z.ai's [GLM-4.5](https://z.ai/blog/glm-4.5) is pretty good open-source LLM which seems to perform similarly to proprietary AI models (almost).

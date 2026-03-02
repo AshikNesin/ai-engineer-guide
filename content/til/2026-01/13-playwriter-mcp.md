@@ -5,7 +5,7 @@ tags:
   - playwriter-mcp
 status: published
 date: 2026-01-13T00:00:00.000Z
-qblog_id: d99d714a-b4b7-4b82-b136-cf5ca863cb6a
+qblog_id: 7349e8bb-b339-40ad-80eb-a23e50b5bd5b
 ---
 
 Whether you want to use your existing browser so you handle some actions like login, captcha, etc from your end and let AI do other things like automating, scraping, bug fixing, etc.
