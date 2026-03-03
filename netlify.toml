@@ -7,4 +7,3 @@ publish = "public"
 command = "hugo --gc --minify --config hugo.toml"
 
 # Redirects are managed in static/_redirects file
-# Run `node scripts/generate-redirects.js` to regenerate from content
