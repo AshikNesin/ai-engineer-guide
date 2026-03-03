@@ -177,6 +177,11 @@ async function main() {
 /blog/z-ai /tags/z-ai 301!
 /blog/zed /tags/zed 301!
 
+# Temporary redirects
+/blog/vercel-ai-sdk-v6-tutorial-building-chatbots-with-react-and-nextjs /til/vercel-ai-sdk-6 302
+/blog/feed.xml /feed/til.xml 302
+/blog/ /til/ 302
+
 # Legacy post URL fixes (destination to /til/)
 /blog/26-openai-operator-prompt /til/openai-operator-prompt 301!
 /blog/anthropic-claude-opus-4.5-opencode-antigravity /til/anthropic-claude-opus-4-5-opencode-antigravity 301!
