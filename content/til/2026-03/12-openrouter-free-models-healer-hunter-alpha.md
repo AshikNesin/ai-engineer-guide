@@ -11,8 +11,11 @@ qblog_id: f3e14369-0001-40db-a61c-c332d8dc2ed5
 
 OpenRouter has a limited time free LLM models
 
-- `openrouter/healer-alpha` - fast, 260k context
-- `openrouter/hunter-alpha` - slower, 1m context
+| Model                   | Speed  | Context | Max Output | Doc  |
+| ----------------------- | ------ | ------- | ---------- | ---- |
+| openrouter/healer-alpha | Fast   | 262K    | 32K        | [Link](https://openrouter.ai/openrouter/healer-alpha) |
+| openrouter/hunter-alpha | Slower | 1M      | 32K        | [Link](https://openrouter.ai/openrouter/hunter-alpha) |
+
 
 obviously, your input and output generated will be used for training dataset
 
