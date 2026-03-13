@@ -13,7 +13,8 @@ Defuddle the package using which you can get [clean content](https://aiengineerg
 
 Just append `https://defuddle.md/` before your url.
 
-{{< video "https://video.twimg.com/amplify_video/2028847498341875712/vid/avc1/2716x2160/olFIaRp_v8KesSSS.mp4" >}}
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-03/naejslkcx3vgraf0qwnk.mp4" >}}
+
 
 And you get it's content in **clean markdown** format.
 
