@@ -92,7 +92,7 @@ jobs:
           ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: zai/glm-4.7
+          model: zai/glm-5
           use_github_token: true
           prompt: |
             Run the /groot-sync skill to sync infrastructure files from the groot boilerplate repository.
@@ -156,7 +156,7 @@ jobs:
           ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: zai/glm-4.7
+          model: zai/glm-5
           use_github_token: true
           prompt: |
             Review this pull request:
