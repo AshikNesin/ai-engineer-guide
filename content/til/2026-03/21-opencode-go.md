@@ -19,3 +19,7 @@ It is similar to [GLM Coding Plan](https://go.nesin.io/glm) but instead of model
 ![2026-03-21-at-23.52.452x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-03/avmauyriliufdxwhehaf)
 
 And yeah, they do support UPI, so it will be easy to use if you're from India.
+
+Their usage limit is okish if you're getting started
+
+![2026-03-21-at-23.58.592x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-03/h1fgibd82ebgqbk0mfpo)
