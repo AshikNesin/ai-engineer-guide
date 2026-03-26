@@ -2,7 +2,8 @@
 title: How to Make AI Agents Test Your Web App Automatically with Expect
 url: til/ai-agent-test-real-browser-expect-dev
 tags:
-  - bookmark
+  - ai-agents
+  - tools
 status: published
 date: 2026-03-26T00:00:00.000Z
 qblog_id: b562095b-6b36-4468-afa5-5fff1e4d91f5
