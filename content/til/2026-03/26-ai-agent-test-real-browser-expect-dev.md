@@ -1,5 +1,5 @@
 ---
-title: How to let AI Agents to test your app in real browser using Expect
+title: How to Make AI Agents Test Your Web App Automatically with Expect
 url: til/ai-agent-test-real-browser-expect-dev
 tags:
   - bookmark
@@ -8,6 +8,17 @@ date: 2026-03-26T00:00:00.000Z
 qblog_id: b562095b-6b36-4468-afa5-5fff1e4d91f5
 ---
 
-https://www.expect.dev/
+[Expect](https://expect.dev) lets you to test your web app automatically with the help of AI agents.
 
-![2026-03-26-at-23.54.192x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-03/lq2hlfioi2s8ngf7tfbk)
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-03/uppdbtjjq7q1mz5j7fvg.mp4" >}}
+
+## How it works?
+- We use Codex/Claude Code to do QA
+- It'll write the needed test cases and record of video of every bug that it has found and report back to you.
+- Once you've fixed it, you can run it again
+
+## How to get started?
+
+```shell
+npx -y expect-cli@latest init
+```
