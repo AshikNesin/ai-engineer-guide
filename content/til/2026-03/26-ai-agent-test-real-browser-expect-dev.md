@@ -23,3 +23,6 @@ qblog_id: b562095b-6b36-4468-afa5-5fff1e4d91f5
 ```shell
 npx -y expect-cli@latest init
 ```
+
+## Reference
+- https://x.com/aidenybai/status/2036837086180037080
