@@ -18,6 +18,7 @@ And so, we can use it in Claude Code as well.
 
 Once you've installed Claude Code. You need to modify the `~/.claude/settings.json` file
 
+
 ```json
 {
 	"env": {
@@ -31,6 +32,9 @@ Once you've installed Claude Code. You need to modify the `~/.claude/settings.js
 	}
 }
 ```
+
+> z.ai has launched [GLM-5.1](https://aiengineerguide.com/til/claude-code-glm-5-1/) on 2026-03-27, you might need to use it instead of GLM-5 which performs well for coding tasks.
+
 
 Note: [GLM Coding Plan](https://go.nesin.io/glm) pricing page mentions that `glm-5` is available only on Max plan (at least for now).  
 
