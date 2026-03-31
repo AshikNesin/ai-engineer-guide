@@ -14,7 +14,8 @@ Anthropic by mistake has published Claude Code with [source map](https://web.dev
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-03/ekcu8dxctqbuqspltfcn)
 
 You can find it here:
-https://pub-aea8527898604c1bbb12468b1581d95e.r2.dev/src.zip
+- https://pub-aea8527898604c1bbb12468b1581d95e.r2.dev/src.zip
+- https://github.com/chatgptprojects/claude-code/tree/642c7f944bbe5f7e57c05d756ab7fa7c9c5035cc
 
 There are so many interesting things we can learn from it like how they're handling things internally like the spinner message
 
