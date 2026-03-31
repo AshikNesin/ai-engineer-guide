@@ -29,6 +29,8 @@ And there are some interesting ports people are building to avoid getting DMCA a
 
 https://github.com/instructkr/claw-code/tree/main
 
+Aparently, that leak might be due to a bug in [bun](https://x.com/mrkaran_/status/2039005326939443295)
+
 ## Reference
 - https://x.com/Fried_rice/status/2038894956459290963
 - https://x.com/wesbos/status/2038958747200962952
