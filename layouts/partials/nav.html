@@ -7,7 +7,10 @@
 {{ range .Site.Menus.main }}
 <a href="{{ .URL }}">{{ .Name }}</a>
 {{ end }}
-<!-- <a href="{{ "/feed.xml" | relURL }}">
-  <img src="{{ "images/rss-icon.svg" | relURL }}" alt="RSS" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 4px;">
-  RSS
-</a> -->
+<button type="button" id="search-trigger" aria-label="Search blog" class="search-bar-trigger">
+  <span class="search-bar-left">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <span class="search-bar-placeholder">Search...</span>
+  </span>
+  <kbd id="search-kbd">⌘K</kbd>
+</button>
