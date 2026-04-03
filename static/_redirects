@@ -1,6 +1,9 @@
 # Netlify _redirects file
 # Format: /from /to status[!]
 
+# Search API proxy
+/api/search https://qblog.nesin.io/api/v1/public/blogs/AIEngineerGuide/search 200!
+
 # Blog Path Redirect
 /blog /til 302
 
