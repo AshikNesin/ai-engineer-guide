@@ -433,7 +433,7 @@
                                 item.url ||
                                 `${window.location.origin}/${item.slug}`;
                             html +=
-                                '<a href="' +
+                                '<div data-url="' +
                                 escapeHtml(url) +
                                 '" class="search-result-item" tabindex="0">' +
                                 '<div class="search-result-title">' +
@@ -443,7 +443,7 @@
                                 escapeHtml(excerpt) +
                                 "</div>" +
                                 tags +
-                                "</a>";
+                                "</div>";
                         });
                         results.innerHTML = html;
                     })
@@ -457,15 +457,19 @@
         });
 
         results.addEventListener("click", function (e) {
-            var link = e.target.closest(".search-result-item");
-            if (link) closeModal();
+            if (e.target.closest(".search-result-tag")) return;
+            var item = e.target.closest(".search-result-item");
+            if (item) {
+                closeModal();
+                window.location.href = item.dataset.url;
+            }
         });
 
         results.addEventListener("keydown", function (e) {
             if (e.key === "Enter") {
-                var link = e.target.closest(".search-result-item");
-                if (link) {
-                    window.location.href = link.href;
+                var item = e.target.closest(".search-result-item");
+                if (item) {
+                    window.location.href = item.dataset.url;
                 }
             }
         });
