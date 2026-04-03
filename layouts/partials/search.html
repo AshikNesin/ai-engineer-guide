@@ -414,9 +414,11 @@
                                     visibleTags
                                         .map(function (t) {
                                             return (
-                                                '<span class="search-result-tag">' +
+                                                '<a href="https://aiengineerguide.com/tags/' +
+                                                encodeURIComponent(t) +
+                                                '" class="search-result-tag" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">' +
                                                 escapeHtml(t) +
-                                                "</span>"
+                                                "</a>"
                                             );
                                         })
                                         .join("") +
