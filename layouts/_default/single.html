@@ -12,11 +12,37 @@
 <content>
   {{ .Content }}
 </content>
-<p>
+<div class="post-tags">
   {{ range (.GetTerms "tags") }}
-  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  <a href="{{ .Permalink }}" class="post-tag">#{{ .LinkTitle }}</a>
   {{ end }}
-</p>
+</div>
+
+<style>
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 1.5rem;
+}
+.post-tag {
+  font-size: 13px;
+  background: #f0f0f0;
+  color: #666;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.post-tag:hover {
+  background: rgba(50, 115, 220, 0.1);
+  color: #3273dc;
+}
+@media (prefers-color-scheme: dark) {
+  .post-tag { background: #444; color: #aaa; }
+  .post-tag:hover { background: rgba(140, 194, 221, 0.15); color: #8cc2dd; }
+}
+</style>
 
 {{ if eq .Type "blog" }}
   {{ partial "sidebar.html" . }}
