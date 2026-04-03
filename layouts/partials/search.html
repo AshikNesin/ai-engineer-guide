@@ -132,19 +132,24 @@
 
     .search-result-item {
         display: block;
-        padding: 12px 16px;
         border-bottom: 1px solid #f0f0f0;
-        cursor: pointer;
-        text-decoration: none;
-        color: inherit;
     }
-    .search-result-item:hover,
-    .search-result-item:focus {
+    .search-result-item:hover {
         background: #f7f7f7;
-        outline: none;
     }
     .search-result-item:last-child {
         border-bottom: none;
+    }
+
+    .search-result-link {
+        display: block;
+        padding: 12px 16px 4px;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+    .search-result-link:focus {
+        outline: none;
     }
 
     .search-result-title {
@@ -163,7 +168,8 @@
         overflow: hidden;
     }
     .search-result-tags {
-        margin-top: 4px;
+        margin-top: 0;
+        padding: 0 16px 12px;
         display: flex;
         gap: 4px;
         flex-wrap: nowrap;
@@ -427,7 +433,7 @@
                                             return (
                                                 '<a href="https://aiengineerguide.com/tags/' +
                                                 encodeURIComponent(t) +
-                                                '" class="search-result-tag" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">' +
+                                                '" class="search-result-tag" target="_blank" rel="noopener noreferrer">' +
                                                 escapeHtml(t) +
                                                 "</a>"
                                             );
@@ -439,17 +445,19 @@
                                 item.url ||
                                 `${window.location.origin}/${item.slug}`;
                             html +=
+                                '<div class="search-result-item">' +
                                 '<a href="' +
                                 escapeHtml(url) +
-                                '" class="search-result-item" tabindex="0">' +
+                                '" class="search-result-link" tabindex="0">' +
                                 '<div class="search-result-title">' +
                                 escapeHtml(item.title || "") +
                                 "</div>" +
                                 '<div class="search-result-excerpt">' +
                                 escapeHtml(excerpt) +
                                 "</div>" +
+                                "</a>" +
                                 tags +
-                                "</a>";
+                                "</div>";
                         });
                         results.innerHTML = html;
                     })
@@ -463,7 +471,7 @@
         });
 
         results.addEventListener("click", function (e) {
-            if (e.target.closest(".search-result-item")) closeModal();
+            if (e.target.closest(".search-result-link")) closeModal();
         });
 
         function escapeHtml(str) {
