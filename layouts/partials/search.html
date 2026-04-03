@@ -301,7 +301,9 @@
             var visibleTags = item.tags.slice(0, 3);
             tags = '<div class="search-result-tags">' + visibleTags.map(function(t) { return '<span class="search-result-tag">' + escapeHtml(t) + '</span>'; }).join('') + '</div>';
           }
-          html += '<a href="' + escapeHtml(item.url || '/' + (item.postType || 'blog') + '/' + (item.slug || '') + '/') + '" class="search-result-item" tabindex="0">'
+          var url = item.url || '/' + (item.postType || 'blog') + '/' + (item.slug || '') + '/';
+          if (!/^\/[a-zA-Z0-9]/.test(url)) url = '/';
+          html += '<a href="' + escapeHtml(url) + '" class="search-result-item" tabindex="0">'
             + '<div class="search-result-title">' + escapeHtml(item.title || '') + '</div>'
             + '<div class="search-result-excerpt">' + escapeHtml(excerpt) + '</div>'
             + tags
