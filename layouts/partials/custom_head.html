@@ -50,13 +50,38 @@
   .header-flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 20px;
-  }
-  .header-flex nav {
-    margin-top: 0;
   }
   .header-flex .title {
     margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .header-search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  .header-flex nav {
+    margin-top: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  @media (max-width: 768px) {
+    .header-flex {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .header-search {
+      order: 3;
+      flex-basis: 100%;
+      padding: 0;
+    }
+    .header-flex nav {
+      order: 2;
+    }
   }
 </style>
