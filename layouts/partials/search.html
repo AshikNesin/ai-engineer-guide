@@ -415,6 +415,10 @@
                 spinner.style.display = "block";
                 results.innerHTML = "";
 
+                if (window.umami && typeof window.umami.track === 'function') {
+                       window.umami.track('search-request', { 'search-term': query });
+                }
+
                 fetch(searchApi, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
