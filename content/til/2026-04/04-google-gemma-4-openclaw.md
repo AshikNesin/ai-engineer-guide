@@ -51,3 +51,4 @@ openclaw onboard --non-interactive \
 
 ## Reference
 - https://x.com/huggingface/status/2040223333921259699
+- [Liberate your OpenClaw](https://huggingface.co/blog/liberate-your-openclaw)
