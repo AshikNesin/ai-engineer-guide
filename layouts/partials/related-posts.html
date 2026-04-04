@@ -65,10 +65,29 @@
   margin-bottom: 0.5rem;
 }
 
-.related-post-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+.related-post-tag {
+  font-size: 12px;
+  background: #f0f0f0;
+  color: #666;
+  padding: 2px 7px;
+  border-radius: 3px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.related-post-tag:hover {
+  background: rgba(50, 115, 220, 0.1);
+  color: #3273dc;
+}
+@media (prefers-color-scheme: dark) {
+  .related-post-tag {
+    background: #444;
+    color: #aaa;
+  }
+  .related-post-tag:hover {
+    background: rgba(140, 194, 221, 0.15);
+    color: #8cc2dd;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -140,7 +159,7 @@
           var visibleTags = item.tags.slice(0, 3);
           tags = '<div class="related-post-tags">' +
             visibleTags.map(function (t) {
-              return '<a href="https://aiengineerguide.com/tags/' + encodeURIComponent(t) + '" class="post-tag" target="_blank" rel="noopener noreferrer">' + escapeHtml(t) + '</a>';
+              return '<a href="https://aiengineerguide.com/tags/' + encodeURIComponent(t) + '" class="related-post-tag" target="_blank" rel="noopener noreferrer">' + escapeHtml(t) + '</a>';
             }).join("") +
             '</div>';
         }
