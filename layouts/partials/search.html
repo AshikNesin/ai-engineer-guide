@@ -461,7 +461,8 @@
                                         .join("") +
                                     "</div>";
                             }
-                            const url = item.url || `${window.location.origin}/${item.slug}`;
+                            let url = item.url || `${window.location.origin}/${item.slug}`;
+                            url = sanitizeUrl(url);
                             html +=
                                 '<div class="search-result-item">' +
                                 '<a href="' +
@@ -496,6 +497,13 @@
             var div = document.createElement("div");
             div.appendChild(document.createTextNode(str));
             return div.innerHTML;
+        }
+
+        function sanitizeUrl(url) {
+            if (!url) return "";
+            var tempUrl = url.trim();
+            if (tempUrl.toLowerCase().indexOf("javascript:") === 0) return "#";
+            return tempUrl;
         }
     })();
 </script>

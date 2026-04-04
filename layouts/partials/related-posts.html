@@ -132,9 +132,17 @@
     return div.innerHTML;
   }
 
+  function sanitizeUrl(url) {
+    if (!url) return "";
+    var tempUrl = url.trim();
+    if (tempUrl.toLowerCase().indexOf("javascript:") === 0) return "#";
+    return tempUrl;
+  }
+
   function formatDate(dateStr) {
     try {
       var d = new Date(dateStr);
+      if (isNaN(d.getTime())) return "";
       var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
       return months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
     } catch (e) {
@@ -174,6 +182,7 @@
         }
 
         var url = item.url || (window.location.origin + "/" + item.slug);
+        url = sanitizeUrl(url);
 
         html += '<div class="related-post-card">' +
           '<a href="' + escapeHtml(url) + '" class="related-post-link" data-umami-event="related-post-click" data-umami-event-title="' + escapeHtml(item.title || "") + '">' +
