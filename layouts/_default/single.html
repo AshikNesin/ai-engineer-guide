@@ -44,6 +44,8 @@
 }
 </style>
 
+{{ partial "related-posts.html" . }}
+
 {{ if eq .Type "blog" }}
   {{ partial "sidebar.html" . }}
   <!-- {{ partial "content-feedback.html" . }} -->
