@@ -140,7 +140,7 @@
           var visibleTags = item.tags.slice(0, 3);
           tags = '<div class="related-post-tags">' +
             visibleTags.map(function (t) {
-              return '<span class="post-tag">' + escapeHtml(t) + '</span>';
+              return '<a href="https://aiengineerguide.com/tags/' + encodeURIComponent(t) + '" class="post-tag" target="_blank" rel="noopener noreferrer">' + escapeHtml(t) + '</a>';
             }).join("") +
             '</div>';
         }
