@@ -329,6 +329,7 @@
         var trigger = document.getElementById("search-trigger");
         var currentController = null;
         var debounceTimer = null;
+        var trackingTimer = null;
         var searchApi = "{{ $searchApi }}";
 
         function openModal() {
@@ -353,6 +354,10 @@
             if (debounceTimer) {
                 clearTimeout(debounceTimer);
                 debounceTimer = null;
+            }
+            if (trackingTimer) {
+                clearTimeout(trackingTimer);
+                trackingTimer = null;
             }
             if (trigger) trigger.focus();
         }
@@ -397,6 +402,7 @@
         input.addEventListener("input", function () {
             var query = input.value.trim();
             if (debounceTimer) clearTimeout(debounceTimer);
+            if (trackingTimer) clearTimeout(trackingTimer);
 
             if (!query) {
                 results.innerHTML = "";
@@ -416,7 +422,9 @@
                 results.innerHTML = "";
 
                 if (window.umami && typeof window.umami.track === 'function') {
-                       window.umami.track('search-request', { 'search-term': query });
+                    trackingTimer = setTimeout(function () {
+                        window.umami.track('search-request', { 'search-term': query });
+                    }, 1000);
                 }
 
                 fetch(searchApi, {
