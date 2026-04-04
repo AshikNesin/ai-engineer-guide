@@ -502,7 +502,13 @@
         function sanitizeUrl(url) {
             if (!url) return "";
             var tempUrl = url.trim();
-            if (tempUrl.toLowerCase().indexOf("javascript:") === 0) return "#";
+            var match = tempUrl.match(/^[a-zA-Z][a-zA-Z0-9+.-]*:/);
+            if (match) {
+                var proto = match[0].toLowerCase();
+                if (proto !== "http:" && proto !== "https:" && proto !== "mailto:" && proto !== "tel:") {
+                    return "#";
+                }
+            }
             return tempUrl;
         }
     })();
