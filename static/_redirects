@@ -4,6 +4,10 @@
 # Search API proxy
 /api/search https://qblog.nesin.io/api/v1/public/blogs/AIEngineerGuide/search 200!
 
+# Related API proxy
+/api/related https://qblog.nesin.io/api/v1/public/blogs/AIEngineerGuide/posts/related 200!
+
+
 # Blog Path Redirect
 /blog /til 302
 
