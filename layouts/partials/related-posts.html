@@ -174,10 +174,9 @@
         }
 
         var url = item.url || (window.location.origin + "/" + item.slug);
-        url += (url.indexOf("?") === -1 ? "?" : "&") + "ref=related_posts";
 
         html += '<div class="related-post-card">' +
-          '<a href="' + escapeHtml(url) + '" class="related-post-link">' +
+          '<a href="' + escapeHtml(url) + '" class="related-post-link" data-umami-event="related-post-click" data-umami-event-title="' + escapeHtml(item.title || "") + '">' +
           '<div class="related-post-title">' + escapeHtml(item.title || "") + '</div>' +
           (date ? '<div class="related-post-meta">' + escapeHtml(date) + '</div>' : '') +
           '</a>' +

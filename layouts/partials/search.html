@@ -461,13 +461,12 @@
                                         .join("") +
                                     "</div>";
                             }
-                            const baseUrl = item.url || `${window.location.origin}/${item.slug}`;
-                            const url = baseUrl + (baseUrl.indexOf("?") === -1 ? "?" : "&") + "ref=search";
+                            const url = item.url || `${window.location.origin}/${item.slug}`;
                             html +=
                                 '<div class="search-result-item">' +
                                 '<a href="' +
                                 escapeHtml(url) +
-                                '" class="search-result-link" tabindex="0">' +
+                                '" class="search-result-link" data-umami-event="search-click" data-umami-event-title="' + escapeHtml(item.title || "") + '" tabindex="0">' +
                                 '<div class="search-result-title">' +
                                 escapeHtml(item.title || "") +
                                 "</div>" +
