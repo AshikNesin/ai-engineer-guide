@@ -146,6 +146,7 @@
         }
 
         var url = item.url || (window.location.origin + "/" + item.slug);
+        url += (url.indexOf("?") === -1 ? "?" : "&") + "ref=related_posts";
 
         html += '<a href="' + escapeHtml(url) + '" class="related-post-card">' +
           '<div class="related-post-title">' + escapeHtml(item.title || "") + '</div>' +
