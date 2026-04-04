@@ -1,0 +1,168 @@
+<div id="related-posts" class="related-posts">
+  <h3 class="related-posts-heading">Related Posts</h3>
+  <div class="related-posts-spinner" id="related-posts-spinner"></div>
+  <div id="related-posts-results"></div>
+</div>
+
+<style>
+.related-posts {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8e8e8;
+}
+.related-posts.hidden { display: none; }
+
+.related-posts-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 1.25rem 0;
+}
+
+.related-posts-spinner {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.related-posts-spinner.hidden { display: none; }
+.related-posts-spinner::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #e8e8e8;
+  border-top-color: #3273dc;
+  border-radius: 50%;
+  animation: related-spin 0.6s linear infinite;
+}
+@keyframes related-spin { to { transform: rotate(360deg); } }
+
+.related-post-card {
+  display: block;
+  padding: 1rem 1.125rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.related-post-card:hover {
+  border-color: #3273dc;
+  box-shadow: 0 2px 8px rgba(50, 115, 220, 0.08);
+}
+
+.related-post-title {
+  font-weight: 600;
+  color: #222;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.related-post-meta {
+  font-size: 0.8125rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.related-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .related-posts { border-top-color: #444; }
+  .related-posts-heading { color: #eee; }
+  .related-posts-spinner::after {
+    border-color: #444;
+    border-top-color: #8cc2dd;
+  }
+  .related-post-card {
+    border-color: #444;
+  }
+  .related-post-card:hover {
+    border-color: #8cc2dd;
+    box-shadow: 0 2px 8px rgba(140, 194, 221, 0.08);
+  }
+  .related-post-title { color: #eee; }
+  .related-post-meta { color: #aaa; }
+}
+</style>
+
+<script>
+(function () {
+  var container = document.getElementById("related-posts");
+  var spinner = document.getElementById("related-posts-spinner");
+  var results = document.getElementById("related-posts-results");
+
+  if (!container || !spinner || !results) return;
+
+  function escapeHtml(str) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+  function formatDate(dateStr) {
+    try {
+      var d = new Date(dateStr);
+      var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      return months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+    } catch (e) {
+      return "";
+    }
+  }
+
+  var currentUrl = window.location.href;
+  var apiUrl = "/api/related?limit=5&url=" + encodeURIComponent(currentUrl);
+  var controller = new AbortController();
+
+  fetch(apiUrl, { signal: controller.signal })
+    .then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      spinner.classList.add("hidden");
+
+      if (!data.success || !data.data || !data.data.items || data.data.items.length === 0) {
+        container.classList.add("hidden");
+        return;
+      }
+
+      var html = "";
+      data.data.items.forEach(function (item) {
+        var date = item.publishedAt ? formatDate(item.publishedAt) : "";
+        var tags = "";
+
+        if (item.tags && item.tags.length > 0) {
+          var visibleTags = item.tags.slice(0, 3);
+          tags = '<div class="related-post-tags">' +
+            visibleTags.map(function (t) {
+              return '<span class="post-tag">' + escapeHtml(t) + '</span>';
+            }).join("") +
+            '</div>';
+        }
+
+        var url = item.url || (window.location.origin + "/" + item.slug);
+
+        html += '<a href="' + escapeHtml(url) + '" class="related-post-card">' +
+          '<div class="related-post-title">' + escapeHtml(item.title || "") + '</div>' +
+          (date ? '<div class="related-post-meta">' + escapeHtml(date) + '</div>' : '') +
+          tags +
+          '</a>';
+      });
+
+      results.innerHTML = html;
+    })
+    .catch(function (err) {
+      if (err.name === "AbortError") return;
+      container.classList.add("hidden");
+    });
+
+  window.addEventListener("beforeunload", function () {
+    controller.abort();
+  });
+})();
+</script>
