@@ -12,6 +12,9 @@ Claude Code team has released `/powerup` command.
 
 It'll show their top 10 short lessons / demos.
 
+![2026-04-08-at-19.36.222x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-04/xtayymfpmxqvlvfxpebc)
+
+
 This feature will be really helpful for someone who is getting started with Claude Code.
 
 ## Reference
