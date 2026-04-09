@@ -1,5 +1,5 @@
 ---
-title: Anthropic Session API
+title: Anthropic Platform Session API
 url: til/anthropic-session-api
 tags:
   - anthropic
