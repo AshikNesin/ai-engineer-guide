@@ -28,6 +28,8 @@ Just invoke the skill like this `/debug [describe your issue]`
 
 {{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-04/zaviy7qbwnplzr8352pm.mp4" >}}
 
+![2026-04-11-at-00.03.102x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-04/ehl0nycirekxjlfbcxm5)
+
 
 It's [open source](https://github.com/millionco/debug-agent) as well.
 
