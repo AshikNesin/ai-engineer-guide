@@ -2,7 +2,7 @@
 title: How to debug issue with Debug Agent
 url: til/million-debug-agent
 tags:
-  - bookmark
+  - tools
 status: published
 date: 2026-04-10T00:00:00.000Z
 qblog_id: f9d3bdbd-ea96-4dc5-9876-c41185709345
@@ -26,4 +26,10 @@ Once that you've it installed.
 
 Just invoke the skill like this `/debug [describe your issue]`
 
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-04/zaviy7qbwnplzr8352pm.mp4" >}}
+
+
 It's [open source](https://github.com/millionco/debug-agent) as well.
+
+## Reference
+- https://xcancel.com/aidenybai/status/2042633871297249435
