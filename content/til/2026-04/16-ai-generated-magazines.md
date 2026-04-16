@@ -3,7 +3,7 @@ title: Building AI Generated Magazines with Claude or any AI Agents
 url: til/ai-generated-magazines
 tags:
   - jason-zook
-  - ai-workflows
+  - ai-workflow
 status: published
 date: 2026-04-16T00:00:00.000Z
 qblog_id: 426e1530-2acd-405f-9d80-1d56d7543be5
