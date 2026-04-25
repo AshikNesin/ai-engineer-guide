@@ -34,7 +34,7 @@ enableRobotsTXT = true
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
-  description = "Practical AI engineering tips, TILs, and guides covering Claude Code, MCP, AI agents, prompt engineering, and the AI tooling ecosystem. Updated daily by Ashik Nesin."
+  description = "The daily read for engineers who want to actually build with AI — not just talk about it. Practical guides, TILs, and deep dives on Claude Code, MCP, agents, and modern AI tooling."
   authorName = "Ashik Nesin"
   authorEmail = "aiengineerguide@duck.com"
 

@@ -21,11 +21,9 @@ Allow: /
 
 User-agent: GPTBot
 Allow: /
-Crawl-delay: 10
 
 User-agent: ClaudeBot
 Allow: /
-Crawl-delay: 10
 
 User-agent: Googlebot
 Allow: /
