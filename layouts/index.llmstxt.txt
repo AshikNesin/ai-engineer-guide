@@ -1,0 +1,8 @@
+# AI Engineer Guide
+
+> The daily read for engineers who want to actually build with AI — not just talk about it. Practical guides, TILs, and deep dives on Claude Code, MCP, agents, and modern AI tooling.
+
+## Posts
+{{ range (where .Site.RegularPages "Section" "til").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}{{ if ne . "null" }}: {{ . | plainify }}{{ end }}{{ end }}
+{{ end }}
