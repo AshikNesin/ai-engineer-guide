@@ -9,7 +9,7 @@
   },
   "headline": {{ .Title | jsonify }},
   "description": {{ with .Description }}{{ if ne . "null" }}{{ . | plainify | jsonify }}{{ else }}{{ $.Summary | plainify | truncate 160 | jsonify }}{{ end }}{{ else }}{{ .Summary | plainify | truncate 160 | jsonify }}{{ end }},
-  "image": {{ printf "%simages/share.png" .Site.BaseURL | jsonify }},
+  "image": {{ "images/share.png" | absURL | jsonify }},
   "datePublished": {{ .Date.Format "2006-01-02T15:04:05-07:00" | jsonify }},
   "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | jsonify }},
   "author": {
@@ -27,7 +27,7 @@
     "url": {{ .Site.BaseURL | jsonify }},
     "logo": {
       "@type": "ImageObject",
-      "url": {{ printf "%simages/logo-icon.svg" .Site.BaseURL | jsonify }}
+      "url": {{ "images/logo-icon.svg" | absURL | jsonify }}
     }
   }{{ with .Params.tags }},
   "keywords": {{ . | jsonify }}{{ end }}
