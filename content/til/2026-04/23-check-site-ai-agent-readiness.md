@@ -16,3 +16,5 @@ For example, they check if the site respond with markdown when accessed by agent
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-04/qr8hbqjwrxt4kymnim7v)
 
 👉 https://isitagentready.com
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KgDzxy1rYpU?si=SsQXr504ZgRTx50j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
