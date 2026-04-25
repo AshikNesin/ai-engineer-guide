@@ -1,0 +1,62 @@
+{{- if .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  },
+  "headline": {{ .Title | jsonify }},
+  "description": {{ with .Description }}{{ if ne . "null" }}{{ . | plainify | jsonify }}{{ else }}{{ $.Summary | plainify | truncate 160 | jsonify }}{{ end }}{{ else }}{{ .Summary | plainify | truncate 160 | jsonify }}{{ end }},
+  "image": {{ printf "%simages/share.png" .Site.BaseURL | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05-07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "Ashik Nesin",
+    "url": {{ "https://x.com/AshikNesin" | jsonify }},
+    "sameAs": [
+      {{ "https://x.com/AshikNesin" | jsonify }},
+      {{ "https://github.com/AshikNesin" | jsonify }}
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ .Site.Params.title | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ printf "%simages/logo-icon.svg" .Site.BaseURL | jsonify }}
+    }
+  }{{ with .Params.tags }},
+  "keywords": {{ . | jsonify }}{{ end }}
+}
+</script>
+{{- else if .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ .Site.Title | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }}
+}
+</script>
+{{- end -}}
+
+{{- if and .IsPage (ne .Section "") -}}
+{{- $crumbs := slice -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 1 "name" "Home" "item" .Site.BaseURL) -}}
+{{- with .Site.GetPage .Section -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink) -}}
+{{- end -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 3 "name" $.Title) -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": {{ $crumbs | jsonify (dict "indent" "  ") }}
+}
+</script>
+{{- end -}}

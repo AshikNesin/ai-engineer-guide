@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

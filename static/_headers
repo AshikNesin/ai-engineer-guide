@@ -1,0 +1,41 @@
+# Netlify _headers
+# Reference: https://docs.netlify.com/configure-builds/file-based-configuration/#headers
+
+# Images — long cache (immutable via Cloudinary versioned URLs)
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# CSS/JS files
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Favicon and logo
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+# Feeds
+/feed/*
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+
+# Sitemap
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=utf-8
+
+# llms.txt — AI agent discoverability
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+# Default: security headers + short cache for HTML pages
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Cache-Control: public, max-age=0, must-revalidate

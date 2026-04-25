@@ -1,0 +1,8 @@
+# AI Engineer Guide
+
+> Practical AI engineering tips, TILs, and guides covering Claude Code, MCP, AI agents, prompt engineering, and the AI tooling ecosystem. Updated daily by Ashik Nesin.
+
+## Posts
+{{ range (where .Site.RegularPages "Section" "til").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}{{ if ne . "null" }}: {{ . | plainify }}{{ end }}{{ end }}
+{{ end }}

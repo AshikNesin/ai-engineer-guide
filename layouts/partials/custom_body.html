@@ -1,2 +1,19 @@
 <!-- Custom body scripts and content -->
 <!-- This file is loaded at the end of the body tag in baseof.html -->
+
+<script>
+(function() {
+  var aiReferrers = ['chat.openai.com','chatgpt.com','perplexity.ai','claude.ai','gemini.google.com','you.com'];
+  var ref = document.referrer;
+  if (ref) {
+    try {
+      var host = new URL(ref).hostname;
+      aiReferrers.forEach(function(r) {
+        if (host.includes(r) && typeof umami === 'object') {
+          umami.track('ai_referral', { source: host });
+        }
+      });
+    } catch(e) {}
+  }
+})();
+</script>

@@ -10,14 +10,14 @@
     {{ with .Site.Copyright }}<copyright>{{ . }}</copyright>{{ end }}
     {{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
     <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
-    {{ range where .Site.RegularPages "Section" "til" }}
+    {{ range first 50 (where .Site.RegularPages "Section" "til") }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{ with .Site.Params.authorEmail }}<author>{{.}}{{ with $.Site.Params.authorName }} ({{.}}){{ end }}</author>{{ end }}
       <guid>{{ .Permalink }}</guid>
-      <description>{{ .Content | html }}</description>
+      <description>{{ .Summary | html }}</description>
     </item>
     {{ end }}
   </channel>

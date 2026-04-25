@@ -8,7 +8,7 @@ theme = 'hugo-bearblog'
 # Basic metadata configuration for your blog.
 title = "AI Engineer Guide"
 author = "Ashik Nesin"
-copyright = "Copyright © 2024, Nesin Technologies LLP."
+copyright = "Copyright © 2024-2026, Nesin Technologies LLP."
 languageCode = "en-US"
 timeZone = "Asia/Kolkata"
 
@@ -24,9 +24,17 @@ enableRobotsTXT = true
   til = "/til/:slug/"
   tags = "/tags/:slug/"
 
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", "date"]
+
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
-  description = "Hugo + Bear = :heart:"
+  description = "Practical AI engineering tips, TILs, and guides covering Claude Code, MCP, AI agents, prompt engineering, and the AI tooling ecosystem. Updated daily by Ashik Nesin."
   authorName = "Ashik Nesin"
   authorEmail = "aiengineerguide@duck.com"
 
@@ -48,10 +56,6 @@ enableRobotsTXT = true
   # This theme will, by default, inject a made-with-line at the bottom of the page.
   # You can turn it off, but we would really appreciate if you don't :-).
   hideMadeWithLine = true
-  [ogImage]
-    cloudinaryAccountId = "ashiknesin"
-    twitterHandle = "AshikNesin"
-    bgImagePath = "nesin_io/og-image-bg/dark-gradient"
 
 [markup]
   [markup.goldmark]
@@ -81,9 +85,13 @@ twitterHandle = "AshikNesin"
 bgImagePath = "nesin_io/og-image-bg/dark-gradient"
 
 [outputs]
-home = ["HTML", "RSS"]
-section = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "LLMSTXT"]
+  section = ["HTML", "RSS"]
 
 [outputFormats]
-    [outputFormats.RSS]
+  [outputFormats.RSS]
     baseName = "feed"
+  [outputFormats.LLMSTXT]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
