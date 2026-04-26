@@ -52,11 +52,8 @@
 {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink) -}}
 {{- end -}}
 {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 3 "name" $.Title) -}}
+{{- $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": {{ $crumbs | jsonify (dict "indent" "  ") }}
-}
+{{ $breadcrumb | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 {{- end -}}
