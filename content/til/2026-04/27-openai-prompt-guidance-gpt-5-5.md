@@ -14,7 +14,9 @@ OpenAI has published official prompting guidance for their latest model GPT 5.5
 
 Here are some of the takeaways:
 > GPT-5.5 works best when prompts define the outcome and leave room for the model to choose an efficient solution path.
-> Describe what good looks like, what constraints matter, what evidence is available, and what the final answer should contain.
+- Describe the outcomes, not step by step on how to do like we used to write for older models. The model can figure that out on its own
+- Reasoning effort defaults to medium - change it to low/high based on your latency/cost needs and use case.
+
 
 ## Migrating Old Prompt using Codex
 
