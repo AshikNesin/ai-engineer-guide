@@ -10,6 +10,9 @@ qblog_id: d2d88b96-d914-439f-b14f-b30a245188fd
 
 [Agentation](https://www.agentation.com/) allows you to easily add visual feedback in the frontend. Once you've added the needed feedbacks, you can just copy them in one go.
 
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-05/qil0pyzsvjdhbibucows.mp4" >}}
+
+
 ![2026-05-09-at-22.50.492x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-05/ie18b4blaz7homtou8jz)
 
 ## How to get started?
