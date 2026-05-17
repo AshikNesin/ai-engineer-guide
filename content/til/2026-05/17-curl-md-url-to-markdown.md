@@ -1,5 +1,5 @@
 ---
-title: URL to markdown for agents
+title: curl.md - URL to markdown for AI Agents
 url: til/curl-md-url-to-markdown
 tags:
   - tools
@@ -13,3 +13,5 @@ You can use [curl.md](https://curl.md) to convert any url to markdown similar to
 Just append `https://curl.md/` before the url. And you'll be getting the markdown of that url.
 
 ![2026-05-17-at-23.58.212x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-05/qeiazvveurdjexbkps7i)
+
+The code is [open source](https://github.com/wevm/curl.md) - MIT licensed as well.
