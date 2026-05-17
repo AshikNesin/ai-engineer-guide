@@ -15,3 +15,5 @@ Just append `https://curl.md/` before the url. And you'll be getting the markdow
 ![2026-05-17-at-23.58.212x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-05/qeiazvveurdjexbkps7i)
 
 The code is [open source](https://github.com/wevm/curl.md) - MIT licensed as well.
+
+And their domain is super cool and short as well
