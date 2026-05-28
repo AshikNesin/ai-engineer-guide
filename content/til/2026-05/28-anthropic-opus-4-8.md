@@ -10,9 +10,17 @@ qblog_id: 20731128-38da-47bf-bd87-af9b49d456bd
 
 Anthropic has released their latest LLM model in their Opus family. As per the benchmark it has performed well for majority of the benchmarks when you compare this agaist GPT-5.5 or Gemini 3.1 Pro
 
-> Opus 4.8 launches alongside several new features. Users on claude.ai now have control over the amount of effort Claude puts into a task. Claude Code has a new “dynamic workflows” feature that allows it to tackle very large-scale problems. And fast mode for Opus 4.8—where the model can work at 2.5× the speed—is now three times cheaper than it was for previous models.
-
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-05/kng2x7r4xfiookkglfxr)
+
+In terms of pricing 👇
+
+| Mode    | Input Tokens | Output Tokens |
+|---------|--------------|---------------|
+| Regular | $5 per million | $25 per million |
+| Fast    | $10 per million | $50 per million |
+
+And we can use this in Claude API with this id `claude-opus-4-8`
+
 
 One of the interesting that this model introduce is [**Dynamic workflows**](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) which can be used to perform long running tasks like migrating large scale code base (maybe, they did Bun migration to rust to promote this feature as well 😅)
 
