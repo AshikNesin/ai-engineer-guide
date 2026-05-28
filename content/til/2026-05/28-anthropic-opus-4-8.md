@@ -16,5 +16,11 @@ Anthropic has released their latest LLM model in their Opus family. As per the b
 
 One of the interesting that this model introduce is [**Dynamic workflows**](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) which can be used to perform long running tasks like migrating large scale code base (maybe, they did Bun migration to rust to promote this feature as well 😅)
 
+![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-05/f2lqlowe5qaorztounlj)
+
+And now **Messages API** supports accepting system entires (metadata) inside the messages array *without breaking prompt cache or routing the update through a user*.
+
+> This can be used in a given harness to update permissions, token budgets, or environment context as an agent runs.
+
 ## Reference
 - https://www.anthropic.com/news/claude-opus-4-8
