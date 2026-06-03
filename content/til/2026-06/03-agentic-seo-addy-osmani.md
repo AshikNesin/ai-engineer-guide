@@ -1,5 +1,5 @@
 ---
-title: Agentic SEO
+title: Audit Your Site for Agentic SEO (AEO)
 url: til/agentic-seo-addy-osmani
 tags:
   - tools
