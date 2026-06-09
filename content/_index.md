@@ -4,8 +4,8 @@ title: AIEngineerGuide.com
 
 # Hi, I'm Ashik Nesin 👋
 
-I started this blog to document my journey as I try to become proficient in AI and to post free resources that I hope others find interesting too.
+I'm an applied AI engineer at [Chargebee](https://chargebee.com), building AI agents in production.
 
-Thanks for stopping by!
+I document what I learn through daily practice - the wins, the failures, and the resources I wish I'd found sooner.
 
-Want to say hi? [Let's talk](mailto:nesin@duck.com)
+[Say hi →](mailto:nesin@duck.com)
