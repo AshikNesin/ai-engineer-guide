@@ -13,7 +13,7 @@ qblog_id: 68ddb9ef-bef8-46aa-badf-79b638729f6a
 
 It has massive **~120,000 characters** 😮
 
-<iframe src="https://raw.githubusercontent.com/elder-plinius/CL4R1T4S/refs/heads/main/ANTHROPIC/CLAUDE-FABLE-5.md" width="100%" height="400px"></iframe>
+<iframe frameborder="0" scrolling="no" style="width:100%; height:46064px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Felder-plinius%2FCL4R1T4S%2Fblob%2Fmain%2FANTHROPIC%2FCLAUDE-FABLE-5.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
 
 ## Reference
 - https://x.com/elder_plinius/status/2064478648057610422
