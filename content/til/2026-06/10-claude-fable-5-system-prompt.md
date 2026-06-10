@@ -23,7 +23,21 @@ await window.storage.list('prefix:');
 ```
 - MCP App Trigger logic
   - It must search the MCP registry first before calling any third-party tool
-  
+- Copyright Compliance
+> **COPYRIGHT HARD LIMITS - APPLY TO EVERY RESPONSE:**
+> - 15+ words from any single source is a SEVERE VIOLATION
+> - ONE quote per source MAXIMUM—after one quote, that source is CLOSED
+> - DEFAULT to paraphrasing; quotes should be rare exceptions
+> These limits are NON-NEGOTIABLE. See the copyright compliance section for full rules.
+
+- File handling
+
+>CRITICAL - FILE LOCATIONS:
+> 1. USER UPLOADS (files the user mentions): every file in context is also on disk at `/mnt/user-data/uploads`. `view /mnt/user-data/uploads` to list.
+> 2. CLAUDE'S WORK: `/home/claude`. Create all new files here first. Users can't see this directory; use it as a scratchpad.
+> 3. FINAL OUTPUTS: `/mnt/user-data/outputs`. Copy completed files here; it's how the user sees Claude's work. ONLY final deliverables (including code files). For simple single-file tasks (<100 lines), write directly here.
+
+
 ## Full System Prompt
 
 <iframe frameborder="0" scrolling="no" style="width:100%; height:46064px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Felder-plinius%2FCL4R1T4S%2Fblob%2Fmain%2FANTHROPIC%2FCLAUDE-FABLE-5.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
