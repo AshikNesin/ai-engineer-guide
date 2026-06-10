@@ -17,3 +17,4 @@ It has massive **~120,000 characters** 😮
 
 ## Reference
 - https://x.com/elder_plinius/status/2064478648057610422
+- https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE-FABLE-5.md
