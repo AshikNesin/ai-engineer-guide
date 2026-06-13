@@ -12,6 +12,8 @@ qblog_id: 126192a1-6f43-4657-aa02-e46d96763285
 
 I think, Andrew started this project as fun but it might turn out to be a good problem.
 
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-06/pil2o2nvuhchhdtlkdkd.mp4" >}}
+
 You install the extension.
 
 And your spinner will show ads now. And you make 50% profit from it.
