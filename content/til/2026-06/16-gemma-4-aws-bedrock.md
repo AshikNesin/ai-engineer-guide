@@ -12,9 +12,14 @@ qblog_id: ef7fdf6c-f154-474e-8ac8-e9d2bb3b4972
 Gemma 4 models are now available on AWS Bedrock where you can just pay based on usage.
 
 It comes in 3 variants (different architecture) which solves for different use cases: 
-- Gemma 4 31B
-- Gemma 4 26B-A4B
-- Gemma 4 E2B
+
+| Model              | Model ID                 |
+|--------------------|--------------------------|
+| Gemma 4 31B        | `google.gemma-4-31b`     |
+| Gemma 4 26B-A4B    | `google.gemma-4-26b-a4b` |
+| Gemma 4 E2B        | `google.gemma-4-e2b`     |
+
+Feel free to copy and paste this into your Markdown file.
 
 ![2026-06-16-at-22.19.572x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-06/zufintziyiltgz9didep)
 
@@ -35,7 +40,7 @@ curl --location 'https://bedrock-mantle.us-east-2.api.aws/v1/chat/completions' \
 --header 'Authorization: Bearer $AWS_BEDROCK_KEY' \
 --header 'Content-Type: application/json' \
 --data '{
-    "model": "google.gemma-3-4b-it",
+    "model": "google.gemma-4-31b",
     "messages": [
         {
             "role": "system",
@@ -75,6 +80,106 @@ And we'll be getting response like this
         "prompt_tokens": 23,
         "total_tokens": 26
     }
+}
+```
+
+### Responses API
+
+```shell
+curl --location 'https://bedrock-mantle.us-east-2.api.aws/openai/v1/responses' \
+--header 'Authorization: Bearer $AWS_BEDROCK_KEY' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "google.gemma-4-31b",
+    "input": [
+        {
+            "role": "system",
+            "content": "You are concise and helpful."
+        },
+        {
+            "role": "user",
+            "content": "What is the capital of Japan?"
+        }
+    ]
+}'
+```
+
+And we'll be getting response like this
+
+```json
+{
+    "background": false,
+    "billing": {
+        "payer": "developer"
+    },
+    "completed_at": 1781630375,
+    "created_at": 1781630375,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_ry7cyzezapihrdlug3kngpqmh2a6u453rtacpe7upspurt7tj7ta",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "google.gemma-4-31b",
+    "object": "response",
+    "output": [
+        {
+            "content": [
+                {
+                    "annotations": [],
+                    "logprobs": [],
+                    "text": "The capital of Japan is Tokyo.",
+                    "type": "output_text"
+                }
+            ],
+            "id": "msg_da37bc558e1e55bc810b2310a0801c25",
+            "phase": "final_answer",
+            "role": "assistant",
+            "status": "completed",
+            "type": "message"
+        }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+        "effort": "medium",
+        "summary": null,
+        "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+        "format": {
+            "type": "text"
+        },
+        "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+        "input_tokens": 32,
+        "input_tokens_details": {
+            "cached_tokens": 0
+        },
+        "output_tokens": 8,
+        "output_tokens_details": {
+            "reasoning_tokens": 0
+        },
+        "total_tokens": 40
+    },
+    "user": null,
+    "moderation": null
 }
 ```
 
