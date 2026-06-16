@@ -2,7 +2,8 @@
 title: shadcn improve AI skill
 url: til/shadcn-improve-ai-skill
 tags:
-  - bookmark
+  - ai-skills
+  - shadcn
 status: published
 date: 2026-06-15T00:00:00.000Z
 qblog_id: 4455b909-cb97-4817-b102-31094dcd4368
