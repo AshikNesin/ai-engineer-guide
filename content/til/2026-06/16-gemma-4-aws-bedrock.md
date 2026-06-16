@@ -22,7 +22,62 @@ It comes in 3 variants (different architecture) which solves for different use c
 
 ## How to use it?
 
-It is available through `bedrock-mantle` endpoint which exposes the inference via OpenAI-compatible APIs
+It is available through [bedrock-mantle](https://docs.aws.amazon.com/bedrock/latest/userguide/endpoints.html) endpoint which exposes the inference via OpenAI-compatible APIs
+
+All you need to do is just replace the base url with bedrock-mantle url (make sure to configure proper region) and include the AWS Bedrock key when making the request. 
+
+You can refer to recent post on how to use [OpenAI models on AWS Bedrock](https://aiengineerguide.com/til/openai-models-on-aws-bedrock/)
+
+### Chat Completion
+
+```shell
+curl --location 'https://bedrock-mantle.us-east-2.api.aws/v1/chat/completions' \
+--header 'Authorization: Bearer $AWS_BEDROCK_KEY' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "google.gemma-3-4b-it",
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are concise and helpful."
+        },
+        {
+            "role": "user",
+            "content": "What is the capital of Japan?"
+        }
+    ]
+}'
+```
+
+And we'll be getting response like this
+
+```json
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Tokyo.",
+                "refusal": null,
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1781629710,
+    "id": "chatcmpl-d2f5fb58-62b1-41c7-844f-e227ec657b55",
+    "model": "google.gemma-3-4b-it",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "usage": {
+        "completion_tokens": 3,
+        "prompt_tokens": 23,
+        "total_tokens": 26
+    }
+}
+```
+
 
 ## Reference
 - https://aws.amazon.com/blogs/machine-learning/introducing-gemma-4-models-on-amazon-bedrock/
