@@ -27,5 +27,7 @@ And claiming is also straight forward like this
 
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-06/sqxpmal5edlogfgzyuvb)
 
+I think, more and more apps will make the sign up flow for AI Agents easy. I hope [auth.md](https://workos.com/auth-md) gets more traction like MCP as well to make life simple for AI Agents and us  
+
 ## Reference
 - https://blog.cloudflare.com/temporary-accounts/
