@@ -26,3 +26,6 @@ It redeploys in the same account + worker
 And claiming is also straight forward like this
 
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-06/sqxpmal5edlogfgzyuvb)
+
+## Reference
+- https://blog.cloudflare.com/temporary-accounts/
