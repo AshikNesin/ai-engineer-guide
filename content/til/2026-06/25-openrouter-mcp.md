@@ -22,6 +22,9 @@ They provide this via remote MCP. You can add it just by adding the following re
 And it has the following tools right now
 ![2026-06-26-at-01.00.13.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-06/bklta9qxqofxitkcr6le)
 
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-06/po2tj3utubt2jycuizlo.mp4" >}}
+
+
 ## Reference
 - https://x.com/OpenRouter/status/2070160491360780798
 
