@@ -36,5 +36,19 @@ curl -X POST https://api.cline.bot/api/v1/chat/completions \
   }'
 ```
 
+| Model             | Model ID                     |
+| ----------------- | ---------------------------- |
+| GLM-5.2           | cline-pass/glm-5.2           |
+| Kimi K2.7 Code    | cline-pass/kimi-k2.7-code    |
+| Kimi K2.6         | cline-pass/kimi-k2.6         |
+| DeepSeek V4 Pro   | cline-pass/deepseek-v4-pro   |
+| DeepSeek V4 Flash | cline-pass/deepseek-v4-flash |
+| MiMo-V2.5         | cline-pass/mimo-v2.5         |
+| MiMo-V2.5-Pro     | cline-pass/mimo-v2.5-pro     |
+| MiniMax M3        | cline-pass/minimax-m3        |
+| Qwen3.7 Max       | cline-pass/qwen3.7-max       |
+| Qwen3.7 Plus      | cline-pass/qwen3.7-plus      |
+
 ## Reference
 - https://xcancel.com/cline/status/2071617325296734309
+- https://docs.cline.bot/getting-started/clinepass#clinepass
