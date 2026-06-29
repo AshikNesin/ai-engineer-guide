@@ -18,6 +18,23 @@ qblog_id: 42207583-e3f7-40c7-8383-0fd2975d2566
 
 If you wanted to try out those models without having to worrying about individually subscribing to it, then this is a good option.
 
+## How to use API?
+Once you've the subscription, you can use the following inference endpoint to use those models. They support chat completing api endpoint
+
+```shell
+export CLINE_API_KEY="your_api_key_here"
+
+curl -X POST https://api.cline.bot/api/v1/chat/completions \
+  -H "Authorization: Bearer $CLINE_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "cline-pass/qwen3.7-max",
+    "messages": [
+      {"role": "user", "content": "Write a TypeScript function that validates an email address."}
+    ],
+    "stream": false
+  }'
+```
 
 ## Reference
 - https://xcancel.com/cline/status/2071617325296734309
