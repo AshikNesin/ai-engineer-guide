@@ -13,3 +13,10 @@ Similar to [visual-plan skill](https://aiengineerguide.com/til/visual-plan-skill
 Here is a quick video by Steve
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gC0XyX229jI?si=hduh_5cHeat_hyf-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## How to install it?
+They’ve a dedicated cli to install the plans
+
+```shell
+npx @agent-native/skills@latest add
+```
