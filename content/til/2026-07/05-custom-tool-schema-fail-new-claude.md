@@ -21,5 +21,8 @@ Armin's hypothesis is that the newer models are trained on Claude Code (post tra
 
 Aparently, Claude Code expects this and tries to heals itself to some extend.
 
+## Key Takeaway
+If you're building a harness and your tool call schema is different than Claude Code (or any other harness which dominates the training set), then you'll ended up paying a hidden tax.
+
 ## Reference
 - https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/
