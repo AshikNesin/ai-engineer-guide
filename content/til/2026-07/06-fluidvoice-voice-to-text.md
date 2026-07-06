@@ -14,6 +14,14 @@ Basically, the speech to text happens locally. It doesn't leave your device.
 
 ![2026-07-06-at-23.45.22.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-07/bhfzexvfkpiz6tlflply)
 
+It supports multiple languages like Parakeet TDT (which is really good mode)
+
+![2026-07-07-at-00.01.23.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-07/xxpb93k9oz0czlc5rhcp)
+
+Here is the walkthrough by Andrew
+
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-07/iuuxm3xcoz2562g6jywj.mp4" >}}
+
 ## How to get started?
 
 ```shell
@@ -21,3 +29,4 @@ brew install --cask fluidvoice
 ```
 ## Reference
 - https://x.com/AndrewWarner/status/2074130001381777505
+- https://github.com/altic-dev/FluidVoice
