@@ -38,6 +38,16 @@ I really like the signup flow.
 
 You don't need to create an account manually. You just need to send the above prompt and your AI agent will take care of rest, and it will get a dedicated email like this.
 
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-07/odfrs7azu6nv1ri4ogtc.mp4" >}}
+
+
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-07/vcsvus6que8o98grxgth)
 
+That's pretty much it.
 
+Now your agent can send/recieve email like this
+
+![2026-07-07-at-21.00.46.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-07/zwwmqacadqa3wcaqomw2)
+
+## Reference
+- https://github.com/Atomic-Mail/atomic-mail-agentic
