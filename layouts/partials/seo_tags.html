@@ -1,5 +1,15 @@
 <link rel="canonical" href="{{ .Permalink }}" />
 
+{{/* Per-post noindex support for TIL SOP
+   noindex: true        -> exclude from all search engines (robots noindex,follow)
+   noindex_google: true -> exclude from Google only (googlebot noindex) */}}
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex, follow">
+{{ end }}
+{{ if .Params.noindex_google }}
+<meta name="googlebot" content="noindex">
+{{ end }}
+
 {{ if eq .Kind "404" }}
 <meta name="robots" content="noindex">
 {{ end }}
