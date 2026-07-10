@@ -360,3 +360,4 @@ pyrightconfig.json
 # Local Netlify folder
 .netlify
 local/
+settings.local.json
