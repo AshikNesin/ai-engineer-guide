@@ -25,12 +25,10 @@ enableRobotsTXT = true
   tags = "/tags/:slug/"
 
 [sitemap]
-  changefreq = "daily"
   filename = "sitemap.xml"
-  priority = 0.5
 
 [frontmatter]
-  lastmod = ["lastmod", ":fileModTime", "date"]
+  lastmod = ["lastmod", "date"]
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
