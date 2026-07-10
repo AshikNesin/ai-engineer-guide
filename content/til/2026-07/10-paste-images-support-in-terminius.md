@@ -14,5 +14,8 @@ You'll have to manually upload the file somehow using services like [glance](htt
 
 Termius for iPhone/iPad recently has first class support for image upload support.
 
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-07/pcaczclqylsxohe3hdmz.mp4" >}}
+
+
 ## Reference
 - https://x.com/TermiusHQ/status/2075352305797681570
