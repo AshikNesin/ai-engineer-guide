@@ -10,7 +10,8 @@
 /api/related/ https://qblog.nesin.io/api/v1/public/blogs/AIEngineerGuide/posts/related 200!
 
 # Blog Path Redirect
-/blog /til/ 301!
+/blog  /til/ 301!
+/blog/ /til/ 301!
 
 # Feed redirects
 /feed/til.xml /til/feed.xml 200
@@ -465,4 +466,4 @@
 /til/z-ai-pony-alpha-2-claude-code/ /til/z-ai-glm-5-turbo-claude-code/ 301!
 
 # Catch-all for any /blog/ URLs not matched above
-/blog/* /til/:splat 301!
+/blog/* /til/:splat/ 301!
