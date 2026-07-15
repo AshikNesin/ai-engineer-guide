@@ -2,11 +2,18 @@
 title: How to expand paste collapse in Pi Coding Agent
 url: blog/expand-paste-collapse-pi-coding-agent
 tags:
-  - bookmark
+  - pi
 status: published
 date: 2026-07-15T00:00:00.000Z
 qblog_id: e0041230-b4a6-44d7-891e-e471039b3d0b
 ---
+
+When we paste on [Pi coding agent](https://pi.dev) it collapses whatever we've pasted with the marker something like `[Paste #1 +123 lines]`.
+
+You can open the prompt in a new text editor by pressing `ctrl+g`.
+
+However if you want to just expand it instead, you can just install the [pi-coding-agent](https://www.npmjs.com/package/@pi-kaush/pi-double-paste) extension
+
 
 ## Reference
 - https://x.com/kaushikgopal/status/2076816430822232106
