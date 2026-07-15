@@ -14,6 +14,8 @@ You can open the prompt in a new text editor by pressing `ctrl+g`.
 
 However if you want to just expand it instead, you can just install the [pi-coding-agent](https://www.npmjs.com/package/@pi-kaush/pi-double-paste) extension
 
+{{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-07/go4wehdqfu5uygpwejuu.mp4" >}}
+
 
 ## Reference
 - https://x.com/kaushikgopal/status/2076816430822232106
