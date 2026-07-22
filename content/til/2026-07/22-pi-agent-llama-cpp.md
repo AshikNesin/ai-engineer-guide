@@ -21,6 +21,7 @@ You can use the following slash command to do a one time setup.
 
 ![2026-07-23-at-00.01.41.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-07/hzlmh7jafgzh7gvlnr8i)
 
+We don't need to manage our own custom support to make Pi and llama.cpp anymore.
 
 ## Reference
 - https://x.com/pidotdev/status/2079561783912575217
