@@ -1,5 +1,5 @@
 ---
-title: Kimi K3 - Open Wights
+title: Kimi K3 - Open Weights
 url: til/kimi-k3-open-weights
 tags:
   - bookmark
