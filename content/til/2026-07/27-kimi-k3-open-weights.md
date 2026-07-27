@@ -14,6 +14,9 @@ TLDR: 2.8T MoE model with native visual understanding and a 1M-token context win
 
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-07/xs18z91pxdazwbik2boh)
 
+![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-07/eigm4hmf8qgeap5otwgc)
+
+
 Model weights: https://huggingface.co/moonshotai/Kimi-K3
 Tech Report: https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf
 
