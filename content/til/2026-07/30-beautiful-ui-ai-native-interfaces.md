@@ -12,6 +12,8 @@ Shane has published [Beautiful UI](https://beautiful-ui-five.vercel.app/) which 
 
 ![beautiful-ui-five.vercel.app_.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-07/a9obb37ed40rptb6mnge)
 
+I think it is pretty early stage but whatever component that he has so far looks good.
+
 
 ## Reference
 - https://x.com/theShaneLevine/status/2082142315317985695
