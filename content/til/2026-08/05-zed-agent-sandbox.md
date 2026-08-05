@@ -15,9 +15,9 @@ It prevents the following:
 - modifying `.git`
 - Or any other network request unless we grant permission.
 
-![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/lzrcfvre0gnq25niym0k)
-
 {{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-08/fgarbld9nifctaalfygf.mp4" >}}
+
+Similar to other coding agents like Claude Code, it uses Seatbelt on macOs, Bubblewrap on linux, WSL on Windows, etc.
 
 ## Reference
 - https://zed.dev/blog/sandboxing
