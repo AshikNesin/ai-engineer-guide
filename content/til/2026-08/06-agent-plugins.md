@@ -1,5 +1,5 @@
 ---
-title: Agent Plugins Standard
+title: Agent Plugins - Open Standard for AI Agents
 url: til/agent-plugins
 tags:
   - bookmark
