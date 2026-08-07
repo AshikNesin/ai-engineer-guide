@@ -17,7 +17,9 @@ So what's allowed?
 
 Any use of an LLM where you are the **only one who sees the output**. 
 
-> LLM output isn't allowed in public docs, PR descriptions, or Github comments unless it's clearly marked; reviewers aren't required to look at LLM PRs if they don't want to.
+So basically, you're allowed to use LLM to learn from the codebase, do code reviews privately and things like that. But LLM output isn't allowed in public docs, PR descriptions, or GH comments unless it's explictly mentioned.
+
+And reviewers aren't required to look at the LLM PRs if they don't want to do it.
 
 ## Reference
 - https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/
