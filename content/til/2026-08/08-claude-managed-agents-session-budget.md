@@ -32,6 +32,9 @@ SESSION_ID=$(jq -r '.id' <<< "$session")
 
 When creating a session, pass `budget` with `type=limit` and `max_list_cost.amount` in cents.
 
+## What happens when a budget is reached?
+When the session reaches the budget, we'll be getting `session.thread_status_idle` event with `budget_reached` as `stop_reason`
+
 ## Reference
 - https://x.com/ClaudeDevs/status/2085853169930957158
 - https://platform.claude.com/docs/en/managed-agents/budgets
