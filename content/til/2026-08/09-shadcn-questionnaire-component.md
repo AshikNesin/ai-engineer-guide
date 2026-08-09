@@ -1,5 +1,5 @@
 ---
-title: Multi-Step Agent Follow-Ups with shadcn's Questionnaire
+title: shadcn's Questionnaire - Multi-step Agent Follow-Up UI
 url: til/shadcn-questionnaire-component
 tags:
   - shadcn
