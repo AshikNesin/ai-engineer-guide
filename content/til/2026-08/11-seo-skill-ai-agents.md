@@ -27,3 +27,4 @@ You can use it as a CLI or use it as MCP as well.
 
 ## Reference
 - https://github.com/iannuttall/seo (open source)
+- https://x.com/ClaudeDevs/status/2085853171294101699
