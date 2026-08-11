@@ -11,7 +11,7 @@ qblog_id: 9b88aa17-286f-41cd-96f5-12d73d871c34
 Ian Nuttall has released [SEO Skill](https://seoskill.dev
 ) 
 
-> The only SEO skill your agent needs. Audit sites, find search opportunities, research competitors, and verify the work from one local CLI and MCP server.
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">One of my fave apps I worked on recently is <a href="https://t.co/PpNRa9S72j">https://t.co/PpNRa9S72j</a><br><br>&quot;The only SEO skill your agent needs.&quot;<br><br># Run this<br>npm i -g seo<br><br># Then this<br>seo start<br><br>My agents use it with GSC + Ahrefs data to fix issues, find keywords, check AI readiness and write better ranking pages.<br><br>I…</p>&mdash; Ian Nuttall (@iannuttall) <a href="https://x.com/iannuttall/status/2086890828677718444?ref_src=twsrc%5Etfw">August 10, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
 ## How to get started?
 
