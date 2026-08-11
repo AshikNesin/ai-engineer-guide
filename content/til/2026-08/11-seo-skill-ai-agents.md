@@ -14,7 +14,7 @@ Ian Nuttall has released [SEO Skill](https://seoskill.dev
 > The only SEO skill your agent needs. Audit sites, find search opportunities, research competitors, and verify the work from one local CLI and MCP server.
 
 ## How to get started?
-`
+
 ```shell
 npm i -g seo
 seo start
