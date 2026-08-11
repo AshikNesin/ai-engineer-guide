@@ -23,5 +23,7 @@ seo report
 
 You can connect different providers like SerpBase, DataForSEO, Ahrefs, etc
 
+You can use it as a CLI or use it as MCP as well.
+
 ## Reference
 - https://github.com/iannuttall/seo (open source)
