@@ -54,7 +54,10 @@ And the following models are available
 | Kimi-K2.7-Code | MoE, 1T total / 32B active | 262,144 tokens | Text, Image |
 | Qwen/Qwen3.6-35B-A3B-FP8 | MoE, 35B total / 3B active | 262,144 tokens | Text, Image |
 
-
+## Notes
+- They've **10M input tokens and 200k output tokens** per **60** seconds per API key rate limiting
+- Inference API is currently in experimental, so do not use it for anything serious
+- I think, you might need to have an active account with them to use this API inference. If you're using their services like VPS then great, if not you might need to do ID verifications and things.
 
 ## Reference
 - https://experiments.hetzner.com/docs/inference
