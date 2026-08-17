@@ -15,3 +15,7 @@ Shadcn has recently open sourced [minimal chatbot template](https://github.com/s
 And also it comes with the following tools but can be extented to cover your use cases as well
 
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/smrsdm0jg1qyi3uontiz)
+
+The backend is built using Vercel stack (where he is working) like Next.js, Vercel AI gateway, etc but it is a good reference point if you're building something similar to it.
+
+![Screenshot-2026-08-17-at-23-56-48.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/ub8fwrw22wrahlkiwmpq)
