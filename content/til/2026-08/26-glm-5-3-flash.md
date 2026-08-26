@@ -17,7 +17,7 @@ Some of the key highlights:
 - It ran entirely on `Chinese AI chips` when it was in preview mode as Ox Alpha.
 - It is as good as Opus 4.8
 
-![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/ntbmcrn7hlyd1c05fdt2)
+![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/mfobsnlwucphg1wq5qxg)
 
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/kw48br2uvafbs9y3hdsl)
 
