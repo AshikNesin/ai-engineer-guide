@@ -15,6 +15,7 @@ Some of the key highlights:
 - Has Vision/Image support with 1M context window
 - MIT License
 - It ran entirely on `Chinese AI chips` when it was in preview mode as Ox Alpha.
+- It is as good as Opus 4.8
 
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/ntbmcrn7hlyd1c05fdt2)
 
