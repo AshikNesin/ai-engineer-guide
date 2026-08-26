@@ -25,3 +25,4 @@ Its weights are available in [HuggingFace](https://huggingface.co/zai-org/GLM-5.
 
 ## Reference
 - https://x.com/Zai_org/status/2092616204787626030
+- https://artificialanalysis.ai/models/glm-5-3-flash
