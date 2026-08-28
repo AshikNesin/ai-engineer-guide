@@ -53,5 +53,12 @@ And get the result like this
 
 That's pretty much it.
 
+It's rate limited per IP and the limit is not officially mentioned in their docs (yet?).
+
+For some reason, my home ip address seems to be blocked for some reason. Maybe region specific lock but it worked perfectly in my VMs
+
+![Screenshot-2026-08-29-at-00-21-46.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/bc2pp9nurljwdpb7vw6x)
+
+
 ## Reference
 - https://www.firecrawl.dev/blog/firecrawl-keyless-launch
