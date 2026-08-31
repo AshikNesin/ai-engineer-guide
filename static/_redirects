@@ -1,6 +1,9 @@
 # Cloudflare Pages _redirects file
 # Format: /from /to [status]  (200 = proxy, 301/302 = redirect)
 
+# www -> apex (host-scoped rule, requires www.aiengineerguide.com attached to the project)
+https://www.aiengineerguide.com/* https://aiengineerguide.com/:splat 301
+
 # Blog Path Redirect
 /blog  /til/ 301
 /blog/ /til/ 301
