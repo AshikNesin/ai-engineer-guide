@@ -16,14 +16,14 @@ https://www.aiengineerguide.com/* https://aiengineerguide.com/:splat 301
 /blog/feed.xml /feed/til.xml 302
 
 # Tag redirects (keep /blog/ prefix -> /tags/)
-/blog/Andrej-Karpathy /tags/Andrej-Karpathy/ 301
-/blog/GLM-4-5 /tags/GLM-4-5/ 301
-/blog/GitHub /tags/GitHub/ 301
-/blog/LLM /tags/LLM/ 301
-/blog/Microsoft /tags/Microsoft/ 301
-/blog/OpenAI /tags/OpenAI/ 301
-/blog/OpenAI-Operator /tags/OpenAI-Operator/ 301
-/blog/TIL /tags/TIL/ 301
+/blog/Andrej-Karpathy /tags/andrej-karpathy/ 301
+/blog/GLM-4-5 /tags/glm-4-5/ 301
+/blog/GitHub /tags/github/ 301
+/blog/LLM /tags/llm/ 301
+/blog/Microsoft /tags/microsoft/ 301
+/blog/OpenAI /tags/openai/ 301
+/blog/OpenAI-Operator /tags/openai-operator/ 301
+/blog/TIL /tags/til/ 301
 /blog/ad-supported /tags/ad-supported/ 301
 /blog/addy-osmani /tags/addy-osmani/ 301
 /blog/ai-agents /tags/ai-agents/ 301
