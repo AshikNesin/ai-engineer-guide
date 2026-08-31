@@ -64,33 +64,8 @@ autocommit:
 		echo "⏱️ Time taken: $${duration}s"; \
 	'
 
-# Monitor Netlify deployment progress
+# Show latest Cloudflare Pages deployments
 build-progress:
-	@bash -c '\
-		echo "🔍 Monitoring Netlify deployment progress..."; \
-		site_id=$$(netlify status | grep "Project Id:" | cut -d: -f2 | sed "s/\\x1b\\[[0-9;]*m//g" | xargs); \
-		if [ -z "$$site_id" ]; then \
-			echo "❌ Could not find Site ID. Are you logged in with Netlify CLI?"; \
-			exit 1; \
-		fi; \
-		echo "📡 Monitoring latest deploy for site: $$site_id"; \
-		deploy_id=$$(netlify api listSiteDeploys --data "$$(printf '\''{"site_id":"%s"}'\'' "$$site_id")" | jq -r ".[0].id"); \
-		if [ -z "$$deploy_id" ] || [ "$$deploy_id" = "null" ]; then \
-			echo "❌ Could not retrieve the latest deploy ID."; \
-			exit 1; \
-		fi; \
-		echo "🆕 Latest Deploy ID: $$deploy_id"; \
-		echo "🔍 Polling deploy status..."; \
-		while true; do \
-			status=$$(netlify api getDeploy --data "$$(printf '\''{"deploy_id":"%s"}'\'' "$$deploy_id")" | jq -r ".state"); \
-			echo "🚧 Current status: $$status"; \
-			if [ "$$status" = "ready" ]; then \
-				echo "✅ Deploy complete!"; \
-				break; \
-			elif [ "$$status" = "error" ]; then \
-				echo "❌ Deploy failed."; \
-				exit 1; \
-			fi; \
-			sleep 5; \
-		done \
-	'
+	@echo "🔍 Latest Cloudflare Pages deployments:"
+	@wrangler pages deployment list --project-name=ai-engineer-guide | head -8 \
+		|| echo "⚠️ Install wrangler first: npm i -g wrangler && wrangler login"
