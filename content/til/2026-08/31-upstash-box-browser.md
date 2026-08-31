@@ -14,5 +14,9 @@ And we can control it programatically like this
 
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-08/fd6vcg5qkmhu0yg8u0dz)
 
+We get a live-view URL to see what's happening in real-time and full Chrome DevTools access as well.
+
+Now we can go wild with it without having to worry about security since it is isolated anyway.
+
 ## Reference
 - https://upstash.com/docs/box/overall/quickstart
