@@ -18,3 +18,6 @@ All you have to do is just enter your website, select the intent.
 And it'll fire up the browser under the hood and try to achieve that intent
 
 ![2026-09-01-at-23.52.432x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-09/chilio2rnd4zasj442sm)
+
+## Reference
+- https://x.com/oradotai/status/2094499180584571216
