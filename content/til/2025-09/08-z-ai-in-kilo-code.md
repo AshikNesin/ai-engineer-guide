@@ -11,7 +11,7 @@ qblog_id: 62707235-bb2b-43e8-a16a-ea246bfebc9c
 
 Z.ai's [GLM-4.5](https://z.ai/blog/glm-4.5) is pretty good open-source LLM which seems to perform similarly to proprietary AI models (almost).
 
-I've recently started using their [Coding Plan](/blog/z-ai-glm-coding-plan/) as well, which you can use with Claude Code.
+I've recently started using their [Coding Plan](/til/z-ai-glm-coding-plan/) as well, which you can use with Claude Code.
 
 Let's see how to use the GLM-4.5 model in [Kilo Code](https://kilocode.ai/).
 

@@ -182,13 +182,14 @@
           var visibleTags = item.tags.slice(0, 3);
           tags = '<div class="related-post-tags">' +
             visibleTags.map(function (t) {
-              return '<a href="https://aiengineerguide.com/tags/' + encodeURIComponent(t) + '" class="related-post-tag" target="_blank" rel="noopener noreferrer">' + escapeHtml(t) + '</a>';
+              return '<a href="https://aiengineerguide.com/tags/' + encodeURIComponent(t) + '/" class="related-post-tag" target="_blank" rel="noopener noreferrer">' + escapeHtml(t) + '</a>';
             }).join("") +
             '</div>';
         }
 
         var url = item.url || (window.location.origin + "/" + item.slug);
         url = sanitizeUrl(url);
+        if (url && url.indexOf("://") > 0 && url.charAt(url.length - 1) !== "/") url = url + "/";
 
         html += '<div class="related-post-card">' +
           '<a href="' + escapeHtml(url) + '" class="related-post-link" data-umami-event="related-post-click" data-umami-event-url="' + escapeHtml(url) + '">' +

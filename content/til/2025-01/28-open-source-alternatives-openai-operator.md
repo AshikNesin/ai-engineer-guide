@@ -18,7 +18,7 @@ qblog_id: e7ef6e3e-353f-405b-a701-538664783c1b
 
 Though I didn't get access to try it myself, the demo that is presented by the OpenAI team looks promising.
 
-Essentially it works by passing the screenshot and asking the LLM for next action. You can have a look at their [system prompt](/blog/26-openai-operator-prompt)
+Essentially it works by passing the screenshot and asking the LLM for next action. You can have a look at their [system prompt](/til/openai-operator-prompt/)
 
 Here are some of the open source alternative to OpenAI Operator that mimics browser searching capabilities
 

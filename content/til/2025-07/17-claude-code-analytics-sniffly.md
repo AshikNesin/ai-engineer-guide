@@ -14,7 +14,7 @@ I got to know about [Sniffly](https://github.com/chiphuyen/sniffly?tab=readme-ov
 
 It's **Claude Code Analytics** dashboard that you can run in your system which will give use the logs that were available in your local machine (`~/.claude`) to generate a detailed analytics of your usage.
 
-Unlike [ccusage](/blog/claude-code-usage/), Sniffly gives you detailed analytics on your usage.
+Unlike [ccusage](/til/claude-code-usage/), Sniffly gives you detailed analytics on your usage.
 
 For example, you can:
 - Project via cost split up

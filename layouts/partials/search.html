@@ -465,7 +465,7 @@
                                             return (
                                                 '<a href="https://aiengineerguide.com/tags/' +
                                                 encodeURIComponent(t) +
-                                                '" class="search-result-tag" target="_blank" rel="noopener noreferrer">' +
+                                                '/" class="search-result-tag" target="_blank" rel="noopener noreferrer">' +
                                                 escapeHtml(t) +
                                                 "</a>"
                                             );
@@ -475,6 +475,7 @@
                             }
                             let url = item.url || `${window.location.origin}/${item.slug}`;
                             url = sanitizeUrl(url);
+                            if (url && url.indexOf("://") > 0 && url.charAt(url.length - 1) !== "/") url = url + "/";
                             html +=
                                 '<div class="search-result-item">' +
                                 '<a href="' +

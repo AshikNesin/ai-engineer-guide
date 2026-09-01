@@ -20,7 +20,7 @@ Just append `https://markdown.new/` before any url.
 
 Like this:
 
-`https://markdown.new/https://aiengineerguide.com/blog/glm-5-in-pi-coding-agent/` 
+`https://markdown.new/https://aiengineerguide.com/til/glm-5-in-pi-coding-agent/` 
 
 And you should be seeing a clean markdown for that url.
 

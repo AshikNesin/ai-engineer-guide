@@ -4,6 +4,12 @@
 # www -> apex (host-scoped rule, requires www.aiengineerguide.com attached to the project)
 https://www.aiengineerguide.com/* https://aiengineerguide.com/:splat 301
 
+# Cloudflare Pages preview domain -> apex (prevent duplicate-host indexing)
+https://ai-engineer-guide.pages.dev/* https://aiengineerguide.com/:splat 301
+
+# Legacy feed path fix
+/index.xml /feed.xml 301
+
 # Blog Path Redirect
 /blog  /til/ 301
 /blog/ /til/ 301

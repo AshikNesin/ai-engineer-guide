@@ -9,7 +9,7 @@ date: 2026-01-07T00:00:00.000Z
 qblog_id: bab3e964-4eda-4028-b0ec-e6e0b0125aa9
 ---
 
-[Vercel AI Gateway](https://aiengineerguide.com/blog/vercel-ai-gateway/) now has support for Claude Code. Similar to that of [GLM Coding Plan](https://go.nesin.io/glm) you just need to update the base url and keys and we're good to go.
+[Vercel AI Gateway](https://aiengineerguide.com/til/vercel-ai-gateway/) now has support for Claude Code. Similar to that of [GLM Coding Plan](https://go.nesin.io/glm) you just need to update the base url and keys and we're good to go.
 
 Basically under the hood, they've built transform the payload from LLM back and forth to make it behave like Anthropic-like API endpoint so that it works as expected in Claude Code.
 

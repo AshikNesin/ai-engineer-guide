@@ -12,7 +12,7 @@ via_url: null
 
 Claude Code team has recently shipped [customizable status lines](https://x.com/_catwu/status/1953927012592366062) feature.
 
-We can combine this with [ccusage](/blog/claude-code-usage/) and we have a a beautiful CLI like this 👇
+We can combine this with [ccusage](/til/claude-code-usage/) and we have a a beautiful CLI like this 👇
 
 ![2025-08-10 at 11.12.05@2x.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-08/2025-08-10-at-11.12.05-at-2x.png)
 

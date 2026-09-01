@@ -13,7 +13,7 @@ via_url: null
 
 LLM models out of box does not have support for real time data. 
 
-However top AI providers like OpenAI and Anthropic started providing [web search as a tool](/blog/openai-web-search-tool/) using which you can get real time data.
+However top AI providers like OpenAI and Anthropic started providing [web search as a tool](/til/openai-web-search-tool/) using which you can get real time data.
 
 Similar to that, if you're using OpenRouter you can have such capability for **any** LLM model
 

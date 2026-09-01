@@ -11,7 +11,7 @@ qblog_id: c6c70f42-0178-48d0-8f5d-af16a1e81bd4
 
 We can now perform real-time search using Perplexity Search API similar to how [Exa.ai](https://exa.ai) or [Brave search](https://brave.com/search/api/) works.
 
-If you have Perplexity Pro then you get [$5/mo](/blog/free-llm-credits-for-perplexity-pro/) credits which you can use it for this API as well.
+If you have Perplexity Pro then you get [$5/mo](/til/free-llm-credits-for-perplexity-pro/) credits which you can use it for this API as well.
 
 ## How to get started?
 First thing, you need to get a [new API key](https://www.perplexity.ai/account/api/keys) - If you have old API key then it does not work with search API, so make sure to create a new one.

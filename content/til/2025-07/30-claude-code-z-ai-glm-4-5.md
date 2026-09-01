@@ -18,7 +18,7 @@ It is as good as commercial models.
 
 ![Pasted image 20250730090222.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-07/Pasted-image-20250730090222.png)
 
-Similar to [Kimi K2](/blog/claude-code-kimi-k2/), they also provide Anthropic compatible API endpoint which we can use with Claude Code
+Similar to [Kimi K2](/til/claude-code-kimi-k2/), they also provide Anthropic compatible API endpoint which we can use with Claude Code
 ## How to do it?
 
 Just set these environment variables before running Claude Code cli

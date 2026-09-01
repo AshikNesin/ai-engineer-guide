@@ -13,6 +13,6 @@ I've been playing around (like everyone else) with OpenClaw for couple of days n
 Here are some of the use cases others are using their OpenClaw bot to do:
 
 - [awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases)
-- [Mission control for business](https://aiengineerguide.com/blog/openclaw-bhanu-use-case/)
+- [Mission control for business](https://aiengineerguide.com/til/openclaw-bhanu-use-case/)
 
 I'll update the list as and when I find something useful.

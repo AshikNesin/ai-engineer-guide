@@ -9,7 +9,7 @@ date: 2025-09-04T00:00:00.000Z
 qblog_id: 2977b0e7-94cd-4475-a645-891e2cb2cfa0
 ---
 
-OpenAI finally has support for domain-level filtering in their [web search tool](/blog/openai-web-search-tool/)
+OpenAI finally has support for domain-level filtering in their [web search tool](/til/openai-web-search-tool/)
 
 You need to pass in `filters.allowed_domains` when defining the tools
 
@@ -64,95 +64,95 @@ curl --location 'https://api.openai.com/v1/responses' \
                 "sources": [
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-webhooks/"
+                        "url": "https://aiengineerguide.com/til/openai-webhooks/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-background-mode/"
+                        "url": "https://aiengineerguide.com/til/openai-background-mode/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openrouter-web-search/"
+                        "url": "https://aiengineerguide.com/til/openrouter-web-search/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openrouter-ai-gateway/"
+                        "url": "https://aiengineerguide.com/til/openrouter-ai-gateway/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/practical-guide-to-building-agents-openai/"
+                        "url": "https://aiengineerguide.com/til/practical-guide-to-building-agents-openai/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-chatgpt-5-system-prompt/"
+                        "url": "https://aiengineerguide.com/til/openai-chatgpt-5-system-prompt/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-web-search-tool/"
+                        "url": "https://aiengineerguide.com/til/openai-web-search-tool/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/"
+                        "url": "https://aiengineerguide.com/til/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-deep-research-api/"
+                        "url": "https://aiengineerguide.com/til/openai-deep-research-api/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-operator-prompt/"
+                        "url": "https://aiengineerguide.com/til/openai-operator-prompt/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/til/"
+                        "url": "https://aiengineerguide.com/til/til/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/use-mcp-react-hook/"
+                        "url": "https://aiengineerguide.com/til/use-mcp-react-hook/"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-background-mode/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/openai-background-mode/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openrouter-web-search/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/openrouter-web-search/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openrouter-ai-gateway/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/openrouter-ai-gateway/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/practical-guide-to-building-agents-openai/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/practical-guide-to-building-agents-openai/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-chatgpt-5-system-prompt/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/openai-chatgpt-5-system-prompt/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-web-search-tool/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/openai-web-search-tool/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-deep-research-api/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/openai-deep-research-api/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/openai-operator-prompt/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/openai-operator-prompt/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/til/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/til/?utm_source=openai"
                     },
                     {
                         "type": "url",
-                        "url": "https://aiengineerguide.com/blog/use-mcp-react-hook/?utm_source=openai"
+                        "url": "https://aiengineerguide.com/til/use-mcp-react-hook/?utm_source=openai"
                     }
                 ]
             }
@@ -170,46 +170,46 @@ curl --location 'https://api.openai.com/v1/responses' \
                             "end_index": 499,
                             "start_index": 407,
                             "title": "Using OpenAI Webhooks to Handle Long-Running Tasks Efficiently",
-                            "url": "https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai"
+                            "url": "https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai"
                         },
                         {
                             "type": "url_citation",
                             "end_index": 804,
                             "start_index": 712,
                             "title": "Using OpenAI Webhooks to Handle Long-Running Tasks Efficiently",
-                            "url": "https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai"
+                            "url": "https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai"
                         },
                         {
                             "type": "url_citation",
                             "end_index": 1307,
                             "start_index": 1215,
                             "title": "Using OpenAI Webhooks to Handle Long-Running Tasks Efficiently",
-                            "url": "https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai"
+                            "url": "https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai"
                         },
                         {
                             "type": "url_citation",
                             "end_index": 1711,
                             "start_index": 1619,
                             "title": "Using OpenAI Webhooks to Handle Long-Running Tasks Efficiently",
-                            "url": "https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai"
+                            "url": "https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai"
                         },
                         {
                             "type": "url_citation",
                             "end_index": 2105,
                             "start_index": 2013,
                             "title": "Using OpenAI Webhooks to Handle Long-Running Tasks Efficiently",
-                            "url": "https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai"
+                            "url": "https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai"
                         },
                         {
                             "type": "url_citation",
                             "end_index": 2611,
                             "start_index": 2519,
                             "title": "Using OpenAI Webhooks to Handle Long-Running Tasks Efficiently",
-                            "url": "https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai"
+                            "url": "https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai"
                         }
                     ],
                     "logprobs": [],
-                    "text": "According to aiengineerguide.com, OpenAI **does** support webhooks—specifically for handling asynchronous operations like long-running tasks and background processes.\n\nHere are the details:\n\n- OpenAI released webhook support for their **Deep Research API**, enabling notifications when:\n  - A background response is generated\n  - Batch jobs complete\n  - Fine-tuning tasks finish\n  - Evaluation runs end  \n  ([aiengineerguide.com](https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai))\n\n- You can configure webhook endpoints per project via the OpenAI dashboard. After setting it up, you’ll receive a **signing secret** used to verify that incoming webhook requests genuinely originate from OpenAI ([aiengineerguide.com](https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai)).\n\n- Supported event types include:\n  - Batches: `batch.completed`, `batch.failed`, `batch.expired`, `batch.cancelled`\n  - Background responses: `response.completed`, `response.failed`, `response.cancelled`, `response.incomplete`\n  - Fine-tuning jobs: `fine_tuning.job.succeeded`, `fine_tuning.job.failed`, `fine_tuning.job.cancelled`\n  - Eval runs: `eval.run.succeeded`, `eval.run.failed`, `eval.run.canceled` ([aiengineerguide.com](https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai))\n\n- The webhook payload includes headers like `webhook-id`, `webhook-timestamp`, and `webhook-signature`, alongside a JSON body with event details. You must respond with a **2xx HTTP status code** quickly to acknowledge receipt, otherwise OpenAI will retry delivery with exponential backoff (for up to 72 hours) ([aiengineerguide.com](https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai)).\n\n- To verify webhook signatures, you can use the OpenAI SDK or standard webhook libraries. The SDK provides a method like:\n  \n  ```js\n  const event = client.webhooks.unwrap(req.body, req.headers, { secret: webhook_secret });\n  ```\n  \n  —which will throw or raise an error if the signature is invalid ([aiengineerguide.com](https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai)).\n\n---\n\n**In summary**:\nYes—OpenAI supports webhooks, allowing you to receive real-time notifications for events such as background response completion, batch job status updates, fine-tuning progress, and evaluation results. Webhooks are project-specific, secure via signing secrets, require quick 2xx acknowledgments, and are supported via their SDK for easy signature validation—according to aiengineerguide.com ([aiengineerguide.com](https://aiengineerguide.com/blog/openai-webhooks/?utm_source=openai)).\n\nLet me know if you'd like a deeper dive into implementation examples or best practices!"
+                    "text": "According to aiengineerguide.com, OpenAI **does** support webhooks—specifically for handling asynchronous operations like long-running tasks and background processes.\n\nHere are the details:\n\n- OpenAI released webhook support for their **Deep Research API**, enabling notifications when:\n  - A background response is generated\n  - Batch jobs complete\n  - Fine-tuning tasks finish\n  - Evaluation runs end  \n  ([aiengineerguide.com](https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai))\n\n- You can configure webhook endpoints per project via the OpenAI dashboard. After setting it up, you’ll receive a **signing secret** used to verify that incoming webhook requests genuinely originate from OpenAI ([aiengineerguide.com](https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai)).\n\n- Supported event types include:\n  - Batches: `batch.completed`, `batch.failed`, `batch.expired`, `batch.cancelled`\n  - Background responses: `response.completed`, `response.failed`, `response.cancelled`, `response.incomplete`\n  - Fine-tuning jobs: `fine_tuning.job.succeeded`, `fine_tuning.job.failed`, `fine_tuning.job.cancelled`\n  - Eval runs: `eval.run.succeeded`, `eval.run.failed`, `eval.run.canceled` ([aiengineerguide.com](https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai))\n\n- The webhook payload includes headers like `webhook-id`, `webhook-timestamp`, and `webhook-signature`, alongside a JSON body with event details. You must respond with a **2xx HTTP status code** quickly to acknowledge receipt, otherwise OpenAI will retry delivery with exponential backoff (for up to 72 hours) ([aiengineerguide.com](https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai)).\n\n- To verify webhook signatures, you can use the OpenAI SDK or standard webhook libraries. The SDK provides a method like:\n  \n  ```js\n  const event = client.webhooks.unwrap(req.body, req.headers, { secret: webhook_secret });\n  ```\n  \n  —which will throw or raise an error if the signature is invalid ([aiengineerguide.com](https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai)).\n\n---\n\n**In summary**:\nYes—OpenAI supports webhooks, allowing you to receive real-time notifications for events such as background response completion, batch job status updates, fine-tuning progress, and evaluation results. Webhooks are project-specific, secure via signing secrets, require quick 2xx acknowledgments, and are supported via their SDK for easy signature validation—according to aiengineerguide.com ([aiengineerguide.com](https://aiengineerguide.com/til/openai-webhooks/?utm_source=openai)).\n\nLet me know if you'd like a deeper dive into implementation examples or best practices!"
                 }
             ],
             "role": "assistant"

@@ -27,7 +27,7 @@ Here are the some of highlights that I found interesting
 ![Pasted image 20250605230500.png](https://images.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/images/2025-06/Pasted-image-20250605230500.png)
 
 ## MCP
-- Well, now we can easily [install MCP](/blog/cursor-mcp-deeplink/) with just one click.
+- Well, now we can easily [install MCP](/til/cursor-mcp-deeplink/) with just one click.
 - OAuth support is now supported in Cursor
 
 {{< video "https://www.cursor.com/changelog/1-0/mcp-one-click.mp4"  >}}

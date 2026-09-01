@@ -10,7 +10,7 @@ qblog_id: 65b8d55e-e4fa-421e-bc92-67d55f5e41c2
 via_url: null
 ---
 
-Similar to [Anthropic](https://aiengineerguide.com/blog/anthropic-claude-web-search-tool/), OpenAI also provides [web search tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tooll). This tools gets executed at their server during LLM inference.  
+Similar to [Anthropic](https://aiengineerguide.com/til/anthropic-claude-web-search-tool/), OpenAI also provides [web search tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tooll). This tools gets executed at their server during LLM inference.  
 
 ## What does web search tool does?
 As the name suggest, it can search the internet real-time and use the content for generating response. By doing so it overcomes the core limitation of LLMs -- getting up to date information beyond knowledge cutoff date. And it indirectly increases the accuracy rate.
@@ -212,7 +212,7 @@ You will get token usage in API response.
 }
 ```
 
-You can also do [domain level filtering](/blog/domain-filter-openai-web-search-tool/) as well when performing web search.
+You can also do [domain level filtering](/til/domain-filter-openai-web-search-tool/) as well when performing web search.
 
 ## References
 - https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses&lang=curl

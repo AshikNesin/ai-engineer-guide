@@ -12,7 +12,7 @@ qblog_id: 13330184-cccd-4676-90e8-8b63651e5e7c
 
 The latest model from z.ai - GLM-5 just got release. As per the benchmark it is as good as Anthropic Opus 4.5.
 
-Even though there is no official annoncement yet, you can access it via [API](https://aiengineerguide.com/blog/glm-5-coding-plan-api/)
+Even though there is no official annoncement yet, you can access it via [API](https://aiengineerguide.com/til/glm-5-coding-plan-api/)
 
 And so, we can use it in Claude Code as well.
 

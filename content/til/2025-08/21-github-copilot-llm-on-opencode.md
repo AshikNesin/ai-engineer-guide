@@ -9,7 +9,7 @@ date: 2025-08-21T00:00:00.000Z
 qblog_id: 32039df8-795d-48c2-b981-18ed8eb24e32
 ---
 
-Today I learned that you can use **GitHub Copilot** models on [OpenCode](https://aiengineerguide.com/blog/opencode/)
+Today I learned that you can use **GitHub Copilot** models on [OpenCode](https://aiengineerguide.com/til/opencode/)
 
 This means if you already have a GitHub Copilot subscription, you can just use it with OpenCode and don't have to worry about paying the vendor directly.
 

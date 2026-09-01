@@ -11,7 +11,7 @@ qblog_id: 069eaf06-dfd7-4380-8baf-70880551d19b
 
 Z.AI has recently released [GLM-4.6](https://docs.z.ai/guides/llm/glm-4.6) - a open source model that performs as good as Anthropic Sonnet 4 based on the benchmark.
 
-Similar to [GLM-4.5](/blog/claude-code-z-ai-glm-4-5/), you can use it with Claude Code as well.
+Similar to [GLM-4.5](/til/claude-code-z-ai-glm-4-5/), you can use it with Claude Code as well.
 
 They offer [GLM Code Plan](https://go.nesin.io/glm), using which you can buy subscription instead of usage based billing as well.
 

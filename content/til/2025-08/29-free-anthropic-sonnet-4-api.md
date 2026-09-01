@@ -11,7 +11,7 @@ date: 2025-08-29T00:00:00.000Z
 qblog_id: f2b85461-cd56-4521-a573-7ab64db882e4
 ---
 
-Vercel's [AI Gateway](https://aiengineerguide.com/blog/vercel-ai-gateway/) lets you use multiple LLMs across different AI providers just by changing a single line.
+Vercel's [AI Gateway](https://aiengineerguide.com/til/vercel-ai-gateway/) lets you use multiple LLMs across different AI providers just by changing a single line.
 
 Right now, they're giving $5 per month in free credit (if you haven't bought any paid credit in that account), which you can use to try any LLM model including Anthropic's Sonnet 4
 

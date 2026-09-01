@@ -12,7 +12,7 @@ qblog_id: 0b4b278d-6369-4721-b42a-2d1f4dfb7efc
 
 xAI's Grok Code Fast (which was called Sonic in stealth mode) is model that is specifically built for **autonomous  development (coding)** 
 
-With Vercel's [AI Gateway](https://aiengineerguide.com/blog/vercel-ai-gateway/) free credit of $5 per month (if you haven't bought any paid credit in that account).
+With Vercel's [AI Gateway](https://aiengineerguide.com/til/vercel-ai-gateway/) free credit of $5 per month (if you haven't bought any paid credit in that account).
 
 We can use that model for free using that credit.
 

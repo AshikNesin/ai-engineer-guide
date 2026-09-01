@@ -10,7 +10,7 @@ qblog_id: c37c5b6b-e981-47d7-bb6d-514ba44ba9ca
 via_url: null
 ---
 
-Recently, I was [playing](https://aiengineerguide.com/blog/kilocode-vs-code/) around with [Kilocode](https://kilocode.ai/) which is an AI agent coding extension that you can install in VS Code (and forks like Cursor, Windsurf, etc)
+Recently, I was [playing](https://aiengineerguide.com/til/kilocode-vs-code/) around with [Kilocode](https://kilocode.ai/) which is an AI agent coding extension that you can install in VS Code (and forks like Cursor, Windsurf, etc)
 
 While checking the code base for Kilocode provider it seems like they're using [OpenRouter](https://github.com/Kilo-Org/kilocode/blob/main/src/api/providers/kilocode-openrouter.ts) under the hood.
 

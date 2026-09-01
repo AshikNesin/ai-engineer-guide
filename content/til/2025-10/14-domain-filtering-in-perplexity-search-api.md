@@ -32,7 +32,7 @@ And we'll be getting the response like this:
   "results": [
     {
       "title": "Prompt Engineering 101 by Anthropic - AI Engineer Guide",
-      "url": "https://aiengineerguide.com/blog/prompt-engineering-101-by-anthropic/",
+      "url": "https://aiengineerguide.com/til/prompt-engineering-101-by-anthropic/",
       "snippet": "# Prompt Engineering 101 by Anthropic\n\nI came across the prompt engineering tips by the Anthropic team 👇\n\nI especially like the prompt structure tips\n\nHappy learning AI!\n\nI came across the prompt engineering tips by the Anthropic team 👇\n\nI especially like the prompt structure tips\n\nHappy learning AI!",
       "date": "2025-08-23",
       "last_updated": "2025-08-29"

@@ -20,6 +20,17 @@
 /feed/*
   Cache-Control: public, max-age=3600
   Content-Type: application/xml; charset=utf-8
+  X-Robots-Tag: noindex
+
+/feed.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+  X-Robots-Tag: noindex
+
+/til/feed.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+  X-Robots-Tag: noindex
 
 # Sitemap
 /sitemap.xml
