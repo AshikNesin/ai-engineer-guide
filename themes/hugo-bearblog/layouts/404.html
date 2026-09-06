@@ -12,7 +12,7 @@
     userAgent: navigator.userAgent
   };
   
-  fetch('/.netlify/functions/track-404', {
+  fetch('/api/track-404', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

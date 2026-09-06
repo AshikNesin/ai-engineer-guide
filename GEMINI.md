@@ -10,7 +10,7 @@ This is a **static site generator project** using Hugo with a custom content pip
 - **Framework**: Hugo (static site generator)
 - **Theme**: hugo-bearblog
 - **Content Source**: Obsidian vault (synced via custom script)
-- **Hosting**: Netlify with serverless functions
+- **Hosting**: Cloudflare Pages with Pages Functions
 - **Key Features**:
   - Obsidian Sync: Write in Obsidian, publish with Hugo
   - 404 Notifications: Real-time alerts via Pushover
@@ -34,10 +34,12 @@ AIEngineerGuide/
 ├── themes/
 │   └── hugo-bearblog/  # Theme directory
 ├── scripts/            # Content sync automation
-├── netlify/
-│   └── functions/      # Serverless functions
+├── functions/         # Cloudflare Pages Functions (API proxy, 404 tracking)
+├── static/
+│   ├── _redirects     # Cloudflare Pages redirects
+│   └── _headers       # Cache/security headers
 ├── hugo.toml          # Primary Hugo configuration
-└── netlify.toml       # Netlify deployment config
+└── Makefile
 ```
 
 ## Building and Running
@@ -93,11 +95,11 @@ This command will:
 1. Sync Obsidian notes
 2. Auto-generate a commit message using Gemini
 3. Commit and push changes
-4. Monitor Netlify deployment progress
+4. Monitor Cloudflare Pages deployment progress
 
 ## Deployment
 
-### Netlify Settings
+### Cloudflare Pages Settings
 - **Build Command**: `hugo --gc --minify --config hugo.toml`
 - **Publish Directory**: `public/`
 - **Hugo Version**: `0.140.0`
@@ -115,7 +117,7 @@ Located in `scripts/sync-obsidian-notes.js`, this Node.js script:
 - Automatically copies images to `static/images/`
 
 ### 2. 404 Tracking Serverless Function
-Located in `netlify/functions/track-404.mjs`, this function:
+Located in `functions/api/track-404.js`, this function:
 - Receives 404 page hits via POST requests
 - Sends real-time notifications to Pushover
 - Captures client IP, location, device type, and user agent
@@ -146,4 +148,4 @@ Override theme templates via `layouts/`:
 
 - [Hugo Documentation](https://gohugo.io/documentation/)
 - [Hugo Bearblog Theme](https://github.com/janraasch/hugo-bearblog)
-- [Netlify Docs](https://docs.netlify.com/)
+- [Cloudflare Pages Docs](https://developers.cloudflare.com/pages/)

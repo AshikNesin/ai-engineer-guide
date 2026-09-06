@@ -1,4 +1,4 @@
-# Netlify _headers
+# Cloudflare Pages _headers (also read by Netlify-style hosting)
 # Reference: https://docs.netlify.com/configure-builds/file-based-configuration/#headers
 
 # Images — long cache (immutable via Cloudinary versioned URLs)

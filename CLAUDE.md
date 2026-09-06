@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Hugo static site blog called "AI Engineer Guide" that focuses on AI engineering content. The site uses:
 - **Hugo** static site generator with `hugo-bearblog` theme
-- **Netlify** for hosting and serverless functions
+- **Cloudflare Pages** for hosting and Pages Functions
 - **Obsidian** for content creation with sync automation
 - **Umami** for analytics
 
@@ -42,10 +42,11 @@ cd scripts && npm run sync:watch
 - Primary config: `hugo.toml` (overrides `config.toml`)
 - Theme: `hugo-bearblog` located in `themes/` directory
 - Custom layouts in `layouts/` override theme defaults
-- Netlify config in `netlify.toml` with build settings and redirects
+- Cloudflare Pages redirects in `static/_redirects`, headers in `static/_headers`
 
-### Netlify Functions
-- **404 Tracking**: `netlify/functions/track-404.mjs` sends push notifications via Pushover when users hit 404 pages
+### Cloudflare Pages Functions
+- **404 Tracking**: `functions/api/track-404.js` sends push notifications via Pushover when users hit 404 pages
+- **API Proxy**: `functions/api/[[path]].js` proxies `/api/search` and `/api/related` to qblog.nesin.io
 - **Environment Variables**: Requires `PUSHOVER_API_TOKEN` and `PUSHOVER_USER_KEY`
 
 ## Content Organization
@@ -59,7 +60,7 @@ Blog posts are organized by year/month in `content/blog/YYYY-MM/` format. Each p
 
 - **Build Command**: `hugo --gc --minify --config hugo.toml`
 - **Publish Directory**: `public/`
-- **Hugo Version**: 0.140.0 (specified in netlify.toml)
+- **Hugo Version**: 0.140.0 (set in Cloudflare Pages build environment)
 - **Timezone**: Asia/Kolkata
 
 ## Custom Features

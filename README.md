@@ -30,7 +30,7 @@ make dev
 - **Live Site**: [AIEngineerGuide.com](https://aiengineerguide.com)
 - **Framework**: Hugo (static site generator)
 - **Theme**: `hugo-bearblog` 
-- **Hosting**: Netlify + serverless functions
+- **Hosting**: Cloudflare Pages + Pages Functions
 - **Content Source**: Obsidian vault
 - **Analytics**: Umami integration (self hosted)
 - **Timezone**: Asia/Kolkata
@@ -97,23 +97,26 @@ AIEngineerGuide/
 ├── themes/
 │   └── hugo-bearblog/  # Theme directory
 ├── scripts/            # Content sync automation
-├── netlify/
-│   └── functions/      # Serverless functions
+├── functions/         # Cloudflare Pages Functions (API proxy, 404 tracking)
 ├── hugo.toml          # Primary Hugo configuration
-└── netlify.toml       # Netlify deployment config
+├── static/
+│   ├── _redirects     # Cloudflare Pages redirects
+│   └── _headers       # Cache/security headers
+└── Makefile
 ```
 
-## 🚀 Deploying to Netlify
+## 🚀 Deploying to Cloudflare Pages
 
 ### Settings
 
 * **Build Command**: `hugo --gc --minify --config hugo.toml`
 * **Publish Directory**: `public/`
-* **Hugo Version**: `0.140.0`
+* **Hugo Version**: `0.140.0` (set in Cloudflare Pages build environment)
+* Redirects & headers live in `static/_redirects` and `static/_headers`
 
 ### Environment Variables
 
-Used for 404 tracking:
+Used by `functions/api/track-404.js` for 404 tracking:
 
 * `PUSHOVER_API_TOKEN`
 * `PUSHOVER_USER_KEY`
@@ -141,12 +144,12 @@ Override theme templates via `layouts/`:
 * `layouts/partials/`
 * `layouts/shortcodes/`
 
-### Serverless Functions
+### Pages Functions
 
-Custom Netlify function for tracking 404s:
+Custom Cloudflare Pages functions:
 
-* `netlify/functions/track-404.mjs`
-* Sends push alerts for broken links
+* `functions/api/track-404.js` — sends push alerts for broken links
+* `functions/api/[[path]].js` — proxies `/api/search` and `/api/related` to qblog.nesin.io
 
 ---
 
@@ -154,7 +157,7 @@ Custom Netlify function for tracking 404s:
 
 * **Umami**: Lightweight, privacy‑friendly analytics
 * **404 Alerts**: Instant detection of broken links
-* **Build Logs**: Netlify deployment feedback
+* **Build Logs**: Cloudflare Pages deployment feedback (`make build-progress`)
 
 
 ---
@@ -166,4 +169,4 @@ MIT
 
 - [Hugo Documentation](https://gohugo.io/documentation/)
 - [Hugo Bearblog Theme](https://github.com/janraasch/hugo-bearblog)
-- [Netlify Docs](https://docs.netlify.com/)
+- [Cloudflare Pages Docs](https://developers.cloudflare.com/pages/)

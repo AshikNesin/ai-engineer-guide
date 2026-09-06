@@ -6,7 +6,7 @@
 {{ if .Params.noindex }}
 <meta name="robots" content="noindex, follow">
 {{ end }}
-{{ if .Params.noindex_google }}
+{{ if or .Params.noindex_google .Params.google_noindex }}
 <meta name="googlebot" content="noindex">
 {{ end }}
 
@@ -36,6 +36,7 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+{{- $desc = delimit (split $desc "\n") " " -}}
 <meta name="description" content="{{ $desc }}" />
 
 {{ template "_internal/opengraph.html" . }}

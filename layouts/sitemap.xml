@@ -1,7 +1,7 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {{ range .Data.Pages }}
-  {{ if and (ne .Section "tags") (not .Params.noindex) }}
+  {{ if and (ne .Section "tags") (not (or .Params.noindex .Params.google_noindex .Params.noindex_google)) }}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- with .Lastmod }}

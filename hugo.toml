@@ -64,23 +64,23 @@ enableRobotsTXT = true
     startLevel = 2
     endLevel = 4
     ordered = false
-[Params.umami]
+[params.umami]
   enabled = true
   websiteId = "d7df92fe-cb08-484d-adda-46e319b1fe3c"
   jsLocation = "https://hi.nesin.io/script.js"
 
-[Params.posthog]
+[params.posthog]
   enabled = true
   id = "phc_GG9IdGTih1B5PQxOVS4oiwQm01VsN0iKMadZA0ZW6Xr"
-  
-[Params.clarity]
+
+[params.clarity]
   enabled = false
   id = "s880bgj9uz"
-  
-[Params.ogImage]
-cloudinaryAccountId = "ashiknesin"
-twitterHandle = "AshikNesin"
-bgImagePath = "nesin_io/og-image-bg/dark-gradient"
+
+[params.ogImage]
+  cloudinaryAccountId = "ashiknesin"
+  twitterHandle = "AshikNesin"
+  bgImagePath = "nesin_io/og-image-bg/dark-gradient"
 
 [outputs]
   home = ["HTML", "RSS", "LLMSTXT"]
