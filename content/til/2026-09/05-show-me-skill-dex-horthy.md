@@ -14,6 +14,16 @@ Something like this:
 
 ![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-09/qbmgpdmtpp8eiwwjpvqt)
 
+> Lighter and faster than HTML, good enough for most dev-work shaped problems.
+
+![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-09/yhyqhehnigv9rqywb29t)
+
+
+## How to get started?
+```
+npx skills add humanlayer/skills --skill show-me
+```
 
 ## Reference
+- https://x.com/dexhorthy/status/2087569590268391897
 - https://x.com/mattpocockuk/status/2095460192871698728
