@@ -12,4 +12,7 @@ We all know that Jev is being used for everything that is a classification based
 
 But the problem is it is used for the sake of using it. And sometimes it may be overkill or might not be right tool for the job.
 
+Recently Linear team has used Jev for their emoji search feature. However Max has a interesting post on why a small model like bge-small is more than enough for such use cases in terms of accuracy, cost, latency, etc.
+
 https://maxleiter.com/blog/embedding-emoji-search
+
