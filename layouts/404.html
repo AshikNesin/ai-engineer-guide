@@ -4,23 +4,7 @@
 <h1>404</h1>
 <h2>ʕノ•ᴥ•ʔノ ︵ ┻━┻</h2>
 
-<script>
-(function() {
-  const trackingData = {
-    url: window.location.href,
-    referrer: document.referrer,
-    userAgent: navigator.userAgent
-  };
-
-  fetch('/api/track-404', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(trackingData)
-  }).catch(err => {
-    console.error('Failed to track 404:', err);
-  });
-})();
-</script>
+{{/* 404 suggestions powered by 404less.com — replaces the old internal tracking API
+   (fetch to /api/track-404, now disabled above). */}}
+<script src="https://404less.com/embed.js" data-site="d872759938cef0b483761cbd" defer></script>
 {{ end }}
