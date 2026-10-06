@@ -12,4 +12,10 @@ qblog_id: 1291d37c-9e95-416b-a053-6d60b2734368
 
 You can now use command code via IDEs and tools that support ACP like Zed
 
+## How to get started?
+
+`cmd acp`
+
+https://commandcode.ai/docs/acp
+
 https://x.com/CommandCodeAI/status/2107473388184936786?s=20
