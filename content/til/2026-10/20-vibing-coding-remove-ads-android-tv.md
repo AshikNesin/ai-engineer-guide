@@ -113,5 +113,6 @@ Verify
   re-enable any app and how to change the dock order or the wallpaper.
 ```
 
+
 ## Reference
 - https://cleanyour.tv
