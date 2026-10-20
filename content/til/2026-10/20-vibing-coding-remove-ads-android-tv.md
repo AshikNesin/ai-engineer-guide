@@ -19,7 +19,7 @@ It was showing a sponsored ad before you could even get to Netflix.
 Gave Claude Code the model number, it found the TV on wifi, removed 25 Xiaomi packages and wrote a new launcher.
 
 Looks like an Apple TV now lol https://t.co/E5Q4A1b0yI</p>&mdash; Gathin (Ø,G) (@gathint) <a href="https://x.com/gathint/status/2111379569030939102?ref_src=twsrc%5Etfw">October 17, 2026</a></blockquote>
-<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>c
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
 ## Prompt
 > Paste this into Claude Code (or another coding assistant with shell access) on a computer that is
@@ -112,7 +112,6 @@ Verify
 - When done, give me a restore script, a build-and-install script, and a README that explains how to
   re-enable any app and how to change the dock order or the wallpaper.
 ```
-
 
 ## Reference
 - https://cleanyour.tv
