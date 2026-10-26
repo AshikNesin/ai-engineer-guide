@@ -9,6 +9,11 @@ noindex: true
 qblog_id: 94a73241-5eab-4bca-afc7-80b0c1fd444c
 ---
 
+Hassan (Director of DX at Together) has shared how he builds app with AI these days.
+
+You might have know him from his side projects like [self.so](https://www.self.so/) which uses AI under the hood and pretty much most of them are open source.
+
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How I build apps these days:
 
 1. Record a 1-5 minute prompt with @WisprFlow The more detail, the better.
