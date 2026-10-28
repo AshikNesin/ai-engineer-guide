@@ -21,5 +21,12 @@ claude --permission-mode bypassPermissions
 
 It's available from Claude Code version v2.1.311+
 
+![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-10/holprfkvvvaeh4w9ede3)
+
+
 ## Reference
 - https://code.claude.com/docs/en/permission-modes#turn-off-the-critical-path-removal-prompt-in-bypasspermissions-mode
+- https://x.com/The_Whole_Daisy/status/2114796466850202103
+
+## Credits
+- https://x.com/JinjingLiang/status/2115287799947833770/photo/1 (meme)
