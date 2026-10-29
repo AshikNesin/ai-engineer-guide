@@ -23,5 +23,13 @@ And from the created webhook, you can get the credentials needed to trigger the 
 
 ![1000656997.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-10/cmr0kdsw5pzxcowvhevz)
 
+## Example
+
+```sh
+curl -X POST "https://api2.cursor.sh/automations/webhook/YOUR_WEBHOOK_ID" \ -H "Authorization: Bearer $YOUR_API_KEY" \ -H "Content-Type: application/json" \ -d '{"message": "Hello from my webhook!"}'
+```
+
+If it works, you should be getting success in the response.
+
 ## Reference
 - https://cursor.com/help/grok-bot/routines#where-do-the-webhook-url-and-key-live-and-what-does-a-200-mean
