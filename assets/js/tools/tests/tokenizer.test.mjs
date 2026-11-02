@@ -1,5 +1,5 @@
 // Checks the vendored gpt-tokenizer files against known test vectors and the
-// pre-computed sample counts baked into layouts/partials/tools/ui/token-counter.html.
+// pre-computed sample counts baked into layouts/partials/tools/ui/panel-tokens.html.
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -16,7 +16,7 @@ test("known vectors", () => {
 });
 
 test("sample counts in the template are correct", () => {
-  const tpl = readFileSync(new URL("../../../../layouts/partials/tools/ui/token-counter.html", import.meta.url), "utf8");
+  const tpl = readFileSync(new URL("../../../../layouts/partials/tools/ui/panel-tokens.html", import.meta.url), "utf8");
   const sample = readFileSync(new URL("../../../tools/token-counter-sample.txt", import.meta.url), "utf8");
   const counts = tpl.match(/"o200k_base" (\d+) "cl100k_base" (\d+)/);
   assert.equal(o200k.countTokens(sample), Number(counts[1]));
