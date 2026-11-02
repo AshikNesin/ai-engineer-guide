@@ -4,7 +4,7 @@ seo_title: "Deprecated LLM Model-ID Scanner for Code and n8n Workflows (Free, ru
 h1: "Deprecated model-ID scanner"
 breadcrumb: "Model-ID scanner"
 app_name: "Deprecated model-ID scanner"
-description: "Paste code, config or an n8n workflow and find every deprecated or retired OpenAI, Claude and Gemini model ID, with days left and replacements. Free, no signup."
+description: "Paste code, config or an n8n workflow to find every deprecated or retired OpenAI, Claude and Gemini model ID, with days left. Free, no signup."
 promise: "Paste code, a config file or an n8n workflow and find every model ID that's retiring or already retired, with days left and the official replacement."
 tool: model-id-scanner
 cta_heading: "Get model retirement alerts and one practical AI engineering note a week"

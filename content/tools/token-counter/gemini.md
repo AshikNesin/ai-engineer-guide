@@ -4,7 +4,7 @@ seo_title: "Gemini Token Counter (Free, runs in your browser) | AIEngineerGuide"
 h1: "Gemini token counter"
 breadcrumb: "Gemini"
 app_name: "Gemini token counter"
-description: "Free Gemini token counter: estimate Gemini API tokens for your prompt using Google's 4-characters-per-token rule, with cost and context use. No signup, runs in your browser."
+description: "Free Gemini token counter: estimate Gemini API tokens with Google's 4-characters-per-token rule, plus cost and context use. No signup, in your browser."
 promise: "Estimate Gemini API tokens for your prompt and see the cost and context window use per model."
 tool: llm-cost-calculator
 related_tool: token-counter

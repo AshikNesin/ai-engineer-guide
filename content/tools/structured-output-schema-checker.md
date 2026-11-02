@@ -4,7 +4,7 @@ seo_title: "Structured Output Schema Checker for OpenAI Strict Mode, Claude and 
 h1: "Structured output schema checker"
 breadcrumb: "Schema checker"
 app_name: "Structured output schema checker and tool converter"
-description: "Check a JSON Schema for OpenAI strict mode, Claude strict tools and Gemini, get an auto-fixed schema, validate outputs, and convert tool definitions. Free, no signup."
+description: "Check a JSON Schema for OpenAI strict mode, Claude strict tools and Gemini, auto-fix it, validate outputs and convert tool definitions. No signup."
 promise: "Check a JSON Schema against OpenAI strict mode, Claude strict tools or Gemini, get an auto-fixed version, and convert tool definitions between providers and MCP."
 tool: structured-output-schema-checker
 cta_heading: "Get one practical AI engineering note a week"

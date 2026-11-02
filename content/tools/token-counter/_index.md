@@ -4,7 +4,7 @@ seo_title: "Token Counter for OpenAI, Claude and Gemini (Free, runs in your brow
 h1: "Token counter for OpenAI, Claude and Gemini"
 breadcrumb: "Token counter"
 app_name: "Token counter"
-description: "Free online token counter: exact OpenAI token counts (o200k_base, cl100k_base) and Claude and Gemini estimates, with cost per model. No signup, runs in your browser."
+description: "Free token counter: exact OpenAI counts (o200k_base, cl100k_base), Claude and Gemini estimates, and cost per model. No signup, runs in your browser."
 promise: "Paste a prompt and get token counts for OpenAI, Claude and Gemini, plus what it costs on any model."
 tool: llm-cost-calculator
 related_tool: token-counter

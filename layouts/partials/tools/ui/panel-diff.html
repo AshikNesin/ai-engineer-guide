@@ -14,11 +14,14 @@
 {{- end -}}
 <div id="df-app" class="calc-panel" role="tabpanel" data-tab="diff"{{ if ne $tab "diff" }} hidden{{ end }}>
   {{- with $presets }}
-  <div class="tool-row" style="align-items:center">
-    <span class="label" style="font-size:14px">Retiring soon:</span>
-    {{- range first 8 (sort . "shutdown") }}
-    <button type="button" class="df-preset" data-from="{{ .from }}" data-to="{{ .to }}">{{ .label }}</button>
-    {{- end }}
+  <div class="tool-row">
+    <div class="tool-field grow"><label for="df-preset">Retiring soon</label>
+      <select id="df-preset">
+        <option value="">Pick a retiring model and its replacement…</option>
+        {{- range sort . "shutdown" }}
+        <option value="{{ .from }}|{{ .to }}">{{ .label }} ({{ (time.AsTime .shutdown).Format "Jan 2, 2006" }})</option>
+        {{- end }}
+      </select></div>
   </div>
   {{- end }}
   <div class="tool-row">

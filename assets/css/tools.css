@@ -278,3 +278,15 @@ a.tool-card:hover { border-color: var(--t-link); }
 /* Code blocks inside tools: quieter than the theme's dark-mode grey. */
 .tool pre code, .tool-app pre code { background: var(--t-surface-2); color: var(--t-text); border-radius: 6px; }
 .tool-app pre code { background: var(--t-bg); border: 1px solid var(--t-border); }
+
+/* Phones: tabs wrap as pills so every tab stays visible. */
+@media (max-width: 640px) {
+  .tool-tabs { flex-wrap: wrap; overflow: visible; border-bottom: 0; gap: .35rem; }
+  .tool-tabs button { border: 1px solid var(--t-border) !important; border-radius: 999px !important; padding: .35rem .7rem; margin: 0 !important; }
+  .tool-tabs button[aria-selected="true"] { background: var(--t-link) !important; border-color: var(--t-link) !important; color: var(--t-bg) !important; }
+}
+
+/* Small phones: dropdowns take a full row so option text isn't cut off. */
+@media (max-width: 480px) {
+  .tool-row .tool-field:has(select) { flex-basis: 100%; }
+}

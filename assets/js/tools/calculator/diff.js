@@ -78,12 +78,18 @@ export function initDiff(data) {
   }
 
   [from, to, ...Object.values(inputs)].forEach((el) => el.addEventListener("input", () => { trackUsedOnce(TOOL); render(); }));
-  document.querySelectorAll(".df-preset").forEach((btn) => btn.addEventListener("click", () => {
-    from.value = btn.dataset.from;
-    to.value = btn.dataset.to;
-    trackUsedOnce(TOOL);
-    render();
-  }));
+  const preset = $("df-preset");
+  if (preset) {
+    const sync = () => { preset.value = [...preset.options].some((o) => o.value === `${from.value}|${to.value}`) ? `${from.value}|${to.value}` : ""; };
+    preset.addEventListener("change", () => {
+      if (!preset.value) return;
+      [from.value, to.value] = preset.value.split("|");
+      trackUsedOnce(TOOL);
+      render();
+    });
+    [from, to].forEach((el) => el.addEventListener("change", sync));
+    sync();
+  }
   $("df-share").addEventListener("click", (e) => { copyText(location.href, e.currentTarget); track("copy", { tool: TOOL, what: "share" }); });
   render();
   return { render };

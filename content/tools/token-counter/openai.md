@@ -4,7 +4,7 @@ seo_title: "OpenAI Token Counter: o200k_base & cl100k_base (Free, runs in your b
 h1: "OpenAI token counter"
 breadcrumb: "OpenAI"
 app_name: "OpenAI token counter"
-description: "Free OpenAI token counter with exact o200k_base and cl100k_base counts for GPT-5, GPT-4o, GPT-4.1 and o-series models, plus cost. No signup, runs in your browser."
+description: "Free OpenAI token counter: exact o200k_base and cl100k_base counts for GPT-5, GPT-4o and o-series, plus cost. No signup, runs in your browser."
 promise: "Exact OpenAI token counts for GPT-5, GPT-4o, GPT-4.1 and o-series models, with a token-by-token view."
 tool: llm-cost-calculator
 related_tool: token-counter

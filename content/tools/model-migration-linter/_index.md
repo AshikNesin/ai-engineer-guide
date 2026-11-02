@@ -4,7 +4,7 @@ seo_title: "API Request Migration Linter for Claude Sonnet 5.5, GPT-6 and More (
 h1: "Request migration linter"
 breadcrumb: "Request migration linter"
 app_name: "Request migration linter"
-description: "Paste an Anthropic or OpenAI API request, pick the new model, and see every field that will return a 400, with the fix and official source. Free, no signup."
+description: "Paste an Anthropic or OpenAI API request, pick the new model, and see every field that will return a 400, with fixes and sources. Free, no signup."
 promise: "Paste a request, pick the model you're moving to, and see every field that will be rejected or behave differently, with a fixed request."
 tool: model-migration-linter
 layout: tool

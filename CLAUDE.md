@@ -52,11 +52,12 @@ cd scripts && npm run sync:watch
 ## Tools section (`/tools/`)
 
 - Free, browser-only tools. No backend, no Pages Functions for tools, no Node step in the Cloudflare build.
-- Pages: `content/tools/`. Per-model retirement pages come from the content adapter `content/tools/model-retirements/_content.gotmpl`.
-- Layouts: `layouts/tools/`, `layouts/retirements/` (calendar + `.ics` + RSS), partials in `layouts/partials/tools/` (tool UIs in `ui/`).
-- JS: one ES module per tool in `assets/js/tools/`, bundled by Hugo `js.Build`; shared helpers in `assets/js/tools/shared/` (not `lib/`, which is gitignored). Vendored libs in `assets/vendor/` with version/source/license headers.
-- Data: `data/tools.yaml` (registry), `data/models.json` and `data/retirements.json` (generated; see `scripts/tools-data/README.md`), `data/migrations/<slug>.yaml` (hand-reviewed; `reviewed: false` shows a draft notice).
-- Tests: `python -m unittest discover scripts/tools-data/tests` and `node --test assets/js/tools/tests/*.test.mjs`.
+- Live tools: model retirement calendar (+ provider and per-model pages, `.ics`, RSS), request migration linter (+ one error page per rule), deprecated model-ID scanner, LLM API cost calculator (tabs: monthly cost, token count, context fit, prompt caching, old → new model; `/tools/token-counter/` pages reuse it), structured output schema checker + tool converter.
+- Pages: `content/tools/`. Generated pages come from content adapters: `content/tools/model-retirements/_content.gotmpl` and `content/tools/model-migration-linter/_content.gotmpl` (errors). Slugs never change; add a 301 in `static/_redirects` if one must.
+- Layouts: `layouts/tools/` (single dispatches retirement, error and tool pages), `layouts/retirements/` (calendar + `.ics` + RSS), partials in `layouts/partials/tools/` (tool UIs in `ui/`).
+- JS: one ES module per tool in `assets/js/tools/` plus `calculator/`, `linter/`, `scanner/`, `schema/` and `shared/` (not `lib/`, which is gitignored), bundled by Hugo `js.Build`. Vendored libs in `assets/vendor/` with version/source/license headers.
+- Data: `data/tools.yaml` (registry), `data/models.json` and `data/retirements.json` (generated; see `scripts/tools-data/README.md`), `data/breaking_changes.json` (linter rules) and `data/schema_rules.json` (schema rules), both hand-maintained with an official source quote and checked date per rule, `data/migrations/<slug>.yaml` (hand-reviewed; `reviewed: false` shows a draft notice).
+- Tests: `python -m unittest discover scripts/tools-data/tests` and `node --test assets/js/tools/tests/*.test.mjs`. Every linter rule needs a before/after example; every schema rule needs a test case.
 - Tool pages support light and dark mode like the blog, and don't show related TILs.
 
 ## Content Organization

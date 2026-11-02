@@ -4,17 +4,17 @@
   "targets": [
     {
       "id": "openai",
-      "label": "OpenAI Structured Outputs / strict function calling",
+      "label": "OpenAI strict mode",
       "docs": "https://developers.openai.com/api/docs/guides/structured-outputs"
     },
     {
       "id": "anthropic",
-      "label": "Claude structured outputs / strict tools",
+      "label": "Claude strict tools / outputs",
       "docs": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs"
     },
     {
       "id": "gemini",
-      "label": "Gemini API structured output",
+      "label": "Gemini structured output",
       "docs": "https://ai.google.dev/gemini-api/docs/structured-output"
     }
   ],

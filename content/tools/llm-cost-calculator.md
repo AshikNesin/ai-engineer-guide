@@ -4,7 +4,7 @@ seo_title: "LLM API Cost Calculator: OpenAI, Claude, Gemini Pricing (Free, runs 
 h1: "LLM API cost calculator"
 breadcrumb: "LLM cost calculator"
 app_name: "LLM API cost calculator"
-description: "Free LLM API cost calculator: compare OpenAI, Claude and Gemini pricing, count tokens, check context fit, caching break-even and old vs new model cost. No signup."
+description: "Free LLM API cost calculator: compare OpenAI, Claude and Gemini pricing, count tokens, check context fit and caching break-even. No signup needed."
 promise: "Compare the monthly API cost of every major model, then check token counts, context fit, prompt caching and what a model migration does to your bill."
 tool: llm-cost-calculator
 cta_heading: "Get one practical AI engineering note a week"
