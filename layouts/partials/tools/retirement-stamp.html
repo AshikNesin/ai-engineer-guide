@@ -1,0 +1,6 @@
+{{- /* "Data from ... checked ..." line. Pass a slice of provider keys. */ -}}
+{{- $src := site.Data.retirements.sources -}}
+{{- $names := dict "openai" "OpenAI" "anthropic" "Anthropic" "gemini" "Google" -}}
+<p class="tool-stamp">Sources:
+{{- range $i, $p := . }}{{ if $i }},{{ end }} <a href="{{ (index $src $p).url }}" rel="noopener">{{ index $names $p }} deprecations</a>{{ end }}.
+Data last changed {{ (index $src (index . 0)).checked_at }}; the sources are re-checked daily and every date change is reviewed before it's published.</p>

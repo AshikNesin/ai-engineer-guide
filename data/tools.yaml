@@ -1,0 +1,117 @@
+# Tools registry. Drives the /tools/ index, "related tools" blocks and llms.txt.
+# status: live (has a page) | soon (shown as a card without a link)
+# url must never change once live (add a 301 in static/_redirects if it must).
+clusters:
+  - key: migration
+    title: Model migrations
+  - key: tokens
+    title: Tokens, cost and context
+  - key: build
+    title: Building with LLM APIs
+  - key: infra
+    title: RAG and infrastructure
+
+tools:
+  - slug: model-retirements
+    url: /tools/model-retirements/
+    title: Model retirement calendar
+    short: Every upcoming OpenAI, Claude and Gemini API shutdown, with days left and replacements.
+    cluster: migration
+    related: [token-counter, llm-cost-calculator, context-window-comparison, prompt-check]
+    status: live
+
+  - slug: prompt-check
+    url: /tools/prompt-check/
+    title: Prompt migration check (BYOK)
+    short: Run your prompts on the old and new model side by side with your own API key.
+    cluster: migration
+    related: [model-retirements, token-counter, structured-output-schema-checker]
+    status: soon
+
+  - slug: token-counter
+    url: /tools/token-counter/
+    title: Token counter
+    short: Count tokens for OpenAI (exact), Claude and Gemini (estimates) in your browser.
+    cluster: tokens
+    related: [llm-cost-calculator, context-window-comparison, model-retirements, chunking-visualizer]
+    status: live
+
+  - slug: llm-cost-calculator
+    url: /tools/llm-cost-calculator/
+    title: LLM API cost calculator
+    short: Monthly API cost across models, with prompt caching and batch discounts.
+    cluster: tokens
+    related: [token-counter, context-window-comparison, model-retirements, llm-rate-limit-calculator]
+    status: live
+
+  - slug: context-window-comparison
+    url: /tools/context-window-comparison/
+    title: Context window comparison
+    short: Context and max output for every major model, plus a "will it fit?" check.
+    cluster: tokens
+    related: [token-counter, llm-cost-calculator, model-retirements]
+    status: live
+
+  - slug: mcp-config-generator
+    url: /tools/mcp-config-generator/
+    title: MCP config generator
+    short: Generate and convert MCP server configs for Claude Code, Cursor, VS Code and more.
+    cluster: build
+    related: [tool-schema-converter, structured-output-schema-checker]
+    status: soon
+
+  - slug: structured-output-schema-checker
+    url: /tools/structured-output-schema-checker/
+    title: Structured output schema checker
+    short: Check a JSON Schema against OpenAI strict mode, Anthropic tools and Gemini.
+    cluster: build
+    related: [tool-schema-converter, mcp-config-generator]
+    status: soon
+
+  - slug: tool-schema-converter
+    url: /tools/tool-schema-converter/
+    title: Tool definition converter
+    short: Convert tool definitions between OpenAI, Anthropic, Gemini and MCP.
+    cluster: build
+    related: [structured-output-schema-checker, mcp-config-generator]
+    status: soon
+
+  - slug: llm-vram-calculator
+    url: /tools/llm-vram-calculator/
+    title: LLM VRAM calculator
+    short: GPU memory for weights and KV cache, and which GPUs it fits on.
+    cluster: infra
+    related: [context-window-comparison, llm-cost-calculator]
+    status: soon
+
+  - slug: chunking-visualizer
+    url: /tools/chunking-visualizer/
+    title: RAG chunking visualizer
+    short: See how different splitters, sizes and overlaps chunk your text.
+    cluster: infra
+    related: [token-counter, embedding-storage-calculator]
+    status: soon
+
+  - slug: embedding-storage-calculator
+    url: /tools/embedding-storage-calculator/
+    title: Embedding storage calculator
+    short: Vector storage, index size and embedding cost for your corpus.
+    cluster: infra
+    related: [chunking-visualizer, llm-cost-calculator]
+    status: soon
+
+  - slug: llms-txt-generator
+    url: /tools/llms-txt-generator/
+    title: llms.txt generator and validator
+    short: Build or lint an llms.txt file from a pasted sitemap or URL list.
+    cluster: build
+    related: [mcp-config-generator]
+    status: soon
+
+  - slug: llm-rate-limit-calculator
+    url: /tools/llm-rate-limit-calculator/
+    title: Rate limit calculator
+    short: Turn RPM and TPM limits into max throughput and concurrent users.
+    cluster: tokens
+    related: [llm-cost-calculator, token-counter]
+    status: soon

@@ -32,6 +32,17 @@
   Content-Type: application/xml; charset=utf-8
   X-Robots-Tag: noindex
 
+# Model retirement feeds (calendar subscription + RSS)
+/tools/model-retirements/calendar.ics
+  Cache-Control: public, max-age=3600
+  Content-Type: text/calendar; charset=utf-8
+  X-Robots-Tag: noindex
+
+/tools/model-retirements/feed.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+  X-Robots-Tag: noindex
+
 # Sitemap
 /sitemap.xml
   Cache-Control: public, max-age=86400

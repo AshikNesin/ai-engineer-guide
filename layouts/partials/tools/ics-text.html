@@ -1,0 +1,5 @@
+{{- /* Escape a TEXT value for iCalendar: backslash, semicolon, comma, newline. */ -}}
+{{- $s := replace . `\` `\\` -}}
+{{- $s = replace $s `;` `\;` -}}
+{{- $s = replace $s `,` `\,` -}}
+{{- return replace $s "\n" `\n` -}}

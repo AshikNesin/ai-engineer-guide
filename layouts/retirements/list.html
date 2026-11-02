@@ -1,0 +1,91 @@
+{{ define "main" }}
+{{ $data := site.Data.retirements }}
+{{ $pages := where $data.models "page" true }}
+{{ $upcoming := where $pages "status" "deprecated" }}
+{{ $retired := sort (where $pages "status" "retired") "shutdown" "desc" }}
+<article class="tool" data-tool="model-retirements">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Params.h1 | default .Title }}</h1>
+    <p class="tool-promise">{{ .Params.promise | markdownify }}</p>
+    <p class="tool-privacy">Free, no signup. Dates come only from official provider pages.</p>
+  </header>
+
+  <div class="tool-app" id="retirements-app">
+    <div class="tool-row" role="search">
+      <div class="tool-field">
+        <label for="f-provider">Provider</label>
+        <select id="f-provider">
+          <option value="">All providers</option>
+          <option value="openai">OpenAI</option>
+          <option value="anthropic">Anthropic</option>
+          <option value="gemini">Gemini API</option>
+        </select>
+      </div>
+      <div class="tool-field">
+        <label for="f-status">Status</label>
+        <select id="f-status">
+          <option value="upcoming">Upcoming shutdowns</option>
+          <option value="retired">Already retired</option>
+          <option value="all">All</option>
+        </select>
+      </div>
+      <div class="tool-field grow">
+        <label for="f-search">Model ID</label>
+        <input type="search" id="f-search" placeholder="e.g. gpt-4o-2024-08-06 or sonnet" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+
+    <section id="upcoming-section">
+      <h2 class="visually-hidden">Upcoming shutdowns</h2>
+      {{ partial "tools/retirement-table.html" (dict "models" $upcoming "id" "t-upcoming" "caption" "Upcoming model shutdowns") }}
+    </section>
+    <section id="retired-section">
+      <h2 style="font-size:1.05rem">Retired since {{ (time.AsTime $data.page_cutoff).Format "January 2006" }}</h2>
+      {{ partial "tools/retirement-table.html" (dict "models" $retired "id" "t-retired" "caption" "Retired models") }}
+    </section>
+    <p id="no-results" class="tool-note" hidden>No models match. Try part of the ID, like <code>4o</code> or <code>sonnet</code>.</p>
+
+    <div class="tool-actions">
+      {{ with .OutputFormats.Get "Calendar" }}<a class="tool-btn primary" href="{{ .RelPermalink }}" data-umami-event="subscribe_ics">📅 Add all to your calendar (.ics)</a>{{ end }}
+      {{ with .OutputFormats.Get "RetirementsRSS" }}<a class="tool-btn" href="{{ .RelPermalink }}" data-umami-event="subscribe_rss">RSS feed</a>{{ end }}
+      <a class="tool-btn" href="#subscribe" data-umami-event="subscribe_email">Email alerts</a>
+      <button type="button" id="copy-ics-url" data-url="{{ with .OutputFormats.Get "Calendar" }}{{ .Permalink }}{{ end }}">Copy calendar URL</button>
+    </div>
+    {{ partial "tools/retirement-stamp.html" (slice "openai" "anthropic" "gemini") }}
+  </div>
+
+  <section class="tool-section">
+    <h2>By provider</h2>
+    <ul>
+      <li><a href="{{ "/tools/model-retirements/openai/" | relURL }}">OpenAI model deprecations</a></li>
+      <li><a href="{{ "/tools/model-retirements/anthropic/" | relURL }}">Anthropic Claude model deprecations</a></li>
+      <li><a href="{{ "/tools/model-retirements/gemini/" | relURL }}">Gemini API model deprecations</a></li>
+    </ul>
+  </section>
+
+  {{ with .Params.howto }}
+  <section class="tool-section tool-howto" id="how-to-use">
+    <h2>How to use it</h2>
+    <ol>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ol>
+  </section>
+  {{ end }}
+
+  <section class="tool-section" id="how-it-works">
+    <h2>How we build this calendar</h2>
+    <p>A scheduled job reads the official deprecation pages once a day, parses their tables and opens a pull request when anything changes. Nothing is scraped from third-party trackers. Some rules we follow:</p>
+    <ul>
+      <li><strong>Anthropic</strong> "not sooner than" dates for active models are minimum lifetimes, not retirement dates, so they never appear here.</li>
+      <li><strong>Gemini API</strong> dates are the earliest possible shutdown dates Google publishes, and are labelled "earliest".</li>
+      <li><strong>OpenAI</strong> rows often cover an alias and its snapshots (for example <code>o3</code> and <code>o3-2025-04-16</code>); they're grouped into one entry.</li>
+      <li>Dates are for each provider's own API. Amazon Bedrock, Vertex AI and Azure publish their own schedules.</li>
+    </ul>
+    <p>The calendar feed gives each shutdown a stable ID, so if a provider moves a date, your calendar event moves too, with reminders 30 and 7 days before.</p>
+  </section>
+
+  {{ partial "tools/faq.html" . }}
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>
+{{ partial "tools/script.html" (dict "name" "retirements") }}
+{{ end }}

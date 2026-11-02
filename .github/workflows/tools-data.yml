@@ -1,0 +1,51 @@
+name: tools-data
+
+# Refreshes data/models.json and data/retirements.json from official sources
+# and opens (or updates) a PR. Nothing is committed to main directly: a wrong
+# retirement date is worse than a late one.
+on:
+  schedule: [{cron: "30 0 * * *"}]   # 06:00 IST daily
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: tools-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+
+      - name: Unit tests (parsers and sanity gates)
+        run: python -m unittest discover scripts/tools-data/tests
+
+      # models.json first: refresh_retirements.py reads its display names.
+      - name: Refresh models.json (models.dev)
+        run: python scripts/tools-data/refresh_models.py
+
+      - name: Refresh retirements.json (Anthropic, OpenAI, Gemini)
+        id: retire
+        run: python scripts/tools-data/refresh_retirements.py
+
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/tools-data
+          title: "tools-data: refresh model retirements and prices"
+          commit-message: "tools-data: refresh"
+          body: |
+            Automated refresh from the official deprecation pages and models.dev.
+
+            Review every shutdown date change before merging. A `needs-review`
+            label means a model with its own page got a new or changed date.
+          labels: ${{ steps.retire.outputs.needs_review == 'true' && 'needs-review' || '' }}
+          add-paths: data/
+          delete-branch: true

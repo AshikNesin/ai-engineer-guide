@@ -1,0 +1,34 @@
+{{- $data := site.Data.retirements -}}
+{{- $names := dict "openai" "OpenAI" "anthropic" "Anthropic" "gemini" "Gemini API" -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI model retirements (OpenAI, Claude, Gemini API)</title>
+    <link>{{ .Permalink }}</link>
+    <description>New model deprecation announcements and shutdown date changes from the official OpenAI, Anthropic and Gemini API pages.</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ (time.AsTime $data.generated_at).Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- with .OutputFormats.Get "RetirementsRSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
+    {{- end }}
+    {{- range first 50 $data.events }}
+    {{- $e := . }}
+    {{- $m := partial "tools/retirement-model.html" $e.slug }}
+    {{- with $m }}
+    {{- $page := site.GetPage (printf "/tools/model-retirements/%s" $m.slug) }}
+    {{- $when := "a date to be announced" }}{{ with $e.shutdown }}{{ $when = (time.AsTime .).Format "January 2, 2006" }}{{ end }}
+    {{- $title := printf "%s (%s) retires %s" $m.name (index $m.ids 0) $when }}
+    {{- if eq $e.event "date-changed" }}{{ $title = printf "Date change: %s now retires %s" $m.name $when }}{{ end }}
+    {{- if eq $e.event "retired" }}{{ $title = printf "%s has been retired" $m.name }}{{ end }}
+    <item>
+      <title>{{ $title }}</title>
+      <link>{{ $page.Permalink }}</link>
+      <guid isPermaLink="false">{{ $e.guid }}</guid>
+      <pubDate>{{ (time.AsTime $e.date).Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <category>{{ index $names $m.provider }}</category>
+      <description>{{ printf "<p>%s (<code>%s</code>) on the %s: shutdown %s%s.</p>%s<p>%s</p><p><a href=\"%s\">Days left, replacement and migration checklist</a> · <a href=\"%s\">Official source</a></p>" $m.name (delimit $m.ids "</code>, <code>") (index $names $m.provider) $when (cond (eq $m.shutdown_kind "earliest") " (earliest possible date)" "") (cond (eq $e.event "date-changed") (printf "<p>Previous date: %s.</p>" ($e.old_shutdown | default "none")) "") (cond (ne $m.replacement nil) (printf "Recommended replacement: %s." (($m.replacement | default dict).text | default "")) "No replacement listed.") $page.Permalink $m.source_url | html }}</description>
+    </item>
+    {{- end }}
+    {{- end }}
+  </channel>
+</rss>

@@ -1,0 +1,69 @@
+# Migration notes: Claude Sonnet 4.5 -> Claude Sonnet 5.5
+# Drafted from Anthropic's official Sonnet 5.5 migration guide (fetched 2026-11-02).
+# Every item carries its source. Set `reviewed: true` only after Ashik has read
+# each item against the linked docs; until then the page shows a draft notice.
+from: claude-sonnet-4-5
+to: claude-sonnet-5-5
+reviewed: false
+updated: 2026-11-02
+official_guide: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide
+
+breaking_changes:
+  - title: "Assistant prefill returns a 400 error"
+    detail: "Claude Sonnet 5.5 rejects a prefilled last assistant turn. Use structured outputs (or tools with enum fields) for output format, the system prompt for preambles, and the user turn for continuations and context reminders."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#migrating-from-sonnet-45
+  - title: "Thinking budgets (`budget_tokens`) return a 400 error"
+    detail: "Sonnet 4.5 uses `thinking: {type: \"enabled\", budget_tokens: N}`. Remove the budget and set `output_config.effort` instead; there's no fixed mapping, so evaluate at two or three effort levels."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#sonnet-46-breaking-changes
+  - title: "`temperature`, `top_p` and `top_k` return a 400 error"
+    detail: "Remove sampling parameters and steer behavior with prompting."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#sonnet-46-breaking-changes
+  - title: "Forced tool use (`tool_choice` of `any` or `tool`) returns a 400 error"
+    detail: "Send `tool_choice: {type: \"auto\"}`, mark the tool `strict: true`, and say in the prompt when to use it. Also applies to the token counting endpoint."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#forced-tool-use
+  - title: "`thinking: {type: \"disabled\"}` returns a 400 error"
+    detail: "To run without up-front thinking, send `thinking: {type: \"between_tools\"}` (accepted at low, medium and high effort only)."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#turn-off-up-front-thinking
+  - title: "Computer use: `computer_20250124` is not accepted"
+    detail: "On the Claude API use the `computer_toolset_20260801` toolset; on Amazon Bedrock use `computer_20251124`. Remove the `fine-grained-tool-streaming-2025-05-14` header when you move to the toolset."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#computer-use-toolset
+  - title: "`output_format` without its beta header returns a 400 error"
+    detail: "Move structured output settings to `output_config.format`."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#migrating-from-sonnet-45
+
+behavior_changes:
+  - title: "Thinking runs by default"
+    detail: "A request with no `thinking` field now runs with adaptive thinking. Read content blocks by `type` (not `content[0].text`), pass thinking blocks back unchanged in tool loops, and revisit `max_tokens`, which covers thinking plus text."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#thinking-on-by-default
+  - title: "About 30% more tokens for the same text"
+    detail: "Sonnet 5.5 uses the newer tokenizer. Recount prompts with the token counting endpoint and re-check `max_tokens`, context fit and cost."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#other-changes-from-claude-sonnet-4-6
+  - title: "Images can cost about 2.5x more tokens"
+    detail: "Sonnet 5.5 uses the high-resolution image tier (up to 2,576 px on the long edge and 4,784 visual tokens per image)."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#other-changes-from-claude-sonnet-4-6
+  - title: "Text between tool calls can arrive as thinking blocks"
+    detail: "Longer progress notes between tool calls come back as `thinking` blocks, empty at the default display, so UIs that show them go quiet unless you set `display`."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#text-between-tool-calls
+  - title: "More refusal categories"
+    detail: "Declines return `stop_reason: \"refusal\"` with a category in `stop_details`. Handle refusals and consider server-side fallback."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#safety-classifiers-and-fallback
+  - title: "Tool input escaping can differ"
+    detail: "Parse tool call `input` with a standard JSON parser rather than string handling."
+    source: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#migrating-from-sonnet-45
+
+checklist:
+  - "Search your code, config and env vars for `claude-sonnet-4-5-20250929` and the `claude-sonnet-4-5` alias, and switch to `claude-sonnet-5-5`"
+  - "Re-run your eval set against `claude-sonnet-5-5` before switching traffic"
+  - "Replace assistant prefills, thinking budgets, sampling parameters and forced `tool_choice`"
+  - "Set `output_config.effort` explicitly (Sonnet 4.5 had no effort parameter) and re-run an effort sweep"
+  - "Recount tokens: Claude 4.7+ models use a newer tokenizer that produces about 30% more tokens for the same text"
+  - "Remove `interleaved-thinking-2025-05-14` and any context-window beta header; replace `fine-grained-tool-streaming-2025-05-14` with `eager_input_streaming`"
+  - "Plan for Amazon Bedrock and Google-managed Vertex AI having their own retirement dates"
+
+sources:
+  - title: "Anthropic: Claude Sonnet 5.5 migration guide"
+    url: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide
+    checked: 2026-11-02
+  - title: "Anthropic: Token counting (newer tokenizer note)"
+    url: https://platform.claude.com/docs/en/build-with-claude/token-counting
+    checked: 2026-11-02

@@ -1,0 +1,11 @@
+{{- $items := partial "tools/breadcrumbs.html" . -}}
+<nav class="tool-breadcrumb" aria-label="Breadcrumb">
+  {{- range $i, $it := $items -}}
+    {{- if $i }} › {{ end -}}
+    {{- if lt (add $i 1) (len $items) -}}
+      <a href="{{ $it.url }}">{{ $it.name }}</a>
+    {{- else -}}
+      <span aria-current="page">{{ $it.name }}</span>
+    {{- end -}}
+  {{- end -}}
+</nav>

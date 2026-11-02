@@ -1,4 +1,5 @@
 {{ partial "analytics.html" . }}
+{{ if eq .Section "tools" }}{{ partial "tools/head.html" . }}{{ end }}
 
 <!-- Logo styles -->
 <style>

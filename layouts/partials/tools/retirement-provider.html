@@ -1,0 +1,67 @@
+{{- $key := .Params.retirement_provider -}}
+{{- $data := site.Data.retirements -}}
+{{- $all := where $data.models "provider" $key -}}
+{{- $upcoming := where (where $all "page" true) "status" "deprecated" -}}
+{{- $retired := sort (where (where $all "page" true) "status" "retired") "shutdown" "desc" -}}
+{{- $floors := where (where $all "status" "active") "shutdown_kind" "not_before" -}}
+{{- $legacy := where $all "status" "legacy" -}}
+<article class="tool" data-tool="model-retirements">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Title }}</h1>
+    <p class="tool-promise">{{ len $upcoming }} upcoming {{ .Params.provider_name }} model shutdown{{ if ne (len $upcoming) 1 }}s{{ end }}, from the official deprecations page, with days left and the recommended replacement.</p>
+  </header>
+
+  <div class="tool-app" id="retirements-app">
+    <h2 style="font-size:1.05rem;margin-top:0">Upcoming shutdowns</h2>
+    {{ with $upcoming }}
+      {{ partial "tools/retirement-table.html" (dict "models" . "id" "t-upcoming" "caption" "Upcoming shutdowns") }}
+    {{ else }}
+      <p>No upcoming shutdowns are announced right now.</p>
+    {{ end }}
+    <div class="tool-actions">
+      {{ with site.GetPage "/tools/model-retirements" }}
+        {{ with .OutputFormats.Get "Calendar" }}<a class="tool-btn primary" href="{{ .RelPermalink }}" data-umami-event="subscribe_ics">📅 Calendar feed (.ics)</a>{{ end }}
+        {{ with .OutputFormats.Get "RetirementsRSS" }}<a class="tool-btn" href="{{ .RelPermalink }}" data-umami-event="subscribe_rss">RSS feed</a>{{ end }}
+        <a class="tool-btn" href="{{ .RelPermalink }}">All providers</a>
+      {{ end }}
+    </div>
+    {{ partial "tools/retirement-stamp.html" (slice $key) }}
+  </div>
+
+  {{ with $retired }}
+  <section class="tool-section">
+    <h2>Retired since {{ (time.AsTime $data.page_cutoff).Format "January 2006" }}</h2>
+    {{ partial "tools/retirement-table.html" (dict "models" . "id" "t-retired" "caption" "Retired models") }}
+  </section>
+  {{ end }}
+
+  {{ with $floors }}
+  <section class="tool-section">
+    <h2>Active models and their minimum lifetime</h2>
+    <p>Anthropic lists a "not sooner than" date for each active model. It's the earliest date the model could be retired, <strong>not</strong> a retirement date, so these models aren't on the calendar.</p>
+    <div class="tool-table-wrap"><table class="tool-table">
+      <thead><tr><th>Model ID</th><th class="num">Not retired before</th></tr></thead>
+      <tbody>
+      {{ range sort . "shutdown" }}<tr><td><code>{{ index .ids 0 }}</code></td><td class="num">{{ (time.AsTime .shutdown).Format "Jan 2, 2006" }}</td></tr>{{ end }}
+      </tbody>
+    </table></div>
+  </section>
+  {{ end }}
+
+  {{ with $legacy }}
+  <section class="tool-section">
+    <h2>Aliases that route to newer models</h2>
+    <p>These model names aren't shutting down, but Google now routes requests for them to a newer model.</p>
+    <ul>{{ range . }}<li><code>{{ index .ids 0 }}</code> → {{ with .replacement }}{{ .text }}{{ end }}</li>{{ end }}</ul>
+  </section>
+  {{ end }}
+
+  <section class="tool-section">
+    <h2>Notes on {{ .Params.provider_name }} dates</h2>
+    <p>{{ (index $all 0).platform_note }}</p>
+  </section>
+
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

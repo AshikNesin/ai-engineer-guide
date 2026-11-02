@@ -2,6 +2,13 @@
 
 > The daily read for engineers who want to actually build with AI — not just talk about it. Practical guides, TILs, and deep dives on Claude Code, MCP, agents, and modern AI tooling.
 
+## Tools
+
+Free tools that run in the browser (no signup). Data comes from official provider pages.
+{{ range where site.Data.tools.tools "status" "live" }}
+- [{{ .title }}]({{ .url | absURL }}): {{ .short }}
+{{- end }}
+
 ## Posts
 {{ range (where .Site.RegularPages "Section" "til").ByDate.Reverse }}
 - [{{ .Title }}]({{ .Permalink }}){{ with .Description }}{{ if ne . "null" }}: {{ . | plainify }}{{ end }}{{ end }}

@@ -1,0 +1,27 @@
+{{- /* FAQ for a per-model retirement page, generated from data. Takes a slug. */ -}}
+{{- $m := partial "tools/retirement-model.html" . -}}
+{{- $faq := slice -}}
+{{- with $m -}}
+  {{- $id := index .ids 0 -}}
+  {{- $when := "has not been announced yet" -}}
+  {{- with .shutdown }}{{ $when = (time.AsTime .).Format "January 2, 2006" }}{{ end -}}
+  {{- $prov := index (dict "openai" "OpenAI API" "anthropic" "Claude API" "gemini" "Gemini API") .provider -}}
+  {{- $source := printf "[official %s deprecations page](%s)" $prov .source_url -}}
+  {{- if eq .status "retired" -}}
+    {{- $faq = $faq | append (dict "q" (printf "When was %s retired?" .name) "a" (printf "%s (`%s`) was retired on the %s on %s, according to the %s. Requests to it now fail." .name $id $prov $when $source)) -}}
+  {{- else if .shutdown -}}
+    {{- $earliest := cond (eq .shutdown_kind "earliest") " Google lists this as the earliest possible shutdown date; the exact date is announced later." "" -}}
+    {{- $faq = $faq | append (dict "q" (printf "When will %s be retired?" .name) "a" (printf "%s (`%s`) shuts down on the %s on %s, according to the %s.%s" .name $id $prov $when $source $earliest)) -}}
+  {{- else -}}
+    {{- $faq = $faq | append (dict "q" (printf "When will %s be retired?" .name) "a" (printf "%s is deprecated, but its retirement date is to be announced (see the %s). Subscribe to the calendar feed to hear when it's set." .name $source)) -}}
+  {{- end -}}
+  {{- with .replacement -}}
+    {{- $faq = $faq | append (dict "q" (printf "What should I use instead of %s?" $id) "a" (printf "The recommended replacement is %s." (.text | default (delimit .ids ", ")))) -}}
+  {{- end -}}
+  {{- $faq = $faq | append (dict "q" (printf "What happens to %s requests after the shutdown date?" $id) "a" "After a model is retired, API requests to it return an error. Move traffic to the replacement and test it on your own prompts before the date.") -}}
+  {{- $faq = $faq | append (dict "q" "Does this date apply to Amazon Bedrock, Vertex AI or Azure?" "a" .platform_note) -}}
+  {{- if gt (len .ids) 1 -}}
+    {{- $faq = $faq | append (dict "q" (printf "Which model IDs are affected?" ) "a" (printf "All of these: `%s`." (delimit .ids "`, `"))) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $faq -}}

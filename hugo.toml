@@ -64,6 +64,12 @@ enableRobotsTXT = true
     startLevel = 2
     endLevel = 4
     ordered = false
+[menus]
+  [[menus.main]]
+    name = "Tools"
+    url = "/tools/"
+    weight = 10
+
 [params.umami]
   enabled = true
   websiteId = "d7df92fe-cb08-484d-adda-46e319b1fe3c"
@@ -91,6 +97,15 @@ enableRobotsTXT = true
 [outputFormats]
   [outputFormats.RSS]
     baseName = "feed"
+  # /tools/model-retirements/feed.xml (one item per announcement or date change)
+  [outputFormats.RetirementsRSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+    rel = "alternate"
+  # Calendar is built into Hugo (text/calendar, .ics); this only renames the file
+  # to /tools/model-retirements/calendar.ics
+  [outputFormats.Calendar]
+    baseName = "calendar"
   [outputFormats.LLMSTXT]
     mediaType = "text/plain"
     baseName = "llms"

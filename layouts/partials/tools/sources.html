@@ -1,0 +1,8 @@
+{{- /* Renders a list of {title, url, checked} sources. Pass a slice. */ -}}
+{{- with . }}
+<ul class="tool-sources">
+  {{- range . }}
+  <li><a href="{{ .url }}" rel="noopener">{{ .title }}</a>{{ with .checked }} <span class="helptext">(last checked {{ . }})</span>{{ end }}</li>
+  {{- end }}
+</ul>
+{{- end }}

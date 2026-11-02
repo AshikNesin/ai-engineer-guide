@@ -1,0 +1,14 @@
+{{- /* Fold one iCalendar content line at 75 octets (RFC 5545 §3.1). */ -}}
+{{- $out := "" -}}
+{{- $line := "" -}}
+{{- $limit := 75 -}}
+{{- range split . "" -}}
+  {{- if gt (add (len $line) (len .)) $limit -}}
+    {{- $out = printf "%s%s\r\n " $out $line -}}
+    {{- $line = . -}}
+    {{- $limit = 74 -}}
+  {{- else -}}
+    {{- $line = printf "%s%s" $line . -}}
+  {{- end -}}
+{{- end -}}
+{{- return printf "%s%s" $out $line -}}

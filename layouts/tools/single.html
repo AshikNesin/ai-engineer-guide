@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{- /* Content-adapter pages under /tools/model-retirements/ (see _content.gotmpl). */ -}}
+{{ if .Params.retirement_provider }}
+  {{ partial "tools/retirement-provider.html" . }}
+  {{ partial "tools/script.html" (dict "name" "retirements") }}
+{{ else if .Params.retirement_slug }}
+  {{ partial "tools/retirement-model-page.html" . }}
+  {{ partial "tools/script.html" (dict "name" "retirements") }}
+{{ else }}
+<article class="tool" data-tool="{{ .Params.tool }}">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Params.h1 | default .Title }}</h1>
+    {{ with .Params.promise }}<p class="tool-promise">{{ . | markdownify }}</p>{{ end }}
+    <p class="tool-privacy">Runs in your browser. Nothing you paste is uploaded.</p>
+  </header>
+
+  <noscript><p class="tool-noscript">This tool runs in your browser and needs JavaScript. Turn it on to use the tool; the explanation and sources below work without it.</p></noscript>
+
+  {{ partial (printf "tools/ui/%s.html" .Params.tool) . }}
+
+  {{ with .Params.howto }}
+  <section class="tool-section tool-howto" id="how-to-use">
+    <h2>How to use it</h2>
+    <ol>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ol>
+  </section>
+  {{ end }}
+
+  <section class="tool-section" id="how-it-works">
+    <content>{{ .Content }}</content>
+  </section>
+
+  {{ partial "tools/faq.html" . }}
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>
+{{ partial "tools/script.html" (dict "name" .Params.tool) }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,44 @@
+{{- $data := site.Data.retirements -}}
+{{- $since := (now.AddDate 0 0 -90).Format "2006-01-02" -}}
+{{- $stamp := replaceRE `[-:]` "" $data.generated_at -}}
+{{- $names := dict "openai" "OpenAI API" "anthropic" "Claude API" "gemini" "Gemini API" -}}
+{{- $lines := slice
+  "BEGIN:VCALENDAR"
+  "VERSION:2.0"
+  "PRODID:-//AIEngineerGuide//Model Retirements//EN"
+  "CALSCALE:GREGORIAN"
+  "METHOD:PUBLISH"
+  "X-WR-CALNAME:AI model retirements"
+  (printf "X-WR-CALDESC:%s" (partial "tools/ics-text.html" (printf "OpenAI, Claude and Gemini API model shutdowns from %s" .Permalink)))
+  "REFRESH-INTERVAL;VALUE=DURATION:PT12H"
+  "X-PUBLISHED-TTL:PT12H"
+-}}
+{{- range where $data.models "page" true -}}
+  {{- if and .shutdown (in (slice "exact" "earliest") .shutdown_kind) (ge .shutdown $since) -}}
+    {{- $m := . -}}
+    {{- $page := site.GetPage (printf "/tools/model-retirements/%s" $m.slug) -}}
+    {{- $start := time.AsTime $m.shutdown -}}
+    {{- $summary := printf "%s (%s) shuts down: %s" $m.name (index $m.ids 0) (index $names $m.provider) -}}
+    {{- if eq $m.shutdown_kind "earliest" }}{{ $summary = printf "%s (%s) earliest possible shutdown: %s" $m.name (index $m.ids 0) (index $names $m.provider) }}{{ end -}}
+    {{- $desc := printf "Model IDs: %s" (delimit $m.ids ", ") -}}
+    {{- with $m.replacement }}{{ $desc = printf "%s\nReplacement: %s" $desc .text }}{{ end -}}
+    {{- $desc = printf "%s\n%s\nDetails and migration checklist: %s\nSource: %s" $desc $m.platform_note $page.Permalink $m.source_url -}}
+    {{- $lines = $lines | append
+      "BEGIN:VEVENT"
+      (printf "UID:%s" $m.ics_uid)
+      (printf "SEQUENCE:%d" (int $m.ics_sequence))
+      (printf "DTSTAMP:%s" $stamp)
+      (printf "DTSTART;VALUE=DATE:%s" ($start.Format "20060102"))
+      (printf "DTEND;VALUE=DATE:%s" (($start.AddDate 0 0 1).Format "20060102"))
+      (printf "SUMMARY:%s" (partial "tools/ics-text.html" $summary))
+      (printf "DESCRIPTION:%s" (partial "tools/ics-text.html" $desc))
+      (printf "URL:%s" $page.Permalink)
+      "TRANSP:TRANSPARENT"
+      "BEGIN:VALARM" "ACTION:DISPLAY" (printf "DESCRIPTION:%s" (partial "tools/ics-text.html" (printf "%s shuts down in 30 days" $m.name))) "TRIGGER:-P30D" "END:VALARM"
+      "BEGIN:VALARM" "ACTION:DISPLAY" (printf "DESCRIPTION:%s" (partial "tools/ics-text.html" (printf "%s shuts down in 7 days" $m.name))) "TRIGGER:-P7D" "END:VALARM"
+      "END:VEVENT"
+    -}}
+  {{- end -}}
+{{- end -}}
+{{- $lines = $lines | append "END:VCALENDAR" -}}
+{{- range $lines }}{{ partial "tools/ics-fold.html" . }}{{ "\r\n" }}{{ end -}}

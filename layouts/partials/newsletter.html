@@ -138,8 +138,14 @@
 </style>
 
 <div class="newsletter-form">
-    <h2>Stay Updated</h2>
-    <p class="subtitle">Get the latest AI engineering insights delivered to your inbox.</p>
+    {{- $heading := "Stay Updated" -}}
+    {{- $subtitle := "Get the latest AI engineering insights delivered to your inbox." -}}
+    {{- with .Page -}}
+      {{- with .Params.cta_heading }}{{ $heading = . }}{{ end -}}
+      {{- with .Params.cta_subtitle }}{{ $subtitle = . }}{{ end -}}
+    {{- end }}
+    <h2>{{ $heading }}</h2>
+    <p class="subtitle">{{ $subtitle }}</p>
     <form
         action="https://buttondown.com/api/emails/embed-subscribe/AIEngineerGuide"
         method="post"

@@ -1,0 +1,14 @@
+{{- /* Days-left badge for a retirement model. JS (retirements.js) refreshes it
+       in the visitor's timezone; this is the build-time fallback. */ -}}
+{{- $m := . -}}
+{{- if $m.shutdown -}}
+  {{- $days := math.Ceil (div ((time.AsTime $m.shutdown).Sub now).Hours 24) | int -}}
+  {{- $cls := "far" }}{{ if le $days 90 }}{{ $cls = "later" }}{{ end }}{{ if le $days 30 }}{{ $cls = "soon" }}{{ end -}}
+  {{- $label := printf "%d days left" $days -}}
+  {{- if eq $days 1 }}{{ $label = "1 day left" }}{{ end -}}
+  {{- if eq $days 0 }}{{ $label = "today" }}{{ end -}}
+  {{- if or (lt $days 0) (eq $m.status "retired") }}{{ $cls = "retired" }}{{ $label = "retired" }}{{ end -}}
+  <span class="badge {{ $cls }}" data-days-left="{{ $m.shutdown }}" data-kind="{{ $m.shutdown_kind }}">{{ $label }}{{ if and (eq $m.shutdown_kind "earliest") (ne $cls "retired") }} (earliest){{ end }}</span>
+{{- else -}}
+  <span class="badge later">date TBA</span>
+{{- end -}}
