@@ -1,0 +1,11 @@
+{{- $r := partial "tools/linter-rule.html" . -}}
+{{- $faq := slice -}}
+{{- with $r -}}
+  {{- $provider := cond (eq .provider "anthropic") "Anthropic" "OpenAI" -}}
+  {{- with .error -}}
+    {{- $faq = $faq | append (dict "q" (printf "What does \"%s\" mean?" .) "a" (printf "%s The fix: %s" $r.title $r.fix)) -}}
+  {{- end -}}
+  {{- $faq = $faq | append (dict "q" (printf "How do I fix this when moving to %s?" (delimit $r.targets ", ")) "a" .fix) -}}
+  {{- $faq = $faq | append (dict "q" "Where is this documented?" "a" (printf "In %s's official docs: [%s](%s), last checked %s." $provider (index .sources 0).url (index .sources 0).url .checked)) -}}
+{{- end -}}
+{{- return $faq -}}

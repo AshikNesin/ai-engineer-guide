@@ -4,4 +4,7 @@
 {{- with .Params.retirement_slug -}}
   {{- $faq = partial "tools/retirement-faq.html" . -}}
 {{- end -}}
+{{- with .Params.error_rule -}}
+  {{- $faq = partial "tools/linter-error-faq.html" . -}}
+{{- end -}}
 {{- return $faq -}}

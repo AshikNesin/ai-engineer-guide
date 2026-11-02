@@ -1,0 +1,27 @@
+{{- $bc := site.Data.breaking_changes -}}
+<article class="tool">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Title }}</h1>
+    <p class="tool-promise">Every documented error and behavior change the <a href="{{ "/tools/model-migration-linter/" | relURL }}">request migration linter</a> checks, each with its fix and the official source.</p>
+  </header>
+  {{- range slice (dict "key" "anthropic" "name" "Anthropic (Claude)") (dict "key" "openai" "name" "OpenAI") }}
+  {{- $p := . }}
+  <section class="tool-section">
+    <h2>{{ $p.name }}</h2>
+    <div class="tool-table-wrap"><table class="tool-table stack" style="--cols:2">
+      <thead><tr><th>Change</th><th>Status</th><th>Models</th></tr></thead>
+      <tbody>
+      {{- range where $bc.rules "provider" $p.key }}
+        <tr><td class="full"><a href="{{ printf "/tools/model-migration-linter/errors/%s/" .id | relURL }}">{{ .title | markdownify }}</a></td>
+          <td data-label="Status">{{ partial "tools/linter-status.html" .status }}</td>
+          <td data-label="Models">{{ range $i, $t := .targets }}{{ if $i }}, {{ end }}<code>{{ $t }}</code>{{ end }}{{ with .api_version }} (API {{ . }}){{ end }}</td></tr>
+      {{- end }}
+      </tbody>
+    </table></div>
+  </section>
+  {{- end }}
+  <p class="tool-stamp">Last checked {{ $bc.checked }} against the official OpenAI and Anthropic docs.</p>
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

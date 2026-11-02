@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{ if .Params.errors_index }}
+{{ partial "tools/linter-errors-index.html" . }}
+{{ else }}
 <article class="tool-index">
   {{ partial "tools/breadcrumb-nav.html" . }}
   <header class="tool-hero">
@@ -32,4 +35,5 @@
   </section>
   {{ partial "tools/cta.html" . }}
 </article>
+{{ end }}
 {{ end }}

@@ -1,0 +1,3 @@
+{{- $labels := dict "400" (slice "Returns 400" "soon") "error" (slice "Rejected" "soon") "maybe" (slice "Can return an error" "later") "behavior" (slice "Behavior change" "later") -}}
+{{- $l := index $labels . -}}
+<span class="badge {{ index $l 1 }}">{{ index $l 0 }}</span>

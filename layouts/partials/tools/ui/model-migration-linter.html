@@ -1,0 +1,63 @@
+{{- /* Request migration linter. Rules: data/breaking_changes.json. */ -}}
+{{- $bc := site.Data.breaking_changes -}}
+{{- /* Retiring model id -> replacement, so the target can be preselected. */ -}}
+{{- $retiring := dict -}}
+{{- range where site.Data.retirements.models "status" "in" (slice "deprecated" "retired") -}}
+  {{- $m := . -}}
+  {{- with $m.replacement }}{{ with .ids }}{{ $repl := index . 0 }}
+    {{- range $m.ids }}{{ $retiring = merge $retiring (dict . (dict "to" $repl "name" $m.name "slug" $m.slug "shutdown" $m.shutdown "status" $m.status "page" $m.page)) }}{{ end }}
+  {{- end }}{{ end -}}
+{{- end -}}
+{{- $sample := `response = client.messages.create(
+    model="claude-sonnet-4-5-20250929",
+    max_tokens=4096,
+    temperature=0,
+    thinking={"type": "enabled", "budget_tokens": 2048},
+    tools=[{"name": "get_invoice", "description": "Fetch an invoice by ID",
+            "input_schema": {"type": "object", "properties": {"id": {"type": "string"}},
+                             "required": ["id"], "additionalProperties": False}}],
+    tool_choice={"type": "tool", "name": "get_invoice"},
+    messages=[{"role": "user", "content": "Why did my bill go up? Account AC-10293"}],
+)
+print(response.content[0].text)` -}}
+<div class="tool-app" id="ml-app">
+  <div class="tool-field grow">
+    <label for="ml-input">Paste a request body or SDK call</label>
+    <textarea id="ml-input" rows="12" spellcheck="false">{{ $sample }}</textarea>
+    <small>JSON request bodies and Python or TypeScript <code>messages.create</code>, <code>chat.completions.create</code> and <code>responses.create</code> calls with literal values. It's checked in your browser.</small>
+  </div>
+  <div class="tool-row" style="margin-top:.75rem">
+    <div class="tool-field"><label for="ml-target">Target model</label>
+      <select id="ml-target">
+        {{- range $bc.targets }}<option value="{{ .id }}">{{ .label }}</option>{{ end }}
+      </select></div>
+    <div class="tool-field"><label for="ml-api">API</label>
+      <select id="ml-api">
+        <option value="">Detect automatically</option>
+        <option value="messages">Anthropic Messages</option>
+        <option value="chat">OpenAI Chat Completions</option>
+        <option value="responses">OpenAI Responses</option>
+      </select></div>
+    <div class="tool-field" id="ml-version-field"><label for="ml-version">anthropic-version</label>
+      <select id="ml-version"><option value="2023-06-01">2023-06-01</option><option value="2026-10-21">2026-10-21</option></select></div>
+    <div class="tool-field grow" id="ml-betas-field"><label for="ml-betas">anthropic-beta header</label>
+      <input type="text" id="ml-betas" placeholder="e.g. interleaved-thinking-2025-05-14" autocomplete="off" spellcheck="false"></div>
+  </div>
+
+  <p id="ml-summary" class="tool-note" aria-live="polite">Checking…</p>
+  <ol id="ml-findings" class="ml-findings"></ol>
+
+  <details id="ml-fixed-box" open>
+    <summary>Fixed request</summary>
+    <pre><code id="ml-fixed"></code></pre>
+    <p class="tool-stamp" id="ml-manual"></p>
+  </details>
+  <div class="tool-actions">
+    <button type="button" class="primary" id="ml-copy-fixed">Copy fixed request</button>
+    <button type="button" id="ml-copy-report">Copy report (Markdown)</button>
+  </div>
+  <p class="tool-stamp">{{ len $bc.rules }} rules, each from an official OpenAI or Anthropic page, last checked {{ $bc.checked }}. <a href="{{ "/tools/model-migration-linter/errors/" | relURL }}">Browse every rule</a>.</p>
+
+  <script type="application/json" id="ml-rules">{{ $bc.rules | jsonify | safeJS }}</script>
+  <script type="application/json" id="ml-retiring">{{ $retiring | jsonify | safeJS }}</script>
+</div>

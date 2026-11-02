@@ -1,0 +1,29 @@
+{{- /* Content adapter: /tools/model-migration-linter/errors/ and one page per
+       rule in data/breaking_changes.json. Rule ids never change. */ -}}
+{{- $bc := site.Data.breaking_changes -}}
+{{- $shared := dict "related_tool" "model-migration-linter" "cta_heading" "Get model retirement alerts and one practical AI engineering note a week" -}}
+{{- $.AddPage (dict
+    "kind" "section"
+    "path" "errors"
+    "outputs" (slice "HTML")
+    "title" "LLM API migration errors and fixes"
+    "params" (merge $shared (dict
+      "errors_index" true
+      "breadcrumb" "Errors"
+      "seo_title" "Claude and OpenAI API Migration Errors: Every 400 and Its Fix | AIEngineerGuide"
+      "description" (printf "%d documented errors and behavior changes when moving to Claude Sonnet 5.5, Haiku 5.5, GPT-6 and GPT-5.6, each with the fix and the official source." (len $bc.rules))))
+    "dates" (dict "lastmod" (time.AsTime $bc.checked))
+) -}}
+{{- range $bc.rules -}}
+  {{- $r := . -}}
+  {{- $provider := cond (eq $r.provider "anthropic") "Anthropic" "OpenAI" -}}
+  {{- $seo := printf "%s: Fix | AIEngineerGuide" $r.title -}}
+  {{- $desc := printf "%s. Why it happens, how to fix it with a before and after request, and the official %s source (checked %s)." $r.title $provider $r.checked -}}
+  {{- $.AddPage (dict
+      "kind" "page"
+      "path" (printf "errors/%s" $r.id)
+      "title" $r.title
+      "params" (merge $shared (dict "error_rule" $r.id "breadcrumb" $r.title "seo_title" $seo "description" $desc))
+      "dates" (dict "lastmod" (time.AsTime $r.checked))
+  ) -}}
+{{- end -}}

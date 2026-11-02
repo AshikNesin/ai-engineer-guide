@@ -1,0 +1,1589 @@
+{
+  "_comment": "Hand-maintained. One row per rule; every rule needs an official source quote and a checked date. example.before must trigger the rule and example.after must not (tested by assets/js/tools/tests/linter.test.mjs). Error pages: /tools/model-migration-linter/errors/<id>/. Slugs never change.",
+  "checked": "2026-11-02",
+  "targets": [
+    {
+      "id": "claude-sonnet-5-5",
+      "label": "Claude Sonnet 5.5",
+      "provider": "anthropic"
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "label": "Claude Haiku 5.5",
+      "provider": "anthropic"
+    },
+    {
+      "id": "claude-opus-5-5",
+      "label": "Claude Opus 5.5 (API version rules only)",
+      "provider": "anthropic"
+    },
+    {
+      "id": "claude-opus-4-8",
+      "label": "Claude Opus 4.8 (API version rules only)",
+      "provider": "anthropic"
+    },
+    {
+      "id": "gpt-6-luna",
+      "label": "GPT-6 Luna",
+      "provider": "openai"
+    },
+    {
+      "id": "gpt-6-sol",
+      "label": "GPT-6 Sol",
+      "provider": "openai"
+    },
+    {
+      "id": "gpt-6-astra",
+      "label": "GPT-6 Astra",
+      "provider": "openai"
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "label": "GPT-6.1 Sol",
+      "provider": "openai"
+    },
+    {
+      "id": "gpt-6.1-terra",
+      "label": "GPT-6.1 Terra",
+      "provider": "openai"
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "label": "GPT-5.6 Sol",
+      "provider": "openai"
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "label": "GPT-5.6 Terra",
+      "provider": "openai"
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "label": "GPT-5.6 Luna",
+      "provider": "openai"
+    },
+    {
+      "id": "gpt-5.4",
+      "label": "GPT-5.4",
+      "provider": "openai"
+    },
+    {
+      "id": "o3",
+      "label": "o3",
+      "provider": "openai"
+    },
+    {
+      "id": "o4-mini",
+      "label": "o4-mini",
+      "provider": "openai"
+    }
+  ],
+  "rules": [
+    {
+      "id": "claude-sonnet-5-5-sampling-parameters",
+      "title": "temperature, top_p and top_k return an error on Claude Sonnet 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5"
+      ],
+      "check": "sampling",
+      "status": "error",
+      "error": null,
+      "fix": "Remove `temperature`, `top_p` and `top_k`, and steer the model with prompting instead.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#sonnet-46-breaking-changes",
+          "quote": "Sampling parameters return an error. Remove `temperature`, `top_p`, and `top_k`."
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "temperature": 0,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-sonnet-5-5-prefill",
+      "title": "Assistant message prefill returns a 400 on Claude Sonnet 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5"
+      ],
+      "check": "prefill",
+      "status": "400",
+      "error": "This model does not support assistant message prefill. The conversation must end with a user message.",
+      "fix": "End the conversation with a user message. Use structured outputs for output format, the system prompt for preambles, and the user turn for continuations.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#migrating-from-sonnet-45",
+          "quote": "Claude Sonnet 5.5 rejects a prefilled last assistant turn with a 400 error"
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            },
+            {
+              "role": "assistant",
+              "content": "{"
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-sonnet-5-5-forced-tool-choice",
+      "title": "tool_choice any or tool returns a 400 on Claude Sonnet 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5"
+      ],
+      "check": "forcedToolChoice",
+      "status": "400",
+      "error": "tool_choice: type \"tool\" and \"any\" are not supported for this model.",
+      "fix": "Send `tool_choice: {\"type\": \"auto\"}`, mark the tool `strict: true`, and say in the prompt when to use it. This applies to the token counting endpoint too.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#forced-tool-use",
+          "quote": "Claude Sonnet 5.5 rejects both with a 400 error, including on the token counting endpoint"
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "tools": [
+            {
+              "name": "get_invoice",
+              "description": "Fetch an invoice",
+              "input_schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "additionalProperties": false
+              }
+            }
+          ],
+          "tool_choice": {
+            "type": "tool",
+            "name": "get_invoice"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "tools": [
+            {
+              "name": "get_invoice",
+              "description": "Fetch an invoice",
+              "input_schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "additionalProperties": false
+              },
+              "strict": true
+            }
+          ],
+          "tool_choice": {
+            "type": "auto"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-sonnet-5-5-thinking-budget",
+      "title": "thinking type enabled with budget_tokens returns a 400 on Claude Sonnet 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5"
+      ],
+      "check": "thinkingEnabled",
+      "status": "400",
+      "error": "\"thinking.type.enabled\" is not supported for this model. Use \"thinking.type.adaptive\" and \"output_config.effort\" to control thinking behavior.",
+      "fix": "Remove the budget and set an effort level in `output_config.effort`. There's no fixed mapping from budget to effort, so evaluate at two or three levels.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#sonnet-46-breaking-changes",
+          "quote": "Thinking budgets return an error."
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 16000,
+          "thinking": {
+            "type": "enabled",
+            "budget_tokens": 8000
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 16000,
+          "thinking": {
+            "type": "adaptive"
+          },
+          "output_config": {
+            "effort": "high"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-sonnet-5-5-thinking-disabled",
+      "title": "thinking type disabled returns a 400 on Claude Sonnet 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5"
+      ],
+      "check": "thinkingDisabled",
+      "status": "400",
+      "error": "To turn thinking off on this model, send \"thinking\": {\"type\": \"between_tools\"} instead of {\"type\": \"disabled\"}. The model does not think before responding. The short updates it writes between tool calls come back as thinking blocks.",
+      "fix": "Send `thinking: {\"type\": \"between_tools\"}` at `low`, `medium` or `high` effort. At `xhigh` or `max`, use adaptive thinking instead.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#turn-off-up-front-thinking",
+          "quote": "On Claude Sonnet 5.5, `disabled` returns a 400 `invalid_request_error`"
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "thinking": {
+            "type": "disabled"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "thinking": {
+            "type": "between_tools"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-sonnet-5-5-output-format",
+      "title": "Top-level output_format returns a 400 on Claude Sonnet 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5"
+      ],
+      "check": "outputFormat",
+      "status": "400",
+      "error": null,
+      "fix": "Move the schema to `output_config.format`.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#migrating-from-sonnet-45",
+          "quote": "The `output_format` parameter is deprecated. To use it anyway, add the `structured-outputs-2025-11-13` beta header. Without it, the API returns a 400 error. Use `output_config.format` instead."
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "output_format": {
+            "type": "json_schema",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "output_config": {
+            "format": {
+              "type": "json_schema",
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-5-5-computer-use-version",
+      "title": "computer_20250124 isn't accepted by Claude Sonnet 5.5 or Haiku 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5",
+        "claude-haiku-5-5"
+      ],
+      "check": "oldComputerTool",
+      "status": "400",
+      "error": null,
+      "fix": "On the Claude API, use the `computer_toolset_20260801` toolset. On Amazon Bedrock, use `computer_20251124`. This needs agent-loop changes, so it isn't auto-fixed.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#computer-use-toolset",
+          "quote": "Claude Sonnet 5.5 doesn’t accept `computer_20250124` on any platform."
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide",
+          "quote": "If you use computer use, replace `computer_20250124`"
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "manual": true,
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "tools": [
+            {
+              "type": "computer_20250124",
+              "name": "computer",
+              "display_width_px": 1280,
+              "display_height_px": 800
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "tools": [
+            {
+              "type": "computer_toolset_20260801",
+              "name": "computer"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-5-5-fine-grained-tool-streaming-header",
+      "title": "fine-grained-tool-streaming-2025-05-14 with a toolset returns a 400",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5",
+        "claude-haiku-5-5"
+      ],
+      "check": "fineGrainedHeader",
+      "status": "400",
+      "error": null,
+      "fix": "Remove the header and set `eager_input_streaming: true` on each tool that needs streamed input.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#computer-use-toolset",
+          "quote": "If you send the `fine-grained-tool-streaming-2025-05-14` beta header, remove it when you move to the toolset. Alongside a toolset entry, it returns a 400 error."
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "betas": [
+            "fine-grained-tool-streaming-2025-05-14"
+          ],
+          "tools": [
+            {
+              "name": "get_invoice",
+              "description": "Fetch an invoice",
+              "input_schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "additionalProperties": false
+              }
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "tools": [
+            {
+              "name": "get_invoice",
+              "description": "Fetch an invoice",
+              "input_schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "additionalProperties": false
+              }
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-sonnet-5-5-legacy-beta-headers",
+      "title": "Beta headers to remove when moving to Claude Sonnet 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5"
+      ],
+      "check": "legacyBetas",
+      "status": "behavior",
+      "error": null,
+      "fix": "Remove `interleaved-thinking-2025-05-14` (adaptive thinking interleaves automatically) and any context-window beta header.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#migrating-from-sonnet-45",
+          "quote": "Remove `interleaved-thinking-2025-05-14`, because adaptive thinking interleaves automatically."
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "betas": [
+            "interleaved-thinking-2025-05-14"
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-sonnet-5-5-thinking-on-by-default",
+      "title": "Claude Sonnet 5.5 thinks by default when thinking is omitted",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-sonnet-5-5"
+      ],
+      "check": "thinkingDefault",
+      "status": "behavior",
+      "error": null,
+      "fix": "Read content blocks by `type` (not `content[0].text`), pass thinking blocks back unchanged in tool loops, and revisit `max_tokens`, which covers thinking plus text. To keep running without up-front thinking, send `thinking: {\"type\": \"between_tools\"}`.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#thinking-on-by-default",
+          "quote": "On Claude Sonnet 5.5, a request with no `thinking` field runs with adaptive thinking"
+        }
+      ],
+      "example": {
+        "target": "claude-sonnet-5-5",
+        "manual": true,
+        "before": {
+          "model": "claude-sonnet-4-5-20250929",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-sonnet-5-5",
+          "max_tokens": 1024,
+          "thinking": {
+            "type": "adaptive"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-haiku-5-5-thinking-budget",
+      "title": "thinking type enabled with budget_tokens returns a 400 on Claude Haiku 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-haiku-5-5"
+      ],
+      "check": "thinkingEnabled",
+      "status": "400",
+      "error": null,
+      "fix": "Remove the budget and set an effort level in `output_config.effort`.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide",
+          "quote": "A `thinking` value of `{\"type\": \"enabled\", \"budget_tokens\": N}` returns a 400 error, so a request that sends it needs a new `thinking` value."
+        }
+      ],
+      "example": {
+        "target": "claude-haiku-5-5",
+        "before": {
+          "model": "claude-haiku-4-5-20251001",
+          "max_tokens": 1024,
+          "thinking": {
+            "type": "enabled",
+            "budget_tokens": 4000
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-haiku-5-5",
+          "max_tokens": 1024,
+          "thinking": {
+            "type": "adaptive"
+          },
+          "output_config": {
+            "effort": "high"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-haiku-5-5-prefill",
+      "title": "Assistant message prefill returns a 400 on Claude Haiku 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-haiku-5-5"
+      ],
+      "check": "prefill",
+      "status": "400",
+      "error": null,
+      "fix": "End the conversation with a user message. Use structured outputs for output format and the system prompt for preambles.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide",
+          "quote": "rejects it with a 400 error, even with thinking turned off"
+        }
+      ],
+      "example": {
+        "target": "claude-haiku-5-5",
+        "before": {
+          "model": "claude-haiku-4-5-20251001",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            },
+            {
+              "role": "assistant",
+              "content": "Summary:"
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-haiku-5-5",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-haiku-5-5-sampling-parameters",
+      "title": "temperature, top_p and top_k can return an error on Claude Haiku 5.5",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-haiku-5-5"
+      ],
+      "check": "sampling",
+      "status": "maybe",
+      "error": null,
+      "fix": "Omit `temperature`, `top_p` and `top_k`, and use prompting to guide the model's behavior.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide",
+          "quote": "omit `temperature`, `top_p`, and `top_k` and use prompting to guide the model’s behavior instead."
+        }
+      ],
+      "example": {
+        "target": "claude-haiku-5-5",
+        "before": {
+          "model": "claude-haiku-4-5-20251001",
+          "max_tokens": 1024,
+          "top_p": 0.9,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-haiku-5-5",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "claude-haiku-5-5-forced-tool-choice",
+      "title": "Forced tool_choice on Claude Haiku 5.5 skips thinking",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-haiku-5-5"
+      ],
+      "check": "forcedToolChoice",
+      "status": "behavior",
+      "error": null,
+      "fix": "It still works, but the response starts with the tool call and has no thinking block. Use `auto` with a strict tool if you want the model to reason first.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide",
+          "quote": "Claude Haiku 5.5 accepts a forced `tool_choice` (`any` or a named tool), but the response starts with the tool call and has no `thinking` block."
+        }
+      ],
+      "example": {
+        "target": "claude-haiku-5-5",
+        "manual": true,
+        "before": {
+          "model": "claude-haiku-4-5-20251001",
+          "max_tokens": 1024,
+          "tools": [
+            {
+              "name": "get_invoice",
+              "description": "Fetch an invoice",
+              "input_schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "additionalProperties": false
+              }
+            }
+          ],
+          "tool_choice": {
+            "type": "any"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-haiku-5-5",
+          "max_tokens": 1024,
+          "tools": [
+            {
+              "name": "get_invoice",
+              "description": "Fetch an invoice",
+              "input_schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "additionalProperties": false
+              },
+              "strict": true
+            }
+          ],
+          "tool_choice": {
+            "type": "auto"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02",
+      "autofix": false
+    },
+    {
+      "id": "anthropic-api-2026-10-21-sampling-parameters",
+      "title": "temperature, top_p and top_k return a 400 in API version 2026-10-21",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-*"
+      ],
+      "api_version": "2026-10-21",
+      "check": "sampling",
+      "status": "400",
+      "error": null,
+      "fix": "Remove `temperature`, `top_p` and `top_k` from every request, on every model, when you send `anthropic-version: 2026-10-21`.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/api/migration-2026-10-21",
+          "quote": "In `2026-10-21`, a request that sends `temperature`, `top_p`, or `top_k` returns a 400 error, even at the parameter’s default value."
+        }
+      ],
+      "example": {
+        "target": "claude-opus-4-8",
+        "api_version": "2026-10-21",
+        "before": {
+          "model": "claude-opus-4-8",
+          "max_tokens": 1024,
+          "temperature": 1,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-opus-4-8",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-api-2026-10-21-document-in-assistant",
+      "title": "A document block in an assistant message returns a 400 in API version 2026-10-21",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-*"
+      ],
+      "api_version": "2026-10-21",
+      "check": "documentInAssistant",
+      "status": "400",
+      "error": null,
+      "fix": "Move the document into a user message.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/api/migration-2026-10-21",
+          "quote": "In `2026-10-21`, a request that places a `document` block directly in an `assistant` message returns a 400 error."
+        }
+      ],
+      "example": {
+        "target": "claude-opus-4-8",
+        "api_version": "2026-10-21",
+        "manual": true,
+        "before": {
+          "model": "claude-opus-4-8",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": "Read this."
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "document",
+                  "source": {
+                    "type": "text",
+                    "media_type": "text/plain",
+                    "data": "..."
+                  }
+                }
+              ]
+            },
+            {
+              "role": "user",
+              "content": "Summarize it."
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-opus-4-8",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": [
+                {
+                  "type": "document",
+                  "source": {
+                    "type": "text",
+                    "media_type": "text/plain",
+                    "data": "..."
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Summarize it."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-api-2026-10-21-citations-in-user-text",
+      "title": "citations on a user text block return a 400 in API version 2026-10-21",
+      "provider": "anthropic",
+      "apis": [
+        "messages"
+      ],
+      "targets": [
+        "claude-*"
+      ],
+      "api_version": "2026-10-21",
+      "check": "citationsInUserText",
+      "status": "400",
+      "error": null,
+      "fix": "Remove the `citations` array from text blocks in user messages, including blocks inside `search_result`.",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/api/migration-2026-10-21",
+          "quote": "In `2026-10-21`, a request that sends a `text` block with a non-empty `citations` array in a `user` message returns a 400 error."
+        }
+      ],
+      "example": {
+        "target": "claude-opus-4-8",
+        "api_version": "2026-10-21",
+        "before": {
+          "model": "claude-opus-4-8",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "As noted earlier.",
+                  "citations": [
+                    {
+                      "type": "char_location",
+                      "cited_text": "x",
+                      "document_index": 0,
+                      "start_char_index": 0,
+                      "end_char_index": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "after": {
+          "model": "claude-opus-4-8",
+          "max_tokens": 1024,
+          "messages": [
+            {
+              "role": "user",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "As noted earlier."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-max-tokens-o-series",
+      "title": "max_tokens isn't compatible with OpenAI o-series models",
+      "provider": "openai",
+      "apis": [
+        "chat"
+      ],
+      "targets": [
+        "o1*",
+        "o3*",
+        "o4*"
+      ],
+      "check": "maxTokens",
+      "status": "error",
+      "error": null,
+      "fix": "Use `max_completion_tokens` instead of `max_tokens`.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create",
+          "quote": "This value is now deprecated in favor of `max_completion_tokens`, and is not compatible with o-series models."
+        }
+      ],
+      "example": {
+        "target": "o3",
+        "before": {
+          "model": "gpt-4o-2024-08-06",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "max_tokens": 500
+        },
+        "after": {
+          "model": "o3",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "max_completion_tokens": 500
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-stop-o3-o4-mini",
+      "title": "stop isn't supported on o3 and o4-mini",
+      "provider": "openai",
+      "apis": [
+        "chat"
+      ],
+      "targets": [
+        "o3",
+        "o3-*",
+        "o4-mini",
+        "o4-mini-*"
+      ],
+      "check": "stop",
+      "status": "error",
+      "error": null,
+      "fix": "Remove `stop` and end the output with instructions or post-processing.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create",
+          "quote": "Not supported with latest reasoning models `o3` and `o4-mini`."
+        }
+      ],
+      "example": {
+        "target": "o3",
+        "before": {
+          "model": "gpt-4o-2024-08-06",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "stop": [
+            "\n\n"
+          ]
+        },
+        "after": {
+          "model": "o3",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-gpt-6-chat-tools-require-responses",
+      "title": "Tool calling on GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra requires the Responses API",
+      "provider": "openai",
+      "apis": [
+        "chat"
+      ],
+      "targets": [
+        "gpt-6-astra",
+        "gpt-6.1-sol",
+        "gpt-6.1-terra"
+      ],
+      "check": "chatTools",
+      "status": "error",
+      "error": null,
+      "fix": "Move the request to `POST /v1/responses`. This changes the request and response shape, so it isn't auto-fixed.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/docs/guides/latest-model",
+          "quote": "GPT-6 Astra, GPT-6.1 Sol, and GPT-6.1 Terra support Chat Completions, but tool calling requires Responses."
+        }
+      ],
+      "example": {
+        "target": "gpt-6-astra",
+        "manual": true,
+        "before": {
+          "model": "gpt-4o-2024-08-06",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "tools": [
+            {
+              "type": "function",
+              "function": {
+                "name": "get_invoice",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "after": {
+          "model": "gpt-6-astra",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-chat-tools-need-reasoning-effort-none",
+      "title": "Chat Completions function tools on GPT-6 Luna, GPT-6 Sol and GPT-5.6 need reasoning_effort none",
+      "provider": "openai",
+      "apis": [
+        "chat"
+      ],
+      "targets": [
+        "gpt-6-luna",
+        "gpt-6-sol",
+        "gpt-5.6-*"
+      ],
+      "check": "chatToolsEffortNone",
+      "status": "error",
+      "error": null,
+      "fix": "Set `reasoning_effort: \"none\"`, or move to the Responses API to use tools with reasoning. GPT-5.6 defaults to `medium`, so leaving the field out isn't enough.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/docs/guides/latest-model",
+          "quote": "GPT-6 Sol and GPT-6 Luna support function calling in Chat Completions only with `reasoning_effort: \"none\"`."
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/guides/upgrading-to-gpt-5p6-sol",
+          "quote": "For GPT-5.6, function tools in Chat Completions are compatible only with effective reasoning `none`."
+        }
+      ],
+      "example": {
+        "target": "gpt-6-luna",
+        "before": {
+          "model": "gpt-4o-2024-08-06",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "tools": [
+            {
+              "type": "function",
+              "function": {
+                "name": "get_invoice",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "after": {
+          "model": "gpt-6-luna",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "tools": [
+            {
+              "type": "function",
+              "function": {
+                "name": "get_invoice",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              }
+            }
+          ],
+          "reasoning_effort": "none"
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-gpt-6-astra-reasoning-effort-none",
+      "title": "reasoning effort none returns a 400 on GPT-6 Astra",
+      "provider": "openai",
+      "apis": [
+        "chat",
+        "responses"
+      ],
+      "targets": [
+        "gpt-6-astra"
+      ],
+      "check": "effortNone",
+      "status": "400",
+      "error": null,
+      "fix": "Use `low`, the lowest effort GPT-6 Astra supports.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/docs/guides/reasoning",
+          "quote": "Setting `reasoning.effort` (Responses) or `reasoning_effort` (Chat Completions) to `none` returns HTTP 400."
+        }
+      ],
+      "example": {
+        "target": "gpt-6-astra",
+        "before": {
+          "model": "gpt-5.6-sol",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "reasoning_effort": "none"
+        },
+        "after": {
+          "model": "gpt-6-astra",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "reasoning_effort": "low"
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-gpt-6-1-sol-reasoning-effort-none-minimal",
+      "title": "GPT-6.1 Sol doesn't support reasoning effort none or minimal",
+      "provider": "openai",
+      "apis": [
+        "chat",
+        "responses"
+      ],
+      "targets": [
+        "gpt-6.1-sol"
+      ],
+      "check": "effortNoneMinimal",
+      "status": "error",
+      "error": null,
+      "fix": "Remove the setting or use `medium`, the default.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/docs/guides/reasoning",
+          "quote": "GPT-6.1 Sol does not support `none` or `minimal` and defaults to `medium`."
+        }
+      ],
+      "example": {
+        "target": "gpt-6.1-sol",
+        "before": {
+          "model": "gpt-5.6-sol",
+          "input": "Summarize this ticket.",
+          "reasoning": {
+            "effort": "minimal"
+          }
+        },
+        "after": {
+          "model": "gpt-6.1-sol",
+          "input": "Summarize this ticket.",
+          "reasoning": {
+            "effort": "medium"
+          }
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-gpt-6-sampling-with-reasoning",
+      "title": "Remove temperature, top_p and logprobs on GPT-6 unless reasoning effort is none",
+      "provider": "openai",
+      "apis": [
+        "chat",
+        "responses"
+      ],
+      "targets": [
+        "gpt-6*"
+      ],
+      "check": "gpt6Sampling",
+      "status": "error",
+      "error": null,
+      "fix": "Remove `temperature`, `top_p` and `top_logprobs` (and `logprobs` on Chat Completions), or set reasoning effort to `none` where the model supports it.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/docs/guides/latest-model",
+          "quote": "When reasoning effort is not `none`, remove `temperature`, `top_p`, and `top_logprobs`. For Chat Completions, also remove `logprobs`."
+        }
+      ],
+      "example": {
+        "target": "gpt-6-luna",
+        "before": {
+          "model": "gpt-4o-2024-08-06",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "temperature": 0.2,
+          "logprobs": true
+        },
+        "after": {
+          "model": "gpt-6-luna",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-gpt-5-sampling-parameters",
+      "title": "temperature, top_p and logprobs raise an error on GPT-5 models",
+      "provider": "openai",
+      "apis": [
+        "chat",
+        "responses"
+      ],
+      "targets": [
+        "gpt-5",
+        "gpt-5-mini",
+        "gpt-5-nano",
+        "gpt-5.2*",
+        "gpt-5.4*"
+      ],
+      "check": "gpt5Sampling",
+      "status": "error",
+      "error": null,
+      "fix": "Remove `temperature`, `top_p` and `logprobs`. On GPT-5.4 and GPT-5.2 they're only accepted with reasoning effort `none`.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/docs/guides/latest-model/gpt-5.4",
+          "quote": "Requests that include these fields will raise an error for GPT-5.4 or GPT-5.2 with any other reasoning effort setting, or for older GPT-5 models"
+        }
+      ],
+      "example": {
+        "target": "gpt-5.4",
+        "before": {
+          "model": "gpt-4o-2024-08-06",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "temperature": 0.2
+        },
+        "after": {
+          "model": "gpt-5.4",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ]
+        }
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-gpt-6-prompt-cache-retention",
+      "title": "prompt_cache_retention becomes prompt_cache_options.ttl on GPT-6",
+      "provider": "openai",
+      "apis": [
+        "chat",
+        "responses"
+      ],
+      "targets": [
+        "gpt-6*"
+      ],
+      "check": "promptCacheRetention",
+      "status": "behavior",
+      "error": null,
+      "fix": "Replace `prompt_cache_retention` with `prompt_cache_options.ttl`. Check the allowed TTL values in the docs.",
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/docs/guides/latest-model",
+          "quote": "replace `prompt_cache_retention` with `prompt_cache_options.ttl`"
+        }
+      ],
+      "example": {
+        "target": "gpt-6-luna",
+        "before": {
+          "model": "gpt-4o-2024-08-06",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "prompt_cache_retention": "24h"
+        },
+        "after": {
+          "model": "gpt-6-luna",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Summarize this ticket."
+            }
+          ],
+          "prompt_cache_options": {
+            "ttl": "24h"
+          }
+        }
+      },
+      "checked": "2026-11-02"
+    }
+  ]
+}

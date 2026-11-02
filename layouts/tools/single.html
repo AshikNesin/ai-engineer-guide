@@ -6,6 +6,8 @@
 {{ else if .Params.retirement_slug }}
   {{ partial "tools/retirement-model-page.html" . }}
   {{ partial "tools/script.html" (dict "name" "retirements") }}
+{{ else if .Params.error_rule }}
+  {{ partial "tools/linter-error-page.html" . }}
 {{ else }}
 {{ partial "tools/tool-page.html" . }}
 {{ partial "tools/script.html" (dict "name" .Params.tool) }}

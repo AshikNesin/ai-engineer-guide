@@ -261,3 +261,20 @@ a.tool-card:hover { border-color: var(--t-link); }
 .tool-tabs { overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .tool-tabs::-webkit-scrollbar { display: none; }
 .tool-tabs button { flex: 0 0 auto; white-space: nowrap; }
+
+/* Migration linter findings */
+.ml-findings { list-style: none; padding: 0; margin: .75rem 0; display: grid; gap: .6rem; }
+.ml-finding { background: var(--t-bg); border: 1px solid var(--t-border); border-left: 4px solid var(--t-bad); border-radius: 6px; padding: .7rem .8rem; }
+.ml-finding.is-behavior { border-left-color: var(--t-warn); }
+.ml-finding h3 { font-size: 1rem; margin: .1rem 0 .35rem; }
+.ml-finding p { margin: .35rem 0; font-size: 14px; }
+.ml-finding pre { margin: .35rem 0; }
+.ml-finding pre code { padding: .5rem .6rem; font-size: 12.5px; }
+.ml-finding blockquote { margin: .35rem 0; font-size: 13px; }
+.ml-meta { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; font-size: 12px; }
+#ml-fixed-box pre code { max-height: 360px; overflow: auto; font-size: 12.5px; }
+.tool-app pre { overflow-x: auto; }
+
+/* Code blocks inside tools: quieter than the theme's dark-mode grey. */
+.tool pre code, .tool-app pre code { background: var(--t-surface-2); color: var(--t-text); border-radius: 6px; }
+.tool-app pre code { background: var(--t-bg); border: 1px solid var(--t-border); }
