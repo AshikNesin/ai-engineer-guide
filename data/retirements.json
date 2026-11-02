@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T17:28:02Z",
+  "generated_at": "2026-11-02T17:47:03Z",
   "page_cutoff": "2026-01-01",
   "sources": {
     "anthropic": {
@@ -15,7 +15,7 @@
     "gemini": {
       "url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "checked_at": "2026-11-02",
-      "sha256": "e171c1704ac83d9d9054bd46e037bc797a6fb4759a508dcdd740d9b707209654"
+      "sha256": "af56eeed0e9e7d91a5076a3139e55541002f83610cc404978718199da1f00a74"
     }
   },
   "models": [
@@ -39,7 +39,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-cushman-001-2023-03-23@aiengineerguide.com",
@@ -65,7 +65,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-cushman-002-2023-03-23@aiengineerguide.com",
@@ -91,7 +91,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-davinci-001-2023-03-23@aiengineerguide.com",
@@ -117,7 +117,7 @@
         "text": "babbage-002",
         "slug": "babbage-002"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "ada-2024-01-04@aiengineerguide.com",
@@ -143,7 +143,7 @@
         "text": "babbage-002",
         "slug": "babbage-002"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "babbage-2024-01-04@aiengineerguide.com",
@@ -169,7 +169,7 @@
         "text": "gpt-3.5-turbo-instruct",
         "slug": "gpt-3-5-turbo-instruct"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-davinci-002-2024-01-04@aiengineerguide.com",
@@ -195,7 +195,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-davinci-edit-001-2024-01-04@aiengineerguide.com",
@@ -221,7 +221,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-search-ada-code-001-2024-01-04@aiengineerguide.com",
@@ -247,7 +247,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-search-ada-text-001-2024-01-04@aiengineerguide.com",
@@ -273,7 +273,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-search-babbage-code-001-2024-01-04@aiengineerguide.com",
@@ -299,7 +299,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "code-search-babbage-text-001-2024-01-04@aiengineerguide.com",
@@ -325,7 +325,7 @@
         "text": "davinci-002",
         "slug": "davinci-002"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "curie-2024-01-04@aiengineerguide.com",
@@ -351,7 +351,7 @@
         "text": "davinci-002",
         "slug": "davinci-002"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "davinci-2024-01-04@aiengineerguide.com",
@@ -377,7 +377,7 @@
         "text": "gpt-3.5-turbo-instruct",
         "slug": "gpt-3-5-turbo-instruct"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-ada-001-2024-01-04@aiengineerguide.com",
@@ -403,7 +403,7 @@
         "text": "gpt-3.5-turbo-instruct",
         "slug": "gpt-3-5-turbo-instruct"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-babbage-001-2024-01-04@aiengineerguide.com",
@@ -429,7 +429,7 @@
         "text": "gpt-3.5-turbo-instruct",
         "slug": "gpt-3-5-turbo-instruct"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-curie-001-2024-01-04@aiengineerguide.com",
@@ -455,7 +455,7 @@
         "text": "gpt-3.5-turbo-instruct",
         "slug": "gpt-3-5-turbo-instruct"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-davinci-001-2024-01-04@aiengineerguide.com",
@@ -481,7 +481,7 @@
         "text": "gpt-3.5-turbo-instruct",
         "slug": "gpt-3-5-turbo-instruct"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-davinci-002-2024-01-04@aiengineerguide.com",
@@ -507,7 +507,7 @@
         "text": "gpt-3.5-turbo-instruct",
         "slug": "gpt-3-5-turbo-instruct"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-davinci-003-2024-01-04@aiengineerguide.com",
@@ -533,7 +533,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-davinci-edit-001-2024-01-04@aiengineerguide.com",
@@ -559,7 +559,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-search-ada-doc-001-2024-01-04@aiengineerguide.com",
@@ -585,7 +585,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-search-ada-query-001-2024-01-04@aiengineerguide.com",
@@ -611,7 +611,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-search-babbage-doc-001-2024-01-04@aiengineerguide.com",
@@ -637,7 +637,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-search-babbage-query-001-2024-01-04@aiengineerguide.com",
@@ -663,7 +663,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-search-curie-doc-001-2024-01-04@aiengineerguide.com",
@@ -689,7 +689,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-search-curie-query-001-2024-01-04@aiengineerguide.com",
@@ -715,7 +715,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-search-davinci-doc-001-2024-01-04@aiengineerguide.com",
@@ -741,7 +741,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-search-davinci-query-001-2024-01-04@aiengineerguide.com",
@@ -767,7 +767,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-similarity-ada-001-2024-01-04@aiengineerguide.com",
@@ -793,7 +793,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-similarity-babbage-001-2024-01-04@aiengineerguide.com",
@@ -819,7 +819,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-similarity-curie-001-2024-01-04@aiengineerguide.com",
@@ -845,7 +845,7 @@
         "text": "text-embedding-3-small",
         "slug": "text-embedding-3-small"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-similarity-davinci-001-2024-01-04@aiengineerguide.com",
@@ -871,7 +871,7 @@
         "text": "gpt-3.5-turbo",
         "slug": "gpt-3-5-turbo"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-3-5-turbo-0301-2024-09-13@aiengineerguide.com",
@@ -897,7 +897,7 @@
         "text": "gpt-3.5-turbo",
         "slug": "gpt-3-5-turbo"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-3-5-turbo-0613-2024-09-13@aiengineerguide.com",
@@ -923,7 +923,7 @@
         "text": "gpt-3.5-turbo",
         "slug": "gpt-3-5-turbo"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-3-5-turbo-16k-0613-2024-09-13@aiengineerguide.com",
@@ -1131,7 +1131,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-4-1106-vision-preview-2024-12-06@aiengineerguide.com",
@@ -1157,7 +1157,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-4-vision-preview-2024-12-06@aiengineerguide.com",
@@ -1183,7 +1183,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-4-32k-2025-06-06@aiengineerguide.com",
@@ -1209,7 +1209,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-4-32k-0314-2025-06-06@aiengineerguide.com",
@@ -1235,7 +1235,7 @@
         "text": "gpt-4o",
         "slug": "gpt-4o"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-4-32k-0613-2025-06-06@aiengineerguide.com",
@@ -1261,7 +1261,7 @@
         "text": "gpt-4.1",
         "slug": "gpt-4-1"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-4-5-preview-2025-07-14@aiengineerguide.com",
@@ -1365,7 +1365,7 @@
         "text": "o3",
         "slug": "o3"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "o1-preview-2025-07-28@aiengineerguide.com",
@@ -1391,7 +1391,7 @@
         "text": "gpt-audio-1.5",
         "slug": "gpt-audio-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-4o-audio-preview-2024-10-01-2025-10-10@aiengineerguide.com",
@@ -1417,7 +1417,7 @@
         "text": "gpt-realtime-1.5",
         "slug": "gpt-realtime-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "gpt-4o-realtime-preview-2024-10-01-2025-10-10@aiengineerguide.com",
@@ -1443,7 +1443,7 @@
         "text": "o4-mini",
         "slug": "o4-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "o1-mini-2025-10-27@aiengineerguide.com",
@@ -1469,7 +1469,7 @@
         "text": "omni-moderation",
         "slug": "omni-moderation"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-moderation-007-2025-10-27@aiengineerguide.com",
@@ -1495,7 +1495,7 @@
         "text": "omni-moderation",
         "slug": "omni-moderation"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-moderation-latest-2025-10-27@aiengineerguide.com",
@@ -1521,7 +1521,7 @@
         "text": "omni-moderation",
         "slug": "omni-moderation"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": false,
       "ics_uid": "text-moderation-stable-2025-10-27@aiengineerguide.com",
@@ -1574,7 +1574,7 @@
         "text": "gemini-embedding-2",
         "slug": "gemini-embedding-2"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "embedding-001-2025-10-30@aiengineerguide.com",
@@ -1600,7 +1600,7 @@
         "text": "gemini-embedding-2",
         "slug": "gemini-embedding-2"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "embedding-gecko-001-2025-10-30@aiengineerguide.com",
@@ -1626,7 +1626,7 @@
         "text": "gemini-embedding-2",
         "slug": "gemini-embedding-2"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-embedding-exp-2025-10-30@aiengineerguide.com",
@@ -1652,7 +1652,7 @@
         "text": "gemini-embedding-2",
         "slug": "gemini-embedding-2"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-embedding-exp-03-07-2025-10-30@aiengineerguide.com",
@@ -1678,7 +1678,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "imagen-3-0-generate-002-2025-11-10@aiengineerguide.com",
@@ -1704,7 +1704,7 @@
         "text": "gemini-omni-1.1-flash",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "veo-3-0-fast-generate-preview-2025-11-12@aiengineerguide.com",
@@ -1730,7 +1730,7 @@
         "text": "gemini-omni-1.1-flash",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "veo-3-0-generate-preview-2025-11-12@aiengineerguide.com",
@@ -1756,7 +1756,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-0-flash-preview-image-generation-2025-11-14@aiengineerguide.com",
@@ -1782,7 +1782,7 @@
         "text": "gemini-3.6-flash",
         "slug": "gemini-3-6-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-5-flash-preview-05-20-2025-11-18@aiengineerguide.com",
@@ -1808,7 +1808,7 @@
         "text": "gemini-3.1-pro-preview",
         "slug": "gemini-3-1-pro-preview"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-5-pro-preview-03-25-2025-12-02@aiengineerguide.com",
@@ -1834,7 +1834,7 @@
         "text": "gemini-3.1-pro-preview",
         "slug": "gemini-3-1-pro-preview"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-5-pro-preview-05-06-2025-12-02@aiengineerguide.com",
@@ -1860,7 +1860,7 @@
         "text": "gemini-3.1-pro-preview",
         "slug": "gemini-3-1-pro-preview"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-5-pro-preview-06-05-2025-12-02@aiengineerguide.com",
@@ -1886,7 +1886,7 @@
         "text": "gemini-3.1-flash-lite",
         "slug": "gemini-3-1-flash-lite"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-0-flash-lite-preview-2025-12-09@aiengineerguide.com",
@@ -1912,7 +1912,7 @@
         "text": "gemini-3.1-flash-lite",
         "slug": "gemini-3-1-flash-lite"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-0-flash-lite-preview-02-05-2025-12-09@aiengineerguide.com",
@@ -1938,7 +1938,7 @@
         "text": "gemini-3.8-live",
         "slug": "gemini-3-8-live"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-0-flash-live-001-2025-12-09@aiengineerguide.com",
@@ -1964,7 +1964,7 @@
         "text": "gemini-3.8-live",
         "slug": "gemini-3-8-live"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-live-2-5-flash-preview-2025-12-09@aiengineerguide.com",
@@ -2016,7 +2016,7 @@
         "text": "gemini-embedding-2",
         "slug": "gemini-embedding-2"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "text-embedding-004-2026-01-14@aiengineerguide.com",
@@ -2042,7 +2042,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-5-flash-image-preview-2026-01-15@aiengineerguide.com",
@@ -2068,7 +2068,7 @@
         "text": "gpt-5-codex-mini",
         "slug": "gpt-5-codex-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "codex-mini-latest-2026-02-12@aiengineerguide.com",
@@ -2094,7 +2094,7 @@
         "text": "gemini-3.6-flash",
         "slug": "gemini-3-6-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-5-flash-preview-09-25-2026-02-17@aiengineerguide.com",
@@ -2120,7 +2120,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "imagen-4-0-generate-preview-06-06-2026-02-17@aiengineerguide.com",
@@ -2146,7 +2146,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "imagen-4-0-ultra-generate-preview-06-06-2026-02-17@aiengineerguide.com",
@@ -2172,7 +2172,7 @@
         "text": "gpt-5.1-chat-latest",
         "slug": "gpt-5-1-chat-latest"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "chatgpt-4o-latest-2026-02-17@aiengineerguide.com",
@@ -2250,7 +2250,7 @@
         "text": "gemini-3.1-pro-preview",
         "slug": "gemini-3-1-pro-preview"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-3-pro-preview-2026-03-09@aiengineerguide.com",
@@ -2279,7 +2279,7 @@
         "text": "gpt-5 or gpt-4.1*",
         "slug": "gpt-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4-0125-preview-2026-03-26@aiengineerguide.com",
@@ -2306,7 +2306,7 @@
         "text": "gpt-5 or gpt-4.1*",
         "slug": "gpt-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4-0314-2026-03-26@aiengineerguide.com",
@@ -2332,7 +2332,7 @@
         "text": "gemini-3.1-flash-lite",
         "slug": "gemini-3-1-flash-lite"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-5-flash-lite-preview-09-2025-2026-03-31@aiengineerguide.com",
@@ -2384,7 +2384,7 @@
         "text": "gemini-robotics-er-2-preview",
         "slug": "gemini-robotics-er-2-preview"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-robotics-er-1-5-preview-2026-04-30@aiengineerguide.com",
@@ -2410,7 +2410,7 @@
         "text": "gpt-audio-1.5",
         "slug": "gpt-audio-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-audio-preview-2026-05-07@aiengineerguide.com",
@@ -2436,7 +2436,7 @@
         "text": "gpt-audio-mini",
         "slug": "gpt-audio-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-audio-preview-2026-05-07@aiengineerguide.com",
@@ -2462,7 +2462,7 @@
         "text": "gpt-realtime-mini",
         "slug": "gpt-realtime-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-realtime-preview-2026-05-07@aiengineerguide.com",
@@ -2490,7 +2490,7 @@
         "text": "gpt-realtime-1.5",
         "slug": "gpt-realtime-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-realtime-preview-2026-05-07@aiengineerguide.com",
@@ -2518,7 +2518,7 @@
         "text": "gpt-image-2, gpt-image-1, or gpt-image-1-mini",
         "slug": "gpt-image-2"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "dall-e-2-2026-05-12@aiengineerguide.com",
@@ -2546,7 +2546,7 @@
         "text": "gpt-image-2, gpt-image-1, or gpt-image-1-mini",
         "slug": "gpt-image-2"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "dall-e-3-2026-05-12@aiengineerguide.com",
@@ -2572,7 +2572,7 @@
         "text": "gemini-3.1-flash-lite",
         "slug": "gemini-3-1-flash-lite"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-3-1-flash-lite-preview-2026-05-25@aiengineerguide.com",
@@ -2598,7 +2598,7 @@
         "text": "gemini-3.6-flash",
         "slug": "gemini-3-6-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-0-flash-2026-06-01@aiengineerguide.com",
@@ -2624,7 +2624,7 @@
         "text": "gemini-3.6-flash",
         "slug": "gemini-3-6-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-0-flash-001-2026-06-01@aiengineerguide.com",
@@ -2650,7 +2650,7 @@
         "text": "gemini-3.1-flash-lite",
         "slug": "gemini-3-1-flash-lite"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-0-flash-lite-2026-06-01@aiengineerguide.com",
@@ -2676,7 +2676,7 @@
         "text": "gemini-3.1-flash-lite",
         "slug": "gemini-3-1-flash-lite"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-0-flash-lite-001-2026-06-01@aiengineerguide.com",
@@ -2754,7 +2754,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-3-1-flash-image-preview-2026-06-25@aiengineerguide.com",
@@ -2780,7 +2780,7 @@
         "text": "gemini-3-pro-image",
         "slug": "gemini-3-pro-image"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-3-pro-image-preview-2026-06-25@aiengineerguide.com",
@@ -2806,7 +2806,7 @@
         "text": "gemini-omni-1.1-flash or the GA models on the Gemini Enterprise Agent Platform",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "veo-2-0-generate-001-2026-06-30@aiengineerguide.com",
@@ -2832,7 +2832,7 @@
         "text": "gemini-omni-1.1-flash or the GA models on the Gemini Enterprise Agent Platform",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "veo-3-0-fast-generate-001-2026-06-30@aiengineerguide.com",
@@ -2858,7 +2858,7 @@
         "text": "gemini-omni-1.1-flash or the GA models on the Gemini Enterprise Agent Platform",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "veo-3-0-generate-001-2026-06-30@aiengineerguide.com",
@@ -2885,7 +2885,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "computer-use-preview-2026-07-23@aiengineerguide.com",
@@ -2911,7 +2911,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-search-preview-2025-03-11-2026-07-23@aiengineerguide.com",
@@ -2937,7 +2937,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-search-preview-2025-03-11-2026-07-23@aiengineerguide.com",
@@ -2963,7 +2963,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-1-chat-latest-2026-07-23@aiengineerguide.com",
@@ -2989,7 +2989,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-1-codex-2026-07-23@aiengineerguide.com",
@@ -3015,7 +3015,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-1-codex-max-2026-07-23@aiengineerguide.com",
@@ -3041,7 +3041,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-1-codex-mini-2026-07-23@aiengineerguide.com",
@@ -3067,7 +3067,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-2-codex-2026-07-23@aiengineerguide.com",
@@ -3093,7 +3093,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-chat-latest-2026-07-23@aiengineerguide.com",
@@ -3119,7 +3119,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-codex-2026-07-23@aiengineerguide.com",
@@ -3145,7 +3145,7 @@
         "text": "gpt-audio-1.5",
         "slug": "gpt-audio-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-audio-mini-2025-10-06-2026-07-23@aiengineerguide.com",
@@ -3171,7 +3171,7 @@
         "text": "gpt-realtime-2.1-mini",
         "slug": "gpt-realtime-2-1-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-realtime-mini-2025-10-06-2026-07-23@aiengineerguide.com",
@@ -3198,7 +3198,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "o3-deep-research-2026-07-23@aiengineerguide.com",
@@ -3225,7 +3225,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "o4-mini-deep-research-2026-07-23@aiengineerguide.com",
@@ -3251,7 +3251,7 @@
         "text": "gemini-3.8-flash",
         "slug": "gemini-3-8-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-5-computer-use-preview-10-2025-2026-07-28@aiengineerguide.com",
@@ -3303,7 +3303,7 @@
         "text": "gemini-embedding-2",
         "slug": "gemini-embedding-2"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "embedding-2-preview-2026-08-10@aiengineerguide.com",
@@ -3329,7 +3329,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-2-chat-latest-2026-08-10@aiengineerguide.com",
@@ -3355,7 +3355,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-3-chat-latest-2026-08-10@aiengineerguide.com",
@@ -3381,7 +3381,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "imagen-4-0-fast-generate-001-2026-08-17@aiengineerguide.com",
@@ -3407,7 +3407,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "imagen-4-0-generate-001-2026-08-17@aiengineerguide.com",
@@ -3433,7 +3433,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "imagen-4-0-ultra-generate-001-2026-08-17@aiengineerguide.com",
@@ -3459,7 +3459,7 @@
         "text": "gemini-robotics-er-2-preview",
         "slug": "gemini-robotics-er-2-preview"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-robotics-er-1-6-preview-2026-08-31@aiengineerguide.com",
@@ -3481,7 +3481,7 @@
       "shutdown_kind": "exact",
       "shutdown_text": "2026-09-24",
       "replacement": null,
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "sora-2-2026-09-24@aiengineerguide.com",
@@ -3502,7 +3502,7 @@
       "shutdown_kind": "exact",
       "shutdown_text": "2026-09-24",
       "replacement": null,
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "sora-2-pro-2026-09-24@aiengineerguide.com",
@@ -3528,7 +3528,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "babbage-002-2026-09-28@aiengineerguide.com",
@@ -3554,7 +3554,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "davinci-002-2026-09-28@aiengineerguide.com",
@@ -3580,7 +3580,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-3-5-turbo-1106-2026-09-28@aiengineerguide.com",
@@ -3606,7 +3606,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-3-5-turbo-instruct-2026-09-28@aiengineerguide.com",
@@ -3629,7 +3629,7 @@
         "ids": [],
         "text": "The most capable cyber model available to you."
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-4-cyber-2026-10-01@aiengineerguide.com",
@@ -3655,7 +3655,7 @@
         "text": "antigravity-preview-09-2026",
         "slug": "antigravity-preview-09-2026"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "antigravity-preview-05-2026-2026-10-05@aiengineerguide.com",
@@ -3701,7 +3701,7 @@
         "text": "gemini-omni-1.1-flash",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-omni-flash-preview-2026-10-22@aiengineerguide.com",
@@ -3727,7 +3727,7 @@
         "text": "gemini-omni-1.1-flash",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "veo-3-1-fast-generate-preview-2026-10-22@aiengineerguide.com",
@@ -3753,7 +3753,7 @@
         "text": "gemini-omni-1.1-flash",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "veo-3-1-generate-preview-2026-10-22@aiengineerguide.com",
@@ -3779,7 +3779,7 @@
         "text": "gemini-omni-1.1-flash",
         "slug": "gemini-omni-1-1-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "veo-3-1-lite-generate-preview-2026-10-22@aiengineerguide.com",
@@ -3805,7 +3805,7 @@
         "text": "deep-research-preview-04-2026",
         "slug": "deep-research-preview-04-2026"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "deep-research-pro-preview-12-2025-2026-10-23@aiengineerguide.com",
@@ -3831,7 +3831,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "ft-o4-mini-2025-04-16-2026-10-23@aiengineerguide.com",
@@ -3859,7 +3859,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-3-5-turbo-2026-10-23@aiengineerguide.com",
@@ -3888,7 +3888,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4-2026-10-23@aiengineerguide.com",
@@ -3915,7 +3915,7 @@
         "text": "gpt-5.6-luna",
         "slug": "gpt-5-6-luna"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4-1-nano-2026-10-23@aiengineerguide.com",
@@ -3941,7 +3941,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4-1106-preview-2026-10-23@aiengineerguide.com",
@@ -3969,7 +3969,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4-turbo-2026-10-23@aiengineerguide.com",
@@ -3995,7 +3995,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-2024-05-13-2026-10-23@aiengineerguide.com",
@@ -4022,7 +4022,7 @@
         "text": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
         "slug": "gpt-image-2-5-sunburst"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-image-1-2026-10-23@aiengineerguide.com",
@@ -4049,7 +4049,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "o1-2026-10-23@aiengineerguide.com",
@@ -4076,7 +4076,7 @@
         "text": "gpt-5.6-sol (reasoning.mode: pro)",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "o1-pro-2026-10-23@aiengineerguide.com",
@@ -4103,7 +4103,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "o3-mini-2026-10-23@aiengineerguide.com",
@@ -4130,7 +4130,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "o4-mini-2026-10-23@aiengineerguide.com",
@@ -4156,7 +4156,7 @@
         "text": "gemini-3.8-live",
         "slug": "gemini-3-8-live"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-5-flash-native-audio-preview-12-2025-2026-11-17@aiengineerguide.com",
@@ -4183,7 +4183,7 @@
         "text": "gemini-3.8-flash-tts or gemini-3.8-flash-lite-tts",
         "slug": "gemini-3-8-flash-tts"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-5-flash-preview-tts-2026-11-17@aiengineerguide.com",
@@ -4210,7 +4210,7 @@
         "text": "gemini-3.8-flash-tts or gemini-3.8-flash-lite-tts",
         "slug": "gemini-3-8-flash-tts"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-5-pro-preview-tts-2026-11-17@aiengineerguide.com",
@@ -4236,7 +4236,7 @@
         "text": "gemini-3.8-live",
         "slug": "gemini-3-8-live"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-3-1-flash-live-preview-2026-11-17@aiengineerguide.com",
@@ -4263,7 +4263,7 @@
         "text": "gemini-3.8-flash-tts or gemini-3.8-flash-lite-tts",
         "slug": "gemini-3-8-flash-tts"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-3-1-flash-tts-preview-2026-11-17@aiengineerguide.com",
@@ -4336,7 +4336,7 @@
         "text": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
         "slug": "gpt-image-2-5-sunburst"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "chatgpt-image-latest-2026-12-01@aiengineerguide.com",
@@ -4364,7 +4364,7 @@
         "text": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
         "slug": "gpt-image-2-5-sunburst"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-image-1-5-2026-12-01@aiengineerguide.com",
@@ -4391,7 +4391,7 @@
         "text": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
         "slug": "gpt-image-2-5-sunburst"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-image-1-mini-2026-12-01@aiengineerguide.com",
@@ -4418,7 +4418,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-2026-12-11@aiengineerguide.com",
@@ -4445,7 +4445,7 @@
         "text": "gpt-5.6-terra",
         "slug": "gpt-5-6-terra"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-mini-2026-12-11@aiengineerguide.com",
@@ -4472,7 +4472,7 @@
         "text": "gpt-5.6-luna",
         "slug": "gpt-5-6-luna"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-nano-2026-12-11@aiengineerguide.com",
@@ -4499,7 +4499,7 @@
         "text": "gpt-5.6-sol (reasoning.mode: pro)",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-pro-2026-12-11@aiengineerguide.com",
@@ -4526,7 +4526,7 @@
         "text": "gpt-5.6-sol",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "o3-2026-12-11@aiengineerguide.com",
@@ -4553,7 +4553,7 @@
         "text": "gpt-5.6-sol (reasoning.mode: pro)",
         "slug": "gpt-5-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "o3-pro-2026-12-11@aiengineerguide.com",
@@ -4581,7 +4581,7 @@
         "text": "gpt-realtime-2.1-mini",
         "slug": "gpt-realtime-2-1-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-tts-2027-01-06@aiengineerguide.com",
@@ -4607,7 +4607,7 @@
         "text": "gpt-realtime-2.1-mini",
         "slug": "gpt-realtime-2-1-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "tts-1-2027-01-06@aiengineerguide.com",
@@ -4633,7 +4633,7 @@
         "text": "gpt-realtime-2.1-mini",
         "slug": "gpt-realtime-2-1-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "tts-1-hd-2027-01-06@aiengineerguide.com",
@@ -4659,7 +4659,7 @@
         "text": "gpt-6-luna",
         "slug": "gpt-6-luna"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4-1-2027-01-14@aiengineerguide.com",
@@ -4685,7 +4685,7 @@
         "text": "gpt-6-luna",
         "slug": "gpt-6-luna"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4-1-mini-2027-01-14@aiengineerguide.com",
@@ -4712,7 +4712,7 @@
         "text": "gpt-6-luna",
         "slug": "gpt-6-luna"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-2027-01-14@aiengineerguide.com",
@@ -4738,7 +4738,7 @@
         "text": "gpt-6-luna",
         "slug": "gpt-6-luna"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-2027-01-14@aiengineerguide.com",
@@ -4764,7 +4764,7 @@
         "text": "gpt-audio-1.5",
         "slug": "gpt-audio-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-audio-2027-01-20@aiengineerguide.com",
@@ -4790,7 +4790,7 @@
         "text": "gpt-audio-1.5",
         "slug": "gpt-audio-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-audio-2027-01-20@aiengineerguide.com",
@@ -4816,7 +4816,7 @@
         "text": "gpt-realtime-2.1-mini",
         "slug": "gpt-realtime-2-1-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-realtime-2027-01-20@aiengineerguide.com",
@@ -4842,7 +4842,7 @@
         "text": "gpt-4o-mini-transcribe-2025-12-15",
         "slug": "gpt-4o-mini-transcribe-2025-12-15"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-transcribe-2025-03-20-2027-01-20@aiengineerguide.com",
@@ -4868,7 +4868,7 @@
         "text": "gpt-realtime-2.1",
         "slug": "gpt-realtime-2-1"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-realtime-2027-01-20@aiengineerguide.com",
@@ -4895,7 +4895,7 @@
         "text": "gpt-audio-1.5",
         "slug": "gpt-audio-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-audio-2027-01-20@aiengineerguide.com",
@@ -4922,7 +4922,7 @@
         "text": "gpt-audio-1.5",
         "slug": "gpt-audio-1-5"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-audio-mini-2027-01-20@aiengineerguide.com",
@@ -4949,7 +4949,7 @@
         "text": "gpt-realtime-2.1",
         "slug": "gpt-realtime-2-1"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-realtime-2027-01-20@aiengineerguide.com",
@@ -4976,7 +4976,7 @@
         "text": "gpt-realtime-2.1-mini",
         "slug": "gpt-realtime-2-1-mini"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-realtime-mini-2027-01-20@aiengineerguide.com",
@@ -5044,7 +5044,7 @@
         "text": "gpt-live-transcribe or gpt-transcribe",
         "slug": "gpt-live-transcribe"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-mini-transcribe-2027-02-26@aiengineerguide.com",
@@ -5071,7 +5071,7 @@
         "text": "gpt-live-transcribe or gpt-transcribe",
         "slug": "gpt-live-transcribe"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-transcribe-2027-02-26@aiengineerguide.com",
@@ -5098,7 +5098,7 @@
         "text": "gpt-live-transcribe or gpt-transcribe",
         "slug": "gpt-live-transcribe"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-4o-transcribe-diarize-2027-02-26@aiengineerguide.com",
@@ -5125,7 +5125,7 @@
         "text": "gpt-live-transcribe or gpt-transcribe",
         "slug": "gpt-live-transcribe"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "whisper-1-2027-02-26@aiengineerguide.com",
@@ -5151,7 +5151,7 @@
         "text": "gemini-3.1-flash-lite-image",
         "slug": "gemini-3-1-flash-lite-image"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-2-5-flash-image-2027-03-15@aiengineerguide.com",
@@ -5178,7 +5178,7 @@
         "text": "gpt-6-sol",
         "slug": "gpt-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-1-2027-04-01@aiengineerguide.com",
@@ -5204,7 +5204,7 @@
         "text": "gpt-6-sol",
         "slug": "gpt-6-sol"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-3-codex-2027-04-01@aiengineerguide.com",
@@ -5231,7 +5231,7 @@
         "text": "gpt-6-luna",
         "slug": "gpt-6-luna"
       },
-      "platform_note": "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes its own retirement schedule. Fine-tuned models follow their base model's shutdown date.",
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-5-4-nano-2027-04-01@aiengineerguide.com",
@@ -5277,7 +5277,7 @@
         "text": "gemini-3.5-flash-lite",
         "slug": "gemini-3-5-flash-lite"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-3-1-flash-lite-2027-05-07@aiengineerguide.com",
@@ -5503,7 +5503,7 @@
         "text": "gemini-embedding-2",
         "slug": "gemini-embedding-2"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
       "ics_uid": "gemini-embedding-001-2028-05-14@aiengineerguide.com",
@@ -5543,7 +5543,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "antigravity-preview-09-2026-tba@aiengineerguide.com",
@@ -5563,7 +5563,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "deep-research-max-preview-04-2026-tba@aiengineerguide.com",
@@ -5583,7 +5583,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "deep-research-preview-04-2026-tba@aiengineerguide.com",
@@ -5603,7 +5603,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-5-flash-tba@aiengineerguide.com",
@@ -5623,7 +5623,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-5-flash-lite-tba@aiengineerguide.com",
@@ -5643,7 +5643,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-5-pro-tba@aiengineerguide.com",
@@ -5669,7 +5669,7 @@
         "text": "gemini-nano-banana-2.1",
         "slug": "gemini-nano-banana-2-1"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-1-flash-image-tba@aiengineerguide.com",
@@ -5689,7 +5689,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-1-flash-lite-image-tba@aiengineerguide.com",
@@ -5709,7 +5709,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-1-pro-preview-tba@aiengineerguide.com",
@@ -5736,7 +5736,7 @@
         "text": "gemini-3.6-flash (not available to select in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to gemini-3.6-flash)",
         "slug": "gemini-3-6-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-5-flash-tba@aiengineerguide.com",
@@ -5756,7 +5756,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-5-flash-lite-tba@aiengineerguide.com",
@@ -5776,7 +5776,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-5-live-translate-preview-tba@aiengineerguide.com",
@@ -5796,7 +5796,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-5-transcribe-tba@aiengineerguide.com",
@@ -5816,7 +5816,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-5-transcribe-live-tba@aiengineerguide.com",
@@ -5836,7 +5836,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-6-flash-tba@aiengineerguide.com",
@@ -5863,7 +5863,7 @@
         "text": "gemini-3.8-flash (not available to select in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to gemini-3.8-flash)",
         "slug": "gemini-3-8-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-7-flash-tba@aiengineerguide.com",
@@ -5883,7 +5883,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-8-flash-tba@aiengineerguide.com",
@@ -5903,7 +5903,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-8-flash-lite-tts-tba@aiengineerguide.com",
@@ -5923,7 +5923,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-8-flash-tts-tba@aiengineerguide.com",
@@ -5943,7 +5943,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-8-live-tba@aiengineerguide.com",
@@ -5963,7 +5963,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-8-live-extended-thinking-tba@aiengineerguide.com",
@@ -5989,7 +5989,7 @@
         "text": "gemini-3.6-flash",
         "slug": "gemini-3-6-flash"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-flash-preview-tba@aiengineerguide.com",
@@ -6009,7 +6009,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-3-pro-image-tba@aiengineerguide.com",
@@ -6029,7 +6029,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-embedding-2-tba@aiengineerguide.com",
@@ -6049,7 +6049,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-nano-banana-2-1-tba@aiengineerguide.com",
@@ -6069,7 +6069,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-omni-1-1-flash-tba@aiengineerguide.com",
@@ -6089,7 +6089,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-robotics-er-2-preview-tba@aiengineerguide.com",
@@ -6109,7 +6109,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-robotics-er-2-streaming-preview-tba@aiengineerguide.com",
@@ -6129,7 +6129,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "lyria-3-5-tba@aiengineerguide.com",
@@ -6149,7 +6149,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "lyria-3-clip-preview-tba@aiengineerguide.com",
@@ -6175,7 +6175,7 @@
         "text": "lyria-3.5",
         "slug": "lyria-3-5"
       },
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "lyria-3-pro-preview-tba@aiengineerguide.com",
@@ -6195,7 +6195,7 @@
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
       "replacement": null,
-      "platform_note": "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest possible shutdown date; Vertex AI publishes its own schedule.",
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "lyria-realtime-exp-tba@aiengineerguide.com",

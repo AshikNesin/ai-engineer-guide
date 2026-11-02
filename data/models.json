@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-02T17:27:30Z",
+  "generated_at": "2026-11-02T00:00:00Z",
   "checked_at": "2026-11-02",
   "source": "https://models.dev/api.json",
   "source_license": "MIT (github.com/anomalyco/models.dev)",
   "pricing_urls": {
-    "openai": "https://openai.com/api/pricing/",
+    "openai": "https://developers.openai.com/api/docs/pricing",
     "anthropic": "https://platform.claude.com/docs/en/about-claude/pricing",
     "google": "https://ai.google.dev/gemini-api/docs/pricing",
     "xai": "https://docs.x.ai/docs/models",

@@ -54,13 +54,14 @@ PLATFORM_NOTES = {
         "their own retirement schedules, so check those model tables separately."
     ),
     "openai": (
-        "Dates apply to the OpenAI API. Azure OpenAI (Microsoft Foundry) publishes "
-        "its own retirement schedule. Fine-tuned models follow their base model's "
-        "shutdown date."
+        "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown "
+        "schedule as their base model. If you use OpenAI models through another "
+        "platform, check that platform's own retirement schedule."
     ),
     "gemini": (
-        "Dates apply to the Gemini API (Google AI Studio). Google lists the earliest "
-        "possible shutdown date; Vertex AI publishes its own schedule."
+        "Dates apply to the Gemini API and are the earliest possible shutdown dates "
+        "Google publishes. If you use Gemini through another platform, check that "
+        "platform's own schedule."
     ),
 }
 

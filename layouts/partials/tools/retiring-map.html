@@ -1,0 +1,8 @@
+{{- /* dict of model id -> retirement model (deprecated, with a page) for badges. */ -}}
+{{- $map := dict -}}
+{{- range where (where site.Data.retirements.models "page" true) "status" "deprecated" -}}
+  {{- $m := . -}}
+  {{- range $m.ids }}{{ $map = merge $map (dict . $m) }}{{ end -}}
+  {{- range $m.ids }}{{ $map = merge $map (dict (replaceRE `-(\d{8}|\d{4}-\d{2}-\d{2})$` "" .) $m) }}{{ end -}}
+{{- end -}}
+{{- return $map -}}

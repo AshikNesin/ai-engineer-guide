@@ -49,6 +49,16 @@ cd scripts && npm run sync:watch
 - **API Proxy**: `functions/api/[[path]].js` proxies `/api/search` and `/api/related` to qblog.nesin.io
 - **Environment Variables**: Requires `PUSHOVER_API_TOKEN` and `PUSHOVER_USER_KEY`
 
+## Tools section (`/tools/`)
+
+- Free, browser-only tools. No backend, no Pages Functions for tools, no Node step in the Cloudflare build.
+- Pages: `content/tools/`. Per-model retirement pages come from the content adapter `content/tools/model-retirements/_content.gotmpl`.
+- Layouts: `layouts/tools/`, `layouts/retirements/` (calendar + `.ics` + RSS), partials in `layouts/partials/tools/` (tool UIs in `ui/`).
+- JS: one ES module per tool in `assets/js/tools/`, bundled by Hugo `js.Build`; shared helpers in `assets/js/tools/shared/` (not `lib/`, which is gitignored). Vendored libs in `assets/vendor/` with version/source/license headers.
+- Data: `data/tools.yaml` (registry), `data/models.json` and `data/retirements.json` (generated; see `scripts/tools-data/README.md`), `data/migrations/<slug>.yaml` (hand-reviewed; `reviewed: false` shows a draft notice).
+- Tests: `python -m unittest discover scripts/tools-data/tests` and `node --test assets/js/tools/tests/*.test.mjs`.
+- Tool pages support light and dark mode like the blog, and don't show related TILs.
+
 ## Content Organization
 
 Blog posts are organized by year/month in `content/blog/YYYY-MM/` format. Each post includes:

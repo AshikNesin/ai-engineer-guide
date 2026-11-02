@@ -12,6 +12,11 @@
 /*.js
   Cache-Control: public, max-age=31536000, immutable
 
+# Vendored ES modules (fingerprinted; .mjs needs a JavaScript MIME type for module imports)
+/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/javascript; charset=utf-8
+
 # Favicon and logo
 /favicon.ico
   Cache-Control: public, max-age=604800

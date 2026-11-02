@@ -26,7 +26,7 @@ MAX_BYTES = 150_000
 
 # Official pricing pages, linked from every price we show.
 PRICING_URLS = {
-    "openai": "https://openai.com/api/pricing/",
+    "openai": "https://developers.openai.com/api/docs/pricing",
     "anthropic": "https://platform.claude.com/docs/en/about-claude/pricing",
     "google": "https://ai.google.dev/gemini-api/docs/pricing",
     "xai": "https://docs.x.ai/docs/models",
@@ -138,7 +138,10 @@ def main(argv=None) -> int:
     if previous and len(doc["models"]) < 0.7 * len(previous.get("models", [])):
         print("SANITY GATE FAILED: more than 30% of models vanished", file=sys.stderr)
         return 1
-    if previous and previous.get("models") == doc["models"]:
+    # Ignore timestamps when deciding whether anything changed.
+    volatile = {"generated_at", "checked_at"}
+    strip = lambda d: {k: v for k, v in d.items() if k not in volatile}  # noqa: E731
+    if previous and strip(previous) == strip(doc):
         print("models.json: no changes")
         return 0
 

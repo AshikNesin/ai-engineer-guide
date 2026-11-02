@@ -1,4 +1,4 @@
-{{- /* 4-6 related tools from data/tools.yaml + 3 related TILs by tag. */ -}}
+{{- /* 4-6 related tools from data/tools.yaml (no TIL links on tool pages). */ -}}
 {{- $slug := .Params.tool | default .Params.related_tool | default "model-retirements" -}}
 {{- $tools := site.Data.tools.tools -}}
 {{- $me := index (where $tools "slug" $slug) 0 -}}
@@ -25,21 +25,4 @@
       {{- end }}
     {{- end }}
   </div>
-  {{- $tags := .Params.til_tags | default (slice "llm" "claude" "openai") -}}
-  {{- $tils := slice -}}
-  {{- range $tags -}}
-    {{- with site.Taxonomies.tags.Get . -}}
-      {{- range .Pages.ByDate.Reverse -}}
-        {{- if and (lt (len $tils) 3) (not (in $tils .)) }}{{ $tils = $tils | append . }}{{ end -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-  {{- with $tils }}
-  <h3>Related TILs</h3>
-  <ul>
-    {{- range . }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{- end }}
-  </ul>
-  {{- end }}
 </section>

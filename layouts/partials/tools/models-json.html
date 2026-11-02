@@ -1,0 +1,8 @@
+{{- /* Compact copy of data/models.json for the tools' JS (no runtime fetch). */ -}}
+{{- $out := slice -}}
+{{- range site.Data.models.models -}}
+  {{- if not .snapshot -}}
+    {{- $out = $out | append (dict "id" .id "name" .name "provider" .provider "context" .context "max_input" .max_input "max_output" .max_output "price" .price_per_mtok "tokenizer" .tokenizer "released" .released "status" .status) -}}
+  {{- end -}}
+{{- end -}}
+<script type="application/json" id="models-data">{{ dict "checked_at" site.Data.models.checked_at "source" site.Data.models.source "pricing_urls" site.Data.models.pricing_urls "models" $out | jsonify | safeJS }}</script>

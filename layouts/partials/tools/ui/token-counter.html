@@ -1,0 +1,72 @@
+{{- /* Token counter UI. OpenAI counts are exact (gpt-tokenizer, loaded on first
+       use); Claude and Gemini are labelled estimates with the documented ratio. */ -}}
+{{- $sample := (resources.Get "tools/token-counter-sample.txt").Content -}}
+{{- /* Exact counts for $sample, checked by assets/js/tools/tests/tokenizer.test.mjs */ -}}
+{{- $sampleCounts := dict "o200k_base" 73 "cl100k_base" 75 -}}
+{{- $chars := len (split $sample "") -}}
+{{- $o200k := resources.Get "vendor/gpt-tokenizer-o200k_base.mjs" | fingerprint -}}
+{{- $cl100k := resources.Get "vendor/gpt-tokenizer-cl100k_base.mjs" | fingerprint -}}
+{{- $pre := .Params.preselect | default "" -}}
+{{- $rows := slice
+  (dict "key" "o200k_base" "provider" "openai" "name" "OpenAI o200k_base" "used" "GPT-4o, GPT-4.1, GPT-5.x, GPT-6, o-series" "exact" true "count" (index $sampleCounts "o200k_base") "how" "Exact (gpt-tokenizer 4.1.0)")
+  (dict "key" "cl100k_base" "provider" "openai" "name" "OpenAI cl100k_base" "used" "GPT-4, GPT-4 Turbo, GPT-3.5 Turbo, text-embedding-3" "exact" true "count" (index $sampleCounts "cl100k_base") "how" "Exact (gpt-tokenizer 4.1.0)")
+  (dict "key" "claude-new" "provider" "claude" "name" "Claude 4.7 and later" "used" "Opus 4.7+, Sonnet 5.x, Haiku 5.5, Fable, Mythos" "exact" false "count" (int (math.Ceil (mul (div (float $chars) 3.5) 1.3))) "how" "characters ÷ 3.5 × 1.3")
+  (dict "key" "claude-legacy" "provider" "claude" "name" "Claude before 4.7" "used" "Sonnet 4.5/4.6, Haiku 4.5, Opus 4.6 and earlier" "exact" false "count" (int (math.Ceil (div (float $chars) 3.5))) "how" "characters ÷ 3.5")
+  (dict "key" "gemini" "provider" "gemini" "name" "Gemini" "used" "Gemini API models" "exact" false "count" (int (math.Ceil (div (float $chars) 4))) "how" "characters ÷ 4")
+-}}
+{{- $first := where $rows "provider" $pre -}}
+{{- $rest := where $rows "provider" "ne" $pre -}}
+<div class="tool-app" id="tc-app"
+  data-o200k="{{ $o200k.RelPermalink }}" data-cl100k="{{ $cl100k.RelPermalink }}"
+  data-sample-o200k="{{ index $sampleCounts "o200k_base" }}" data-sample-cl100k="{{ index $sampleCounts "cl100k_base" }}"
+  data-preselect="{{ $pre }}">
+  <div class="tool-field grow" id="tc-drop">
+    <label for="tc-text">Paste text, a prompt or JSON</label>
+    <textarea id="tc-text" spellcheck="false" rows="9">{{ $sample }}</textarea>
+    <small>Or drop a <code>.txt</code>, <code>.md</code> or <code>.json</code> file here, or <label for="tc-file" style="font-size:inherit;color:var(--t-link);cursor:pointer;text-decoration:underline">choose a file</label>. It's read in your browser.</small>
+    <input type="file" id="tc-file" accept=".txt,.md,.markdown,.json,.jsonl,.csv,.xml,.html,.yaml,.yml,text/*" hidden>
+  </div>
+  <p class="tool-stamp" id="tc-stats" aria-live="polite">{{ $chars }} characters · {{ countwords $sample }} words</p>
+
+  <div class="tool-table-wrap">
+  <table class="tool-table" id="tc-results">
+    <caption class="visually-hidden">Token counts by tokenizer</caption>
+    <thead><tr><th>Tokenizer</th><th class="num">Tokens</th><th>Type</th><th>Used by</th></tr></thead>
+    <tbody>
+    {{- range $first | append $rest }}
+      <tr data-key="{{ .key }}"{{ if eq .provider $pre }} class="is-pinned"{{ end }}>
+        <td><strong>{{ .name }}</strong></td>
+        <td class="num"><strong data-count>{{ lang.FormatNumberCustom 0 .count }}</strong></td>
+        <td>{{ if .exact }}<span class="badge exact">exact</span>{{ else }}<span class="badge est">estimate</span>{{ end }} <span class="helptext" data-how>{{ .how }}</span></td>
+        <td class="helptext">{{ .used }}</td>
+      </tr>
+    {{- end }}
+    </tbody>
+  </table>
+  </div>
+
+  <div class="tool-row" style="margin-top:1rem">
+    <div class="tool-field grow">
+      <label for="tc-model">Cost and context for a model</label>
+      <select id="tc-model"></select>
+    </div>
+  </div>
+  <p id="tc-cost" class="tool-note" aria-live="polite">Pick a model to see what these tokens cost as input or output, and how much of its context window they use.</p>
+
+  <details id="tc-view">
+    <summary>View OpenAI tokens</summary>
+    <div class="tool-row" style="margin-top:.5rem">
+      <label class="tool-check"><input type="radio" name="tc-enc" value="o200k_base" checked> o200k_base</label>
+      <label class="tool-check"><input type="radio" name="tc-enc" value="cl100k_base"> cl100k_base</label>
+    </div>
+    <div class="tok-view" id="tc-tokens" aria-label="Text split into tokens"></div>
+    <p class="tool-stamp">Each colored block is one token. Only the first 2,000 tokens are shown.</p>
+  </details>
+
+  <div class="tool-actions">
+    <button type="button" id="tc-copy">Copy counts</button>
+    <button type="button" id="tc-clear">Clear</button>
+  </div>
+  <p class="tool-stamp" id="tc-status">OpenAI counts for the sample text are pre-computed; the tokenizer (about 1 MB gzipped) loads the first time you edit.</p>
+  {{ partial "tools/models-json.html" . }}
+</div>

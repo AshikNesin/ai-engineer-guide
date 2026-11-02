@@ -72,7 +72,7 @@ body.tool-page { max-width: 960px; }
 .tool-app input:focus, .tool-app select:focus, .tool-app textarea:focus {
   outline: 2px solid var(--t-link); outline-offset: 0;
 }
-.tool-row { display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-end; margin-bottom: .75rem; }
+.tool-row { display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-start; margin-bottom: .75rem; }
 .tool-field { display: flex; flex-direction: column; gap: .25rem; min-width: 140px; flex: 1 1 140px; }
 .tool-field.grow { flex: 3 1 260px; }
 .tool-field small { color: var(--t-muted); font-size: 12px; }
@@ -196,3 +196,7 @@ a.tool-card:hover { border-color: var(--t-link); }
   .fact-list dt { margin-top: .4rem; }
   .tool-app { padding: .75rem; }
 }
+
+/* Long model tables scroll inside the tool box, header stays visible. */
+.tool-table-wrap.tall { max-height: 560px; overflow-y: auto; border: 1px solid var(--t-border); border-radius: 6px; }
+.tool-table-wrap.tall .tool-table th { z-index: 1; }

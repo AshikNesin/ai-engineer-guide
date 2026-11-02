@@ -23,7 +23,7 @@ faq:
   - q: "Why do Gemini dates say \"earliest possible\"?"
     a: "Google lists the earliest date a Gemini API model might be shut down and announces the exact date later. We label those dates \"earliest\" on the calendar."
   - q: "Do these dates apply to Amazon Bedrock, Vertex AI or Azure?"
-    a: "No. The dates are for each provider's own API. Amazon Bedrock, Google Cloud Vertex AI and Azure OpenAI publish their own schedules, which can differ."
+    a: "No. The dates are for each provider's own API. Anthropic notes that Amazon Bedrock and Claude Models on Google Cloud (Google managed) set their own retirement schedules, so if you use a model through a cloud platform, check that platform's schedule."
   - q: "How do I get alerts when a model I use is deprecated?"
     a: "Subscribe to the calendar feed (.ics) in Google Calendar, Apple Calendar or Outlook, which adds every shutdown with reminders 30 and 7 days before, or follow the RSS feed for new announcements and date changes."
   - q: "Why isn't an active model like Claude Opus 5.5 on the calendar?"
