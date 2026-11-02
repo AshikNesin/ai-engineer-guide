@@ -22,7 +22,7 @@ faq:
   - q: "How many characters is a token?"
     a: "For English text, roughly 4 characters per token on OpenAI and Gemini models, and about 3.5 characters on Claude models before Claude 4.7. Claude 4.7 and later models produce about 30% more tokens for the same text. Code, non-English text and JSON usually use more tokens per character."
   - q: "Is my text uploaded anywhere?"
-    a: "No. Counting happens in your browser. The page downloads the tokenizer file from this site once; your text is never sent to a server."
+    a: "No. Counting happens in your browser. The page downloads the OpenAI tokenizer files from this site, and your text stays in your browser."
   - q: "How do I get an exact Claude or Gemini token count?"
     a: "Call Anthropic's free [token counting endpoint](https://platform.claude.com/docs/en/build-with-claude/token-counting) (`POST /v1/messages/count_tokens`) or Gemini's [`countTokens`](https://ai.google.dev/gemini-api/docs/tokens) with the model you plan to use."
   - q: "Which OpenAI models use o200k_base?"

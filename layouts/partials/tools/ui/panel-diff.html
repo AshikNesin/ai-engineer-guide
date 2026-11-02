@@ -8,7 +8,7 @@
     {{- $old := partial "tools/model-price.html" (append $m.ids (slice $m.slug)) -}}
     {{- $new := partial "tools/model-price.html" . -}}
     {{- if and $old $new -}}
-      {{- $presets = $presets | append (dict "from" $old.id "to" $new.id "label" (printf "%s → %s" $m.name $new.name) "shutdown" $m.shutdown "slug" $m.slug) -}}
+      {{- $presets = $presets | append (dict "from" $old.id "to" $new.id "label" (printf "%s to %s" $m.name $new.name) "shutdown" $m.shutdown "slug" $m.slug) -}}
     {{- end -}}
   {{- end -}}{{- end -}}
 {{- end -}}

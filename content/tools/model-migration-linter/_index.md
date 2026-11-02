@@ -33,7 +33,7 @@ The linter parses your request (or SDK call), works out which API it targets, an
 
 Rules flagged **Returns 400** are documented as HTTP 400. **Rejected** means the docs say the field isn't supported or will raise an error, without naming a status code. **Behavior change** means the request still works but the output changes, such as Claude Sonnet 5.5 thinking by default.
 
-What it can't see: values held in variables, headers your SDK adds for you, and differences on Amazon Bedrock or Vertex AI. It checks the request shape, not your prompts, so run your evaluation set on the new model as well. To find every place your code still calls a retiring model, use the [deprecated model-ID scanner](/tools/model-id-scanner/).
+What it can't see: values held in variables, headers your SDK adds for you, and differences on Amazon Bedrock or Vertex AI. It checks the fields in a request and can't tell whether your prompts still give good answers, so run your evaluation set on the new model as well. To find every place your code still calls a retiring model, use the [deprecated model-ID scanner](/tools/model-id-scanner/).
 
 ### Sources
 

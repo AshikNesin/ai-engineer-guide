@@ -43,7 +43,7 @@ test("summary ordering and checklist", () => {
   assert.ok(rows[0].retired);
   const sonnet = rows.find((r) => r.id === "claude-sonnet-4-5-20250929");
   assert.equal(sonnet.days, 28);
-  assert.match(checklist(rows), /- \[ \] `o3` \(shuts down 2026-12-11\) → gpt-5.6-sol/);
+  assert.match(checklist(rows), /- \[ \] `o3` \(shuts down 2026-12-11\), replace with gpt-5.6-sol/);
 });
 
 test("no false positives on look-alikes", () => {

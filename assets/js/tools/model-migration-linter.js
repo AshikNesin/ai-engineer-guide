@@ -111,7 +111,7 @@ function run() {
     : "Breaking fields are fixed; review behavior changes before shipping.";
 
   lastReport = [
-    `# Migration check: ${parsed.body.model || "request"} → ${target.value} (${API_NAMES[api]})`, "",
+    `# Migration check: ${parsed.body.model || "request"} to ${target.value} (${API_NAMES[api]})`, "",
     ...findings.map(({ rule, paths }) => `- **${rule.title}** (${STATUS[rule.status].label}; ${paths.join(", ")})\n  Fix: ${rule.fix}\n  Source: ${rule.sources[0].url}`),
     "", "Checked with https://aiengineerguide.com/tools/model-migration-linter/",
   ].join("\n");

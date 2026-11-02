@@ -83,7 +83,7 @@ export function summarize(hits, today = new Date()) {
 export function checklist(rows) {
   return rows.map((r) => {
     const when = r.retired ? `retired ${r.model.shutdown}` : r.model.shutdown ? `shuts down ${r.model.shutdown}${r.model.shutdown_kind === "earliest" ? " (earliest)" : ""}` : "date TBA";
-    const repl = r.model.replacement?.text ? ` → ${r.model.replacement.text}` : "";
+    const repl = r.model.replacement?.text ? `, replace with ${r.model.replacement.text}` : "";
     return `- [ ] \`${r.id}\` (${when})${repl}, lines ${r.lines.join(", ")}`;
   }).join("\n");
 }

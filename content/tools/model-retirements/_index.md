@@ -27,5 +27,5 @@ faq:
   - q: "How do I get alerts when a model I use is deprecated?"
     a: "Subscribe to the calendar feed (.ics) in Google Calendar, Apple Calendar or Outlook, which adds every shutdown with reminders 30 and 7 days before, or follow the RSS feed for new announcements and date changes."
   - q: "Why isn't an active model like Claude Opus 5.5 on the calendar?"
-    a: "Anthropic lists active models with a \"not sooner than\" date. That's a minimum lifetime, not a retirement date, so it never goes on the calendar."
+    a: "Anthropic lists active models with a \"not sooner than\" date. That's the earliest Anthropic could retire the model, so it never goes on the calendar."
 ---

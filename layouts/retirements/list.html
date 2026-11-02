@@ -60,7 +60,7 @@
     <div class="tool-cards">
       <a class="tool-card" href="{{ "/tools/model-id-scanner/" | relURL }}"><strong>Deprecated model-ID scanner</strong><span>Paste code or a workflow export to find every retiring model ID it uses.</span></a>
       <a class="tool-card" href="{{ "/tools/model-migration-linter/" | relURL }}"><strong>Request migration linter</strong><span>See which request fields return a 400 on the replacement model.</span></a>
-      <a class="tool-card" href="{{ "/tools/llm-cost-calculator/#tab=diff" | relURL }}"><strong>Old → new model cost</strong><span>Compare price, limits and token counts before you switch.</span></a>
+      <a class="tool-card" href="{{ "/tools/llm-cost-calculator/#tab=diff" | relURL }}"><strong>Old vs new model cost</strong><span>Compare price, limits and token counts before you switch.</span></a>
     </div>
   </section>
 
@@ -82,11 +82,11 @@
 
   <section class="tool-section" id="how-it-works">
     <h2>How we build this calendar</h2>
-    <p>A scheduled job reads the official deprecation pages once a day, parses their tables and opens a pull request when anything changes. Nothing is scraped from third-party trackers. Some rules we follow:</p>
+    <p>A scheduled job reads the official deprecation pages once a day, parses their tables and opens a pull request when anything changes, and a person reviews each date change before it goes live. We don't take data from third-party trackers.</p>
     <ul>
-      <li><strong>Anthropic</strong> "not sooner than" dates for active models are minimum lifetimes, not retirement dates, so they never appear here.</li>
-      <li><strong>Gemini API</strong> dates are the earliest possible shutdown dates Google publishes, and are labelled "earliest".</li>
-      <li><strong>OpenAI</strong> rows often cover an alias and its snapshots (for example <code>o3</code> and <code>o3-2025-04-16</code>); they're grouped into one entry.</li>
+      <li>For active Claude models, Anthropic publishes a "not sooner than" date. That's the earliest Anthropic could retire the model, so those dates stay off the calendar.</li>
+      <li>Google publishes the earliest possible shutdown date for Gemini API models, and the calendar labels those dates "earliest".</li>
+      <li>One OpenAI row often covers an alias and its snapshots, such as <code>o3</code> and <code>o3-2025-04-16</code>. The calendar groups them into one entry.</li>
       <li>Dates are for each provider's own API. Cloud platforms such as Amazon Bedrock set their own schedules.</li>
     </ul>
     <p>The calendar feed gives each shutdown a stable ID, so if a provider moves a date, your calendar event moves too, with reminders 30 and 7 days before.</p>

@@ -9,9 +9,9 @@ promise: "Compare the monthly API cost of every major model, then check token co
 tool: llm-cost-calculator
 cta_heading: "Get one practical AI engineering note a week"
 howto:
-  - "Enter your average input and output tokens per request and your requests per day. Not sure? Paste a real prompt into the **Token count** tab."
+  - "Enter your average input and output tokens per request and your requests per day. If you don't know your token counts, paste a real prompt into the **Token count** tab."
   - "Set the share of input served from the prompt cache, tick **Batch API** if the work can wait, and pin up to 4 models to compare."
-  - "Moving off a retiring model? Open **Old → new model** to see how price, limits and token counts change, then copy the share link for your team."
+  - "If you're replacing a retiring model, open **Old vs new model** to see how price, limits and token counts change, then copy the share link for your team."
 faq:
   - q: "How is the monthly cost calculated?"
     a: "Per request: uncached input × input price + cached input × cache read price + output × output price, all per million tokens. The monthly cost is that × requests per day × 30. With Batch API ticked, we halve it for providers whose pricing pages list a 50% batch discount (OpenAI, Anthropic, Google and Mistral)."
@@ -22,7 +22,7 @@ faq:
   - q: "Is prompt caching worth it?"
     a: "Usually, if the same prefix is reused within the cache lifetime. On Anthropic's 5-minute cache a write costs 1.25x input and a hit 0.1x, so it pays off after one hit. The Prompt caching tab shows the break-even for any model."
   - q: "Will moving to Claude Sonnet 5.5 cost more than Sonnet 4.5?"
-    a: "Per token it's cheaper ($2/$10 vs $3/$15 per million input/output tokens), but Anthropic says the newer tokenizer produces about 30% more tokens for the same text. The Old → new model tab applies that adjustment."
+    a: "Per token it's cheaper ($2/$10 vs $3/$15 per million input/output tokens), but Anthropic says the newer tokenizer produces about 30% more tokens for the same text. The Old vs new model tab applies that adjustment."
   - q: "Why is my real bill different?"
     a: "Common reasons: long-context pricing tiers (for example OpenAI prices prompts over 272K tokens at 2x input), reasoning tokens billed as output, tool definitions and images adding input tokens, regional or priority surcharges, and promotional prices that end."
 ---
@@ -39,17 +39,17 @@ OpenAI counts are exact, computed in your browser with [gpt-tokenizer](https://g
 
 A prompt fits when its input is within the model's max input (or the context window when there's no separate cap), and input plus reserved output stays within the window, with the reserved output no larger than the model's max output.
 
-### Old → new model
+### Old vs new model
 
-The diff tab compares list prices, limits and the cost of the same traffic. When moving from a Claude model before 4.7 to Claude 4.7 or later, it scales token counts by 1.3x, per Anthropic's token counting docs. Across providers the tokenizers differ in ways no one publishes, so recount a real prompt instead.
+This tab compares list prices, limits and the cost of the same traffic on two models. When you move from a Claude model before 4.7 to Claude 4.7 or later, it scales token counts by 1.3x, per Anthropic's token counting docs. Providers don't publish how their tokenizers compare with each other's, so for a switch between providers, recount a real prompt in the Token count tab.
 
 ### Things this calculator doesn't model
 
-- **Long-context tiers.** OpenAI: "Prompts with >272K input tokens are priced at 2x input and 1.5x output for the full request." Gemini 3.1 Pro and Claude Haiku 5.5 also have higher prices above 200K and 100K-token prompts respectively. We show the standard tier.
-- **Promotional prices.** gpt-5.6-sol's current price runs "at least through November 21, 2026". gemini-3.8-flash is priced as shown "through December 31, 2026", rising to $1.50 / $7.50 per million input/output tokens on January 1, 2027.
-- **DeepSeek peak hours.** The listed DeepSeek prices are off-peak rates; peak rates (01:00–04:00 and 06:00–10:00 UTC on weekdays) are double.
-- **Surcharges.** Priority or fast modes, regional or data-residency endpoints (for example a 1.1x multiplier for Anthropic US-only inference) and Gemini cache storage per hour.
-- **`mistral-large-latest`** points to Mistral Large 3, which Mistral deprecated on October 31, 2026 in favor of Mistral Large 4.
+- Long-context prices. OpenAI says "Prompts with >272K input tokens are priced at 2x input and 1.5x output for the full request." Gemini 3.1 Pro charges more above 200K-token prompts and Claude Haiku 5.5 above 100K. The table uses the standard tier.
+- Promotional prices. OpenAI lists gpt-5.6-sol's current price "at least through November 21, 2026". Google lists gemini-3.8-flash at this price "through December 31, 2026", rising to $1.50 / $7.50 per million input/output tokens on January 1, 2027.
+- DeepSeek peak hours. The DeepSeek prices shown are off-peak rates. From 01:00 to 04:00 and 06:00 to 10:00 UTC on weekdays, DeepSeek charges double.
+- Surcharges for priority or fast modes, regional or data-residency endpoints (for example a 1.1x multiplier for Anthropic US-only inference), and Gemini's hourly cache storage.
+- `mistral-large-latest` points to Mistral Large 3, which Mistral deprecated on October 31, 2026 in favor of Mistral Large 4.
 
 ### Official pricing pages
 

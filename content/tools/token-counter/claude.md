@@ -22,13 +22,12 @@ faq:
     a: "Claude Opus 4.7 introduced a new tokenizer, shared by later models. Anthropic says the same input produces approximately 30 percent more tokens, so recount prompts before you compare costs or check context fit."
   - q: "Is this an exact Claude token count?"
     a: "No. Anthropic doesn't publish a browser tokenizer, so this is an estimate. For an exact count, call the free [`/v1/messages/count_tokens`](https://platform.claude.com/docs/en/build-with-claude/token-counting) endpoint with the model you plan to use."
-  - q: "Does Claude count tokens the same way on Amazon Bedrock and Vertex AI?"
-    a: "The tokenizer belongs to the model, so the same model counts the same text the same way on every platform. Prices and limits can differ by platform."
+  - q: "Do tool definitions and images count toward Claude's input tokens?"
+    a: "Yes. Tools, the system prompt and images all add input tokens, and this counter only measures the text you paste. Anthropic's [token counting endpoint](https://platform.claude.com/docs/en/build-with-claude/token-counting) accepts the same inputs as a message request, including the system prompt, tools, images and PDFs."
 ---
 
 ## How we estimate Claude tokens
 
-- **Claude before 4.7:** characters ÷ 3.5, from Anthropic's [glossary](https://platform.claude.com/docs/en/about-claude/glossary) (checked 2026-11-02).
-- **Claude 4.7 and later:** characters ÷ 3.5 × 1.3, from Anthropic's [token counting docs](https://platform.claude.com/docs/en/build-with-claude/token-counting): the newer tokenizer "produces approximately 30 percent more tokens" (checked 2026-11-02).
+For Claude models before 4.7 we divide the character count by 3.5, from Anthropic's [glossary](https://platform.claude.com/docs/en/about-claude/glossary). For Claude 4.7 and later we multiply that by 1.3, because Anthropic's [token counting docs](https://platform.claude.com/docs/en/build-with-claude/token-counting) say the newer tokenizer "produces approximately 30 percent more tokens". Both checked 2026-11-02.
 
 These ratios hold for English prose. Code, JSON and other languages usually produce more tokens, so treat the estimate as a lower bound and leave headroom. Tool definitions, system prompts and images also add tokens. For exact numbers use Anthropic's free token counting endpoint.

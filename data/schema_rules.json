@@ -57,7 +57,7 @@
       "check": "rootObject",
       "severity": "error",
       "autofix": false,
-      "title": "Root must be an object, not anyOf",
+      "title": "The root must be an object and can't use anyOf",
       "source": {
         "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
         "quote": "Note that the root level object of a schema must be an object, and not use `anyOf`."
@@ -294,7 +294,7 @@
       "severity": "warning",
       "autofix": true,
       "title": "Constraint is ignored by Gemini",
-      "detail": "The API strips it instead of returning an error, so validate it in your code. The auto-fix removes it so the schema says what's actually enforced.",
+      "detail": "The API strips it instead of returning an error, so validate it in your code. The auto-fix removes it, so the schema only lists constraints Gemini enforces.",
       "source": {
         "url": "https://ai.google.dev/gemini-api/docs/structured-output#limitations",
         "quote": "`minLength`, `maxLength`, `minProperties`, `maxProperties`, `uniqueItems`, `contains`, `minContains`, and `maxContains` (and their snake_case variants) are not enforced by the constrained decoding grammar engine."

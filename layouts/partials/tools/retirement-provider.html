@@ -39,7 +39,7 @@
   {{ with $floors }}
   <section class="tool-section">
     <h2>Active models and their minimum lifetime</h2>
-    <p>Anthropic lists a "not sooner than" date for each active model. It's the earliest date the model could be retired, <strong>not</strong> a retirement date, so these models aren't on the calendar.</p>
+    <p>Anthropic lists a "not sooner than" date for each active model. It's the earliest date Anthropic could retire the model, so these models aren't on the calendar.</p>
     <div class="tool-table-wrap"><table class="tool-table">
       <thead><tr><th>Model ID</th><th class="num">Not retired before</th></tr></thead>
       <tbody>
@@ -53,7 +53,7 @@
   <section class="tool-section">
     <h2>Aliases that route to newer models</h2>
     <p>These model names aren't shutting down, but Google now routes requests for them to a newer model.</p>
-    <ul>{{ range . }}<li><code>{{ index .ids 0 }}</code> → {{ with .replacement }}{{ .text }}{{ end }}</li>{{ end }}</ul>
+    <ul>{{ range . }}<li><code>{{ index .ids 0 }}</code> now routes to {{ with .replacement }}{{ .text }}{{ end }}</li>{{ end }}</ul>
   </section>
   {{ end }}
 

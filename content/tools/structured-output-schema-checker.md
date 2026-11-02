@@ -27,9 +27,9 @@ faq:
 
 ## How the checker works
 
-The checker walks every subschema and applies the rules for the provider you pick. Every rule quotes the provider's own docs with the date we checked it. **Errors** are documented as rejected; **warnings** won't fail the request but won't behave as you expect (Gemini, for example, silently ignores `maxLength`).
+The checker walks every subschema and applies the rules for the provider you pick. Every rule quotes the provider's own docs with the date we checked it. Errors are things the docs say get rejected. Warnings won't fail the request, but the schema won't do what it says: Gemini, for example, strips `maxLength` and ignores it.
 
-The auto-fix only does what's safe and documented: it sets `additionalProperties: false`, makes optional fields required-but-nullable for OpenAI strict mode, moves unsupported Claude constraints into the description (like Anthropic's SDK helpers), and removes constraints Gemini ignores. Validate those constraints in your code after parsing.
+The auto-fix only makes documented changes: it sets `additionalProperties: false`, makes optional fields required-but-nullable for OpenAI strict mode, moves unsupported Claude constraints into the description (like Anthropic's SDK helpers), and removes constraints Gemini ignores. Validate those constraints in your code after parsing.
 
 Request-wide limits, such as Claude's 24 optional parameters across all strict tools in a request, are checked per schema here, so add them up if you send several strict tools.
 

@@ -11,6 +11,6 @@ cta_heading: "Get new tools and one practical AI engineering note a week"
 
 ## Why these tools
 
-Each tool does one job and runs entirely in your browser, so you can paste real prompts, schemas and configs without sending them anywhere. Prices, limits and retirement dates come from official provider pages and are refreshed by a daily job; every number links to its source.
+Each tool does one job and runs in your browser, so you can paste real prompts, schemas and configs without sending them anywhere. Prices, limits and retirement dates come from official provider pages, a daily job refreshes them, and each tool links to the pages its data comes from.
 
-Missing a tool you need? [Email me](mailto:aiengineerguide@duck.com) and tell me what you'd use.
+If you need a tool that isn't here, [email me](mailto:aiengineerguide@duck.com) and tell me what you'd use it for.
