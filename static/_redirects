@@ -9,6 +9,10 @@ https://www.aiengineerguide.com/* https://aiengineerguide.com/:splat 301
 # Cloudflare Pages preview domain -> apex (prevent duplicate-host indexing)
 https://ai-engineer-guide.pages.dev/* https://aiengineerguide.com/:splat 301
 
+# Tools: context window comparison merged into the cost calculator (tools PRD §6)
+/tools/context-window-comparison /tools/llm-cost-calculator/#tab=context 301
+/tools/context-window-comparison/ /tools/llm-cost-calculator/#tab=context 301
+
 # Legacy feed path fix
 /index.xml /feed.xml 301
 

@@ -1,0 +1,43 @@
+{{- /* Old -> new model diff. Presets come from data/retirements.json: each
+       deprecated model whose old and replacement prices are in models.json. */ -}}
+{{- $tab := .Params.tab | default "cost" -}}
+{{- $presets := slice -}}
+{{- range where (where site.Data.retirements.models "page" true) "status" "deprecated" -}}
+  {{- $m := . -}}
+  {{- with $m.replacement -}}{{- with .ids -}}
+    {{- $old := partial "tools/model-price.html" (append $m.ids (slice $m.slug)) -}}
+    {{- $new := partial "tools/model-price.html" . -}}
+    {{- if and $old $new -}}
+      {{- $presets = $presets | append (dict "from" $old.id "to" $new.id "label" (printf "%s → %s" $m.name $new.name) "shutdown" $m.shutdown "slug" $m.slug) -}}
+    {{- end -}}
+  {{- end -}}{{- end -}}
+{{- end -}}
+<div id="df-app" class="calc-panel" role="tabpanel" data-tab="diff"{{ if ne $tab "diff" }} hidden{{ end }}>
+  {{- with $presets }}
+  <div class="tool-row" style="align-items:center">
+    <span class="label" style="font-size:14px">Retiring soon:</span>
+    {{- range first 8 (sort . "shutdown") }}
+    <button type="button" class="df-preset" data-from="{{ .from }}" data-to="{{ .to }}">{{ .label }}</button>
+    {{- end }}
+  </div>
+  {{- end }}
+  <div class="tool-row">
+    <div class="tool-field grow"><label for="df-from">Old model</label><select id="df-from"></select></div>
+    <div class="tool-field grow"><label for="df-to">New model</label><select id="df-to"></select></div>
+  </div>
+  <div class="tool-row">
+    <div class="tool-field"><label for="df-in">Input tokens / request</label><input type="number" id="df-in" min="0" step="100" value="2000" inputmode="numeric"><small>Measured on the old model</small></div>
+    <div class="tool-field"><label for="df-out">Output tokens / request</label><input type="number" id="df-out" min="0" step="100" value="500" inputmode="numeric"></div>
+    <div class="tool-field"><label for="df-rpd">Requests / day</label><input type="number" id="df-rpd" min="0" step="100" value="1000" inputmode="numeric"></div>
+  </div>
+  <div class="tool-table-wrap">
+    <table class="tool-table stack" style="--cols:3" id="df-table">
+      <caption class="visually-hidden">Old versus new model</caption>
+      <thead><tr><th></th><th class="num" id="df-h-old">Old</th><th class="num" id="df-h-new">New</th><th class="num">Change</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p id="df-note" class="tool-note" hidden></p>
+  <div class="tool-actions"><button type="button" id="df-share">Copy share link</button></div>
+  <script type="application/json" id="df-presets">{{ $presets | jsonify | safeJS }}</script>
+</div>

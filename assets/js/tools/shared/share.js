@@ -5,10 +5,13 @@ export function readHash() {
   return Object.fromEntries(params.entries());
 }
 
+// Merge `values` into the hash. Empty values remove their key, so several
+// widgets on one page (e.g. calculator tabs) can share the hash.
 export function writeHash(values) {
-  const params = new URLSearchParams();
+  const params = new URLSearchParams(location.hash.slice(1));
   for (const [k, v] of Object.entries(values)) {
-    if (v !== "" && v !== null && v !== undefined && v !== false) params.set(k, String(v));
+    if (v === "" || v === null || v === undefined || v === false) params.delete(k);
+    else params.set(k, String(v));
   }
   const hash = params.toString();
   history.replaceState(null, "", hash ? `#${hash}` : location.pathname + location.search);

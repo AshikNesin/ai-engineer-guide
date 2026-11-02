@@ -1,7 +1,8 @@
+{{- $tab := .Params.tab | default "cost" -}}
 {{- $models := partial "tools/model-rows-data.html" . -}}
 {{- $retiring := partial "tools/retiring-map.html" . -}}
 {{- $names := dict "openai" "OpenAI" "anthropic" "Anthropic" "google" "Google" "xai" "xAI" "deepseek" "DeepSeek" "mistral" "Mistral" -}}
-<div class="tool-app" id="cw-app">
+<div id="cw-app" class="calc-panel" role="tabpanel" data-tab="context"{{ if ne $tab "context" }} hidden{{ end }}>
   <div class="tool-row">
     <div class="tool-field"><label for="cw-tokens">Will it fit? Tokens</label><input type="number" id="cw-tokens" min="0" step="1000" value="250000" inputmode="numeric"></div>
     <div class="tool-field"><label for="cw-reserve">Reserve for output</label><input type="number" id="cw-reserve" min="0" step="1000" value="8000" inputmode="numeric"></div>

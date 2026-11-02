@@ -256,3 +256,8 @@ a.tool-card:hover { border-color: var(--t-link); }
   .tool-table.stack-md tr.fits { box-shadow: inset 3px 0 0 var(--t-ok); }
   .tool-table.stack-md tr.fits td:first-child { box-shadow: none; }
 }
+
+/* Five calculator tabs: scroll sideways on small screens instead of wrapping. */
+.tool-tabs { overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.tool-tabs::-webkit-scrollbar { display: none; }
+.tool-tabs button { flex: 0 0 auto; white-space: nowrap; }

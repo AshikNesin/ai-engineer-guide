@@ -6,7 +6,9 @@ breadcrumb: "OpenAI"
 app_name: "OpenAI token counter"
 description: "Free OpenAI token counter with exact o200k_base and cl100k_base counts for GPT-5, GPT-4o, GPT-4.1 and o-series models, plus cost. No signup, runs in your browser."
 promise: "Exact OpenAI token counts for GPT-5, GPT-4o, GPT-4.1 and o-series models, with a token-by-token view."
-tool: token-counter
+tool: llm-cost-calculator
+related_tool: token-counter
+tab: tokens
 preselect: openai
 cta_heading: "Get one practical AI engineering note a week"
 howto:

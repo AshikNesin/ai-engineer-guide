@@ -6,7 +6,9 @@ breadcrumb: "Claude"
 app_name: "Claude token counter"
 description: "Free Claude token counter: estimate tokens for Claude 4.7+ and earlier Claude models, with cost and context use per model. No signup, runs in your browser."
 promise: "Estimate Claude tokens for your prompt, including the newer Claude 4.7+ tokenizer, and see what it costs."
-tool: token-counter
+tool: llm-cost-calculator
+related_tool: token-counter
+tab: tokens
 preselect: claude
 cta_heading: "Get one practical AI engineering note a week"
 howto:

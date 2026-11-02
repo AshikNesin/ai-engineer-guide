@@ -68,3 +68,12 @@ test("ics helpers", () => {
   assert.match(ics, /TRIGGER:-P30D\r\n/);
   assert.match(ics, /DTSTAMP:20261102T000000Z\r\n/);
 });
+
+import { tokenFactor, pctChange } from "../shared/diff.js";
+test("old -> new tokenizer factor", () => {
+  assert.deepEqual(tokenFactor("claude-legacy", "claude-new"), { factor: 1.3, known: true });
+  assert.equal(tokenFactor("claude-new", "claude-new").factor, 1);
+  assert.equal(tokenFactor("o200k_base", "claude-new").known, false);
+  assert.equal(pctChange(4, 2), -0.5);
+  assert.equal(pctChange(0, 2), null);
+});

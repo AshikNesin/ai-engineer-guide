@@ -6,7 +6,9 @@ breadcrumb: "Token counter"
 app_name: "Token counter"
 description: "Free online token counter: exact OpenAI token counts (o200k_base, cl100k_base) and Claude and Gemini estimates, with cost per model. No signup, runs in your browser."
 promise: "Paste a prompt and get token counts for OpenAI, Claude and Gemini, plus what it costs on any model."
-tool: token-counter
+tool: llm-cost-calculator
+related_tool: token-counter
+tab: tokens
 layout: tool
 outputs: ["HTML"]
 cta_heading: "Get one practical AI engineering note a week"

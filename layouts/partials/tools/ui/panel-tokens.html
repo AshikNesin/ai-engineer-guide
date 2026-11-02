@@ -1,3 +1,4 @@
+{{- $tab := .Params.tab | default "cost" -}}
 {{- /* Token counter UI. OpenAI counts are exact (gpt-tokenizer, loaded on first
        use); Claude and Gemini are labelled estimates with the documented ratio. */ -}}
 {{- $sample := (resources.Get "tools/token-counter-sample.txt").Content -}}
@@ -16,7 +17,7 @@
 -}}
 {{- $first := where $rows "provider" $pre -}}
 {{- $rest := where $rows "provider" "ne" $pre -}}
-<div class="tool-app" id="tc-app"
+<div id="tc-app" class="calc-panel" role="tabpanel" data-tab="tokens"{{ if ne $tab "tokens" }} hidden{{ end }}
   data-o200k="{{ $o200k.RelPermalink }}" data-cl100k="{{ $cl100k.RelPermalink }}"
   data-sample-o200k="{{ index $sampleCounts "o200k_base" }}" data-sample-cl100k="{{ index $sampleCounts "cl100k_base" }}"
   data-preselect="{{ $pre }}">
@@ -68,5 +69,4 @@
     <button type="button" id="tc-clear">Clear</button>
   </div>
   <p class="tool-stamp" id="tc-status">OpenAI counts for the sample text are pre-computed; the tokenizer (about 1 MB gzipped) loads the first time you edit.</p>
-  {{ partial "tools/models-json.html" . }}
 </div>

@@ -83,7 +83,7 @@
     {{- if and (eq $m.provider "anthropic") (ne $old.tokenizer $new.tokenizer) }}
     <p class="tool-note">Per-token prices don't tell the whole story: {{ $new.name }} uses Anthropic's newer tokenizer, which produces about 30% more tokens for the same text (<a href="https://platform.claude.com/docs/en/build-with-claude/token-counting" rel="noopener">Anthropic token counting docs</a>). Recount with the <a href="{{ "/tools/token-counter/claude/" | relURL }}">Claude token counter</a> before comparing costs.</p>
     {{- end }}
-    <p class="tool-stamp">Prices and limits from <a href="{{ site.Data.models.source }}" rel="noopener">models.dev</a> (checked {{ site.Data.models.checked_at }}). Confirm on the <a href="{{ index site.Data.models.pricing_urls $old.provider }}" rel="noopener">official pricing page</a>. Model the cost for your traffic with the <a href="{{ "/tools/llm-cost-calculator/" | relURL }}">LLM API cost calculator</a>.</p>
+    <p class="tool-stamp">Prices and limits from <a href="{{ site.Data.models.source }}" rel="noopener">models.dev</a> (checked {{ site.Data.models.checked_at }}). Confirm on the <a href="{{ index site.Data.models.pricing_urls $old.provider }}" rel="noopener">official pricing page</a>. Compare the cost for your traffic in the <a href="{{ printf "/tools/llm-cost-calculator/#tab=diff&df=%s&dt=%s" $old.id $new.id | relURL }}">old → new model calculator</a>.</p>
   </section>
   {{- end }}
 

@@ -1,5 +1,5 @@
 {{- /* 4-6 related tools from data/tools.yaml (no TIL links on tool pages). */ -}}
-{{- $slug := .Params.tool | default .Params.related_tool | default "model-retirements" -}}
+{{- $slug := .Params.related_tool | default .Params.tool | default "model-retirements" -}}
 {{- $tools := site.Data.tools.tools -}}
 {{- $me := index (where $tools "slug" $slug) 0 -}}
 {{- $related := slice -}}

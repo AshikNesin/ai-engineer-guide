@@ -1,79 +1,24 @@
-{{- $models := partial "tools/model-rows-data.html" . -}}
-{{- $retiring := partial "tools/retiring-map.html" . -}}
-{{- $names := dict "openai" "OpenAI" "anthropic" "Anthropic" "google" "Google" "xai" "xAI" "deepseek" "DeepSeek" "mistral" "Mistral" -}}
-<div class="tool-app" id="cc-app">
-  <div class="tool-tabs" role="tablist">
-    <button type="button" role="tab" aria-selected="true" aria-controls="cc-tab-cost" id="cc-tab-cost-btn">Monthly cost</button>
-    <button type="button" role="tab" aria-selected="false" aria-controls="cc-tab-cache" id="cc-tab-cache-btn">Prompt caching</button>
+{{- /* LLM API cost calculator with tabs. Token counter, context fit, caching
+       and old->new diff are tabs of one tool (tools PRD section 6). The
+       /tools/token-counter/ pages reuse it with tab: tokens. */ -}}
+{{- $tab := .Params.tab | default "cost" -}}
+{{- $tabs := slice
+  (dict "key" "cost" "label" "Monthly cost")
+  (dict "key" "tokens" "label" "Token count")
+  (dict "key" "context" "label" "Context fit")
+  (dict "key" "cache" "label" "Prompt caching")
+  (dict "key" "diff" "label" "Old → new model")
+-}}
+<div class="tool-app" id="calc-app" data-default-tab="{{ $tab }}">
+  <div class="tool-tabs" role="tablist" aria-label="Calculator views">
+    {{- range $tabs }}
+    <button type="button" role="tab" id="tab-{{ .key }}" data-tab="{{ .key }}" aria-selected="{{ eq .key $tab }}">{{ .label }}</button>
+    {{- end }}
   </div>
-
-  <div id="cc-tab-cost" role="tabpanel" aria-labelledby="cc-tab-cost-btn">
-    <div class="tool-row">
-      <div class="tool-field"><label for="cc-in">Input tokens / request</label><input type="number" id="cc-in" min="0" step="100" value="2000" inputmode="numeric"></div>
-      <div class="tool-field"><label for="cc-out">Output tokens / request</label><input type="number" id="cc-out" min="0" step="100" value="500" inputmode="numeric"></div>
-      <div class="tool-field"><label for="cc-rpd">Requests / day</label><input type="number" id="cc-rpd" min="0" step="100" value="1000" inputmode="numeric"></div>
-      <div class="tool-field"><label for="cc-cache">Cached input (%)</label><input type="number" id="cc-cache" min="0" max="100" step="5" value="0" inputmode="numeric"><small>Share of input served from cache</small></div>
-    </div>
-    <div class="tool-row">
-      <div class="tool-field is-check"><span class="label">Discount</span><label class="tool-check"><input type="checkbox" id="cc-batch"> Batch API (50% off where offered)</label></div>
-      <div class="tool-field"><label for="cc-provider">Provider</label>
-        <select id="cc-provider"><option value="">All providers</option>{{ range $k, $v := $names }}<option value="{{ $k }}">{{ $v }}</option>{{ end }}</select></div>
-      <div class="tool-field grow"><label for="cc-search">Search models</label><input type="search" id="cc-search" placeholder="e.g. sonnet, gpt-5, flash" autocomplete="off"></div>
-      <div class="tool-field only-narrow-md"><label for="cc-sort">Sort by</label>
-        <select id="cc-sort"><option value="month:1">Per month, cheapest first</option><option value="month:-1">Per month, priciest first</option><option value="in:1">Input price</option><option value="out:1">Output price</option><option value="name:1">Name</option></select></div>
-    </div>
-
-    <div class="tool-table-wrap tall">
-    <table class="tool-table stack-md" style="--cols:3" id="cc-table">
-      <caption class="visually-hidden">Monthly LLM API cost by model</caption>
-      <thead><tr>
-        <th><span class="visually-hidden">Pin</span>📌</th>
-        <th><button class="sort" data-key="name">Model</button></th>
-        <th class="num"><button class="sort" data-key="in">Input $/1M</button></th>
-        <th class="num"><button class="sort" data-key="out">Output $/1M</button></th>
-        <th class="num"><button class="sort" data-key="cr">Cached $/1M</button></th>
-        <th class="num"><button class="sort" data-key="req">Per request</button></th>
-        <th class="num"><button class="sort" data-key="month">Per month</button></th>
-      </tr></thead>
-      <tbody>
-      {{- range sort $models "price_per_mtok.input" }}
-        {{- $p := .price_per_mtok }}
-        {{- $r := index $retiring .id }}
-        <tr data-id="{{ .id }}" data-provider="{{ .provider }}" data-search="{{ lower (printf "%s %s %s" .name .id (index $names .provider)) }}"
-            data-in="{{ $p.input }}" data-out="{{ $p.output }}" data-cr="{{ with $p.cache_read }}{{ . }}{{ end }}">
-          <td class="pin"><input type="checkbox" class="cc-pin" aria-label="Pin {{ .name }}"></td>
-          <td class="full"><strong>{{ .name }}</strong> <span class="helptext">{{ index $names .provider }}</span><br><code>{{ .id }}</code>
-            {{- with $r }} <a class="badge soon" href="{{ (site.GetPage (printf "/tools/model-retirements/%s" .slug)).RelPermalink }}">retires {{ (time.AsTime .shutdown).Format "Jan 2, 2006" }}</a>{{ end }}</td>
-          <td class="num" data-label="Input $/1M">${{ lang.FormatNumberCustom 2 $p.input }}</td>
-          <td class="num" data-label="Output $/1M">${{ lang.FormatNumberCustom 2 $p.output }}</td>
-          <td class="num" data-label="Cached $/1M">{{ with $p.cache_read }}${{ lang.FormatNumberCustom 3 . }}{{ else }}—{{ end }}</td>
-          <td class="num" data-cell="req" data-label="Per request">—</td>
-          <td class="num" data-cell="month" data-label="Per month"><strong>—</strong></td>
-        </tr>
-      {{- end }}
-      </tbody>
-    </table>
-    </div>
-    <p id="cc-empty" class="tool-note" hidden>No models match your filter.</p>
-    <div class="tool-actions">
-      <button type="button" id="cc-share">Copy share link</button>
-      <button type="button" id="cc-unpin">Clear pins</button>
-    </div>
-    <p class="tool-stamp">Pin up to 4 models to keep them on top. Months are 30 days. Prices from <a href="{{ site.Data.models.source }}" rel="noopener">models.dev</a>, last data update {{ site.Data.models.checked_at }}; see the official pricing pages below.</p>
-  </div>
-
-  <div id="cc-tab-cache" role="tabpanel" aria-labelledby="cc-tab-cache-btn" hidden>
-    <div class="tool-row">
-      <div class="tool-field grow"><label for="pc-model">Model</label><select id="pc-model"></select></div>
-      <div class="tool-field"><label for="pc-ttl">Cache type</label>
-        <select id="pc-ttl"><option value="default">Default</option><option value="1h">Anthropic 1-hour (2x write)</option></select></div>
-    </div>
-    <div class="tool-row">
-      <div class="tool-field"><label for="pc-prefix">Cached prefix (tokens)</label><input type="number" id="pc-prefix" min="0" step="1000" value="20000" inputmode="numeric"><small>System prompt, tools, documents</small></div>
-      <div class="tool-field"><label for="pc-reads">Cache hits per write</label><input type="number" id="pc-reads" min="0" step="1" value="10" inputmode="numeric"><small>Requests that reuse it before it expires</small></div>
-      <div class="tool-field"><label for="pc-writes">Cache writes / day</label><input type="number" id="pc-writes" min="0" step="10" value="100" inputmode="numeric"></div>
-    </div>
-    <div id="pc-result" class="tool-note" aria-live="polite"></div>
-  </div>
+  {{ partial "tools/ui/panel-cost.html" . }}
+  {{ partial "tools/ui/panel-tokens.html" . }}
+  {{ partial "tools/ui/panel-context.html" . }}
+  {{ partial "tools/ui/panel-cache.html" . }}
+  {{ partial "tools/ui/panel-diff.html" . }}
   {{ partial "tools/models-json.html" . }}
 </div>

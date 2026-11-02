@@ -6,7 +6,9 @@ breadcrumb: "Gemini"
 app_name: "Gemini token counter"
 description: "Free Gemini token counter: estimate Gemini API tokens for your prompt using Google's 4-characters-per-token rule, with cost and context use. No signup, runs in your browser."
 promise: "Estimate Gemini API tokens for your prompt and see the cost and context window use per model."
-tool: token-counter
+tool: llm-cost-calculator
+related_tool: token-counter
+tab: tokens
 preselect: gemini
 cta_heading: "Get one practical AI engineering note a week"
 howto:
