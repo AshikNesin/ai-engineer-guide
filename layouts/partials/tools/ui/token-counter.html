@@ -29,16 +29,16 @@
   <p class="tool-stamp" id="tc-stats" aria-live="polite">{{ $chars }} characters · {{ countwords $sample }} words</p>
 
   <div class="tool-table-wrap">
-  <table class="tool-table" id="tc-results">
+  <table class="tool-table stack" style="--cols:2" id="tc-results">
     <caption class="visually-hidden">Token counts by tokenizer</caption>
     <thead><tr><th>Tokenizer</th><th class="num">Tokens</th><th>Type</th><th>Used by</th></tr></thead>
     <tbody>
     {{- range $first | append $rest }}
       <tr data-key="{{ .key }}"{{ if eq .provider $pre }} class="is-pinned"{{ end }}>
-        <td><strong>{{ .name }}</strong></td>
-        <td class="num"><strong data-count>{{ lang.FormatNumberCustom 0 .count }}</strong></td>
-        <td>{{ if .exact }}<span class="badge exact">exact</span>{{ else }}<span class="badge est">estimate</span>{{ end }} <span class="helptext" data-how>{{ .how }}</span></td>
-        <td class="helptext">{{ .used }}</td>
+        <td data-label="Tokenizer"><strong>{{ .name }}</strong></td>
+        <td class="num" data-label="Tokens"><strong data-count>{{ lang.FormatNumberCustom 0 .count }}</strong></td>
+        <td class="full">{{ if .exact }}<span class="badge exact">exact</span>{{ else }}<span class="badge est">estimate</span>{{ end }} <span class="helptext" data-how>{{ .how }}</span></td>
+        <td class="helptext full" data-label="Used by">{{ .used }}</td>
       </tr>
     {{- end }}
     </tbody>

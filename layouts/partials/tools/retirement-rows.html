@@ -4,10 +4,10 @@
 {{- $m := . -}}
 {{- $page := site.GetPage (printf "/tools/model-retirements/%s" $m.slug) -}}
 <tr data-provider="{{ $m.provider }}" data-status="{{ $m.status }}" data-search="{{ lower (printf "%s %s %s" $m.name (delimit $m.ids " ") $m.slug) }}">
-  <td class="num">{{ with $m.shutdown }}<time datetime="{{ . }}">{{ (time.AsTime .).Format "Jan 2, 2006" }}</time>{{ else }}TBA{{ end }}</td>
-  <td>{{ partial "tools/days-left.html" $m }}</td>
-  <td>{{ with $page }}<a href="{{ .RelPermalink }}">{{ $m.name }}</a>{{ else }}{{ $m.name }}{{ end }}<br><code>{{ index $m.ids 0 }}</code>{{ if gt (len $m.ids) 1 }} <span class="helptext">+{{ sub (len $m.ids) 1 }}</span>{{ end }}</td>
-  <td>{{ index $names $m.provider }}</td>
-  <td>{{ with $m.replacement }}{{ with .slug }}{{ with site.GetPage (printf "/tools/model-retirements/%s" .) }}<a href="{{ .RelPermalink }}">{{ end }}{{ end }}{{ .text }}{{ with .slug }}{{ with site.GetPage (printf "/tools/model-retirements/%s" .) }}</a>{{ end }}{{ end }}{{ else }}—{{ end }}</td>
+  <td class="num" data-label="Shutdown">{{ with $m.shutdown }}<time datetime="{{ . }}">{{ (time.AsTime .).Format "Jan 2, 2006" }}</time>{{ else }}TBA{{ end }}</td>
+  <td data-label="Days left">{{ partial "tools/days-left.html" $m }}</td>
+  <td class="full" data-label="Model">{{ with $page }}<a href="{{ .RelPermalink }}">{{ $m.name }}</a>{{ else }}{{ $m.name }}{{ end }}<br><code>{{ index $m.ids 0 }}</code>{{ if gt (len $m.ids) 1 }} <span class="helptext">+{{ sub (len $m.ids) 1 }}</span>{{ end }}</td>
+  <td data-label="Provider">{{ index $names $m.provider }}</td>
+  <td data-label="Replacement">{{ with $m.replacement }}{{ with .slug }}{{ with site.GetPage (printf "/tools/model-retirements/%s" .) }}<a href="{{ .RelPermalink }}">{{ end }}{{ end }}{{ .text }}{{ with .slug }}{{ with site.GetPage (printf "/tools/model-retirements/%s" .) }}</a>{{ end }}{{ end }}{{ else }}—{{ end }}</td>
 </tr>
 {{- end -}}

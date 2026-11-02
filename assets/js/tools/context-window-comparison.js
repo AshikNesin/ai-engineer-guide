@@ -68,3 +68,7 @@ $("cw-share").addEventListener("click", (e) => { copyText(location.href, e.curre
 
 apply();
 sorter.sortBy("ctx", -1);
+$("cw-sort").addEventListener("change", (e) => {
+  const [key, dir] = e.target.value.split(":");
+  sorter.sortBy(key, Number(dir));
+});

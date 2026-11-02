@@ -99,6 +99,11 @@ $("cc-unpin").addEventListener("click", () => { pinned.clear(); syncPins(); comp
 syncPins();
 compute();
 sorter.sortBy("month", 1);
+// Sort control for narrow screens, where the table header is hidden.
+$("cc-sort").addEventListener("change", (e) => {
+  const [key, dir] = e.target.value.split(":");
+  sorter.sortBy(key, Number(dir));
+});
 
 // ---- tabs -------------------------------------------------------------------
 const tabs = [["cc-tab-cost-btn", "cc-tab-cost"], ["cc-tab-cache-btn", "cc-tab-cache"]];

@@ -77,6 +77,11 @@ body.tool-page { max-width: 960px; }
 .tool-field.grow { flex: 3 1 260px; }
 .tool-field small { color: var(--t-muted); font-size: 12px; }
 .tool-check { display: inline-flex; gap: .35rem; align-items: center; font-size: 14px; }
+/* A checkbox placed in a row of labelled fields: line it up with the inputs. */
+.tool-field.is-check { flex: 0 0 auto; min-width: 0; }
+.tool-field.is-check .tool-check { min-height: 2.35rem; white-space: nowrap; }
+.tool-field .label { font-size: 14px; color: var(--t-strong); }
+.only-narrow, .only-narrow-md { display: none !important; }
 
 .tool-btn, .tool-app button {
   font: inherit;
@@ -124,7 +129,7 @@ body.tool-page { max-width: 960px; }
 .tool-table tr.is-hidden { display: none; }
 .tool-table tr.fits td:first-child { box-shadow: inset 3px 0 0 var(--t-ok); }
 .tool-table tr.no-fit { opacity: .55; }
-.tool-table code { font-size: 12px; white-space: nowrap; }
+.tool-table code { font-size: 12px; overflow-wrap: anywhere; word-break: normal; }
 
 /* Badges */
 .badge {
@@ -200,3 +205,54 @@ a.tool-card:hover { border-color: var(--t-link); }
 /* Long model tables scroll inside the tool box, header stays visible. */
 .tool-table-wrap.tall { max-height: 560px; overflow-y: auto; border: 1px solid var(--t-border); border-radius: 6px; }
 .tool-table-wrap.tall .tool-table th { z-index: 1; }
+
+/* ---- Narrow screens: tables become stacked cards --------------------------
+   Cells carry data-label; td.full spans the card; td.pin floats top-right. */
+@media (max-width: 640px) {
+  .only-narrow { display: flex !important; }
+  .tool-table.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tool-table.stack, .tool-table.stack tbody { display: block; width: 100%; }
+  .tool-table.stack tr {
+    display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); gap: .35rem .75rem;
+    position: relative; padding: .7rem .6rem; border-bottom: 1px solid var(--t-border);
+  }
+  .tool-table.stack tr.is-hidden { display: none; }
+  .tool-table.stack td { display: block; border: 0; padding: 0; text-align: left; min-width: 0; }
+  .tool-table.stack td.num { text-align: left; white-space: normal; }
+  .tool-table.stack td.full { grid-column: 1 / -1; }
+  .tool-table.stack td[data-label]::before {
+    content: attr(data-label); display: block; font-size: 11px; line-height: 1.3;
+    color: var(--t-muted); text-transform: uppercase; letter-spacing: .03em; margin-bottom: 1px;
+  }
+  .tool-table.stack .badge { white-space: normal; border-radius: 6px; }
+  .tool-table.stack td.pin { position: absolute; top: .7rem; right: .6rem; }
+  .tool-table.stack td.pin + td { padding-right: 2rem; }
+  .tool-table.stack tr.fits { box-shadow: inset 3px 0 0 var(--t-ok); }
+  .tool-table.stack tr.fits td:first-child { box-shadow: none; }
+  .tool-table-wrap.tall { max-height: 70vh; }
+  .tool-row .tool-field.is-check { flex-basis: 100%; }
+  .tool-row .tool-field.is-check .tool-check { min-height: 0; }
+}
+
+@media (max-width: 800px) {
+  .only-narrow-md { display: flex !important; }
+  .tool-table-wrap.tall { max-height: 70vh; }
+  .tool-table.stack-md thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tool-table.stack-md, .tool-table.stack-md tbody { display: block; width: 100%; }
+  .tool-table.stack-md tr {
+    display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); gap: .35rem .75rem;
+    position: relative; padding: .7rem .6rem; border-bottom: 1px solid var(--t-border);
+  }
+  .tool-table.stack-md tr.is-hidden { display: none; }
+  .tool-table.stack-md td { display: block; border: 0; padding: 0; text-align: left; min-width: 0; }
+  .tool-table.stack-md td.num { text-align: left; white-space: normal; }
+  .tool-table.stack-md td.full { grid-column: 1 / -1; }
+  .tool-table.stack-md td[data-label]::before {
+    content: attr(data-label); display: block; font-size: 11px; line-height: 1.3;
+    color: var(--t-muted); text-transform: uppercase; letter-spacing: .03em; margin-bottom: 1px;
+  }
+  .tool-table.stack-md td.pin { position: absolute; top: .7rem; right: .6rem; }
+  .tool-table.stack-md td.pin + td { padding-right: 2rem; }
+  .tool-table.stack-md tr.fits { box-shadow: inset 3px 0 0 var(--t-ok); }
+  .tool-table.stack-md tr.fits td:first-child { box-shadow: none; }
+}

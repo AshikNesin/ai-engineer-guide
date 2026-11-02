@@ -1,6 +1,6 @@
 {{- /* Table of retirements. Pass dict "models" slice "id" string "caption" string. */ -}}
 <div class="tool-table-wrap">
-<table class="tool-table" id="{{ .id }}">
+<table class="tool-table stack" style="--cols:2" id="{{ .id }}">
   <caption class="visually-hidden">{{ .caption }}</caption>
   <thead><tr><th class="num">Shutdown</th><th>Days left</th><th>Model</th><th>Provider</th><th>Replacement</th></tr></thead>
   <tbody>{{ partial "tools/retirement-rows.html" .models }}</tbody>

@@ -8,6 +8,10 @@
     <div class="tool-field"><label for="cw-provider">Provider</label>
       <select id="cw-provider"><option value="">All providers</option>{{ range $k, $v := $names }}<option value="{{ $k }}">{{ $v }}</option>{{ end }}</select></div>
   </div>
+  <div class="tool-row only-narrow-md">
+    <div class="tool-field"><label for="cw-sort">Sort by</label>
+      <select id="cw-sort"><option value="ctx:-1">Context window, largest first</option><option value="maxout:-1">Max output, largest first</option><option value="in:1">Input price, cheapest first</option><option value="released:-1">Newest first</option><option value="name:1">Name</option></select></div>
+  </div>
   <details id="cw-paste-box">
     <summary>Or paste text to estimate its tokens</summary>
     <textarea id="cw-paste" rows="5" spellcheck="false" placeholder="Paste a document, codebase dump or transcript"></textarea>
@@ -16,7 +20,7 @@
   <p id="cw-summary" class="tool-note" aria-live="polite"></p>
 
   <div class="tool-table-wrap tall">
-  <table class="tool-table" id="cw-table">
+  <table class="tool-table stack-md" style="--cols:3" id="cw-table">
     <caption class="visually-hidden">Context window and max output by model</caption>
     <thead><tr>
       <th><button class="sort" data-key="name">Model</button></th>
@@ -33,14 +37,14 @@
       <tr data-id="{{ .id }}" data-provider="{{ .provider }}" data-tokenizer="{{ .tokenizer }}"
           data-ctx="{{ .context }}" data-maxin="{{ with .max_input }}{{ . }}{{ end }}" data-maxout="{{ with .max_output }}{{ . }}{{ end }}"
           data-in="{{ .price_per_mtok.input }}" data-out="{{ .price_per_mtok.output }}" data-released="{{ .released }}">
-        <td><strong>{{ .name }}</strong> <span class="helptext">{{ index $names .provider }}</span><br><code>{{ .id }}</code>
+        <td class="full"><strong>{{ .name }}</strong> <span class="helptext">{{ index $names .provider }}</span><br><code>{{ .id }}</code>
           {{- with $r }} <a class="badge soon" href="{{ (site.GetPage (printf "/tools/model-retirements/%s" .slug)).RelPermalink }}">retires {{ (time.AsTime .shutdown).Format "Jan 2, 2006" }}</a>{{ end }}</td>
-        <td class="num">{{ lang.FormatNumberCustom 0 .context }}</td>
-        <td class="num">{{ with .max_input }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
-        <td class="num">{{ with .max_output }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
-        <td class="num">${{ lang.FormatNumberCustom 2 .price_per_mtok.input }}</td>
-        <td class="num">${{ lang.FormatNumberCustom 2 .price_per_mtok.output }}</td>
-        <td class="num">{{ .released }}</td>
+        <td class="num" data-label="Context">{{ lang.FormatNumberCustom 0 .context }}</td>
+        <td class="num" data-label="Max input">{{ with .max_input }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
+        <td class="num" data-label="Max output">{{ with .max_output }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
+        <td class="num" data-label="Input $/1M">${{ lang.FormatNumberCustom 2 .price_per_mtok.input }}</td>
+        <td class="num" data-label="Output $/1M">${{ lang.FormatNumberCustom 2 .price_per_mtok.output }}</td>
+        <td class="num" data-label="Released">{{ .released }}</td>
       </tr>
     {{- end }}
     </tbody>

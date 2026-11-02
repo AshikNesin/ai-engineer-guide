@@ -60,7 +60,7 @@
   {{- if and $old $new }}
   <section class="tool-section" id="price-diff">
     <h2>{{ $m.name }} vs {{ $new.name }}: price and limits</h2>
-    <div class="tool-table-wrap"><table class="tool-table">
+    <div class="tool-table-wrap"><table class="tool-table stack" style="--cols:3">
       <thead><tr><th></th><th class="num">{{ $old.name }}</th><th class="num">{{ $new.name }}</th><th class="num">Change</th></tr></thead>
       <tbody>
       {{- $rows := slice
@@ -71,11 +71,11 @@
           (dict "label" "Cache read, $ per 1M tokens" "a" $old.price_per_mtok.cache_read "b" $new.price_per_mtok.cache_read "money" true)
       }}
       {{- range $row := $rows }}
-        <tr><td>{{ $row.label }}</td>
-          {{- range slice $row.a $row.b }}
-          <td class="num">{{ with . }}{{ if $row.money }}${{ lang.FormatNumberCustom 2 . }}{{ else }}{{ lang.FormatNumberCustom 0 . }}{{ end }}{{ else }}—{{ end }}</td>
+        <tr><td class="full"><strong>{{ $row.label }}</strong></td>
+          {{- range $i, $v := slice $row.a $row.b }}
+          <td class="num" data-label="{{ cond (eq $i 0) $old.name $new.name }}">{{ with $v }}{{ if $row.money }}${{ lang.FormatNumberCustom 2 . }}{{ else }}{{ lang.FormatNumberCustom 0 . }}{{ end }}{{ else }}—{{ end }}</td>
           {{- end }}
-          <td class="num">{{ if and $row.a $row.b }}{{ $pct := mul (div (sub (float $row.b) (float $row.a)) (float $row.a)) 100 }}{{ if gt $pct 0.0 }}+{{ end }}{{ lang.FormatNumberCustom 0 $pct }}%{{ else }}—{{ end }}</td>
+          <td class="num" data-label="Change">{{ if and $row.a $row.b }}{{ $pct := mul (div (sub (float $row.b) (float $row.a)) (float $row.a)) 100 }}{{ if gt $pct 0.0 }}+{{ end }}{{ lang.FormatNumberCustom 0 $pct }}%{{ else }}—{{ end }}</td>
         </tr>
       {{- end }}
       </tbody>
