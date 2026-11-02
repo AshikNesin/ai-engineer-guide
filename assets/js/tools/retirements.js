@@ -1,11 +1,11 @@
 // Model retirement calendar, provider and per-model pages.
 // Everything is server-rendered; this script only refreshes "days left" in the
 // visitor's timezone, filters the table and builds single-event .ics files.
-import { daysUntil } from "./lib/format.js";
-import { readHash, writeHash } from "./lib/share.js";
-import { copyText } from "./lib/copy.js";
-import { singleEventIcs } from "./lib/ics.js";
-import { track, trackUsedOnce } from "./lib/track.js";
+import { daysUntil } from "./shared/format.js";
+import { readHash, writeHash } from "./shared/share.js";
+import { copyText } from "./shared/copy.js";
+import { singleEventIcs } from "./shared/ics.js";
+import { track, trackUsedOnce } from "./shared/track.js";
 
 const TOOL = "model-retirements";
 
