@@ -117,6 +117,17 @@
     {{- end }}
   </section>
 
+  {{- /* Act on the code: lint requests against the replacement, scan for IDs. */ -}}
+  {{- $lintTarget := "" -}}
+  {{- with $m.replacement }}{{ with .ids }}{{ $id := index . 0 }}{{ if where site.Data.breaking_changes.targets "id" $id }}{{ $lintTarget = $id }}{{ end }}{{ end }}{{ end }}
+  <section class="tool-section" id="check-your-code">
+    <h2>Check your code before {{ with $m.shutdown }}{{ (time.AsTime .).Format "Jan 2" }}{{ else }}the shutdown{{ end }}</h2>
+    <div class="tool-cards">
+      <a class="tool-card" href="{{ printf "/tools/model-migration-linter/%s" (cond (ne $lintTarget "") (printf "#target=%s" $lintTarget) "") | relURL }}"><strong>Lint a request{{ with $lintTarget }} for {{ . }}{{ end }}</strong><span>Paste an API request and see every field that will return a 400 on the new model, with a fixed request.</span></a>
+      <a class="tool-card" href="{{ "/tools/model-id-scanner/" | relURL }}"><strong>Find every {{ index $m.ids 0 }} in your code</strong><span>Paste code, config or an n8n workflow to list each retiring model ID by line.</span></a>
+    </div>
+  </section>
+
   {{- /* Other models retiring on the same date (good for teams with several). */ -}}
   {{- with $m.shutdown }}
     {{- $same := where (where (where $data.models "page" true) "shutdown" .) "slug" "ne" $m.slug }}

@@ -1,0 +1,77 @@
+{{- /* Structured output schema checker + tool definition converter.
+       Rules and formats: data/schema_rules.json. */ -}}
+{{- $sr := site.Data.schema_rules -}}
+{{- $sample := `{
+  "type": "object",
+  "properties": {
+    "customer_id": { "type": "string", "pattern": "^AC-\\d+$" },
+    "priority": { "type": "string", "enum": ["low", "medium", "high"] },
+    "amount": { "type": "number", "minimum": 0 },
+    "tags": { "type": "array", "items": { "type": "string" }, "maxItems": 5 },
+    "note": { "type": "string", "maxLength": 280 }
+  },
+  "required": ["customer_id", "priority"]
+}` -}}
+{{- $sampleOutput := `{"customer_id": "AC-10293", "priority": "urgent", "amount": 42.5, "tags": ["billing"]}` -}}
+{{- $sampleTools := `{
+  "name": "get_invoice",
+  "description": "Fetch an invoice by ID",
+  "input_schema": {
+    "type": "object",
+    "properties": { "id": { "type": "string" } },
+    "required": ["id"],
+    "additionalProperties": false
+  },
+  "strict": true,
+  "cache_control": { "type": "ephemeral" }
+}` -}}
+<div class="tool-app" id="sx-app">
+  <div class="tool-tabs" role="tablist" aria-label="Schema tools">
+    <button type="button" role="tab" id="sx-tab-check" data-tab="check" aria-selected="true">Check a schema</button>
+    <button type="button" role="tab" id="sx-tab-convert" data-tab="convert" aria-selected="false">Convert tool definitions</button>
+  </div>
+
+  <div class="sx-panel" data-tab="check" role="tabpanel">
+    <div class="tool-row">
+      <div class="tool-field grow"><label for="sx-schema">JSON Schema, response_format or tool definition</label>
+        <textarea id="sx-schema" rows="12" spellcheck="false">{{ $sample }}</textarea></div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-field grow"><label for="sx-target">Target</label>
+        <select id="sx-target">{{ range $sr.targets }}<option value="{{ .id }}">{{ .label }}</option>{{ end }}</select></div>
+    </div>
+    <p id="sx-summary" class="tool-note" aria-live="polite">Checking…</p>
+    <ol id="sx-findings" class="ml-findings"></ol>
+    <details id="sx-fixed-box" open>
+      <summary>Auto-fixed schema</summary>
+      <pre><code id="sx-fixed"></code></pre>
+      <p class="tool-stamp" id="sx-fixed-note"></p>
+    </details>
+    <div class="tool-actions"><button type="button" class="primary" id="sx-copy-fixed">Copy fixed schema</button></div>
+
+    <h3 style="font-size:1rem;margin-top:1.25rem">Validate a model output against this schema</h3>
+    <div class="tool-field grow">
+      <label for="sx-output">Model output (JSON)</label>
+      <textarea id="sx-output" rows="4" spellcheck="false">{{ $sampleOutput }}</textarea>
+    </div>
+    <p id="sx-valid" class="tool-note" aria-live="polite"></p>
+  </div>
+
+  <div class="sx-panel" data-tab="convert" role="tabpanel" hidden>
+    <div class="tool-row">
+      <div class="tool-field grow"><label for="cv-input">Tool definition(s): one tool, an array, or a request with "tools"</label>
+        <textarea id="cv-input" rows="12" spellcheck="false">{{ $sampleTools }}</textarea></div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-field grow"><label for="cv-to">Convert to</label>
+        <select id="cv-to">{{ range $sr.formats }}<option value="{{ .id }}"{{ if eq .id "openai-responses" }} selected{{ end }}>{{ .label }}</option>{{ end }}</select></div>
+    </div>
+    <p id="cv-summary" class="tool-note" aria-live="polite"></p>
+    <pre><code id="cv-output"></code></pre>
+    <div class="tool-actions"><button type="button" class="primary" id="cv-copy">Copy converted tools</button></div>
+    <p class="tool-stamp">Formats: {{ range $i, $f := $sr.formats }}{{ if $i }} · {{ end }}<a href="{{ $f.docs }}" rel="noopener">{{ $f.label }}</a>{{ end }} (checked {{ $sr.checked }}). Gemini's older <code>functionDeclarations</code> format is accepted as input.</p>
+  </div>
+
+  <p class="tool-stamp">{{ len $sr.rules }} rules from the official OpenAI, Anthropic and Google docs, last checked {{ $sr.checked }}.</p>
+  <script type="application/json" id="sx-rules">{{ $sr | jsonify | safeJS }}</script>
+</div>

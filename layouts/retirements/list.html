@@ -56,6 +56,15 @@
   </div>
 
   <section class="tool-section">
+    <h2>Act on a retirement</h2>
+    <div class="tool-cards">
+      <a class="tool-card" href="{{ "/tools/model-id-scanner/" | relURL }}"><strong>Deprecated model-ID scanner</strong><span>Paste code or a workflow export to find every retiring model ID it uses.</span></a>
+      <a class="tool-card" href="{{ "/tools/model-migration-linter/" | relURL }}"><strong>Request migration linter</strong><span>See which request fields return a 400 on the replacement model.</span></a>
+      <a class="tool-card" href="{{ "/tools/llm-cost-calculator/#tab=diff" | relURL }}"><strong>Old → new model cost</strong><span>Compare price, limits and token counts before you switch.</span></a>
+    </div>
+  </section>
+
+  <section class="tool-section">
     <h2>By provider</h2>
     <ul>
       <li><a href="{{ "/tools/model-retirements/openai/" | relURL }}">OpenAI model deprecations</a></li>
