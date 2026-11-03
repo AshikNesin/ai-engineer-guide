@@ -1,0 +1,332 @@
+{
+  "_comment": "Hand-maintained rules for /tools/structured-output-schema-checker/. Each rule quotes its official source. Tested by assets/js/tools/tests/schema.test.mjs.",
+  "checked": "2026-11-02",
+  "targets": [
+    {
+      "id": "openai",
+      "label": "OpenAI strict mode",
+      "docs": "https://developers.openai.com/api/docs/guides/structured-outputs"
+    },
+    {
+      "id": "anthropic",
+      "label": "Claude strict tools / outputs",
+      "docs": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini structured output",
+      "docs": "https://ai.google.dev/gemini-api/docs/structured-output"
+    }
+  ],
+  "formats": [
+    {
+      "id": "openai-responses",
+      "label": "OpenAI Responses tool",
+      "docs": "https://developers.openai.com/api/docs/guides/function-calling",
+      "quote": "{\"type\": \"function\", \"name\": …, \"description\": …, \"parameters\": {…}, \"strict\": true}"
+    },
+    {
+      "id": "openai-chat",
+      "label": "OpenAI Chat Completions tool",
+      "docs": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create",
+      "quote": "ChatCompletionFunctionTool object { function, type }"
+    },
+    {
+      "id": "anthropic",
+      "label": "Anthropic Messages tool",
+      "docs": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+      "quote": "`input_schema`: A JSON Schema object defining the expected parameters for the tool."
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini API function (Interactions)",
+      "docs": "https://ai.google.dev/gemini-api/docs/function-calling",
+      "quote": "\"tools\": [{\"type\": \"function\", \"name\": …, \"description\": …, \"parameters\": {…}}]"
+    },
+    {
+      "id": "mcp",
+      "label": "MCP tools/list entry (2026-07-28)",
+      "docs": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "quote": "`inputSchema`: JSON Schema defining expected parameters"
+    }
+  ],
+  "rules": [
+    {
+      "id": "openai-root-object",
+      "target": "openai",
+      "check": "rootObject",
+      "severity": "error",
+      "autofix": false,
+      "title": "The root must be an object and can't use anyOf",
+      "source": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "quote": "Note that the root level object of a schema must be an object, and not use `anyOf`."
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-additional-properties",
+      "target": "openai",
+      "check": "additionalPropertiesFalse",
+      "severity": "error",
+      "autofix": true,
+      "title": "Every object needs additionalProperties: false",
+      "source": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "quote": "Structured Outputs only supports generating specified keys / values, so we require developers to set `additionalProperties: false` to opt into Structured Outputs."
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-all-required",
+      "target": "openai",
+      "check": "allRequired",
+      "severity": "error",
+      "autofix": true,
+      "title": "Every property must be listed in required",
+      "detail": "To keep a field optional, make its type nullable (for example `[\"string\", \"null\"]`). The auto-fix does this.",
+      "source": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "quote": "To use Structured Outputs, all fields or function parameters must be specified as `required`."
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-unsupported-composition",
+      "target": "openai",
+      "check": "openaiComposition",
+      "severity": "error",
+      "autofix": false,
+      "title": "allOf, not, if/then/else and dependent* aren't supported",
+      "source": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "quote": "**Composition:** `allOf`, `not`, `dependentRequired`, `dependentSchemas`, `if`, `then`, `else`"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-size-limits",
+      "target": "openai",
+      "check": "openaiLimits",
+      "severity": "error",
+      "autofix": false,
+      "title": "Size limits: 5,000 properties, 10 levels of nesting, 1,000 enum values",
+      "source": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "quote": "A schema may have up to 5000 object properties total, with up to 10 levels of nesting."
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "openai-string-format",
+      "target": "openai",
+      "check": "openaiFormat",
+      "severity": "warning",
+      "autofix": false,
+      "title": "String format isn't in OpenAI's supported list",
+      "source": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "quote": "`format` — Predefined formats for strings. Currently supported: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-additional-properties",
+      "target": "anthropic",
+      "check": "additionalPropertiesFalse",
+      "severity": "error",
+      "autofix": true,
+      "title": "Every object needs additionalProperties: false",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "`required` and `additionalProperties` (must be set to `false` for objects)"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-numeric-constraints",
+      "target": "anthropic",
+      "check": "anthropicNumeric",
+      "severity": "error",
+      "autofix": true,
+      "title": "minimum, maximum and multipleOf aren't supported",
+      "detail": "The auto-fix moves each constraint into the description, as Anthropic's SDK helpers do, so validate the value in your code.",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "Numerical constraints (such as `minimum`, `maximum`, `multipleOf`)"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-string-length",
+      "target": "anthropic",
+      "check": "anthropicStringLength",
+      "severity": "error",
+      "autofix": true,
+      "title": "minLength and maxLength aren't supported",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "String constraints (`minLength`, `maxLength`)"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-array-constraints",
+      "target": "anthropic",
+      "check": "anthropicArray",
+      "severity": "error",
+      "autofix": true,
+      "title": "Only minItems of 0 or 1 is supported on arrays",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "Array constraints beyond `minItems` of 0 or 1"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-recursive",
+      "target": "anthropic",
+      "check": "recursive",
+      "severity": "error",
+      "autofix": false,
+      "title": "Recursive schemas aren't supported",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "Recursive schemas"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-external-ref",
+      "target": "anthropic",
+      "check": "externalRef",
+      "severity": "error",
+      "autofix": false,
+      "title": "External $ref isn't supported",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "External `$ref` (for example, `'$ref': 'http://...'`)"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-complex-enum",
+      "target": "anthropic",
+      "check": "complexEnum",
+      "severity": "error",
+      "autofix": false,
+      "title": "Enums can only hold strings, numbers, booleans or null",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "`enum` (strings, numbers, booleans, or nulls only, no complex types)"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-allof-ref",
+      "target": "anthropic",
+      "check": "allOfRef",
+      "severity": "error",
+      "autofix": false,
+      "title": "allOf with $ref isn't supported",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "`anyOf` and `allOf` (with limitations: `allOf` with `$ref` not supported)"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-optional-limit",
+      "target": "anthropic",
+      "check": "anthropicOptional",
+      "severity": "error",
+      "autofix": false,
+      "title": "At most 24 optional parameters across all strict schemas in a request",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#schema-complexity-limits",
+        "quote": "Total optional parameters across all strict tool schemas and JSON output schemas. Each parameter not listed in `required` counts toward this limit."
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-union-limit",
+      "target": "anthropic",
+      "check": "anthropicUnions",
+      "severity": "error",
+      "autofix": false,
+      "title": "At most 16 parameters with union types across all strict schemas",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#schema-complexity-limits",
+        "quote": "Total parameters that use `anyOf` or type arrays (for example, `\"type\": [\"string\", \"null\"]`) across all strict schemas."
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-string-format",
+      "target": "anthropic",
+      "check": "anthropicFormat",
+      "severity": "warning",
+      "autofix": false,
+      "title": "String format isn't in Anthropic's supported list",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "String formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `uri`, `ipv4`, `ipv6`, `uuid`"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "anthropic-regex",
+      "target": "anthropic",
+      "check": "anthropicRegex",
+      "severity": "error",
+      "autofix": false,
+      "title": "pattern uses an unsupported regex feature",
+      "source": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs#json-schema-limitations",
+        "quote": "Backreferences to groups (for example, `\\1`, `\\2`) … Lookahead/lookbehind assertions … Word boundaries: `\\b`, `\\B`"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "gemini-ignored-constraints",
+      "target": "gemini",
+      "check": "geminiIgnored",
+      "severity": "warning",
+      "autofix": true,
+      "title": "Constraint is ignored by Gemini",
+      "detail": "The API strips it instead of returning an error, so validate it in your code. The auto-fix removes it, so the schema only lists constraints Gemini enforces.",
+      "source": {
+        "url": "https://ai.google.dev/gemini-api/docs/structured-output#limitations",
+        "quote": "`minLength`, `maxLength`, `minProperties`, `maxProperties`, `uniqueItems`, `contains`, `minContains`, and `maxContains` (and their snake_case variants) are not enforced by the constrained decoding grammar engine."
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "gemini-unsupported-type",
+      "target": "gemini",
+      "check": "geminiType",
+      "severity": "error",
+      "autofix": false,
+      "title": "type isn't one Gemini supports",
+      "source": {
+        "url": "https://ai.google.dev/gemini-api/docs/structured-output#json-schema-support",
+        "quote": "The following values of `type` are supported: string, number, integer, boolean, object, array, null"
+      },
+      "checked": "2026-11-02"
+    },
+    {
+      "id": "gemini-complexity",
+      "target": "gemini",
+      "check": "geminiComplexity",
+      "severity": "warning",
+      "autofix": false,
+      "title": "Large enum, anyOf or nested array limit (common cause of 400s)",
+      "detail": "Google doesn't publish exact limits. We flag enums over 100 values, anyOf over 10 alternatives and maxItems over 100 on nested arrays.",
+      "source": {
+        "url": "https://ai.google.dev/gemini-api/docs/structured-output#limitations",
+        "quote": "Common causes are large `maxItems` limits (especially on nested arrays), very long property or enum names, enums with many values, long runs of optional properties, `anyOf` with many alternatives, and numeric `minimum`/`maximum` bounds."
+      },
+      "checked": "2026-11-02"
+    }
+  ]
+}

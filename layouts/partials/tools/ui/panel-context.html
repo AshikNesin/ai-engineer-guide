@@ -1,0 +1,56 @@
+{{- $tab := .Params.tab | default "cost" -}}
+{{- $models := partial "tools/model-rows-data.html" . -}}
+{{- $retiring := partial "tools/retiring-map.html" . -}}
+{{- $names := dict "openai" "OpenAI" "anthropic" "Anthropic" "google" "Google" "xai" "xAI" "deepseek" "DeepSeek" "mistral" "Mistral" -}}
+<div id="cw-app" class="calc-panel" role="tabpanel" data-tab="context"{{ if ne $tab "context" }} hidden{{ end }}>
+  <div class="tool-row">
+    <div class="tool-field"><label for="cw-tokens">Will it fit? Tokens</label><input type="number" id="cw-tokens" min="0" step="1000" value="250000" inputmode="numeric"></div>
+    <div class="tool-field"><label for="cw-reserve">Reserve for output</label><input type="number" id="cw-reserve" min="0" step="1000" value="8000" inputmode="numeric"></div>
+    <div class="tool-field"><label for="cw-provider">Provider</label>
+      <select id="cw-provider"><option value="">All providers</option>{{ range $k, $v := $names }}<option value="{{ $k }}">{{ $v }}</option>{{ end }}</select></div>
+  </div>
+  <div class="tool-row only-narrow-md">
+    <div class="tool-field"><label for="cw-sort">Sort by</label>
+      <select id="cw-sort"><option value="ctx:-1">Context window, largest first</option><option value="maxout:-1">Max output, largest first</option><option value="in:1">Input price, cheapest first</option><option value="released:-1">Newest first</option><option value="name:1">Name</option></select></div>
+  </div>
+  <details id="cw-paste-box">
+    <summary>Or paste text to estimate its tokens</summary>
+    <textarea id="cw-paste" rows="5" spellcheck="false" placeholder="Paste a document, codebase dump or transcript"></textarea>
+    <p class="tool-stamp">Estimated per model with each provider's documented characters-per-token ratio. For exact OpenAI counts use the <a href="{{ "/tools/token-counter/" | relURL }}">token counter</a>.</p>
+  </details>
+  <p id="cw-summary" class="tool-note" aria-live="polite"></p>
+
+  <div class="tool-table-wrap tall">
+  <table class="tool-table stack-md" style="--cols:3" id="cw-table">
+    <caption class="visually-hidden">Context window and max output by model</caption>
+    <thead><tr>
+      <th><button class="sort" data-key="name">Model</button></th>
+      <th class="num"><button class="sort" data-key="ctx">Context window</button></th>
+      <th class="num"><button class="sort" data-key="maxin">Max input</button></th>
+      <th class="num"><button class="sort" data-key="maxout">Max output</button></th>
+      <th class="num"><button class="sort" data-key="in">Input $/1M</button></th>
+      <th class="num"><button class="sort" data-key="out">Output $/1M</button></th>
+      <th class="num"><button class="sort" data-key="released">Released</button></th>
+    </tr></thead>
+    <tbody>
+    {{- range sort $models "context" "desc" }}
+      {{- $r := index $retiring .id }}
+      <tr data-id="{{ .id }}" data-provider="{{ .provider }}" data-tokenizer="{{ .tokenizer }}"
+          data-ctx="{{ .context }}" data-maxin="{{ with .max_input }}{{ . }}{{ end }}" data-maxout="{{ with .max_output }}{{ . }}{{ end }}"
+          data-in="{{ .price_per_mtok.input }}" data-out="{{ .price_per_mtok.output }}" data-released="{{ .released }}">
+        <td class="full"><strong>{{ .name }}</strong> <span class="helptext">{{ index $names .provider }}</span><br><code>{{ .id }}</code>
+          {{- with $r }} <a class="badge soon" href="{{ (site.GetPage (printf "/tools/model-retirements/%s" .slug)).RelPermalink }}">retires {{ (time.AsTime .shutdown).Format "Jan 2, 2006" }}</a>{{ end }}</td>
+        <td class="num" data-label="Context">{{ lang.FormatNumberCustom 0 .context }}</td>
+        <td class="num" data-label="Max input">{{ with .max_input }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
+        <td class="num" data-label="Max output">{{ with .max_output }}{{ lang.FormatNumberCustom 0 . }}{{ else }}—{{ end }}</td>
+        <td class="num" data-label="Input $/1M">${{ lang.FormatNumberCustom 2 .price_per_mtok.input }}</td>
+        <td class="num" data-label="Output $/1M">${{ lang.FormatNumberCustom 2 .price_per_mtok.output }}</td>
+        <td class="num" data-label="Released">{{ .released }}</td>
+      </tr>
+    {{- end }}
+    </tbody>
+  </table>
+  </div>
+  <div class="tool-actions"><button type="button" id="cw-share">Copy share link</button></div>
+  <p class="tool-stamp">Limits and prices from <a href="{{ site.Data.models.source }}" rel="noopener">models.dev</a>, last data update {{ site.Data.models.checked_at }}. "Max input" is shown where a provider caps input below the full window.</p>
+</div>

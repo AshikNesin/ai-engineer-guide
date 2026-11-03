@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ if .Params.errors_index }}
+{{ partial "tools/linter-errors-index.html" . }}
+{{ else }}
+<article class="tool-index">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Params.h1 | default .Title }}</h1>
+    {{ with .Params.promise }}<p class="tool-promise">{{ . | markdownify }}</p>{{ end }}
+    <p class="tool-privacy">Every tool runs in your browser. No signup, nothing uploaded.</p>
+  </header>
+
+  {{ $tools := site.Data.tools.tools }}
+  {{ range site.Data.tools.clusters }}
+    {{ $key := .key }}
+    {{ $inCluster := where $tools "cluster" $key }}
+    {{ with $inCluster }}
+    <section class="tool-cluster">
+      <h2>{{ (index (where site.Data.tools.clusters "key" $key) 0).title }}</h2>
+      <div class="tool-cards">
+        {{ range sort . "status" }}
+          {{ if eq .status "live" }}
+        <a class="tool-card" href="{{ .url | relURL }}"><strong>{{ .title }}</strong><span>{{ .short }}</span></a>
+          {{ else }}
+        <div class="tool-card is-soon"><strong>{{ .title }}<span class="badge">soon</span></strong><span>{{ .short }}</span></div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+  {{ end }}
+
+  <section class="tool-section">
+    <content>{{ .Content }}</content>
+  </section>
+  {{ partial "tools/cta.html" . }}
+</article>
+{{ end }}
+{{ end }}

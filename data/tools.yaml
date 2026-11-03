@@ -1,0 +1,69 @@
+# Tools registry. Drives the /tools/ index, "related tools" blocks and llms.txt.
+# status: live (has a page) | soon (shown as a card without a link)
+# url must never change once live (add a 301 in static/_redirects if it must).
+# Ranking and the dropped tools (VRAM, chunking, embedding storage, llms.txt,
+# rate limits) are explained in the tools PRD, section 6.
+clusters:
+  - key: migration
+    title: Model migrations
+  - key: tokens
+    title: Tokens, cost and context
+  - key: build
+    title: Building with LLM APIs
+
+tools:
+  - slug: model-migration-linter
+    url: /tools/model-migration-linter/
+    title: Request migration linter
+    short: Paste an API request, pick the target model, and see every field that will return a 400.
+    cluster: migration
+    related: [model-id-scanner, model-retirements, structured-output-schema-checker, llm-cost-calculator]
+    status: live
+
+  - slug: model-id-scanner
+    url: /tools/model-id-scanner/
+    title: Deprecated model-ID scanner
+    short: Paste code, config or an n8n workflow and find every retiring or retired model ID.
+    cluster: migration
+    related: [model-migration-linter, model-retirements, llm-cost-calculator]
+    status: live
+
+  - slug: model-retirements
+    url: /tools/model-retirements/
+    title: Model retirement calendar
+    short: Every upcoming OpenAI, Claude and Gemini API shutdown, with days left and replacements.
+    cluster: migration
+    related: [model-migration-linter, model-id-scanner, llm-cost-calculator]
+    status: live
+
+  - slug: prompt-check
+    url: /tools/prompt-check/
+    title: Prompt migration check (BYOK)
+    short: Run your prompts on the old and new model side by side with your own API key.
+    cluster: migration
+    related: [model-migration-linter, model-retirements]
+    status: soon
+
+  - slug: llm-cost-calculator
+    url: /tools/llm-cost-calculator/
+    title: LLM API cost calculator
+    short: Monthly cost across models, plus token counts, context fit, prompt caching and old-vs-new model diffs.
+    cluster: tokens
+    related: [token-counter, model-retirements, model-migration-linter]
+    status: live
+
+  - slug: token-counter
+    url: /tools/token-counter/
+    title: Token counter
+    short: Exact OpenAI token counts and Claude and Gemini estimates, with cost per model.
+    cluster: tokens
+    related: [llm-cost-calculator, model-migration-linter, model-retirements]
+    status: live
+
+  - slug: structured-output-schema-checker
+    url: /tools/structured-output-schema-checker/
+    title: Structured output schema checker
+    short: Check a JSON Schema for OpenAI strict mode, Claude strict tools and Gemini, and convert tool definitions.
+    cluster: build
+    related: [model-migration-linter, llm-cost-calculator]
+    status: live

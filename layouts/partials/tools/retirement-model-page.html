@@ -1,0 +1,147 @@
+{{- $m := partial "tools/retirement-model.html" .Params.retirement_slug -}}
+{{- $data := site.Data.retirements -}}
+{{- $names := dict "openai" "OpenAI" "anthropic" "Anthropic" "gemini" "Google (Gemini API)" -}}
+{{- $mig := index (site.Data.migrations | default dict) $m.slug -}}
+{{- $replPage := false -}}
+{{- with $m.replacement }}{{ with .slug }}{{ with site.GetPage (printf "/tools/model-retirements/%s" .) }}{{ $replPage = . }}{{ end }}{{ end }}{{ end -}}
+{{- $retired := eq $m.status "retired" -}}
+<article class="tool" data-tool="model-retirements" data-model="{{ $m.slug }}">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Title }}</h1>
+    <p class="tool-promise" data-status-line>
+      {{- if $retired -}}
+        Retired on {{ (time.AsTime $m.shutdown).Format "January 2, 2006" }}; requests to <code>{{ index $m.ids 0 }}</code> now fail.
+      {{- else if $m.shutdown -}}
+        <code>{{ index $m.ids 0 }}</code> {{ if eq $m.shutdown_kind "earliest" }}can be shut down as early as{{ else }}shuts down on{{ end }} {{ (time.AsTime $m.shutdown).Format "January 2, 2006" }}{{ with $m.announced }} (announced {{ (time.AsTime .).Format "Jan 2, 2006" }}){{ end }}.
+      {{- else -}}
+        <code>{{ index $m.ids 0 }}</code> is deprecated; the retirement date is to be announced.
+      {{- end -}}
+    </p>
+  </header>
+
+  <div class="tool-app">
+    <div class="days-left{{ if $retired }} is-retired{{ end }}"{{ with $m.shutdown }} data-shutdown="{{ . }}"{{ end }} data-kind="{{ $m.shutdown_kind }}">
+      {{- if $m.shutdown -}}
+        {{- $days := math.Ceil (div ((time.AsTime $m.shutdown).Sub now).Hours 24) | int -}}
+        <span class="count" data-count>{{ if or $retired (lt $days 0) }}Retired{{ else }}{{ $days }}{{ end }}</span>
+        <span class="label" data-count-label>{{ if or $retired (lt $days 0) }}on {{ (time.AsTime $m.shutdown).Format "Jan 2, 2006" }}{{ else }}days left until {{ (time.AsTime $m.shutdown).Format "Jan 2, 2006" }}{{ if eq $m.shutdown_kind "earliest" }} (earliest possible date){{ end }}{{ end }}</span>
+      {{- else -}}
+        <span class="count">TBA</span><span class="label">Retirement date to be announced</span>
+      {{- end -}}
+      <span class="badge {{ if $retired }}retired{{ else }}later{{ end }}">{{ $m.status }}</span>
+    </div>
+
+    <dl class="fact-list">
+      <dt>Provider</dt><dd>{{ index $names $m.provider }}</dd>
+      <dt>Model IDs affected</dt><dd>{{ range $i, $id := $m.ids }}{{ if $i }}, {{ end }}<code>{{ $id }}</code>{{ end }}</dd>
+      {{ with $m.announced }}<dt>Announced</dt><dd>{{ (time.AsTime .).Format "January 2, 2006" }}</dd>{{ end }}
+      <dt>Shutdown date</dt><dd>{{ with $m.shutdown }}{{ (time.AsTime .).Format "January 2, 2006" }}{{ if eq $m.shutdown_kind "earliest" }} <span class="badge est">earliest possible</span>{{ end }}{{ else }}{{ $m.shutdown_text | default "To be announced" }}{{ end }}</dd>
+      <dt>Replacement</dt><dd>{{ with $m.replacement }}{{ with $replPage }}<a href="{{ .RelPermalink }}">{{ end }}{{ .text }}{{ with $replPage }}</a>{{ end }}{{ else }}None listed{{ end }}</dd>
+      <dt>Platforms</dt><dd>{{ $m.platform_note }}</dd>
+      <dt>Source</dt><dd><a href="{{ $m.source_url }}" rel="noopener">Official {{ index $names $m.provider }} deprecations page</a> <span class="helptext">(data last changed {{ (index $data.sources $m.provider).checked_at }}, re-checked daily)</span></dd>
+    </dl>
+
+    <div class="tool-actions">
+      {{- if and $m.shutdown (not $retired) (in (slice "exact" "earliest") $m.shutdown_kind) }}
+      <button type="button" class="primary" id="add-to-calendar"
+        data-uid="{{ $m.ics_uid }}" data-seq="{{ $m.ics_sequence }}" data-date="{{ $m.shutdown }}"
+        data-title="{{ $m.name }} ({{ index $m.ids 0 }}) shuts down" data-url="{{ .Permalink }}"
+        data-desc="{{ with $m.replacement }}Replacement: {{ .text }}. {{ end }}Source: {{ $m.source_url }}">📅 Add this date to my calendar</button>
+      {{- end }}
+      {{ with site.GetPage "/tools/model-retirements" }}{{ with .OutputFormats.Get "Calendar" }}<a class="tool-btn" href="{{ .RelPermalink }}" data-umami-event="subscribe_ics">Subscribe to all shutdowns (.ics)</a>{{ end }}{{ end }}
+    </div>
+  </div>
+
+  {{- /* Price and context diff from data/models.json */ -}}
+  {{- $old := partial "tools/model-price.html" (append $m.ids (slice $m.slug)) -}}
+  {{- $new := false -}}
+  {{- with $m.replacement }}{{ with .ids }}{{ $new = partial "tools/model-price.html" . }}{{ end }}{{ end -}}
+  {{- if and $old $new }}
+  <section class="tool-section" id="price-diff">
+    <h2>{{ $m.name }} vs {{ $new.name }}: price and limits</h2>
+    <div class="tool-table-wrap"><table class="tool-table stack" style="--cols:3">
+      <thead><tr><th></th><th class="num">{{ $old.name }}</th><th class="num">{{ $new.name }}</th><th class="num">Change</th></tr></thead>
+      <tbody>
+      {{- $rows := slice
+          (dict "label" "Context window (tokens)" "a" $old.context "b" $new.context "money" false)
+          (dict "label" "Max output (tokens)" "a" $old.max_output "b" $new.max_output "money" false)
+          (dict "label" "Input, $ per 1M tokens" "a" $old.price_per_mtok.input "b" $new.price_per_mtok.input "money" true)
+          (dict "label" "Output, $ per 1M tokens" "a" $old.price_per_mtok.output "b" $new.price_per_mtok.output "money" true)
+          (dict "label" "Cache read, $ per 1M tokens" "a" $old.price_per_mtok.cache_read "b" $new.price_per_mtok.cache_read "money" true)
+      }}
+      {{- range $row := $rows }}
+        <tr><td class="full"><strong>{{ $row.label }}</strong></td>
+          {{- range $i, $v := slice $row.a $row.b }}
+          <td class="num" data-label="{{ cond (eq $i 0) $old.name $new.name }}">{{ with $v }}{{ if $row.money }}${{ lang.FormatNumberCustom 2 . }}{{ else }}{{ lang.FormatNumberCustom 0 . }}{{ end }}{{ else }}—{{ end }}</td>
+          {{- end }}
+          <td class="num" data-label="Change">{{ if and $row.a $row.b }}{{ $pct := mul (div (sub (float $row.b) (float $row.a)) (float $row.a)) 100 }}{{ if gt $pct 0.0 }}+{{ end }}{{ lang.FormatNumberCustom 0 $pct }}%{{ else }}—{{ end }}</td>
+        </tr>
+      {{- end }}
+      </tbody>
+    </table></div>
+    {{- if and (eq $m.provider "anthropic") (ne $old.tokenizer $new.tokenizer) }}
+    <p class="tool-note">{{ $new.name }} uses Anthropic's newer tokenizer, which produces about 30% more tokens for the same text (<a href="https://platform.claude.com/docs/en/build-with-claude/token-counting" rel="noopener">Anthropic token counting docs</a>). Recount with the <a href="{{ "/tools/token-counter/claude/" | relURL }}">Claude token counter</a> before comparing costs.</p>
+    {{- end }}
+    <p class="tool-stamp">Prices and limits from <a href="{{ site.Data.models.source }}" rel="noopener">models.dev</a> (checked {{ site.Data.models.checked_at }}). Confirm on the <a href="{{ index site.Data.models.pricing_urls $old.provider }}" rel="noopener">official pricing page</a>. Compare the cost for your traffic in the <a href="{{ printf "/tools/llm-cost-calculator/#tab=diff&df=%s&dt=%s" $old.id $new.id | relURL }}">old vs new model calculator</a>.</p>
+  </section>
+  {{- end }}
+
+  <section class="tool-section" id="migration">
+    <h2>Migrating from {{ $m.name }}{{ with $m.replacement }}{{ with $new }} to {{ .name }}{{ end }}{{ end }}</h2>
+    {{- with $mig }}
+      {{- if not .reviewed }}
+      <p class="tool-draft"><strong>Draft: not yet reviewed.</strong> These notes are drafted from the official migration guide and haven't been reviewed by a human yet. Check each item against its source.</p>
+      {{- end }}
+      {{- with .official_guide }}<p>Official guide: <a href="{{ . }}" rel="noopener">{{ . }}</a></p>{{ end }}
+      {{- with .breaking_changes }}
+      <h3>Breaking changes (requests that will error)</h3>
+      <ul>{{ range . }}<li>{{ printf "%s. %s" (strings.TrimSuffix "." .title) .detail | markdownify }} <a href="{{ .source }}" rel="noopener" class="helptext">source</a></li>{{ end }}</ul>
+      {{- end }}
+      {{- with .behavior_changes }}
+      <h3>Behavior changes (no error, different output)</h3>
+      <ul>{{ range . }}<li>{{ printf "%s. %s" (strings.TrimSuffix "." .title) .detail | markdownify }} <a href="{{ .source }}" rel="noopener" class="helptext">source</a></li>{{ end }}</ul>
+      {{- end }}
+      <h3>Checklist</h3>
+      <ul>{{ range .checklist }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
+      <p class="tool-stamp">Last updated {{ .updated }}.</p>
+    {{- else }}
+      <p class="tool-draft"><strong>Not yet reviewed.</strong> We haven't written model-specific migration notes for {{ $m.name }} yet. Start with the provider's official guidance{{ with $m.replacement }} and the replacement's model page{{ end }}, and use this general checklist:</p>
+      <ul>
+        <li>Search your code, config and environment variables for {{ range $i, $id := $m.ids }}{{ if $i }}, {{ end }}<code>{{ $id }}</code>{{ end }}.</li>
+        <li>Re-run your evaluation set against {{ with $m.replacement }}{{ .text }}{{ else }}the replacement{{ end }} before switching traffic.</li>
+        <li>Recount tokens with the new model's tokenizer and re-check <code>max_tokens</code>, context fit and cost.</li>
+        <li>Check tool calling, structured output and stop sequences on your real prompts.</li>
+        <li>{{ $m.platform_note }}</li>
+      </ul>
+    {{- end }}
+  </section>
+
+  {{- /* Act on the code: lint requests against the replacement, scan for IDs. */ -}}
+  {{- $lintTarget := "" -}}
+  {{- with $m.replacement }}{{ with .ids }}{{ $id := index . 0 }}{{ if where site.Data.breaking_changes.targets "id" $id }}{{ $lintTarget = $id }}{{ end }}{{ end }}{{ end }}
+  <section class="tool-section" id="check-your-code">
+    <h2>Check your code before {{ with $m.shutdown }}{{ (time.AsTime .).Format "Jan 2" }}{{ else }}the shutdown{{ end }}</h2>
+    <div class="tool-cards">
+      <a class="tool-card" href="{{ printf "/tools/model-migration-linter/%s" (cond (ne $lintTarget "") (printf "#target=%s" $lintTarget) "") | relURL }}"><strong>Lint a request{{ with $lintTarget }} for {{ . }}{{ end }}</strong><span>Paste an API request and see every field that will return a 400 on the new model, with a fixed request.</span></a>
+      <a class="tool-card" href="{{ "/tools/model-id-scanner/" | relURL }}"><strong>Find every {{ index $m.ids 0 }} in your code</strong><span>Paste code, config or an n8n workflow to list each retiring model ID by line.</span></a>
+    </div>
+  </section>
+
+  {{- /* Other models retiring on the same date (good for teams with several). */ -}}
+  {{- with $m.shutdown }}
+    {{- $same := where (where (where $data.models "page" true) "shutdown" .) "slug" "ne" $m.slug }}
+    {{- with $same }}
+  <section class="tool-section">
+    <h2>Also shutting down on {{ (time.AsTime $m.shutdown).Format "January 2, 2006" }}</h2>
+    <ul>{{ range first 12 . }}<li><a href="{{ (site.GetPage (printf "/tools/model-retirements/%s" .slug)).RelPermalink }}">{{ .name }}</a> <code>{{ index .ids 0 }}</code></li>{{ end }}</ul>
+  </section>
+    {{- end }}
+  {{- end }}
+
+  <p><a href="{{ "/tools/model-retirements/" | relURL }}">All model retirements</a> · <a href="{{ printf "/tools/model-retirements/%s/" $m.provider | relURL }}">All {{ index $names $m.provider }} deprecations</a></p>
+
+  {{ partial "tools/faq.html" . }}
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

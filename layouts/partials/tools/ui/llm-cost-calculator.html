@@ -1,0 +1,24 @@
+{{- /* LLM API cost calculator with tabs. Token counter, context fit, caching
+       and old->new diff are tabs of one tool (tools PRD section 6). The
+       /tools/token-counter/ pages reuse it with tab: tokens. */ -}}
+{{- $tab := .Params.tab | default "cost" -}}
+{{- $tabs := slice
+  (dict "key" "cost" "label" "Monthly cost")
+  (dict "key" "tokens" "label" "Token count")
+  (dict "key" "context" "label" "Context fit")
+  (dict "key" "cache" "label" "Prompt caching")
+  (dict "key" "diff" "label" "Old vs new model")
+-}}
+<div class="tool-app" id="calc-app" data-default-tab="{{ $tab }}">
+  <div class="tool-tabs" role="tablist" aria-label="Calculator views">
+    {{- range $tabs }}
+    <button type="button" role="tab" id="tab-{{ .key }}" data-tab="{{ .key }}" aria-selected="{{ eq .key $tab }}">{{ .label }}</button>
+    {{- end }}
+  </div>
+  {{ partial "tools/ui/panel-cost.html" . }}
+  {{ partial "tools/ui/panel-tokens.html" . }}
+  {{ partial "tools/ui/panel-context.html" . }}
+  {{ partial "tools/ui/panel-cache.html" . }}
+  {{ partial "tools/ui/panel-diff.html" . }}
+  {{ partial "tools/models-json.html" . }}
+</div>

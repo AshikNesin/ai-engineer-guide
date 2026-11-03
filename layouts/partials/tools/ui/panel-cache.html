@@ -1,0 +1,14 @@
+{{- $tab := .Params.tab | default "cost" -}}
+  <div id="pc-app" class="calc-panel" role="tabpanel" data-tab="cache"{{ if ne $tab "cache" }} hidden{{ end }}>
+    <div class="tool-row">
+      <div class="tool-field grow"><label for="pc-model">Model</label><select id="pc-model"></select></div>
+      <div class="tool-field"><label for="pc-ttl">Cache type</label>
+        <select id="pc-ttl"><option value="default">Default</option><option value="1h">Anthropic 1-hour (2x write)</option></select></div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-field"><label for="pc-prefix">Cached prefix (tokens)</label><input type="number" id="pc-prefix" min="0" step="1000" value="20000" inputmode="numeric"><small>System prompt, tools, documents</small></div>
+      <div class="tool-field"><label for="pc-reads">Cache hits per write</label><input type="number" id="pc-reads" min="0" step="1" value="10" inputmode="numeric"><small>Requests that reuse it before it expires</small></div>
+      <div class="tool-field"><label for="pc-writes">Cache writes / day</label><input type="number" id="pc-writes" min="0" step="10" value="100" inputmode="numeric"></div>
+    </div>
+    <div id="pc-result" class="tool-note" aria-live="polite"></div>
+  </div>

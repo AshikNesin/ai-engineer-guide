@@ -1,0 +1,12 @@
+{{- $faq := partial "tools/faq-items.html" . -}}
+{{- with $faq }}
+<section class="tool-section tool-faq" id="faq">
+  <h2>FAQ</h2>
+  {{- range . }}
+  <details>
+    <summary>{{ .q }}</summary>
+    <p>{{ .a | markdownify }}</p>
+  </details>
+  {{- end }}
+</section>
+{{- end }}

@@ -1,0 +1,67 @@
+{{- /* Content adapter: one page per provider and one page per deprecated or
+       retired model in data/retirements.json (where page = true).
+       Slugs never change, so URLs stay stable once published. */ -}}
+{{- $data := site.Data.retirements -}}
+{{- /* Front matter cascade doesn't reach adapter pages, so shared params live here. */ -}}
+{{- $shared := dict
+  "related_tool" "model-retirements"
+  "show_feeds" true
+  "cta_heading" "Get model retirement alerts and one practical AI engineering note a week"
+-}}
+
+{{- $providers := slice
+  (dict "key" "openai" "name" "OpenAI" "query" "OpenAI model deprecations")
+  (dict "key" "anthropic" "name" "Anthropic" "query" "Anthropic Claude model deprecations")
+  (dict "key" "gemini" "name" "Gemini API" "query" "Gemini API model deprecations")
+-}}
+{{- range $providers -}}
+  {{- $p := . -}}
+  {{- $upcoming := where (where $data.models "provider" $p.key) "status" "deprecated" -}}
+  {{- $.AddPage (dict
+      "kind" "page"
+      "path" $p.key
+      "title" (printf "%s and retirement dates" $p.query)
+      "params" (merge $shared (dict
+        "retirement_provider" $p.key
+        "provider_name" $p.name
+        "breadcrumb" $p.name
+        "seo_title" (printf "%s & Retirement Dates (%d upcoming) | AIEngineerGuide" $p.query (len $upcoming))
+        "description" (printf "Every %s model deprecation and shutdown date from the official page: %d upcoming, with days left and recommended replacements. Updated daily." $p.name (len $upcoming))
+      ))
+      "dates" (dict "lastmod" (time.AsTime (substr $data.generated_at 0 10)))
+  ) -}}
+{{- end -}}
+
+{{- range where $data.models "page" true -}}
+  {{- $m := . -}}
+  {{- $when := "to be announced" -}}
+  {{- with $m.shutdown }}{{ $when = (time.AsTime .).Format "January 2, 2006" }}{{ end -}}
+  {{- $short := "TBA" -}}
+  {{- with $m.shutdown }}{{ $short = (time.AsTime .).Format "Jan 2, 2006" }}{{ end -}}
+  {{- $title := printf "%s retirement date: %s" $m.name $when -}}
+  {{- $seo := printf "%s Deprecation & Retirement Date (%s) | AIEngineerGuide" $m.name $short -}}
+  {{- if eq $m.status "retired" -}}
+    {{- $seo = printf "%s Retired on %s: Replacement & Migration | AIEngineerGuide" $m.name $short -}}
+  {{- end -}}
+  {{- $prov := index (dict "openai" "OpenAI API" "anthropic" "Claude API" "gemini" "Gemini API") $m.provider -}}
+  {{- $repl := "" -}}
+  {{- with $m.replacement }}{{ with .ids }}{{ $repl = printf " Replacement: %s." (index . 0) }}{{ end }}{{ end -}}
+  {{- $verb := cond (eq $m.status "retired") "retired on" "retires on" -}}
+  {{- $desc := printf "%s (%s) %s the %s %s.%s Days left, breaking changes and a migration checklist." $m.name (index $m.ids 0) $verb $prov $when $repl -}}
+  {{- if not $m.shutdown }}{{ $desc = printf "%s (%s) is deprecated on the %s; the retirement date is to be announced.%s Replacement, migration checklist and alerts." $m.name (index $m.ids 0) $prov $repl }}{{ end -}}
+  {{- /* lastmod: newest feed event for this model, else its announcement. */ -}}
+  {{- $lastmod := $m.announced | default (substr $data.generated_at 0 10) -}}
+  {{- range where $data.events "slug" $m.slug }}{{ if gt .date $lastmod }}{{ $lastmod = .date }}{{ end }}{{ end -}}
+  {{- $.AddPage (dict
+      "kind" "page"
+      "path" $m.slug
+      "title" $title
+      "params" (merge $shared (dict
+        "retirement_slug" $m.slug
+        "breadcrumb" $m.name
+        "seo_title" $seo
+        "description" $desc
+      ))
+      "dates" (dict "lastmod" (time.AsTime $lastmod) "date" (time.AsTime ($m.announced | default $lastmod)))
+  ) -}}
+{{- end -}}

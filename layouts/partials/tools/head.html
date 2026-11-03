@@ -1,0 +1,9 @@
+{{- /* Extra <head> for every page in the tools section (called from custom_head.html). */ -}}
+<meta name="color-scheme" content="light dark">
+{{- $css := resources.Get "css/tools.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- with site.GetPage "/tools/model-retirements" }}
+  {{- with .OutputFormats.Get "RetirementsRSS" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="AI model retirements (AIEngineerGuide)">
+  {{- end }}
+{{- end }}

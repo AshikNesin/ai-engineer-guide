@@ -1,0 +1,36 @@
+{{- /* Deprecated model-ID scanner. Joins pasted text against retirements.json. */ -}}
+{{- $models := slice -}}
+{{- range site.Data.retirements.models -}}
+  {{- if in (slice "deprecated" "retired" "legacy") .status -}}
+    {{- $models = $models | append (dict "ids" .ids "slug" .slug "name" .name "provider" .provider "status" .status "shutdown" .shutdown "shutdown_kind" .shutdown_kind "replacement" (dict "text" ((.replacement | default dict).text | default "")) "page" .page "source_url" .source_url) -}}
+  {{- end -}}
+{{- end -}}
+{{- $sample := `# config.py
+DEFAULT_MODEL = "claude-sonnet-4-5-20250929"
+SUMMARY_MODEL = "gpt-4o-mini"
+REASONING_MODEL = "o3"
+EMBEDDINGS = "text-embedding-3-small"
+TTS_MODEL = "tts-1"
+GEMINI = "models/gemini-2.0-flash"` -}}
+<div class="tool-app" id="sc-app">
+  <div class="tool-field grow" id="sc-drop">
+    <label for="sc-input">Paste code, a config file or a workflow export</label>
+    <textarea id="sc-input" rows="10" spellcheck="false">{{ $sample }}</textarea>
+    <small>Or drop files here, or <label for="sc-file" style="font-size:inherit;color:var(--t-link);cursor:pointer;text-decoration:underline">choose files</label> (<code>.py</code>, <code>.ts</code>, <code>.json</code>, <code>.env</code>, n8n exports…). They're read in your browser; nothing is uploaded.</small>
+    <input type="file" id="sc-file" multiple hidden>
+  </div>
+  <p id="sc-summary" class="tool-note" aria-live="polite">Scanning…</p>
+  <div class="tool-table-wrap">
+    <table class="tool-table stack" style="--cols:2" id="sc-table">
+      <caption class="visually-hidden">Model IDs found</caption>
+      <thead><tr><th>Model ID</th><th>Status</th><th class="num">Shutdown</th><th>Replacement</th><th>Lines</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="tool-actions">
+    <button type="button" class="primary" id="sc-copy">Copy as checklist</button>
+    <button type="button" id="sc-clear">Clear</button>
+  </div>
+  <p class="tool-stamp">Matched against {{ len $models }} deprecated, retired and legacy models from the official OpenAI, Anthropic and Gemini API deprecation pages (data last changed {{ site.Data.retirements.sources.anthropic.checked_at }}). Active models aren't listed.</p>
+  <script type="application/json" id="sc-data">{{ $models | jsonify | safeJS }}</script>
+</div>

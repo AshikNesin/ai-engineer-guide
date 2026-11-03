@@ -1,0 +1,40 @@
+{{- /* JSON-LD for the tools section: BreadcrumbList on every page,
+       SoftwareApplication on tool pages, FAQPage when the page has a real FAQ. */ -}}
+{{- $items := partial "tools/breadcrumbs.html" . -}}
+{{- $list := slice -}}
+{{- range $i, $it := $items -}}
+  {{- $list = $list | append (dict "@type" "ListItem" "position" (add $i 1) "name" $it.name "item" $it.url) -}}
+{{- end -}}
+{{- $graph := slice (dict "@type" "BreadcrumbList" "itemListElement" $list) -}}
+
+{{- $desc := .Description | default .Summary | plainify -}}
+{{- if .Params.tool -}}
+  {{- $app := dict
+      "@type" "SoftwareApplication"
+      "name" (.Params.app_name | default .Title)
+      "url" .Permalink
+      "description" $desc
+      "applicationCategory" "DeveloperApplication"
+      "operatingSystem" "Any (runs in your web browser)"
+      "isAccessibleForFree" true
+      "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "USD")
+      "publisher" (dict "@type" "Organization" "name" (site.Params.title | default site.Title) "url" site.Home.Permalink)
+  -}}
+  {{- $graph = $graph | append $app -}}
+{{- else if .IsPage -}}
+  {{- $graph = $graph | append (dict
+      "@type" "WebPage" "name" .Title "url" .Permalink "description" $desc
+      "dateModified" (.Lastmod.Format "2006-01-02")) -}}
+{{- end -}}
+
+{{- $faq := partial "tools/faq-items.html" . -}}
+{{- if $faq -}}
+  {{- $qs := slice -}}
+  {{- range $faq -}}
+    {{- $qs = $qs | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" (.a | markdownify | plainify))) -}}
+  {{- end -}}
+  {{- $graph = $graph | append (dict "@type" "FAQPage" "mainEntity" $qs) -}}
+{{- end -}}
+<script type="application/ld+json">
+{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify (dict "indent" "  ") | safeJS }}
+</script>

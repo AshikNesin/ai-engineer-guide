@@ -1,3 +1,6 @@
+{{- if eq .Section "tools" -}}
+{{- partial "tools/jsonld.html" . -}}
+{{- else -}}
 {{- $publisherLogo := "images/logo-icon.svg" | absURL -}}
 {{- $desc := "" -}}
 {{- with .Description -}}
@@ -45,4 +48,5 @@
 <script type="application/ld+json">
 {{ $breadcrumb | jsonify (dict "indent" "  ") | safeJS }}
 </script>
+{{- end -}}
 {{- end -}}

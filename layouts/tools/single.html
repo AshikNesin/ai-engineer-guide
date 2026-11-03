@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{- /* Content-adapter pages under /tools/model-retirements/ (see _content.gotmpl). */ -}}
+{{ if .Params.retirement_provider }}
+  {{ partial "tools/retirement-provider.html" . }}
+  {{ partial "tools/script.html" (dict "name" "retirements") }}
+{{ else if .Params.retirement_slug }}
+  {{ partial "tools/retirement-model-page.html" . }}
+  {{ partial "tools/script.html" (dict "name" "retirements") }}
+{{ else if .Params.error_rule }}
+  {{ partial "tools/linter-error-page.html" . }}
+{{ else }}
+{{ partial "tools/tool-page.html" . }}
+{{ partial "tools/script.html" (dict "name" .Params.tool) }}
+{{ end }}
+{{ end }}

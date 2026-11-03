@@ -1,0 +1,7 @@
+{{- /* Bundle assets/js/tools/<name>.js with Hugo's built-in esbuild.
+       Usage: partial "tools/script.html" (dict "name" "token-counter") */ -}}
+{{- $src := resources.Get (printf "js/tools/%s.js" .name) -}}
+{{- $opts := dict "targetPath" (printf "js/tools/%s.js" .name) "format" "esm" "target" "es2020" -}}
+{{- if hugo.IsProduction }}{{ $opts = merge $opts (dict "minify" true) }}{{ end -}}
+{{- $js := $src | js.Build $opts | fingerprint -}}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

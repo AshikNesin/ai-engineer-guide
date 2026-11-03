@@ -1,0 +1,12 @@
+{{- /* Newsletter CTA with a tool-specific heading (front matter cta_heading). */ -}}
+<section class="tool-section" id="subscribe">
+  {{ partial "newsletter.html" . }}
+  {{- if .Params.show_feeds }}
+  {{- with site.GetPage "/tools/model-retirements" }}
+  <div class="tool-cta-links">
+    {{- with .OutputFormats.Get "Calendar" }}<a class="tool-btn" href="{{ .RelPermalink }}" data-umami-event="subscribe_ics">📅 Calendar feed (.ics)</a>{{ end }}
+    {{- with .OutputFormats.Get "RetirementsRSS" }}<a class="tool-btn" href="{{ .RelPermalink }}" data-umami-event="subscribe_rss">RSS feed</a>{{ end }}
+  </div>
+  {{- end }}
+  {{- end }}
+</section>

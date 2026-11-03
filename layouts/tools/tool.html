@@ -1,0 +1,5 @@
+{{- /* For tool sections with variants, e.g. /tools/token-counter/ (_index.md sets layout: tool). */ -}}
+{{ define "main" }}
+{{ partial "tools/tool-page.html" . }}
+{{ partial "tools/script.html" (dict "name" .Params.tool) }}
+{{ end }}

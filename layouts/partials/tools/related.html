@@ -1,0 +1,28 @@
+{{- /* 4-6 related tools from data/tools.yaml (no TIL links on tool pages). */ -}}
+{{- $slug := .Params.related_tool | default .Params.tool | default "model-retirements" -}}
+{{- $tools := site.Data.tools.tools -}}
+{{- $me := index (where $tools "slug" $slug) 0 -}}
+{{- $related := slice -}}
+{{- with $me -}}
+  {{- range .related -}}
+    {{- with index (where $tools "slug" .) 0 }}{{ $related = $related | append . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- /* Top up with other live tools so there are always at least 4. */ -}}
+{{- range where $tools "status" "live" -}}
+  {{- if and (lt (len $related) 4) (ne .slug $slug) (not (in (apply $related "index" "." "slug") .slug)) -}}
+    {{- $related = $related | append . -}}
+  {{- end -}}
+{{- end -}}
+<section class="tool-section" id="related-tools">
+  <h2>Related tools</h2>
+  <div class="tool-cards">
+    {{- range first 6 $related }}
+      {{- if eq .status "live" }}
+    <a class="tool-card" href="{{ .url | relURL }}"><strong>{{ .title }}</strong><span>{{ .short }}</span></a>
+      {{- else }}
+    <div class="tool-card is-soon"><strong>{{ .title }}<span class="badge">soon</span></strong><span>{{ .short }}</span></div>
+      {{- end }}
+    {{- end }}
+  </div>
+</section>

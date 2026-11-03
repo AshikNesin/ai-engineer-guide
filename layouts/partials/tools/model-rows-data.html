@@ -1,0 +1,6 @@
+{{- /* Models shown in the comparison tools: no snapshots, no models models.dev marks deprecated. */ -}}
+{{- $out := slice -}}
+{{- range site.Data.models.models -}}
+  {{- if and (not .snapshot) (ne .status "deprecated") }}{{ $out = $out | append . }}{{ end -}}
+{{- end -}}
+{{- return $out -}}

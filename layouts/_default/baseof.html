@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {{- partial "favicon.html" . -}}
-  <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ with .Params.seo_title }}{{ . }}{{ else }}{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 
   {{- partial "seo_tags.html" . -}}
 
@@ -18,7 +18,7 @@
   {{- partial "custom_head.html" . -}}
 </head>
 
-<body>
+<body{{ if eq .Section "tools" }} class="tool-page"{{ end }}>
   <header>
     {{- partial "header.html" . -}}
   </header>

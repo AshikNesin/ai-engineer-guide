@@ -1,0 +1,15 @@
+{{- /* Find a data/models.json entry for a list of candidate IDs (exact, then
+       without a date suffix). Returns the dict or nil. */ -}}
+{{- $models := site.Data.models.models -}}
+{{- $found := false -}}
+{{- range . -}}
+  {{- if not $found -}}
+    {{- $id := . -}}
+    {{- range slice $id (replaceRE `-(\d{8}|\d{4}-\d{2}-\d{2})$` "" $id) -}}
+      {{- if not $found -}}
+        {{- with index (where $models "id" .) 0 }}{{ $found = . }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (cond (eq $found false) nil $found) -}}

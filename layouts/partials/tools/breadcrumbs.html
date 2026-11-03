@@ -1,0 +1,9 @@
+{{- /* Returns a slice of {name, url} from Home down to (and including) the page. */ -}}
+{{- $items := slice (dict "name" "Home" "url" site.Home.Permalink) -}}
+{{- range .Ancestors.Reverse -}}
+  {{- if not .IsHome -}}
+    {{- $items = $items | append (dict "name" (.Params.breadcrumb | default .LinkTitle) "url" .Permalink) -}}
+  {{- end -}}
+{{- end -}}
+{{- $items = $items | append (dict "name" (.Params.breadcrumb | default .LinkTitle) "url" .Permalink) -}}
+{{- return $items -}}

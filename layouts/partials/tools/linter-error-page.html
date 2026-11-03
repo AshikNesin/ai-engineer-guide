@@ -1,0 +1,54 @@
+{{- $r := partial "tools/linter-rule.html" .Params.error_rule -}}
+{{- $provider := cond (eq $r.provider "anthropic") "Anthropic" "OpenAI" -}}
+{{- $apis := dict "messages" "Anthropic Messages API" "chat" "OpenAI Chat Completions" "responses" "OpenAI Responses API" -}}
+{{- $targets := dict -}}{{- range site.Data.breaking_changes.targets }}{{ $targets = merge $targets (dict .id .label) }}{{ end -}}
+<article class="tool">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ $r.title | markdownify }}</h1>
+    <p class="tool-promise">{{ partial "tools/linter-status.html" $r.status }}
+      Applies to {{ range $i, $t := $r.targets }}{{ if $i }}, {{ end }}<code>{{ $t }}</code>{{ end }} on the {{ delimit (apply $r.apis "index" $apis ".") " and " }}{{ with $r.api_version }} with <code>anthropic-version: {{ . }}</code>{{ end }}.</p>
+  </header>
+
+  <div class="tool-app">
+    {{- with $r.error }}
+    <p class="helptext" style="margin-top:0">Error message, quoted from {{ $provider }}'s docs:</p>
+    <pre><code>{{ . }}</code></pre>
+    {{- else }}
+    <p class="helptext" style="margin-top:0">{{ $provider }}'s docs describe this {{ if eq $r.status "behavior" }}behavior change{{ else }}error{{ end }} but don't quote the exact message, so we don't either.</p>
+    {{- end }}
+    <h2 style="font-size:1.1rem">How to fix it</h2>
+    <p>{{ $r.fix | markdownify }}</p>
+    <div class="tool-row">
+      <div class="tool-field grow"><span class="label">Before</span><pre><code>{{ $r.example.before | jsonify (dict "indent" "  ") }}</code></pre></div>
+      <div class="tool-field grow"><span class="label">After{{ with $r.example.target }} ({{ index $targets . | default . }}){{ end }}</span><pre><code>{{ $r.example.after | jsonify (dict "indent" "  ") }}</code></pre></div>
+    </div>
+    <div class="tool-actions">
+      <a class="tool-btn primary" href="{{ printf "/tools/model-migration-linter/#target=%s" ($r.example.target | default "") | relURL }}">Check your whole request in the linter</a>
+    </div>
+  </div>
+
+  <section class="tool-section">
+    <h2>Official source</h2>
+    {{- range $r.sources }}
+    <blockquote>{{ .quote | markdownify }}</blockquote>
+    <p class="helptext"><a href="{{ .url }}" rel="noopener">{{ .url }}</a> (last checked {{ $r.checked }})</p>
+    {{- end }}
+  </section>
+
+  {{- $same := slice -}}
+  {{- range site.Data.breaking_changes.rules -}}
+    {{- if and (ne .id $r.id) (intersect .targets $r.targets) }}{{ $same = $same | append . }}{{ end -}}
+  {{- end }}
+  {{- with $same }}
+  <section class="tool-section">
+    <h2>Other changes for the same models</h2>
+    <ul>{{ range . }}<li><a href="{{ printf "/tools/model-migration-linter/errors/%s/" .id | relURL }}">{{ .title | markdownify }}</a></li>{{ end }}</ul>
+  </section>
+  {{- end }}
+
+  <p><a href="{{ "/tools/model-migration-linter/errors/" | relURL }}">All migration errors</a></p>
+  {{ partial "tools/faq.html" . }}
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

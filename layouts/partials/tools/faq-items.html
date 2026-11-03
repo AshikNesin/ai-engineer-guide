@@ -1,0 +1,10 @@
+{{- /* FAQ items for a page: front matter `faq` or, for model retirement pages,
+       questions generated from the data. Returns a slice of {q, a}. */ -}}
+{{- $faq := .Params.faq | default slice -}}
+{{- with .Params.retirement_slug -}}
+  {{- $faq = partial "tools/retirement-faq.html" . -}}
+{{- end -}}
+{{- with .Params.error_rule -}}
+  {{- $faq = partial "tools/linter-error-faq.html" . -}}
+{{- end -}}
+{{- return $faq -}}

@@ -1,0 +1,2 @@
+{{- /* Look up a model in data/retirements.json by slug. Returns the dict or nil. */ -}}
+{{- return index (where site.Data.retirements.models "slug" .) 0 -}}

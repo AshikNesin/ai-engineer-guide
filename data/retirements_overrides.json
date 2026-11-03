@@ -1,0 +1,6 @@
+{
+  "_comment": "Hand fixes that win over the parser in refresh_retirements.py. 'models' patches fields by slug, 'exclude' drops slugs, 'add' appends full model objects. Never edit retirements.json directly.",
+  "models": {},
+  "exclude": [],
+  "add": []
+}
