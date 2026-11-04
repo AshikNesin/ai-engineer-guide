@@ -9,4 +9,10 @@ noindex: true
 qblog_id: ad8b72dd-f7a5-45b8-9e09-7b0b44f7e661
 ---
 
+OpenAI will be acquiring Pierre Computer the company behinds really good open source apps like Diffs.com
+
+They mentioned it is primarily for Codex improvements.
+
+https://openai.com/index/openai-to-acquire-pierre/
+
 https://x.com/OpenAINewsroom/status/2117999237745049883?a=A78anQtjMcW9Dpy3cSg&s=19
