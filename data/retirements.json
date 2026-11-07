@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-02T17:47:03Z",
+  "generated_at": "2026-11-07T06:22:36Z",
   "page_cutoff": "2026-01-01",
   "sources": {
     "anthropic": {
       "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
-      "checked_at": "2026-11-02",
-      "sha256": "7c01727a08cc32c5812ccecc6dd36caa667ae5bd4e9d907b3b7b4272ce950c28"
+      "checked_at": "2026-11-07",
+      "sha256": "dff781a1f1bbf3c53450a89c0758147001197eb5f0d99d02abcc52dddd7f2313"
     },
     "openai": {
       "url": "https://developers.openai.com/api/docs/deprecations",
-      "checked_at": "2026-11-02",
-      "sha256": "3fddf4c625d689e43e559c236bcdd675de8a3b3d035070ba205827d8ad0a2fc2"
+      "checked_at": "2026-11-07",
+      "sha256": "49e382e18bf8e14ea82d099a21a1f2b818b72603424518519eb908b419b45be1"
     },
     "gemini": {
       "url": "https://ai.google.dev/gemini-api/docs/deprecations",
-      "checked_at": "2026-11-02",
-      "sha256": "af56eeed0e9e7d91a5076a3139e55541002f83610cc404978718199da1f00a74"
+      "checked_at": "2026-11-07",
+      "sha256": "5169f496f7680684a0903d0378e37dcd8af16257a3d24b1b960e85987e6f68f1"
     }
   },
   "models": [
@@ -1699,10 +1699,10 @@
       "shutdown_text": "November 12, 2025",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -1725,10 +1725,10 @@
       "shutdown_text": "November 12, 2025",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -1803,10 +1803,10 @@
       "shutdown_text": "December 2, 2025",
       "replacement": {
         "ids": [
-          "gemini-3.1-pro-preview"
+          "gemini-3.8-flash"
         ],
-        "text": "gemini-3.1-pro-preview",
-        "slug": "gemini-3-1-pro-preview"
+        "text": "gemini-3.8-flash",
+        "slug": "gemini-3-8-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -1829,10 +1829,10 @@
       "shutdown_text": "December 2, 2025",
       "replacement": {
         "ids": [
-          "gemini-3.1-pro-preview"
+          "gemini-3.8-flash"
         ],
-        "text": "gemini-3.1-pro-preview",
-        "slug": "gemini-3-1-pro-preview"
+        "text": "gemini-3.8-flash",
+        "slug": "gemini-3-8-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -1855,10 +1855,10 @@
       "shutdown_text": "December 2, 2025",
       "replacement": {
         "ids": [
-          "gemini-3.1-pro-preview"
+          "gemini-3.8-flash"
         ],
-        "text": "gemini-3.1-pro-preview",
-        "slug": "gemini-3-1-pro-preview"
+        "text": "gemini-3.8-flash",
+        "slug": "gemini-3-8-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -2075,11 +2075,11 @@
       "ics_sequence": 0
     },
     {
-      "slug": "gemini-2-5-flash-preview-09-25",
+      "slug": "gemini-2-5-flash-preview-09-2025",
       "provider": "gemini",
-      "name": "Gemini 2.5 Flash Preview 09 25",
+      "name": "Gemini 2.5 Flash Preview 09 2025",
       "ids": [
-        "gemini-2.5-flash-preview-09-25"
+        "gemini-2.5-flash-preview-09-2025"
       ],
       "status": "retired",
       "announced": null,
@@ -2097,7 +2097,7 @@
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": true,
-      "ics_uid": "gemini-2-5-flash-preview-09-25-2026-02-17@aiengineerguide.com",
+      "ics_uid": "gemini-2-5-flash-preview-09-2025-2026-02-17@aiengineerguide.com",
       "ics_sequence": 0
     },
     {
@@ -2801,10 +2801,10 @@
       "shutdown_text": "June 30, 2026",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash or the GA models on the Gemini Enterprise Agent Platform",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash or the GA models on the Gemini Enterprise Agent Platform",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -2827,10 +2827,10 @@
       "shutdown_text": "June 30, 2026",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash or the GA models on the Gemini Enterprise Agent Platform",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash or the GA models on the Gemini Enterprise Agent Platform",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -2853,10 +2853,10 @@
       "shutdown_text": "June 30, 2026",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash or the GA models on the Gemini Enterprise Agent Platform",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash or the GA models on the Gemini Enterprise Agent Platform",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -3284,32 +3284,6 @@
       "ics_sequence": 0
     },
     {
-      "slug": "embedding-2-preview",
-      "provider": "gemini",
-      "name": "embedding-2-preview",
-      "ids": [
-        "embedding-2-preview"
-      ],
-      "status": "retired",
-      "announced": null,
-      "released": "2026-03-10",
-      "shutdown": "2026-08-10",
-      "shutdown_kind": "exact",
-      "shutdown_text": "August 10, 2026",
-      "replacement": {
-        "ids": [
-          "gemini-embedding-2"
-        ],
-        "text": "gemini-embedding-2",
-        "slug": "gemini-embedding-2"
-      },
-      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
-      "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
-      "page": true,
-      "ics_uid": "embedding-2-preview-2026-08-10@aiengineerguide.com",
-      "ics_sequence": 0
-    },
-    {
       "slug": "gpt-5-2-chat-latest",
       "provider": "openai",
       "name": "GPT-5.2 chat latest",
@@ -3696,10 +3670,10 @@
       "shutdown_text": "October 22, 2026",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -3722,10 +3696,10 @@
       "shutdown_text": "October 22, 2026",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -3748,10 +3722,10 @@
       "shutdown_text": "October 22, 2026",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -3774,10 +3748,10 @@
       "shutdown_text": "October 22, 2026",
       "replacement": {
         "ids": [
-          "gemini-omni-1.1-flash"
+          "gemini-omni-1.2-flash"
         ],
-        "text": "gemini-omni-1.1-flash",
-        "slug": "gemini-omni-1-1-flash"
+        "text": "gemini-omni-1.2-flash",
+        "slug": "gemini-omni-1-2-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -4137,6 +4111,34 @@
       "ics_sequence": 0
     },
     {
+      "slug": "gemini-embedding-2-preview",
+      "provider": "gemini",
+      "name": "Gemini Embedding 2 Preview",
+      "ids": [
+        "gemini-embedding-2-preview"
+      ],
+      "status": "retired",
+      "announced": null,
+      "released": "2026-03-10",
+      "shutdown": "2026-11-06",
+      "shutdown_kind": "exact",
+      "shutdown_text": "November 6, 2026",
+      "replacement": {
+        "ids": [
+          "gemini-embedding-2",
+          "gemini-embedding-2-preview",
+          "gemini-embedding-2"
+        ],
+        "text": "gemini-embedding-2 (effective November 6, 2026, API requests to gemini-embedding-2-preview route to gemini-embedding-2)",
+        "slug": "gemini-embedding-2"
+      },
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
+      "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "page": true,
+      "ics_uid": "gemini-embedding-2-preview-2026-11-06@aiengineerguide.com",
+      "ics_sequence": 0
+    },
+    {
       "slug": "gemini-2-5-flash-native-audio-preview-12-2025",
       "provider": "gemini",
       "name": "Gemini 2.5 Flash Native Audio Preview 12 2025",
@@ -4316,6 +4318,64 @@
       "ics_sequence": 0
     },
     {
+      "slug": "gemini-2-5-flash",
+      "provider": "gemini",
+      "name": "Gemini 2.5 Flash",
+      "ids": [
+        "gemini-2.5-flash"
+      ],
+      "status": "deprecated",
+      "announced": null,
+      "released": "2025-06-17",
+      "shutdown": "2026-12-01",
+      "shutdown_kind": "earliest",
+      "shutdown_text": "December 1, 2026",
+      "replacement": {
+        "ids": [
+          "gemini-3.5-flash-lite",
+          "gemini-2.5-flash",
+          "gemini-2.5-flash",
+          "gemini-3.5-flash-lite"
+        ],
+        "text": "gemini-3.5-flash-lite (gemini-2.5-flash is no longer available in Google AI Studio; effective December 1, 2026, API requests to gemini-2.5-flash will automatically route to gemini-3.5-flash-lite)",
+        "slug": "gemini-3-5-flash-lite"
+      },
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
+      "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "page": true,
+      "ics_uid": "gemini-2-5-flash-tba@aiengineerguide.com",
+      "ics_sequence": 1
+    },
+    {
+      "slug": "gemini-2-5-pro",
+      "provider": "gemini",
+      "name": "Gemini 2.5 Pro",
+      "ids": [
+        "gemini-2.5-pro"
+      ],
+      "status": "deprecated",
+      "announced": null,
+      "released": "2025-06-17",
+      "shutdown": "2026-12-01",
+      "shutdown_kind": "earliest",
+      "shutdown_text": "December 1, 2026",
+      "replacement": {
+        "ids": [
+          "gemini-3.8-flash",
+          "gemini-2.5-pro",
+          "gemini-2.5-pro",
+          "gemini-3.8-flash"
+        ],
+        "text": "gemini-3.8-flash (gemini-2.5-pro is no longer available in Google AI Studio; effective December 1, 2026, API requests to gemini-2.5-pro will automatically route to gemini-3.8-flash)",
+        "slug": "gemini-3-8-flash"
+      },
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
+      "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "page": true,
+      "ics_uid": "gemini-2-5-pro-tba@aiengineerguide.com",
+      "ics_sequence": 1
+    },
+    {
       "slug": "chatgpt-image-latest",
       "provider": "openai",
       "name": "chatgpt-image-latest",
@@ -4330,11 +4390,11 @@
       "shutdown_text": "Dec 1, 2026",
       "replacement": {
         "ids": [
-          "gpt-image-2.5-sunburst",
-          "gpt-image-2.5-flare"
+          "gpt-image-2.6-sunburst",
+          "gpt-image-2.6-flare"
         ],
-        "text": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
-        "slug": "gpt-image-2-5-sunburst"
+        "text": "gpt-image-2.6-sunburst or gpt-image-2.6-flare",
+        "slug": "gpt-image-2-6-sunburst"
       },
       "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
@@ -4358,11 +4418,11 @@
       "shutdown_text": "Dec 1, 2026",
       "replacement": {
         "ids": [
-          "gpt-image-2.5-sunburst",
-          "gpt-image-2.5-flare"
+          "gpt-image-2.6-sunburst",
+          "gpt-image-2.6-flare"
         ],
-        "text": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
-        "slug": "gpt-image-2-5-sunburst"
+        "text": "gpt-image-2.6-sunburst or gpt-image-2.6-flare",
+        "slug": "gpt-image-2-6-sunburst"
       },
       "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
@@ -4385,17 +4445,44 @@
       "shutdown_text": "Dec 1, 2026",
       "replacement": {
         "ids": [
-          "gpt-image-2.5-sunburst",
-          "gpt-image-2.5-flare"
+          "gpt-image-2.6-sunburst",
+          "gpt-image-2.6-flare"
         ],
-        "text": "gpt-image-2.5-sunburst or gpt-image-2.5-flare",
-        "slug": "gpt-image-2-5-sunburst"
+        "text": "gpt-image-2.6-sunburst or gpt-image-2.6-flare",
+        "slug": "gpt-image-2-6-sunburst"
       },
       "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-image-1-mini-2026-12-01@aiengineerguide.com",
       "ics_sequence": 0
+    },
+    {
+      "slug": "gemini-omni-1-1-flash",
+      "provider": "gemini",
+      "name": "Gemini Omni 1.1 Flash",
+      "ids": [
+        "gemini-omni-1.1-flash"
+      ],
+      "status": "deprecated",
+      "announced": null,
+      "released": "2026-08-27",
+      "shutdown": "2026-12-03",
+      "shutdown_kind": "earliest",
+      "shutdown_text": "December 3, 2026",
+      "replacement": {
+        "ids": [
+          "gemini-omni-1.2-flash",
+          "gemini-omni-1.2-flash"
+        ],
+        "text": "gemini-omni-1.2-flash (Effective December 3, 2026, the endpoint is automatically routing API requests to gemini-omni-1.2-flash)",
+        "slug": "gemini-omni-1-2-flash"
+      },
+      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
+      "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "page": true,
+      "ics_uid": "gemini-omni-1-1-flash-tba@aiengineerguide.com",
+      "ics_sequence": 1
     },
     {
       "slug": "gpt-5",
@@ -4980,6 +5067,29 @@
       "source_url": "https://developers.openai.com/api/docs/deprecations",
       "page": true,
       "ics_uid": "gpt-realtime-mini-2027-01-20@aiengineerguide.com",
+      "ics_sequence": 0
+    },
+    {
+      "slug": "gpt-5-5-cyber-preview",
+      "provider": "openai",
+      "name": "GPT-5.5 cyber preview",
+      "ids": [
+        "gpt-5.5-cyber-preview"
+      ],
+      "status": "deprecated",
+      "announced": "2026-11-05",
+      "released": null,
+      "shutdown": "2027-02-01",
+      "shutdown_kind": "exact",
+      "shutdown_text": "February 1, 2027",
+      "replacement": {
+        "ids": [],
+        "text": "The most capable cyber model available to you."
+      },
+      "platform_note": "Dates apply to the OpenAI API. Fine-tuned models follow the same shutdown schedule as their base model. If you use OpenAI models through another platform, check that platform's own retirement schedule.",
+      "source_url": "https://developers.openai.com/api/docs/deprecations",
+      "page": true,
+      "ics_uid": "gpt-5-5-cyber-preview-2027-02-01@aiengineerguide.com",
       "ics_sequence": 0
     },
     {
@@ -5590,26 +5700,6 @@
       "ics_sequence": 0
     },
     {
-      "slug": "gemini-2-5-flash",
-      "provider": "gemini",
-      "name": "Gemini 2.5 Flash",
-      "ids": [
-        "gemini-2.5-flash"
-      ],
-      "status": "active",
-      "announced": null,
-      "released": "2025-06-17",
-      "shutdown": null,
-      "shutdown_kind": "none",
-      "shutdown_text": "No shutdown date announced",
-      "replacement": null,
-      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
-      "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
-      "page": false,
-      "ics_uid": "gemini-2-5-flash-tba@aiengineerguide.com",
-      "ics_sequence": 0
-    },
-    {
       "slug": "gemini-2-5-flash-lite",
       "provider": "gemini",
       "name": "Gemini 2.5 Flash-Lite",
@@ -5627,26 +5717,6 @@
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
       "ics_uid": "gemini-2-5-flash-lite-tba@aiengineerguide.com",
-      "ics_sequence": 0
-    },
-    {
-      "slug": "gemini-2-5-pro",
-      "provider": "gemini",
-      "name": "Gemini 2.5 Pro",
-      "ids": [
-        "gemini-2.5-pro"
-      ],
-      "status": "active",
-      "announced": null,
-      "released": "2025-06-17",
-      "shutdown": null,
-      "shutdown_kind": "none",
-      "shutdown_text": "No shutdown date announced",
-      "replacement": null,
-      "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
-      "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
-      "page": false,
-      "ics_uid": "gemini-2-5-pro-tba@aiengineerguide.com",
       "ics_sequence": 0
     },
     {
@@ -5731,9 +5801,10 @@
       "replacement": {
         "ids": [
           "gemini-3.6-flash",
+          "gemini-3.5-flash",
           "gemini-3.6-flash"
         ],
-        "text": "gemini-3.6-flash (not available to select in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to gemini-3.6-flash)",
+        "text": "gemini-3.6-flash (gemini-3.5-flash is no longer available in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to gemini-3.6-flash)",
         "slug": "gemini-3-6-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
@@ -5858,9 +5929,10 @@
       "replacement": {
         "ids": [
           "gemini-3.8-flash",
+          "gemini-3.7-flash",
           "gemini-3.8-flash"
         ],
-        "text": "gemini-3.8-flash (not available to select in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to gemini-3.8-flash)",
+        "text": "gemini-3.8-flash (gemini-3.7-flash is no longer available in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to gemini-3.8-flash)",
         "slug": "gemini-3-8-flash"
       },
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
@@ -6056,15 +6128,15 @@
       "ics_sequence": 0
     },
     {
-      "slug": "gemini-omni-1-1-flash",
+      "slug": "gemini-omni-1-2-flash",
       "provider": "gemini",
-      "name": "Gemini Omni 1.1 Flash",
+      "name": "Gemini Omni 1.2 Flash",
       "ids": [
-        "gemini-omni-1.1-flash"
+        "gemini-omni-1.2-flash"
       ],
       "status": "active",
       "announced": null,
-      "released": "2026-08-27",
+      "released": "2026-11-05",
       "shutdown": null,
       "shutdown_kind": "none",
       "shutdown_text": "No shutdown date announced",
@@ -6072,7 +6144,7 @@
       "platform_note": "Dates apply to the Gemini API and are the earliest possible shutdown dates Google publishes. If you use Gemini through another platform, check that platform's own schedule.",
       "source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "page": false,
-      "ics_uid": "gemini-omni-1-1-flash-tba@aiengineerguide.com",
+      "ics_uid": "gemini-omni-1-2-flash-tba@aiengineerguide.com",
       "ics_sequence": 0
     },
     {
@@ -6203,6 +6275,51 @@
     }
   ],
   "events": [
+    {
+      "guid": "gpt-5-5-cyber-preview-announced-2026-11-07",
+      "slug": "gpt-5-5-cyber-preview",
+      "event": "announced",
+      "date": "2026-11-07",
+      "shutdown": "2027-02-01"
+    },
+    {
+      "guid": "gemini-omni-1-1-flash-date-changed-2026-11-07",
+      "slug": "gemini-omni-1-1-flash",
+      "event": "date-changed",
+      "date": "2026-11-07",
+      "old_shutdown": null,
+      "shutdown": "2026-12-03"
+    },
+    {
+      "guid": "gemini-embedding-2-preview-announced-2026-11-07",
+      "slug": "gemini-embedding-2-preview",
+      "event": "announced",
+      "date": "2026-11-07",
+      "shutdown": "2026-11-06"
+    },
+    {
+      "guid": "gemini-2-5-pro-date-changed-2026-11-07",
+      "slug": "gemini-2-5-pro",
+      "event": "date-changed",
+      "date": "2026-11-07",
+      "old_shutdown": null,
+      "shutdown": "2026-12-01"
+    },
+    {
+      "guid": "gemini-2-5-flash-preview-09-2025-announced-2026-11-07",
+      "slug": "gemini-2-5-flash-preview-09-2025",
+      "event": "announced",
+      "date": "2026-11-07",
+      "shutdown": "2026-02-17"
+    },
+    {
+      "guid": "gemini-2-5-flash-date-changed-2026-11-07",
+      "slug": "gemini-2-5-flash",
+      "event": "date-changed",
+      "date": "2026-11-07",
+      "old_shutdown": null,
+      "shutdown": "2026-12-01"
+    },
     {
       "guid": "gemini-embedding-001-announced-2026-11-02",
       "slug": "gemini-embedding-001",
