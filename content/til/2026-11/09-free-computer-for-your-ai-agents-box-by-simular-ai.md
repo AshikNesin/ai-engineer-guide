@@ -13,7 +13,7 @@ If you wanted a free computer for your AI agents then [Box by Simular](https://b
 
 You get a 4GB memory with 20GB storage similar to [Instabox.sh](https://instabox.sh)
 
-And you get the all usual things like Screen, Terminal and things like that.
+And you get the all usual things like Screen, Terminal and things like that
 
 ![2026-11-09-at-01.46.40.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-11/alugi5urbyxrdtgfbizm)
 
