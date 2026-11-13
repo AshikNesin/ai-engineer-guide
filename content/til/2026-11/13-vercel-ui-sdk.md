@@ -14,3 +14,6 @@ If you're building AI agents and wanted to use a solid library for it, then you 
 {{< video "https://cdn.qblog.nesin.io/qblog/AIEngineerGuide/2026-11/dg6wbafcufygddr7vyaw.mp4" >}}
 
 ![2026-11-13-at-23.35.472x.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-11/kvb3tmmlr53khcqz7unk)
+
+## Reference
+- https://x.com/vercel/status/2120950020249895314
