@@ -1,5 +1,5 @@
 ---
-title: No AI Slop - Manifesto
+title: No AI Slop Manifesto
 url: til/no-ai-slop-manifesto
 tags:
   - bookmark
