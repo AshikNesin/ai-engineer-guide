@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-02T00:00:00Z",
-  "checked_at": "2026-11-02",
+  "generated_at": "2026-11-14T06:52:36Z",
+  "checked_at": "2026-11-14",
   "source": "https://models.dev/api.json",
   "source_license": "MIT (github.com/anomalyco/models.dev)",
   "pricing_urls": {
@@ -1048,6 +1048,29 @@
       "snapshot": false
     },
     {
+      "id": "claude-fable-5-2",
+      "provider": "anthropic",
+      "name": "Claude Fable 5.2",
+      "family": "claude-fable",
+      "context": 1000000,
+      "max_input": null,
+      "max_output": 128000,
+      "price_per_mtok": {
+        "input": 8.0,
+        "output": 40.0,
+        "cache_read": 0.2,
+        "cache_write": 10.0
+      },
+      "tokenizer": "claude-new",
+      "released": "2026-11-09",
+      "knowledge": "2026-06",
+      "reasoning": true,
+      "tool_call": true,
+      "open_weights": false,
+      "status": "active",
+      "snapshot": false
+    },
+    {
       "id": "claude-haiku-4-5",
       "provider": "anthropic",
       "name": "Claude Haiku 4.5",
@@ -1297,7 +1320,7 @@
       "reasoning": true,
       "tool_call": true,
       "open_weights": false,
-      "status": "active",
+      "status": "deprecated",
       "snapshot": false
     },
     {
@@ -1320,7 +1343,7 @@
       "reasoning": true,
       "tool_call": true,
       "open_weights": false,
-      "status": "active",
+      "status": "deprecated",
       "snapshot": true
     },
     {
@@ -1738,6 +1761,52 @@
       "snapshot": false
     },
     {
+      "id": "gemini-4-carbon",
+      "provider": "google",
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "context": 1048576,
+      "max_input": null,
+      "max_output": 32768,
+      "price_per_mtok": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache_read": 0.1,
+        "cache_write": null
+      },
+      "tokenizer": "gemini",
+      "released": "2026-11-10",
+      "knowledge": "2026-03",
+      "reasoning": true,
+      "tool_call": true,
+      "open_weights": false,
+      "status": "active",
+      "snapshot": false
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "provider": "google",
+      "name": "Gemini 4 Hydrogen",
+      "family": "gemini",
+      "context": 1048576,
+      "max_input": null,
+      "max_output": 65536,
+      "price_per_mtok": {
+        "input": 1.5,
+        "output": 7.5,
+        "cache_read": 0.075,
+        "cache_write": null
+      },
+      "tokenizer": "gemini",
+      "released": "2026-11-12",
+      "knowledge": "2026-03",
+      "reasoning": true,
+      "tool_call": true,
+      "open_weights": false,
+      "status": "active",
+      "snapshot": false
+    },
+    {
       "id": "gemini-flash-latest",
       "provider": "google",
       "name": "Gemini Flash Latest",
@@ -1803,6 +1872,52 @@
       "reasoning": true,
       "tool_call": true,
       "open_weights": false,
+      "status": "active",
+      "snapshot": false
+    },
+    {
+      "id": "gemma-4-26b-a4b-it",
+      "provider": "google",
+      "name": "Gemma 4 26B A4B IT",
+      "family": "gemma",
+      "context": 262144,
+      "max_input": null,
+      "max_output": 32768,
+      "price_per_mtok": {
+        "input": 0.0,
+        "output": 0.0,
+        "cache_read": null,
+        "cache_write": null
+      },
+      "tokenizer": "gemini",
+      "released": "2026-04-02",
+      "knowledge": null,
+      "reasoning": true,
+      "tool_call": true,
+      "open_weights": true,
+      "status": "active",
+      "snapshot": false
+    },
+    {
+      "id": "gemma-4-31b-it",
+      "provider": "google",
+      "name": "Gemma 4 31B IT",
+      "family": "gemma",
+      "context": 262144,
+      "max_input": null,
+      "max_output": 32768,
+      "price_per_mtok": {
+        "input": 0.0,
+        "output": 0.0,
+        "cache_read": null,
+        "cache_write": null
+      },
+      "tokenizer": "gemini",
+      "released": "2026-04-02",
+      "knowledge": null,
+      "reasoning": true,
+      "tool_call": true,
+      "open_weights": true,
       "status": "active",
       "snapshot": false
     },
@@ -2501,22 +2616,22 @@
       "provider": "mistral",
       "name": "Mistral Large",
       "family": "mistral-large",
-      "context": 262144,
+      "context": 1048576,
       "max_input": null,
       "max_output": 262144,
       "price_per_mtok": {
-        "input": 0.5,
-        "output": 1.5,
-        "cache_read": 0.05,
+        "input": 0.7,
+        "output": 2.1,
+        "cache_read": 0.07,
         "cache_write": null
       },
       "tokenizer": "other",
-      "released": "2024-11-01",
-      "knowledge": "2024-11",
-      "reasoning": false,
+      "released": "2026-10-06",
+      "knowledge": null,
+      "reasoning": true,
       "tool_call": true,
-      "open_weights": true,
-      "status": "active",
+      "open_weights": false,
+      "status": "beta",
       "snapshot": false
     },
     {
