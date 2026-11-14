@@ -23,7 +23,12 @@ Some of the interesting quotes from the manifesto
 > 4. AI cannot replace human judgement, it can only amplify our judgement (or lack thereof).
 > 8. Slop compounds. The more slop sits in our knowledge base, in chat, in code, the more of it the next agent reads and copies.
 
-![2026-11-15-at-00.04.12.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-11/dujlq5t62ivalzyxqmsr)
+Thus we the undersigned resolve that:
+> 13. We do our own thinking when working with a model. We explore resources, code, and prior art to truly understand the problem before the work starts.
+> 14. We own the intent, taste, and consequences of what we ship, however much AI helps us make it.
+> 15. When an agent wrote something we're sending, we make that clear, and we check the parts that matter before it goes out.
+> 18. Agent reviews, linters, and verifiers are useful but not sufficient. For now, we still review at least some subset of the outputs. What subset depends on the stakes.
+> 19. What shipped, who's using it, and how it's helping them matters FAR MORE than lines of code, prs merged, tokens spent, or the number of agents running in parallel.
 
 ## Reference
 - https://x.com/dexhorthy/status/2121660606256435325
