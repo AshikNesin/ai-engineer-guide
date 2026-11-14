@@ -2,7 +2,7 @@
 title: No AI Slop Manifesto
 url: til/no-ai-slop-manifesto
 tags:
-  - bookmark
+  - no-slop
 status: published
 date: 2026-11-14T00:00:00.000Z
 noindex: true
@@ -13,11 +13,11 @@ Speakers and attendees of AIE Code Summit 2026 (lead by Dex Horthy) have came to
 
 Some of the interesting quotes from the manifesto
 
-**Outcomes** over output
-**Understanding** over speed
-**Our own thinking** over a model's first draft
-**Better work** over easier work
-**Improving the system** over patching the output
+- **Outcomes** over output
+- **Understanding** over speed
+- **Our own thinking** over a model's first draft
+- **Better work** over easier work
+- **Improving the system** over patching the output
 
 > 3. Using AI doesn't necessarily make something slop. Slop happens when we pass AI output along without taking responsibility for the quality or the reader's experience.
 > 4. AI cannot replace human judgement, it can only amplify our judgement (or lack thereof).
