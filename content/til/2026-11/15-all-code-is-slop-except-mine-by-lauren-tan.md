@@ -5,7 +5,6 @@ tags:
   - bookmark
 status: published
 date: 2026-11-15T00:00:00.000Z
-noindex: true
 qblog_id: 1ad2f02e-08bc-473e-9c63-6503d8493f48
 ---
 
@@ -25,11 +24,11 @@ To improve our agents, we need to focus on improving these things:
 ![2026-11-15-at-00.24.42.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-11/yresc2rt7jc0mdyjrjqi)
 
 
-**2. Static analysis**: Have strict lint rules, tests and other usual things :)
+**2. Static analysis**: Have strict lint rules, tests, CI, and other usual things that we do to catch issues like in the good old days :)
 
 **3. Verification**: Runtime and formal
 
-**4. Prose**: Rules, AGENTS.md
+**4. Prose**: skills, AGENTS.md, Comments - anything that can't be enforced and requires agent judgement.
 
 > Rule: every time you correct an agent, don't add a line to AGENTS.md — make it a deterministic check, or better, design the invalid choice away entirely.
 
@@ -56,3 +55,5 @@ And in the Grok Bot codebase:
 And her full talk
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/O_zcc6Xl12g?si=MpFaKKBPoFpjc3Jb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Related
+- https://x.com/poteto/status/2111133080526495985
