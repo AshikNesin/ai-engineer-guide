@@ -45,8 +45,9 @@ export function convert(body, from, to, data) {
 export function curl(body, to, data) {
   const fmt = data.formats[to];
   const lines = [];
-  if (fmt.endpoint_verified === false) lines.push("# The REST path is unconfirmed in Google's API reference; check it before use.");
-  if (fmt.auth_verified === false) lines.push("# Auth header unconfirmed; check TypeSafe's docs.");
+  const note = (code) => { const w = data.warnings[code]; if (w) lines.push(`# ${w.text}${w.url ? ` ${w.url}` : ""}`); };
+  if (fmt.endpoint_verified === false) note("endpoint-unverified");
+  if (fmt.auth_verified === false) note("auth-unverified");
   const json = JSON.stringify(body, null, 2).replace(/'/g, "'\\''");
   lines.push(`curl ${fmt.endpoint.includes("$") ? `"${fmt.endpoint}"` : fmt.endpoint} \\`);
   for (const h of fmt.auth) lines.push(`  -H "${h}" \\`);

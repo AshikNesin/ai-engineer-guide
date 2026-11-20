@@ -53,4 +53,4 @@ Also send the same `safety_identifier` on every request of a conversation (or no
 
 ## Check your code
 
-Capture two consecutive request bodies from one session (ideally one with a tool change, a compaction or a new day) and paste them into the [prefix checker](/tools/reasoning-prefix-checker/). In tests, send Claude's `prefix_mismatch_behavior: "error"` so every change fails loudly, and fail on any `prefix_binding_mismatch` entry.
+Capture two consecutive request bodies from one session (ideally one with a tool change, a compaction or a new day) and paste them into the [prefix checker](/tools/reasoning-prefix-checker/). In tests, set Claude's `thinking.block_binding.prefix_mismatch_behavior` to `"error"` (with the beta header `anthropic-beta: thinking-binding-controls-2026-08-01`) so every change fails loudly, and fail on any `prefix_binding_mismatch` entry.

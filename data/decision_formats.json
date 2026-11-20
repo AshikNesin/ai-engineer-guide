@@ -46,6 +46,10 @@
         {
           "url": "https://developers.openai.com/api/docs/guides/decisions",
           "quote": "Use an `input_json` content part to pass structured evidence without first converting it to a string. Put the JSON object or array in `data`."
+        },
+        {
+          "url": "https://developers.openai.com/api/reference/resources/decisions/methods/create",
+          "note": "Score `levels`: 2 to 10, from the API reference (read 2026-11-19); no verbatim line stored."
         }
       ]
     },
@@ -95,6 +99,10 @@
         {
           "url": "https://aistudio.google.com/docs/decisions-api",
           "quote": "Serialize JSON objects and arrays to a string"
+        },
+        {
+          "url": "https://aistudio.google.com/docs/decisions-api",
+          "note": "Question keys match `[A-Za-z0-9_-]+`, up to 64 characters; choice `criteria` 2 to 255 options; score `criteria` 2 to 255 non-empty strings. From the Decisions API docs (read 2026-11-19); no verbatim line stored."
         }
       ]
     },
@@ -134,6 +142,10 @@
         {
           "url": "https://docs.typesafe.ai/api/system-one",
           "quote": "A System One request has `model`, `state` and `questions` (a map); score `criteria` has `maxItems: 10`."
+        },
+        {
+          "url": "https://docs.typesafe.ai/api/system-one",
+          "note": "Choice `criteria`: 1 to 255 options, from the System One request schema (read 2026-11-19). The maximum question count isn't documented."
         }
       ]
     },
@@ -167,9 +179,14 @@
           "quote": "Clef follows the System One API, so you can switch an existing Jev integration to Clef by changing the endpoint and model. Ask up to 64 questions per request."
         },
         {
-          "url": "https://developers.cloudflare.com/workers-ai/models/clef/"
+          "url": "https://developers.cloudflare.com/workers-ai/models/clef/",
+          "note": "Model page for `@cf/cloudflare/clef` (and `clef-flash`). Option limits and the `result` response wrapper are unconfirmed here."
         }
-      ]
+      ],
+      "response_wrapper": {
+        "value": "result",
+        "verified": false
+      }
     }
   },
   "warnings": {

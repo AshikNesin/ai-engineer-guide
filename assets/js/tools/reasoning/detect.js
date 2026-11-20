@@ -59,13 +59,16 @@ export function parseLog(text) {
     return arr;
   }
   const out = [];
-  raw.split("\n").forEach((line, i) => {
+  String(text).split("\n").forEach((line, i) => {
     const l = line.trim();
     if (!l) return;
-    try { out.push(JSON.parse(l)); } catch (err) {
+    let v;
+    try { v = JSON.parse(l); } catch (err) {
       const pos = jsonErrorPosition(l, err);
       throw new Error(`Line ${i + 1}: ${pos.message.replace(/^Line 1, /, "")}`);
     }
+    if (!v || typeof v !== "object" || Array.isArray(v)) throw new Error(`Line ${i + 1}: each line must be one request object.`);
+    out.push(v);
   });
   return out;
 }

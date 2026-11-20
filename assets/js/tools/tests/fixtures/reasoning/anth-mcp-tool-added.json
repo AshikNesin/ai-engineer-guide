@@ -1,6 +1,6 @@
 {
   "id": "anth-mcp-tool-added",
-  "label": "MCP tool added mid-chat",
+  "label": "Tool added to tools mid-chat (e.g. a new MCP tool)",
   "api": "anthropic",
   "a": {
     "model": "claude-fable-5-2",

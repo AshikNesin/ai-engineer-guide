@@ -111,7 +111,8 @@ function openaiVerdict(r, rules, id) {
 /** Model switch hand-off when A and B name different models. */
 export function switchHandOff(result, rules) {
   const { a, b } = result.models || {};
-  if (!a || !b || a === b) return null;
+  const undated = (id) => String(id).replace(/-\d{8}$/, "");
+  if (!a || !b || undated(a) === undated(b)) return null;
   const s = switchCheck([a], b, {}, rules);
   return { from: a, to: b, result: s.rows[0].result, why: s.rows[0].why };
 }

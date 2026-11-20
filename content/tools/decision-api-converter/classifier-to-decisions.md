@@ -16,11 +16,11 @@ howto:
   - "Rewrite any placeholder question, then copy the request for the API you picked."
 faq:
   - q: "Which classifier fields can a decision API answer?"
-    a: "Enums (pick one), booleans (yes/no), small integer ranges or integer enums (score), and arrays of enum values (one yes/no per value). Free text, other numbers and objects without enums need a generative step."
+    a: "Enums (pick one), booleans (yes/no), small integer ranges or integer enums (score), and arrays of enum values (one yes/no per value). Objects with `properties` are walked, so their enum, boolean and integer fields become questions too. Free text, other numbers and objects without `properties` need a generative step."
   - q: "What happens to my `confidence` field?"
-    a: "It's dropped. Decision APIs return probabilities and confidence for every answer, so you don't ask for them."
+    a: "A `number` field named like `confidence`, `probability` or `certainty` is dropped (an integer or enum one still becomes a question). Decision APIs return probabilities and confidence for every answer, so you don't ask for them."
   - q: "What about nullable enums?"
-    a: "The converter adds an `other` option. OpenAI recommends a fallback option such as `\"other\"` when your categories don't cover every possible input."
+    a: "For a pick-one question, the converter adds an `other` option (unless the enum already has one). A field you mark **Ordered?** becomes a score with no `other` level. OpenAI recommends a fallback option such as `\"other\"` when your categories don't cover every possible input."
 ---
 
 ## How the mapping works

@@ -223,7 +223,7 @@ function detailHtml(result, fix, handoff) {
   const info = result.notes.filter((n) => n.id !== "previous-response-id");
   if (info.length) parts.push(`<div class="rp-card"><h3>Notes</h3><ul>${info.map((n) => `<li>${md(n.text)}${n.url ? ` <a href="${n.url}" rel="noopener">Docs</a>` : n.ref ? ` <a href="${rules.sources[n.ref].url}" rel="noopener">Source</a>` : ""}</li>`).join("")}</ul></div>`);
   if (result.notCompared && result.notCompared.length) {
-    const sw = handoff ? `<p>The model changed from <code>${esc(handoff.from)}</code> to <code>${esc(handoff.to)}</code>: ${esc(handoff.why)} <a href="#" class="rp-to-switch">Open the model-switch tab</a>.</p>` : "";
+    const sw = handoff ? `<p>The model changed from <code>${esc(handoff.from)}</code> to <code>${esc(handoff.to)}</code>: ${esc(handoff.why)} <a href="#" class="rp-to-switch" data-from="${esc(handoff.from)}" data-to="${esc(handoff.to)}">Open the model-switch tab</a>.</p>` : "";
     parts.push(`<div class="rp-card"><h3>Not compared</h3><p>These differ, but they never count for the prefix check:</p><ul>${result.notCompared.map((n) => `<li><code>${esc(n.field)}</code>${n.detail ? `: ${esc(n.detail)}` : ""}</li>`).join("")}</ul>${sw}</div>`);
   }
   return parts.join("");
@@ -231,7 +231,7 @@ function detailHtml(result, fix, handoff) {
 
 function wireDetail(root) {
   root.querySelectorAll(".rp-copy-fix").forEach((btn) => btn.addEventListener("click", (e) => { copyText(btn.dataset.snippet, e.currentTarget); track("copy", { tool: TOOL, what: "fix" }); }));
-  root.querySelectorAll(".rp-to-switch").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); fromRequests(); selectTab("switch"); }));
+  root.querySelectorAll(".rp-to-switch").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); fromRequests({ a: { model: a.dataset.from }, b: { model: a.dataset.to } }); selectTab("switch"); }));
 }
 
 function runLog() {
@@ -334,7 +334,7 @@ function runSwitch() {
 }
 function addModel(id) {
   const v = String(id || "").trim();
-  if (!v || !/^[A-Za-z0-9._:-]{1,80}$/.test(v)) return;
+  if (!v || !MODEL_ID.test(v)) return;
   fromModels.push(v);
   chips();
   runSwitch();
@@ -345,19 +345,21 @@ function ensureOption(sel, id) {
   if (![...sel.options].some((o) => o.value === id)) sel.add(new Option(`${id} (not in our data)`, id));
   sel.value = id;
 }
-function fromRequests() {
-  const a = lastPair && lastPair.a;
-  const b = lastPair && lastPair.b;
+// Models from a pair of requests (default: the last pair in tab 1). Only valid IDs reach the hash.
+const MODEL_ID = /^[A-Za-z0-9._:-]{1,80}$/;
+function fromRequests(pair = lastPair) {
+  const a = pair && pair.a;
+  const b = pair && pair.b;
   if (!a || !b) return;
-  if (a.model) fromModels = [a.model];
-  if (b.model) ensureOption(toSel, b.model);
+  if (typeof a.model === "string" && MODEL_ID.test(a.model)) fromModels = [a.model];
+  if (typeof b.model === "string" && MODEL_ID.test(b.model)) ensureOption(toSel, b.model);
   chips();
   runSwitch();
 }
 $("rs-add-btn").addEventListener("click", () => addModel($("rs-add").value));
 $("rs-free").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); addModel(e.target.value); e.target.value = ""; } });
 [toSel, $("rs-platform"), $("rs-context"), $("rs-acct"), $("rs-refusal")].forEach((el) => el.addEventListener("change", () => { trackUsedOnce(TOOL); runSwitch(); }));
-$("rs-from-requests").addEventListener("click", fromRequests);
+$("rs-from-requests").addEventListener("click", () => fromRequests());
 $("rs-share").addEventListener("click", (e) => { copyText(location.href, e.currentTarget); track("copy", { tool: TOOL, what: "link" }); });
 
 // ---------------------------------------------------------------- tab 3

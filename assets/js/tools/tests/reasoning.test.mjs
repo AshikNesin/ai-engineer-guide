@@ -7,6 +7,7 @@ import { compare, verdict, switchHandOff, chooseFix } from "../reasoning/verdict
 import { switchCheck, anthropicReads } from "../reasoning/switch.js";
 import { readPaste, decodeEntries, summaryLine, recognizeError } from "../reasoning/decode.js";
 import { errorPathToSentIndex } from "../reasoning/anthropic.js";
+import { modelInfo } from "../reasoning/openai.js";
 import { canon, wordDiff, jsonErrorPosition } from "../reasoning/canon.js";
 import { parseRequest, parseLog, detectApi } from "../reasoning/detect.js";
 import { markdownReport } from "../reasoning/report.js";
@@ -240,4 +241,18 @@ test("parseLog reads JSONL and arrays", () => {
   assert.equal(parseLog('{"a":1}\n{"a":2}\n').length, 2);
   assert.equal(parseLog('[{"a":1},{"a":2},{"a":3}]').length, 3);
   assert.throws(() => parseLog('{"a":1}\n{"a":'), /Line 2:/);
+});
+
+// Review fixes (PR #20)
+test("gpt-5.12 is not treated as GPT-6.2 or later", () => {
+  assert.equal(modelInfo("gpt-5.12-mini", rules).prefix_drop, false);
+  assert.equal(modelInfo("gpt-6.10-mini", rules).prefix_drop, true);
+});
+test("JSONL rejects non-object lines and keeps line numbers with leading blanks", () => {
+  assert.throws(() => parseLog('{"a":1}\nnull'), /Line 2:/);
+  assert.throws(() => parseLog('\n\n{"a":1}\n{bad'), /Line 4:/);
+});
+test("decoder ignores null and non-array entries", () => {
+  assert.deepEqual(readPaste("[null]").entries, []);
+  assert.deepEqual(readPaste('{"object":"response","output":[],"input_transformations":{}}').entries, []);
 });

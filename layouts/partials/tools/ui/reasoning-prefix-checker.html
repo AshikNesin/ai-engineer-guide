@@ -76,7 +76,7 @@
         <div class="rs-add-row">
           <select id="rs-add">{{ partial "tools/reasoning-model-options.html" $rules }}</select>
           <button type="button" id="rs-add-btn">Add</button>
-          <input type="text" id="rs-free" placeholder="or type a model ID" autocomplete="off" spellcheck="false">
+          <input type="text" id="rs-free" aria-label="Model ID" placeholder="or type a model ID" autocomplete="off" spellcheck="false">
         </div></div>
       <div class="tool-field"><label for="rs-to">Switching to</label>
         <select id="rs-to">{{ partial "tools/reasoning-model-options.html" $rules }}</select></div>

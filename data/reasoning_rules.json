@@ -76,7 +76,8 @@
             "ref": "a-rn",
             "quote": "Claude Fable 5.2 and Claude Mythos 5.2 enforce the prefix check for every account, whatever its age."
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-mythos-5-2",
@@ -92,7 +93,8 @@
             "quote": "Claude Mythos 5.2 | 400 error",
             "anchor": "#outcomes"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-mythos-5-1",
@@ -108,7 +110,8 @@
             "quote": "Claude Mythos 5.1 | 400 error",
             "anchor": "#outcomes"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-fable-5-1",
@@ -129,7 +132,8 @@
             "ref": "a-rn",
             "quote": "Claude Fable 5.1 returns the error by default on accounts created on or after August 31, 2026"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-opus-5-5",
@@ -145,7 +149,8 @@
             "quote": "Claude Opus 5.5 | Possible 400 error",
             "anchor": "#outcomes"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-sonnet-5-5",
@@ -161,7 +166,8 @@
             "quote": "Claude Sonnet 5.5 | Possible 400 error",
             "anchor": "#outcomes"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-haiku-5-5",
@@ -177,7 +183,8 @@
             "quote": "Claude Haiku 5.5 | Possible 400 error",
             "anchor": "#outcomes"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-opus-5",
@@ -192,7 +199,8 @@
             "quote": "On the Claude API, other models, such as Claude Opus 5, don’t run it, and it doesn’t cover their blocks.",
             "anchor": "#which-models-run-the-prefix-check"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-fable-5",
@@ -207,7 +215,8 @@
             "quote": "On the Claude API, other models, such as Claude Opus 5, don’t run it, and it doesn’t cover their blocks.",
             "anchor": "#which-models-run-the-prefix-check"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-mythos-5",
@@ -222,7 +231,8 @@
             "quote": "On the Claude API, other models, such as Claude Opus 5, don’t run it, and it doesn’t cover their blocks.",
             "anchor": "#which-models-run-the-prefix-check"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-mythos-preview",
@@ -237,8 +247,14 @@
             "ref": "a-pt",
             "quote": "Each other, Claude Mythos Preview, Claude Opus 5, and the models in the first row",
             "anchor": "#earlier-models"
+          },
+          {
+            "ref": "a-msm",
+            "quote": "Mid-conversation system messages are available on Claude Fable 5.2, Claude Mythos 5.2, Claude Fable 5.1, Claude Mythos 5.1, Claude Fable 5, Claude Mythos 5, Claude Opus 5.5, Claude Opus 5, Claude Opus 4.8, Claude Sonnet 5.5, and Claude Haiku 5.5.",
+            "note": "Not in this list, so system messages are treated as unavailable."
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-opus-4-8",
@@ -253,7 +269,8 @@
             "quote": "Every Claude model reads blocks from Claude Opus 4.8, Claude Sonnet 5, Claude Haiku 4.5, and earlier Claude Opus, Claude Sonnet, and Claude Haiku models.",
             "anchor": "#earlier-models"
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-sonnet-5",
@@ -272,7 +289,8 @@
             "ref": "a-msm",
             "quote": "This feature is not available on Claude Sonnet 5."
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       },
       {
         "id": "claude-haiku-4-5",
@@ -286,8 +304,14 @@
             "ref": "a-pt",
             "quote": "Every Claude model reads blocks from Claude Opus 4.8, Claude Sonnet 5, Claude Haiku 4.5, and earlier Claude Opus, Claude Sonnet, and Claude Haiku models.",
             "anchor": "#earlier-models"
+          },
+          {
+            "ref": "a-msm",
+            "quote": "Mid-conversation system messages are available on Claude Fable 5.2, Claude Mythos 5.2, Claude Fable 5.1, Claude Mythos 5.1, Claude Fable 5, Claude Mythos 5, Claude Opus 5.5, Claude Opus 5, Claude Opus 4.8, Claude Sonnet 5.5, and Claude Haiku 5.5.",
+            "note": "Not in this list, so system messages are treated as unavailable."
           }
-        ]
+        ],
+        "checked": "2026-11-20"
       }
     ],
     "earlier_pattern": "^claude-(3-|3\\.|instant|2|(opus|sonnet|haiku)-[34](-|$))",
@@ -1887,7 +1911,7 @@
     },
     {
       "id": "anth-mcp-tool-added",
-      "label": "MCP tool added mid-chat"
+      "label": "Tool added to tools mid-chat (e.g. a new MCP tool)"
     },
     {
       "id": "anth-history-trimmed",

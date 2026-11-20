@@ -38,7 +38,7 @@ export function wordDiff(a, b) {
   const mb = tb.slice(head, tb.length - tail);
   const out = [];
   if (head) out.push({ op: "eq", text: ta.slice(0, head).join("") });
-  if (ma.length * mb.length > 250000) {
+  if (!ma.length || !mb.length || ma.length * mb.length > 250000) {
     if (ma.length) out.push({ op: "del", text: ma.join("") });
     if (mb.length) out.push({ op: "ins", text: mb.join("") });
   } else {

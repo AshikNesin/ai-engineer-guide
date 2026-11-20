@@ -4,50 +4,52 @@
   "mode": "migrate",
   "to": "openai",
   "input": {
-    "format": {
-      "type": "json_schema",
-      "name": "ticket",
-      "strict": true,
-      "schema": {
-        "type": "object",
-        "properties": {
-          "category": {
-            "type": "string",
-            "enum": [
-              "billing",
-              "technical",
-              "shipping"
-            ],
-            "description": "Which team should handle the ticket?"
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "name": "ticket",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "enum": [
+                "billing",
+                "technical",
+                "shipping"
+              ],
+              "description": "Which team should handle the ticket?"
+            },
+            "is_refund": {
+              "type": "boolean",
+              "description": "Is the customer asking for a refund?"
+            },
+            "severity": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "summary": {
+              "type": "string",
+              "description": "One-sentence summary."
+            },
+            "confidence": {
+              "type": "number"
+            }
           },
-          "is_refund": {
-            "type": "boolean",
-            "description": "Is the customer asking for a refund?"
-          },
-          "severity": {
-            "type": "string",
-            "enum": [
-              "low",
-              "medium",
-              "high"
-            ]
-          },
-          "summary": {
-            "type": "string",
-            "description": "One-sentence summary."
-          },
-          "confidence": {
-            "type": "number"
-          }
-        },
-        "required": [
-          "category",
-          "is_refund",
-          "severity",
-          "summary",
-          "confidence"
-        ],
-        "additionalProperties": false
+          "required": [
+            "category",
+            "is_refund",
+            "severity",
+            "summary",
+            "confidence"
+          ],
+          "additionalProperties": false
+        }
       }
     }
   },

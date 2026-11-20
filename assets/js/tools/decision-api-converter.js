@@ -15,6 +15,7 @@ const data = JSON.parse($("dc-data").textContent);
 const fixtures = JSON.parse($("dc-fixtures").textContent);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const md = (s) => esc(s).replace(/`([^`]+)`/g, "<code>$1</code>");
+const own = (o, k) => !!k && Object.prototype.hasOwnProperty.call(o, k);
 const pretty = (v) => JSON.stringify(v, null, 2);
 const bucket = (n) => (n === 0 ? "0" : n <= 3 ? "1-3" : "4+");
 
@@ -153,7 +154,7 @@ $("dc-copy-curl").addEventListener("click", (e) => { if (!lastCurl) return; copy
 
 // ---------------------------------------------------------------- examples
 function loadExample(id, to) {
-  const fx = fixtures[id];
+  const fx = own(fixtures, id) ? fixtures[id] : null;
   if (!fx) return false;
   if (fx.mode !== mode) setMode(fx.mode, false);
   ordered = { ...((fx.options && fx.options.ordered) || {}) };
@@ -169,7 +170,7 @@ function loadExample(id, to) {
 }
 $("dc-example").addEventListener("change", (e) => {
   if (!e.target.value) return;
-  const fx = fixtures[e.target.value];
+  const fx = own(fixtures, e.target.value) ? fixtures[e.target.value] : null;
   if (fx && fx.mode !== mode) setMode(fx.mode);
   loadExample(e.target.value);
   track("example_loaded", { tool: TOOL, example_id: e.target.value });
@@ -177,7 +178,7 @@ $("dc-example").addEventListener("change", (e) => {
 
 // Startup: ?example=<id>&to=<format> (fixture ids only, never user input).
 const q = new URLSearchParams(location.search);
-const qTo = data.formats[q.get("to")] ? q.get("to") : null;
+const qTo = own(data.formats, q.get("to")) ? q.get("to") : null;
 setMode(mode, false);
 if (!(q.get("example") && loadExample(q.get("example"), qTo))) {
   loadExample(app.dataset.example, qTo || app.dataset.to || null);

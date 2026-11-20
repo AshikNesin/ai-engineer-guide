@@ -50,7 +50,7 @@
     </table></div>
   </details>
 
-  <p class="tool-stamp">{{ len $d.warnings }} warnings, each tied to a quoted line from the provider's docs (last checked {{ $d.checked }}).</p>
+  <p class="tool-stamp">{{ len $d.warnings }} warning types. Most link to the provider's docs; format facts come from the sources listed on each <a href="{{ "/tools/decision-api-converter/openai-to-gemini/" | relURL }}">format pair page</a> (last checked {{ $d.checked }}).</p>
   <script type="application/json" id="dc-data">{{ os.ReadFile "data/decision_formats.json" | safeJS }}</script>
   {{ partial "tools/reasoning-fixtures.html" (dict "dir" "decisions" "id" "dc-fixtures") }}
 </div>

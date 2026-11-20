@@ -1,6 +1,6 @@
 {
   "id": "anth-cache-control-moved",
-  "label": "Only cache_control and key order differ (passes)",
+  "label": "Only cache_control, key order and max_tokens differ (passes)",
   "api": "anthropic",
   "a": {
     "model": "claude-fable-5-2",

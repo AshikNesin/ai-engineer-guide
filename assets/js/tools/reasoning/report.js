@@ -25,6 +25,7 @@ export function markdownReport({ result, verdicts, fix, rules, labels = {} }) {
   }
   if (fix) {
     lines.push("## Fix", "", stripMd(fix.summary));
+    if (fix.header) lines.push("", `Header: \`${fix.header}\``);
     if (fix.snippet) lines.push("", "```json", JSON.stringify(fix.snippet, null, 2), "```");
     const src = fix.sources && fix.sources[0];
     if (src) lines.push("", `Source: ${sourceUrl(src, rules)}`);

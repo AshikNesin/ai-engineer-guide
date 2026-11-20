@@ -15,9 +15,15 @@ const codes = (ws) => [...new Set(ws.map((w) => w.code))].sort();
 test("formats are sourced", () => {
   for (const [id, f] of Object.entries(data.formats)) {
     assert.ok(f.sources.length && f.sources.every((s) => s.url.startsWith("https://")), id);
+    // Every source carries a verbatim quote, or a note saying what it supports and that no quote is stored.
+    assert.ok(f.sources.every((s) => (s.quote && s.quote.trim()) || (s.note && s.note.trim())), id);
     assert.ok(f.default_model && f.endpoint, id);
   }
   assert.match(data.checked, /^\d{4}-\d{2}-\d{2}$/);
+  for (const p of data.pairs) {
+    const fx = fixtures.find((x) => x.id === p.example);
+    assert.ok(fx && fx.mode === "convert" && fx.to === p.to, p.id);
+  }
 });
 
 test("every pair page has a real example", () => {
@@ -101,4 +107,39 @@ test("unwraps schema wrappers", () => {
   assert.equal(unwrapSchema({ name: "t", input_schema: s }), s);
   assert.equal(unwrapSchema({ name: "t", parameters: s }), s);
   assert.equal(unwrapSchema(s), s);
+});
+
+// Review fixes (PR #20)
+test("a question named __proto__ stays an own key in map outputs", () => {
+  const body = { model: "gpt-6-luna", input: "x", questions: [{ type: "predicate", name: "__proto__", instructions: "q?" }] };
+  for (const to of ["gemini", "jev"]) {
+    const out = convert(body, "openai", to, data).body;
+    assert.ok(Object.prototype.hasOwnProperty.call(out.questions, "__proto__"), to);
+    assert.match(JSON.stringify(out), /"__proto__"/);
+  }
+});
+test("input_json parts survive history serialization", () => {
+  const body = { model: "gpt-6-luna", input: [{ role: "user", content: [{ type: "input_text", text: "hi" }, { type: "input_json", data: { order: 7 } }] }, { role: "assistant", content: "ok" }], questions: [{ type: "predicate", name: "a", instructions: "q?" }] };
+  const out = convert(body, "openai", "gemini", data).body;
+  assert.match(out.input, /\{"order":7\}/);
+});
+test("nullable enum that already has other doesn't get it twice", () => {
+  const m = migrate({ type: "object", properties: { c: { type: ["string", "null"], enum: ["a", "other", null], description: "Which?" } } });
+  assert.deepEqual(m.ir.questions[0].options.map((o) => o.value).filter((v) => v === "other").length, 1);
+});
+test("inherited names aren't treated as ordered", () => {
+  const m = migrate({ type: "object", properties: { toString: { type: "string", enum: ["a", "b"], description: "Which?" } } }, { ordered: {} });
+  assert.equal(m.ir.questions[0].kind, "choice");
+});
+test("a self-referencing schema doesn't overflow the stack", () => {
+  const s = { type: "object", properties: { ok: { type: "boolean", description: "Ok?" }, child: { $ref: "#" } } };
+  const m = migrate(s);
+  assert.ok(m.ir.questions.length >= 1);
+});
+test("suffixed duplicate keys stay within the key length limit", () => {
+  const long = "a".repeat(70);
+  const body = { model: "gpt-6-luna", input: "x", questions: [{ type: "predicate", name: long, instructions: "1" }, { type: "predicate", name: long, instructions: "2" }] };
+  const out = convert(body, "openai", "gemini", data).body;
+  for (const k of Object.keys(out.questions)) assert.ok(k.length <= 64 && /^[A-Za-z0-9_-]{1,64}$/.test(k), k);
+  assert.equal(Object.keys(out.questions).length, 2);
 });

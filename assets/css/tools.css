@@ -293,7 +293,7 @@ a.tool-card:hover { border-color: var(--t-link); }
 }
 
 /* ---- Reasoning prefix checker + decision converter (light-only pages) ---- */
-.tool-reasoning .rp-err { color: var(--t-bad); min-height: 1em; }
+.tool-reasoning .rp-err, .tool-decisions .rp-err { color: var(--t-bad); min-height: 1em; }
 .tool-reasoning .rp-targets { border: 1px solid var(--t-border); border-radius: 6px; padding: .5rem .75rem; margin: .75rem 0; }
 .tool-reasoning .rp-targets legend { font-size: 14px; color: var(--t-strong); padding: 0 .25rem; }
 .tool-reasoning .rp-target-group { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }

@@ -31,23 +31,26 @@ export function readPaste(text) {
     let source = null;
     for (const e of events) {
       const d = e.data;
-      if (d.type === "message_start" && d.message && Array.isArray(d.message.input_transformations)) { entries = d.message.input_transformations; source = "message_start"; }
+      if (d.type === "message_start" && d.message && Array.isArray(d.message.input_transformations)) { entries = objectsOnly(d.message.input_transformations); source = "message_start"; }
       const fromDelta = d.type === "message_delta" && (d.input_transformations || (d.delta && d.delta.input_transformations) || (d.message && d.message.input_transformations));
-      if (Array.isArray(fromDelta)) { entries = fromDelta; source = "message_delta"; }
+      if (Array.isArray(fromDelta)) { entries = objectsOnly(fromDelta); source = "message_delta"; }
       if (d.type === "error" && d.error) return { kind: "error", provider: "anthropic", error: d.error };
     }
     return { kind: "sse", provider: "anthropic", entries: entries || [], source };
   }
   let obj;
   try { obj = JSON.parse(raw); } catch (err) { throw new Error(jsonErrorPosition(raw, err).message); }
-  if (Array.isArray(obj)) return { kind: "array", provider: inferProvider(obj), entries: obj };
+  if (Array.isArray(obj)) return { kind: "array", provider: inferProvider(obj), entries: objectsOnly(obj) };
   if (obj && obj.type === "error" && obj.error) return { kind: "error", provider: "anthropic", error: obj.error };
   if (obj && obj.error && typeof obj.error === "object" && !obj.object) return { kind: "error", provider: obj.error.type === "invalid_request_error" && !("code" in obj.error) ? "anthropic" : "unknown", error: obj.error };
-  if (obj && (obj.object === "response" || Array.isArray(obj.output))) return { kind: "response", provider: "openai", entries: obj.input_transformations || [] };
-  if (obj && (obj.type === "message" || (obj.content && obj.usage))) return { kind: "response", provider: "anthropic", entries: obj.input_transformations || [] };
-  if (obj && Array.isArray(obj.input_transformations)) return { kind: "response", provider: inferProvider(obj.input_transformations), entries: obj.input_transformations };
+  if (obj && (obj.object === "response" || Array.isArray(obj.output))) return { kind: "response", provider: "openai", entries: objectsOnly(obj.input_transformations) };
+  if (obj && (obj.type === "message" || (obj.content && obj.usage))) return { kind: "response", provider: "anthropic", entries: objectsOnly(obj.input_transformations) };
+  if (obj && Array.isArray(obj.input_transformations)) return { kind: "response", provider: inferProvider(obj.input_transformations), entries: objectsOnly(obj.input_transformations) };
   throw new Error("Couldn't find `input_transformations` or an error in that. Paste the whole response or error body.");
 }
+
+// Keep only object entries; anything else (null, a map instead of an array) is ignored.
+const objectsOnly = (v) => (Array.isArray(v) ? v.filter((x) => x && typeof x === "object" && !Array.isArray(x)) : []);
 
 function inferProvider(arr) {
   const e = arr.find((x) => x && typeof x === "object");
@@ -78,7 +81,7 @@ export function summaryLine(counts) {
   const parts = [];
   if (counts.yours) parts.push(`${counts.yours} yours to fix`);
   if (counts.expected) parts.push(`${counts.expected} expected (not yours to fix)`);
-  if (counts.maybe) parts.push(`${counts.maybe} maybe yours`);
+  if (counts.maybe) parts.push(`${counts.maybe} maybe or usually not yours`);
   if (counts.unknown) parts.push(`${counts.unknown} unknown`);
   return `${counts.total} ${counts.total === 1 ? "entry" : "entries"}: ${parts.join(", ")}.`;
 }

@@ -71,7 +71,10 @@ export function migrate(input, opts = {}) {
   const keep = [];
   const dropped = [];
 
+  const isOrdered = (k) => Object.prototype.hasOwnProperty.call(ordered, k) && ordered[k] === true;
   const visit = (raw, path) => {
+    // A $ref that points back at an ancestor would recurse forever: keep deep fields as free text.
+    if (path.length > 12) { keep.push(path.join(".")); return; }
     const { schema: s, nullable } = unNull(raw, root);
     const field = path.join(".");
     const key = keyOf(path);
@@ -86,9 +89,11 @@ export function migrate(input, opts = {}) {
     const opts2 = (t === "string" || t === undefined) ? enumOptions(s) : null;
     if (opts2 && opts2.length >= 2) {
       if (!desc) flags.push("write-a-question");
-      if (nullable) { opts2.push({ value: "other", description: null }); flags.push("added-other"); }
-      if (ordered[key]) {
-        questions.push({ key, kind: "score", instructions: desc || `Rate ${human}.`, instructionParts: null, levels: opts2.filter((o) => o.value !== "other").map((o) => ({ label: String(o.value), description: o.description })) });
+      if (nullable && !opts2.some((o) => o.value === "other")) { opts2.push({ value: "other", description: null }); flags.push("added-other"); }
+      if (isOrdered(key)) {
+        // Ordered: levels in enum order. A score has no "other" level, so a nullable field gets none.
+        const added = flags.includes("added-other");
+        questions.push({ key, kind: "score", instructions: desc || `Rate ${human}.`, instructionParts: null, levels: (added ? opts2.slice(0, -1) : opts2).map((o) => ({ label: String(o.value), description: o.description })) });
         mapping.push({ field, key, type: "score", flags: [...flags.filter((f) => f !== "added-other"), "describe-levels"], orderable: true });
       } else {
         questions.push({ key, kind: "choice", instructions: desc || `Which ${human} applies?`, instructionParts: null, options: opts2 });

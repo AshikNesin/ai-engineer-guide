@@ -33,7 +33,7 @@ faq:
 
 ## How the converter works
 
-It reads your request into one shared shape (yes/no, pick one, ordered rubric, plus the input), then writes it out in the target format. Each step that can't carry something across adds a warning with a link to the provider's docs:
+It reads your request into one shared shape (yes/no, pick one, ordered rubric, plus the input), then writes it out in the target format. Each step that can't carry something across adds a warning, most with a link to the provider's docs:
 
 - **Yes/no criteria.** OpenAI predicates have no criteria, so Gemini's or System One's definitions are folded into `instructions`.
 - **Option order.** Gemini sorts option keys alphabetically. OpenAI keeps an array in your order.
@@ -45,4 +45,4 @@ Not sure a decision API fits? [Turn your classifier schema into decision questio
 
 ## How we check this
 
-Every format detail and warning is tied to a line from the provider's docs, checked {{< decision-checked >}}. Where the docs don't confirm something (the Gemini REST path, the Jev auth header and question limit, Clef's response wrapper), the converter says so instead of guessing.
+Format details come from the providers' docs (quoted on each format pair page), checked {{< decision-checked >}}. Where the docs don't confirm something (the Gemini REST path, the Jev auth header and question limit, Clef's response wrapper), the converter says so instead of guessing.

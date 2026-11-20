@@ -19,6 +19,12 @@ export function detectFormat(body) {
 
 const textOfParts = (parts) => parts.filter((p) => p && (p.type === "input_text" || p.type === "text" || typeof p.text === "string")).map((p) => p.text).join("\n");
 
+// Assign as an own property, so a key like "__proto__" isn't lost.
+const put = (obj, k, v) => Object.defineProperty(obj, k, { value: v, enumerable: true, writable: true, configurable: true });
+
+// Text and input_json parts as text (JSON kept as a JSON string), for history serialization.
+const partsToText = (parts) => parts.map((p) => (p && p.type === "input_json" ? JSON.stringify(p.data) : p && typeof p.text === "string" ? p.text : null)).filter((x) => x !== null).join("\n");
+
 // ---------------------------------------------------------------- parse
 export function parse(body, format, warn) {
   if (format === "openai") return parseOpenAI(body, warn);
@@ -120,6 +126,7 @@ export function emitOpenAI(ir, fmt, warn) {
     if (q.kind === "yesno" && (q.yes || q.no)) {
       instructions = `${q.instructions}${q.instructions ? " " : ""}${q.yes ? `Yes means: ${q.yes}` : ""}${q.yes && q.no ? " " : ""}${q.no ? `No means: ${q.no}` : ""}`;
       warn("criteria-folded", q.key);
+      if (q.instructionParts) warn("instructions-parts", q.key);
     }
     out.instructions = instructions;
     if (q.kind === "choice") {
@@ -158,16 +165,17 @@ function keyFor(q, fmt, warn, used) {
     warn("key-invalid", q.key, `Key \`${key}\` doesn't match ${fmt.short}'s pattern, so it became \`${k2}\`.`);
     key = k2;
   }
+  const maxLen = Number((/\{1,(\d+)\}/.exec(fmt.key_pattern || "") || [])[1]) || Infinity;
   let k = key;
   let n = 2;
-  while (used.has(k)) k = `${key}_${n++}`;
+  while (used.has(k)) { const suf = `_${n++}`; k = `${key.slice(0, Math.max(1, maxLen - suf.length))}${suf}`; }
   used.add(k);
   return k;
 }
 
 function serializeHistory(msgs) {
   return msgs.map((m) => {
-    const c = typeof m.content === "string" ? m.content : Array.isArray(m.content) ? textOfParts(m.content) : JSON.stringify(m);
+    const c = typeof m.content === "string" ? m.content : Array.isArray(m.content) ? partsToText(m.content) : JSON.stringify(m);
     return `${m.role || m.type || "item"}: ${c}`;
   }).join("\n");
 }
@@ -192,7 +200,7 @@ export function emitGemini(ir, fmt, warn) {
     }
     if (q.kind === "choice") {
       out.criteria = {};
-      q.options.forEach((o) => { out.criteria[String(o.value)] = o.description ?? ""; });
+      q.options.forEach((o) => { put(out.criteria, String(o.value), o.description ?? ""); });
       const keys = q.options.map((o) => String(o.value));
       const sorted = [...keys].sort(byteCompare);
       if (keys.join("\u0000") !== sorted.join("\u0000")) {
@@ -206,7 +214,7 @@ export function emitGemini(ir, fmt, warn) {
       out.criteria = q.levels.map(levelText);
       count(warn, fmt, "levels", q.key, out.criteria.length);
     }
-    questions[key] = out;
+    put(questions, key, out);
     n += 1;
   }
   count(warn, fmt, "questions", null, n);
@@ -226,11 +234,11 @@ export function emitSystemOne(ir, fmt, warn, variant) {
     if (q.kind === "box" && variant !== "jev") { warn("box-unsupported", q.key); continue; }
     const key = keyFor(q, fmt, warn, used);
     const out = { type: q.kind === "box" ? "box" : fmt.types[q.kind], instructions: q.instructionParts || q.instructions };
-    if (q.kind === "box") { questions[key] = { ...q.raw, type: "box", instructions: out.instructions }; n += 1; continue; }
+    if (q.kind === "box") { put(questions, key, { ...q.raw, type: "box", instructions: out.instructions }); n += 1; continue; }
     if (q.kind === "yesno" && (q.yes || q.no)) out.criteria = { true: q.yes ?? null, false: q.no ?? null };
     if (q.kind === "choice") {
       out.criteria = {};
-      q.options.forEach((o) => { out.criteria[String(o.value)] = o.description ?? null; });
+      q.options.forEach((o) => { put(out.criteria, String(o.value), o.description ?? null); });
       count(warn, fmt, "choices", q.key, q.options.length);
     }
     if (q.kind === "score") {
@@ -238,7 +246,7 @@ export function emitSystemOne(ir, fmt, warn, variant) {
       out.criteria = q.levels.map(levelText);
       count(warn, fmt, "levels", q.key, out.criteria.length);
     }
-    questions[key] = out;
+    put(questions, key, out);
     n += 1;
   }
   count(warn, fmt, "questions", null, n);

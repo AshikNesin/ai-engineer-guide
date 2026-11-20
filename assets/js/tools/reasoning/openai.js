@@ -57,8 +57,8 @@ export function modelInfo(model, rules) {
   if (known) return { ...known, known: true };
   const family = familyOf(model, rules);
   const v = /^gpt-(\d+)(?:\.(\d+))?$/.exec(family);
-  const num = v ? Number(v[1]) + Number(v[2] || 0) / 10 : null;
-  const late = num !== null && num >= 6.2;
+  // Compare major, then minor as an integer (gpt-5.12 is 5.12, not 6.2).
+  const late = !!v && (Number(v[1]) > 6 || (Number(v[1]) === 6 && Number(v[2] || 0) >= 2));
   return { id: model, family, prefix_drop: late, end_user_check: late, instructions_after_input: late, known: false };
 }
 
@@ -158,7 +158,7 @@ export function compareOpenAI(A, B, opts = {}, rules) {
     if (["input", "tools", "text", "reasoning", "instructions", "safety_identifier"].includes(k)) continue;
     if (canon(A[k], { dropKeys: [] }) !== canon(B[k], { dropKeys: [] })) notCompared.push({ field: k, a: A[k], b: B[k] });
   }
-  if (A.reasoning && B.reasoning && canon({ ...A.reasoning, effort: null }) !== canon({ ...B.reasoning, effort: null })) notCompared.push({ field: "reasoning (other than effort)", a: A.reasoning, b: B.reasoning });
+  if ((A.reasoning || B.reasoning) && canon({ ...(A.reasoning || {}), effort: null }) !== canon({ ...(B.reasoning || {}), effort: null })) notCompared.push({ field: "reasoning (other than effort)", a: A.reasoning, b: B.reasoning });
   const order = (c) => (c.pathB && c.pathB.startsWith("input.") ? 1000 + Number(c.pathB.split(".")[1]) : 0);
   const sorted = changes.slice().sort((x, y) => order(x) - order(y));
   return {
