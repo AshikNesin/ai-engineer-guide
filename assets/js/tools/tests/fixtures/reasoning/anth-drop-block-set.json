@@ -1,0 +1,73 @@
+{
+  "id": "anth-drop-block-set",
+  "label": "drop_block set (stopgap)",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent. Today is 2026-11-18.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fix the failing test."
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "betas": [
+      "thinking-binding-controls-2026-08-01"
+    ],
+    "thinking": {
+      "type": "adaptive",
+      "block_binding": {
+        "prefix_mismatch_behavior": "drop_block"
+      }
+    },
+    "system": "You are a coding agent. Today is 2026-11-19.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fix the failing test."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigA1"
+          },
+          {
+            "type": "text",
+            "text": "Done."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Now run the linter."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "system-changed",
+      "path_b": "system"
+    },
+    "invalid_paths": [
+      "messages.1.content.0"
+    ],
+    "verdicts": {
+      "claude-fable-5-2": "dropped_not_billed",
+      "claude-opus-5-5": "dropped_not_billed",
+      "claude-opus-5": "none"
+    },
+    "fix": "anthropic-update-context-in-user-turn"
+  }
+}

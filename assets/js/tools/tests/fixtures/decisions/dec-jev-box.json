@@ -1,0 +1,30 @@
+{
+  "id": "dec-jev-box",
+  "label": "Jev box question to Gemini",
+  "mode": "convert",
+  "to": "gemini",
+  "input": {
+    "model": "jev-latest",
+    "state": "Photo of a damaged parcel.",
+    "questions": {
+      "damage": {
+        "type": "box",
+        "instructions": "Where is the damage?"
+      },
+      "damaged": {
+        "type": "noul",
+        "instructions": "Is the parcel damaged?"
+      }
+    }
+  },
+  "expect": {
+    "warnings": [
+      "box-unsupported",
+      "probability-range",
+      "model-reset"
+    ],
+    "question_keys": [
+      "damaged"
+    ]
+  }
+}

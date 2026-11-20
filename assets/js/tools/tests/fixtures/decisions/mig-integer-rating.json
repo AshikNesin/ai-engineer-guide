@@ -1,0 +1,29 @@
+{
+  "id": "mig-integer-rating",
+  "label": "Integer 1-5 rating",
+  "mode": "migrate",
+  "to": "gemini",
+  "input": {
+    "type": "object",
+    "properties": {
+      "rating": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      }
+    }
+  },
+  "expect": {
+    "questions": [
+      [
+        "rating",
+        "score"
+      ]
+    ],
+    "flags": {
+      "rating": [
+        "describe-levels"
+      ]
+    }
+  }
+}

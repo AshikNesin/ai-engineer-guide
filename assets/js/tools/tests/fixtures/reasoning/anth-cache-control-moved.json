@@ -1,0 +1,93 @@
+{
+  "id": "anth-cache-control-moved",
+  "label": "Only cache_control and key order differ (passes)",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": [
+      {
+        "type": "text",
+        "text": "You are a coding agent.",
+        "cache_control": {
+          "type": "ephemeral"
+        }
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Fix the failing test."
+          }
+        ]
+      }
+    ]
+  },
+  "b": {
+    "messages": [
+      {
+        "content": [
+          {
+            "text": "Fix the failing test.",
+            "type": "text",
+            "cache_control": {
+              "type": "ephemeral"
+            }
+          }
+        ],
+        "role": "user"
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigC1"
+          },
+          {
+            "type": "text",
+            "text": "Done."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Now run the linter."
+      }
+    ],
+    "system": [
+      {
+        "text": "You are a coding agent.",
+        "type": "text"
+      }
+    ],
+    "max_tokens": 8192,
+    "model": "claude-fable-5-2"
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": null,
+    "invalid_paths": [],
+    "verdicts": {
+      "claude-fable-5-2": "none",
+      "claude-mythos-5-2": "none",
+      "claude-mythos-5-1": "none",
+      "claude-fable-5-1": "none",
+      "claude-opus-5-5": "none",
+      "claude-sonnet-5-5": "none",
+      "claude-haiku-5-5": "none",
+      "claude-opus-5": "none"
+    },
+    "not_compared": [
+      "max_tokens",
+      "cache_control"
+    ]
+  }
+}

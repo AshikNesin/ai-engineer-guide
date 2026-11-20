@@ -1,0 +1,96 @@
+{
+  "id": "dec-openai-mixed",
+  "label": "OpenAI complaint router to Gemini",
+  "mode": "convert",
+  "to": "gemini",
+  "input": {
+    "model": "gpt-6-luna",
+    "input": "I was charged twice for my order.",
+    "questions": [
+      {
+        "type": "predicate",
+        "name": "refund_requested",
+        "instructions": "Is the customer asking for a refund?"
+      },
+      {
+        "type": "choice",
+        "name": "department",
+        "instructions": "Which department should handle this complaint?",
+        "choices": [
+          {
+            "value": "billing",
+            "description": "Payments, invoices, and refunds."
+          },
+          {
+            "value": "technical",
+            "description": "Bugs, errors, and app problems."
+          },
+          {
+            "value": "shipping",
+            "description": "Delivery, tracking, and returns."
+          },
+          {
+            "value": "other",
+            "description": "Anything else."
+          }
+        ]
+      },
+      {
+        "type": "score",
+        "name": "severity",
+        "instructions": "How severe is the problem?",
+        "levels": [
+          {
+            "label": "Cosmetic",
+            "description": "Appearance only; no lost functionality."
+          },
+          {
+            "label": "Degraded",
+            "description": "Works, but slower or with workarounds."
+          },
+          {
+            "label": "Blocking",
+            "description": "The customer can't continue."
+          }
+        ]
+      }
+    ]
+  },
+  "expect": {
+    "warnings": [
+      "option-order",
+      "score-merged",
+      "probability-range",
+      "model-reset"
+    ],
+    "body": {
+      "model": "gemini-decision-1",
+      "input": "I was charged twice for my order.",
+      "questions": {
+        "refund_requested": {
+          "type": "noul",
+          "instructions": "Is the customer asking for a refund?"
+        },
+        "department": {
+          "type": "choice",
+          "instructions": "Which department should handle this complaint?",
+          "criteria": {
+            "billing": "Payments, invoices, and refunds.",
+            "technical": "Bugs, errors, and app problems.",
+            "shipping": "Delivery, tracking, and returns.",
+            "other": "Anything else."
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is the problem?",
+          "criteria": [
+            "Cosmetic: Appearance only; no lost functionality.",
+            "Degraded: Works, but slower or with workarounds.",
+            "Blocking: The customer can't continue."
+          ]
+        }
+      }
+    }
+  }
+}

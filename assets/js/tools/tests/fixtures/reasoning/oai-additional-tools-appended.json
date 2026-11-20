@@ -1,0 +1,88 @@
+{
+  "id": "oai-additional-tools-appended",
+  "label": "Tools added with additional_tools (passes)",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.2-astra",
+    "tools": [
+      {
+        "type": "function",
+        "name": "search",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "input": [
+      {
+        "role": "user",
+        "content": "Find the bug."
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.2-astra",
+    "tools": [
+      {
+        "type": "function",
+        "name": "search",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "input": [
+      {
+        "role": "user",
+        "content": "Find the bug."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Found it."
+          }
+        ]
+      },
+      {
+        "type": "additional_tools",
+        "role": "developer",
+        "tools": [
+          {
+            "type": "function",
+            "name": "run_tests",
+            "parameters": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Now test it."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": null,
+    "invalid_paths": [],
+    "verdicts": {
+      "gpt-6.2-astra": "none"
+    }
+  }
+}

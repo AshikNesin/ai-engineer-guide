@@ -1,0 +1,4 @@
+{{- /* Return one parsed fixture: partial "tools/reasoning-fixture.html" (dict "dir" "reasoning" "id" "anth-system-date") */ -}}
+{{- $out := dict -}}
+{{- with resources.Get (printf "js/tools/tests/fixtures/%s/%s.json" .dir .id) -}}{{ $out = .Content | transform.Unmarshal }}{{- end -}}
+{{- return $out -}}

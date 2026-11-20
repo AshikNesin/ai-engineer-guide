@@ -1,0 +1,7 @@
+{{- /* One quoted source: partial "tools/reasoning-source.html" (dict "s" $source "checked" "2026-11-20") */ -}}
+{{- $rules := site.Data.reasoning_rules -}}
+{{- $url := .s.url -}}{{- $title := "" -}}
+{{- with .s.ref }}{{ with index $rules.sources . }}{{ $url = printf "%s%s" .url ($.s.anchor | default "") }}{{ $title = .title }}{{ end }}{{ end -}}
+{{- $host := "" }}{{ with $url }}{{ $host = (urls.Parse .).Host }}{{ end -}}
+<blockquote>{{ .s.quote | markdownify }}</blockquote>
+<p class="helptext"><a href="{{ $url }}" rel="noopener">{{ $title | default $host }}</a>{{ with .checked }} (checked {{ . }}){{ end }}</p>

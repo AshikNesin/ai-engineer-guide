@@ -1,0 +1,17 @@
+{
+  "id": "mig-nothing",
+  "label": "Only free text",
+  "mode": "migrate",
+  "to": "openai",
+  "input": {
+    "type": "object",
+    "properties": {
+      "summary": {
+        "type": "string"
+      }
+    }
+  },
+  "expect": {
+    "error": "Nothing here maps to a decision question"
+  }
+}

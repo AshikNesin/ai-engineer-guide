@@ -1,0 +1,68 @@
+{
+  "id": "oai-effort-changed",
+  "label": "GPT-6.2 reasoning effort changed",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.2-astra",
+    "reasoning": {
+      "effort": "low"
+    },
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.2-astra",
+    "reasoning": {
+      "effort": "high"
+    },
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Here's a plan."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Now do step 1 carefully."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "effort-changed",
+      "path_b": "reasoning.effort"
+    },
+    "invalid_paths": [
+      "input.1"
+    ],
+    "verdicts": {
+      "gpt-6.2-astra": "dropped",
+      "gpt-6.2-sol": "dropped",
+      "gpt-6.1-sol": "none"
+    },
+    "fix": "openai-configuration-update-effort"
+  }
+}

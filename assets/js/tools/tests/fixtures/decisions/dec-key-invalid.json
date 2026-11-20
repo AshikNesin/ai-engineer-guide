@@ -1,0 +1,26 @@
+{
+  "id": "dec-key-invalid",
+  "label": "Key with spaces to Gemini",
+  "mode": "convert",
+  "to": "gemini",
+  "input": {
+    "model": "jev-latest",
+    "state": "x",
+    "questions": {
+      "is refund?": {
+        "type": "noul",
+        "instructions": "Refund?"
+      }
+    }
+  },
+  "expect": {
+    "warnings": [
+      "key-invalid",
+      "probability-range",
+      "model-reset"
+    ],
+    "question_keys": [
+      "is_refund_"
+    ]
+  }
+}

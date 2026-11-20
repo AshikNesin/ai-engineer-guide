@@ -1,0 +1,75 @@
+{
+  "id": "mig-ordered",
+  "label": "Severity as an ordered score",
+  "mode": "migrate",
+  "to": "openai",
+  "input": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "billing",
+          "technical",
+          "shipping"
+        ],
+        "description": "Which team should handle the ticket?"
+      },
+      "is_refund": {
+        "type": "boolean",
+        "description": "Is the customer asking for a refund?"
+      },
+      "severity": {
+        "type": "string",
+        "enum": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "summary": {
+        "type": "string",
+        "description": "One-sentence summary."
+      },
+      "confidence": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "category",
+      "is_refund",
+      "severity",
+      "summary",
+      "confidence"
+    ],
+    "additionalProperties": false
+  },
+  "options": {
+    "ordered": {
+      "severity": true
+    }
+  },
+  "expect": {
+    "questions": [
+      [
+        "category",
+        "choice"
+      ],
+      [
+        "is_refund",
+        "yesno"
+      ],
+      [
+        "severity",
+        "score"
+      ]
+    ],
+    "levels": {
+      "severity": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  }
+}

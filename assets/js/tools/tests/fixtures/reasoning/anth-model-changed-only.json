@@ -1,0 +1,63 @@
+{
+  "id": "anth-model-changed-only",
+  "label": "Only the model changed",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-sonnet-5-5",
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Summarize the doc."
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-haiku-5-5",
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Summarize the doc."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigM1"
+          },
+          {
+            "type": "text",
+            "text": "Summary."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Shorter, please."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": null,
+    "invalid_paths": [],
+    "verdicts": {
+      "claude-haiku-5-5": "none",
+      "claude-sonnet-5-5": "none"
+    },
+    "switch": {
+      "from": "claude-sonnet-5-5",
+      "to": "claude-haiku-5-5",
+      "result": "dropped"
+    },
+    "not_compared": [
+      "model"
+    ]
+  }
+}

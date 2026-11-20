@@ -1,0 +1,65 @@
+{
+  "id": "dec-openai-to-jev",
+  "label": "OpenAI complaint router to Jev",
+  "mode": "convert",
+  "to": "jev",
+  "input": {
+    "model": "gpt-6-luna",
+    "input": "I was charged twice for my order.",
+    "questions": [
+      {
+        "type": "predicate",
+        "name": "refund_requested",
+        "instructions": "Is the customer asking for a refund?"
+      },
+      {
+        "type": "choice",
+        "name": "department",
+        "instructions": "Which department should handle this complaint?",
+        "choices": [
+          {
+            "value": "billing",
+            "description": "Payments, invoices, and refunds."
+          },
+          {
+            "value": "technical",
+            "description": "Bugs, errors, and app problems."
+          },
+          {
+            "value": "shipping",
+            "description": "Delivery, tracking, and returns."
+          },
+          {
+            "value": "other",
+            "description": "Anything else."
+          }
+        ]
+      },
+      {
+        "type": "score",
+        "name": "severity",
+        "instructions": "How severe is the problem?",
+        "levels": [
+          {
+            "label": "Cosmetic",
+            "description": "Appearance only; no lost functionality."
+          },
+          {
+            "label": "Degraded",
+            "description": "Works, but slower or with workarounds."
+          },
+          {
+            "label": "Blocking",
+            "description": "The customer can't continue."
+          }
+        ]
+      }
+    ]
+  },
+  "expect": {
+    "warnings": [
+      "score-merged",
+      "model-reset"
+    ]
+  }
+}

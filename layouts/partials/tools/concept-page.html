@@ -1,0 +1,14 @@
+{{- /* Hand-written explainer page inside a tool section (front matter concept: true). */ -}}
+<article class="tool tool-reasoning">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Params.h1 | default .Title }}</h1>
+    {{ with .Description }}<p class="tool-promise">{{ . }}</p>{{ end }}
+  </header>
+  <section class="tool-section" style="margin-top:0"><content>{{ .Content }}</content></section>
+  <div class="tool-actions"><a class="tool-btn primary" href="{{ "/tools/reasoning-prefix-checker/" | relURL }}">Check your requests</a>
+    <a class="tool-btn" href="{{ "/tools/reasoning-prefix-checker/input-transformations/" | relURL }}">Decode a response</a></div>
+  {{ partial "tools/faq.html" . }}
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

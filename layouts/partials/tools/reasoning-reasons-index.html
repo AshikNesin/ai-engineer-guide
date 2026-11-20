@@ -1,0 +1,29 @@
+{{- $rules := site.Data.reasoning_rules -}}
+{{- $yours := dict "yes" "Yes" "no" "No" "usually-no" "Usually no" "maybe" "Maybe" -}}
+<article class="tool tool-reasoning">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Title }}</h1>
+    <p class="tool-promise">Every reason Claude and OpenAI give in <code>input_transformations</code> for dropping (or letting through) earlier reasoning. Paste a response into the <a href="{{ "/tools/reasoning-prefix-checker/input-transformations/" | relURL }}">decoder</a> to read yours.</p>
+  </header>
+  {{- range slice (dict "key" "anthropic" "name" "Anthropic (Claude)") (dict "key" "openai" "name" "OpenAI") }}
+  {{- $p := . }}
+  <section class="tool-section">
+    <h2>{{ $p.name }}</h2>
+    <div class="tool-table-wrap"><table class="tool-table stack" style="--cols:2">
+      <thead><tr><th>Entry</th><th>Meaning</th><th>Yours to fix?</th></tr></thead>
+      <tbody>
+      {{- range where $rules.reasons "provider" $p.key }}
+        <tr><td class="full"><a href="{{ printf "/tools/reasoning-prefix-checker/reasons/%s/" .id | relURL }}">{{ with .type }}<code>{{ . }}</code> {{ end }}<code>{{ .reason }}</code></a></td>
+          <td data-label="Meaning" class="full">{{ .meaning | markdownify }}</td>
+          <td data-label="Yours to fix?">{{ index $yours .yours }}</td></tr>
+      {{- end }}
+      </tbody>
+    </table></div>
+  </section>
+  {{- end }}
+  <p class="helptext">Anthropic's docs: "Ignore an entry whose <code>type</code> or <code>reason</code> you don't recognize." The research behind this tool mentioned an Anthropic <code>end_user_binding_mismatch</code>; it isn't in Anthropic's docs, so it isn't listed.</p>
+  <p class="tool-stamp">Last checked {{ $rules.checked }} against the official docs.</p>
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

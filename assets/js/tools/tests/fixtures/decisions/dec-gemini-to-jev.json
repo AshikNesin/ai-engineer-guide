@@ -1,0 +1,39 @@
+{
+  "id": "dec-gemini-to-jev",
+  "label": "Gemini to Jev",
+  "mode": "convert",
+  "to": "jev",
+  "input": {
+    "model": "gemini-decision-1",
+    "input": "My package says delivered but it isn't here.",
+    "questions": {
+      "lost_package": {
+        "type": "noul",
+        "instructions": "Is the customer reporting a lost package?",
+        "criteria": {
+          "true_description": "The item was marked delivered but not received.",
+          "false_description": "Anything else, including late deliveries."
+        }
+      }
+    }
+  },
+  "expect": {
+    "warnings": [
+      "model-reset"
+    ],
+    "body": {
+      "model": "jev-latest",
+      "state": "My package says delivered but it isn't here.",
+      "questions": {
+        "lost_package": {
+          "type": "noul",
+          "instructions": "Is the customer reporting a lost package?",
+          "criteria": {
+            "true": "The item was marked delivered but not received.",
+            "false": "Anything else, including late deliveries."
+          }
+        }
+      }
+    }
+  }
+}

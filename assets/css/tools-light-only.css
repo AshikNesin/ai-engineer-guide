@@ -1,0 +1,42 @@
+/* Light-only tool pages (front matter light_only: true; <html data-light-only>).
+   The theme, newsletter and search partials switch to dark colors with
+   prefers-color-scheme; on these pages we put their light values back.
+   Loaded only on light_only pages. Keep in sync with those partials. */
+@media (prefers-color-scheme: dark) {
+  html[data-light-only] body { background-color: #fff; color: #444; }
+  html[data-light-only] h1, html[data-light-only] h2, html[data-light-only] h3,
+  html[data-light-only] h4, html[data-light-only] h5, html[data-light-only] h6,
+  html[data-light-only] strong, html[data-light-only] b { color: #222; }
+  html[data-light-only] a { color: #3273dc; }
+  html[data-light-only] code { background-color: #f2f2f2; }
+  html[data-light-only] pre code { color: #222; }
+  html[data-light-only] blockquote { color: #222; }
+  html[data-light-only] textarea, html[data-light-only] input { background-color: #fff; color: #444; }
+  html[data-light-only] .helptext { color: #777; }
+
+  html[data-light-only] .newsletter-form { background-color: #f2f2f2; border-color: #e0e0e0; }
+  html[data-light-only] .newsletter-form h2 { color: #222; }
+  html[data-light-only] .newsletter-form p.subtitle,
+  html[data-light-only] .newsletter-form .disclaimer { color: #777; }
+  html[data-light-only] .newsletter-form input[type="email"] { background-color: #fff; color: #444; border-color: #ddd; }
+  html[data-light-only] .newsletter-form input[type="email"]:focus { border-color: #3273dc; box-shadow: 0 0 0 2px rgba(50, 115, 220, 0.1); }
+  html[data-light-only] .newsletter-form input[type="email"]::placeholder { color: #999; }
+  html[data-light-only] .newsletter-form button { background-color: #3273dc; color: #fff; }
+  html[data-light-only] .newsletter-form button:hover { background-color: #2968d7; }
+
+  html[data-light-only] .search-bar-trigger { color: #888; border-color: rgba(0, 0, 0, 0.12); }
+  html[data-light-only] .search-bar-trigger:hover { border-color: rgba(0, 0, 0, 0.25); }
+  html[data-light-only] .search-bar-trigger:focus { border-color: #3273dc; box-shadow: none; }
+  html[data-light-only] #search-kbd { background: #f2f2f2; border-color: #ccc; color: #666; }
+  html[data-light-only] .search-modal { background: #fff; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); }
+  html[data-light-only] .search-modal-input { color: #444; border-bottom-color: #eee; }
+  html[data-light-only] .search-result-item { border-color: #e8e8e8; }
+  html[data-light-only] .search-result-item:hover,
+  html[data-light-only] .search-result-item:focus { border-color: #3273dc; box-shadow: none; }
+  html[data-light-only] .search-result-title { color: #222; }
+  html[data-light-only] .search-result-excerpt { color: #666; }
+  html[data-light-only] .search-result-tag { background: #f0f0f0; color: #666; }
+  html[data-light-only] .search-result-tag:hover { background: #e8f0fd; color: #3273dc; }
+  html[data-light-only] .search-modal-message { color: #888; }
+  html[data-light-only] .search-modal-spinner::after { border-color: #eee; border-top-color: #3273dc; }
+}

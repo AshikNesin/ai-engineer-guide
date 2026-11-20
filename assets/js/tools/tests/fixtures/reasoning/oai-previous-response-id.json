@@ -1,0 +1,71 @@
+{
+  "id": "oai-previous-response-id",
+  "label": "previous_response_id with a tools change",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.2-astra",
+    "tools": [
+      {
+        "type": "function",
+        "name": "search",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "input": [
+      {
+        "role": "user",
+        "content": "Find the bug."
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.2-astra",
+    "previous_response_id": "resp_abc123",
+    "tools": [
+      {
+        "type": "function",
+        "name": "search",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "type": "function",
+        "name": "run_tests",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "input": [
+      {
+        "role": "user",
+        "content": "Now test it."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "openai-tools-changed",
+      "path_b": "tools"
+    },
+    "verdicts": {
+      "gpt-6.2-astra": "dropped",
+      "gpt-6.2-sol": "dropped",
+      "gpt-6.1-sol": "none"
+    },
+    "notes": [
+      "previous-response-id"
+    ],
+    "fix": "openai-additional-tools"
+  }
+}

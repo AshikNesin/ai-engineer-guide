@@ -1,0 +1,53 @@
+{
+  "id": "dec-roundtrip",
+  "label": "OpenAI to Gemini and back",
+  "mode": "roundtrip",
+  "to": "gemini",
+  "input": {
+    "model": "gpt-6-luna",
+    "input": "I was charged twice for my order.",
+    "questions": [
+      {
+        "type": "predicate",
+        "name": "refund_requested",
+        "instructions": "Is the customer asking for a refund?"
+      },
+      {
+        "type": "choice",
+        "name": "department",
+        "instructions": "Which department should handle this complaint?",
+        "choices": [
+          {
+            "value": "billing",
+            "description": "Payments, invoices, and refunds."
+          },
+          {
+            "value": "other"
+          },
+          {
+            "value": "shipping",
+            "description": "Delivery, tracking, and returns."
+          }
+        ]
+      },
+      {
+        "type": "score",
+        "name": "severity",
+        "instructions": "How severe is the problem?",
+        "levels": [
+          {
+            "label": "Low",
+            "description": "Minor."
+          },
+          {
+            "label": "High",
+            "description": "Blocking."
+          }
+        ]
+      }
+    ]
+  },
+  "expect": {
+    "roundtrip": true
+  }
+}

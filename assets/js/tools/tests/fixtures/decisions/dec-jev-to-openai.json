@@ -1,0 +1,80 @@
+{
+  "id": "dec-jev-to-openai",
+  "label": "Jev state object to OpenAI",
+  "mode": "convert",
+  "to": "openai",
+  "input": {
+    "model": "jev-latest",
+    "state": {
+      "ticket": {
+        "subject": "Double charge",
+        "body": "I was charged twice."
+      },
+      "order": {
+        "charges": [
+          49,
+          49
+        ]
+      }
+    },
+    "questions": {
+      "department": {
+        "type": "choice",
+        "instructions": "Which team owns this?",
+        "criteria": {
+          "billing": null,
+          "shipping": null,
+          "technical": null
+        }
+      }
+    }
+  },
+  "expect": {
+    "warnings": [
+      "model-reset"
+    ],
+    "body": {
+      "model": "gpt-6-luna",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_json",
+              "data": {
+                "ticket": {
+                  "subject": "Double charge",
+                  "body": "I was charged twice."
+                },
+                "order": {
+                  "charges": [
+                    49,
+                    49
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choice",
+          "name": "department",
+          "instructions": "Which team owns this?",
+          "choices": [
+            {
+              "value": "billing"
+            },
+            {
+              "value": "shipping"
+            },
+            {
+              "value": "technical"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

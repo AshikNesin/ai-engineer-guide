@@ -1,0 +1,17 @@
+{{- /* Static switch table from data (indexable): rows = from, columns = to. */ -}}
+{{- $a := site.Data.reasoning_rules.anthropic -}}
+{{- $labels := dict -}}{{ range $a.groups }}{{ $labels = merge $labels (dict .id .label) }}{{ end -}}
+<div class="tool-table-wrap"><table class="tool-table rs-matrix" id="rs-matrix">
+  <caption class="helptext">✅ = the model you move to reads the blocks; — = it drops them (no error, not billed). Source: <a href="https://platform.claude.com/docs/en/build-with-claude/preserved-thinking#which-model-switches-keep-reasoning" rel="noopener">Anthropic, Preserved thinking</a>.</caption>
+  <thead><tr><th scope="col">Model you move from</th>{{ range $a.matrix.cols }}<th scope="col" data-to="{{ . }}">To {{ index $labels . }}</th>{{ end }}</tr></thead>
+  <tbody>
+  {{- range $from := $a.matrix.rows }}
+    <tr data-from="{{ $from }}"><th scope="row">{{ index $labels $from }}</th>
+    {{- range $to := $a.matrix.cols }}
+      {{- $reads := in (index $a.reads $to) $from -}}
+      <td data-to="{{ $to }}" class="{{ if $reads }}is-read{{ else }}is-drop{{ end }}">{{ if $reads }}✅ <span class="visually-hidden">reads</span>{{ else }}— <span class="visually-hidden">dropped</span>{{ end }}</td>
+    {{- end }}</tr>
+  {{- end }}
+  </tbody>
+</table></div>
+<p class="helptext">Every Claude model also reads blocks from Claude Opus 4.8, Claude Sonnet 5, Claude Haiku 4.5 and earlier Opus, Sonnet and Haiku models. Claude Opus 5 reads only itself and those; Claude Fable 5 and Mythos 5 read each other, Mythos Preview, Opus 5 and those.</p>

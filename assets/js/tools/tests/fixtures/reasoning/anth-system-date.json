@@ -1,0 +1,69 @@
+{
+  "id": "anth-system-date",
+  "label": "Date in system prompt",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent. Today is 2026-11-18.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fix the failing test."
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent. Today is 2026-11-19.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fix the failing test."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigA1"
+          },
+          {
+            "type": "text",
+            "text": "Done."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Now run the linter."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "system-changed",
+      "path_b": "system"
+    },
+    "invalid_paths": [
+      "messages.1.content.0"
+    ],
+    "verdicts": {
+      "claude-fable-5-2": "400",
+      "claude-mythos-5-2": "400",
+      "claude-mythos-5-1": "400",
+      "claude-fable-5-1": "possible_400",
+      "claude-opus-5-5": "possible_400",
+      "claude-sonnet-5-5": "possible_400",
+      "claude-haiku-5-5": "possible_400",
+      "claude-opus-5": "none"
+    },
+    "fix": "anthropic-update-context-in-user-turn"
+  }
+}

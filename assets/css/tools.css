@@ -1,4 +1,5 @@
-/* AIEngineerGuide tools: small, theme-matched styles (light + dark like the blog). */
+/* AIEngineerGuide tools: small, theme-matched styles (light + dark like the blog;
+   pages with light_only get light only, see tools-light-only.css). */
 :root {
   --t-bg: #fff;
   --t-text: #444;
@@ -19,7 +20,7 @@
   --t-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-light-only]) {
     --t-bg: #333;
     --t-text: #ddd;
     --t-strong: #eee;
@@ -290,3 +291,57 @@ a.tool-card:hover { border-color: var(--t-link); }
 @media (max-width: 480px) {
   .tool-row .tool-field:has(select) { flex-basis: 100%; }
 }
+
+/* ---- Reasoning prefix checker + decision converter (light-only pages) ---- */
+.tool-reasoning .rp-err { color: var(--t-bad); min-height: 1em; }
+.tool-reasoning .rp-targets { border: 1px solid var(--t-border); border-radius: 6px; padding: .5rem .75rem; margin: .75rem 0; }
+.tool-reasoning .rp-targets legend { font-size: 14px; color: var(--t-strong); padding: 0 .25rem; }
+.tool-reasoning .rp-target-group { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+.rp-verdicts { list-style: none; padding: 0; margin: .75rem 0; display: grid; gap: .4rem; }
+.rp-v { background: var(--t-bg); border: 1px solid var(--t-border); border-left-width: 5px; border-radius: 6px; padding: .5rem .7rem; font-size: 14px; }
+.rp-v.is-bad { border-left-color: var(--t-bad); }
+.rp-v.is-warn { border-left-color: #c2410c; }
+.rp-v.is-drop { border-left-color: #ca8a04; }
+.rp-v.is-ok { border-left-color: var(--t-ok); }
+.rp-v.is-unknown { border-left-color: var(--t-muted); }
+.rp-v-icon { margin-right: .35rem; }
+.rp-v-label { margin-left: .35rem; font-weight: 600; }
+.rp-v-why { display: block; color: var(--t-text); margin-top: .15rem; }
+.rp-card { background: var(--t-bg); border: 1px solid var(--t-border); border-radius: 6px; padding: .7rem .8rem; margin: .6rem 0; font-size: 14px; }
+.rp-card h3 { font-size: 1rem; margin: .1rem 0 .4rem; }
+.rp-card blockquote { margin: .35rem 0; font-size: 13px; }
+.rp-card pre code { font-size: 12.5px; max-height: 320px; overflow: auto; }
+.rp-diff { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.rp-diff pre { margin: .2rem 0; }
+.rp-diff pre code { white-space: pre-wrap; word-break: break-word; }
+mark.rp-del { background: #fde8e8; color: #a61b1b; text-decoration: line-through; }
+mark.rp-ins { background: #e6f4ea; color: #1f7a3a; }
+.rp-pair { border: 1px solid var(--t-border); border-radius: 6px; padding: .4rem .7rem; margin: .4rem 0; background: var(--t-bg); }
+.rp-pair summary { cursor: pointer; font-size: 14px; }
+.rs-chips { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; min-height: 2rem; }
+.rs-chip { display: inline-flex; align-items: center; gap: .25rem; background: var(--t-surface-2); border-radius: 999px; padding: .15rem .25rem .15rem .6rem; font-size: 14px; }
+.tool-app .rs-chip button { padding: 0 .35rem; border: 0; background: transparent; font-size: 16px; line-height: 1; }
+.rs-add-row { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .35rem; }
+.rs-add-row input { flex: 1 1 160px; }
+.rs-rows, .rs-caveats { padding-left: 1.1rem; font-size: 14px; }
+.rs-rows li, .rs-caveats li { margin: .35rem 0; }
+.rs-matrix td { text-align: center; }
+.rs-matrix td.is-selected { outline: 3px solid var(--t-link); outline-offset: -3px; font-weight: 700; }
+.rs-matrix caption { caption-side: bottom; text-align: left; padding-top: .35rem; }
+.rs-matrix-box summary { cursor: pointer; font-size: 14px; color: var(--t-strong); margin: .75rem 0 .25rem; }
+.dc-warn { font-size: 14px; padding-left: 1.1rem; }
+.dc-warn li { margin: .25rem 0; }
+.dc-out pre code { max-height: 420px; overflow: auto; font-size: 12.5px; }
+@media (max-width: 640px) { .rp-diff { grid-template-columns: 1fr; } }
+
+/* Decision API converter (light only, like the reasoning checker) */
+.tool-decisions .dc-out { margin: 0; min-height: 12rem; max-height: 32rem; overflow: auto; background: #f7f7f7; border: 1px solid #ddd; border-radius: 4px; }
+.tool-decisions .dc-out code { display: block; padding: .75rem; font-size: 12.5px; white-space: pre; background: none; }
+.tool-decisions .dc-h { font-size: 1rem; margin: 1.25rem 0 .5rem; }
+.tool-decisions .dc-group { border-left: 3px solid #e0a800; padding: .25rem 0 .25rem .75rem; margin: .5rem 0; }
+.tool-decisions .dc-group-key { margin: 0 0 .25rem; font-weight: 600; font-size: 14px; }
+.tool-decisions .dc-group ul { margin: 0; padding-left: 1.1rem; font-size: 14px; }
+.tool-decisions .dc-group li { margin: .2rem 0; }
+.tool-decisions .dc-curl-box, .tool-decisions .dc-answers { margin-top: 1rem; }
+.tool-decisions .dc-curl-box pre code { white-space: pre-wrap; font-size: 12.5px; }
+.tool-decisions .dc-answers td { font-size: 13px; vertical-align: top; }

@@ -1,0 +1,16 @@
+{
+  "id": "dec-err-bound",
+  "label": "400: bound to a different conversation",
+  "input": {
+    "type": "error",
+    "error": {
+      "type": "invalid_request_error",
+      "message": "messages.1.content.0: Invalid `signature` in `thinking` block. The block is bound to a different conversation. Remove the block, or set `thinking.block_binding.prefix_mismatch_behavior` to \"drop_block\"."
+    },
+    "request_id": "req_011"
+  },
+  "expect": {
+    "error": "thinking-block-bound-to-a-different-conversation",
+    "path": "messages.1.content.0"
+  }
+}

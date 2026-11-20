@@ -1,0 +1,26 @@
+{
+  "id": "dec-anth-allowed",
+  "label": "Claude: thinking_mismatch_allowed",
+  "input": {
+    "input_transformations": [
+      {
+        "type": "thinking_mismatch_allowed",
+        "path": "messages.1.content.0",
+        "reason": "prefix_binding_mismatch"
+      }
+    ]
+  },
+  "expect": {
+    "reasons": [
+      "anthropic-thinking-mismatch-allowed"
+    ],
+    "counts": {
+      "total": 1,
+      "yours": 1,
+      "expected": 0,
+      "maybe": 0,
+      "unknown": 0
+    },
+    "billed": true
+  }
+}

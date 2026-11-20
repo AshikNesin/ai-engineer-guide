@@ -1,0 +1,96 @@
+{
+  "id": "oai-tool-output-edited",
+  "label": "Earlier tool output shortened",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.2-astra",
+    "input": [
+      {
+        "role": "user",
+        "content": "Run the tests."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "function_call",
+        "call_id": "call_1",
+        "name": "run_tests",
+        "arguments": "{}"
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call_1",
+        "output": "PASS tests/a.test.js\nPASS tests/b.test.js\nFAIL tests/c.test.js\n  Expected 2, received 3\n  at line 14"
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.2-astra",
+    "input": [
+      {
+        "role": "user",
+        "content": "Run the tests."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "function_call",
+        "call_id": "call_1",
+        "name": "run_tests",
+        "arguments": "{}"
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call_1",
+        "output": "FAIL tests/c.test.js"
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_2",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_2"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "One test fails."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Fix it."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "item-edited",
+      "path_b": "input.3"
+    },
+    "invalid_paths": [
+      "input.4"
+    ],
+    "verdicts": {
+      "gpt-6.2-astra": "dropped",
+      "gpt-6.2-sol": "dropped",
+      "gpt-6.1-sol": "none"
+    },
+    "fix": "openai-shorten-before-first-send"
+  }
+}

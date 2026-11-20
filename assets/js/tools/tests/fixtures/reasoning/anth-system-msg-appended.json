@@ -1,0 +1,127 @@
+{
+  "id": "anth-system-msg-appended",
+  "label": "Append-only (passes)",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Plan the change."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigS1"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01",
+            "name": "read_plan",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_01",
+            "content": "plan.md: step 1, step 2"
+          }
+        ]
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Plan the change."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigS1"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01",
+            "name": "read_plan",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_01",
+            "content": "plan.md: step 1, step 2"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigS2"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_02",
+            "name": "read_file",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_02",
+            "content": "src/app.js"
+          }
+        ]
+      },
+      {
+        "role": "system",
+        "content": "Plan mode is off. You can edit files."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": null,
+    "invalid_paths": [],
+    "verdicts": {
+      "claude-fable-5-2": "none",
+      "claude-mythos-5-2": "none",
+      "claude-mythos-5-1": "none",
+      "claude-fable-5-1": "none",
+      "claude-opus-5-5": "none",
+      "claude-sonnet-5-5": "none",
+      "claude-haiku-5-5": "none",
+      "claude-opus-5": "none"
+    }
+  }
+}

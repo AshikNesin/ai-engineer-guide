@@ -1,0 +1,7 @@
+{{- /* <option>s for every model in the reasoning rules, grouped by provider. */ -}}
+<optgroup label="Anthropic">
+{{- range .anthropic.models }}<option value="{{ .id }}">{{ .label }}{{ if eq .id_verified false }} (id unconfirmed){{ end }}</option>{{ end }}
+</optgroup>
+<optgroup label="OpenAI">
+{{- range .openai.models }}<option value="{{ .id }}">{{ .label }}</option>{{ end }}
+</optgroup>

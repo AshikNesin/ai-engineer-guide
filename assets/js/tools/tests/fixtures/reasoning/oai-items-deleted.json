@@ -1,0 +1,124 @@
+{
+  "id": "oai-items-deleted",
+  "label": "Whole items deleted (passes)",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.2-astra",
+    "input": [
+      {
+        "role": "user",
+        "content": "Hi."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Hello."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Write a haiku."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_2",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_2"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Leaves fall..."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Another one."
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.2-astra",
+    "input": [
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "role": "user",
+        "content": "Write a haiku."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_2",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_2"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Leaves fall..."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Another one."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_3",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_3"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Snow melts..."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Thanks."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": null,
+    "invalid_paths": [],
+    "verdicts": {
+      "gpt-6.2-astra": "none",
+      "gpt-6.2-sol": "none"
+    },
+    "notes": [
+      "items-deleted"
+    ]
+  }
+}

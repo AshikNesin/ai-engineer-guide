@@ -1,0 +1,45 @@
+{{- /* Generated page for one format pair (data: decision_formats.pairs[]). Same widget as the converter, preloaded. */ -}}
+{{- $d := site.Data.decision_formats -}}
+{{- $p := index (where $d.pairs "id" .Params.decision_pair) 0 -}}
+{{- $from := index $d.formats $p.from -}}
+{{- $to := index $d.formats $p.to -}}
+{{- $cols := slice $p.from $p.to -}}
+{{- if or (eq $p.from "jev") (eq $p.to "jev") }}{{ $cols = $cols | append "clef" }}{{ end -}}
+{{- $kinds := dict "yesno" "Yes/no" "choice" "Pick one" "score" "Ordered rubric" "box" "Box (image)" -}}
+<article class="tool tool-decisions" data-tool="decision-api-converter">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Params.h1 }}</h1>
+    <p class="tool-promise">The {{ $from.short }} request is preloaded below, converted to {{ $to.short }}. Paste your own to convert it, and read the warnings before you send it.</p>
+    <p class="tool-privacy">Runs in your browser. Nothing you paste is uploaded.</p>
+  </header>
+  <noscript><p class="tool-noscript">This tool runs in your browser and needs JavaScript. The format table below works without it.</p></noscript>
+  {{ partial "tools/ui/decision-api-converter.html" . }}
+
+  <section class="tool-section">
+    <h2>What's different</h2>
+    <div class="tool-table-wrap"><table class="tool-table">
+      <thead><tr><th></th>{{ range $cols }}<th>{{ (index $d.formats .).label }}</th>{{ end }}</tr></thead>
+      <tbody>
+        <tr><td>Endpoint</td>{{ range $cols }}{{ $f := index $d.formats . }}<td><code>{{ $f.endpoint }}</code>{{ if eq $f.endpoint_verified false }} <span class="helptext">(unconfirmed)</span>{{ end }}</td>{{ end }}</tr>
+        <tr><td>Model</td>{{ range $cols }}<td><code>{{ (index $d.formats .).default_model }}</code></td>{{ end }}</tr>
+        <tr><td>Questions</td>{{ range $cols }}{{ $f := index $d.formats . }}<td>{{ cond (eq $f.container "array") "Array, in your order" "Map keyed by question id" }}{{ with $f.limits.questions }}, {{ index . 0 }}–{{ with index . 1 }}{{ . }}{{ else }}? <span class="helptext">(max unconfirmed)</span>{{ end }}{{ end }}</td>{{ end }}</tr>
+        {{- range $k := slice "yesno" "choice" "score" "box" }}
+        <tr><td>{{ index $kinds $k }}</td>{{ range $cols }}<td>{{ with index (index $d.formats .).types $k }}<code>{{ . }}</code>{{ else }}Not supported{{ end }}</td>{{ end }}</tr>
+        {{- end }}
+        <tr><td>Auth</td>{{ range $cols }}{{ $f := index $d.formats . }}<td>{{ range $f.auth }}<code>{{ . }}</code> {{ end }}{{ if eq $f.auth_verified false }}<span class="helptext">(unconfirmed)</span>{{ end }}</td>{{ end }}</tr>
+      </tbody>
+    </table></div>
+    <h3>Sources</h3>
+    <ul class="tool-sources">
+      {{- range $cols }}{{ $f := index $d.formats . }}{{ range $f.sources }}
+      <li><a href="{{ .url }}" rel="noopener" target="_blank">{{ $f.short }}</a>: “{{ .quote | markdownify }}” <span class="helptext">(checked {{ $d.checked }})</span></li>
+      {{- end }}{{ end }}
+    </ul>
+    <p><a href="{{ "/tools/decision-api-converter/" | relURL }}">All formats</a> · <a href="{{ "/tools/decision-api-converter/classifier-to-decisions/" | relURL }}">Classifier schema to decisions</a></p>
+  </section>
+
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>
+{{ partial "tools/script.html" (dict "name" "decision-api-converter") }}

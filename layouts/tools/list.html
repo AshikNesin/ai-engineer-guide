@@ -1,6 +1,10 @@
 {{ define "main" }}
 {{ if .Params.errors_index }}
 {{ partial "tools/linter-errors-index.html" . }}
+{{ else if .Params.reasoning_reasons_index }}
+{{ partial "tools/reasoning-reasons-index.html" . }}
+{{ else if .Params.reasoning_errors_index }}
+{{ partial "tools/reasoning-errors-index.html" . }}
 {{ else }}
 <article class="tool-index">
   {{ partial "tools/breadcrumb-nav.html" . }}

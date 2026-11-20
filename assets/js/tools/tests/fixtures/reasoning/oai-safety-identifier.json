@@ -1,0 +1,65 @@
+{
+  "id": "oai-safety-identifier",
+  "label": "safety_identifier added on B only",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.2-astra",
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.2-astra",
+    "safety_identifier": "user_8f3a",
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Plan."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Go on."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "safety-identifier-changed",
+      "path_b": "safety_identifier"
+    },
+    "invalid_paths": [],
+    "verdicts": {
+      "gpt-6.2-astra": "dropped",
+      "gpt-6.1-sol": "none"
+    },
+    "reasons": {
+      "gpt-6.2-astra": [
+        "end_user_mismatch"
+      ]
+    },
+    "fix": "openai-same-safety-identifier"
+  }
+}

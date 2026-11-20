@@ -1,0 +1,56 @@
+{
+  "id": "oai-instructions-changed-62",
+  "label": "instructions changed on GPT-6.2 (passes)",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.2-sol",
+    "instructions": "Today is 2026-11-18.",
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.2-sol",
+    "instructions": "Today is 2026-11-19.",
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Plan."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Go on."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": null,
+    "invalid_paths": [],
+    "verdicts": {
+      "gpt-6.2-sol": "none"
+    }
+  }
+}

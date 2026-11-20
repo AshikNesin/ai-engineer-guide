@@ -1,0 +1,31 @@
+{
+  "id": "dec-unnamed",
+  "label": "OpenAI questions without names to Gemini",
+  "mode": "convert",
+  "to": "gemini",
+  "input": {
+    "model": "gpt-6-luna",
+    "input": "Hello",
+    "questions": [
+      {
+        "type": "predicate",
+        "instructions": "Is this a greeting?"
+      },
+      {
+        "type": "predicate",
+        "instructions": "Is this a question?"
+      }
+    ]
+  },
+  "expect": {
+    "warnings": [
+      "unnamed",
+      "probability-range",
+      "model-reset"
+    ],
+    "question_keys": [
+      "q1",
+      "q2"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "dec-anth-unknown",
+  "label": "Claude: unknown entry",
+  "input": [
+    {
+      "type": "thinking_xyz",
+      "path": "messages.1.content.0",
+      "reason": "foo"
+    }
+  ],
+  "expect": {
+    "reasons": [
+      null
+    ],
+    "counts": {
+      "total": 1,
+      "yours": 0,
+      "expected": 0,
+      "maybe": 0,
+      "unknown": 1
+    }
+  }
+}

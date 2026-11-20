@@ -1,0 +1,9 @@
+{{- /* Inline every fixture under assets/js/tools/tests/fixtures/<dir>/ as one
+       JSON object {id: fixture}, keeping each file's text (and key order) as is.
+       Usage: partial "tools/reasoning-fixtures.html" (dict "dir" "reasoning" "id" "rp-fixtures") */ -}}
+{{- $parts := slice -}}
+{{- range resources.Match (printf "js/tools/tests/fixtures/%s/*.json" .dir) -}}
+  {{- $d := .Content | transform.Unmarshal -}}
+  {{- $parts = $parts | append (printf "%q:%s" $d.id (trim .Content " \n")) -}}
+{{- end -}}
+<script type="application/json" id="{{ .id }}">{ {{- delimit $parts "," | safeJS -}} }</script>

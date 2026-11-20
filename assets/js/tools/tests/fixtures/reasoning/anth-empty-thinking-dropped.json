@@ -1,0 +1,200 @@
+{
+  "id": "anth-empty-thinking-dropped",
+  "label": "Empty thinking block dropped by serializer",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Check the build."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigE1"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01",
+            "name": "build",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_01",
+            "content": "ok"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigE2"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_02",
+            "name": "lint",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_02",
+            "content": "2 warnings"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigE3"
+          },
+          {
+            "type": "text",
+            "text": "Build is fine; 2 lint warnings."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Fix the warnings."
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Check the build."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigE1"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01",
+            "name": "build",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_01",
+            "content": "ok"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_02",
+            "name": "lint",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_02",
+            "content": "2 warnings"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigE3"
+          },
+          {
+            "type": "text",
+            "text": "Build is fine; 2 lint warnings."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Fix the warnings."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigE4"
+          },
+          {
+            "type": "text",
+            "text": "Fixed."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Thanks."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "thinking-gap",
+      "path_b": "messages.5.content.0"
+    },
+    "invalid_paths": [
+      "messages.5.content.0",
+      "messages.7.content.0"
+    ],
+    "verdicts": {
+      "claude-fable-5-2": "400",
+      "claude-opus-5-5": "possible_400",
+      "claude-opus-5": "none"
+    },
+    "fix": "anthropic-unbroken-thinking"
+  }
+}
