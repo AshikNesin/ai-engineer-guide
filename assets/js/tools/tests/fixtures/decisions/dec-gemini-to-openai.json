@@ -1,0 +1,37 @@
+{
+  "id": "dec-gemini-to-openai",
+  "label": "Gemini yes/no with criteria to OpenAI",
+  "mode": "convert",
+  "to": "openai",
+  "input": {
+    "model": "gemini-decision-1",
+    "input": "My package says delivered but it isn't here.",
+    "questions": {
+      "lost_package": {
+        "type": "noul",
+        "instructions": "Is the customer reporting a lost package?",
+        "criteria": {
+          "true_description": "The item was marked delivered but not received.",
+          "false_description": "Anything else, including late deliveries."
+        }
+      }
+    }
+  },
+  "expect": {
+    "warnings": [
+      "criteria-folded",
+      "model-reset"
+    ],
+    "body": {
+      "model": "gpt-6-luna",
+      "input": "My package says delivered but it isn't here.",
+      "questions": [
+        {
+          "type": "predicate",
+          "name": "lost_package",
+          "instructions": "Is the customer reporting a lost package? Yes means: The item was marked delivered but not received. No means: Anything else, including late deliveries."
+        }
+      ]
+    }
+  }
+}

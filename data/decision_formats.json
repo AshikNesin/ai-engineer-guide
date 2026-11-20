@@ -1,0 +1,355 @@
+{
+  "_comment": "Hand-maintained. Formats, limits and warning texts for the Decision API converter. Each format cites official pages (read 2026-11-19; the OpenAI pages re-read 2026-11-20). A null limit means the docs don't say: show 'limit not documented' instead of enforcing one. Fixtures: assets/js/tools/tests/fixtures/decisions/.",
+  "checked": "2026-11-19",
+  "formats": {
+    "openai": {
+      "label": "OpenAI Decisions",
+      "short": "OpenAI",
+      "endpoint": "https://api.openai.com/v1/decisions",
+      "default_model": "gpt-6-luna",
+      "container": "array",
+      "auth": [
+        "Authorization: Bearer $OPENAI_API_KEY"
+      ],
+      "limits": {
+        "questions": [
+          1,
+          400
+        ],
+        "choices": [
+          2,
+          255
+        ],
+        "levels": [
+          2,
+          10
+        ]
+      },
+      "types": {
+        "yesno": "predicate",
+        "choice": "choice",
+        "score": "score"
+      },
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/reference/resources/decisions/methods/create",
+          "quote": "Ask 1–400 questions about the input."
+        },
+        {
+          "url": "https://developers.openai.com/api/reference/resources/decisions/methods/create",
+          "quote": "Provide between 2 and 255 choices"
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/guides/decisions",
+          "quote": "Send requests to `POST /v1/decisions` using `gpt-6-luna`, the only currently supported model."
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/guides/decisions",
+          "quote": "Use an `input_json` content part to pass structured evidence without first converting it to a string. Put the JSON object or array in `data`."
+        },
+        {
+          "url": "https://developers.openai.com/api/reference/resources/decisions/methods/create",
+          "note": "Score `levels`: 2 to 10, from the API reference (read 2026-11-19); no verbatim line stored."
+        }
+      ]
+    },
+    "gemini": {
+      "label": "Gemini Decisions",
+      "short": "Gemini",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/decisions",
+      "endpoint_verified": false,
+      "default_model": "gemini-decision-1",
+      "container": "map",
+      "auth": [
+        "x-goog-api-key: $GEMINI_API_KEY"
+      ],
+      "key_pattern": "^[A-Za-z0-9_-]{1,64}$",
+      "limits": {
+        "questions": [
+          1,
+          1000
+        ],
+        "choices": [
+          2,
+          255
+        ],
+        "levels": [
+          2,
+          255
+        ]
+      },
+      "types": {
+        "yesno": "noul",
+        "choice": "choice",
+        "score": "score"
+      },
+      "sources": [
+        {
+          "url": "https://aistudio.google.com/docs/decisions-api",
+          "quote": "Questions per request | 1 to 1,000 (bounded by the 262,144-token context window)"
+        },
+        {
+          "url": "https://aistudio.google.com/docs/decisions-api",
+          "quote": "Before evaluation, the API sorts option keys alphabetically in UTF-8 byte order."
+        },
+        {
+          "url": "https://aistudio.google.com/docs/decisions-api",
+          "quote": "Conversation history, thought, and tool-call blocks aren't supported"
+        },
+        {
+          "url": "https://aistudio.google.com/docs/decisions-api",
+          "quote": "Serialize JSON objects and arrays to a string"
+        },
+        {
+          "url": "https://aistudio.google.com/docs/decisions-api",
+          "note": "Question keys match `[A-Za-z0-9_-]+`, up to 64 characters; choice `criteria` 2 to 255 options; score `criteria` 2 to 255 non-empty strings. From the Decisions API docs (read 2026-11-19); no verbatim line stored."
+        }
+      ]
+    },
+    "jev": {
+      "label": "TypeSafe Jev (System One)",
+      "short": "Jev",
+      "family": "system-one",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "default_model": "jev-latest",
+      "container": "map",
+      "auth": [
+        "Authorization: Bearer $TYPESAFE_API_KEY"
+      ],
+      "auth_verified": false,
+      "key_pattern": null,
+      "limits": {
+        "questions": [
+          1,
+          null
+        ],
+        "choices": [
+          1,
+          255
+        ],
+        "levels": [
+          1,
+          10
+        ]
+      },
+      "types": {
+        "yesno": "noul",
+        "choice": "choice",
+        "score": "score",
+        "box": "box"
+      },
+      "sources": [
+        {
+          "url": "https://docs.typesafe.ai/api/system-one",
+          "quote": "A System One request has `model`, `state` and `questions` (a map); score `criteria` has `maxItems: 10`."
+        },
+        {
+          "url": "https://docs.typesafe.ai/api/system-one",
+          "note": "Choice `criteria`: 1 to 255 options, from the System One request schema (read 2026-11-19). The maximum question count isn't documented."
+        }
+      ]
+    },
+    "clef": {
+      "label": "Cloudflare Clef (System One)",
+      "short": "Clef",
+      "family": "system-one",
+      "endpoint": "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/run/@cf/cloudflare/clef",
+      "default_model": "clef",
+      "container": "map",
+      "auth": [
+        "Authorization: Bearer $CLOUDFLARE_API_TOKEN"
+      ],
+      "key_pattern": "^[A-Za-z0-9_.-]{1,100}$",
+      "limits": {
+        "questions": [
+          1,
+          64
+        ],
+        "choices": null,
+        "levels": null
+      },
+      "types": {
+        "yesno": "noul",
+        "choice": "choice",
+        "score": "score"
+      },
+      "sources": [
+        {
+          "url": "https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/",
+          "quote": "Clef follows the System One API, so you can switch an existing Jev integration to Clef by changing the endpoint and model. Ask up to 64 questions per request."
+        },
+        {
+          "url": "https://developers.cloudflare.com/workers-ai/models/clef/",
+          "note": "Model page for `@cf/cloudflare/clef` (and `clef-flash`). Option limits and the `result` response wrapper are unconfirmed here."
+        }
+      ],
+      "response_wrapper": {
+        "value": "result",
+        "verified": false
+      }
+    }
+  },
+  "warnings": {
+    "criteria-folded": {
+      "text": "OpenAI predicates have no criteria field, so the yes/no definitions were appended to `instructions` as 'Yes means: … No means: …'. Re-check your threshold.",
+      "url": "https://developers.openai.com/api/reference/resources/decisions/methods/create"
+    },
+    "option-order": {
+      "text": "Gemini sorts option keys alphabetically, so your order isn't kept.",
+      "none_text": "Alphabetical sorting places a `none…` option ahead of keys like 'shipping'.",
+      "url": "https://aistudio.google.com/docs/decisions-api"
+    },
+    "score-merged": {
+      "text": "`label: description` merged into one string per level.",
+      "url": "https://aistudio.google.com/docs/decisions-api"
+    },
+    "score-split": {
+      "text": "Each level string was split into `label` and `description`.",
+      "url": "https://developers.openai.com/api/reference/resources/decisions/methods/create"
+    },
+    "limit-exceeded": {
+      "text": "Over the target's limit. The request is still emitted so you can split it.",
+      "url": null
+    },
+    "too-few": {
+      "text": "The target needs at least 2.",
+      "url": null
+    },
+    "key-invalid": {
+      "text": "Key doesn't match the target's pattern, so it was sanitized.",
+      "url": null
+    },
+    "unnamed": {
+      "text": "OpenAI question without `name`: generated a key.",
+      "url": "https://developers.openai.com/api/reference/resources/decisions/methods/create"
+    },
+    "json-stringified": {
+      "text": "JSON input wrapped as a string, because Gemini asks you to serialize JSON objects and arrays to a string.",
+      "url": "https://aistudio.google.com/docs/decisions-api"
+    },
+    "history-serialized": {
+      "text": "Conversation serialized as `role: text` lines, because the target doesn't take conversation history.",
+      "url": "https://aistudio.google.com/docs/decisions-api"
+    },
+    "media-manual": {
+      "text": "Media isn't converted; move it by hand.",
+      "url": null
+    },
+    "box-unsupported": {
+      "text": "Jev `box` questions have no equivalent here, so it was dropped.",
+      "url": "https://docs.typesafe.ai/api/system-one"
+    },
+    "instructions-parts": {
+      "text": "Question instructions are text only on the target, so image or JSON parts were dropped.",
+      "url": "https://aistudio.google.com/docs/decisions-api"
+    },
+    "probability-range": {
+      "text": "Yes/no probabilities always fall between 0.01 and 0.99. Set thresholds inside that range.",
+      "url": "https://aistudio.google.com/docs/decisions-api"
+    },
+    "model-reset": {
+      "text": "Model set to the target's default; check that it's available to you.",
+      "url": null
+    },
+    "endpoint-unverified": {
+      "text": "The Gemini REST path comes from third-party posts and SDK calls; check it in Google's API reference.",
+      "url": "https://aistudio.google.com/docs/decisions-api"
+    },
+    "auth-unverified": {
+      "text": "We couldn't confirm Jev's auth header; check TypeSafe's docs.",
+      "url": "https://docs.typesafe.ai/api/system-one"
+    }
+  },
+  "migrate_flags": {
+    "write-a-question": "No description: we wrote a placeholder question. Rewrite it in your own words.",
+    "describe-levels": "Add a description to each level so the model knows what each score means.",
+    "multi-label-split": "Multi-label field: one yes/no question per value.",
+    "use-answer-confidence": "Decision APIs return probabilities and confidence for you, so this field was dropped.",
+    "added-other": "Nullable field: added an `other` option. OpenAI recommends a fallback option such as `\"other\"` when your categories don't cover every possible input.",
+    "ordered-available": "Ordered values? Turn on 'ordered' to ask a score question instead."
+  },
+  "migrate_sources": [
+    {
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "quote": "Use Structured Outputs… when you need to generate an object that follows your own JSON schema, such as extracted fields or a written explanation"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "quote": "Include a fallback option such as `\"other\"` when your categories don't cover every possible input"
+    },
+    {
+      "url": "https://aistudio.google.com/docs/decisions-api",
+      "quote": "Decisions API or structured output"
+    }
+  ],
+  "answers": [
+    {
+      "kind": "Yes/no",
+      "openai": "`{type: \"predicate\", name, probability}`",
+      "gemini": "`{type: \"noul\", noul (0.01–0.99), confidence}`",
+      "system_one": "`{type: \"noul\", noul}`"
+    },
+    {
+      "kind": "Pick one",
+      "openai": "`{type: \"choice\", name, choice, probabilities: [{value, probability}], confidence}`",
+      "gemini": "`{type: \"choice\", choice, probabilities: {option: p}, confidence}`",
+      "system_one": "`{type: \"choice\", choice, confidence, probabilities: {…}}`"
+    },
+    {
+      "kind": "Ordered rubric",
+      "openai": "`{type: \"score\", name, score, probabilities: [{value, label, probability}], confidence}`",
+      "gemini": "`{type: \"score\", score, legend: {\"0\": …}, probabilities: {\"0\": p}, confidence}`",
+      "system_one": "`{type: \"score\", score, confidence, legend, probabilities}`"
+    },
+    {
+      "kind": "Refusal",
+      "openai": "`{type: \"refusal\", name}` (`name` is `null` for an unnamed question)",
+      "gemini": "not documented",
+      "system_one": "not documented"
+    },
+    {
+      "kind": "Container",
+      "openai": "array, in question order",
+      "gemini": "map keyed by question id",
+      "system_one": "map keyed by question name (Clef wraps the response in `result`: unconfirmed)"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "openai-to-gemini",
+      "from": "openai",
+      "to": "gemini",
+      "example": "dec-openai-mixed"
+    },
+    {
+      "id": "gemini-to-openai",
+      "from": "gemini",
+      "to": "openai",
+      "example": "dec-gemini-to-openai"
+    },
+    {
+      "id": "openai-to-system-one",
+      "from": "openai",
+      "to": "jev",
+      "example": "dec-openai-to-jev"
+    },
+    {
+      "id": "system-one-to-openai",
+      "from": "jev",
+      "to": "openai",
+      "example": "dec-jev-to-openai"
+    },
+    {
+      "id": "gemini-to-system-one",
+      "from": "gemini",
+      "to": "jev",
+      "example": "dec-gemini-to-jev"
+    },
+    {
+      "id": "system-one-to-gemini",
+      "from": "jev",
+      "to": "gemini",
+      "example": "dec-jev-box"
+    }
+  ]
+}

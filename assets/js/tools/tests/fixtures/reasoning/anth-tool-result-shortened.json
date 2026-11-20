@@ -1,0 +1,158 @@
+{
+  "id": "anth-tool-result-shortened",
+  "label": "Old tool result shortened",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Run the tests."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigR1"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01",
+            "name": "run_tests",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_01",
+            "content": "PASS tests/a.test.js\nPASS tests/b.test.js\nFAIL tests/c.test.js\n  Expected 2, received 3\n  at line 14"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigR2"
+          },
+          {
+            "type": "text",
+            "text": "One test fails in c.test.js."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Fix it."
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Run the tests."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigR1"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01",
+            "name": "run_tests",
+            "input": {}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_01",
+            "content": "FAIL tests/c.test.js"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigR2"
+          },
+          {
+            "type": "text",
+            "text": "One test fails in c.test.js."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Fix it."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigR3"
+          },
+          {
+            "type": "text",
+            "text": "Fixed."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Commit it."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "message-edited",
+      "path_b": "messages.2.content.0"
+    },
+    "invalid_paths": [
+      "messages.3.content.0",
+      "messages.5.content.0"
+    ],
+    "verdicts": {
+      "claude-fable-5-2": "400",
+      "claude-mythos-5-2": "400",
+      "claude-mythos-5-1": "400",
+      "claude-fable-5-1": "possible_400",
+      "claude-opus-5-5": "possible_400",
+      "claude-sonnet-5-5": "possible_400",
+      "claude-haiku-5-5": "possible_400",
+      "claude-opus-5": "none"
+    },
+    "fix": "anthropic-context-editing"
+  }
+}

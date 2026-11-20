@@ -1,0 +1,25 @@
+{
+  "id": "dec-too-few",
+  "label": "One-option choice to OpenAI",
+  "mode": "convert",
+  "to": "openai",
+  "input": {
+    "model": "jev-latest",
+    "state": "x",
+    "questions": {
+      "dept": {
+        "type": "choice",
+        "instructions": "Team?",
+        "criteria": {
+          "billing": null
+        }
+      }
+    }
+  },
+  "expect": {
+    "warnings": [
+      "too-few",
+      "model-reset"
+    ]
+  }
+}

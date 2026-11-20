@@ -1,0 +1,133 @@
+{
+  "id": "mig-wrapped",
+  "label": "Same schema in a Responses text.format wrapper",
+  "mode": "migrate",
+  "to": "openai",
+  "input": {
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "name": "ticket",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "enum": [
+                "billing",
+                "technical",
+                "shipping"
+              ],
+              "description": "Which team should handle the ticket?"
+            },
+            "is_refund": {
+              "type": "boolean",
+              "description": "Is the customer asking for a refund?"
+            },
+            "severity": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "summary": {
+              "type": "string",
+              "description": "One-sentence summary."
+            },
+            "confidence": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "category",
+            "is_refund",
+            "severity",
+            "summary",
+            "confidence"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "expect": {
+    "questions": [
+      [
+        "category",
+        "choice"
+      ],
+      [
+        "is_refund",
+        "yesno"
+      ],
+      [
+        "severity",
+        "choice"
+      ]
+    ],
+    "keep": [
+      "summary"
+    ],
+    "dropped": [
+      [
+        "confidence",
+        "use-answer-confidence"
+      ]
+    ],
+    "orderable": [
+      "category",
+      "severity"
+    ],
+    "flags": {
+      "severity": [
+        "write-a-question"
+      ]
+    },
+    "body": {
+      "model": "gpt-6-luna",
+      "input": "<paste the text you classify>",
+      "questions": [
+        {
+          "type": "choice",
+          "name": "category",
+          "instructions": "Which team should handle the ticket?",
+          "choices": [
+            {
+              "value": "billing"
+            },
+            {
+              "value": "technical"
+            },
+            {
+              "value": "shipping"
+            }
+          ]
+        },
+        {
+          "type": "predicate",
+          "name": "is_refund",
+          "instructions": "Is the customer asking for a refund?"
+        },
+        {
+          "type": "choice",
+          "name": "severity",
+          "instructions": "Which severity applies?",
+          "choices": [
+            {
+              "value": "low"
+            },
+            {
+              "value": "medium"
+            },
+            {
+              "value": "high"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

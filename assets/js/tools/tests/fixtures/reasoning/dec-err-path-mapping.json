@@ -1,0 +1,48 @@
+{
+  "id": "dec-err-path-mapping",
+  "label": "400 with a system message (path mapping)",
+  "input": {
+    "type": "error",
+    "error": {
+      "type": "invalid_request_error",
+      "message": "messages.1.content.0: Invalid `signature` in `thinking` block. The block is bound to a different conversation. Remove the block, or set `thinking.block_binding.prefix_mismatch_behavior` to \"drop_block\"."
+    }
+  },
+  "expect": {
+    "error": "thinking-block-bound-to-a-different-conversation",
+    "path": "messages.1.content.0",
+    "mapped": "messages.2.content.0"
+  },
+  "request": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fix the failing test."
+      },
+      {
+        "role": "system",
+        "content": "Plan mode is off."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigP1"
+          },
+          {
+            "type": "text",
+            "text": "Done."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Now run the linter."
+      }
+    ]
+  }
+}

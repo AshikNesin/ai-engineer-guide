@@ -1,0 +1,44 @@
+{
+  "id": "dec-media",
+  "label": "OpenAI image input to Gemini",
+  "mode": "convert",
+  "to": "gemini",
+  "input": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_image",
+            "image_url": "https://example.com/a.png"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "type": "predicate",
+        "name": "cat",
+        "instructions": [
+          {
+            "type": "input_text",
+            "text": "Is this a cat?"
+          },
+          {
+            "type": "input_image",
+            "image_url": "https://example.com/cat.png"
+          }
+        ]
+      }
+    ]
+  },
+  "expect": {
+    "warnings": [
+      "media-manual",
+      "instructions-parts",
+      "probability-range",
+      "model-reset"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "anth-thinking-disabled-drop-block",
+  "label": "drop_block with thinking disabled",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fix the failing test."
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "thinking": {
+      "type": "disabled",
+      "block_binding": {
+        "prefix_mismatch_behavior": "drop_block"
+      }
+    },
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fix the failing test."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigA1"
+          },
+          {
+            "type": "text",
+            "text": "Done."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Now run the linter."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "status": "settings-error",
+    "verdicts": {
+      "claude-fable-5-2": "settings_error",
+      "claude-opus-5-5": "settings_error"
+    },
+    "fix": "anthropic-remove-thinking-by-hand"
+  }
+}

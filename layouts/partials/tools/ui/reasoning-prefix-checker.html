@@ -1,0 +1,123 @@
+{{- /* Reasoning prefix checker: 3 tabs, one bundle. Rules: data/reasoning_rules.json.
+       Examples come from assets/js/tools/tests/fixtures/reasoning/ (tested). */ -}}
+{{- $rules := site.Data.reasoning_rules -}}
+{{- $tab := .Params.tab | default "prefix" -}}
+{{- $base := "/tools/reasoning-prefix-checker/" -}}
+{{- $tabs := slice (dict "id" "prefix" "label" "Prefix check" "url" $base) (dict "id" "switch" "label" "Model switch" "url" (printf "%smodel-switch/" $base)) (dict "id" "decode" "label" "Decode a response" "url" (printf "%sinput-transformations/" $base)) -}}
+<div class="tool-app tool-reasoning" id="rp-app" data-tab="{{ $tab }}">
+  <div class="tool-tabs" role="tablist" aria-label="Checker">
+    {{- range $tabs }}
+    <button type="button" role="tab" id="rp-tab-{{ .id }}" aria-controls="rp-panel-{{ .id }}" aria-selected="{{ if eq .id $tab }}true{{ else }}false{{ end }}" data-url="{{ .url | relURL }}"{{ if ne .id $tab }} tabindex="-1"{{ end }}>{{ .label }}</button>
+    {{- end }}
+  </div>
+
+  {{- /* ---------------- Tab 1: prefix check ---------------- */}}
+  <section id="rp-panel-prefix" role="tabpanel" aria-labelledby="rp-tab-prefix"{{ if ne $tab "prefix" }} hidden{{ end }}>
+    <div class="tool-row">
+      <div class="tool-field"><label for="rp-example">Load an example</label>
+        <select id="rp-example">
+          <option value="">Choose…</option>
+          {{- range $rules.examples }}<option value="{{ .id }}">{{ .label }}</option>{{ end }}
+        </select></div>
+      <div class="tool-field"><label for="rp-api">API</label>
+        <select id="rp-api"><option value="">Detect automatically</option><option value="anthropic">Anthropic Messages</option><option value="openai">OpenAI Responses</option></select></div>
+      <div class="tool-field is-check"><label class="tool-check"><input type="checkbox" id="rp-logmode"> Or paste a log</label></div>
+    </div>
+    <p class="tool-note" id="rp-example-note" hidden></p>
+    <div class="tool-row" id="rp-pair">
+      <div class="tool-field grow"><label for="rp-a">Earlier request (or the one that worked)</label>
+        <textarea id="rp-a" rows="12" spellcheck="false" autocomplete="off"></textarea>
+        <small class="rp-err" id="rp-a-err" role="alert"></small></div>
+      <div class="tool-field grow"><label for="rp-b">Next request (or the one that failed)</label>
+        <textarea id="rp-b" rows="12" spellcheck="false" autocomplete="off"></textarea>
+        <small class="rp-err" id="rp-b-err" role="alert"></small></div>
+    </div>
+    <div class="tool-field" id="rp-log-field" hidden><label for="rp-log">Request log: a JSON array of request bodies, or one request per line (JSONL)</label>
+      <textarea id="rp-log" rows="12" spellcheck="false" autocomplete="off"></textarea>
+      <small class="rp-err" id="rp-log-err" role="alert"></small></div>
+    <small class="helptext">JSON request bodies, or a Python/TypeScript SDK call with literal values. Remove secrets before pasting. Nothing leaves your browser, but your clipboard and screen still can.</small>
+
+    <fieldset class="rp-targets">
+      <legend>Target models</legend>
+      <div class="rp-target-group" data-provider="anthropic">
+        {{- range $rules.anthropic.models }}
+        <label class="tool-check"><input type="checkbox" name="rp-target" value="{{ .id }}" data-provider="anthropic"{{ if .preserved }} data-preserved{{ end }}> {{ .label }}{{ if eq .id_verified false }} <span class="helptext">(id unconfirmed)</span>{{ end }}</label>
+        {{- end }}
+      </div>
+      <div class="rp-target-group" data-provider="openai" hidden>
+        {{- range $rules.openai.models }}
+        <label class="tool-check"><input type="checkbox" name="rp-target" value="{{ .id }}" data-provider="openai"{{ if .prefix_drop }} data-preserved{{ end }}> {{ .label }}</label>
+        {{- end }}
+      </div>
+    </fieldset>
+    <div class="tool-row" id="rp-anth-opts">
+      <div class="tool-field"><label for="rp-behavior"><code>prefix_mismatch_behavior</code></label>
+        <select id="rp-behavior"><option value="auto">As sent in B</option><option value="unset">Unset</option><option value="error">"error"</option><option value="drop_block">"drop_block"</option></select></div>
+      <div class="tool-field is-check"><label class="tool-check"><input type="checkbox" id="rp-batch"> Message Batches item</label></div>
+      <div class="tool-field is-check"><label class="tool-check"><input type="checkbox" id="rp-oldacct"> Account created before Aug 31, 2026</label></div>
+    </div>
+
+    <div id="rp-out" aria-live="polite">
+      <div id="rp-banner" class="rp-banner"></div>
+      <div id="rp-log-rows"></div>
+      <div id="rp-detail"></div>
+    </div>
+    <div class="tool-actions">
+      <button type="button" class="primary" id="rp-copy-report">Copy report (Markdown)</button>
+      <button type="button" id="rp-download-report">Download report (.md)</button>
+    </div>
+  </section>
+
+  {{- /* ---------------- Tab 2: model switch ---------------- */}}
+  <section id="rp-panel-switch" role="tabpanel" aria-labelledby="rp-tab-switch"{{ if ne $tab "switch" }} hidden{{ end }}>
+    <div class="tool-row">
+      <div class="tool-field grow"><label for="rs-add">Models used so far</label>
+        <div class="rs-chips" id="rs-chips"></div>
+        <div class="rs-add-row">
+          <select id="rs-add">{{ partial "tools/reasoning-model-options.html" $rules }}</select>
+          <button type="button" id="rs-add-btn">Add</button>
+          <input type="text" id="rs-free" aria-label="Model ID" placeholder="or type a model ID" autocomplete="off" spellcheck="false">
+        </div></div>
+      <div class="tool-field"><label for="rs-to">Switching to</label>
+        <select id="rs-to">{{ partial "tools/reasoning-model-options.html" $rules }}</select></div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-field" id="rs-platform-field"><label for="rs-platform">Platform (Claude)</label>
+        <select id="rs-platform">{{ range $rules.anthropic.platforms }}<option value="{{ .id }}">{{ .label }}</option>{{ end }}</select></div>
+      <div class="tool-field" id="rs-context-field"><label for="rs-context"><code>reasoning.context</code> (OpenAI)</label>
+        <select id="rs-context"><option value="auto">auto / not set</option><option value="current_turn">current_turn</option><option value="all_turns">all_turns</option></select></div>
+      <div class="tool-field is-check"><label class="tool-check"><input type="checkbox" id="rs-acct"> Also switching account, org or cloud project</label></div>
+      <div class="tool-field is-check"><label class="tool-check"><input type="checkbox" id="rs-refusal"> This switch is a refusal fallback</label></div>
+    </div>
+    <div class="tool-actions" style="margin-top:0"><button type="button" id="rs-from-requests">Read models from my requests (Prefix check tab)</button><button type="button" id="rs-share">Copy share link</button></div>
+    <div id="rs-out" aria-live="polite"></div>
+    <details class="rs-matrix-box" open>
+      <summary>Full switch table (Claude API)</summary>
+      {{ partial "tools/reasoning-switch-matrix.html" . }}
+    </details>
+  </section>
+
+  {{- /* ---------------- Tab 3: decode ---------------- */}}
+  <section id="rp-panel-decode" role="tabpanel" aria-labelledby="rp-tab-decode"{{ if ne $tab "decode" }} hidden{{ end }}>
+    <div class="tool-row">
+      <div class="tool-field"><label for="rd-example">Load an example</label>
+        <select id="rd-example"><option value="">Choose…</option>{{ range $rules.decode_examples }}<option value="{{ .id }}">{{ .label }}</option>{{ end }}</select></div>
+    </div>
+    <p class="tool-note" id="rd-example-note" hidden></p>
+    <div class="tool-row">
+      <div class="tool-field grow"><label for="rd-input">Response, SSE stream, error body, or an <code>input_transformations</code> array</label>
+        <textarea id="rd-input" rows="12" spellcheck="false" autocomplete="off"></textarea>
+        <small class="rp-err" id="rd-input-err" role="alert"></small></div>
+      <div class="tool-field grow"><label for="rd-request">The request (optional: resolves each path to its block)</label>
+        <textarea id="rd-request" rows="12" spellcheck="false" autocomplete="off"></textarea>
+        <small class="rp-err" id="rd-request-err" role="alert"></small></div>
+    </div>
+    <div id="rd-out" aria-live="polite"></div>
+    <p class="tool-note">Test-mode tip from Anthropic's docs: fail only on an <code>input_transformations</code> entry whose reason is <code>prefix_binding_mismatch</code>. Entries with <code>model_binding_mismatch</code> or <code>organization_binding_mismatch</code> are expected after a switch.</p>
+  </section>
+
+  <p class="tool-stamp">{{ len $rules.reasons }} reason codes, {{ len $rules.errors }} error strings and {{ len $rules.fixes }} fixes, each quoted from an official Anthropic or OpenAI page (last checked {{ $rules.checked }}). <a href="{{ "/tools/reasoning-prefix-checker/reasons/" | relURL }}">Reason codes</a> · <a href="{{ "/tools/reasoning-prefix-checker/errors/" | relURL }}">Error messages</a></p>
+
+  <script type="application/json" id="rp-rules">{{ os.ReadFile "data/reasoning_rules.json" | safeJS }}</script>
+  {{ partial "tools/reasoning-fixtures.html" (dict "dir" "reasoning" "id" "rp-fixtures") }}
+</div>

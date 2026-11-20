@@ -1,0 +1,65 @@
+{
+  "id": "anth-string-vs-blocks",
+  "label": "String vs text-block content",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "hi"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigF1"
+          },
+          {
+            "type": "text",
+            "text": "Hello!"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "How are you?"
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "content-format-changed",
+      "path_b": "messages.0.content"
+    },
+    "invalid_paths": [],
+    "verdicts": {
+      "claude-fable-5-2": "unknown",
+      "claude-mythos-5-1": "unknown",
+      "claude-opus-5-5": "unknown",
+      "claude-opus-5": "none"
+    }
+  }
+}

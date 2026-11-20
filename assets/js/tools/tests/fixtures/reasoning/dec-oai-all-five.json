@@ -1,0 +1,185 @@
+{
+  "id": "dec-oai-all-five",
+  "label": "OpenAI: one entry per reason",
+  "input": {
+    "id": "resp_01",
+    "object": "response",
+    "model": "gpt-6.2-astra",
+    "output": [
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Done."
+          }
+        ]
+      }
+    ],
+    "input_transformations": [
+      {
+        "id": "rs_a",
+        "action": "removed",
+        "reason": "organization_mismatch",
+        "type": "reasoning"
+      },
+      {
+        "id": "rs_b",
+        "action": "removed",
+        "reason": "end_user_mismatch",
+        "type": "reasoning"
+      },
+      {
+        "id": "rs_c",
+        "action": "removed",
+        "reason": "model_mismatch",
+        "type": "reasoning"
+      },
+      {
+        "id": "rs_d",
+        "action": "removed",
+        "reason": "prefix_mismatch",
+        "type": "reasoning"
+      },
+      {
+        "id": "rs_e",
+        "action": "removed",
+        "reason": "turn_boundary",
+        "type": "reasoning"
+      }
+    ]
+  },
+  "expect": {
+    "reasons": [
+      "openai-organization-mismatch",
+      "openai-end-user-mismatch",
+      "openai-model-mismatch",
+      "openai-prefix-mismatch",
+      "openai-turn-boundary"
+    ],
+    "counts": {
+      "total": 5,
+      "yours": 2,
+      "expected": 1,
+      "maybe": 2,
+      "unknown": 0
+    },
+    "resolved": [
+      "input.1",
+      "input.4",
+      "input.7",
+      "input.10",
+      "input.13"
+    ]
+  },
+  "request": {
+    "model": "gpt-6.2-astra",
+    "input": [
+      {
+        "role": "user",
+        "content": "a"
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_a",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_a"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "x"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "b"
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_b",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_b"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "y"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "c"
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_c",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_c"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "z"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "d"
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_d",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_d"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "w"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "e"
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_e",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_e"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "v"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "f"
+      }
+    ]
+  }
+}

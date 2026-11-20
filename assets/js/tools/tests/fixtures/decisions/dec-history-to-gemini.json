@@ -1,0 +1,38 @@
+{
+  "id": "dec-history-to-gemini",
+  "label": "OpenAI conversation to Gemini",
+  "mode": "convert",
+  "to": "gemini",
+  "input": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": "Where is my order?"
+      },
+      {
+        "role": "assistant",
+        "content": "It shipped Monday."
+      },
+      {
+        "role": "user",
+        "content": "It's not here."
+      }
+    ],
+    "questions": [
+      {
+        "type": "predicate",
+        "name": "escalate",
+        "instructions": "Should this go to a human?"
+      }
+    ]
+  },
+  "expect": {
+    "warnings": [
+      "history-serialized",
+      "probability-range",
+      "model-reset"
+    ],
+    "input": "user: Where is my order?\nassistant: It shipped Monday.\nuser: It's not here."
+  }
+}

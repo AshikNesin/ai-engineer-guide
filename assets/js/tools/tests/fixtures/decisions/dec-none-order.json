@@ -1,0 +1,34 @@
+{
+  "id": "dec-none-order",
+  "label": "Choice with a none option to Gemini",
+  "mode": "convert",
+  "to": "gemini",
+  "input": {
+    "model": "gpt-6-luna",
+    "input": "x",
+    "questions": [
+      {
+        "type": "choice",
+        "name": "issue",
+        "instructions": "Which issue?",
+        "choices": [
+          {
+            "value": "shipping"
+          },
+          {
+            "value": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "expect": {
+    "warnings": [
+      "option-order",
+      "model-reset"
+    ],
+    "message_includes": {
+      "option-order": "`none…`"
+    }
+  }
+}

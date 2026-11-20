@@ -1,0 +1,46 @@
+{
+  "id": "mig-nullable-enum",
+  "label": "Nullable category",
+  "mode": "migrate",
+  "to": "openai",
+  "input": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "billing",
+              "technical"
+            ]
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "description": "Team"
+      }
+    }
+  },
+  "expect": {
+    "questions": [
+      [
+        "category",
+        "choice"
+      ]
+    ],
+    "options": {
+      "category": [
+        "billing",
+        "technical",
+        "other"
+      ]
+    },
+    "flags": {
+      "category": [
+        "added-other"
+      ]
+    }
+  }
+}

@@ -1,5 +1,11 @@
 {{- /* Extra <head> for every page in the tools section (called from custom_head.html). */ -}}
+{{- if .Params.light_only }}
+<meta name="color-scheme" content="light">
+{{- $lo := resources.Get "css/tools-light-only.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $lo.RelPermalink }}" integrity="{{ $lo.Data.Integrity }}">
+{{- else }}
 <meta name="color-scheme" content="light dark">
+{{- end }}
 {{- $css := resources.Get "css/tools.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- with site.GetPage "/tools/model-retirements" }}

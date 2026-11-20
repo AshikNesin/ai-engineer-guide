@@ -1,0 +1,19 @@
+{
+  "id": "dec-anth-sse-fallback",
+  "label": "Claude: SSE stream after a fallback",
+  "input": "event: message_start\ndata: {\"type\": \"message_start\", \"message\": {\"id\": \"msg_01\", \"type\": \"message\", \"role\": \"assistant\", \"content\": [], \"model\": \"claude-fable-5-2\", \"usage\": {\"input_tokens\": 900, \"output_tokens\": 1}, \"input_transformations\": [{\"type\": \"thinking_dropped\", \"path\": \"messages.1.content.0\", \"reason\": \"prefix_binding_mismatch\"}]}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"text\",\"text\":\"\"}}\n\nevent: message_delta\ndata: {\"type\": \"message_delta\", \"delta\": {\"stop_reason\": \"end_turn\"}, \"usage\": {\"output_tokens\": 120}, \"input_transformations\": [{\"type\": \"thinking_dropped\", \"path\": \"messages.1.content.0\", \"reason\": \"model_binding_mismatch\"}, {\"type\": \"thinking_dropped\", \"path\": \"messages.3.content.0\", \"reason\": \"model_binding_mismatch\"}]}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}",
+  "expect": {
+    "source": "message_delta",
+    "reasons": [
+      "anthropic-model-binding-mismatch",
+      "anthropic-model-binding-mismatch"
+    ],
+    "counts": {
+      "total": 2,
+      "yours": 0,
+      "expected": 2,
+      "maybe": 0,
+      "unknown": 0
+    }
+  }
+}

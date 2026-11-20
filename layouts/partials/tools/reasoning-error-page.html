@@ -1,0 +1,52 @@
+{{- /* Generated page for one prefix-check error string (data: errors[]). No tool JS. */ -}}
+{{- $rules := site.Data.reasoning_rules -}}
+{{- $e := index (where $rules.errors "id" .Params.reasoning_error) 0 -}}
+<article class="tool tool-reasoning">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ $e.title }}</h1>
+    <p class="tool-promise">Claude API, HTTP {{ $e.status }}, <code>{{ $e.error_type }}</code>.</p>
+  </header>
+  <div class="tool-app">
+    <p class="helptext" style="margin-top:0">Example message:</p>
+    <pre><code>{{ $e.example_message }}</code></pre>
+    <h2 style="font-size:1.1rem">What it means</h2>
+    <p>{{ $e.meaning | markdownify }}</p>
+    {{- range $e.sources }}{{ partial "tools/reasoning-source.html" (dict "s" . "checked" $e.checked) }}{{ end }}
+    {{- with $e.fix }}{{ with index (where $rules.fixes "id" .) 0 }}
+    <h2 style="font-size:1.1rem">{{ if eq $e.id "thinking-block-bound-to-a-different-conversation" }}Stop the errors now{{ else }}How to fix it{{ end }}</h2>
+    <p>{{ .summary | markdownify }}</p>
+    {{- with .snippet }}<pre><code>{{ . | jsonify (dict "indent" "  ") }}</code></pre>{{ end }}
+    {{- with .header }}<p class="helptext">Header: <code>{{ . }}</code></p>{{ end }}
+    {{- end }}{{ end }}
+    {{- range $e.also }}{{ with index (where $rules.fixes "id" .) 0 }}<p>{{ .summary | markdownify }}</p>{{ end }}{{ end }}
+    {{- with $e.long_term_fix }}{{ with index (where $rules.fixes "id" .) 0 }}
+    <h2 style="font-size:1.1rem">Long-term fix</h2>
+    <p>{{ .summary | markdownify }}</p>
+    {{- end }}{{ end }}
+    {{- with $e.external_fix }}<p>Follow Anthropic's <a href="{{ . }}" rel="noopener">thinking troubleshooting guide</a>.</p>{{ end }}
+    {{- with $e.example.fixture }}
+      {{- $fx := partial "tools/reasoning-fixture.html" (dict "dir" "reasoning" "id" .) -}}
+      {{- with $fx.a }}
+    <p>A pair of requests that causes it ({{ $fx.label }}):</p>
+    <div class="tool-row">
+      <div class="tool-field grow"><span class="label">Earlier request</span><pre><code>{{ $fx.a | jsonify (dict "indent" "  ") }}</code></pre></div>
+      <div class="tool-field grow"><span class="label">Next request</span><pre><code>{{ $fx.b | jsonify (dict "indent" "  ") }}</code></pre></div>
+    </div>
+      {{- end }}
+    <div class="tool-actions"><a class="tool-btn primary" href="{{ printf "/tools/reasoning-prefix-checker/?example=%s" . | relURL }}">Check your requests</a>
+      <a class="tool-btn" href="{{ "/tools/reasoning-prefix-checker/input-transformations/" | relURL }}">Decode your error</a></div>
+    {{- else }}
+    <div class="tool-actions"><a class="tool-btn primary" href="{{ "/tools/reasoning-prefix-checker/input-transformations/" | relURL }}">Decode your error</a></div>
+    {{- end }}
+  </div>
+  <section class="tool-section">
+    <h2>Other prefix-check errors</h2>
+    <ul>{{ range $rules.errors }}{{ if ne .id $e.id }}<li><a href="{{ printf "/tools/reasoning-prefix-checker/errors/%s/" .id | relURL }}">{{ .title }}</a></li>{{ end }}{{ end }}</ul>
+    <p><a href="{{ "/tools/reasoning-prefix-checker/errors/" | relURL }}">All errors</a> · <a href="{{ "/tools/reasoning-prefix-checker/reasons/" | relURL }}">Reason codes</a></p>
+  </section>
+  <p class="tool-stamp">Last checked {{ $e.checked }} against Anthropic's docs.</p>
+  {{ partial "tools/faq.html" . }}
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

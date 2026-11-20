@@ -58,6 +58,16 @@
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
 
+# Reasoning prefix checker + decision converter: pasted requests stay in the
+# browser. Only first-party scripts, Umami (hi.nesin.io) and PostHog
+# (us.i.posthog.com, us-assets.i.posthog.com) may load or send anything. The newsletter posts
+# to buttondown.com, and search fetches /api/search (same origin).
+/tools/reasoning-prefix-checker/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://hi.nesin.io https://us-assets.i.posthog.com; connect-src 'self' https://hi.nesin.io https://us.i.posthog.com https://us-assets.i.posthog.com; img-src 'self' data: https://aiengineerguide.com https://res.cloudinary.com; style-src 'self' 'unsafe-inline'; font-src 'self'; form-action 'self' https://buttondown.com; frame-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
+
+/tools/decision-api-converter/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://hi.nesin.io https://us-assets.i.posthog.com; connect-src 'self' https://hi.nesin.io https://us.i.posthog.com https://us-assets.i.posthog.com; img-src 'self' data: https://aiengineerguide.com https://res.cloudinary.com; style-src 'self' 'unsafe-inline'; font-src 'self'; form-action 'self' https://buttondown.com; frame-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
+
 # Default: security headers + short cache for HTML pages
 /*
   X-Content-Type-Options: nosniff

@@ -10,6 +10,8 @@ clusters:
     title: Tokens, cost and context
   - key: build
     title: Building with LLM APIs
+  - key: reasoning
+    title: Reasoning and agent loops
 
 tools:
   - slug: model-migration-linter
@@ -17,7 +19,7 @@ tools:
     title: Request migration linter
     short: Paste an API request, pick the target model, and see every field that will return a 400.
     cluster: migration
-    related: [model-id-scanner, model-retirements, structured-output-schema-checker, llm-cost-calculator]
+    related: [model-id-scanner, model-retirements, structured-output-schema-checker, reasoning-prefix-checker]
     status: live
 
   - slug: model-id-scanner
@@ -25,7 +27,7 @@ tools:
     title: Deprecated model-ID scanner
     short: Paste code, config or an n8n workflow and find every retiring or retired model ID.
     cluster: migration
-    related: [model-migration-linter, model-retirements, llm-cost-calculator]
+    related: [model-migration-linter, model-retirements, reasoning-prefix-checker]
     status: live
 
   - slug: model-retirements
@@ -66,4 +68,20 @@ tools:
     short: Check a JSON Schema for OpenAI strict mode, Claude strict tools and Gemini, and convert tool definitions.
     cluster: build
     related: [model-migration-linter, llm-cost-calculator]
+    status: live
+
+  - slug: reasoning-prefix-checker
+    url: /tools/reasoning-prefix-checker/
+    title: Thinking block prefix checker
+    short: Paste two requests and see which Claude thinking blocks or GPT-6.2 reasoning items survive, with the fix.
+    cluster: reasoning
+    related: [model-migration-linter, model-id-scanner, llm-cost-calculator]
+    status: live
+
+  - slug: decision-api-converter
+    url: /tools/decision-api-converter/
+    title: Decision API converter
+    short: Convert decision requests between OpenAI Decisions, Gemini Decisions and Jev/Clef, or turn a classifier schema into decision questions.
+    cluster: build
+    related: [structured-output-schema-checker, reasoning-prefix-checker]
     status: live

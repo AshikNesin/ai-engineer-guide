@@ -1,0 +1,67 @@
+{
+  "id": "oai-config-update-appended",
+  "label": "Effort changed with configuration_update (passes)",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.2-astra",
+    "reasoning": {
+      "effort": "low"
+    },
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.2-astra",
+    "reasoning": {
+      "effort": "low"
+    },
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Here's a plan."
+          }
+        ]
+      },
+      {
+        "type": "configuration_update",
+        "reasoning": {
+          "effort": "high"
+        }
+      },
+      {
+        "role": "user",
+        "content": "Now do step 1 carefully."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": null,
+    "invalid_paths": [],
+    "verdicts": {
+      "gpt-6.2-astra": "none",
+      "gpt-6.1-sol": "none"
+    }
+  }
+}

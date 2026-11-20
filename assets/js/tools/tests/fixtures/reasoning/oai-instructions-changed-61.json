@@ -1,0 +1,65 @@
+{
+  "id": "oai-instructions-changed-61",
+  "label": "instructions changed on GPT-6.1",
+  "api": "openai",
+  "a": {
+    "model": "gpt-6.1-sol",
+    "instructions": "Today is 2026-11-18.",
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      }
+    ]
+  },
+  "b": {
+    "model": "gpt-6.1-sol",
+    "instructions": "Today is 2026-11-19.",
+    "input": [
+      {
+        "role": "user",
+        "content": "Plan the migration."
+      },
+      {
+        "type": "reasoning",
+        "id": "rs_1",
+        "summary": [],
+        "encrypted_content": "gAAAABrs_1"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Plan."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Go on."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "instructions-changed",
+      "path_b": "instructions"
+    },
+    "invalid_paths": [
+      "input.1"
+    ],
+    "verdicts": {
+      "gpt-6.1-sol": "none",
+      "gpt-6.2-astra": "none"
+    },
+    "info": {
+      "gpt-6.1-sol": "prefix-changed-cache-miss"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "mig-multilabel",
+  "label": "Multi-label tags",
+  "mode": "migrate",
+  "to": "openai",
+  "input": {
+    "type": "object",
+    "properties": {
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      }
+    }
+  },
+  "expect": {
+    "questions": [
+      [
+        "tags_a",
+        "yesno"
+      ],
+      [
+        "tags_b",
+        "yesno"
+      ],
+      [
+        "tags_c",
+        "yesno"
+      ]
+    ],
+    "flags": {
+      "tags_a": [
+        "multi-label-split"
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{{- /* Generated page for one input_transformations reason (data: reasons[]). No tool JS. */ -}}
+{{- $rules := site.Data.reasoning_rules -}}
+{{- $r := index (where $rules.reasons "id" .Params.reasoning_reason) 0 -}}
+{{- $provider := cond (eq $r.provider "anthropic") "Anthropic (Claude)" "OpenAI" -}}
+{{- $fix := index (where $rules.fixes "id" $r.fix) 0 -}}
+{{- $yours := dict "yes" "Yes. Your code changed something, so it's yours to fix." "no" "No. This is expected, for example after a model or account switch." "usually-no" "Usually not: it follows from a model switch you chose." "maybe" "Maybe: it depends on the `reasoning.context` your model uses." -}}
+<article class="tool tool-reasoning">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1><code>{{ .Params.h1 }}</code></h1>
+    <p class="tool-promise">{{ $provider }} <code>input_transformations</code> entry{{ with $r.type }}: <code>type: "{{ . }}"</code>,{{ end }} <code>reason: "{{ $r.reason }}"</code>.</p>
+  </header>
+  <div class="tool-app">
+    <h2 style="font-size:1.1rem;margin-top:0">What it means</h2>
+    <p>{{ $r.meaning | markdownify }}</p>
+    {{- range $r.sources }}{{ partial "tools/reasoning-source.html" (dict "s" . "checked" $r.checked) }}{{ end }}
+    <h2 style="font-size:1.1rem">Is it yours to fix?</h2>
+    <p><span class="badge {{ if eq $r.yours "yes" }}soon{{ else if eq $r.yours "maybe" }}later{{ else }}far{{ end }}">{{ index $yours $r.yours | markdownify }}</span></p>
+    {{- with $r.billed }}<p>You were billed for this block, and Claude read reasoning about content that has since changed. Send <code>prefix_mismatch_behavior: "error"</code> in tests so every failure shows up as a 400.</p>{{ end }}
+    <h2 style="font-size:1.1rem">How to fix it</h2>
+    {{- with $fix }}
+    <p>{{ .summary | markdownify }}</p>
+    {{- with .snippet }}<pre><code>{{ . | jsonify (dict "indent" "  ") }}</code></pre>{{ end }}
+    {{- with .header }}<p class="helptext">Header: <code>{{ . }}</code></p>{{ end }}
+    {{- else }}
+    <p>Nothing to fix in your code. The request still succeeded, and the model answered without that reasoning.</p>
+    {{- end }}
+    {{- with $r.example.fixture }}
+      {{- $fx := partial "tools/reasoning-fixture.html" (dict "dir" "reasoning" "id" .) -}}
+      {{- with $fx.a }}
+    <p>An example that produces it ({{ $fx.label }}):</p>
+    <div class="tool-row">
+      <div class="tool-field grow"><span class="label">Earlier request</span><pre><code>{{ $fx.a | jsonify (dict "indent" "  ") }}</code></pre></div>
+      <div class="tool-field grow"><span class="label">Next request</span><pre><code>{{ $fx.b | jsonify (dict "indent" "  ") }}</code></pre></div>
+    </div>
+      {{- end }}
+    <div class="tool-actions"><a class="tool-btn primary" href="{{ printf "/tools/reasoning-prefix-checker/?example=%s" . | relURL }}">Check your requests</a>
+      <a class="tool-btn" href="{{ "/tools/reasoning-prefix-checker/input-transformations/" | relURL }}">Decode a response</a></div>
+    {{- end }}
+    {{- with $r.example.switch }}
+    <div class="tool-actions"><a class="tool-btn primary" href="{{ printf "/tools/reasoning-prefix-checker/model-switch/%s" . | relURL }}">Check your model switch</a>
+      <a class="tool-btn" href="{{ "/tools/reasoning-prefix-checker/input-transformations/" | relURL }}">Decode a response</a></div>
+    {{- end }}
+    {{- if not (or $r.example.fixture $r.example.switch) }}
+    <div class="tool-actions"><a class="tool-btn primary" href="{{ "/tools/reasoning-prefix-checker/input-transformations/" | relURL }}">Decode your response</a></div>
+    {{- end }}
+  </div>
+
+  <section class="tool-section">
+    <h2>Related reason codes</h2>
+    <ul>
+    {{- range $rules.reasons }}{{ if and (ne .id $r.id) (eq .provider $r.provider) }}
+      <li><a href="{{ printf "/tools/reasoning-prefix-checker/reasons/%s/" .id | relURL }}"><code>{{ cond (eq .type "thinking_mismatch_allowed") .type .reason }}</code></a>: {{ .title | markdownify }}</li>
+    {{- end }}{{ end }}
+    </ul>
+    <p><a href="{{ "/tools/reasoning-prefix-checker/reasons/" | relURL }}">All reason codes</a> · <a href="{{ "/tools/reasoning-prefix-checker/errors/" | relURL }}">Error messages</a></p>
+  </section>
+  <p class="tool-stamp">Last checked {{ $r.checked }} against the official {{ cond (eq $r.provider "anthropic") "Anthropic" "OpenAI" }} docs.</p>
+  {{ partial "tools/faq.html" . }}
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

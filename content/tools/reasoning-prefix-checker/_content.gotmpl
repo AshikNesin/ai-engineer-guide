@@ -1,0 +1,42 @@
+{{- /* Content adapter: /tools/reasoning-prefix-checker/reasons/ and /errors/,
+       one page per entry in data/reasoning_rules.json. Ids never change. */ -}}
+{{- $r := site.Data.reasoning_rules -}}
+{{- $shared := dict "related_tool" "reasoning-prefix-checker" "light_only" true "cta_heading" "Get one practical AI engineering note a week" -}}
+{{- $.AddPage (dict
+    "kind" "section" "path" "reasons" "outputs" (slice "HTML")
+    "title" "Reasoning removal reason codes"
+    "params" (merge $shared (dict "reasoning_reasons_index" true "breadcrumb" "Reason codes"
+      "seo_title" "input_transformations Reason Codes for Claude and OpenAI, Explained | AIEngineerGuide"
+      "description" (printf "All %d reasons Claude and OpenAI give for dropping thinking blocks or reasoning items: what each means, whether it's yours to fix, and the fix." (len $r.reasons))))
+    "dates" (dict "lastmod" (time.AsTime $r.checked))
+) -}}
+{{- $.AddPage (dict
+    "kind" "section" "path" "errors" "outputs" (slice "HTML")
+    "title" "Thinking block prefix-check errors"
+    "params" (merge $shared (dict "reasoning_errors_index" true "breadcrumb" "Errors"
+      "seo_title" "Claude Thinking Block Errors: Bound to a Different Conversation and More | AIEngineerGuide"
+      "description" "Every Claude prefix-check error message, matched the way Anthropic says to match it, with the stopgap and the long-term fix."))
+    "dates" (dict "lastmod" (time.AsTime $r.checked))
+) -}}
+{{- range $r.reasons -}}
+  {{- $h1 := cond (eq .type "thinking_mismatch_allowed") .type .reason -}}
+  {{- $provider := cond (eq .provider "anthropic") "Claude" "OpenAI" -}}
+  {{- $.AddPage (dict
+      "kind" "page" "path" (printf "reasons/%s" .id)
+      "title" (printf "%s (%s)" $h1 $provider)
+      "params" (merge $shared (dict "reasoning_reason" .id "breadcrumb" (printf "%s (%s)" $h1 $provider) "h1" $h1 "faq" .faq
+        "seo_title" (printf "%s: what it means and how to fix it | AIEngineerGuide" $h1)
+        "description" (printf "%s %s input_transformations reason %s: %s" $provider (cond (eq .provider "anthropic") "thinking block" "reasoning item") $h1 .meaning)))
+      "dates" (dict "lastmod" (time.AsTime .checked))
+  ) -}}
+{{- end -}}
+{{- range $r.errors -}}
+  {{- $.AddPage (dict
+      "kind" "page" "path" (printf "errors/%s" .id)
+      "title" .title
+      "params" (merge $shared (dict "reasoning_error" .id "breadcrumb" .title "h1" .title "faq" .faq
+        "seo_title" (printf "%s: what it means and how to fix it | AIEngineerGuide" .title)
+        "description" (printf "Claude API 400 error \"%s\": what it means, how to stop it now and the long-term fix, from Anthropic's docs (checked %s)." .title .checked)))
+      "dates" (dict "lastmod" (time.AsTime .checked))
+  ) -}}
+{{- end -}}

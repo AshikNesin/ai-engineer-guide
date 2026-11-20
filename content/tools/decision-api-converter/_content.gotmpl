@@ -1,0 +1,19 @@
+{{- /* Content adapter: one page per format pair in data/decision_formats.json
+       (/tools/decision-api-converter/<from>-to-<to>/). Ids never change. */ -}}
+{{- $d := site.Data.decision_formats -}}
+{{- $name := dict "openai" "OpenAI Decisions" "gemini" "Gemini Decisions" "jev" "System One (Jev, Clef)" -}}
+{{- range $d.pairs -}}
+  {{- $f := index $name .from -}}
+  {{- $t := index $name .to -}}
+  {{- $.AddPage (dict
+      "kind" "page" "path" .id
+      "title" (printf "%s to %s" $f $t)
+      "params" (dict "decision_pair" .id "tool" "decision-api-converter" "mode" "convert" "example" .example "from" .from "to" .to
+        "light_only" true "related_tool" "decision-api-converter" "cta_heading" "Get one practical AI engineering note a week"
+        "breadcrumb" (printf "%s to %s" $f $t)
+        "h1" (printf "Convert %s requests to %s" $f $t)
+        "seo_title" (printf "%s to %s Converter (Free, runs in your browser) | AIEngineerGuide" $f $t)
+        "description" (printf "Convert a %s request to %s: the converted JSON, a curl snippet, and a warning for every lossy step, from the providers' docs. Free, runs in your browser." $f $t))
+      "dates" (dict "lastmod" (time.AsTime $d.checked))
+  ) -}}
+{{- end -}}

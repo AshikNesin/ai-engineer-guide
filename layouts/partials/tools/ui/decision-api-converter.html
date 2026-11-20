@@ -1,0 +1,56 @@
+{{- /* Decision API converter. Formats and warnings: data/decision_formats.json.
+       Examples come from assets/js/tools/tests/fixtures/decisions/ (tested).
+       Page params: mode (convert|migrate), example (fixture id), from, to. */ -}}
+{{- $d := site.Data.decision_formats -}}
+{{- $mode := .Params.mode | default "convert" -}}
+{{- $example := .Params.example | default (cond (eq $mode "migrate") "mig-ticket" "dec-openai-mixed") -}}
+{{- $from := .Params.from | default "" -}}
+{{- $to := .Params.to | default "" -}}
+{{- $base := "/tools/decision-api-converter/" -}}
+{{- $order := slice "openai" "gemini" "jev" "clef" -}}
+{{- $fxs := slice -}}
+{{- range resources.Match "js/tools/tests/fixtures/decisions/*.json" -}}{{ $fxs = $fxs | append (.Content | transform.Unmarshal) }}{{- end -}}
+<div class="tool-app tool-decisions" id="dc-app" data-mode="{{ $mode }}" data-example="{{ $example }}" data-from="{{ $from }}" data-to="{{ $to }}">
+  <div class="tool-tabs" role="tablist" aria-label="Mode">
+    <button type="button" role="tab" id="dc-tab-convert" aria-controls="dc-panel" aria-selected="{{ if eq $mode "convert" }}true{{ else }}false{{ end }}" data-mode="convert" data-url="{{ $base | relURL }}"{{ if ne $mode "convert" }} tabindex="-1"{{ end }}>Convert a decision request</button>
+    <button type="button" role="tab" id="dc-tab-migrate" aria-controls="dc-panel" aria-selected="{{ if eq $mode "migrate" }}true{{ else }}false{{ end }}" data-mode="migrate" data-url="{{ printf "%sclassifier-to-decisions/" $base | relURL }}"{{ if ne $mode "migrate" }} tabindex="-1"{{ end }}>Classifier schema to decisions</button>
+  </div>
+  <section id="dc-panel" role="tabpanel">
+    <div class="tool-row">
+      <div class="tool-field"><label for="dc-example">Load an example</label>
+        <select id="dc-example">
+          <option value="">Choose…</option>
+          {{- range $fxs }}<option value="{{ .id }}" data-mode="{{ .mode }}">{{ .label }}</option>{{ end }}
+        </select></div>
+      <div class="tool-field" id="dc-from-field"><label for="dc-from">From</label>
+        <select id="dc-from"><option value="">Detect automatically</option>{{ range $k := $order }}<option value="{{ $k }}">{{ (index $d.formats $k).label }}</option>{{ end }}</select></div>
+      <div class="tool-field"><label for="dc-to">To</label>
+        <select id="dc-to">{{ range $k := $order }}<option value="{{ $k }}">{{ (index $d.formats $k).label }}</option>{{ end }}</select></div>
+    </div>
+    <p class="tool-note" id="dc-example-note" hidden></p>
+    <div class="tool-row">
+      <div class="tool-field grow"><label for="dc-in" id="dc-in-label">Decision request (JSON body)</label>
+        <textarea id="dc-in" rows="16" spellcheck="false" autocomplete="off"></textarea>
+        <small class="rp-err" id="dc-in-err" role="alert"></small></div>
+      <div class="tool-field grow"><span class="label" id="dc-out-label">Converted request</span>
+        <pre class="dc-out" id="dc-out" tabindex="0"><code></code></pre>
+        <div class="tool-actions" style="margin-top:.5rem"><button type="button" id="dc-copy-json" class="primary">Copy JSON</button><button type="button" id="dc-copy-curl">Copy curl</button></div></div>
+    </div>
+    <small class="helptext">Paste a request body, a structured-output schema, or a tool definition. Remove secrets first. Nothing leaves your browser.</small>
+    <div id="dc-mapping" aria-live="polite"></div>
+    <div id="dc-warnings" aria-live="polite"></div>
+    <details class="dc-curl-box"><summary>curl</summary><pre><code id="dc-curl"></code></pre></details>
+  </section>
+
+  <details class="dc-answers">
+    <summary>How the answers come back</summary>
+    <div class="tool-table-wrap"><table class="tool-table">
+      <thead><tr><th>Question</th><th>OpenAI</th><th>Gemini</th><th>Jev / Clef</th></tr></thead>
+      <tbody>{{ range $d.answers }}<tr><td>{{ .kind }}</td><td>{{ .openai | markdownify }}</td><td>{{ .gemini | markdownify }}</td><td>{{ .system_one | markdownify }}</td></tr>{{ end }}</tbody>
+    </table></div>
+  </details>
+
+  <p class="tool-stamp">{{ len $d.warnings }} warning types. Most link to the provider's docs; format facts come from the sources listed on each <a href="{{ "/tools/decision-api-converter/openai-to-gemini/" | relURL }}">format pair page</a> (last checked {{ $d.checked }}).</p>
+  <script type="application/json" id="dc-data">{{ os.ReadFile "data/decision_formats.json" | safeJS }}</script>
+  {{ partial "tools/reasoning-fixtures.html" (dict "dir" "decisions" "id" "dc-fixtures") }}
+</div>

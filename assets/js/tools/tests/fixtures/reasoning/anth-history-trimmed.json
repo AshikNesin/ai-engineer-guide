@@ -1,0 +1,124 @@
+{
+  "id": "anth-history-trimmed",
+  "label": "History trimmed",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Start the refactor."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigH1"
+          },
+          {
+            "type": "text",
+            "text": "Started."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Rename the module."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigH2"
+          },
+          {
+            "type": "text",
+            "text": "Renamed."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Update the imports."
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Rename the module."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigH2"
+          },
+          {
+            "type": "text",
+            "text": "Renamed."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Update the imports."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigH3"
+          },
+          {
+            "type": "text",
+            "text": "Updated."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Run the tests."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": {
+      "kind": "messages-trimmed",
+      "path_b": "messages.0"
+    },
+    "invalid_paths": [
+      "messages.1.content.0",
+      "messages.3.content.0"
+    ],
+    "verdicts": {
+      "claude-fable-5-2": "400",
+      "claude-mythos-5-2": "400",
+      "claude-mythos-5-1": "400",
+      "claude-fable-5-1": "possible_400",
+      "claude-opus-5-5": "possible_400",
+      "claude-sonnet-5-5": "possible_400",
+      "claude-haiku-5-5": "possible_400",
+      "claude-opus-5": "none"
+    },
+    "fix": "anthropic-compaction-or-remove-thinking"
+  }
+}

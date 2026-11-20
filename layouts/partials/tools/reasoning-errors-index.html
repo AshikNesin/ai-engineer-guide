@@ -1,0 +1,22 @@
+{{- $rules := site.Data.reasoning_rules -}}
+<article class="tool tool-reasoning">
+  {{ partial "tools/breadcrumb-nav.html" . }}
+  <header class="tool-hero">
+    <h1>{{ .Title }}</h1>
+    <p class="tool-promise">Claude's 400 errors about thinking blocks, matched the way Anthropic says to match them. Paste an error body into the <a href="{{ "/tools/reasoning-prefix-checker/input-transformations/" | relURL }}">decoder</a> to identify yours.</p>
+  </header>
+  <div class="tool-table-wrap"><table class="tool-table stack" style="--cols:1">
+    <thead><tr><th>Error</th><th>What it means</th></tr></thead>
+    <tbody>
+    {{- range $rules.errors }}
+      <tr><td class="full"><a href="{{ printf "/tools/reasoning-prefix-checker/errors/%s/" .id | relURL }}">{{ .title }}</a></td><td class="full" data-label="Meaning">{{ .meaning | markdownify }}</td></tr>
+    {{- end }}
+    {{- range $rules.error_lookalikes }}
+      <tr><td class="full">{{ .title }}</td><td class="full" data-label="Meaning">{{ .meaning | markdownify }} <a href="{{ .url }}" rel="noopener">Anthropic's limits</a> · <a href="{{ .tool | relURL }}">Migration linter</a></td></tr>
+    {{- end }}
+    </tbody>
+  </table></div>
+  <p class="tool-stamp">Last checked {{ $rules.checked }} against Anthropic's docs.</p>
+  {{ partial "tools/cta.html" . }}
+  {{ partial "tools/related.html" . }}
+</article>

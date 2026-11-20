@@ -1,0 +1,14 @@
+{
+  "id": "dec-err-lookalike",
+  "label": "400: invalid signature (look-alike)",
+  "input": {
+    "type": "error",
+    "error": {
+      "type": "invalid_request_error",
+      "message": "messages.1.content.0: Invalid `signature` in `thinking` block."
+    }
+  },
+  "expect": {
+    "error": "invalid-signature-in-thinking-block"
+  }
+}

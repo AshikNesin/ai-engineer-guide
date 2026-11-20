@@ -1,0 +1,1959 @@
+{
+  "_comment": "Hand-maintained. Every model/outcome/reason/error/fix needs sources[{ref|url, quote}] and checked. Anthropic quotes were re-read from the .md pages on 2026-11-20; OpenAI quotes come from the PRD reading on 2026-11-19 and a re-read on 2026-11-20 where marked. Examples are run by assets/js/tools/tests/reasoning.test.mjs. Page slugs (reasons[].id, errors[].id) never change.",
+  "checked": "2026-11-20",
+  "sources": {
+    "a-pt": {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking",
+      "title": "Preserved thinking"
+    },
+    "a-pc": {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking/prefix-checks",
+      "title": "Prefix checks on thinking blocks"
+    },
+    "a-ct": {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking/change-tools-or-instructions",
+      "title": "Change tools or instructions without failing the prefix check"
+    },
+    "a-fix": {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking/fix-bound-to-a-different-conversation",
+      "title": "Fix a thinking block bound to a different conversation"
+    },
+    "a-rn": {
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "title": "Claude Platform release notes (November 9, 2026)"
+    },
+    "a-msm": {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/mid-conversation-system-messages",
+      "title": "Mid-conversation system messages and tool changes"
+    },
+    "o-kp": {
+      "url": "https://developers.openai.com/api/docs/guides/keep-prefix-unchanged",
+      "title": "Keep the prefix unchanged"
+    },
+    "o-rs": {
+      "url": "https://developers.openai.com/api/docs/guides/reasoning",
+      "title": "Reasoning models"
+    },
+    "o-lm": {
+      "url": "https://developers.openai.com/api/docs/guides/latest-model",
+      "title": "Latest model (GPT-6.2)"
+    },
+    "o-ref": {
+      "url": "https://developers.openai.com/api/reference/resources/responses",
+      "title": "Responses API reference"
+    },
+    "o-so": {
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "title": "Structured outputs"
+    },
+    "o-ts": {
+      "url": "https://developers.openai.com/api/docs/guides/tools-tool-search",
+      "title": "Tool search"
+    },
+    "o-pc": {
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "title": "Prompt caching"
+    }
+  },
+  "anthropic": {
+    "_comment": "Model ids not in Anthropic's supportedModels lists or the release notes have id_verified: false. accepts_system_messages comes from the a-msm availability list (Claude API).",
+    "models": [
+      {
+        "id": "claude-fable-5-2",
+        "label": "Claude Fable 5.2",
+        "group": "fable-mythos-5-2",
+        "preserved": true,
+        "unset_outcome": "400",
+        "account_bound": true,
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "Claude Fable 5.2 | 400 error",
+            "anchor": "#outcomes"
+          },
+          {
+            "ref": "a-rn",
+            "quote": "Claude Fable 5.2 and Claude Mythos 5.2 enforce the prefix check for every account, whatever its age."
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-mythos-5-2",
+        "label": "Claude Mythos 5.2",
+        "group": "fable-mythos-5-2",
+        "preserved": true,
+        "unset_outcome": "400",
+        "account_bound": true,
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "Claude Mythos 5.2 | 400 error",
+            "anchor": "#outcomes"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-mythos-5-1",
+        "label": "Claude Mythos 5.1",
+        "group": "fable-mythos-5-1",
+        "preserved": true,
+        "unset_outcome": "400",
+        "account_bound": false,
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "Claude Mythos 5.1 | 400 error",
+            "anchor": "#outcomes"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-fable-5-1",
+        "label": "Claude Fable 5.1",
+        "group": "fable-mythos-5-1",
+        "preserved": true,
+        "unset_outcome": "possible_400",
+        "unset_note": "Claude Fable 5.1 returns the error by default on accounts created on or after August 31, 2026.",
+        "account_bound": false,
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "Claude Fable 5.1 | Possible 400 error",
+            "anchor": "#outcomes"
+          },
+          {
+            "ref": "a-rn",
+            "quote": "Claude Fable 5.1 returns the error by default on accounts created on or after August 31, 2026"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-opus-5-5",
+        "label": "Claude Opus 5.5",
+        "group": "opus-5-5",
+        "preserved": true,
+        "unset_outcome": "possible_400",
+        "account_bound": false,
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "Claude Opus 5.5 | Possible 400 error",
+            "anchor": "#outcomes"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-sonnet-5-5",
+        "label": "Claude Sonnet 5.5",
+        "group": "sonnet-5-5",
+        "preserved": true,
+        "unset_outcome": "possible_400",
+        "account_bound": true,
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "Claude Sonnet 5.5 | Possible 400 error",
+            "anchor": "#outcomes"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-haiku-5-5",
+        "label": "Claude Haiku 5.5",
+        "group": "haiku-5-5",
+        "preserved": true,
+        "unset_outcome": "possible_400",
+        "account_bound": true,
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "Claude Haiku 5.5 | Possible 400 error",
+            "anchor": "#outcomes"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-opus-5",
+        "label": "Claude Opus 5",
+        "group": "opus-5",
+        "preserved": false,
+        "unset_outcome": "none",
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "On the Claude API, other models, such as Claude Opus 5, don’t run it, and it doesn’t cover their blocks.",
+            "anchor": "#which-models-run-the-prefix-check"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-fable-5",
+        "label": "Claude Fable 5",
+        "group": "fable-mythos-5",
+        "preserved": false,
+        "unset_outcome": "none",
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "On the Claude API, other models, such as Claude Opus 5, don’t run it, and it doesn’t cover their blocks.",
+            "anchor": "#which-models-run-the-prefix-check"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-mythos-5",
+        "label": "Claude Mythos 5",
+        "group": "fable-mythos-5",
+        "preserved": false,
+        "unset_outcome": "none",
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pc",
+            "quote": "On the Claude API, other models, such as Claude Opus 5, don’t run it, and it doesn’t cover their blocks.",
+            "anchor": "#which-models-run-the-prefix-check"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-mythos-preview",
+        "label": "Claude Mythos Preview",
+        "group": "mythos-preview",
+        "preserved": false,
+        "unset_outcome": "none",
+        "id_verified": false,
+        "accepts_system_messages": false,
+        "sources": [
+          {
+            "ref": "a-pt",
+            "quote": "Each other, Claude Mythos Preview, Claude Opus 5, and the models in the first row",
+            "anchor": "#earlier-models"
+          },
+          {
+            "ref": "a-msm",
+            "quote": "Mid-conversation system messages are available on Claude Fable 5.2, Claude Mythos 5.2, Claude Fable 5.1, Claude Mythos 5.1, Claude Fable 5, Claude Mythos 5, Claude Opus 5.5, Claude Opus 5, Claude Opus 4.8, Claude Sonnet 5.5, and Claude Haiku 5.5.",
+            "note": "Not in this list, so system messages are treated as unavailable."
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-opus-4-8",
+        "label": "Claude Opus 4.8",
+        "group": "earlier",
+        "preserved": false,
+        "unset_outcome": "none",
+        "accepts_system_messages": true,
+        "sources": [
+          {
+            "ref": "a-pt",
+            "quote": "Every Claude model reads blocks from Claude Opus 4.8, Claude Sonnet 5, Claude Haiku 4.5, and earlier Claude Opus, Claude Sonnet, and Claude Haiku models.",
+            "anchor": "#earlier-models"
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-sonnet-5",
+        "label": "Claude Sonnet 5",
+        "group": "earlier",
+        "preserved": false,
+        "unset_outcome": "none",
+        "accepts_system_messages": false,
+        "sources": [
+          {
+            "ref": "a-pt",
+            "quote": "Every Claude model reads blocks from Claude Opus 4.8, Claude Sonnet 5, Claude Haiku 4.5, and earlier Claude Opus, Claude Sonnet, and Claude Haiku models.",
+            "anchor": "#earlier-models"
+          },
+          {
+            "ref": "a-msm",
+            "quote": "This feature is not available on Claude Sonnet 5."
+          }
+        ],
+        "checked": "2026-11-20"
+      },
+      {
+        "id": "claude-haiku-4-5",
+        "label": "Claude Haiku 4.5",
+        "group": "earlier",
+        "preserved": false,
+        "unset_outcome": "none",
+        "accepts_system_messages": false,
+        "sources": [
+          {
+            "ref": "a-pt",
+            "quote": "Every Claude model reads blocks from Claude Opus 4.8, Claude Sonnet 5, Claude Haiku 4.5, and earlier Claude Opus, Claude Sonnet, and Claude Haiku models.",
+            "anchor": "#earlier-models"
+          },
+          {
+            "ref": "a-msm",
+            "quote": "Mid-conversation system messages are available on Claude Fable 5.2, Claude Mythos 5.2, Claude Fable 5.1, Claude Mythos 5.1, Claude Fable 5, Claude Mythos 5, Claude Opus 5.5, Claude Opus 5, Claude Opus 4.8, Claude Sonnet 5.5, and Claude Haiku 5.5.",
+            "note": "Not in this list, so system messages are treated as unavailable."
+          }
+        ],
+        "checked": "2026-11-20"
+      }
+    ],
+    "earlier_pattern": "^claude-(3-|3\\.|instant|2|(opus|sonnet|haiku)-[34](-|$))",
+    "groups": [
+      {
+        "id": "fable-mythos-5-2",
+        "label": "Claude Fable 5.2 / Mythos 5.2"
+      },
+      {
+        "id": "fable-mythos-5-1",
+        "label": "Claude Fable 5.1 / Mythos 5.1"
+      },
+      {
+        "id": "opus-5-5",
+        "label": "Claude Opus 5.5"
+      },
+      {
+        "id": "sonnet-5-5",
+        "label": "Claude Sonnet 5.5"
+      },
+      {
+        "id": "haiku-5-5",
+        "label": "Claude Haiku 5.5"
+      },
+      {
+        "id": "opus-5",
+        "label": "Claude Opus 5"
+      },
+      {
+        "id": "fable-mythos-5",
+        "label": "Claude Fable 5 / Mythos 5"
+      },
+      {
+        "id": "mythos-preview",
+        "label": "Claude Mythos Preview"
+      },
+      {
+        "id": "earlier",
+        "label": "Claude Opus 4.8, Sonnet 5, Haiku 4.5 and earlier"
+      }
+    ],
+    "matrix": {
+      "_comment": "The a-pt table 'Which model switches keep the reasoning on the Claude API', rows = from, columns = to.",
+      "rows": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "opus-5",
+        "opus-5-5",
+        "fable-mythos-5",
+        "fable-mythos-5-1",
+        "fable-mythos-5-2"
+      ],
+      "cols": [
+        "fable-mythos-5-2",
+        "fable-mythos-5-1",
+        "opus-5-5",
+        "sonnet-5-5",
+        "haiku-5-5"
+      ]
+    },
+    "reads": {
+      "_comment": "reads[to_group] = from_groups whose blocks the target reads, on the Claude API. Source: a-pt #which-model-switches-keep-reasoning and #earlier-models.",
+      "fable-mythos-5-2": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "opus-5",
+        "opus-5-5",
+        "fable-mythos-5",
+        "fable-mythos-5-1",
+        "fable-mythos-5-2",
+        "earlier"
+      ],
+      "fable-mythos-5-1": [
+        "opus-5",
+        "opus-5-5",
+        "fable-mythos-5",
+        "fable-mythos-5-1",
+        "earlier"
+      ],
+      "opus-5-5": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "opus-5",
+        "opus-5-5",
+        "earlier"
+      ],
+      "sonnet-5-5": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "earlier"
+      ],
+      "haiku-5-5": [
+        "haiku-5-5",
+        "earlier"
+      ],
+      "opus-5": [
+        "opus-5",
+        "earlier"
+      ],
+      "fable-mythos-5": [
+        "fable-mythos-5",
+        "mythos-preview",
+        "opus-5",
+        "earlier"
+      ],
+      "earlier": [
+        "earlier"
+      ]
+    },
+    "reads_cover": {
+      "_comment": "Which from_groups each target's list is complete for. 'all' = the docs say 'read blocks only from'. Pairs outside this are unknown.",
+      "fable-mythos-5-2": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "opus-5",
+        "opus-5-5",
+        "fable-mythos-5",
+        "fable-mythos-5-1",
+        "fable-mythos-5-2",
+        "earlier"
+      ],
+      "fable-mythos-5-1": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "opus-5",
+        "opus-5-5",
+        "fable-mythos-5",
+        "fable-mythos-5-1",
+        "fable-mythos-5-2",
+        "earlier"
+      ],
+      "opus-5-5": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "opus-5",
+        "opus-5-5",
+        "fable-mythos-5",
+        "fable-mythos-5-1",
+        "fable-mythos-5-2",
+        "earlier"
+      ],
+      "sonnet-5-5": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "opus-5",
+        "opus-5-5",
+        "fable-mythos-5",
+        "fable-mythos-5-1",
+        "fable-mythos-5-2",
+        "earlier"
+      ],
+      "haiku-5-5": [
+        "haiku-5-5",
+        "sonnet-5-5",
+        "opus-5",
+        "opus-5-5",
+        "fable-mythos-5",
+        "fable-mythos-5-1",
+        "fable-mythos-5-2",
+        "earlier"
+      ],
+      "opus-5": "all",
+      "fable-mythos-5": "all",
+      "earlier": "all"
+    },
+    "reads_sources": [
+      {
+        "ref": "a-pt",
+        "quote": "A dash means the model you move to can’t read the blocks. After several switches, read one row for each model in your history.",
+        "anchor": "#which-model-switches-keep-reasoning"
+      },
+      {
+        "ref": "a-pt",
+        "quote": "Every Claude model reads blocks from Claude Opus 4.8, Claude Sonnet 5, Claude Haiku 4.5, and earlier Claude Opus, Claude Sonnet, and Claude Haiku models.",
+        "anchor": "#earlier-models"
+      },
+      {
+        "ref": "a-pt",
+        "quote": "Claude Fable 5 and Claude Mythos 5 | Each other, Claude Mythos Preview, Claude Opus 5, and the models in the first row",
+        "anchor": "#earlier-models"
+      }
+    ],
+    "platforms": [
+      {
+        "id": "claude-api",
+        "label": "Claude API"
+      },
+      {
+        "id": "bedrock",
+        "label": "Amazon Bedrock"
+      },
+      {
+        "id": "claude-platform-aws",
+        "label": "Claude Platform on AWS"
+      },
+      {
+        "id": "gcp-anthropic-managed",
+        "label": "Claude Models on Google Cloud (Anthropic managed)"
+      },
+      {
+        "id": "gcp-google-managed",
+        "label": "Claude Models on Google Cloud (Google managed)"
+      },
+      {
+        "id": "foundry",
+        "label": "Microsoft Foundry"
+      }
+    ],
+    "platform_notes": [
+      {
+        "to_group": "fable-mythos-5-2",
+        "platforms_verified": [
+          "claude-api",
+          "gcp-google-managed"
+        ],
+        "ref": "a-rn",
+        "quote": "Claude Fable 5.2 and Claude Mythos 5.2 read other models’ thinking blocks on the Claude API and Claude Models on Google Cloud (Google managed)."
+      },
+      {
+        "from_group": "fable-mythos-5-2",
+        "any_platform": true,
+        "ref": "a-rn",
+        "quote": "No other model reads thinking blocks from Claude Fable 5.2 or Claude Mythos 5.2."
+      }
+    ],
+    "accounts": [
+      {
+        "where": "Claude API, Claude Platform on AWS, Claude Models on Google Cloud (Anthropic managed), or Microsoft Foundry",
+        "account": "Your organization"
+      },
+      {
+        "where": "Amazon Bedrock",
+        "account": "Your AWS account"
+      },
+      {
+        "where": "Claude Models on Google Cloud (Google managed)",
+        "account": "Your Google Cloud project"
+      }
+    ],
+    "caveats": {
+      "no-error": {
+        "ref": "a-pt",
+        "quote": "A thinking block that the new model or account can’t use never causes an error. The API drops it for that request and doesn’t bill it, and Claude answers without that reasoning.",
+        "anchor": "#switching-models"
+      },
+      "keep-history": {
+        "ref": "a-pt",
+        "quote": "On a switch, reasoning is lost permanently only if your code removes it. So don’t remove thinking, and don’t keep a separate history for each model.",
+        "anchor": "#switching-models"
+      },
+      "account-bound": {
+        "ref": "a-pt",
+        "quote": "Thinking blocks from Claude Fable 5.2, Claude Mythos 5.2, Claude Sonnet 5.5, and Claude Haiku 5.5 work only in the account that produced them or a linked one. In any other account, the API drops them, with no error.",
+        "anchor": "#account-bound-thinking"
+      },
+      "thinking-adaptive": {
+        "ref": "a-pt",
+        "quote": "Models with preserved thinking reject `thinking: {\"type\": \"enabled\"}` with a 400 error. When you move a conversation to one of them from a model whose requests set `\"enabled\"`, send `\"adaptive\"` instead.",
+        "anchor": "#thinking-type-on-switch"
+      },
+      "system-messages": {
+        "ref": "a-pt",
+        "quote": "If a model isn’t on the list of models that accept system messages, leave system messages out of its requests only. Keep them in your stored history.",
+        "anchor": "#unchosen-switches-details"
+      },
+      "refusal": {
+        "ref": "a-pt",
+        "quote": "None of the permitted fallback models can read the refusing model’s thinking, so the fallback model answers without it.",
+        "anchor": "#after-a-refusal"
+      },
+      "other-provider-turn": {
+        "ref": "a-pt",
+        "quote": "A turn from another provider’s model goes at the end, as `text` and `tool_use` content. Claude’s earlier thinking stays valid.",
+        "anchor": "#other-provider-turns"
+      },
+      "switch-back": {
+        "ref": "a-pt",
+        "quote": "Back on Claude Fable 5.1, they’re read again, because the API never changes your `messages`.",
+        "anchor": "#switching-models"
+      }
+    },
+    "compared": [
+      "system",
+      "tools",
+      "messages"
+    ],
+    "not_compared": [
+      "model",
+      "effort",
+      "max_tokens",
+      "tool_choice",
+      "metadata",
+      "thinking.display",
+      "cache_control",
+      "json_key_order",
+      "deferred_unreferenced_tool"
+    ],
+    "not_compared_source": {
+      "ref": "a-pc",
+      "quote": "Only `system`, `tools`, and messages are compared",
+      "anchor": "#what-doesnt-count"
+    },
+    "settings": {
+      "beta_header": "thinking-binding-controls-2026-08-01",
+      "path": "thinking.block_binding.prefix_mismatch_behavior",
+      "values": {
+        "error": "400",
+        "drop_block": "dropped_not_billed",
+        "unset": "per_model"
+      },
+      "requires_thinking_on": true,
+      "batch_unset_outcome": "no_400",
+      "sources": [
+        {
+          "ref": "a-pc",
+          "quote": "With thinking off (`\"disabled\"` or `\"between_tools\"`), sending it is a 400 error on every model.",
+          "anchor": "#preserved-thinking-controls"
+        },
+        {
+          "ref": "a-fix",
+          "quote": "An item that leaves `prefix_mismatch_behavior` unset never gets the 400 error. The API drops the invalid blocks, or, on some models, can let them through.",
+          "anchor": "#batches"
+        }
+      ]
+    }
+  },
+  "openai": {
+    "models": [
+      {
+        "id": "gpt-6.2-astra",
+        "label": "GPT-6.2 Astra",
+        "family": "gpt-6.2",
+        "prefix_drop": true,
+        "end_user_check": true,
+        "instructions_after_input": true,
+        "reasoning_context_default": null,
+        "all_turns_supported": null,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits to the conversation history (prefix edits), certain model changes (including downgrades), or changes to the end user or organization."
+          },
+          {
+            "ref": "o-lm",
+            "quote": "Models starting with GPT-6.2 append top-level `instructions` after `input` in the Responses API."
+          }
+        ]
+      },
+      {
+        "id": "gpt-6.2-sol",
+        "label": "GPT-6.2 Sol",
+        "family": "gpt-6.2",
+        "prefix_drop": true,
+        "end_user_check": true,
+        "instructions_after_input": true,
+        "reasoning_context_default": null,
+        "all_turns_supported": null,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits to the conversation history (prefix edits), certain model changes (including downgrades), or changes to the end user or organization."
+          },
+          {
+            "ref": "o-lm",
+            "quote": "Models starting with GPT-6.2 append top-level `instructions` after `input` in the Responses API."
+          }
+        ]
+      },
+      {
+        "id": "gpt-6.1-sol",
+        "label": "GPT-6.1 Sol",
+        "family": "gpt-6.1",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": null,
+        "all_turns_supported": true,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          },
+          {
+            "ref": "o-rs",
+            "quote": "GPT-6.1 Sol also supports `all_turns`."
+          }
+        ]
+      },
+      {
+        "id": "gpt-6.1-terra",
+        "label": "GPT-6.1 Terra",
+        "family": "gpt-6.1",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": null,
+        "all_turns_supported": null,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          }
+        ]
+      },
+      {
+        "id": "gpt-6-astra",
+        "label": "GPT-6 Astra",
+        "family": "gpt-6",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": null,
+        "all_turns_supported": null,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          }
+        ]
+      },
+      {
+        "id": "gpt-6-sol",
+        "label": "GPT-6 Sol",
+        "family": "gpt-6",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": null,
+        "all_turns_supported": null,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          }
+        ]
+      },
+      {
+        "id": "gpt-6-luna",
+        "label": "GPT-6 Luna",
+        "family": "gpt-6",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": null,
+        "all_turns_supported": null,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          }
+        ]
+      },
+      {
+        "id": "gpt-5.6-sol",
+        "label": "GPT-5.6 Sol",
+        "family": "gpt-5.6",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": "all_turns",
+        "all_turns_supported": true,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          },
+          {
+            "ref": "o-rs",
+            "quote": "The GPT-5.6 model family supports `all_turns` and uses it by default."
+          }
+        ]
+      },
+      {
+        "id": "gpt-5.6-terra",
+        "label": "GPT-5.6 Terra",
+        "family": "gpt-5.6",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": "all_turns",
+        "all_turns_supported": true,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          },
+          {
+            "ref": "o-rs",
+            "quote": "The GPT-5.6 model family supports `all_turns` and uses it by default."
+          }
+        ]
+      },
+      {
+        "id": "gpt-5.6-luna",
+        "label": "GPT-5.6 Luna",
+        "family": "gpt-5.6",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": "all_turns",
+        "all_turns_supported": true,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          },
+          {
+            "ref": "o-rs",
+            "quote": "The GPT-5.6 model family supports `all_turns` and uses it by default."
+          }
+        ]
+      },
+      {
+        "id": "gpt-5.6",
+        "label": "GPT-5.6",
+        "family": "gpt-5.6",
+        "prefix_drop": false,
+        "end_user_check": false,
+        "instructions_after_input": false,
+        "reasoning_context_default": "all_turns",
+        "all_turns_supported": true,
+        "capability_rank": null,
+        "sources": [
+          {
+            "ref": "o-lm",
+            "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits"
+          },
+          {
+            "ref": "o-rs",
+            "quote": "The GPT-5.6 model family supports `all_turns` and uses it by default."
+          }
+        ]
+      }
+    ],
+    "family_regex": "^(gpt-\\d+(?:\\.\\d+)?)-",
+    "family_source": {
+      "ref": "o-rs",
+      "quote": "Persisted reasoning can be reused only within the same model family."
+    },
+    "prefix_params": [
+      {
+        "param": "tools",
+        "fix": "openai-additional-tools"
+      },
+      {
+        "param": "text.format",
+        "fix": "openai-configuration-update-format"
+      },
+      {
+        "param": "reasoning.effort",
+        "fix": "openai-configuration-update-effort"
+      },
+      {
+        "param": "instructions",
+        "only_before_family": "gpt-6.2",
+        "fix": "openai-developer-message"
+      }
+    ],
+    "prefix_params_source": {
+      "ref": "o-kp",
+      "quote": "updating Responses API parameters such as `tools` or `text.format`, changing `instructions` on pre-GPT-6.2 models, or editing earlier `input` items"
+    },
+    "prefix_params_verified": false,
+    "prefix_params_note": "OpenAI's keep-prefix-unchanged guide says these parameters change the prefix. The reasoning guide defines prefix_mismatch as content before the reasoning item, so we label these verdicts \"per OpenAI's keep-prefix-unchanged guide\".",
+    "whole_item_deletion_is_prefix_change": false,
+    "deletion_source": {
+      "ref": "o-rs",
+      "quote": "Deleting whole items without editing the remaining items, or appending new items after the reasoning item, does not by itself trigger this reason."
+    },
+    "chat_completions_note": "This checker covers the Responses API. We found no reasoning-preservation rule for Chat Completions in OpenAI's docs.",
+    "caveats": {
+      "turn-boundary": {
+        "ref": "o-rs",
+        "quote": "The item comes from an earlier turn and the model uses only current-turn reasoning."
+      },
+      "all-turns-unconfirmed": {
+        "ref": "o-rs",
+        "quote": "The GPT-5.6 model family supports `all_turns` and uses it by default. Earlier models default to `current_turn`. GPT-6.1 Sol also supports `all_turns`."
+      },
+      "context-default-unconfirmed": {
+        "ref": "o-rs",
+        "quote": "Earlier models default to `current_turn`."
+      }
+    }
+  },
+  "change_kinds": [
+    {
+      "id": "system-changed",
+      "provider": "anthropic",
+      "label": "System prompt changed",
+      "fix": "anthropic-update-context-in-user-turn"
+    },
+    {
+      "id": "tools-changed",
+      "provider": "anthropic",
+      "label": "Tools added, removed or reworded",
+      "fix": "anthropic-tool-addition"
+    },
+    {
+      "id": "message-edited",
+      "provider": "anthropic",
+      "label": "Earlier message edited",
+      "fix": "anthropic-dont-edit-history"
+    },
+    {
+      "id": "message-deleted",
+      "provider": "anthropic",
+      "label": "Earlier message deleted",
+      "fix": "anthropic-dont-edit-history"
+    },
+    {
+      "id": "message-inserted",
+      "provider": "anthropic",
+      "label": "Message inserted before later turns",
+      "fix": "anthropic-dont-edit-history"
+    },
+    {
+      "id": "messages-trimmed",
+      "provider": "anthropic",
+      "label": "Older turns trimmed or summarized",
+      "fix": "anthropic-compaction-or-remove-thinking"
+    },
+    {
+      "id": "thinking-gap",
+      "provider": "anthropic",
+      "label": "A thinking block in the middle was left out",
+      "fix": "anthropic-unbroken-thinking"
+    },
+    {
+      "id": "tool-result-shortened",
+      "provider": "anthropic",
+      "label": "Old tool result or image shortened",
+      "fix": "anthropic-context-editing"
+    },
+    {
+      "id": "content-format-changed",
+      "provider": "anthropic",
+      "label": "Content format changed (string vs text blocks): may count, unconfirmed",
+      "fix": "anthropic-dont-edit-history"
+    },
+    {
+      "id": "settings-error",
+      "provider": "anthropic",
+      "label": "block_binding sent with thinking off",
+      "fix": "anthropic-remove-thinking-by-hand"
+    },
+    {
+      "id": "openai-tools-changed",
+      "provider": "openai",
+      "label": "tools changed",
+      "fix": "openai-additional-tools"
+    },
+    {
+      "id": "text-format-changed",
+      "provider": "openai",
+      "label": "text.format changed",
+      "fix": "openai-configuration-update-format"
+    },
+    {
+      "id": "effort-changed",
+      "provider": "openai",
+      "label": "reasoning.effort changed",
+      "fix": "openai-configuration-update-effort"
+    },
+    {
+      "id": "instructions-changed",
+      "provider": "openai",
+      "label": "instructions changed (pre-GPT-6.2)",
+      "fix": "openai-developer-message"
+    },
+    {
+      "id": "safety-identifier-changed",
+      "provider": "openai",
+      "label": "safety_identifier changed",
+      "fix": "openai-same-safety-identifier"
+    },
+    {
+      "id": "item-edited",
+      "provider": "openai",
+      "label": "Earlier input item edited",
+      "fix": "openai-append-at-end"
+    },
+    {
+      "id": "item-inserted",
+      "provider": "openai",
+      "label": "Item inserted before a reasoning item",
+      "fix": "openai-append-at-end"
+    }
+  ],
+  "fixes": [
+    {
+      "id": "anthropic-update-context-in-user-turn",
+      "provider": "anthropic",
+      "summary": "Build `system` and the first message once, and send them unchanged on every request. Put an updated value (the date, a branch, a file) in its own text block of the user message you're about to send, after any tool results. State it only when it changes, and leave it there.",
+      "snippet": {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Environment update: today is 2026-11-19."
+          },
+          {
+            "type": "text",
+            "text": "Now run the linter."
+          }
+        ]
+      },
+      "also": [
+        "anthropic-append-system-message"
+      ],
+      "sources": [
+        {
+          "ref": "a-ct",
+          "quote": "Build `system` and the first message once, and send them unchanged on every request.",
+          "anchor": "#changing-context"
+        },
+        {
+          "ref": "a-ct",
+          "quote": "Put an updated value in its own text block of the user message you’re about to send",
+          "anchor": "#changing-context"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-append-system-message",
+      "provider": "anthropic",
+      "summary": "Keep `system` the same on every request. Put new instructions in a `role: \"system\"` message after the newest user message (even one with tool results), and leave it there for the rest of the conversation.",
+      "snippet": {
+        "role": "system",
+        "content": "Plan mode is off. You can edit files."
+      },
+      "sources": [
+        {
+          "ref": "a-ct",
+          "quote": "Keep `system` the same on every request. Put your own instructions in a `role: \"system\"` message at the end, and send one only when something has changed.",
+          "anchor": "#new-instructions"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-tool-addition",
+      "provider": "anthropic",
+      "summary": "Keep `tools` the same on every request. To add or remove a tool (or when an MCP server connects), append a system message with a `tool_addition` or `tool_removal` block. Tools you know up front: declare them with `defer_loading: true` and offer them by name (`tool_reference`). Tools you learn of later: define them in a `tool_definition` (header `inline-tools-2026-09-15`; a late MCP server also needs `mcp-client-2026-09-15`).",
+      "snippet": {
+        "role": "system",
+        "content": [
+          {
+            "type": "tool_addition",
+            "tool": {
+              "type": "tool_definition",
+              "definition": {
+                "name": "get_weather",
+                "description": "Get the current weather in a city.",
+                "input_schema": {
+                  "type": "object",
+                  "properties": {
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "header": "anthropic-beta: inline-tools-2026-09-15",
+      "also": [
+        "anthropic-tool-choice-none"
+      ],
+      "sources": [
+        {
+          "ref": "a-ct",
+          "quote": "To add or remove a tool, append a system message with a `tool_addition` or `tool_removal` block and the beta header for your case.",
+          "anchor": "#tool-changes"
+        },
+        {
+          "ref": "a-ct",
+          "quote": "Define the tool in a `tool_addition` block of a system message. Beta header: `inline-tools-2026-09-15`.",
+          "anchor": "#tool-changes-details"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-tool-choice-none",
+      "provider": "anthropic",
+      "summary": "To turn tools off for one request, set `tool_choice: {\"type\": \"none\"}` and keep `tools` as it was.",
+      "snippet": {
+        "tool_choice": {
+          "type": "none"
+        }
+      },
+      "sources": [
+        {
+          "ref": "a-ct",
+          "quote": "To turn tools off for one request, set `tool_choice: {\"type\": \"none\"}`, and keep `tools` as it was.",
+          "anchor": "#tool-changes"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-dont-edit-history",
+      "provider": "anthropic",
+      "summary": "Send every earlier message exactly as you sent it before, and put each update in a new message at the end. Store any context your code adds to a message with that message.",
+      "sources": [
+        {
+          "ref": "a-pc",
+          "quote": "Make your integration append-only. Three habits do it: 1. Send each assistant turn back exactly as the API returned it, including thinking blocks whose text is empty. 2. Build `system` and `tools` once for each conversation, and send that copy every time. 3. Put every update in a new message at the end, and leave it there.",
+          "anchor": "#prefix-check"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-compaction-or-remove-thinking",
+      "provider": "anthropic",
+      "summary": "To keep recent turns with their thinking, let the API write the summary with on-demand compaction, start `messages` with the compaction block it returns, and remove the messages it summarizes. If your own code writes the summary or cuts older turns, remove the kept turns' thinking or send `\"drop_block\"`. Cut rarely, in large steps.",
+      "sources": [
+        {
+          "ref": "a-ct",
+          "quote": "If your own code writes the summary, or cuts older turns without one, remove the kept turns’ thinking or send `\"drop_block\"`.",
+          "anchor": "#server-side-trimming"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-unbroken-thinking",
+      "provider": "anthropic",
+      "summary": "Send back the whole `content` array of each response, in order, including thinking blocks whose text is empty (the `signature` holds the reasoning). You can leave out the oldest thinking, the newest, or all of it, but none in between, and blocks next to each other in a turn go all together or not at all.",
+      "sources": [
+        {
+          "ref": "a-ct",
+          "quote": "Leave out the oldest blocks, the newest, or all of them, but none in between. Each block records the one it was produced after, so a gap makes the blocks after it invalid.",
+          "anchor": "#leave-out-thinking"
+        },
+        {
+          "ref": "a-ct",
+          "quote": "Code skips thinking blocks that look empty. If it skips all of them, Claude loses that reasoning. If it skips only some, the gap makes the thinking after it invalid.",
+          "anchor": "#append-assistant-turns-exactly-as-returned-details"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-context-editing",
+      "provider": "anthropic",
+      "summary": "Shorten or downscale a tool result or image before you first send it. To clear old tool results later, use context editing instead of editing the message: send `context_management` with an edit of type `clear_tool_uses_20250919` and the header `context-management-2025-06-27`.",
+      "snippet": {
+        "context_management": {
+          "edits": [
+            {
+              "type": "clear_tool_uses_20250919"
+            }
+          ]
+        }
+      },
+      "header": "anthropic-beta: context-management-2025-06-27",
+      "sources": [
+        {
+          "ref": "a-ct",
+          "quote": "If your code clears, shortens, or re-encodes something it already sent, the thinking after it becomes invalid. To clear old tool results later, including any images inside them, use context editing.",
+          "anchor": "#clear-old-content"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-drop-block-stopgap",
+      "provider": "anthropic",
+      "summary": "Stopgap to stop the errors now: set `prefix_mismatch_behavior` to `\"drop_block\"` with the beta header, on every later request in that conversation (the API doesn't store it). It drops the invalid thinking, which can cost more output tokens and invalidates the prompt cache from the first dropped block.",
+      "snippet": {
+        "thinking": {
+          "type": "adaptive",
+          "block_binding": {
+            "prefix_mismatch_behavior": "drop_block"
+          }
+        }
+      },
+      "header": "anthropic-beta: thinking-binding-controls-2026-08-01",
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "Set `thinking.block_binding.prefix_mismatch_behavior` to `\"drop_block\"`, and send the beta header `anthropic-beta: thinking-binding-controls-2026-08-01`. Do this on every later request in the conversation, because the API doesn’t store the setting between requests.",
+          "anchor": "#prefix-mismatch-error"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-remove-thinking-by-hand",
+      "provider": "anthropic",
+      "summary": "With thinking off (`disabled` or `between_tools`), you can't use `drop_block`. Remove the block the error names and every `thinking` and `redacted_thinking` block after it (all of them if your history has `role: \"system\"` messages or two same-role messages in a row), keep every other block, and send again. Don't put the removed blocks back.",
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "When thinking is off (`\"disabled\"` or `\"between_tools\"`), because `\"drop_block\"` needs `\"adaptive\"`, which would turn thinking on and add output tokens.",
+          "anchor": "#remove-by-hand"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-proxy-passthrough",
+      "provider": "anthropic",
+      "summary": "If you run a library, proxy or gateway: pass `anthropic-beta` values and `thinking.block_binding` through as sent, return empty thinking blocks and `input_transformations` to the caller, and leave `role: \"system\"` messages where they are.",
+      "sources": [
+        {
+          "ref": "a-ct",
+          "quote": "Pass `anthropic-beta` values and `thinking.block_binding` through as sent.",
+          "anchor": "#libraries-proxies-gateways"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "openai-configuration-update-effort",
+      "provider": "openai",
+      "summary": "Keep the request-level `reasoning.effort` as it was, and append a `configuration_update` item with the new effort before the next user message in `input`.",
+      "snippet": {
+        "type": "configuration_update",
+        "reasoning": {
+          "effort": "high"
+        }
+      },
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "{\"type\": \"configuration_update\", \"reasoning\": {\"effort\": \"high\"}}"
+        },
+        {
+          "ref": "o-kp",
+          "quote": "append a `configuration_update` item with the new reasoning effort."
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-configuration-update-format",
+      "provider": "openai",
+      "summary": "Keep the top-level `text.format` as it was, and append a `configuration_update` item with the new format.",
+      "snippet": {
+        "type": "configuration_update",
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "answer",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "answer"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      },
+      "sources": [
+        {
+          "ref": "o-so",
+          "quote": "Change the response format mid-conversation"
+        },
+        {
+          "ref": "o-kp",
+          "quote": "Changing structured output schemas"
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-additional-tools",
+      "provider": "openai",
+      "summary": "Keep `tools` as it was. Add tools with an `additional_tools` item in `input`, and replay it in its original position on later requests. To limit tools for one turn, use `tool_choice` with `allowed_tools`, or `\"none\"`.",
+      "snippet": {
+        "type": "additional_tools",
+        "role": "developer",
+        "tools": [
+          {
+            "type": "function",
+            "name": "get_weather",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "sources": [
+        {
+          "ref": "o-kp",
+          "quote": "use an `additional_tools` item."
+        },
+        {
+          "ref": "o-pc",
+          "quote": "Manage tools with append-only updates"
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-developer-message",
+      "provider": "openai",
+      "summary": "Append a new `developer` message instead of editing earlier instructions. On GPT-6.2 and later, top-level `instructions` are appended after `input`, so they're fine for turn-scoped guidance.",
+      "snippet": {
+        "role": "developer",
+        "content": "From now on, answer in British English."
+      },
+      "sources": [
+        {
+          "ref": "o-kp",
+          "quote": "Updating developer instructions"
+        },
+        {
+          "ref": "o-lm",
+          "quote": "Models starting with GPT-6.2 append top-level `instructions` after `input` in the Responses API."
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-compaction",
+      "provider": "openai",
+      "summary": "Use OpenAI compaction, which keeps later reasoning items even though the prefix changed. With your own compaction, put the compacted item at the end.",
+      "sources": [
+        {
+          "ref": "o-kp",
+          "quote": "our systems retain subsequent reasoning items despite the prefix being changed"
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-shorten-before-first-send",
+      "provider": "openai",
+      "summary": "Shorten past tool outputs, files and images before you first send them. Editing them later changes the prefix, so later reasoning items are removed on GPT-6.2.",
+      "sources": [
+        {
+          "ref": "o-kp",
+          "quote": "Shortening past tool outputs or downsizing past files / images"
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-append-at-end",
+      "provider": "openai",
+      "summary": "Don't insert or edit items before a reasoning item. Append new items at the end of `input` and replay earlier items unchanged.",
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "On GPT-6.2 and later, you insert or edit content before the reasoning item. For example, rewriting an earlier tool result changes the prefix."
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-same-safety-identifier",
+      "provider": "openai",
+      "summary": "Send the same `safety_identifier` on the request that creates a reasoning item and on every request that reuses it, or none on both.",
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "the `safety_identifier` on the request that created the item differs from the one on the request that reuses it, including supplying an identifier on only one of the two requests"
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "anthropic-keep-whole-conversation",
+      "provider": "anthropic",
+      "summary": "Change `model` and keep sending the whole conversation. Don't remove thinking, and don't keep a separate history for each model.",
+      "sources": [
+        {
+          "ref": "a-pt",
+          "quote": "On a switch, reasoning is lost permanently only if your code removes it. So don’t remove thinking, and don’t keep a separate history for each model.",
+          "anchor": "#switching-models"
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "openai-model-switch",
+      "provider": "openai",
+      "summary": "Stay in one model family for a conversation, or accept that earlier reasoning items are removed when you move to another family or a less capable model.",
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "Persisted reasoning can be reused only within the same model family."
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-all-turns",
+      "provider": "openai",
+      "summary": "Set `reasoning.context: \"all_turns\"` on models that support it (the GPT-5.6 family and GPT-6.1 Sol).",
+      "snippet": {
+        "reasoning": {
+          "context": "all_turns"
+        }
+      },
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "The GPT-5.6 model family supports `all_turns` and uses it by default. Earlier models default to `current_turn`. GPT-6.1 Sol also supports `all_turns`."
+        }
+      ],
+      "checked": "2026-11-19"
+    }
+  ],
+  "reasons": [
+    {
+      "id": "anthropic-prefix-binding-mismatch",
+      "provider": "anthropic",
+      "type": "thinking_dropped",
+      "reason": "prefix_binding_mismatch",
+      "title": "prefix_binding_mismatch: thinking dropped because the conversation before it changed",
+      "meaning": "Something before this thinking block (system, tools or an earlier message) changed after Claude produced it, so the API dropped the block. That happens with `prefix_mismatch_behavior: \"drop_block\"`.",
+      "yours": "yes",
+      "fix": "anthropic-dont-edit-history",
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "`thinking_dropped`, `prefix_binding_mismatch`: What came before this block isn’t what it recorded. Yours to fix",
+          "anchor": "#input-transformations"
+        }
+      ],
+      "example": {
+        "fixture": "anth-drop-block-set"
+      },
+      "faq": [
+        {
+          "q": "Does prefix_binding_mismatch cost me anything?",
+          "a": "You aren't billed for the dropped block, but Claude can spend more output tokens working out reasoning it can no longer read, and dropping it invalidates the prompt cache from the first dropped block onward. When something changes on every turn, the increase repeats."
+        },
+        {
+          "q": "How do I find what changed?",
+          "a": "Compare `system`, `tools` and `messages` up to the first entry's `path` with the conversation as it was when that block was produced. If every block is listed, start with `system` and `tools`. Or paste both requests into the prefix checker above."
+        },
+        {
+          "q": "Should my tests fail on this entry?",
+          "a": "Yes. Anthropic's test steps say to fail only on an entry whose reason is `prefix_binding_mismatch`; model and organization entries are expected after a switch."
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-thinking-mismatch-allowed",
+      "provider": "anthropic",
+      "type": "thinking_mismatch_allowed",
+      "reason": "prefix_binding_mismatch",
+      "title": "thinking_mismatch_allowed: Claude read stale thinking and you were billed for it",
+      "meaning": "The thinking block failed the prefix check, but with the setting unset this model let it through: Claude read it unchanged and you were billed for it. It's reasoning about content that has since changed.",
+      "yours": "yes",
+      "fix": "anthropic-dont-edit-history",
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "`thinking_mismatch_allowed`, `prefix_binding_mismatch`: The same, but Claude read the block unchanged, and it’s billed. This entry appears only where the setting is unset, on some models. Yours to fix.",
+          "anchor": "#input-transformations"
+        },
+        {
+          "ref": "a-pc",
+          "quote": "When no error is returned, the failing blocks reach the model. Claude reads them like any other input, you’re billed for them, and Claude works from reasoning about content that has since changed.",
+          "anchor": "#possible-400-error"
+        }
+      ],
+      "example": {
+        "fixture": "anth-system-date"
+      },
+      "faq": [
+        {
+          "q": "Why didn't I get a 400 error?",
+          "a": "On Claude Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5, a request that fails the prefix check with the setting unset might get a 400 or no error. With no error, the failing blocks reach Claude and are billed. Send `prefix_mismatch_behavior: \"error\"` in tests so every failure is a 400."
+        },
+        {
+          "q": "Does the beta header change what Claude reads?",
+          "a": "No. Sending `thinking-binding-controls-2026-08-01` with the setting unset only adds the `input_transformations` array so you can log these entries."
+        }
+      ],
+      "checked": "2026-11-20",
+      "billed": true
+    },
+    {
+      "id": "anthropic-model-binding-mismatch",
+      "provider": "anthropic",
+      "type": "thinking_dropped",
+      "reason": "model_binding_mismatch",
+      "title": "model_binding_mismatch: this Claude model can't read thinking from the model that produced it",
+      "meaning": "You switched models mid-conversation and the new model can't read the old model's thinking. The API drops it for this request only, with no error and no charge.",
+      "yours": "no",
+      "fix": "anthropic-keep-whole-conversation",
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "`thinking_dropped`, `model_binding_mismatch`: This model can’t read blocks from the model that produced it. Not yours to fix",
+          "anchor": "#input-transformations"
+        }
+      ],
+      "example": {
+        "switch": "#from=claude-fable-5-2&to=claude-opus-5-5"
+      },
+      "faq": [
+        {
+          "q": "Should I remove those blocks?",
+          "a": "No. Keep sending the whole conversation. If you switch back to a model that can read them, they're read again, because the API never changes your `messages`."
+        },
+        {
+          "q": "Which switches keep the reasoning?",
+          "a": "See the model-switch tab: for example, Claude Fable 5.2 reads blocks from Opus 5.5, Sonnet 5.5 and Haiku 5.5, but no other model reads Fable 5.2's blocks."
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "anthropic-organization-binding-mismatch",
+      "provider": "anthropic",
+      "type": "thinking_dropped",
+      "reason": "organization_binding_mismatch",
+      "title": "organization_binding_mismatch: thinking from another account was dropped",
+      "meaning": "The thinking block came from a different account (organization, AWS account or Google Cloud project), so the API dropped it.",
+      "yours": "no",
+      "fix": null,
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "`thinking_dropped`, `organization_binding_mismatch`: Another account produced the block, so the API dropped it. Not yours to fix.",
+          "anchor": "#input-transformations"
+        },
+        {
+          "ref": "a-pt",
+          "quote": "Thinking blocks from Claude Fable 5.2, Claude Mythos 5.2, Claude Sonnet 5.5, and Claude Haiku 5.5 work only in the account that produced them or a linked one.",
+          "anchor": "#account-bound-thinking"
+        }
+      ],
+      "example": {
+        "switch": "#from=claude-haiku-5-5&to=claude-opus-5-5&acct=1"
+      },
+      "faq": [
+        {
+          "q": "What counts as my account?",
+          "a": "On the Claude API, Claude Platform on AWS, Anthropic-managed Google Cloud and Microsoft Foundry it's your organization; on Amazon Bedrock it's your AWS account; on Google-managed Google Cloud it's your Google Cloud project."
+        },
+        {
+          "q": "Is this an error?",
+          "a": "No. The request still succeeds and Claude answers without that block's reasoning."
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "openai-prefix-mismatch",
+      "provider": "openai",
+      "reason": "prefix_mismatch",
+      "title": "prefix_mismatch: GPT-6.2 removed reasoning after a prefix edit",
+      "meaning": "Content before this reasoning item was inserted or edited, so GPT-6.2 or later removed the item. The request still succeeded.",
+      "yours": "yes",
+      "fix": "openai-append-at-end",
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "On GPT-6.2 and later, you insert or edit content before the reasoning item. For example, rewriting an earlier tool result changes the prefix."
+        },
+        {
+          "ref": "o-lm",
+          "quote": "Starting with GPT-6.2, the Responses API drops reasoning items after mid-conversation edits to the conversation history (prefix edits), certain model changes (including downgrades), or changes to the end user or organization."
+        }
+      ],
+      "example": {
+        "fixture": "oai-tool-output-edited"
+      },
+      "faq": [
+        {
+          "q": "Does deleting old items cause prefix_mismatch?",
+          "a": "Not by itself. OpenAI's reasoning guide says deleting whole items without editing the remaining items, or appending new items after the reasoning item, does not trigger this reason."
+        },
+        {
+          "q": "How do I change reasoning effort or tools without it?",
+          "a": "Append a `configuration_update` item for effort or format, or an `additional_tools` item for tools, instead of changing the request-level parameters."
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-end-user-mismatch",
+      "provider": "openai",
+      "reason": "end_user_mismatch",
+      "title": "end_user_mismatch: safety_identifier differs between requests",
+      "meaning": "The request that reused this reasoning item had a different `safety_identifier` from the one that created it (or only one of them had one).",
+      "yours": "yes",
+      "fix": "openai-same-safety-identifier",
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "the `safety_identifier` on the request that created the item differs from the one on the request that reuses it, including supplying an identifier on only one of the two requests"
+        }
+      ],
+      "example": {
+        "fixture": "oai-safety-identifier"
+      },
+      "faq": [
+        {
+          "q": "I only added safety_identifier to new requests. Is that enough to trigger it?",
+          "a": "Yes. Supplying an identifier on only one of the two requests counts."
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-model-mismatch",
+      "provider": "openai",
+      "reason": "model_mismatch",
+      "title": "model_mismatch: reasoning removed after a model switch",
+      "meaning": "You switched to a different model family, or to a less capable model in the same family, so the earlier reasoning items were removed.",
+      "yours": "usually-no",
+      "fix": "openai-model-switch",
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "You switch model families or move to a less capable model within the same family."
+        },
+        {
+          "ref": "o-rs",
+          "quote": "Persisted reasoning can be reused only within the same model family."
+        }
+      ],
+      "example": {
+        "switch": "#from=gpt-6.1-sol&to=gpt-6.2-astra"
+      },
+      "faq": [
+        {
+          "q": "Does all_turns keep reasoning across model families?",
+          "a": "No. A different family drops it even when `reasoning.context` is `all_turns`."
+        },
+        {
+          "q": "Which model in a family is more capable?",
+          "a": "OpenAI doesn't publish an order for astra, sol, terra and luna, so the model-switch tab shows both outcomes for a same-family switch."
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-organization-mismatch",
+      "provider": "openai",
+      "reason": "organization_mismatch",
+      "title": "organization_mismatch: reasoning item from another organization",
+      "meaning": "The reasoning item was created in another organization (or another workspace under a different user), so it was removed.",
+      "yours": "no",
+      "fix": null,
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "You reuse an item from another organization, or from a different workspace under a different user."
+        }
+      ],
+      "example": {},
+      "faq": [
+        {
+          "q": "Can I move reasoning items between organizations?",
+          "a": "No. The item is removed and the request continues without it."
+        }
+      ],
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "openai-turn-boundary",
+      "provider": "openai",
+      "reason": "turn_boundary",
+      "title": "turn_boundary: earlier-turn reasoning not used",
+      "meaning": "The model used only current-turn reasoning, so a reasoning item from an earlier turn wasn't used.",
+      "yours": "maybe",
+      "fix": "openai-all-turns",
+      "sources": [
+        {
+          "ref": "o-rs",
+          "quote": "The item comes from an earlier turn and the model uses only current-turn reasoning."
+        },
+        {
+          "ref": "o-rs",
+          "quote": "The GPT-5.6 model family supports `all_turns` and uses it by default. Earlier models default to `current_turn`. GPT-6.1 Sol also supports `all_turns`."
+        }
+      ],
+      "example": {},
+      "faq": [
+        {
+          "q": "How do I keep reasoning from earlier turns?",
+          "a": "Set `reasoning.context: \"all_turns\"` on a model that supports it (the GPT-5.6 family and GPT-6.1 Sol, per OpenAI's reasoning guide). Defaults for GPT-6.1 Sol and GPT-6.2 aren't stated, so check the response's `reasoning.context` field."
+        }
+      ],
+      "checked": "2026-11-19"
+    }
+  ],
+  "errors": [
+    {
+      "id": "thinking-block-bound-to-a-different-conversation",
+      "provider": "anthropic",
+      "match": "The block is bound to a different conversation",
+      "title": "The block is bound to a different conversation",
+      "status": 400,
+      "error_type": "invalid_request_error",
+      "example_message": "messages.1.content.0: Invalid `signature` in `thinking` block. The block is bound to a different conversation. Remove the block, or set `thinking.block_binding.prefix_mismatch_behavior` to \"drop_block\".",
+      "meaning": "A thinking block failed the prefix check: `system`, `tools` or an earlier message changed after Claude produced it, or a thinking block between others was left out or moved. \"A different conversation\" means different content before the block, not a different session or user.",
+      "fix": "anthropic-drop-block-stopgap",
+      "long_term_fix": "anthropic-dont-edit-history",
+      "example": {
+        "fixture": "anth-system-date"
+      },
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "messages.1.content.0: Invalid `signature` in `thinking` block. The block is bound to a different conversation. Remove the block, or set `thinking.block_binding.prefix_mismatch_behavior` to \"drop_block\".",
+          "anchor": "#prefix-mismatch-error"
+        },
+        {
+          "ref": "a-fix",
+          "quote": "Match only on “The block is bound to a different conversation”, because the rest of the message can change.",
+          "anchor": "#handle-the-error-in-code"
+        },
+        {
+          "ref": "a-fix",
+          "quote": "Every 400 error has the type `invalid_request_error`, and this one has no `error.details.error_code`.",
+          "anchor": "#handle-the-error-in-code"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Why doesn't sending the same request again work?",
+          "a": "Your history still holds what your code changed. Send `\"drop_block\"` (with the beta header) on every later request in that conversation to stop the errors, then make your code append-only."
+        },
+        {
+          "q": "The error says to remove the block. Is that enough?",
+          "a": "No. Removing only that block isn't enough: remove it and every `thinking` and `redacted_thinking` block after it, or the same error names the next invalid one."
+        },
+        {
+          "q": "How should my code detect this error?",
+          "a": "Match only on the phrase \"The block is bound to a different conversation\". The rest of the message can change, and the error has no `error.details.error_code`."
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "thinking-binding-controls-beta-header-required",
+      "provider": "anthropic",
+      "match": "That setting requires the `thinking-binding-controls-2026-08-01` value in the `anthropic-beta` header.",
+      "title": "That setting requires the thinking-binding-controls-2026-08-01 value in the anthropic-beta header",
+      "status": 400,
+      "error_type": "invalid_request_error",
+      "example_message": "That setting requires the `thinking-binding-controls-2026-08-01` value in the `anthropic-beta` header.",
+      "meaning": "The request had no `thinking-binding-controls-2026-08-01` beta header. If you did send it, the header didn't reach the API: a proxy or library may have removed it.",
+      "fix": "anthropic-proxy-passthrough",
+      "example": {
+        "fixture": "anth-drop-block-set"
+      },
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "If the request had no beta header, the error message adds this sentence",
+          "anchor": "#prefix-mismatch-error-details"
+        },
+        {
+          "ref": "a-fix",
+          "quote": "If the error still asks for the header, the header didn’t reach the API: a proxy or library might have removed it.",
+          "anchor": "#setting-not-received"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How do I send the header with the SDK?",
+          "a": "Call the beta Messages method and pass `betas=[\"thinking-binding-controls-2026-08-01\"]` (Python) or `betas: [\"thinking-binding-controls-2026-08-01\"]` (TypeScript)."
+        },
+        {
+          "q": "Can a gateway strip the header but keep the setting?",
+          "a": "It shouldn't: forwarding the setting without the header gets a 400. Gateways should pass `anthropic-beta` values and `thinking.block_binding` through as sent."
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "block-binding-extra-inputs-not-permitted",
+      "provider": "anthropic",
+      "match": "block_binding: Extra inputs are not permitted",
+      "title": "block_binding: Extra inputs are not permitted",
+      "status": 400,
+      "error_type": "invalid_request_error",
+      "example_message": "thinking.block_binding: Extra inputs are not permitted",
+      "meaning": "The API didn't accept `thinking.block_binding`: the beta header didn't arrive, or thinking is off (`disabled` or `between_tools`).",
+      "fix": "anthropic-proxy-passthrough",
+      "also": [
+        "anthropic-remove-thinking-by-hand"
+      ],
+      "example": {
+        "fixture": "anth-thinking-disabled-drop-block"
+      },
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "A different error, ending `block_binding: Extra inputs are not permitted`, means the same, or that thinking is off.",
+          "anchor": "#setting-not-received"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can I use drop_block with thinking disabled?",
+          "a": "No. `\"drop_block\"` needs `\"adaptive\"` thinking. With thinking off, remove the invalid thinking by hand instead."
+        }
+      ],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "invalid-signature-in-thinking-block",
+      "provider": "anthropic",
+      "match_any": [
+        "Invalid `signature` in `thinking` block",
+        "cannot be modified",
+        "budget_tokens"
+      ],
+      "unless": "bound to a different conversation",
+      "title": "Invalid signature in thinking block",
+      "status": 400,
+      "error_type": "invalid_request_error",
+      "example_message": "messages.1.content.0: Invalid `signature` in `thinking` block.",
+      "meaning": "This looks like the prefix-check error but isn't: it doesn't say the block is bound to a different conversation. Setting `prefix_mismatch_behavior` might not clear it. It usually means the thinking block itself was changed.",
+      "fix": null,
+      "external_fix": "https://platform.claude.com/docs/en/build-with-claude/thinking-troubleshooting",
+      "example": {},
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "These errors don’t say that the block is bound to a different conversation, and setting `prefix_mismatch_behavior` might not clear them",
+          "anchor": "#similar-errors"
+        },
+        {
+          "ref": "a-fix",
+          "quote": "A message that stops after “Invalid `signature` in `thinking` block”, says “cannot be modified”, or is about `budget_tokens`: Troubleshooting thinking",
+          "anchor": "#similar-errors"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Will drop_block fix it?",
+          "a": "Not necessarily. Anthropic's docs say setting `prefix_mismatch_behavior` might not clear these errors. Follow Anthropic's thinking troubleshooting guide."
+        }
+      ],
+      "checked": "2026-11-20"
+    }
+  ],
+  "error_lookalikes": [
+    {
+      "id": "temperature-or-prefill",
+      "title": "A thinking error about temperature or a prefilled reply",
+      "meaning": "Not a prefix-check error. Thinking has its own limits on `temperature` and prefilled replies.",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/thinking#limits-and-feature-compatibility",
+      "tool": "/tools/model-migration-linter/",
+      "sources": [
+        {
+          "ref": "a-fix",
+          "quote": "A message about `temperature` or a prefilled reply: Limits and feature compatibility",
+          "anchor": "#similar-errors"
+        }
+      ],
+      "checked": "2026-11-20"
+    }
+  ],
+  "examples": [
+    {
+      "id": "anth-system-date",
+      "label": "Date in system prompt"
+    },
+    {
+      "id": "anth-mcp-tool-added",
+      "label": "Tool added to tools mid-chat (e.g. a new MCP tool)"
+    },
+    {
+      "id": "anth-history-trimmed",
+      "label": "History trimmed"
+    },
+    {
+      "id": "anth-empty-thinking-dropped",
+      "label": "Empty thinking block dropped by serializer"
+    },
+    {
+      "id": "oai-effort-changed",
+      "label": "GPT-6.2 reasoning effort changed"
+    },
+    {
+      "id": "anth-system-msg-appended",
+      "label": "Append-only (passes)"
+    }
+  ],
+  "decode_examples": [
+    {
+      "id": "dec-anth-two-prefix",
+      "label": "Claude: 2 prefix entries"
+    },
+    {
+      "id": "dec-anth-mixed",
+      "label": "Claude: prefix + model + account"
+    },
+    {
+      "id": "dec-anth-sse-fallback",
+      "label": "Claude: SSE stream after a fallback"
+    },
+    {
+      "id": "dec-oai-all-five",
+      "label": "OpenAI: one entry per reason"
+    },
+    {
+      "id": "dec-err-bound",
+      "label": "400: bound to a different conversation"
+    },
+    {
+      "id": "dec-err-path-mapping",
+      "label": "400 with a system message (path mapping)"
+    }
+  ]
+}

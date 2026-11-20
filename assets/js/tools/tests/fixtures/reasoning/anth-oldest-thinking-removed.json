@@ -1,0 +1,130 @@
+{
+  "id": "anth-oldest-thinking-removed",
+  "label": "Oldest thinking left out (passes)",
+  "api": "anthropic",
+  "a": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Start the refactor."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigH1"
+          },
+          {
+            "type": "text",
+            "text": "Started."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Rename the module."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigH2"
+          },
+          {
+            "type": "text",
+            "text": "Renamed."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Update the imports."
+      }
+    ]
+  },
+  "b": {
+    "model": "claude-fable-5-2",
+    "max_tokens": 4096,
+    "system": "You are a coding agent.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Start the refactor."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Started."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Rename the module."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigH2"
+          },
+          {
+            "type": "text",
+            "text": "Renamed."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Update the imports."
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "sigH3"
+          },
+          {
+            "type": "text",
+            "text": "Updated."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Run the tests."
+      }
+    ]
+  },
+  "options": {
+    "prefix_mismatch_behavior": null,
+    "batch": false
+  },
+  "expect": {
+    "first_change": null,
+    "invalid_paths": [],
+    "verdicts": {
+      "claude-fable-5-2": "none",
+      "claude-mythos-5-2": "none",
+      "claude-mythos-5-1": "none",
+      "claude-fable-5-1": "none",
+      "claude-opus-5-5": "none",
+      "claude-sonnet-5-5": "none",
+      "claude-haiku-5-5": "none",
+      "claude-opus-5": "none"
+    }
+  }
+}

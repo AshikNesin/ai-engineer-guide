@@ -1,0 +1,10 @@
+{{- /* "How we check this": every source in data/reasoning_rules.json. */ -}}
+{{- $r := site.Data.reasoning_rules -}}
+<h3 id="how-we-check-this">How we check this</h3>
+<p>Every outcome, reason code, error string and fix is data in <code>reasoning_rules.json</code> with a short verbatim quote, its source and the date we checked it. The examples on this page are the same fixtures the tests run. Anthropic pages were last re-read on {{ $r.checked }}; OpenAI pages on 2026-11-19.</p>
+<ul class="tool-sources">
+{{- range $id, $s := $r.sources }}
+  <li><a href="{{ $s.url }}" rel="noopener">{{ $s.title }}</a> <span class="helptext">({{ cond (hasPrefix $id "a-") "Anthropic" "OpenAI" }})</span></li>
+{{- end }}
+</ul>
+<p class="helptext">Unconfirmed in the docs, so shown as "unconfirmed" or "unknown": whether a string and a text-block array count as the same content on Claude; how the 400 error's position maps when system or same-role messages merge; OpenAI's capability order within a family; <code>reasoning.context</code> defaults on GPT-6.1 Sol and GPT-6.2; whether <code>tools</code>, <code>text.format</code> and <code>reasoning.effort</code> changes remove every reasoning item on GPT-6.2; and switch rules off the Claude API.</p>

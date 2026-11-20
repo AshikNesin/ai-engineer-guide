@@ -8,6 +8,15 @@
   {{ partial "tools/script.html" (dict "name" "retirements") }}
 {{ else if .Params.error_rule }}
   {{ partial "tools/linter-error-page.html" . }}
+{{- /* Content-adapter pages under /tools/reasoning-prefix-checker/ and /tools/decision-api-converter/. */ -}}
+{{ else if .Params.reasoning_reason }}
+  {{ partial "tools/reasoning-reason-page.html" . }}
+{{ else if .Params.reasoning_error }}
+  {{ partial "tools/reasoning-error-page.html" . }}
+{{ else if .Params.decision_pair }}
+  {{ partial "tools/decision-pair-page.html" . }}
+{{ else if .Params.concept }}
+  {{ partial "tools/concept-page.html" . }}
 {{ else }}
 {{ partial "tools/tool-page.html" . }}
 {{ partial "tools/script.html" (dict "name" .Params.tool) }}
