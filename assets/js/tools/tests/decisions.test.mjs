@@ -132,7 +132,7 @@ test("inherited names aren't treated as ordered", () => {
   assert.equal(m.ir.questions[0].kind, "choice");
 });
 test("a self-referencing schema doesn't overflow the stack", () => {
-  const s = { type: "object", properties: { ok: { type: "boolean", description: "Ok?" }, child: { $ref: "#" } } };
+  const s = { $defs: { node: { type: "object", properties: { flag: { type: "boolean" }, child: { $ref: "#/$defs/node" } } } }, type: "object", properties: { ok: { type: "boolean", description: "Ok?" }, child: { $ref: "#/$defs/node" } } };
   const m = migrate(s);
   assert.ok(m.ir.questions.length >= 1);
 });

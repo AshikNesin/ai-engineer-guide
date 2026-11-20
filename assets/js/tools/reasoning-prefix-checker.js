@@ -443,7 +443,7 @@ else loadPrefixExample("anth-system-date", "Example loaded: edit or paste your o
 if (fx && "input" in fx) { selectTab("decode", false); loadDecodeExample(ex, "Example loaded: edit or paste your own."); }
 else loadDecodeExample("dec-anth-two-prefix", "Example loaded: edit or paste your own.");
 const h = readHash();
-const valid = (s) => /^[A-Za-z0-9._:-]{1,80}$/.test(s);
+const valid = (s) => MODEL_ID.test(s);
 fromModels = h.from ? h.from.split(",").filter(valid) : ["claude-fable-5-2"];
 if (h.to && valid(h.to)) ensureOption(toSel, h.to); else toSel.value = "claude-opus-5-5";
 if (h.p && [...$("rs-platform").options].some((o) => o.value === h.p)) $("rs-platform").value = h.p;

@@ -45,4 +45,4 @@ Not sure a decision API fits? [Turn your classifier schema into decision questio
 
 ## How we check this
 
-Format details come from the providers' docs (quoted on each format pair page), checked {{< decision-checked >}}. Where the docs don't confirm something (the Gemini REST path, the Jev auth header and question limit, Clef's response wrapper), the converter says so instead of guessing.
+Format details come from the providers' docs (quoted or noted on each format pair page), checked {{< decision-checked >}}. Where the docs don't confirm something (the Gemini REST path, the Jev auth header and question limit, Clef's response wrapper), the converter says so instead of guessing.
