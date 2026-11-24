@@ -5,6 +5,7 @@ tags:
   - deepseek-harness
 status: published
 date: 2026-08-13T00:00:00.000Z
+noindex: true
 qblog_id: 76b44f0a-32b2-4aa3-ac76-1228428f9287
 ---
 

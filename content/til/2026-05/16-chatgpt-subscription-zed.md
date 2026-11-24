@@ -6,6 +6,7 @@ tags:
   - zed
 status: published
 date: 2026-05-16T00:00:00.000Z
+noindex: true
 qblog_id: 87c9957c-490c-462e-8863-13b89d67c4ba
 ---
 

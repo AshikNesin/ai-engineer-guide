@@ -5,6 +5,7 @@ tags:
   - google-jules
 status: published
 date: 2025-11-21T00:00:00.000Z
+noindex: true
 qblog_id: a1ffa792-da11-4a40-950c-e08c0c26bd13
 ---
 

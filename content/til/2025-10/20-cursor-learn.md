@@ -6,6 +6,7 @@ tags:
   - courses
 status: published
 date: 2025-10-20T00:00:00.000Z
+noindex: true
 qblog_id: 61d8df02-1215-4658-adde-6982dd4a1822
 ---
 

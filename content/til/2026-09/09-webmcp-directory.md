@@ -5,6 +5,7 @@ tags:
   - webmcp
 status: published
 date: 2026-09-09T00:00:00.000Z
+noindex: true
 qblog_id: 13cbd777-72d2-4dc5-b750-2943db53f8e9
 ---
 

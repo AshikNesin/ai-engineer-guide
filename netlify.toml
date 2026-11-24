@@ -1,0 +1,11 @@
+# Netlify only. Cloudflare Pages does not read this file.
+# https://nesinio-ai.netlify.app still serves a full copy of the site.
+# A rebuild from this repo 301s every path to the apex. force = true so
+# Netlify redirects even when the static file exists. If that site is no
+# longer deploying, delete it (steps are in the pull request).
+
+[[redirects]]
+  from = "https://nesinio-ai.netlify.app/*"
+  to = "https://aiengineerguide.com/:splat"
+  status = 301
+  force = true

@@ -8,6 +8,7 @@ tags:
   - embedding
 status: published
 date: 2025-05-30T00:00:00.000Z
+noindex: true
 description: null
 qblog_id: 84bcaebf-15f0-4781-a5a4-9c9a7a4dee5f
 via_url: null

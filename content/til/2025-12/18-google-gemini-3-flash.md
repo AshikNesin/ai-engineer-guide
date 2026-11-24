@@ -6,6 +6,7 @@ tags:
   - gemini-3-flash
 status: published
 date: 2025-12-18T00:00:00.000Z
+noindex: true
 qblog_id: d13c239a-d683-45ec-bfca-072bcefaf086
 ---
 

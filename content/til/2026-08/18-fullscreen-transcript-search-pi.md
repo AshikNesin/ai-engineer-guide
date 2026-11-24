@@ -5,6 +5,7 @@ tags:
   - pi
 status: published
 date: 2026-08-18T00:00:00.000Z
+noindex: true
 qblog_id: 0af56b78-6323-4f9c-8430-0fda088f4015
 ---
 

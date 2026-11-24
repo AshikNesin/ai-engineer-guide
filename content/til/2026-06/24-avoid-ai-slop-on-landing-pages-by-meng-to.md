@@ -6,6 +6,7 @@ tags:
   - design
 status: published
 date: 2026-06-24T00:00:00.000Z
+noindex: true
 qblog_id: 3adb5047-baff-4bca-a2d4-6758b4670483
 ---
 

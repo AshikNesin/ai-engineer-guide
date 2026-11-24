@@ -6,6 +6,7 @@ tags:
   - simon-willison
 status: published
 date: 2025-06-02T00:00:00.000Z
+noindex: true
 description: null
 qblog_id: 65e22c78-0448-4520-871d-d79ad3727e02
 via_url: https://simonwillison.net/2025/May/25/claude-4-system-card/

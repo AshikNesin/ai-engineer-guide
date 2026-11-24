@@ -5,6 +5,7 @@ tags:
   - openrouter
 status: published
 date: 2026-05-04T00:00:00.000Z
+noindex: true
 qblog_id: badde395-bbe8-4016-a461-2f24934f6cd7
 ---
 

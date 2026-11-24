@@ -7,6 +7,7 @@ tags:
   - claude-sonnet-4-6
 status: published
 date: 2026-03-14T00:00:00.000Z
+noindex: true
 qblog_id: 6ca8ab15-d7f2-49e1-acaf-e269298f85a1
 ---
 

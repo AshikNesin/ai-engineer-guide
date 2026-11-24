@@ -5,6 +5,7 @@ tags:
   - chrome
 status: published
 date: 2025-08-02T00:00:00.000Z
+noindex: true
 description: null
 qblog_id: c36a9345-b2eb-4b7e-89bb-489fd71872df
 via_url: https://x.com/addyosmani/status/1882095887293259848
