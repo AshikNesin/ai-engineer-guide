@@ -62,6 +62,27 @@
     max-width: 100%;
   }
 
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .video-wrapper .player-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .video-wrapper .player-wrapper > * {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
   code {
     padding: 2px 5px;
     background-color: #f2f2f2;
