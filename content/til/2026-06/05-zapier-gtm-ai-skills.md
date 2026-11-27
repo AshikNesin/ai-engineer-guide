@@ -6,6 +6,7 @@ tags:
   - ai-skills
 status: published
 date: 2026-06-05T00:00:00.000Z
+noindex: true
 qblog_id: fa68a33d-7e4c-4e75-8669-5bed82ebcbd3
 ---
 

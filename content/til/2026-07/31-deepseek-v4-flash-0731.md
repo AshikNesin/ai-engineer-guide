@@ -5,6 +5,7 @@ tags:
   - deepseek
 status: published
 date: 2026-07-31T00:00:00.000Z
+noindex: true
 qblog_id: 3ad09c70-9a29-42db-b6cb-9620a7a8ad12
 ---
 

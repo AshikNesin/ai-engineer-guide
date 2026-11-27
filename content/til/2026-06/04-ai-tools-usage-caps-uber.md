@@ -5,6 +5,7 @@ tags:
   - bookmark
 status: published
 date: 2026-06-04T00:00:00.000Z
+noindex: true
 qblog_id: 49ee7ab4-2619-49c9-b085-655e355a7a50
 ---
 

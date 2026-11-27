@@ -3,11 +3,16 @@
 # NOTE: rules with a trailing-slash source DO NOT match the same URL without the slash,
 # so every /blog/ rule below is written with BOTH variants (or a splat that covers both).
 
-# www -> apex (host-scoped rule; requires www.aiengineerguide.com attached to the project)
+# Duplicate hosts -> apex, same path.
+# Cloudflare Pages IGNORES host-scoped rules (domain-level redirects are
+# unsupported and these lines are skipped silently). The 301 that actually
+# runs on Pages is functions/_middleware.js. Netlify honors these lines;
+# netlify.toml also force-redirects nesinio-ai.netlify.app. If www is not
+# attached to this Pages project, add the zone Redirect Rule in the PR notes.
 https://www.aiengineerguide.com/* https://aiengineerguide.com/:splat 301
-
-# Cloudflare Pages preview domain -> apex (prevent duplicate-host indexing)
 https://ai-engineer-guide.pages.dev/* https://aiengineerguide.com/:splat 301
+https://ai-engineer-guide-2w3.pages.dev/* https://aiengineerguide.com/:splat 301
+https://nesinio-ai.netlify.app/* https://aiengineerguide.com/:splat 301
 
 # Tools: context window comparison merged into the cost calculator (tools PRD §6)
 /tools/context-window-comparison /tools/llm-cost-calculator/#tab=context 301

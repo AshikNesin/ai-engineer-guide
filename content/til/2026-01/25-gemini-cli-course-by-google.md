@@ -6,6 +6,7 @@ tags:
   - gemini-cli
 status: published
 date: 2026-01-25T00:00:00.000Z
+noindex: true
 qblog_id: b534de53-9b48-4527-ae40-9c6b3601679e
 ---
 

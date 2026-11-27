@@ -6,6 +6,7 @@ tags:
   - books
 status: published
 date: 2025-12-11T00:00:00.000Z
+noindex: true
 qblog_id: 7696453f-b6fe-45ae-8b53-f3eaba150131
 ---
 

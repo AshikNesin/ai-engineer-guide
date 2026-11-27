@@ -6,6 +6,7 @@ tags:
   - claude-haiku-4-5
 status: published
 date: 2025-10-16T00:00:00.000Z
+noindex: true
 qblog_id: 8899f970-1856-48f7-81ba-02f4d9176695
 ---
 

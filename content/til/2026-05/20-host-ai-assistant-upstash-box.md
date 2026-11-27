@@ -5,6 +5,7 @@ tags:
   - upstash-box
 status: published
 date: 2026-05-20T00:00:00.000Z
+noindex: true
 qblog_id: 302b9e2a-ada8-4102-a446-52e880c6b361
 ---
 

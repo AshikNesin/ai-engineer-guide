@@ -5,6 +5,7 @@ tags:
   - mcp
 status: published
 date: 2025-09-14T00:00:00.000Z
+noindex: true
 qblog_id: 9e5413bf-9960-4bfd-b1fb-42c8ac0a86fa
 ---
 

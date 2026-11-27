@@ -5,6 +5,7 @@ tags:
   - cursor
 status: published
 date: 2026-07-28T00:00:00.000Z
+noindex: true
 qblog_id: 5e0670f3-ded4-4a4e-b7a3-2ca51f10a524
 ---
 

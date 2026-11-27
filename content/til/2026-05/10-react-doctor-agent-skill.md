@@ -6,6 +6,7 @@ tags:
   - skills
 status: published
 date: 2026-05-10T00:00:00.000Z
+noindex: true
 qblog_id: 12bdaf56-9b4f-4bc4-9abd-6099f663eb10
 ---
 

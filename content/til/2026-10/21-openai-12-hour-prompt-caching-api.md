@@ -5,6 +5,7 @@ tags:
   - openai
 status: published
 date: 2026-10-21T00:00:00.000Z
+noindex: true
 qblog_id: 36666c4d-a70b-4dab-bf16-1b76ff5b8aed
 ---
 

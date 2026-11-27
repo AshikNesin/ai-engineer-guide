@@ -5,6 +5,7 @@ tags:
   - shadcn
 status: published
 date: 2026-08-17T00:00:00.000Z
+noindex: true
 qblog_id: 0d62c1bf-d68a-474c-a529-567705f2cc7e
 ---
 

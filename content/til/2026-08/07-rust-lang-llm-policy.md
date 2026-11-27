@@ -6,6 +6,7 @@ tags:
   - rust
 status: published
 date: 2026-08-07T00:00:00.000Z
+noindex: true
 qblog_id: 814abf36-17b8-403f-a464-96aa3ebc592d
 ---
 

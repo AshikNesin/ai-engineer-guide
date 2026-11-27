@@ -5,6 +5,7 @@ tags:
   - command-code
 status: published
 date: 2026-08-23T00:00:00.000Z
+noindex: true
 qblog_id: d32ac34e-7f26-428c-988b-7fe2942307e2
 ---
 

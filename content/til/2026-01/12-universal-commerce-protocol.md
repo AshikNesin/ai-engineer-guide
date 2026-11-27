@@ -7,6 +7,7 @@ tags:
   - open-standard
 status: published
 date: 2026-01-12T00:00:00.000Z
+noindex: true
 qblog_id: 3c1db332-fb29-458e-b709-0d5033e90a84
 ---
 

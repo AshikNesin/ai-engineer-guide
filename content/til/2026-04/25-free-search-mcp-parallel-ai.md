@@ -6,6 +6,7 @@ tags:
   - search-api
 status: published
 date: 2026-04-25T00:00:00.000Z
+noindex: true
 qblog_id: e23f6f4d-6ef6-4c1e-bb6d-0fedcee2fa5c
 ---
 

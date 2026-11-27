@@ -5,6 +5,7 @@ tags:
   - hermes-agent
 status: published
 date: 2026-05-24T00:00:00.000Z
+noindex: true
 qblog_id: 3ddfc9a8-8b10-4c29-91b9-f94eb80904a8
 ---
 

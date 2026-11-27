@@ -5,6 +5,7 @@ tags:
   - claude-code
 status: published
 date: 2026-03-23T00:00:00.000Z
+noindex: true
 qblog_id: b7172575-a66c-45b3-9993-c44ec265d418
 ---
 

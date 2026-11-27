@@ -5,6 +5,7 @@ tags:
   - ai-assistant
 status: published
 date: 2026-10-01T00:00:00.000Z
+noindex: true
 qblog_id: d4c2618a-bc75-4aba-b12f-e4d0ccfc41e8
 ---
 

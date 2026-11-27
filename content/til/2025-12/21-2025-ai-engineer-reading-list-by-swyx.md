@@ -7,6 +7,7 @@ tags:
   - swyx
 status: published
 date: 2025-12-21T00:00:00.000Z
+noindex: true
 qblog_id: a10a1f28-8cea-4f26-9bd4-f58e7a0cff1c
 ---
 

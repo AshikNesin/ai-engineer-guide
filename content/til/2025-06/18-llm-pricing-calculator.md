@@ -7,6 +7,7 @@ tags:
   - simon-willison
 status: published
 date: 2025-06-18T00:00:00.000Z
+noindex: true
 description: null
 qblog_id: d9a35493-28b3-4e9e-a57b-4d54e25d9023
 via_url: https://simonwillison.net/2025/Apr/10/llm-pricing-calculator/

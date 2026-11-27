@@ -5,6 +5,7 @@ tags:
   - huggingface
 status: published
 date: 2025-11-29T00:00:00.000Z
+noindex: true
 qblog_id: 081bb9cb-d2ed-4567-a13e-abc8e2d4df1f
 ---
 
