@@ -29,5 +29,8 @@ You can add something like this in your AGENTS.md file
 
 That's pretty much it. Now your agentic development got much faster.
 
+![image.png](https://cdn.qblog.nesin.io/f_auto,q_auto/qblog/AIEngineerGuide/2026-11/ytbnqgloz4c8i1lmw0oz)
+
+
 ## Reference
 - https://vitest.dev/blog/vitest-5-1#run-only-affected-tests-with-since-last-run
